@@ -1,0 +1,127 @@
+【PG】238 第 18章 一种新的输入——事件
+ 
+for event in pygame.event.get():
+    if event.type == QUIT:
+        running = False 
+    elif event.type == pygame.MOUSEMOTION:
+        paddle.rect.centerx = event.pos[0]
+ 
+if pygame.sprite.spritecollide(paddle, ballGroup, False):
+    myBall.speed[1] = -myBall.speed[1]
+    myBall.move()
+ 
+screen.blit(myBall.image, myBall.rect)
+screen.blit(paddle.image, paddle.rect)
+pygame.display.flip()
+pygame.quit()
+import pygame, sys
+from pygame.locals import *
+ 
+class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, speed, location):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        self.speed = speed
+ 
+    def move(self):
+        self.rect = self.rect.move(self.speed)
+ 
+        if self.rect.left < 0 or self.rect.right > screen.get_width():
+            self.speed[0] = -self.speed[0]
+ 
+        if self.rect.top <= 0:
+            self.speed[1] = -self.speed[1]
+ 
+class MyPaddleClass(pygame.sprite.Sprite):
+    def __init__(self, location = [0,0]):
+        pygame.sprite.Sprite.__init__(self)
+        image_surface = pygame.surface.Surface([100, 20])
+        image_surface.fill([0,0,0])
+        self.image = image_surface.convert()
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+ 
+pygame.init()
+screen = pygame.display.set_mode([640,480])
+clock = pygame.time.Clock()
+ball_speed = [10, 5]
+myBall = MyBallClass('wackyball.bmp', ball_speed, [50, 50])
+ballGroup = pygame.sprite.Group(myBall)
+paddle = MyPaddleClass([270, 400])
+running = True
+ 
+while running:
+    clock.tick(30)
+    screen.fill([255, 255, 255])
+
+
+【PG】231 CHAPTER 18 A New Kind of Input—Events
+
+I tried this out,
+and it’s a little 
+boring.
+while 1:
+    clock.tick(30)
+    screen.fill([255, 255, 255])
+ 
+   for event in pygame.event.get():
+        if event.type == QUIT:
+            sys.exit()
+        elif event.type == pygame.MOUSEMOTION:
+            paddle.rect.centerx = event.pos[0]
+ 
+   if pygame.sprite.spritecollide(paddle, ballGroup, False):
+        myBall.speed[1] = -myBall.speed[1]
+        myBall.move()
+ 
+   screen.blit(myBall.image, myBall.rect)
+   screen.blit(paddle.image, paddle.rect)
+   pygame.display.flip()
+ 
+ 
+Here’s what the program should 
+look like when it runs:
+ 
+Okay, so it’s not the most exciting game, but we’re just getting 
+started with making games in Pyga me. Let’s add a few more things to 
+our PyPong game.
+
+Keeping score and displaying it with pygame.font
+
+There are two things we need to keep track of: the number of lives and the number of points. To keep things simple, we’ll give one point for each time the ball hits the top of the 
+window. We’ll give the player three lives.
+ 
+We’ll also need a way to display the score. Pygame uses a module called 
+font for displaying 
+text. Here’s how you use it:
+
+The start of the 
+main while loop
+Moves paddle if 
+mouse moves
+Checks for ball 
+hitting paddle
+Redraws everything
+Moves the ball
+
+
+【PG】主while循环开始
+如果鼠标移动，
+就移动球拍
+检查球
+是否碰到球拍
+完全重绘移动球
+ 
+运行这个程序时应该能得到下面的结果。
+我试过了，不过
+没什么意思。
+也许吧， 这可能不是最让人兴奋的游戏， 不过我们只是刚刚起步， 才开始在
+Pygame中编写游戏。下面再向我们的 PyPong游戏加些东西 。
+记录分数并用 pygame.font 显示
+ 
+我们要跟踪两个方面： 还有几条命以及得了多少分。 为了力求简单， 每次球碰
+到窗口顶边时我们会给 1分。 另外给每个玩家 3条命。
+ 
+图灵社区会员 FreeLink 专享 尊重版权

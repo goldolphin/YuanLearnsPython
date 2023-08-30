@@ -1,0 +1,62 @@
+【PG】12.3　向列表增加元素　　 117
+family和luckyNumbers 都是 Python列表的例子， 列表中的单个元素就叫做项
+或者元素（ item） 。可以看到，Python 中的列表与你在日常生活中建立的列表并没有太大差异。 列 表使用中括号来指出从哪里开始， 到哪里结束， 另外用逗号分隔列表内的各项。
+
+【PG】12.2　创建列表
+family和luckyNumbers 都是变量。 前面曾经说过， 可以为变量赋不同类型的值。我们已经为变量赋过数和字符串，还可以为变量赋一个列表。
+就像创建任何其他变量一样 ，创 建列表也是要为它赋某个值， 如前面对
+luckyNumbers 的赋值。另外还可以创建一个空的列表， 如下：newList = []
+中括号没有任何元素， 所以这个列表是空的。 不过一个空列表有什么用呢？ 为
+什么想要创建这样一个空列表呢？
+嗯，很多情况下 ，我 们无法提前知道列表中会有些什么。 我们不知道其中会有
+多少元素， 也 不知道这些元素是什么， 只知道将会用一个列表来保存这些内容。 有
+了空列表后，程序就可以向这个列表中增加元素。这又怎么做到呢？
+
+【PG】12.3　向列表增加元素
+要向列表增加元素，需要使用 append() 。在交互模式中试试下面的代码：113  CHAPTER  12 Collecting Things  Together—Lists
+Both family  and luckyNumbers  are examples of Python lists, and the individual things 
+inside lists are called items . As you can see, lists in Python aren’t much different from lists 
+you make in everyday life. Lists use square brackets to show where the list starts and ends, 
+and they use commas to separate the items inside. 
+
+Creating a list
+Both family  and luckyNumbers  are variables. We said before that you can assign different 
+kinds of values to variables. We have already used them for numbers and strings, and they can also be assigned a list. 
+You create a list like you create any other va riable—by assigning something to it, just like 
+we did with 
+luckyNumbers . You can also create an empty list, like this:
+There are no items inside the square brackets, so the list is empty. But what good is an 
+empty list? Why would we want to create one?
+Well, quite often, we don’t know ahead of time what’s going to be in the list. We don’t know 
+how many items will be in it, or what those items will be. We just know we’ll be using a list to hold them. Once we have an empty list, the program can add things to it. So how do we 
+do that?
+
+Adding things to a list
+To add things to a list, you use append() . Try this in interactive mode:
+You’ll get this result:
+Try adding another item:
+Remember that you have to create the list (emp ty or not) before you start adding things to 
+it. It’s like if you are making a cake: you can’t just start pouring ingredients together—you 
+have to get a bowl out first to pour them into. Otherwise you’ll end up with stuff all over 
+the counter! >>> friends = []
+>>> friends.append('David')
+>>> print friends
+
+newList = []
+Makes a new, empty list
+Adds an item, 
+"David", to the list
+['David']
+>>> friends.append('Mary')
+>>> print friends
+['David', 'Mary']
+
+你会得到这样的结果：
+['David']
+再来增加一个元素：
+>>> friends.append('Mary')
+>>> print friends
+['David', 'Mary']
+
+记住，向列表增加元素之前， 必须先创建列表（ 可以是空列表， 也可以非空 ） 。这就像在做一个蛋糕： 不 能直接把各种配料倒在一起， 而是先将配料倒入碗中， 不
+然肯定会弄得到处都是！

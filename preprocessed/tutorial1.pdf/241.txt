@@ -1,0 +1,54 @@
+【PG】17.2　嘣 ! 碰撞检测　　 
+【PG】for row in range (0, 3):
+      for column in range (0, 3):
+            location = [column * 180 + 10, row * 180 + 10]        
+            speed = [choice([-2, 2]), choice([-2, 2])]        
+            ball = MyBallClass(img_file, location, speed)        
+            balls.append(ball)    
+【PG】running = True
+while running:
+      for event in pygame.event.get():
+            if event.type == pygame.QUIT: 
+                  running = False    
+            pygame.time.delay(20)
+      screen.fill([255, 255, 255])                                  
+      for ball in balls:                                             
+            ball.move()                                            
+            screen.blit(ball.image, ball.rect )
+      pygame.display.flip()                                         
+      pygame.quit( )
+
+这个程序使用一个列表来跟踪所有球。 
+
+【PG】第32行（balls.append(ball) ）上，
+创建每个球时会把球增加到这个列表。
+最后 5行代码会重绘屏幕 。这 里我们走了一条捷径， 并不是单独地“ 擦除”（覆
+盖）各个球，我们直接用白色填充窗口，然后重绘所有球。
+
+可以试验一下这些代码 ，看 看有更多（ 或更少）球时会怎么样， 可以改变它们
+的速度， 还 可以改变它们移动和“ 反弹”的方式， 等等。你会注意到， 球会四处移
+动，而且在窗口四周会反弹，不过它们相互之间还不能反弹！
+
+【PG】17.2　嘣 ! 碰撞检测
+
+大多数计算机游戏中， 你需要知道一个动画精灵在什么时候碰到另一个精灵。
+例如，可能需要知道保龄球何时碰到球瓶，或者导弹什么时候击中飞船。
+
+你可能认为 ，如果我们知道每个动画精灵的位置和大小 ，可以写一些代码对每一
+个其他动画精灵的位置和大小进行检查 ，看哪里出现了重叠 。不过，编写 Pygame的人
+已经为我们完成了这项工作 。Pygame中已经内置有这种碰撞检测 。
+
+【PG】术语箱
+简单地说，碰撞检测（collision detection）指的是了解两个动画精灵何时接
+触或重叠。两个移动的东西相互碰到一起，这就是一个碰撞（collision） 。
+
+Pygame还提供了一种方法对动画精灵分组。 例如，在保龄球游戏中， 所有球瓶
+可能在一组，球则在另一组。
+
+组和碰撞检测密切相关 。在 保龄球例子中， 你可能想检测球何时击倒某个瓶子，
+因此要寻找球精灵与球瓶组中所有精灵之间的碰撞。 还 可以检测组内部的碰撞（ 如
+球瓶相互碰倒） 。
+
+下面来完成一个例子 。以 我们的反弹沙滩球为基础， 不过为了更容易地看出发
+生了什么， 这 里首先建立 4个球而不是 9个球。另外与上一个例子中建立球的列表
+不同，我们将会使用 Pygame的group类。重绘屏幕。

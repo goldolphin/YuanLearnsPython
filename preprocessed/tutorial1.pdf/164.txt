@@ -1,0 +1,84 @@
+【PG】第 12章 收集起来 — 列表与字典
+
+【PG】110 Hello World!
+
+【PG】Just imagine how tedious it would be to work out the calories for all these combinations by hand, even if you had a calculator to do the math. It’s way more fun to write a program to figure it all out for you. Looping and a bit of math in Python make it a snap!
+
+【PG】What did you learn?
+
+【PG】In this chapter, you learned about
+
+【PG】- nested loops.
+【PG】- variable loops.
+【PG】- permutations and combinations.
+【PG】- decision trees.
+
+【PG】Test your knowledge
+
+【PG】1. How do you make a variable loop in Python?
+【PG】2. How do you make a nested loop in Python?
+
+【PG】#4       0        0        0        1        1        60
+【PG】#5       0        0        1        0        0        80
+【PG】#6       0        0        1        0        1        120
+【PG】#7       0        0        1        1        0        100
+【PG】#8       0        0        1        1        1        140
+【PG】#9       0        1        0        0        0        120
+【PG】#10      0        1        0        0        1        160
+【PG】#11      0        1        0        1        0        140
+【PG】#12      0        1        0        1        1        180
+【PG】#13      0        1        1        0        0        200
+【PG】#14      0        1        1        0        1        240
+【PG】#15      0        1        1        1        0        220
+【PG】#16      0        1        1        1        1        260
+【PG】#17      1        0        0        0        0        140
+【PG】#18      1        0        0        0        1        180
+【PG】#19      1        0        0        1        0        160
+【PG】#20      1        0        0        1        1        200
+【PG】#21      1        0        1        0        0        220
+【PG】#22      1        0        1        0        1        260
+【PG】#23      1        0        1        1        0        240
+【PG】#24      1        0        1        1        1        280
+【PG】#25      1        1        0        0        0        260
+【PG】#26      1        1        0        0        1        300
+【PG】#27      1        1        0        1        0        280
+【PG】#28      1        1        0        1        1        320
+【PG】#29      1        1        1        0        0        340
+【PG】#30      1        1        1        0        1        380
+【PG】#31      1        1        1        1        0        360
+【PG】#32      1        1        1        1        1        400
+【PG】>>>
+
+【PG】你学到了什么
+
+【PG】在这一章，你学到了以下内容。
+
+【PG】- 列表是什么。
+【PG】- 如何向列表中增加元素。
+【PG】- 如何从列表删除元素。
+【PG】- 如何确定列表是否包含某个值。
+【PG】- 如何对列表排序。
+【PG】- 如何建立列表的副本。
+【PG】- 元组。
+【PG】- 双重列表。
+【PG】- Python字典。
+
+【PG】测试题
+
+【PG】1. 向列表增加元素有哪些方法？
+【PG】2. 从列表删除元素有哪些方法？
+【PG】3. 要得到一个列表的有序副本，但又不能改变原来的列表，有哪两种方法？
+【PG】4. 怎样得出某个值是否在列表中？
+【PG】5. 如何确定某个值在列表中的位置？
+【PG】6. 什么是元组？
+【PG】7. 如何建立双重列表？
+【PG】8. 如何从一个双重列表中得到一个值？
+【PG】9. 什么是字典？
+【PG】10. 如何向字典中增加项？
+【PG】11. 怎样使用键去查找一个条目？
+
+【PG】动手试一试
+
+【PG】1. 写一个程序，让用户提供5个名字。程序要把这5个名字保存在一个列表中，最后打印出来。就像这样：Enter 5 names: Tony Paul Nick Michel Kevin The names are Tony Paul Nick Michel Kevin
+【PG】2. 修改第1题的程序，要求不仅显示原来的名字列表，还要显示出排序后的列表。
+【PG】3. 修改第1题的程序，要求只显示用户键入的第3个名字，就像这样：

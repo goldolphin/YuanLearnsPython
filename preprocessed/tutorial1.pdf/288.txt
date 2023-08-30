@@ -1,0 +1,11 @@
+【PG】第 20章　更多 GUI
+
+【PG】Qt Designer
+
+当你安装完 PyQt时，同时安装的还有 Qt Designer。找到它的图标（比如在 Windows 下到开始菜单中寻找），然后启动 Qt Designer。启动之后你应该可以看到 Qt的窗口打开，中间有一个 New Form（新窗口）对话框：
+
+【PG】Form是GUI窗口对应的编程术语。因为你要创建一个新的 GUI窗口，所以选择Main Window（主窗口）选项，然后点击 Create（创建）按钮。现在我们来看一下Qt窗口的样子。
+
+【PG】左边是组件列表，其中是能用于 GUI的各种图形界面元素。它们被分为几个不同的分类。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

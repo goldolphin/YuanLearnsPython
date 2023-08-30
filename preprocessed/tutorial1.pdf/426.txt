@@ -1,0 +1,36 @@
+【PG】附录 C　自测题答案
+
+【PG】2. 你的程序应该类似这样：366 Hello World!
+
+【PG】Chapter 2: Remember This—Memory and Variables
+【PG】Test your knowledge
+【PG】1You tell Python that a variable is a string by putting quotes around it.
+【PG】2The question was, “Can you change the value that is assigned to a variable?” That depends what you mean by “change. ” If you do this, then you can do 
+【PG】You have changed what is assigned to myAge . You have moved the myAge  tag to a different thing: you moved it from 10 to 11. But you didn’t actually change the 10 into an 
+11. So it is more correct to say that you can “reassign the name to a different value, ” or “assign a new value to the variable, ” rather than “change the value of the variable. ”
+【PG】3No, TEACHER  is not the same as TEACHEr . Because variable names are case-sensitive, the last letter of the two variable names makes them different.
+【PG】4Yes, 'Blah' and "Blah" are the same. They are both strings, and in this case, Python doesn’t care which kind of quotes you use, as long as the opening and closing quotes around the string match.
+【PG】5No, '4' is not the same as 4. The first one is a string (even though it only has one character) because it has quotes around it. The second one is a number.
+【PG】6Answer b. 2Teacher  is not a correct variable name. Variable names in Python can’t start with a number.
+【PG】7"10" is a string because it has quotes around it.
+
+【PG】Try it out
+【PG】1In interactive mode, you would do something like this:
+
+【PG】2You could do either of these:
+                                                 orprint "My name is Warren Sande."
+print "My birth date is January 1, 1970."
+print "My favorite color is blue."
+myAge = 10
+myAge = 11
+>>> temperature = 25
+>>> print temperature
+25
+>>> temperature = 40
+>>> print temperature
+40
+>>> temperature = temperature + 15
+>>> print temperature
+40
+
+【PG】2. 可以这样做：366 Hello World!

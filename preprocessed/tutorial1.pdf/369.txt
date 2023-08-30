@@ -1,0 +1,161 @@
+【PG】23.4 Crazy Eights　　 343
+
+【PG】334 Hello World!
+    blocked = 0
+    init_cards()
+    while not game_done:
+        player_turn()         
+        if len(p_hand) == 0:
+            game_done = True
+            print            
+            print "You won!"
+            # display game score here
+            p_points = 0            
+            for card in c_hand:
+                p_points += card.value
+            p_total += p_points            
+            print "You got %i points for computer's hand" % p_points
+        if not game_done: 
+            computer_turn()
+        if len(c_hand) == 0:            
+            game_done = True
+            print
+            print "Computer won!"            
+            # display game score here            
+            c_points = 0
+            for card in p_hand:
+                c_points += card.value            
+            c_total += c_points
+            print "Computer got %i points for your hand" % c_points
+        if blocked >= 2:            
+            game_done = True
+            print "Both players blocked.  GAME OVER."
+            player_points = 0            
+            for card in c_hand:
+                p_points += card.value
+            p_total += p_points            
+            c_points = 0
+            for card in p_hand:
+                c_points += card.value            
+            c_total += c_points
+            print "You got %i points for computer's hand" % p_points
+            print "Computer got %i points for your hand" % c_points    
+        play_again = raw_input("Play again (Y/N)? ")
+        if play_again.lower().startswith('y'):
+            done = False        
+            print "\nSo far, you have %i points" % p_total
+            print  "and the computer has %i points.\n" % c_total
+        else:        
+            done = True
+            
+print "\n Final Score:"
+print "You: %i     Computer: %i" % (p_total, c_total)
+
+【PG】The init_cards()  function (not shown here) just sets up the deck and creates the player’s 
+hand (5 cards), computer’s hand (5 cards), and the first up card B.BSets up deck and player 
+and computer hands
+【PG】Player wins
+Adds points from 
+computer’s remaining cardsAdds points 
+from this game 
+to total
+【PG】Computer wins
+Adds points from 
+player’s remaining cardsAdds points 
+from this game to total
+【PG】Both blocked, 
+so both get points
+Prints game 
+points
+Prints total 
+points so far
+Prints final 
+totals
+
+【PG】315  CHAPTER  23 Take a Chance—Randomness
+This would do exactly the same thing as the previous example. The choice()  function randomly chooses an item from a list. In this case, the list is the numbers from 1/uni00A0to/uni00A06.
+
+More than one die
+What if you want to simulate rolling two dice? If  you’re just going to add up the two dice to 
+get the total, you might think of doing it this way:
+
+After all, the total of two dice can be from 2 to 12, right? Well, yes and no. You will get a 
+random number between 2 and 12, but not in the same way as adding up two random 
+numbers from 1 to 6. What that code line does is like rolling one big 11-sided die, not two 
+6-sided dice. But what’s the difference? That gets into a topic called probability . The easiest 
+way to see the difference is to try it out and see.
+
+Let’s roll the dice many time s and keep track of how many times each total comes up. 
+We’ll do that with a loop and a list. The loop will roll the dice, and the list will keep track of 
+how many times each total comes up. Let’s start with the single 11-sided die, as shown in 
+listing 23.1.
+
+import random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  
+for i in range(1000):
+    dice_total = random.randint(2, 12)
+    totals[dice_total] += 1  
+    
+for i in range (2, 13):    
+    print "total", i, "came up", totals[i], "times"
+
+The list has indexes from 0 to 12, but we won’t use the first two, because we don’t care 
+about totals 0 or 1—they’ll never happen B. When we get a result, we add 1 to that list 
+item C. If the total is 7, we add one to totals[7] . So totals[2]  is the number of 2s we got, 
+totals[3]  is the number of 3s  we got, and so on.
+
+If you run this code, you 
+should get something like this:
+
+Listing 23.1 Rolling a single 11-sided die 1,000 times
+
+two_dice = random.randint(2, 12)
+List has 13 items, 
+with index 0 to 12B
+Adds 1 to the 
+count of this totalC
+total 2 came up 95 times
+total 3 came up 81 times
+total 4 came up 85 times
+total 5 came up 86 times
+total 6 came up 100 times
+total 7 came up 85 times
+total 8 came up 94 times
+total 9 came up 98 times
+total 10 came up 93 times
+total 11 came up 84 times
+total 12 came up 99 times
+
+【PG】init_cards() 函数（这里没有显示 ）的工作只是建立一副牌并创建玩家的
+一手牌（5 张牌 ） 、计算机的一手牌（5 张牌）以及第一张明牌。
+
+【PG】代码清单 23-11仍 然不是一个完整的程序， 所以如果你运行这个代码， 就会得
+到一条错误消息。 不 过如果你一直按我说的做， 现在你的编辑器里应该已经有了几
+乎整个程序。 Crazy Eights 的完整代码清单太长了， 无法在这里全部列出（ 大约 200
+行代码，还要加上空行和注释 ） ，不过你可以在 \Examples 文件夹找到这个代码 （如果
+你使用了本书的安装程序 ） ，另外在网站上 （www.helloworldbook2.com ）也可以找到 。
+可以使用 IDLE来编辑和运行这个程序。
+
+【PG】335  CHAPTER  23 Take a Chance—Randomness
+
+【PG】What did you learn?
+In this chapter, you learned
+�what randomness and random events are.
+�a little bit about probability.
+�how to use the random  module to generate random events in a program.
+�how to simulate flipping a coin or rolling dice.
+�how to simulate drawing cards from a shuffled deck.
+�how to play Crazy Eights (if you didn’t already know).
+
+【PG】Test your knowledge
+1Describe what a “random event” is. Give two examples.
+2Why is rolling one 11-sided die with numbers from 2 to 12 different from rolling a pair 
+of six-sided dice, which produce totals from 2 to 12?
+3What are two ways to simulate rolling a die in Python?
+4What kind of Python variable did we use for a single card?
+5What kind of Python variable did we use for a deck of cards?
+6What method did we use to remove a card from the deck when it’s drawn, or from a hand when it’s played?
+
+【PG】Try it out
+1Try the “ten in a row” experiment using the program from listing 23.3, but try different amounts for the “in a row. ” How often do you get five in a row? How about six, seven, 
+eight, and so on? Do you see a pattern?

@@ -1,0 +1,60 @@
+【PG】24.6 电子宠物
+
+if self.doctor:     
+    self.health += 1                                            
+    self.hunger -= 1                                             
+elif self.walking and (self.time_cycle % 2 == 0):               
+    self.happiness += 1                                         
+    self.health += 1                                            
+    self.hunger += 1                                            
+elif self.playing:                                              
+    self.happiness += 1                                         
+    self.hunger += 1                                            
+elif self.eating:                                               
+    self.hunger -= 2                                           
+elif self.sleeping:                                            
+    if self.time_cycle % 3 == 0:                                
+        self.hunger += 1                                        
+    else:                                                      
+        self.hunger -= 1                                        
+else:                                                          
+    self.hunger += 1                                            
+    if self.time_cycle % 2 == 0:                              
+        self.happiness -= 1                     
+
+if self.hunger > 8:  self.hunger = 8                          
+if self.hunger < 0:  self.hunger = 0                          
+if self.hunger == 7 and (self.time_cycle % 2 == 0):  
+    self.health -= 1                                            
+if self.hunger == 8:                                            
+    self.health -= 1                                             
+if self.health > 8:  self.health = 8                           
+if self.health < 0:  self.health = 0                           
+if self.happiness > 8:  self.happiness = 8                      
+if self.happiness < 0:  self.happiness = 0                      
+self.progressBar_1.setProperty("value",(8-self.hunger)*(100/8.0)) 
+self.progressBar_2.setProperty("value", self.happiness*(100/8.0))  
+self.progressBar_3.setProperty("value", self.health*(100/8.0))
+
+def closeEvent(self, event):
+    file = open("savedata_vp.pkl", "w")                         
+    save_list = [self.happiness, self.health, self.hunger, datetime.datetime.now(), self.time_cycle]      
+    pickle.dump(save_list, file)
+    event.accept()
+
+def menuExit_selected(self):
+    self.close()
+
+app = QtGui.QApplication(sys.argv)
+myapp = MyForm()
+myapp.show()
+app.exec_()
+
+【PG】根据活动增加或减少单位      
+确保值没有越界             
+更新计量器                     
+将状态和时间戳保存到pickle文件    
+行联接符                      
+
+sleep_test() 函数使用了 PyQt 的“警告信息”对话框。一系列的参数告诉它要显示哪些按钮，以及哪个是默认按钮。代码清单 24-4 中的注释解释了这一点。当对话框弹出来时（你试图叫醒你的宠物时），看起来是这样的：        
+图灵社区会员 FreeLink 专享 尊重版权

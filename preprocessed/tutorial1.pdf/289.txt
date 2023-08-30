@@ -1,0 +1,25 @@
+【PG】20.1　使用 PyQt　　 263
+
+【PG】术语箱
+
+【PG】在 GUI 中，单个的按钮、复选框等都叫做“部件” （widget） ，也称为“组件” （component）, 有时还称为“控件” （control） 。
+
+【PG】右边是对象检查器（Object Inspector） 和属性编辑器（Property Editor） ， 你可以在这里查看和修改组件的属性。 除 了对象检查器和属性编辑器， 右边还有第三个面板，它的功能是由底部选中的标签决定的。 它 可以是 Signal/Slot 检查器、 行为编辑器（Action Editor）或者资源浏览器（Resource Browser） 。
+
+【PG】中间是刚刚创建的空窗口 。最 顶上显示着 Main Window - untitled， 是因为你还没有给它命名。 中 间的空白部分就是放置组件制作 UI界面的地方。 （ 在Mac上，需要在 Qt Designer ➤Preferences 中 将user interface mode（UI 模式）从Multiple Top-Level Windows（ 浮 动窗口）改为 Docked Window（ 集成窗口 ）才能看到这个界面。否则所有的面板都会浮动成独立的窗口。 ）
+
+【PG】添加按钮
+
+【PG】我们来为 GUI添加一个按钮。 在Qt Designer 窗口的左边找到 Buttons （按钮） ，然后找到 Push Button组件。
+
+【PG】将Push Button 拖 到空白的窗口中， 然后放在某个地方。 现在窗口中有了一个按钮， 它上面的文字是 PushButton。 
+
+【PG】现在注意看一下右边的属性编辑器。
+
+【PG】如果按钮仍然处于选中态（ 周围有蓝色小方块） ，你会在属性编辑器中看到它的属性。可以看到按钮的名字是 PushButton 。
+
+【PG】如果你在属性列表中向下滚动一下， 还 会看到其他的属性， 比 如宽度（width） 、 高度（height） ，以及 x和y位置 ，等等。
+
+【PG】修改按钮
+
+【PG】要修改按钮的大小或者按钮在窗口中的位置， 有两种方法： 用鼠标拖动按钮，或者改变 Size或Position 属性。可以试着用这两种方法移动和调整按钮大小， 看看它们的作用。要 想使用鼠标移动按钮， 点击按钮的任意部位然后拖动到新位置即

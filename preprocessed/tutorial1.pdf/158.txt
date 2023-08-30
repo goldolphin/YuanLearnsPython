@@ -1,0 +1,39 @@
+【PG】第 12章　收集起来 —列表与字典
+
+【PG】>>> classMarks = [ [55,63,77,81], [65,61,67,72], [97,95,92,88] ]
+【PG】>>> print classMarks
+【PG】[[55, 63, 77, 81], [65, 61, 67, 72], [97, 95, 92, 88]]
+
+【PG】现在来显示我们的数据结构： classMarks 有3个元素， 每个元素分别对应一个学生。所以可以使用 in来循环处理：
+
+【PG】>>> for studentMarks in classMarks:
+        print studentMarks
+【PG】[55, 63, 77, 81]
+【PG】[65, 61, 67, 72]
+【PG】[97, 95, 92, 88]
+
+【PG】这里我们对名为 classMarks 的列表完成循环处理。循环变量是 studentMarks。每次循环时，会打印列表中的一个元素。这里的每一个元素分别是一个学生的成绩，它本身也是一个列表。（前面创建过这些学生列表。）可以注意到，这看上去与前一页的表很类似，所以我们提出的这种数据结构可以把所有数据都保存在一个地方。
+
+【PG】从表获取一个值
+
+【PG】怎么得到这个表（也就是双重列表）中的值呢？我们已经知道，第一个学生的成绩（joeMarks）在一个列表中，而这个列表本身是 classMarks 中的第一个元素。下面来检查一下： >>> print classMarks[0]
+【PG】[55, 63, 77, 81]
+
+【PG】classMarks[0]是Joe的4门课程成绩的一个列表。现在我们想从 classMarks[0]得到一个值。怎么做呢？可以使用第二个索引。如果希望得到他的第三个成绩（阅读课成绩），也就是索引2，可以这样做：
+
+【PG】>>> print classMarks[0][2]
+【PG】77
+
+【PG】这会给出 classMarks 中的第一个元素（索引0），也就是 Joe 的成绩列表，以及这个列表中的第三个元素（索引2），这正是他的阅读课成绩。看到一个名字后面带着两组中括号时，比如说 classMarks[0][2]，这往往表示一个双重列表。
+
+【PG】The classMarks list doesn’t really know about the names Joe, Tom, and Beth, or the subjects Math, Science, Reading, and Spelling. We labeled them that way because we know what we intended to store in the list. But to Python, they’re just numbered places in a list. This is just like the numbered mailboxes at a post office. They don’t have names on them, just numbers. The postmaster keeps track of what belongs where, and you know which box is yours. 
+
+【PG】Math Science Reading Spelling
+【PG】55 
+【PG】656361
+【PG】97 95 92 88
+【PG】72
+【PG】886792TomJoe
+【PG】BethclassMarks
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

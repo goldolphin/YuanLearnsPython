@@ -1,0 +1,23 @@
+【PG】附录 C　自测题答案　　 427
+
+【PG】第26章
+
+【PG】动手试一试
+
+【PG】1. 这是一个可以打败 CivcleAI 的机器人：
+
+class AI:
+    def __init__(self):
+        self.isFirstTurn = True
+    def turn(self):
+        if self.isFirstTurn:
+            self.robot.turnLeft()
+            self.isFirstTurn = False
+        elif self.robot.lookInFront() == "bot":
+            self.robot.attack()
+        else:
+            self.robot.doNothing()
+
+这个机器人的策略是等待 CircleAI 绕圈，等它在前方时攻击它。我能写出这个机器人，是因为我知道 CircleAI 的工作方式，它并不能打败其他的机器人。如我在本章正文中所说，要创建一个必胜的机器人是非常非常困难的，尤其是在连对手是什么机器人都不知道的情况下。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

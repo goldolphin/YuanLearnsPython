@@ -1,0 +1,61 @@
+【PG】20.1　使用 PyQt　　 265
+
+【PG】<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0"> 
+<class>MainWindow</class>
+ 
+<widget class="QMainWindow" name="MainWindow">        
+  <property name="geometry">                            
+   <rect>                                               
+    <x>0</x>                                           
+    <y>0</y>                                            
+    <width>576</width>                                   
+    <height>425</height>                                
+   </rect>                                              
+  </property>                                          
+  <property name="windowTitle">                        
+   <string>MainWindow</string>                         
+  </property>     
+
+【PG】<widget class="QWidget" name="centralwidget">          
+   <widget class="QPushButton" name="pushButton">      
+    <property name="geometry">                           
+     <rect>                                              
+      <x>60</x>                                          
+      <y>70</y>                                         
+      <width>121</width>                              
+      <height>41</height>                               
+     </rect>                                            
+    </property>                                          
+    <property name="toolTip">                           
+     <string/>                                         
+    </property>                                         
+    <property name="text">                               
+     <string>I'm a Bu tton!</string>                      
+    </property>                                          
+   </widget>                                           
+</widget> 
+
+【PG】<widget class="QMenuBar" name="menubar">
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>576</width >
+     <height>21</height>
+    </rect>
+   </property >
+</widget>
+<widget class="QStatusBar" name="statusbar"/>
+</widget>
+
+【PG】<resources/>
+<connections/>
+</ui> 
+
+【PG】定义窗口
+（背景）
+
+【PG】定义按钮
+
+【PG】看起来让人有点糊涂， 不过如果再仔细看看， 可以看到描述窗口的部分、 描述按钮的部分，以及还没有讨论的其他部分，比如菜单和状态栏。

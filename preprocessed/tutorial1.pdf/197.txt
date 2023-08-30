@@ -1,0 +1,37 @@
+【PG】14.9　未雨绸缪　　 171
+
+【PG】它们不是空的。
+里面有注释！
+
+【PG】没错，卡特，不过注释不起作用，
+因为它们只是给你读的，而不是让计算机
+来执行。
+
+【PG】如果希望建立一个代码桩 ，可 以使用 Python的pass关键字作为一个占位符。
+代码实际上应该像下面这样：
+
+class Game_object:
+    def __init__(self, name) :
+        self.name = name
+    def pickUp(self):
+        pass                     
+        # put code here to add the object  
+        # to the player's collectio n
+
+class Coin(Game_object) :
+    def __init__(self, value) :
+        GameObject.__init__(self, "coin")        self.value = value
+    def spend(self, buyer, seller):
+        pass                                          
+        # put code here to remove the coin 
+        # from the buyer's money and  
+        # add it to the seller's money
+
+【PG】我不打算再在这一章中给出使用对象、 多态和继承的更详细的例子。 学习这本
+书后面的内容时还会看到很多关于对象以及如何使用对象的例子。 通过在实际的程
+序（比如游戏）中使用对象，你会有更深入的理解。
+
+【PG】在这两个位置增加 pass关键字
+你学到了什么
+
+【PG】在这一章，你学到了以下内容。如果想运行前面的例子，会得到一条错误消息，因为函数定义不能为空。

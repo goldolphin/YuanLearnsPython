@@ -1,0 +1,33 @@
+【PG】第 26章　Python Battle
+
+导致它很快撞到游戏边界处的“ 墙”。如果敌人挡住了它的路， 则它只会停止移动而已。你可以使用 self.robot.lookInFront() 来修复这个问题。 如果在正前方有一个可以攻击的敌人，则这个函数返回 "bot"。修改一下 turn()函数，像这样：
+
+if self.robot.lookInFront() == "bot":
+    self.robot.attack( )
+else:
+    self.robot.goForth()
+
+现在，如果在你的机器人前方有敌人挡路， 则机器人会攻击它。 但是如果机器人撞“墙”了，则它会停下来。 如果前方是“ 墙”，则self.robot.lookInFront 会返回"wall"。将下面的代码加到 turn()函数中， 放在self.robot.attack() 和else之间：
+
+elif self.robot.lookInFront() == "wall":
+    self.robot.turnRight()
+
+现在，如果你运行代码，则机器人会开始转圈！ 当它撞到“墙”的时候会向右转，当它撞到下一堵“墙”时会再次向右转， 一直这样运行下去。 你更希望机器人在撞“墙”时能转身折返回去， 而这需要两次右转才能完成。 当机器人撞“墙”的时候，它需要右转一次，然后在一下回合中，再右转一次。也就是说，你需要机器人记住它现在是在做U型转身。你可以给 AI设置一个新属性（变量）来记住它正在做什么。我们在 __init__() 函数中添加一行代码：
+
+self.currentlyDoing = "forward"
+
+这将告诉机器人，当游戏开始时，它需要向前走。 当机器人在做U型转身时，你可以将这个属性的值改为"turnRight"以便告知机器人它需要右转。修改之后的turn()函数最终看起来像这样：
+
+代码清单 26-1　完成的机器人 AI
+class AI:
+    def __init__(self):        self.currentlyDoing = "forward"
+    def turn(self):
+        if self.robot.lookInFront() == "bot":            self.robot.attack()
+        elif self.robot.lookInFront() == "wall" :
+            self.robot.turnRight()
+            self.currentlyDoing = "turnRight "
+        elif self.currentlyDoing == "turnRight":            self.robot.turnRight()            self.currentlyDoing = "forward "
+        else :
+            self.robot.goForth()
+
+图灵社区会员 FreeLink 专享 尊重版权

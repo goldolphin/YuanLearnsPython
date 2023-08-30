@@ -1,0 +1,98 @@
+【PG】第 21章 打印格式化与字符串
+
+联接字符串还有一种方法。可以使用join()函数。你要指出你希望把哪些字符
+串联接起来，另外希望在联接的各部分之间插入什么字符（如果有的话）。这实际上
+与split()正相反。下面是交互模式中完成的一个例子：
+
+【PG】294 Hello World!
+Whitespace means any spaces, tab characters, or newlines.
+
+【PG】Joining strings
+
+We just saw how to split a string into smaller pieces. How about joining two or more strings 
+to make one larger string? We already saw, way back in chapter 2, that you can join strings 
+together using the + operator. It’s like adding two strings together, except that it’s called 
+concatenating.
+
+There’s another way to join strings together. You can use the join() function. You tell it 
+what strings you want to join together and what characters (if any) you want inserted between the parts when they are joined. It’s basically the opposite of 
+split(). Here’s an 
+example in interactive mode:
+
+【PG】I admit that this looks a little odd. The characters that will go between each piece of the 
+joined string go in front of the join(). In this case, we wanted a space between each word, 
+so we used ' '.join(). That’s different from what most people expect, but that’s just how 
+Python’s join() method works.
+
+The following example 
+makes me sound like a dog:
+
+【PG】To put it another way, the string in front of join() is used as the glue to hold the other 
+strings together.
+
+【PG】Searching for strings
+
+Suppose you want to make a program for your mom that takes recipes and displays them in 
+a GUI. You want to put the ingredients in one place and the instructions in another. Let’s imagine that the recipe 
+looks something like this:
+
+>>> word_list = ['My', 'name', 'is', 'Warren']
+>>> long_string = ' '.join(word_list)
+>>> long_string
+'My name is Warren'
+>>> long_string = ' WOOF WOOF '.join(word_list)
+>>> long_string
+'My WOOF WOOF name WOOF WOOF is WOOF WOOF Warren'
+
+Chocolate Cake
+Ingredients:
+2 eggs1/2 cup flour
+1 tsp baking soda
+1 lb chocolate
+Instructions:
+Preheat oven to 350FMix all ingredients together
+Bake for 30 minutes
+
+【PG】换句话说，join()前面的字符串可以用作粘合剂，把其他字符串联接在一起。
+
+【PG】搜索字符串
+
+假设你想为妈妈创建一个程序，获取食谱并在GUI中显示。你想在一个位置显示配料，在另一个位置显示做法。假设食谱是这样的。
+
+假设食谱中的各行都被放在一个列表中，每一行在列表中都是单独的元素。那么怎么找到“Instructions”（做法）部分呢？Python提供了两种有用的方法。
+
+startswith()方法可以指出一个字符串是否以某个字符或某几个字符开头。举个例子最能说明问题。在交互模式中试试右面的例子。
+
+【PG】284 Hello World!
+Whitespace means any spaces, tab characters, or newlines.
+
+The name “Frankenstein” starts with the letter “F, ” so the first one was True. The name “Frankenstein” starts with the letters “Frank, ” so the second one was True. The name “Frankenstein” does not start with “Flop, ” so that one was False.
+
+Because the startswith() method returns a True or False value, you can use it in comparisons or if statements, like this:
+
+There’s a similar method called endswith() that does just what you’d expect:
+
+Now, to get back to the problem at hand . . . If you wanted to find the start of the “Instructions” section of the recipe, you could do something like this:
+
+【PG】>>> name = "Frankenstein"
+>>> name.startswith('F')
+True
+>>> name.startswith("Frank")
+True
+>>> name.startswith("Flop")
+False
+>>>
+>>> if name.startswith("Frank"):
+        print "Can I call you Frank?"
+>>> name = "Frankenstein"
+>>> name.endswith('n')
+True
+>>> name.endswith('stein')
+True
+>>> name.endswith('stone')
+False
+i = 0
+while not lines[i].startswith("Instructions"):
+    i = i + 1
+
+【PG】Can I call you Frank?

@@ -1,0 +1,43 @@
+【PG】第 17章　动画精灵和碰撞检测
+
+【PG】什么是动画精灵
+【PG】可以把动画精灵想成一个小图片 —一种可以在屏幕上移动的图形对象， 并且可以与其他图形对象交互。
+【PG】大多数动画精灵都有以下两个基本属性。
+【PG】图像（image） ： 为动画精灵显示的图片。
+【PG】矩形区（rect） ：包含动画精灵的矩形区域。
+【PG】动画精灵的图像可以是使用 Pygame绘制函数绘制的图像（ 如上一章看到的图片） ，也可以是原来就有的图像文件。
+
+【PG】Sprite 类
+【PG】Pygame的sprite模块提供了一个动画精灵基类 ，名为Sprite。 （还记得几章前讨论过的对象和类吗 ？）正常情况下 ，我们不会直接使用基类 ，而是基于pygame。sprite.Sprite 来创建自己的子类 。下面将完成这样一个例子 ，并把我们的类命名为MyBallClass。创建这个类的代码如下 ：
+class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, location):        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()        self.rect.left, self.rect.top = location
+
+【PG】术语箱
+【PG】动画精灵表示作为一个单位来移动和显示的一组像素，这是一种图形对象。
+【PG】“ ‘动画精灵’ （sprite）这个词是从老式的计算机和游戏机流传下来的。这些老式的游戏机不能很快地绘制和擦除图形来保证游戏正常工作。这些游戏机有一些特殊的硬件，专门用来处理需要快速移动的游戏类对象。这些对象就称为‘动画精灵’ 。它们有一些特殊的限制，不过可以非常快地绘制和更新……如今，一般来讲，计算机的速度已经足够快了，不需要专门的硬件也可以很好地处理类似动画精灵的对象。不过‘动画精灵’这个词仍用来表示二维（2D）游戏中的所有动画对象。 ”( 摘自 Pete Shinners 的“Pygame 教程 —Sprite 模块介绍” ，http://www.pygame.org/
+docs/tut/SpriteIntro.html。 ) 
+
+【PG】203  CHAPTER  17 Sprites and Collision Detection
+【PG】What’s a sprite?
+【PG】Think of a sprite as a little piece of graphics—a kind of graphical object that will move around the screen and interact with other graphical objects.
+【PG】Most sprites have a couple of basic properties:
+【PG】�an image —the graphics that are displayed for the sprite
+【PG】�a rect—the rectangular area that contains the sprite
+【PG】The image can be one that you draw using Pygame’s draw functions (like we saw in the last chapter) or one that you get from an image file.
+
+【PG】A sprite class
+【PG】Pygame’s sprite module provides a base sprite class called Sprite . (Remember when we talked about objects and classes a couple of chapters ago?) Normally we don’t use the base class directly, but instead create our own subclass, based on pygame.sprite.Sprite . We’ll do that in an example and call our class MyBallClass . The code to create it looks like this:
+class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, location):        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()        self.rect.left, self.rect.top = location
+
+【PG】Sprite means a group of pixels that are moved and displayed as a single unit, a kind of graphical object. 
+【PG】(excerpted from "Pygame Tutorials - Sprite Module Introduction" by Pete Shinners http://www.pygame.org/docs/tut/SpriteIntro.html )
+【PG】The term ‘sprite’ is a holdover from older computer and game machines. These older boxes were unable to draw and erase normal graphics fast enough for them to work as games. These machines had special hardware to handle game-like objects that needed to animate very quickly. These objects were called ‘sprites’ and had special limitations, but could be drawn and updated very fast . . . These days computers have become generally fast enough to handle sprite-like objects without dedicated hardware. The term ‘sprite’ is still used to represent just about anything in a 2D game that is animated.
+
+【PG】初始化动画精灵
+【PG】向其中加载图像文件。
+【PG】设置球的初始位置得到定义图像边界的矩形。

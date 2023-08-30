@@ -1,0 +1,84 @@
+【PG】附录 C　自测题答案　　 419
+
+【PG】import pygame, sys
+【PG】pygame.init( )
+【PG】screen=pygame.display.set_mode((640, 480))
+【PG】screen.fill((250, 120, 0))
+【PG】pygame.draw.arc(screen,(255,255,0),pygame.rect.Rect(43,368,277,235),
+-6.25, 0, 15)
+【PG】pygame.draw.rect(screen,(255, 0, 0),pygame.rect .Rect(334,191,190,290))
+【PG】pygame.draw.rect(screen,(128, 64, 0),pygame.rect .Rect(391,349,76,132))
+【PG】pygame.draw.line(screen,(0, 255, 0),(268, 259),(438,84),25)
+【PG】pygame.draw.line(screen,(0, 255, 0),(578, 259),(438,84),25)
+【PG】pygame.draw.circle(screen, (0, 0, 0), (452, 409), 11, 2)
+【PG】pygame.draw.polygon(screen, (0, 0, 255),[(39, 39), (44, 136), (59, 136),
+【PG】(60,102),(92,102),(94,131),(107, 141), (111, 50), (97, 50), (93, 
+【PG】86), (60, 82), (58, 38)], 5)
+【PG】pygame.draw.rect(screen,(0,0,255), pygame.rect.Rect(143,90,23,63),5 )
+【PG】pygame.draw.circle(screen, (0, 0, 255), (153, 60), 15, 5)
+【PG】clock = pygame.time.Clock( )
+【PG】pygame.display.flip()
+【PG】running = True
+【PG】while running:
+    clock.tick(60)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT :
+            running = False
+        elif  event.type == pygame.K EYDOWN and event.key == pygame.K_ESCAPE:
+            running = False
+【PG】pygame.quit( )
+
+【PG】2. 要把沙滩球图像换成一个不同的图像，只需把这行代码中的文件名：
+【PG】my_ball = pygame.image.load('beach_ball.png')
+【PG】替换成另一个图片的文件名。
+
+【PG】3. 在代码清单 16-16中，只需把
+【PG】x_speed = 10
+【PG】y_speed = 10
+【PG】替换成
+【PG】x_speed = 20
+【PG】y_speed = 8
+【PG】来使球的速度更快。
+
+【PG】4. 要让球在一面“隐形”的墙上反弹，可以把代码清单 16-16中的这行代码
+【PG】if x > screen.get_width() - 90  or  x < 0:
+【PG】改为：
+【PG】if x > screen.get_width() - 250  or  x < 0:
+【PG】这会让球在到达窗口边界之前就反向。 可以对 y坐标做同样的处理， 让它在
+【PG】到达“地板”时也会反弹。
+
+【PG】5. 将代码清单 16-6中的 display.flip 移到while循环内部，并增加一个延迟之后，
+【PG】代码如下所示：
+【PG】while 1:
+    clock.tick(60)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            sys.exit()
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            sys.exit()
+    import pygame, sys, random
+    pygame.init()
+    screen = pygame.display.set_mode([640,480])
+    screen.fill([255, 255, 255])
+    for i in range (100):
+        width = random.randint(0, 250)
+        height = random.randint(0, 100)
+        top = random.randint(0, 400)
+        left = random.randint(0, 500)
+        pygame.draw.rect(screen, [0,0,0], [left, top, width, height], 1)
+        pygame.display.flip()
+        pygame.time.delay(30)
+    my_ball = pygame.image.load('beach_ball.png')
+    x_speed = 20
+    y_speed = 8
+    if x > screen.get_width() - 250  or  x < 0:
+        x_speed = - x_speed
+    if y > screen.get_height() - 250 or y < 0:
+        y_speed = - y_speed
+    x = x + x_speed
+    y = y + y_speed
+    screen.blit(my_ball,[x,y])
+    pygame.display.flip()
+【PG】这样可以让矩形一个一个地出现，因为我们放慢了程序的速度，并且刷新显示
+【PG】每个矩形被画出之后。如果你用同样的方法处理正弦波程序，你会看到正弦
+【PG】波中的每个点被绘制。

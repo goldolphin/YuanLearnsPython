@@ -1,0 +1,33 @@
+【PG】198　第 16章　图　　形
+
+【PG】你想要检查的那个像素的坐标， 比如：pixel_color = screen.get_at([320, 
+240])。在这个例子中， screen是表面的名字。
+
+【PG】16.5　图像
+
+【PG】在屏幕上画形状、 线和单个像素只是制作图形的一种方式。 有时我们还想用从别处得来的图片、 可 能是数码照片、 从网上下载的图片或者在图像编辑程序中创建的图片。在 Pygame中 ，使用图像最简单的方法就是利用 image函数。
+
+【PG】下面来看一个例子 。我们要显示一个图像 ，如果你用本书的安装程序安装了
+Python，这个图像已经在你的硬盘上了 。安装程序会在 \examples 文件夹中创建一个
+images子文件夹 ，这个程序中要使用的文件是 beach_ball.png 。所以，如果你的系统是
+Windows，你会在这里找到这个文件 ：
+c:\Program Files\helloworld\examples\images\
+beach_ball.png。
+
+【PG】完成这些例子时 ，需要把 beach_ball.png 文件复制到保存 Python程序的同一位置上。 这样一来，程序运行时 Python就能很容易地找到这个文件。 把beach_ball.png 文件放在正确的位置上后，键入代码清单 16-10中的程序，试着运行这个程序。
+
+【PG】代码清单 16-10　在 Pygame 窗口中显示沙滩球图像
+import pygame, sys
+pygame.init( )
+screen = pygame.display.set_mode([640,480] )
+screen.fill([255, 255, 255])my_ball = pygame.image.load("beach_ball.png")  
+screen.blit(my_ball, [50, 50])              
+pygame.display.flip()running = True
+while running:    for event in pygame.event.get():
+        if event.type == pygame.QUIT: 
+            running = Fals e
+pygame.quit( )
+
+【PG】只有这几行代码是新加的。如果没有使用这本书的安装程序，可以从本书网站（www.helloworldbook2.com）下载beach_ball.png。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

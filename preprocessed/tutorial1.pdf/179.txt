@@ -1,0 +1,65 @@
+【PG】13.8　关于变量命名的一点建议　　 153
+
+在前面的几节中已经看到， 可以对全局变量和局部变量使用相同的变量名。Python会在需要时自动创建新的局部变量，或者也可以用global关键字阻止它创建。不过，我强烈建议你不要重复使用变量名。你可能已经从一些例子中注意到，往往很难知道一个变量是局部的还是全局的，这让代码更加混乱，因为存在同名的不同变量。而且，只要有混乱，错误就会乘虚而入。所以对目前的状况来说，建议你对局部变量和全局变量使用不同的名字。这样就不会有混乱，也能把错误拒之门外。
+
+【PG】class Ball:
+ def __init__(self, color, size, direction):
+  self.color = color    self.size = size   self.direction = direction
+ def bounce(self):
+  if self.direction == "down":   self.direction = "up" myBall = Ball("red", "small", "down")print "I just created a ball."print "My ball is", myBall.sizeprint "My ball is", myBall.colorprint "My ball's direction is ", myBall.directionprint "Now I'm going to bounce the ball"printmyBall.bounce()110 Hello World!
+
+Just imagine how tedious it would be to work out the calories for all these combinations by hand, even if you had a calculator to do the math. It’s way more fun to write a program to figure it all out for you. Looping and a bit of math in Python make it a snap!
+
+【PG】What did you learn?
+
+In this chapter, you learned about
+�nested loops.
+�variable loops.
+�permutations and combinations.
+�decision trees.
+
+Test your knowledge
+1.How do you make a variable loop in Python?
+2.How do you make a nested loop in Python?
+
+# 4 0 0 0 1 1 60
+# 5 0 0 1 0 0 80
+# 6 0 0 1 0 1 120
+# 7 0 0 1 1 0 100
+# 8 0 0 1 1 1 140
+# 9 0 1 0 0 0 120
+# 10 0 1 0 0 1 160
+# 11 0 1 0 1 0 140
+# 12 0 1 0 1 1 180
+# 13 0 1 1 0 0 200
+# 14 0 1 1 0 1 240
+# 15 0 1 1 1 0 220
+# 16 0 1 1 1 1 260
+# 17 1 0 0 0 0 140
+# 18 1 0 0 0 1 180
+# 19 1 0 0 1 0 160
+# 20 1 0 0 1 1 200
+# 21 1 0 1 0 0 220
+# 22 1 0 1 0 1 260
+# 23 1 0 1 1 0 240
+# 24 1 0 1 1 1 280
+# 25 1 1 0 0 0 260
+# 26 1 1 0 0 1 300
+# 27 1 1 0 1 0 280
+# 28 1 1 0 1 1 320
+# 29 1 1 1 0 0 340
+# 30 1 1 1 0 1 380
+# 31 1 1 1 1 0 360
+# 32 1 1 1 1 1 400
+
+【PG】你学到了什么
+
+在这一章，你学到了以下内容。
+什么是函数。
+什么是参数（argument或parameter）。
+如何向函数传递一个参数。
+如何向函数传递多个参数。
+如何让函数向调用者返回一个值。
+变量作用域是什么，什么是局部变量和全局变量。
+如何在函数中使用全局变量。
+图灵社区会员FreeLink专享尊重版权

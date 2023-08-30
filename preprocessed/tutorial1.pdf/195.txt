@@ -1,0 +1,45 @@
+【PG】14.8　多态和继承　　 169
+
+【PG】例如，假设你要建立一个程序做几何题， 需要计算不同形状的面积， 比如三角形和正方形。你可以创建两个类，如下：
+
+【PG】Polymorphism—same method, different behavior
+Very simply, polymorphism  means that you can have two (or more) methods with the same name for different classes. These methods can behave differently, depending on which class they’re applied to. 
+For example, let’s say you were making a program to practice geometry, and you needed to calculate the area of different shapes, like triangles and squares. You might create two classes, like this: 
+Both the Triangle  class and the Square  class have a method called getArea(). So if we had an instance of each class, like this, then we could calculate the area of either one using getArea():
+We used the method name getArea()  for both shapes, but the method did something different for each shape. This is an example of polymorphism.
+
+【PG】Inheritance—learning from your parents
+In the real (nonprogramming) world, people can inherit things from their parents or other relatives. You can inherit traits like red hair, or you can inherit stuff like money or property. In object-oriented programming, classes can inherit attributes and methods from other classes. This allows you to have whole “families” of classes that share common attributes.
+
+【PG】class Triangle:
+    def __init__(self, width, height):
+        self.width = width        self.height = height
+    def getArea(self):
+        area = self.width * self.height / 2.0
+        return area
+
+【PG】class Square:
+    def __init__(self, size):
+        self.size = size
+    def getArea(self):
+        area = self.size * self.size 
+        return area
+
+【PG】Here is the Triangle  class
+
+【PG】Here is the Square  class
+
+【PG】Both have a method called getArea()
+
+【PG】>>> myTriangle = Triangle(4, 5)
+>>> mySquare = Square(7)
+>>> myTriangle.getArea()
+10.0
+>>> mySquare.getArea()
+49
+
+【PG】就可以使用 getArea() 分别计算它们的面积：
+
+【PG】这两个形状都使用了方法名 getArea() ，不过每个形状中这个方法做的工作不同。这就是一个多态的例子。
+
+【PG】在真实的 （非编程）世界中，人们可以从他们的父母或者其他亲戚那里继承一些东西。你可以继承一些特征 ，比如说红头发 ，或者可以继承像钱和财产之类的东西 。

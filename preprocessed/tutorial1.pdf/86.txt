@@ -1,69 +1,47 @@
 【PG】第 6章　GUI——图形用户界面
-默认输入
-有时用户输入信息时， 可能会期望得到某个答案， 或者有一个很常见或最可能
-输入的答案。 这 称为默认值（default） 。 这个最常见的答案可以由你为用户自动输入，
-这样用户就不用再键入了。有了默认值，只有当用户有不同的输入时才有必要键入。
 
-【PG】要在一个输入框中放入默认值，可以按照代码清单 6-4修改你的程序 。
-代码清单 6-4　如何建立默认参数
-现在运行这个程序时 ，输 入框中已经输入了“Vanilla” （香草） 。可以把它删掉，
-再输入你想要的内容， 不 过如果你最喜欢的口味确实是香草， 就不用再键入任何内
-容，只需点击 OK 。
+【PG】默认输入
+有时用户输入信息时， 可能会期望得到某个答案， 或者有一个很常见或最可能输入的答案。 这 称为默认值（default） 。 这个最常见的答案可以由你为用户自动输入，这样用户就不用再键入了。有了默认值，只有当用户有不同的输入时才有必要键入。
+要在一个输入框中放入默认值，可以按照代码清单 6-4 修改你的程序 。
+
+【PG】代码清单 6-4　如何建立默认参数
+现在运行这个程序时 ，输入框中已经输入了“Vanilla” （香草） 。可以把它删掉，再输入你想要的内容， 不过如果你最喜欢的口味确实是香草， 就不用再键入任何内容，只需点击 OK 。
 
 【PG】数字呢
-如果想在 EasyGui中输入一个数， 完全可以先通过输入框得到一个字符串， 然
-后使用int()或者ﬂoat()由这个字符串创建一个数（就像第 4章中的做法一样） 。
-EasyGui还提供了一种整数框 （ integer box ，integerbox ） ，可以用它来输入整
-数。还可以对所输入的数设置一个下界和上界。
-不过，整 数框不允许输入浮点数（ 小数） 。要输入小数， 必须先通过输入框得到
-字符串，然后再使用 ﬂoat()转换这个字符串。
+如果想在 EasyGui中输入一个数， 完全可以先通过输入框得到一个字符串， 然后使用int()或者ﬂoat()由这个字符串创建一个数（就像第 4章中的做法一样） 。
+EasyGui还提供了一种整数框 （ integer box ，integerbox ） ，可以用它来输入整数。还可以对所输入的数设置一个下界和上界。
+不过，整 数框不允许输入浮点数（ 小数） 。要输入小数， 必须先通过输入框得到字符串，然后再使用 ﬂoat()转换这个字符串。
 
 【PG】6.5　再看猜数游戏……
-第1章中，我创建了一个简单的猜数程序。 下面再来完成这个程序， 不过这一
-次我们要使用 EasyGui完成输入和输出 。代码清单 6-5显示了这个程序的代码。
-import random, easygui
+第1章中，我创建了一个简单的猜数程序。 下面再来完成这个程序， 不过这一次我们要使用 EasyGui完成输入和输出 。代码清单 6-5 显示了这个程序的代码。
+
+【PG】import random, easygui
 secret = random.randint(1, 99)        
 guess = 0
 tries = 0
 easygui.msgbox("""AHOY!  I'm the Dread Pirate Roberts, and I have a secret !
 It is a number from 1 to 99.  I'll give you 6 tries.""" )
-while guess != secret and tries < 6:    guess = easygui.integerbox("What's yer guess, matey?")
+while guess != secret and tries < 6:    
+    guess = easygui.integerbox("What's yer guess, matey?")  
     if not guess: break                                     
     if guess < secret:                                       
         easygui.msgbox(str(guess) + " is too low, ye scurvy dog!")
     elif guess > secret:                                          
         easygui.msgbox(str(guess) + " is too high, landlubber!")
     tries = tries + 1       
-if guess == secret:                                                        easygui.msgbox("Avast! Ye got it!  Found my secret, ye did!")    
+if guess == secret:                                              
+    easygui.msgbox("Avast! Ye got it!  Found my secret, ye did!")    
 else:                                                            
-    easygui.msgbox("No more guesses!  The number was " + str(secret))
+    easygui.msgbox("No more guesses!  The number was " + str(secret)) 
 
 【PG】选一个秘密数
-得到玩家猜的数代码清单 6-5　使用 EasyGui 的猜数游戏
+得到玩家猜的数代码清单 6-5 使用 EasyGui 的猜数游戏
 
-【PG】Hello World!
+【PG】58 Hello World!
 import easygui
 flavor = easygui.enterbox("What is your favorite ice cream flavor?")
 easygui.msgbox ("You entered " + flavor)
-When you run it,
-you should see something like this:
-And then, when you type in your favorite flavor and click OK, it’ll be displayed in the
-message box, just like before.
-This is just like raw_input(). It gets text (a string) from the user.
 
-【PG】Default input
-Sometimes when a user is entering information, there is a certain answer that is expected,
-common, or most likely to be entered. That is called a default . You might be able to save the
-user some typing by automatically entering the most common answer for her. Then, she’d
-only have to type an answer if she had a different input.
-To put a default in an enter box, change your program to look like the one in listing 6.4.
-import easygui
-flavor = easygui.enterbox("What is your favorite ice cream flavor?",                           default = 'Vanilla')
-easygui.msgbox ("You entered " + flavor)
-Now, when you run it, “Vanilla” is already entered in the enter box. You can delete it
-and enter anything you want, but if your favorite flavor is vanilla, you don’t have to type
-anything, just click OK.
-
-【PG】What about numbers?
-If you want to enter a number in EasyGui, you can always use an enter box to get a string,
-and then create a number from it using int() or float() (as we did in chapter 4).
+【PG】When you run it, you should see something like this:
+And then, when you type in your favorite flavor and click OK, it’ll be displayed in the message box, just like before.
+This is just like raw_input() . It gets text (a string) from the user.

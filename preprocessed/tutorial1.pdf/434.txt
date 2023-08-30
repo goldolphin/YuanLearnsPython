@@ -1,0 +1,167 @@
+【PG】附录 C　自测题答案
+【PG】3. 以下给出一个答案：374 Hello World!
+
+【PG】
+3Here is one answer:
+To add a 5-liter 
+buffer, change the line,
+                                      to
+
+【PG】
+4Here is a simple password program:
+Chapter 8: Loop the Loop
+Test your knowledge
+1The loop would run 5 times.
+2The loop would run 3 times, and the values would be as follows: i = 1, i = 3, i = 5.
+3range(1, 8)  would give you [1, 2, 3, 4, 5, 6, 7] .
+4range(8)  would give you [0, 1, 2, 3, 4, 5, 6, 7] .
+5range(2, 9, 2)  would give you [2, 4, 6, 8] .
+6range (10, 0, -2)  would give you  [10, 8, 6, 4, 2] .
+7You use continue  to stop the current iteration of a loop and jump ahead to the next 
+iteration.
+8A while  loop ends when the condition being tested is false .
+
+【PG】# program to check if you need gas.
+# Next station is 200 km away
+tank_size = int(raw_input('How big is your tank (liters)? '))
+full = int(raw_input ('How full is your tank (eg. 50 for half full)?'))
+mileage = int(raw_input ('What is your gas mileage (km per liter)? '))
+range = tank_size * (full / 100.0) * mileage
+print 'You can go another', range, 'km.'
+print 'The next gas station is 200km away.'
+if range <= 200:
+    print 'GET GAS NOW!'
+else:
+    print 'You can wait for the next station.'
+
+【PG】password  = "bigsecret"
+guess  = raw_input("Enter your password: ")
+if guess == password:
+    print "Password correct.  Welcome"    # put the rest of the code for your program here
+else:
+    print "Password incorrect.  Goodbye"
+range = tank_size * (full / 100.0) * mileage
+range = (tank_size - 5) * (full / 100.0) * mileage 
+要增加一个 5公升的缓冲区，需要把这行代码：
+
+【PG】374 Hello World!
+
+【PG】3Here is one answer:
+To add a 5-liter 
+buffer, change the line,
+                                      to
+
+【PG】
+4Here is a simple password program:
+Chapter 8: Loop the Loop
+Test your knowledge
+1The loop would run 5 times.
+2The loop would run 3 times, and the values would be as follows: i = 1, i = 3, i = 5.
+3range(1, 8)  would give you [1, 2, 3, 4, 5, 6, 7] .
+4range(8)  would give you [0, 1, 2, 3, 4, 5, 6, 7] .
+5range(2, 9, 2)  would give you [2, 4, 6, 8] .
+6range (10, 0, -2)  would give you  [10, 8, 6, 4, 2] .
+7You use continue  to stop the current iteration of a loop and jump ahead to the next 
+iteration.
+8A while  loop ends when the condition being tested is false .
+
+【PG】# program to check if you need gas.
+# Next station is 200 km away
+tank_size = int(raw_input('How big is your tank (liters)? '))
+full = int(raw_input ('How full is your tank (eg. 50 for half full)?'))
+mileage = int(raw_input ('What is your gas mileage (km per liter)? '))
+range = tank_size * (full / 100.0) * mileage
+print 'You can go another', range, 'km.'
+print 'The next gas station is 200km away.'
+if range <= 200:
+    print 'GET GAS NOW!'
+else:
+    print 'You can wait for the next station.'
+
+【PG】password  = "bigsecret"
+guess  = raw_input("Enter your password: ")
+if guess == password:
+    print "Password correct.  Welcome"    # put the rest of the code for your program here
+else:
+    print "Password incorrect.  Goodbye"
+range = tank_size * (full / 100.0) * mileage
+range = (tank_size - 5) * (full / 100.0) * mileage
+
+【PG】
+4. 下面是一个简单的口令程序：374 Hello World!
+
+【PG】
+3Here is one answer:
+To add a 5-liter 
+buffer, change the line,
+                                      to
+
+【PG】
+4Here is a simple password program:
+Chapter 8: Loop the Loop
+Test your knowledge
+1The loop would run 5 times.
+2The loop would run 3 times, and the values would be as follows: i = 1, i = 3, i = 5.
+3range(1, 8)  would give you [1, 2, 3, 4, 5, 6, 7] .
+4range(8)  would give you [0, 1, 2, 3, 4, 5, 6, 7] .
+5range(2, 9, 2)  would give you [2, 4, 6, 8] .
+6range (10, 0, -2)  would give you  [10, 8, 6, 4, 2] .
+7You use continue  to stop the current iteration of a loop and jump ahead to the next 
+iteration.
+8A while  loop ends when the condition being tested is false .
+
+【PG】# program to check if you need gas.
+# Next station is 200 km away
+tank_size = int(raw_input('How big is your tank (liters)? '))
+full = int(raw_input ('How full is your tank (eg. 50 for half full)?'))
+mileage = int(raw_input ('What is your gas mileage (km per liter)? '))
+range = tank_size * (full / 100.0) * mileage
+print 'You can go another', range, 'km.'
+print 'The next gas station is 200km away.'
+if range <= 200:
+    print 'GET GAS NOW!'
+else:
+    print 'You can wait for the next station.'
+
+【PG】password  = "bigsecret"
+guess  = raw_input("Enter your password: ")
+if guess == password:
+    print "Password correct.  Welcome"    # put the rest of the code for your program here
+else:
+    print "Password incorrect.  Goodbye"
+range = tank_size * (full / 100.0) * mileage
+range = (tank_size - 5) * (full / 100.0) * mileage
+
+【PG】
+第8章
+测试题
+1. 这个循环会运行 5次。
+2. 这个循环会运行 3次， i的值分别是 i = 1, i = 3, i = 5。
+3. range(1, 8)  会给出 [1, 2, 3, 4, 5, 6, 7] 。
+4. range(8)  会给出 [0, 1, 2, 3, 4, 5, 6, 7] 。
+5. range(2, 9, 2)  会给出 [2, 4, 6, 8] 。
+6. range (10, 0, -2) 会给出 [10, 8, 6, 4, 2] 。
+7. 可以使用 continue 停止一个循环的当前迭代，直接跳到下一次迭代。
+8. while循环会在测试的条件为 false时停止。
+
+【PG】# program to check if you need gas.
+# Next station is 200 km away
+tank_size = int(raw_input('How big is your tank (liters)? '))
+full = int(raw_input ('How full is your tank (eg. 50 for half full)?'))
+mileage = int(raw_input ('What is your gas mileage (km per liter)? '))
+range = tank_size * (full / 100.0) * mileage
+print 'You can go another', range, 'km.'
+print 'The next gas station is 200km away.'
+if range <= 200:
+    print 'GET GAS NOW!'
+else:
+    print 'You can wait for the next station.'
+
+【PG】password  = "bigsecret"
+guess  = raw_input("Enter your password: ")
+if guess == password:
+    print "Password correct.  Welcome"    # put the rest of the code for your program here
+else:
+    print "Password incorrect.  Goodbye"
+range = tank_size * (full / 100.0) * mileage
+range = (tank_size - 5) * (full / 100.0) * mileage

@@ -1,0 +1,111 @@
+【PG】11.2　可变循环　　 105
+
+【PG】11.2　可变循环
+固定的数（ 比如range() 函数中使用的数 ）
+也称为常数（ constant） 。 如果在一个 for循环的
+range() 函数中使用常数， 程序运行时循环总会运
+行相同的次数。 在 这种情况下， 我们称循环次数是
+硬编码的（ hard-coded） ， 因为它在你的代码中被定义
+了，而且永远不会改变。这往往不是我们真正想要的。
+
+有时我们希望循环次数由用户来决定 ，或 者由程序的另一部
+分决定。对于这种情况，我们就需要一个变量。
+
+例如，假设你要建立一个太空神枪手游戏 。只要有外星人被消灭就要重绘屏幕 。必
+须有某个计数器来跟踪还剩下多少外星人 ，另外只要屏幕更新 ，就需要循环处理剩下的
+外星人，在屏幕上画出他们的图像 。每次玩家消灭一个外星人时外星人数就会改变 。
+
+因为我们还没有学习如何在屏幕上画外星人 ，下 面先给出一个使用可变循环的
+简单示例程序：
+
+【PG】Although you might think it’s pretty boring, a good way to see what’s going on with 
+nested loops is to just print some stars to th e screen and count them. We’ll do that in the 
+next section.
+
+【PG】Variable loops
+Fixed numbers, like the ones we’ve used in the range()  function, are also called constants . 
+If you use constants in the range()  function of a for loop, the loop will run the same num-
+ber of times whenever the program is run. In that case, we say the number of loops is 
+hard-coded , because it’s defined in your code and it  never changes. That’s not always what 
+we want.
+
+Sometimes we want the numb er of loops to be deter-
+mined by the user, or by another part of the program. For that, we need a variable. 
+
+For example, let’s say you were making a space-shooter game. You’d have to keep redrawing the 
+screen as aliens get wiped out. You’d have some sort 
+of counter to keep track of how many aliens were left, and whenever the screen was updated, you’d need to 
+loop through the remaining aliens and draw their images on the screen. The number of aliens would change every time the player wiped out another one.
+
+Because we haven’t learned how to draw aliens on the screen yet, here’s a simple example 
+program that uses a variable loop: 
+
+The program asked the user how many stars he wanted, and then it used a variable loop to 
+print that many. Well, almost! We asked for five stars and only got four! Oops, we forgot that the 
+for loop stops one short of the second number in the range . So we need to add 1 to the 
+user’s input. 
+
+numStars = int(raw_input ("How many stars do you want? "))
+for i in range (1, numStars):     print '*',
+
+【PG】Although you might think it’s pretty boring, a good way to see what’s going on with 
+nested loops is to just print some stars to th e screen and count them. We’ll do that in the 
+next section.
+
+【PG】Variable loops
+Fixed numbers, like the ones we’ve used in the range()  function, are also called constants . 
+If you use constants in the range()  function of a for loop, the loop will run the same num-
+ber of times whenever the program is run. In that case, we say the number of loops is 
+hard-coded , because it’s defined in your code and it  never changes. That’s not always what 
+we want.
+
+Sometimes we want the numb er of loops to be deter-
+mined by the user, or by another part of the program. For that, we need a variable. 
+
+For example, let’s say you were making a space-shooter game. You’d have to keep redrawing the 
+screen as aliens get wiped out. You’d have some sort 
+of counter to keep track of how many aliens were left, and whenever the screen was updated, you’d need to 
+loop through the remaining aliens and draw their images on the screen. The number of aliens would change every time the player wiped out another one.
+
+Because we haven’t learned how to draw aliens on the screen yet, here’s a simple example 
+program that uses a variable loop: 
+
+The program asked the user how many stars he wanted, and then it used a variable loop to 
+print that many. Well, almost! We asked for five stars and only got four! Oops, we forgot that the 
+for loop stops one short of the second number in the range . So we need to add 1 to the 
+user’s input. 
+
+numStars = int(raw_input ("How many stars do you want? "))
+for i in range (1, numStars):     print '*',
+
+【PG】Although you might think it’s pretty boring, a good way to see what’s going on with 
+nested loops is to just print some stars to th e screen and count them. We’ll do that in the 
+next section.
+
+【PG】Variable loops
+Fixed numbers, like the ones we’ve used in the range()  function, are also called constants . 
+If you use constants in the range()  function of a for loop, the loop will run the same num-
+ber of times whenever the program is run. In that case, we say the number of loops is 
+hard-coded , because it’s defined in your code and it  never changes. That’s not always what 
+we want.
+
+Sometimes we want the numb er of loops to be deter-
+mined by the user, or by another part of the program. For that, we need a variable. 
+
+For example, let’s say you were making a space-shooter game. You’d have to keep redrawing the 
+screen as aliens get wiped out. You’d have some sort 
+of counter to keep track of how many aliens were left, and whenever the screen was updated, you’d need to 
+loop through the remaining aliens and draw their images on the screen. The number of aliens would change every time the player wiped out another one.
+
+Because we haven’t learned how to draw aliens on the screen yet, here’s a simple example 
+program that uses a variable loop: 
+
+The program asked the user how many stars he wanted, and then it used a variable loop to 
+print that many. Well, almost! We asked for five stars and only got four! Oops, we forgot that the 
+for loop stops one short of the second number in the range . So we need to add 1 to the 
+user’s input. 
+
+numStars = int(raw_input ("How many stars do you want? "))
+for i in range(1, numStars + 1):     print '*',                      Adds 1, so if he asks for 5 stars, he gets 5 stars
+
+【PG】这个程序会询问用户想要多少个星号， 然后使用一个可变循环准确地打印这些星号。嗯，只能算基本准确！ 我们想要 5个星号， 可是只得到了 4个！唉呀，我们忘记了for循环不是达到 range函数中第二个数时才停止， 它在比这个数少 1时就停止了。所以需要对用户的输入加 1。加1，所以如果他要 5个星号，就会得到 5个。还有一种方法可以完成同样的工作， 就是从 0开始循环计数， 而不是 1。 （这一点在第 8章提到过。 ）这种做法在编程中很常用， 下一章会解释为什么。 先来看看这个循环是怎样的：

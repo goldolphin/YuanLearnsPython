@@ -1,0 +1,21 @@
+【PG】因为前面使用了碰撞检测，当球碰到球拍时要让它反向。应该记得代码清单 18-5中的代码：
+if pygame.sprite.spritecollide(paddle, ballGroup, False):
+    myBall.speed[1] = -myBall.speed[1]
+
+【PG】现在需要增加代码播放声音。我们需要在程序最前面增加一行 pygame.mixer.init()，还要创建声音对象以备使用：hit = pygame.mixer.Sound("hit_paddle.wav")。
+另外还要设置音量，让声音不至于太吵：hit.set_volume(0.4)。
+当球碰到球拍时，播放这个声音：
+
+if pygame.sprite.spritecollide(paddle, ballGroup, False):
+    myBall.speed[1] = -myBall.speed[1]
+    hit.play()
+
+【PG】把这个代码添加到代码清单18-5的PyPong程序中。一定要把 hit_paddle.wav 文件复制到保存程序的同一个位置。运行这个程序时，每次球碰到球拍时你都会听到一个声音。
+
+【PG】19.7 更多声音
+球碰到球拍时会发出hit声音，下面再增加另外一些声音。我们将为下面这些情况添加声音：
+- 球碰到两边的墙时；
+- 球碰到顶边而且玩家得分时；
+- 玩家漏球，球碰到底边时；
+- 新的一条命开始时；
+- 游戏结束时。

@@ -1,0 +1,87 @@
+【PG】106　　第 11章　嵌套与可变循环
+【PG】11.3　可变嵌套循环
+【PG】现在来尝试一个可变嵌套循环。 这就是一个嵌套循环， 只不过其中一个或多个循环在range() 函数中使用了变量。代码清单 11-2给出了一个例子。
+【PG】代码清单 11-2　一个可变嵌套循环
+【PG】
+Another way to do the same thing is to start the loop counting at 0, instead of 1. (We mentioned that back in chapter 8.) This is very common in programming, and we’ll see why in the next chapter. Here’s how that would look:
+【PG】
+Variable nested loops
+【PG】
+Now let’s try a variable nested loop. That’s just a nested loop where one or more of the loops uses a variable in the range()  function. Listing 11.2 shows an example.
+【PG】
+numLines = int(raw_input ('How many lines of stars do you want? '))
+numStars = int(raw_input ('How many stars per line? '))
+for line in range(0, numLines):    
+    for star in range(0, numStars): 
+        print '*',
+    print
+【PG】
+Try running this program to see if it makes sense. You should see something like this:
+【PG】
+The first two lines ask the user how many lines she wants and how many stars per line. It remembers the answers using the variables numLines  and numStars . Then we have the two loops:
+�The inner loop ( for star in range (0, numStars): ) prints each star, and runs once for each star on a line. 
+�The outer loop ( for line in range (0, numLines): ) runs once for each line of stars. 
+The second print  command is needed to start a new line of stars. If we didn’t have that, all the stars would print on one line, because of the comma in the first print  statement.
+【PG】Listing 11.2 A variable nested loop
+>>> ============================ RESTART ============================
+>>>
+How many lines of stars do you want?  3
+How many stars per line?  5
+*****
+*****
+*****
+numStars = int(raw_input ("How many stars do you want? "))
+for i in range(0, numStars):
+     print '*',
+>>> ====================== RESTART =====================
+>>>How many stars do you want? 5
+* * * * *
+【PG】
+106 Hello World!
+【PG】
+Another way to do the same thing is to start the loop counting at 0, instead of 1. (We mentioned that back in chapter 8.) This is very common in programming, and we’ll 
+see why in the next chapter. Here’s how that would look:
+【PG】
+Variable nested loops
+【PG】
+Now let’s try a variable nested loop. That’s just a nested loop where one or more of the loops uses a variable in the range()  function. Listing 11.2 shows an example.
+【PG】
+numLines = int(raw_input ('How many lines of stars do you want? '))
+numStars = int(raw_input ('How many stars per line? '))
+for line in range(0, numLines):    
+    for star in range(0, numStars): 
+        print '*',
+    print
+【PG】
+Try running this program to see if it makes sense. You should see something like this:
+【PG】
+The first two lines ask the user how many lines she wants and how many stars per line. It remembers the answers using the variables numLines  and numStars . Then we have the two loops:
+�The inner loop ( for star in range (0, numStars): ) prints each star, and runs once for each star on a line. 
+�The outer loop ( for line in range (0, numLines): ) runs once for each line of stars. 
+The second print  command is needed to start a new line of stars. If we didn’t have that, all the stars would print on one line, because of the comma in the first print  statement.
+【PG】Listing 11.2 A variable nested loop
+>>> ============================ RESTART ============================
+>>>
+How many lines of stars do you want?  3
+How many stars per line?  5
+*****
+*****
+*****
+numStars = int(raw_input ("How many stars do you want? "))
+for i in range(0, numStars):
+     print '*',
+>>> ====================== RESTART =====================
+>>>How many stars do you want? 5
+* * * * *
+【PG】
+前两行询问用户想要多少行， 以及每行希望有多少个星号。 程序使用变量numLines 和numStars 记住这些答案。接下来有两个循环：
+【PG】
+内循环（ for star in range (0, numStars) :）打印每个星号，对每一行
+上的每个星号分别运行一次；
+【PG】
+外循环（ for line in range (0, numLines) :）对每行星号分别运行一次 。
+【PG】
+需要用第二个 print命令开始新的一行星号。 如果没有这个命令， 由于第一个
+print语句中有逗号，所有星号都会打印到同一行上。
+【PG】甚至可以有“嵌套嵌套循环” （或双重嵌套循环 ） ，就像代码清单 11-3这样。运行这个程序来看它的作用，你会看到类似这样的结果：
+【PG】图灵社区会员 FreeLink 专享 尊重版权

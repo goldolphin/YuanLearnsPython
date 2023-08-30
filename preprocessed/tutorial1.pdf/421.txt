@@ -1,0 +1,15 @@
+【PG】附录 A　变量命名规则　　 395
+
+【PG】下面是一些合法变量名的例子：
+my_answer
+answer23
+answer _23
+YourAnswer
+Your2ndAnswer
+
+【PG】下面是一些不合法变量名的例子：
+23answer （变量名不能以数字开头。 ）
+your-answer （不允许有连字符。 ）
+my answer （不允许有空格。 ）
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

@@ -1,0 +1,88 @@
+【PG】第 20章　更多 GUI
+import sys
+from PyQt4 import QtCore, QtGui, uic
+form_class = uic.loadUiType("tempconv.ui")[0]
+class MyWindowClass(QtGui.QMainWindow, form_class):
+    def __init__(self, parent=None) :
+        QtGui.QMainWindow.__init__(self, parent)
+        self.setupUi(self)
+app = QtGui.QApplication(sys.argv)
+myWindow = MyWindowClass()
+myWindow.show()
+app.exec_()
+
+【PG】摄氏度转换为华氏度
+首先来完成摄氏度到华氏度的转换。将摄氏度转换为华氏度的公式是：
+
+【PG】CHAPTER  20 More GUIs
+Now we have the GUI elements (components, or controls, or widgets) placed, and we have 
+given them the names and labels we want. Save the resource file as TempGui.rsrc.py  by 
+selecting File > Save As  in Resource Editor.
+Next, start a new file in your code editor (SPE or IDLE), and type in the basic PythonCard code (or copy it from our first program):
+We won’t bother with the 
+pass  keyword, because that’s just a placeholder for when there’s 
+nothing defined in a block. We’re going to define several event handlers for our MainWindow  
+class.
+
+【PG】Converting Celsius to Fahrenheit
+First, let’s get the Celsius to Fahrenheit function working. The formula for converting Celsius 
+to Fahrenheit is
+We need to get the Celsius temperature from the tfCel  text box, do the calculation, and 
+put the result in the spinFahr  Fahrenheit spin box. That should all happen when the user 
+clicks the Celsius to Fahrenheit  button, so the code to do it  should go in that button’s 
+event handler:
+To get the value from the Celsius box, we use self.components.tfCel.text . This value is a 
+string, so we have to convert it to a float:
+Then we need to do the conversion:
+Next, we need to put that value in the Fahrenheit box. There’s one catch here: spinners can 
+only have integer values in them, not floats. So we have to make sure we convert the value 
+to an int before putting it in the spinner. The number in the spinner is its value  property, 
+so the code looks like this:
+
+【PG】Converting Fahrenheit to Celsius
+The code for converting the other way (from Fahrenheit to Celsius) is very similar. The for-
+mula for that conversion is
+from PythonCard import model
+class MainWindow(model.Background):
+    app = model.Application(MainWindow)
+    app.MainLoop()
+fahr = cel * 9.0 / 5 + 32
+def on_btnCtoF_mouseClick(self, event):
+    cel = float(self.components.tfCel.text)
+    fahr = Cel * 9.0 / 5 + 32 
+    self.components.spinFahr.value = int(fahr)
+cel = (fahr - 32) * 5.0 / 9
+
+【PG】我们需要从 editCel  Line  Edit组件得到摄氏度， 完成计算， 再把结果放在
+spinFahr 华氏度 Spin Box组件中。 这些应当在用户点击 Celsius to Fahrenheit 按钮时
+发生，所以要把完成这些工作的代码放在 Celsius to Fahrenheit 按钮的事件处理器中 ：
+首先，我们需要将按钮的 clicked 事件连接到事件处理器：
+self.btn_CtoF.clicked.connect(self.btn_CtoF_clicked)
+像我们在第一个程序中所做的那样， 将这段代码放在 MyWindow 类的__init__()  
+方法中。
+然后我们需要定义事件处理器 。我 们使用self.editCel.text() 来从 Celsius
+输入框（ 名 为editCel的Line Edit 组件）中取值。 取到的值为字符串， 所以我们要将
+它转换为浮点数：
+cel = ﬂoat(self.editCel.text()
+然后我们来做单位转换：
+fahr = cel * 9.0 / 5 + 32
+接下来， 我们需要将这个值放到 Fahrenheit 输入框中， 也就是名为 spinFahr 的
+Spin Box 组 件。这里需要注意一点：Spin Box 组件的值只能是整数， 不能是浮点数。
+所以在放入 Spin Box之前需要将值转换为 int。Spin Box 的数字就是它的 value属
+性，所以代码是这样的：
+self.spinFahr.setValue(int(fahr))
+我们要给结果加上 0.5，这样在使用 int()将浮点数转换为整数时， 才会用四舍
+五入以确保得到最近的整数值，而不是向下取整。将这些放到一起就是这样的：
+def btn_CtoF_clicked(self):
+        cel = float(self.editCel.text()) 
+        fahr = cel * 9.0 / 5 + 32    
+        self.spinFahr.setValue(int(fahr + 0.5))
+
+【PG】app = QtGui.QApplication(sys.argv)
+myWindow = MyWindowClass()
+myWindow.show()
+app.exec_() 获取摄氏度值
+转换为华氏温度
+四舍五入并放入华氏温度 Spin Box
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

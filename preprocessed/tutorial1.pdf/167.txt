@@ -1,0 +1,73 @@
+【PG】13.1　函数——积木　　 141
+
+【PG】代码清单 13-1　创建和使用函数132 Hello World!
+def printMyAddress():
+ print  “Warren Sande”
+ print  “123 Main Street” print  “Ottawa, Ontario, Canada” print  “K2M 2E9” print
+ printMyAddress()
+ print “Done the function”
+
+【PG】13 2
+4def printMyAddress():
+    print "Warren Sande"    print "123 Main Street"
+    print "Ottawa, Ontario, Canada"
+    print "K2M 2E9"    print 
+printMyAddress()
+
+【PG】In line 1, we define a function, using the def keyword. We give the name of the function fol-
+lowed by parentheses “ ()” and then a colon:
+I will explain what the parentheses are for soon. The colon tells Python that a block of code 
+is coming next (just like for loops, while  loops, and if statements). 
+Then, we have the code that makes up the function.
+
+【PG】In the last line of listing 13.1, we have the main program: we call  the function 
+by giving its name with the parentheses. This is where the program starts 
+running. This on e line makes the 
+program run the code in the function that we just defined.
+When the main program calls a 
+function, it’s like the function is 
+helping the main program get its job done.
+The code inside the 
+def block isn’t part of 
+the main program, so when the pro-
+gram runs, it skips over that part and 
+starts with the first line that isn’t inside a 
+def block. The figure on the 
+right shows what happens when you call a function. I added one extra line at the end of the program that 
+prints a message after the function is done.
+
+【PG】These are the steps in the figure above:
+1Start here. This is the beginning of the main program.
+2When we call the function, we jump to the first line of code in the function.
+
+【PG】Listing 13.1 Creating and using a function
+Defines (creates) 
+the function
+Calls (uses) 
+the function
+def printMyAddress():定义（创建）函数
+调用（使用）函数
+第1行中，我们使用 def关键字定义了一个函数。 在函数名后面有一对括号
+“()”，然后是一个冒号：def printMyAddress():
+后面很快就会解释这个括号做什么用。 冒号告诉 Python接下来是一个代码块
+（就像for循环、while 循环和if语句中一样） 。
+下面就是构成这个函数的代码。
+
+【PG】代码清单 13-1的 最后一行是主程序： 这里给出
+函数名和括号来调用这个函
+数。程序就从这里开始运行。
+正
+是这一行让程序开始运行
+刚才定义的函数中的代码。
+主程序调用函数时 ，
+就
+像是这个函数在帮助主
+程序完成它的任务。
+def块中的代码并不
+是主程序的一部分， 所 以
+程序运行时， 它 会跳过这
+一部分， 从def块以外的
+第一行代码开始运行 。右 图显示了调用函数时会发生什么。 我在程序最后额外增加
+了一行代码，它会在函数完成后打印一条消息。
+这个图中包括以下步骤。
+(1) 从这里开始。这是主程序的开始。

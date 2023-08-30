@@ -1,0 +1,58 @@
+【PG】17.1 动画精灵 213
+
+【PG】法强。你得遵循 Python的语法（ 语言规则 ） ，这是必须保证的， 尽管如此， 自由表述的空间还是有的。 如果你让 10个程序员编写同样的程序， 可能得不到两个完全相同的代码。
+
+【PG】move() 方法
+
+【PG】因为我们把球创建为 MyBallClass 的实例， 应该可以使用一个类方法来移动这些球。 下面就来创建一个新的类方法，名为 move()：
+
+【PG】Sprites (actually the rect s within them) have a built-in method called move() . This method requires a parameter called speed to tell it how far (that is, how fast) to move the object. Because we’re dealing with 2-D graphics, the speed is a list of two numbers, one for x-speed and one for y-speed. We also check for the ball hitting the edges of the window, so we can “bounce” the balls around the screen.
+
+【PG】Let’s change the MyBallClass definition to add the speed property and the move() method:
+
+【PG】Notice the change in line 2 (def __init__(self, image_file, location, speed):) and the addition of line 7 (self.speed = speed), as well as the new move() method in lines 9 to 15.
+
+【PG】Now when we create each instance of a ball, we need to tell it the speed as well as the image file and location:
+
+【PG】def move(self):
+    self.rect = self.rect.move(self.speed)
+    if self.rect.left < 0 or self.rect.right > width:
+        self.speed[0] = -self.speed[0]
+    if self.rect.top < 0 or self.rect.bottom > height:
+        self.speed[1] = -self.speed[1]
+
+【PG】class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, location, speed):
+        pygame.sprite.Sprite.__init__(self) #call Sprite initializer
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        self.speed = speed
+           
+    def move(self):
+        self.rect = self.rect.move(self.speed)
+        if self.rect.left < 0 or self.rect.right > width:
+            self.speed[0] = -self.speed[0]
+        if self.rect.top < 0 or self.rect.bottom > height:
+            self.speed[1] = -self.speed[1]
+
+【PG】Checks for hitting sides of the window, and if so, reverses the x-speed
+Checks for hitting top or bottom of the window, and if so, reverses the y-speed
+Adds the location argument
+Adds this line to create a speed attribute for the ball
+Adds this method for moving the ball
+speed = [2, 2]
+ball = MyBallClass(img_file, location, speed)
+
+【PG】动画精灵（实际上是其中的rect）有一个内置方法move()。这个方法需要一个speed参数来告诉它对象要移动多远（也就是移动多快）。因为我们处理的是二维（2D）图形，而speed是一个包含两个数的列表，一个对应x-speed，另一个对应y-speed。我们还要检查球是否碰到窗口的边界，使球能够在屏幕上“反弹”。
+
+【PG】下面修改MyBallClass定义，增加speed属性和move()方法：
+
+【PG】Notice the change in line 2 (def __init__(self, image_file, location, speed):) and the addition of line 7 (self.speed = speed), as well as the new move() method in lines 9 to 15.
+
+【PG】现在创建球的各个实例时，需要告诉它速度，还要指出图像文件以及位置：
+
+【PG】增加location参数
+增加这行代码，为球创建一个speed属性
+增加这个方法来移动球
+注意第2行（def __init__(self,image_file,location,speed):）中的修改，这里增加了第7行（self.speed=speed），另外第9行到第15行增加了新的move()方法。

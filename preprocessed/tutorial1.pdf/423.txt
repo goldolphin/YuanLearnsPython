@@ -1,0 +1,21 @@
+【PG】附录 B　Python 2 与 Python 3 的差异　　 397
+
+【PG】你可能已经注意到了， print在 Python 3和 Python 2代码中的高亮颜色是不一样的。这是因为在 Python 2 中，print是一个关键字，而在 Python 3 中，print()是一个函数。
+
+【PG】input() Python 2中的 raw_input()在 Python 3中改名为 input()了。这个函数会返回字符串，但不会尝试对输入的字符串做任何计算（比如将它转成 int 或ﬂoat）。
+
+【PG】Python 2 中的 input()函数会对输入进行计算（如果可能的话会将它转换成数字），这个函数在 Python 3中不存在了。
+
+【PG】这意味着在Python 2中的代码 your_name = raw_input("Enter your name: ") 在 Python 3中要这样写：your_name = input("Enter your name: ")
+
+【PG】在 Python 2中的代码 age = input("Enter your age: ") 在 Python 3中要这样写：age = int(input("Enter your age: "))
+
+【PG】整除 Python 3 中第三点主要的变化是处理整除的方式。是否还记得我们在第3章讨论过这个话题？在 Python 2中，代码运行结果是这样的： >>> print 5/2 2 Python 2在进行除法运算时会默认向下取整。Python 3会默认进行浮点数除法，所以在 Python 3中是这样的 ：
+>>> print(5/2)
+2.5
+
+【PG】如果你想在 Python 3中进行整除运算，可以使用双斜线，像这样：
+>>> print(5//2)
+2
+
+【PG】图灵社区会员FreeLink专享 尊重版权

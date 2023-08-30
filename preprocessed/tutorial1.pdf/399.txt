@@ -1,0 +1,56 @@
+【PG】25.2　障碍物　　 373
+
+【PG】class ObstacleClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, location, type):
+        pygame.sprite.Sprite.__init__(self)         
+        self.image_file = image_file        
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect( )
+        self.rect.center = location
+        self.type = type
+        self.passed = Fals e
+
+【PG】创建障碍物地图
+现在我们来创建多个障碍物， 以便填充在 640×640 像素的窗口中。 我们将 10
+个障碍物（ 小 旗和树）随机地分布在 100个格子中， 每个障碍物既可以是小旗也可
+以是树。 最 终结果可能是 2面小旗 8棵树，7 面小旗 3棵树，或者是总和为 10的任
+意组合。总之，小旗和树是随机选择的，它们的位置也是随机的。
+
+我们唯一需要当心的是 ，不 要尝试将两个障碍物放在同一位置， 所以我们需要
+知道哪些位置是已经使用过的。 变 量locations 是一个用于记录使用过的位置的列
+表。当想要在某个位置放置一个新的障碍物时， 我 们首先要查看这个位置是否已有
+一个障碍物。
+
+【PG】def create_map():
+    global obstacles
+    locations = []    
+    for i in range(10):      
+        row = random.randint(0, 9)
+        col = random.randint(0, 9)        
+        location  = [col * 64 + 32, row * 64 + 32 + 640]  
+        if not (location in locations):               
+            locations.append(location)          
+            type = random.choice(["tree", "flag"] )
+            if type == "tree": img = "skier_tree.png"            
+            elif type == "flag":  img = "skier_flag.png "
+            obstacle = ObstacleClass(img, location, type )
+            obstacles.add(obstacle)
+
+【PG】每屏 10个障碍物
+障碍物的位置
+(x, y)
+确保没有将两个障
+碍物放入同一位置
+
+【PG】好眼力！我们不希望游戏开始时满屏都是障碍物，而是希望它是空白
+的，然后障碍物从底部出现。 所 以，我们将障碍物的场景创建在窗口底部
+的“下方”。为此，我 们需要为每个障碍物
+位置的 y值增加 640像素 （窗口的高度） 。
+
+游戏开始时 ，我 们希望障碍物从底部滚动上
+来。为此，我 们修改每个障碍物位置的 y值。改动的大
+小取决于滑雪者滑下小山的速度。 我 们将它放入一个名为
+update() 的方法中，它是 ObstacleClass 的一部分。
+
+【PG】嘿 ，为什么位置中的 y需要额外加一个 640像素？
+图灵社区会员 FreeLink 专享 尊重版权

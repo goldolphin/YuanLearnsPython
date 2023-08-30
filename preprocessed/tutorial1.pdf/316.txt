@@ -1,0 +1,50 @@
+【PG】第 21章　打印格式化与字符串
+
+【PG】如何打印百分号
+
+你可能很想知道， 既然百分号（ %）对格式字符串来说是一个特殊的字符， 那么怎么打印%呢？
+
+嗯，Python 有时候很聪明 ，它 能确定你什么时候使用 %符号开始一个格式字符串，以及什么时候只是想打印一个百分号。可以试试这个命令：282 Hello World!
+Well, Python is smart enough to figure out when you’re using a % sign to start a format string, and when you just want to print one. Try this:
+
+How does it know? There wasn’t a second % outside the string, and there was no variable to format, so Python assumed that the % was just another character in your string.
+
+【PG】Storing formatted numbers
+
+Sometimes you don’t want to print the formatted number right away, but rather store it in a string to use later. That’s easy. Instead of printing it, just assign it to a variable, like this:
+
+Instead of directly printing the formatted number, we assigned it to the variable my_string . Then we combined my_string with some other text and printed our sentence.
+
+Storing the formatted number as a string is very useful for GUIs and other graphical programs like games. Once you have a variable name for the formatted string, you can display it however you want: in a text box, button, dialog, or game screen.
+
+【PG】Strings ’n’ things
+
+When we first learned about strings (back in chapter 2), we saw that you could combine two of them with the + sign, like this:
+
+Now we’re going to find out more things you can do with strings. Strings in Python are really objects  (see, everything is an object . . . ) and they have their own methods  for doing things like searching, splitting, and combining. These are known as string methods .
+
+【PG】Splitting strings
+
+Sometimes you need to split up a long string into a number of smaller ones. Usually you want to do this at particular points in the string, like whenever a certain character appears. For example, a common way of storing data in a text file is to have items separated from each other by a comma. So you might have a list of names that looks like this:
+
+>>> math = 75.4
+>>> print 'I got %.1f%% on my math test ' % math
+I got 75.4% on my math test
+
+第一个%表示格式化字符串。 两个%%在一起告诉 Python， 你希望打印出一个 %字符。引号外面的 %告诉 Python你需要将后面的变量打印出来。
+
+【PG】多个格式化字符串
+
+如果你想在一个 print语句中放入多个格式化字符串， 该怎么办呢？ 你可以这样做：
+
+>>> math = 75.4
+>>> science = 82.1
+>>> print 'I got %.1f in math and %.1f in science ' % (math, science)
+
+你可以在 print语句中放入任意多个格式化字符串， 后面跟一个变量元组（tuple） 。 还记得吗？ 元 组和列表很像， 只是它使用的是圆括号而不是方括号， 而且元组是不可变的。 这 是Python显得很挑剔的一个地方， 这里你必须使用元组， 而不能使用列表。除非只有一个变量需要格式化， 这时才可以不用元组。 （ 你在很多例子中已经见过了。）请确保（ 引号内的 ）格式化字符串的数量和（ 引号外的 ）变量数量相同，否则程序会报错。
+
+【PG】存储格式化数字
+
+有时你不想直接打印出格式化的数字， 而是希望把它存储在一个字符串中以备以后使用。这很容易，可以不打印，把它直接赋给一个变量，如下：
+
+图灵社区会员 FreeLink 专享 尊重版权

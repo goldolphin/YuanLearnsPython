@@ -1,0 +1,33 @@
+【PG】Skier使用一个 名叫 Pygame的模块来帮助实现图形。Pygame 是一个 Python模块（module）（我们会在第 15章更多地讨论模块）。如果你运行了这本书的安装程序，那就已经安装了 Pygame。如果尚未安装，可以从 www.pygame.org 下载。我们会在第 16章学习有关 Pygame的内容。
+
+【PG】这个程序需要如下一些图形文件：
+skier_down.png  s kier_right1.png 
+skier_crash.png  skier_right2.png
+skier_tree.png  skier_left1.png
+skier_ﬂag.png  skier_left2.png
+可以在 \examples\skier 文件夹找到这些文件（如果运行过安装程序），或者在本书的网站上也可以找到这些图形文件。要把它们放在保存程序的同一个文件夹或目录中，这一点非常重要。如果它们与程序不在同一个目录下，Python就无法找到这些文件，这个程序也将无法正常工作。
+
+【PG】Skier的代码见代码清单 10-1。这个代码清单有点长，大约100行代码（为了方便阅读，这里还加入了一些空行），不过建议你还是花点时间自己亲手键入这些代码。代码清单中有一些说明，解释了代码所做的工作。注意，在代码中看到__init__时，init的两边各有两条下划线。也就是说，init之前和之后都有两条下划线，而不是一边一条。
+
+【PG】import pygame, sys, random
+skier_images = ["skier_down.png", "skier_right1.png",  
+                "skier_right2.png", "skier_left2.png",  
+                "skier_left1.png" ]
+class SkierClass(pygame.sprite.Sprite):                     
+    def __init__(self):                                        
+        pygame.sprite.Sprite.__init__(self)                 
+        self.image = pygame.image.load("skier_down.png")    
+        self.rect = self.image.get_rect()                     
+        self.rect.center = [320, 100]                         
+        self.angle = 0                                          
+                                        
+    def turn(self, direction):                                        
+        self.angle = self.angle + direction                         
+        if self.angle < -2:  self.angle = -2                         
+        if self.angle >  2:  self.angle =  2                          
+        center = self.rect.center                                     
+        self.image = pygame.image.load(skier_images[self.angle])      
+        self.rect = self.image.get_rect()                          
+        self.rect.center = center                                     
+        speed = [self.angle, 6 - abs(self.angle) * 2]                
+        return speed                                                创建滑雪者代码清单 10-1　Skier

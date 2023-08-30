@@ -1,0 +1,76 @@
+【PG】24.6　电子宠物　　 363
+
+【PG】else:
+【PG】    save_list  = [8, 8, 0, datetime.datetime.now(), 0]
+【PG】self.happiness = save_list[0]    
+【PG】self.health    = save_list[1]                                  
+【PG】self.hunger    = save_list[2]                               
+【PG】timestamp_then = save_list[3]                              
+【PG】self.time_cycle = save_list[4]                                 
+【PG】difference = datetime.datetime.now() - timestamp_then  
+【PG】ticks = difference.seconds / 50                    
+【PG】for i in range(0, ticks):
+【PG】    self.time_cycle += 1                                     
+【PG】    if self.time_cycle == 60:                                 
+【PG】        self .time_cycle = 0                                   
+【PG】    if self.time_cycle <= 48:   
+【PG】        self.sleeping = False                                 
+【PG】        if self.hunger < 8:                                   
+【PG】            self.hunger += 1                                   
+【PG】    else:                                
+【PG】        self.sleeping = True                                   
+【PG】        if self.hunger < 8 and self. t : 0  = =  3  %  e l c y c _ e m i
+【PG】            self.hunger += 1                                   
+【PG】    if self.hunger == 7 and (self.time_cycle % 2 ==0) \        
+【PG】                            a nd self.heal th > 0:                   
+【PG】        self.healt h -= 1                                       
+【PG】    if self.hunger == 8 and self.health > 0:                   
+【PG】        self.healt h -=1                                        
+【PG】if self.sleeping:                                              
+【PG】    self.imageList = self.sleepImages                          
+【PG】else:                                        
+【PG】    self.imageList = self.nothingImages           
+
+【PG】def sleep_test(self):         
+【PG】    if self.sleeping:                                                
+【PG】        result = (QtGui.QMessageBox.warning(self, 'WARNING', 
+【PG】"Are you sure you want to wake your pet up?  He'll be unhappy about it!",
+【PG】                    Qt Gui.QMessageBox.Yes | QtGui.QMessageBox.No, 
+【PG】                    Qt Gui.QMessageBox.No))
+                                                                         
+【PG】        if result == QtGui.QMessageBox.Yes:                          
+【PG】            self.sleeping = False                                    
+【PG】            self.happiness -= 4                                     
+【PG】            self.forceAwake = True                                  
+【PG】            return True                                              
+【PG】        else:                                                        
+【PG】            return False                                            
+【PG】    else:                                                        
+【PG】        return True                                  
+ 
+【PG】def doctor_Click(self):                                           
+【PG】    if self.sleep_test():                                         
+【PG】        self.imageList = self.doctorImages    
+【PG】        self.doct or = True                                        
+【PG】        s elf.walking = False                                      
+【PG】        self.eating = False                                       
+【PG】        self.playing = False                                  
+
+【PG】如果 pickle文件没有 
+【PG】打开，使用默认值从列表取 
+【PG】出单个的值
+【PG】检查从最后一次
+【PG】运行以来过去了多长时间
+【PG】模拟关机 
+【PG】期间发生 的所有滴答醒着
+【PG】睡觉
+【PG】使用正确的动画 —
+【PG】醒着或者在睡觉
+【PG】做动作之前 
+【PG】检查宠物是 
+【PG】否在睡觉对话类型
+【PG】要显示的按钮
+【PG】默认按钮
+【PG】医生按钮 
+【PG】事件处理器
+【PG】图灵社区会员 FreeLink 专享 尊重版权

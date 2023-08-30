@@ -1,0 +1,39 @@
+【PG】26.4　坐标系统　　 385
+
+如果你运行这段代码， 可能会发现这个 AI有一定的缺陷。 我们来修改一下以便
+我们的机器人可以打败 CircleAI。
+
+【PG】26.3　更复杂的机器人
+
+我们的第一个机器人非常简单，它无法战胜 CircleAI。为了战胜其他所有的机器
+人，我们需要一个真正优秀的策略。 一 个真正优秀的策略绝不止“ 转圈圈， 直到敌
+人出现在我眼前 ”这么简单， 而 是需要用到每一个可用的命令。 最重要的是， 真正
+优秀的策略需要我们花费大量心思来考虑它的工作机制。
+
+还有一些方法我在上一节没有提到 ，这些方法可以帮助我们制定一个必胜的策略。
+
+self.robot.goBack()  —顾名思义，机器人可以后退一步。
+self.robot.checkSpace(space)  —可以检查任意一个方块  。例如，self. 
+robot.checkSpace((3,3)) 可以返回 (3,3)这个方块处有什么。 如果什么也
+没有，则 返回 "blank"，否则，返回"bot"（如果有敌人 ） 、"me"（如果有
+机器人）或者 "wall"（如果这个方块在游戏边界之外） 。
+self.robot.locateEnemy()  —返回敌人的位置和方向。
+self.robot.position  —获取机器人的位置。
+self.robot.rotation  —获取机器人的方向。
+self.robot.calculateCoordinates(direction, distance, position)  —
+稍后解释。首先， 我们需要理解在 Python Battle 中，坐标系统是怎么工作的。
+
+【PG】26.4　坐标系统
+
+在Python Battle 中，坐标系统的范围从 (1,1)到(10,10)。 和之前的 Pygame一
+样，坐标的原点在左上角。 游 戏区域的四面都被墙围住。 我们可以用 self.robot.
+position 来找到机器人在坐标系统中的位置。
+
+方向
+使用数字 0~3来存储方向。0 是上（北） ，1是右（东） ，2是下（南） ，3是左
+（西） 。当机器人右转时， 方 向的值加 1；当机器人左转时， 方向的值减 1。这样用起
+来很简单。我们可以使用 self.robot.rotation 来获取机器人的方向。
+
+calculateCoordinates()
+calculateCoordinates() 函 数 接 受 三 个 参 数： distance 、direction 和
+position 。它用于查找在 direction 方向上离 position 距离为distance 的方块。

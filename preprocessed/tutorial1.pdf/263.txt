@@ -1,0 +1,52 @@
+【PG】18.5　另一个游戏——PyPong 　　 237
+
+【PG】内时 Pygame才能“看到”鼠标，所以球拍会自动限制在窗口的边界以内。 我们将让球拍的中心跟随鼠标移动。
+
+【PG】代码应当像这样： elif event.type == pygame.MOUSEMOTION:
+     paddle.rect.centerx = event.pos[0]
+event.pos 是一个列表，包含鼠标位置的 [x, y]值。所以event.pos[0] 会提供鼠标移动时的 x位置。当 然，如果鼠标在左边界或右边界上， 球拍会有一半在窗口之外，不过这是可以的。
+
+【PG】还需要最后一点 ：球 和球拍之间的碰撞检测。 我们就是利用这种“ 碰撞”才能用球拍“ 打”球 。出现碰撞时， 只需让球的 y速度反向（ 所以如果球在向下走， 碰到球拍时它会反弹，开始向上移动） 。代码如下 ：
+if pygame.sprite.spritecollide(paddle, ballGroup, False):
+     myBall.speed[1] = -myBall.speed[1]
+
+【PG】还要记住每次循环时都要重绘。 如果把这些内容都集中在一起， 就得到了一个非常基本的类似 Pong的程序 。代码清单 18-4给出了（至今为止）完整的代码。
+
+【PG】代码清单 18-4　PyPong 的第一个版本
+import pygame, sys 
+from pygame.locals import * 
+ 
+class MyBallClass(pygame.sprite.Sprite):     
+    def __init__(self, image_file, speed, location):                    
+        pygame.sprite.Sprite.__init__(self)                             
+        self.image = pygame.image.load(image_file)                     
+        self.rect = self.image.get_rect()                               
+        self.rect.left, self.rect.top = location                       
+        self.speed = speed                                              
+                                                                      
+    def move(self):                                                             
+         self.rect = self.rect.move(self.speed)                      
+         if self.rect.left < 0 or self.rect.right > screen.get_width(): 
+             self.speed[0] = -self.speed[0]                          
+                                                                   
+         if self.rect.top <= 0 :          
+             self.speed[1] = -self.speed[1]    
+             
+ class MyPaddleClass(pygame.sprite.Sprite):                    
+    def __init__(self, location = [0,0]):                       
+        pygame.sprite.Sprite.__init__(self)                       
+        image_surface = pygame.surface.Surface([100, 20])              image_surface.fill([0,0,0])                                      self.image = image_surface.convert()                      
+        self.rect = self.image.get_rect()                         
+        self.rect.left, self.rect.top = location                 
+pygame.init()                                                   screen = pygame.display.set_mode([640,480])                 
+clock = pygame.time.Clock()                                     
+ball_speed = [10, 5]                                             myBall = MyBallClass('wackyball.bmp', ball_speed, [50, 50]) ballGroup = pygame.sprite.Group(myBall)                        
+paddle = MyPaddleClass([270, 400])                              
+running = True  
+while running:      
+    clock.tick(30) 
+    screen.fill([255, 255, 255]) 球拍类定义Ball类定义
+
+【PG】移动球（在顶边和左右两边反弹）
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

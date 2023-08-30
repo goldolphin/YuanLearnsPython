@@ -1,0 +1,72 @@
+【PG】附录 C　自测题答案
+
+【PG】建立单个列表，再合并这些列表：
+ >>> list1 = [1, 2, 3]
+>>> list2 = ['a', 'b', 'c' ]
+>>> list3 = ['red', 'green', 'blue' ]
+>>> my_list = [list1, list2, list3 ]
+>>> print my_lis t
+[[1, 2, 3], ['a', 'b', 'c'], ['red', 'green', 'blue']]
+
+【PG】可以使用两个索引得到双重列表中的一个值：
+The answer would be 'green'.
+Try it out
+
+【PG】Here is a program that will get five names, put them in a list, and then print them out:
+Enter 5 names (press the Enter key after each name):
+
+【PG】Here is a program that will print the original list and a sorted version:
+
+【PG】Here is a program to print only the third name in the list:
+
+【PG】Here is a program to allow the user to replace a name in the list:
+
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+list3 = ['red', 'green', 'blue']
+my_list = [list1, list2, list3]
+my_list = [[1, 2, 3], ['a', 'b', 'c'], ['red', 'green', 'blue']]
+my_color = my_list[2][1] 
+
+nameList = []
+print "Enter 5 names (press the Enter key after each name):"
+for i in range(5):
+    name = raw_input()    
+    nameList.append(name)
+print "The names are:", nameList
+
+nameList = []
+print "Enter 5 names (press the Enter key after each name):"
+for i in range(5):
+    name = raw_input()
+    nameList.append(name)
+print "The names are:", nameList
+print "The sorted names are:", sorted(nameList)
+
+nameList = []
+print "Enter 5 names (press the Enter key after each name):"
+for i in range(5):
+    name = raw_input()
+    nameList.append(name)
+print "The third name is:", nameList[2]
+
+nameList = []
+print "Enter 5 names (press the Enter key after each name):"
+for i in range(5):
+    name = raw_input()
+    nameList.append(name)
+
+【PG】字典是键值对的集合。
+
+【PG】你可以通过指定键和值的方式在字典中添加条目：
+
+phone_numbers[ 'John'] = '555-1234'
+
+【PG】要通过键在字典中查找一个条目，可以使用索引：
+
+print phone_numbers[ 'John']
+
+【PG】下面这个程序会得到5个名字，把它们放在一个列表中，然后打印出来：
+Enter 5 names (press the Enter key after each name):
+
+【PG】下面这个程序会打印原来的列表和排序后的列表：

@@ -1,0 +1,39 @@
+【PG】第 23章　碰运气——随机性
+
+【PG】在这个段落中，我们将介绍如何利用随机性来进行纸牌游戏。我们会创建一副牌，随机地抽牌加入手中，并针对不同的情况进行处理。接下来，我们会以 Crazy Eights 这个游戏为例，一步步地介绍如何创建一个可以和计算机玩的游戏。
+
+【PG】在代码实现的过程中，我们会用到循环和列表等知识点。同时，为了方便阅读，我们会将代码分成不同的段落，并在每个段落的头部添加 【PG】 标签。
+
+【PG】首先，我们会创建一副牌，并利用随机性从中随机抽取 5 张牌加入手中。以下是示例代码：
+
+deck = [] 
+for suit_id in range(1, 5):    
+    for rank_id in range(1, 14):
+        deck.append(Card(suit_id, rank_id))
+        
+hand = []
+for cards in range(0, 5):
+    a = random.choice(deck)    
+    hand.append(a)
+    deck.remove(a)
+    
+print    
+for card in hand:
+    print card.short_name, '=' ,card.long_name, "  Value:", card.value
+
+【PG】在以上示例代码中，我们使用了嵌套的 for 循环来创建一副牌，并使用 random.choice() 函数来随机从牌中选取 5 张加入手中。同时，我们在每个循环的末尾对列表进行了删除，以避免出现重复的牌。最后，我们打印出手中的牌的信息。
+
+【PG】接下来，我们会介绍如何处理两个骰子的情况。通过循环和列表，我们可以记录每种总点数的出现次数。以下是示例代码：
+
+import random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  
+for i in range(1000):
+    dice_total = random.randint(2, 12)
+    totals[dice_total] += 1  
+    
+for i in range (2, 13):    
+    print "total", i, "came up", totals[i], "times"
+
+【PG】在以上示例代码中，我们使用了 for 循环来模拟掷骰子的过程，并记录了每种总点数的出现次数。同时，我们使用了 random.randint() 函数来随机生成两个骰子的点数，并使用列表来记录每种总点数的出现次数。最后，我们打印出每种总点数出现的次数。
+
+【PG】以上就是本段落的内容，我们介绍了如何利用随机性来进行纸牌游戏，并演示了如何处理两个骰子的情况。在接下来的段落中，我们会继续介绍 Crazy Eights 这个游戏的具体实现方法。

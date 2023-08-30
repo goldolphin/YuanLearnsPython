@@ -1,0 +1,89 @@
+【PG】21.6　更多字符串处理　　 297
+如换行符或一些多余的空格。Python 提供了一个字符串方法 strip()，完全可以做到这一点。只需要告诉它你想剥除哪一部分，如下：
+
+【PG】Hi, Warren San!If you run this code, you’ll get the following output:
+The word “Maple” starts at position 4 of the string “657 Maple Lane” . Just like with lists, the 
+indexes (or positions) of letters within a string start at 0, so the “M” is at index 4. 
+Notice that, before we tried using index() , we first checked to see if the substring “Maple” 
+was in the bigger string. That’s because, if you use index()  and the thing you’re looking for 
+is not in the string, you’ll get an error. Checking with in first ensures you won’t get an error. 
+This is the same thing we did with lists in chapter 12.
+
+【PG】Removing part of a string
+Quite often you’ll want to remove or strip off  part of a string. Usually, you’ll want to strip 
+something off the end, like a newline characte r or some extra spaces. Python has a string 
+method called strip()  to do exactly this. You 
+just tell it what you want stripped off, like this:
+
+In this case, we stripped the “de” off the end of 
+my name. If there were no “de” at the end, nothing 
+would be stripped off:
+
+If you don’t tell strip()  what to strip off, it’ll strip off any whitespace. Like we said before, 
+that includes spaces, tabs, and newlines. So if we had extra spaces to get rid of, we could 
+do this:
+
+Notice that the extra spaces after my name we re removed. The good thing is that you don’t 
+need to tell strip()  how many spaces to remove. It’ll remove all whitespace at the end of 
+the string. found 'Maple' at index 4
+657 Maple Lane
+0 1 2 3 4 5 6 7 8 9 10 11 12 13
+>>> name = 'Warren Sande'
+>>> short_name = name.strip('de')
+>>> short_name
+'Warren San'
+>>> name = 'Bart Simpson'
+>>> short_name = name.strip('de')
+>>> short_name'Bart Simpson'
+>>> name = "Warren Sande     " 
+>>> short_name = name.strip()
+>>> short_name'Warren Sande'
+
+【PG】See the extra spaces 
+at the end of my name在这里剥除了我名字末尾的 de。如果末尾根本没有 de，那么什么也不会剥除：
+
+【PG】如果没有告诉 strip() 要剥除哪一部分 ，它就会去除所有空白符 。前面说过 ，这
+包括空格 、制表符和换行符 。所以，如果想要去除一些多余的空格 ，就可以这样做 ：
+
+【PG】注意我名字末 
+尾的多余空格
+注意我名字后面多余的空格都已经删除。 这里有一点很好： 你不需要告诉
+strip() 要删除多少个空格，它会删除字符串末尾的所有空白符。
+
+【PG】Changing case
+There are two more string methods I want to show you. They are for changing the case of a 
+string from uppercase to lowercase or vice versa. Sometimes you want to compare two 
+strings like “Hello” and “hello” , and you want to know if they have the same letters, even if 
+the case is not the same. One way to do this is  to make all the letters in both strings lower-
+case, and then do the comparison.  
+Python has a string method for that. It is 
+called lower() . Try this in interactive mode:
+
+【PG】There is a similar method called upper():
+You can make all-lowercase (or all-uppercase) copies of your original strings and then com-
+pare the copies to check if they are the same, ignoring case.
+
+【PG】What did you learn?
+In this chapter, you learned
+�how to adjust vertical spacing (adding or deleting newlines).
+�how to set horizontal spacing with tabs.
+�how to display different number formats using format strings.
+�how to split strings with split()  and join them with join() .
+�how to search strings with startswith() , endswith() , in , and index() .
+�how to remove things from the end of strings with strip() .
+�how to make strings all uppercase or all lowercase with upper()  and lower() .
+Test your knowledge
+1If you have two separate print  statements, like this,
+how would you make everything print on the same line?
+2How can you add extra blank lines when printing something?
+3What special printing code do you use to line things up in columns?
+4What format string do you use to force a number to print in E-notation?
+
+【PG】>>> string1 = "Hello"
+>>> string2 = string1.lower()
+>>> print string2 hello
+>>>string3 = string1.upper()
+>>> print string3
+HELLO
+print "What is"
+print "your name?"

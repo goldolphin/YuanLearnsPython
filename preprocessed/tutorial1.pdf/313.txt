@@ -1,0 +1,123 @@
+【PG】21.4　数字格式化　　 287
+
+【PG】278 Hello World!
+
+The %s means that it’s a string variable we want to insert. For an integer, we’d use %i; for a float, we’d use %f. 
+
+Here are a couple more examples:
+
+When you run this, you’ll get the following:
+
+Here’s another one:
+
+When you run this, you’ll get the following:
+
+The %s, %f, and %i are called format strings , and they’re a kind of code for how you want the variable to look.
+
+There are some other things you can add to the format strings to make numbers print exactly how you want. There are also a few different format strings you can use to get things like E-notation. (Remember that from chapter 3?) We’ll look at these in the next few sections. 
+
+【PG】Number formatting
+
+When we print numbers, we’d like to have control over how they look:
+
+• how many decimal places they display
+
+• whether to use regular or E-notation
+
+• whether to add leading or trailing zeros
+
+• whether to display + or - signs in front of the numbers
+
+With format strings, Python gives us the flexibility we need to do all this and more!
+
+For example, if you were using a program that told you the weather forecast, which would you rather see:
+
+• Today’s High: 72.45672132, Low 45.4985756
+
+or
+
+• Today’s High: 72, Low: 45
+
+Getting numbers to look right is important for many programs. 
+
+Let’s start with an example. Let’s say we want to print a decimal number with exactly two decimal places. Try this in interactive mode:
+
+age = 13
+print 'I am %i years old.' % age
+I am 13 years old.
+
+average = 75.6
+print 'The average on our math test was %f percent.' % average
+The average on our math test was 75.600000 percent.
+
+【PG】Today’s High: 72.45672132, Low 45.4985756
+
+Today’s High: 72, Low: 45
+
+>>> dec_number = 12.3456
+>>> print 'It is %.2f degrees today.' % dec_number
+It is 12.35 degrees today
+
+Still displaying numbers properly is important for many programs. 
+
+Let’s start with an example. Let’s say we want to print a decimal number with exactly two decimal places. Try this in interactive mode:
+
+age = 13
+print 'I am %i years old.' % age
+I am 13 years old.
+
+average = 75.6
+print 'The average on our math test was %f percent.' % average
+The average on our math test was 75.600000 percent.
+
+Today’s High: 72.45672132, Low 45.4985756
+
+Today’s High: 72, Low: 45
+
+>>> dec_number = 12.3456
+>>> print 'It is %.2f degrees today.' % dec_number
+It is 12.35 degrees today
+
+The print statement includes a format string. However, this time we didn’t just use %f, we used %.2f. This tells Python to use a floating-point format and to display two digits after the decimal point. (Note that Python is smart enough to round the number correctly to two decimal places, instead of just cutting off the excess digits.)
+
+After the string, the second % sign tells Python that the number to be printed is coming next. The number is printed with the formatting that’s described in the format string. A few more examples will make this clearer.
+
+【PG】You have a good memory, Carter! The % sign is used for modulus (the remainder in integer division), as we learned in chapter 3, but it’s also used to indicate format stings. Python can tell from the way it’s used whether you mean modulus or a format string.
+
+Integers: %d or %i
+
+To print something as an integer, use the %d or %i format string. (I don’t know why there are two, but you can use either one.)
+
+Notice that, this time, the number wasn’t rounded. It was truncated (which means “chopped off”). If it were rounded, we would have seen 13 instead of 12. When you use integer formatting, the number is truncated, and when you use floating-point formatting, the number is rounded. 
+
+There are three things to notice here:
+
+• You don’t have to have any other text in the string—you can have just the format string by itself. 
+
+• Even though our number was a float, we printed it as an integer. You can do that with format strings.
+
+>>> number = 12.67
+>>> print '%i' % number
+12
+
+【PG】Getting numbers to look right is important for many programs. 
+
+Let’s start with an example. Let’s say we want to print a decimal number with exactly two decimal places. Try this in interactive mode:
+
+age = 13
+print 'I am %i years old.' % age
+I am 13 years old.
+
+average = 75.6
+print 'The average on our math test was %f percent.' % average
+The average on our math test was 75.600000 percent.
+
+Today’s High: 72.45672132, Low 45.4985756
+
+Today’s High: 72, Low: 45
+
+>>> dec_number = 12.3456
+>>> print 'It is %.2f degrees today.' % dec_number
+It is 12.35 degrees today
+
+Properly displaying numbers is important for many programs.

@@ -1,41 +1,59 @@
-【PG】2.6　全新的我　　 25
-开始时 Score  = 7。
-让它增加 1（ 得到 8） ，创建一个新东西。 
-把名字 Score赋给这个新东西。
-这样一来， Score就从 7变成了 8。
+【PG】2.6 全新的我 25
+开始时 Score = 7。
+让它增加 1（得到 8），创建一个新东西。
+把名字 Score 赋给这个新东西。
+这样一来，Score 就从7变成了8。
 
-【PG】关于变量，有几个重要的问题必须记住。
-程序可以在任何时间对变量重新赋值 （把 标签贴在新东西上 ） 。这一点很重 
-要，必须记住， 因为编程中最常见的 bug就是改变了不该改变的变量， 或者
-尽管改变的变量无误，但是时机不合适。
-要避免这种情况 ，有 效的方法是使用容易记的变量名。 我们可能用过下面这
-两个变量名：
+关于变量，有几个重要的问题必须记住。
+程序可以在任何时间对变量重新赋值（把标签贴在新东西上）。这一点很重要，必须记住，因为编程中最常见的bug就是改变了不该改变的变量，或者尽管改变的变量无误，但是时机不合适。
+要避免这种情况，有效的方法是使用容易记的变量名。我们可能用过下面这两个变量名：
 t = 'Mr. Morton'
 或
 x1796vc47blahblah = 'Mr. Morton'
-不过这样在程序中会很难记住。 如果使用这些变量名， 出错的可能性会更
-大。应该尽量使用能够说明用途的名字，可以告诉你变量要用来做什么。
-变量名区分大小写 。这 说明大写和小写是不同的。 所以  teacher 和Teacher
-是两个完全不同的名字。
-记住，如果想了解 Python的所有变量命名规则 ，可以查看附录 A。
+不过这样在程序中会很难记住。如果使用这些变量名，出错的可能性会更大。应该尽量使用能够说明用途的名字，可以告诉你变量要用来做什么。
+变量名区分大小写。这说明大写和小写是不同的。所以 teacher 和Teacher是两个完全不同的名字。
+记住，如果想了解Python的所有变量命名规则，可以查看附录 A。Score
+Score
+Score
 
-【PG】#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)
+【PG】#!/bin/env python # Paginate a text file, adding a header and footer
+import sys, time, string
 
-【PG】class PrinterFormatter:
-#Incrementthepagecount,andresetthelinecount
-self.header_written=1;self.count=1;self.page=self.page+1
-def #Increment print>>>Hello
-if#
-print>>>Helloif#
-print>>>Helloif#
+# If no arguments were given, print a helpful message
+if len(sys.argv) != 2:
+    print 'Usage: pyprintfilename'
+    sys.exit(0)
 
-【PG】像程序员一样思考
-我们曾经说过， 你可以为变量取任何名字（ 不过前
-提是要满足命名规则 ） ，这一点不假 。你 可以把变
-量叫做teacher 或者Teacher，这两个名字都
-是可以的。
-专业的 Python程 序员给变量命名时几乎总是
-以小写字母开头 ，其 他计算机语言可能会采用不同
-风格。是否遵循 Python风格由你来决定 。因为我们使用
-的是 Python，所以这本书后面都会遵循这种风格。
-图灵社区会员 FreeLink 专享 尊重版权
+
+class PrinterFormatter:
+    # Increment the page count, and reset the line count
+    self.header_written = 1
+    self.count = 1
+    self.page = self.page + 1
+
+    def __init__(self):
+        self.header_written = 0
+
+    # Increment the line count, and print a line if necessary
+    def increment(self):
+        if self.count >= self.PER_PAGE:
+            self.print_header()
+            self.count = 1
+        else:
+            self.count = self.count + 1
+
+    def print_header(self):
+        if self.header_written:
+            return
+
+        # Figure out the current date and time
+        t = time.localtime(time.time())
+        header = string.join(("My Header on Page", str(self.page), "for the date of", time.strftime("%m/%d/%y %I:%M %p", t)), " ")
+        print header
+        self.header_written = 1
+
+    def print_footer(self):
+        # Figure out the current date and time
+        t = time.localtime(time.time())
+        footer = string.join(("My Footer on Page", str(self.page), "for the date of", time.strftime("%m/%d/%y %I:%M %p", t)), " ")
+        print footer

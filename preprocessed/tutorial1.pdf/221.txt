@@ -1,0 +1,53 @@
+【PG】16.4　单个像素　　 195import pygame, sys
+
+import math      
+pygame.init( )
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+
+for x in range(0, 640):  
+    y = int(math.sin(x/640.0 * 4 * ma th.pi) * 200 + 240)    
+    pygame.draw.rec t(screen, [0,0,0],[x, y, 1, 1], 1)       
+
+pygame.display.flip()
+running = True
+
+while running:    
+    for event in pygame.eve nt.get():
+        if event.type == pygame.QUIT:             
+            running = False
+
+pygame.quit( )
+
+【PG】计算每个点的 y
+坐标（垂直坐标）
+使用小矩形来画点
+运行这个程序时会看到如右图所示
+的结果。
+每个点都是宽和高分别为 1像素的
+矩形。注 意我们使用的线宽为 1，而不是
+0。如果使用线宽 0，什 么都不会显示，
+因为这样一个矩形没有“ 中 间部分”可
+以填充。
+
+【PG】连接多个点
+如果你看得确实很仔细， 可能会注意到， 这个正弦曲线并不是连续的， 中间的
+点之间存在空格。 这 是因为， 在正弦曲线比较陡的部分， 我们必须上移（ 或下移）3
+个像素而向右只移动 1个像素。 而 且由于我们画的是单个的点， 而不是线， 所以没
+有什么来填充它们之间的间隔。
+
+下面还是做同样的工作 ，不 过现在要用一条短线把各个点连接起来。Pygame 有
+一个画线的方法， 另 外还有一种方法可以在一系列点之间画线（ 类似于“ 连接多个
+点”） 。这个方法是 pygame.draw.lines() ，它需要下面这 5个参数。
+
+画线的表面（ surface） 。
+颜色（ color） 。
+是否要画一条线将最后一个点与第一个点相连接 ，使 形状闭合（  closed） 。
+我们不希望正弦曲线闭合，所以对我们来说，这个参数是 False。
+要连接的点的列表（ list） 。
+线宽（ width） 。
+
+所以，在我们的正弦曲线例子中， pygame.draw.lines() 方法是这样的：
+pygame.draw.lines(screen, [0,0,0],False, plotPoints, 1)
+
+图灵社区会员 FreeLink 专享 尊重版权

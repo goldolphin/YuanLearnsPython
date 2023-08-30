@@ -1,5 +1,4 @@
-【PG】1.7　如果出问题　　 11
-在以下文字中，一个段落标识为一个完整的语义单元。
+【PG】1.7 如果出问题
 
 【PG】10 Hello World!
 How come this works:
@@ -9,54 +8,54 @@ print "Bye for now!" + 5
 
 【PG】SSRuntime errors
 The second kind of error that can happen is one that Python (or IDLE) can’t detect before it runs the program. This kind of error only happens when the program runs, so it is called a runtime error . Here’s an example of a runtime error in a program:
-If we save this and try to run it, the program actually starts to run. The first two lines are printed, but then we get an error message:
-The line starting with Traceback  is the start of the error me ssage. The next line tells you where the error happened—the filename and line number. Then it displays the bad line of code. This helps you find where the problem is in your code. The last part of the error message tells you what Python thinks is wrong. Once you know more about programming and Python, it will be easier to understand what the message means.
 
-【PG】Well, Carter, it’s kind of like that old saying about com- paring apples to alligators. In Python, you can’t add different kinds of things together, like a number and some text. That’s why print "Bye for now! " + 5  gave us an error. It’s like saying, “If I take 5 apples and add 3 alligators, how many do I have?” You have 8, but 8 of what? Adding these together doesn’t really make sense. But you can multiply almost anything by a number to get more of that kind of thing. (If you have 2 alligators and you multiply by 5, you have 10 alligators!) That’s why print "Bye for now! " * 5  works. 
+If we save this and try to run it, the program actually starts to run. The first two lines are printed, but then we get an error message:
+
+The line starting with Traceback  is the start of the error message. The next line tells you where the error happened—the filename and line number. Then it displays the bad line of code. This helps you find where the problem is in your code. The last part of the error message tells you what Python thinks is wrong. Once you know more about programming and Python, it will be easier to understand what the message means.
+
+【PG】Well, Carter, it’s kind of like that old saying about com-paring apples to alligators. In Python, you can’t add different kinds of things together, like a number and some text. That’s why print "Bye for now! " + 5  gave us an error. It’s like saying, “If I take 5 apples and add 3 alligators, how many do I have?” You have 8, but 8 of what? Adding these together doesn’t really make sense. But you can multiply almost anything by a number to get more of that kind of thing. (If you have 2 alligators and you multiply by 5, you have 10 alligators!) That’s why print "Bye for now! " * 5  works. 
 
 【PG】print "Hello, and welcome to Python!"
 print "I hope you will enjoy learning to program."
 print "Bye for now!" + 5
->>> ============================ RESTART ============================
+
+【PG】>>> ============================ RESTART ============================
 >>>Hello, and welcome to Python!
 I hope you will enjoy learning to program.
 Traceback (most recent call last):
   File "C:/HelloWorld/examples/error1.py", line 3, in <module>
     print "Bye for now!" + 5 TypeError: cannot concatenate 'str' and 'int' objects
->>>Start of the error message
+
+【PG】Start of the error message
 Where the error was
 The "bad" line of code
 What Python thinks is wrong
+错误消息开始
+错误发生的位置
+出错的代码行
+Python认为存在什么问题
 
-【PG】Traceback 开头的代码行表示错误消息开始。 下一行指出哪里发生了错误， 这里会给出文件名和行号。 然 后显示出错的代码行， 这可以帮助你找到代码中哪里出了问题。错误消息的最后一部分会告诉你 Python认为存在什么问题。 对编程和 Python有了更多了解之后，就更容易理解这个消息是什么意思了。
-
-【PG】听我说，卡特，这有点像将苹果和鳄鱼放在一起 。在Python中 ，不能把两个完全不同的东西加在一起，比如说数字和文本。正 是因为这个原因，  print "Bye for now!" + 5 会给出错误消息。 这就像是在说：“如果我取5个苹果并加上3只鳄鱼，我会有多少？” 你会有8个，但是8个什么呢？把这些东西加在一起没有任何意义。不 过几乎所有东西都可以乘以一个数来翻倍。 （如果有两只鳄鱼 ，再乘以 5，那你就会有10只鳄鱼！）正因如此 ，print "Bye for now!"  * 5 是可以的。
+【PG】听我说，卡特，这有点像将苹果和鳄鱼放在一起。在Python中，不能把两个完全不同的东西加在一起，比如说数字和文本。正是因为这个原因，print "Bye for now!" + 5 会给出错误消息。这就像是在说：“如果我取五个苹果，再加上三只鳄鱼，我一共有多少个？”你一共有8，但是8个什么呢？把这些东西加在一起没有任何意义。不过几乎所有东西都可以乘以一个数来翻倍。（如果有两只鳄鱼，再乘以5，那你就会有10只鳄鱼！）正因如此，print "Bye for now!" * 5 是可以的。
 
 【PG】#!/bin/envpython
 #Paginateatextfile,addingaheaderandfooter
 importsys,time,string
 #Ifnoargumentsweregiven,printahelpfulmessage
-iflen(sys.argv)!=2:
-print'Usage:pyprintfilename'
+iflen(sys.argv)!=2:print'Usage:pyprintfilename'
 sys.exit(0)
+class#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1;
 
-class
-#Incrementthepagecount,andresetthelinecount
-self.header_written=1;self.count=1;
+【PG】print>>>Hello 
+if#print>>>Hello 
+ifprint>>>Hello 
+if#print>>>Hello 
 
-#!/bin/envpython
-#Paginateatextfile,addingaheader 
-print>>>Hello
+【PG】像程序员一样思考
+看到错误消息也不用担心。它们只是为了帮助你找出哪里出了问题，以便你改正错误。如果程序中确实出了问题，你肯定更希望看到错误消息。没有给出任何错误消息的bug①才更难找到！S
 
-if#print>>>Helloif
-
-print>>>Helloif#print>>>Hello
-像程序员一样思考
-看到错误消息也不用担心。 它们只是为了帮助你找出哪里出了问题，以便你修改错误。如果程序中确实出了问题， 你肯定更希望看到错误消息。没有给出任何错误消息的 bug① 才更难找到！
-S为什么这样可以：
+【PG】为什么这样可以：
 print "Bye for now!" * 5
 但这样不行：
 print "Bye for now!" + 5
-① bug，意思是“臭虫” 。程序员通常把讨厌的错误说成 bug。—编者注
-
-【PG】图灵社区会员 FreeLink 专享 尊重版权
+① bug，意思是“臭虫”。程序员通常把讨厌的错误说成bug。—编者注
+图灵社区会员 FreeLink 专享 尊重版权

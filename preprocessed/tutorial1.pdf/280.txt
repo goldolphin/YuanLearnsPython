@@ -1,0 +1,41 @@
+【PG】第19章 声音
+
+【PG】单词queue发音为cue。在日常使用中，它表示等待队列。在编程中，queue通常表示一组按特定顺序到达或将按特定顺序使用的事物列表。
+
+【PG】首先需要为所有这些情况创建声音对象。可以把相应代码放在pygame.mixer.init()之后但在while循环之前的任何位置上。
+
+【PG】以下是创建声音对象的代码：
+
+hit_wall = pygame.mixer.Sound("hit_wall.wav")
+hit_wall.set_volume(0.4)
+get_point = pygame.mixer.Sound("get_point.wav")
+get_point.set_volume(0.2)
+splat = pygame.mixer.Sound("splat.wav")
+splat.set_volume(0.6)
+new_life = pygame.mixer.Sound("new_life.wav")
+new_life.set_volume(0.5)
+bye = pygame.mixer.Sound("game_over.wav")
+bye.set_volume(0.6)
+
+【PG】这里我选择了不同的音量，这只是为了看看哪种音量听起来最合适。可以按你的喜好来设置音量。另外要记住，所有声音文件都要复制到保存代码的位置上。这些声音都可以在 \examples\sounds 文件夹或者本书网站上找到。
+
+【PG】现在需要在发生这些事件时的相应代码中增加play()方法。只要碰到窗口左右两边就应当发出hit_wall声音。这个事件在球的move()法中检测，我们还要让球的x速度反向（使球在两边“反弹”）。所以，在反向时还可以播放声音。代码如下：
+
+if self.rect.left < 0 or self.rect.right > screen.get_width():
+    self.speed[0] = -self.speed[0]
+    hit_wall.play() #碰到两边的墙时播放声音
+
+【PG】可以对get_point声音做同样的处理。在球的move()方法下面一点点的地方，我们检测了球是否碰到窗口顶边。在这里要让球反弹，并为玩家加1分。现在还要播放一个声音。新代码如下：
+
+if self.rect.top <= 0:
+    self.speed[1] = -self.speed[1]
+    points = points + 1
+    score_text = font.render(str(points), 1, (0, 0, 0)) #加分时显示得分文本
+    get_point.play()
+
+【PG】最后，当玩家漏球而失去一条命时，我们也要播放一个声音。这个事件在主while循环中检测，也就是原来的代码清单18-5中的第63行（if myBall.rect.top >= screen.get_rect().bottom:）。只需再增加以下代码：
+
+if myBall.rect.top >= screen.get_rect().bottom:
+    new_life.play() #漏球时播放声音
+
+【PG】增加这些代码后，我们可以运行程序，看看有什么效果。

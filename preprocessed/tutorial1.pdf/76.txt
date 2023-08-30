@@ -1,60 +1,62 @@
-【PG】第 5章　输入
-【PG】#!/bin/env python
-【PG】# Paginate a text file, adding a header and footer
-【PG】import sys, time, string
+【PG】50　　第 5章　输　　入
 
-【PG】# If no arguments were given, print a helpful message
-【PG】if len(sys.argv) != 2:
-【PG】    print 'Usage: python filename'
-【PG】    sys.exit(0)
-
-【PG】class PrinterFormatter:
-【PG】    # Increment the page count, and reset the line count
-【PG】    self.header_written = 1;
-【PG】    self.count = 1;
-【PG】    self.page = self.page + 1
-
-【PG】    def write_header(self):
-【PG】        # If the header for this page has just been written, don't
-【PG】        self.header_written = 1;
-【PG】        self.count = 1;
-【PG】        self.page = self.page + 1
-
-【PG】    def write_header(self):
-【PG】        # If the header
-【PG】
+【PG】#!/bin/envpython
+#Paginateatextfile,addingaheaderandfooter
+importsys,time,string
+#Ifnoargumentsweregiven,printahelpfulmessage
+iflen(sys.argv)!=2:
+print'Usage:pyprintfilename'
+sys.exit(0)
+classPrinterFormatter:
+#Incrementthepagecount,andresetthelinecount
+self.header_written=1;
+self.count=1;
+self.page=self.page+1
+defwrite_header(self):
+#Iftheheaderforthispagehasjustbeenwritten,don't
+self.header_written=1;
+self.count=1;
+self.page=self.page+1
+defwrite_header(self):
+#Ifthe
 
 【PG】print>>>Hello
-【PG】if#
-【PG】print>>>Hello
-【PG】if#
-【PG】print>>>Hello
+if #
+print>>>Hello
+if #
+print>>>Hello
 
 【PG】像（Python）程序员一样思考
-【PG】得到数字输入还有一种方法。Python 2
-【PG】有一个名叫 input() 的函数，可以直接提供
-【PG】一个数，所以不必使用 int() 或 ﬂoat() 来
-【PG】转换。我们在第 1 章的猜数程序中用过这
-【PG】个函数，因为这是从用户得到一个数的最简
-【PG】单的方法。
-【PG】但为了保持一致，我们在本书的剩余部分
-【PG】会始终使用 raw_input()。而且，Python 3 中
-【PG】去除了 input() 函数（可以直接获取数字而不
-【PG】需要进行转换），只有 raw_input()。更令人
-【PG】感到混乱的是，Python 2 中的 raw_input() 在
-【PG】Python 3 中改名为 input()，但它的功能仍然
-【PG】和你在这一章中见到的这个函数一样，只会得
-【PG】到字符串。因为我们很清楚怎样从一个字符
-【PG】串创建一个数，所以建议使用 raw_input()，
-【PG】而不要用 Python 2 中的 input()。
 
-【PG】5.4　来自互联网的输入
-【PG】通常，程序的输入都来自用户。不过还有其他一些方法得到输入。可以从计算
-【PG】机硬盘上的文件中得到输入（这个内容会在第 22 章介绍），或者也可以从互联网获
-【PG】取输入。
-【PG】如果你能连接互联网，可以试试代码清单 5-4 中的程序。它会从这本书的网站
-【PG】打开一个文件，为你显示这个文件中的消息。
-【PG】代码清单 5-4 从互联网上的一个文件得到输入
-【PG】import urllib2
-【PG】file = urllib2.urlopen('http://helloworldbook2.com/data/message.txt')
-【PG】图灵社区会员 FreeLink 专享 尊重版权
+得到数字输入还有一种方法。Python 2
+有一个名叫 input() 的函数， 可以直接提供
+一个数， 所以不必使用 int()或ﬂoat()来
+转换。我们在第 1章的猜数程序中用过这
+个函数， 因为这是从用户得到一个数的最简
+单的方法。
+
+但为了保持一致 ，我们在本书的剩余部分
+会始终使用 raw_input() 。而且，Python 3中
+去除了input() 函数（可以直接获取数字而不
+需要进行转换 ） ，只有raw_input() 。更令人
+感到混乱的是 ，Python 2中的raw_input() 在
+Python 3中改名为input()，但它的功能仍然
+和你在这一章中见到的这个函数一样 ，只会得
+到字符串 。因为我们很清楚怎样从一个字符
+串创建一个数 ，所以建议使用 raw_input()，
+而不要用 Python 2中的input()。
+
+5.4　来自互联网的输入
+
+通常，程序的输入都来自用户。 不过还有其他一些方法得到输入。 可以从计算
+机硬盘上的文件中得到输入（ 这 个内容会在第 22章介绍） ，或者也可以从互联网获
+取输入。
+
+如果你能连接互联网 ，可 以试试代码清单 5-4中的程序。 它会从这本书的网站
+打开一个文件，为你显示这个文件中的消息。
+
+代码清单 5-4　从互联网上的一个文件得到输入
+import urllib2
+ﬁle = urllib2.urlopen('http://helloworldbook2.com/data/message.txt')
+
+图灵社区会员 FreeLink 专享 尊重版权

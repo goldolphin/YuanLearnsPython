@@ -1,0 +1,50 @@
+【PG】第 14章　对　　象
+
+【PG】嗯…我怎么描述这个房子呢？高档、中档还是低档？现在对于对象已经有了整体认识。下面来建立一些对象！
+
+【PG】14.5　创建对象
+
+【PG】Python中创建对象包括两步。第一步是定义对象看上去什么样，会做什么，也就是它的属性和方法。但是创建这个描述并不会真正创建一个对象。这有点像一个房子的蓝图。蓝图可以告诉你房子看上去怎么样，但是蓝图本身并不是一个房子。你不能住在一个蓝图里。只能用它来建造真正的房子。实际上，可以使用蓝图盖很多的房子。
+
+【PG】在Python中，对象的描述或蓝图称为一个类（class）。
+
+【PG】第二步是使用类来建立一个真正的对象。这个对象称为这个类的一个实例（instance）。
+
+【PG】下面来看一个建立类和实例的例子。代码清单 14-1 显示了一个简单的 Ball 类的类定义。
+
+【PG】代码清单 14-1 创建一个简单的 Ball 类
+
+【PG】Hm... How would I describe this house? Upper class, middle class, or lower class?What’s the dot?
+
+【PG】In our previous ball examples, you probably noticed the dot between the name of the object and the name of the attribute or method. That’s just the Python notation for using the attributes and methods of an object: object.attribute or object.method(). Simple as that. It’s called dot notation, and it’s used in many programming languages.
+
+【PG】Now we have the big picture about objects. Let’s start making some!
+
+【PG】Creating objects
+
+【PG】There are two steps to creating an object in Python. The first step is to define what the object will look like and act like—its attributes and methods. But creating this description doesn’t actually create an object. It’s kind of like the blueprints for a house. The blueprints tell you exactly what the house will look like, but a blueprint isn’t a house. You can’t live in a blueprint. You can just use it to build an actual house. In fact, you can use the blueprint to make many houses.
+
+【PG】In Python the description or blueprint of an object is called a class.
+
+【PG】The second step is to use the class to make an actual object. The object is called an instance of that class.
+
+【PG】Let’s look at an example of making a class and an instance. Listing 14.1 shows a class definition for a simple Ball class.
+
+【PG】class Ball:
+	def bounce(self):
+		if self.direction == "down":
+			self.direction = "up"
+
+【PG】Listing 14.1 Creating a simple Ball class
+
+【PG】This tells Python we’re making a class
+
+【PG】This is a method
+
+【PG】代码清单 14-1 是一个球的类定义，其中只有一个方法 bounce()。不过，属性呢？嗯，属性并不属于类，它们属于各个实例。因为每个实例可以有不同的属性。设置实例属性有两种方法。后面的小节中我们会分别了解这两种方法。创建一个对象实例前面提到过，类定义并不是一个对象。这只是蓝图。现在来盖真正的房子。这里告诉 Python：
+
+【PG】我们在建立一个类
+
+【PG】This is a method
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

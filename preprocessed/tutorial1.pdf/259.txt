@@ -1,0 +1,111 @@
+【PG】18.4　定时器事件　　 233
+
+【PG】在交互模式中执行下面的命令：
+>>> import pygame
+>>> pygame.USEREVENT24
+
+【PG】这会告诉我们，Pygame 正在使用从 0到23的事件编号， 对于用户事件， 第一个可用的编号是 24 。所以需要选择 24或一个更大的数。 可以大到什么程度呢？ 可以再来问一问 Pygame 。
+
+>>> pygame.NUMEVENTS
+
+【PG】NUMEVENTS 告诉我们 Pygame中可以有的事件类型最大编号是 32（从0到31） 。所以必须选择一个大于或等于 24但小于 32的数 。可以像这样直接设置定时器：
+
+pygame.time.set _timer(24, 1000)
+
+【PG】不过，如果出于某种原因 USEREVENT 的值有变化， 这个代码可能就无法正常工作了。可能这样做会更好一些：
+
+pygame.time.set _timer(pygame.USEREVENT, 1000)
+
+【PG】如果我们必须建立另一个用户事件， 可以使用 USEREVENT + 1 ，依此类推。 这个例子中的 1000表 示1000毫秒，也就是 1秒，所以这个定时器每秒响一次。 
+
+【PG】下面把这个定时器放入我们反弹球程序中。
+
+【PG】像前面一样 ，我们将利用事件让球上移或下移， 不过由于这一次球并非由用户来控制， 我们要让它除了在左右两边反弹还会在上下边反弹。 在修改代码清单 18-2的基础上，完整的程序见代码清单 18-3 。
+
+【PG】代码清单 18-3　使用一个定时器事件让球上移和下移
+
+import pygame, sys                                    
+pygame.init()                                        
+screen = pygame.display.set_mode([640,480])         
+background = pygame.Surface(screen.get_size())       
+background.fill([255, 255, 255])                    
+clock = pygame.time.Clock()  
+class Ball(pygame.sprite.Sprite):                                     
+    def __init__(self, image_file, speed, location):           
+        pygame.sprite.Sprite.__init__(self)                          
+        self.image = pygame.image.load(image_file)                 
+        self.rect = self.image.get_rect()                              
+        self.rect.left, self.rect.top = location                      
+        self.speed = speed                                            
+    def move(self):                                                  
+        if self.rect.left <= screen.get_rect().left or \
+                self.rect.right >= screen.get_rect().right:            
+            self.speed[0] = - self.speed[0]         
+        newpos = self.rect.move(self.speed)    
+        self.rect = newpos 
+my_ball = Ball('beach_ball.png', [10,0], [20, 20])  
+pygame.time.set_timer(pygame.USEREVENT, 1000)   
+direction = 1 running = True
+while running: 
+    for event in pygame.event.get():  
+        if event.type == pygame.QUIT: 
+            running = False  
+        elif event.type == pygame.USEREVENT:                             
+            my_ball.rect.centery = my_ball.rect.centery + (30*direction)             if my_ball.rect.top <= 0 or  \
+            my_ball.rect.bottom >= screen.get_rect().bottom:         
+                direction = -direction             
+    clock.tick(30) 
+    screen.blit(background, (0, 0))                   
+    my_ball.move()                                   
+    screen.blit(my_ball.image, my_ball.rect)       
+    pygame.display.flip()                
+    pygame.quit( )初始化
+Ball类定义
+
+【PG】CHAPTER  23 Take a Chance—Randomness
+
+【PG】This would do exactly the same thing as the previous example. The choice() function randomly chooses an item from a list. In this case, the list is the numbers from 1/uni00A0to/uni00A06.
+
+【PG】More than one die
+
+【PG】What if you want to simulate rolling two dice? If  you’re just going to add up the two dice to get the total, you might think of doing it this way:
+
+【PG】After all, the total of two dice can be from 2 to 12, right? Well, yes and no. You will get a random number between 2 and 12, but not in the same way as adding up two random numbers from 1 to 6. What that code line does is like rolling one big 11-sided die, not two 6-sided dice. But what’s the difference? That gets into a topic called probability . The easiest way to see the difference is to try it out and see.
+
+【PG】Let’s roll the dice many times and keep track of how many times each total comes up. We’ll do that with a loop and a list. The loop will roll the dice, and the list will keep track of how many times each total comes up. Let’s start with the single 11-sided die, as shown in listing 23.1.
+
+import random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  
+for i in range(1000):
+    dice_total = random.randint(2, 12)
+    totals[dice_total] += 1  
+    
+for i in range(2, 13):
+    print "total", i, "came up", totals[i], "times"
+
+【PG】The list has indexes from 0 to 12, but we won’t use the first two, because we don’t care about totals 0 or 1—they’ll never happen B. When we get a result, we add 1 to that list item C. If the total is 7, we add one to totals[7] . So totals[2]  is the number of 2s we got, totals[3]  is the number of 3s  we got, and so on.
+
+【PG】If you run this code, you should get something like this:
+
+Listing 23.1 Rolling a single 11-sided die 1,000 times
+
+two_dice = random.randint(2, 12)
+List has 13 items, 
+with index 0 to 12B
+Adds 1 to the 
+count of this totalC
+total 2 came up 95 times
+total 3 came up 81 times
+total 4 came up 85 times
+total 5 came up 86 times
+total 6 came up 100 times
+total 7 came up 85 times
+total 8 came up 94 times
+total 9 came up 98 times
+total 10 came up 93 times
+total 11 came up 84 times
+total 12 came up 99 times
+
+【PG】此行未完
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

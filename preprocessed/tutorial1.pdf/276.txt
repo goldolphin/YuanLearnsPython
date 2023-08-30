@@ -1,0 +1,41 @@
+【PG】第 19章　声　　音
+
+【PG】我不知道你的具体情况， 不过对我来说听起来声音太大了。 我必须把计算机的音量调小。下面来看如何在程序中控制声音的音量。
+
+【PG】19.4　控制音量
+
+【PG】可以使用音量控制开关来控制计算机上的声音音量。在Windows系统上，这是利用系统托盘里的小扬声器图标完成的。这个设置会控制计算机上所有声音的音量。你的扬声器本身可能也有一个音量控制杆。不过除此以外，我们还可以控制 Pygame发送到计算机声卡的音量。
+
+【PG】好在我们可以单独控制每个声音的音量，例如，可以让音乐音量小一些，让“啪啪”声更响一些。
+
+【PG】要设置音乐的音量，需要使用pygame.mixer.music.set_volume()。而每个声音对象都有一个set_volume()方法。在第一个例子中，声音对象的名字是splat，所以我们使用了splat.set_volume()。音量是一个介于0到1的浮点数；例如，0.5就是最大音量的50%或一半。
+
+【PG】现在试着在同一个程序中播放音乐和声音。先来播放一首歌曲，在最后再播放“啪啪”声。还要把声音的音量调低一下。我们把音乐的音量设置为30%，“啪啪”声的音量为50%。这个代码见代码清单19-3。
+
+【PG】代码清单19-3　有音量调节的音乐和声音
+
+【PG】import pygame, sys
+pygame.init()
+pygame.mixer.init()
+screen = pygame.display.set_mode([640,480])
+pygame.time.delay(1000)
+pygame.mixer.music.load("bg_music.mp3")
+pygame.mixer.music.set_volume(0.30)
+pygame.mixer.music.play()
+splat = pygame.mixer.Sound("splat.wav")
+splat.set_volume(0.50)
+splat.play()
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+pygame.quit()
+
+【PG】调节音乐的音量
+
+【PG】调节音效的音量
+
+【PG】就像一些视频游戏，它们就有自己的音量控制。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

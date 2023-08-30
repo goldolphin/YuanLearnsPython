@@ -1,0 +1,60 @@
+【PG】22.5　读文件　　 305
+人也一样。 我们在不同场合会使用不同的名字。 如果你的老师名叫 Fred 
+Weasley， 你会叫他 Weasley老师。他的朋友可能叫他 Fred，而他的计算机用户名可
+能是 fweasley。 对 于文件， 会有一个由操作系统使用的名字， 操作系统要用这个名字
+把文件存储在磁盘上（ 文 件名） ，另外还有一个由程序使用的名字， 程序处理文件时
+要使用这个名字（文件对象）。
+
+这两个名字 （也 就是对象名和文件名 ）不一定要完全相同。 可以把对象命名为
+你想使用的任何名字。 例 如，如果有一个包含一些说明的文本文件， 名为 notes.txt，
+可以这样做：
+
+my_file = open('notes.txt', 'r')
+notes = open('notes.txt', 'r')
+
+或者我们可以这样做：
+
+some_crazy_stuff = open("notes.txt", 'r')
+
+Once we have opened the file and created the file object, we don’t need the filename any 
+more. We do everything in the program using the file object.
+
+【PG】22.5　读文件
+上一节提到， 可以使用 open()函数打开文件并创建文件对象。 这是 Python的
+内置功能之一。要打开文件来完成读，需要使用 'r'作为第二个参数，如下：
+
+my_file = open('notes.txt', 'r')
+
+如果想打开一个文件完成读， 但是这个文件根本不存在， 你就会得到一条错误
+消息。 （毕竟，你无法读一个原本没有的东西，对不对？）
+Python还提供了另外一些内置功能 ，一 旦文件打开可以将信息从文件获取到你
+的程序中。要从一个文件读取文本行，可以使用 readlines() 方法，如下：
+
+lines = my_file.readlines()
+
+这会读取整个文件， 并建立一个列表， 每个文本行作为列表中的一项。 下面假
+设notes.txt文件包含一个小列表，上面写的都是你每天要做的事情：
+
+Wash the car
+Make my bed
+Collect allowance
+
+我们可以使用“ 记事本”（Notepad） 之类的程序来创建这个文件。 其实，你可
+以现在就动手， 使用记事本（ 或者你喜欢的文本编辑器 ）来建立这样的文件。 可以使用相同
+的文件名 notes.txt ，并将该文件保存在与你的 Python 程序相同的地方。 然后关闭 Notepad。
+如果我们用一个简短的 Python 程序打开这个文件并读取它，代码可能像列表 22.1中
+所示。 
+
+Listing 22.1 Opening and reading from a file
+my_file = open('notes.txt', 'r')
+lines = my_file.readlines()
+print lines
+
+这会输出以下内容（具体输出取决于你在文件中输入些什么东西）：
+
+['Wash the car\n', 'Make my bed\n', 'Collect allowance']
+
+文本行已从文件中读取，并被放入了一个被我们称为 lines 的列表中。 列表中的
+每个项目都是一个字符串，其中包含来自文件的一行。 注意前两行末尾的 \n 部分，
+它们是文件中分隔行的换行符。 在我们创建文件时按下 Enter 的位置。 如果在输入
+最后一行后按 Enter，第三个项目后面会有一个第三个 \n 。

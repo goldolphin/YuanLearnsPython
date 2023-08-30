@@ -1,0 +1,76 @@
+【PG】第 16章　图　　形
+【PG】在右边界， 就要查看球的右边界是不是在窗口的右边界上。 不过，球的位置是按它的左边界（左上角）而不是右边界设置的。所以必须减去球的宽度：
+【PG】球向窗口右边移动时，位置达到 550时要将它反弹 （让它朝反方向移动） 。球的位置是它的 rect的左上角640 px 550 px  90 px
+【PG】为了让事情变得简单一些，我们要对代码做一些修改。我们希望球永远来回反弹 （或者直到我们关闭 Pygame窗口） 。因为已经有了一个 while循环，只要窗口打开 ，这个 while循环就一直运行 ，所以我们要把显示球的代码移到这个循环内部 （这就是程序最后一部分中的 while循环） 。并不总是将球的位置增加 5，我们会建立一个新变量 speed，用来确定每次迭
+代时以多快的速度移动球 。我还打算把这个值设置为 10，让球稍稍加快速度 。
+【PG】新代码见代码清单 16-14 。
+【PG】代码清单 16-14　让沙滩球反弹
+import pygame, sys
+pygame.init( )
+screen = pygame.display.set_mode([640,480] )
+screen.fill([255, 255, 255])
+my_ball = pygame.image.load('beach_ball.png')
+x = 50
+y = 50
+x_speed = 10 
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:             
+            running = Fals e
+        pygame.time.delay(20)    
+        pygame.draw.rect(screen, [255,255,255], [x, y, 90, 90], 0)          
+    x = x + x_speed                                                    
+    if x > screen.get_width() - 90  or  x < 0:                    
+        x_speed = - x_speed                                             
+    screen.blit(my_ball, [x, y])                                        
+    pygame.display.flip()                                               
+pygame.quit( )
+【PG】这是 speed变量
+当球碰到窗口的 
+任意一边…
+改变速度的符号（从正变成负，或者从负变成正） ，使方向反转
+【PG】第 16章　图　　形
+【PG】import pygame, sys
+pygame.init()
+screen = pygame.display.set_mode([640,480])
+screen.fill([255, 255, 255])
+my_ball = pygame.image.load('beach_ball.png')
+x = 50
+y = 50
+x_speed = 10
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: 
+            sys.exit()
+    pygame.time.delay(20)
+    pygame.draw.rect(screen, [255,255,255], [x, y, 90, 90], 0)    
+    x = x + x_speed
+    if x > screen.get_width() - 90  or  x < 0:
+        x_speed = - x_speed    
+    screen.blit(my_ball, [x, y])    
+    pygame.display.flip()
+【PG】The key to bouncing the ball off the sides of the window is lines 18 and 19. In line 18 ( if x > screen.get_width() - 90 or x < 0: ), we detect whether the ball is at the edge of the window, and if it is, we reverse its direction in line 19 ( x_speed = - x_speed ). Try this and see how it works.
+【PG】Bouncing in 2-D
+So far, we only have the ball moving back and forth, or one-dimensional motion. Now, let’s 
+get it moving up and down at the same time. To do this, we only need a few changes, as 
+shown in listing 16.16.
+【PG】import pygame, sys
+pygame.init()
+screen = pygame.display.set_mode([640,480])screen.fill([255, 255, 255])
+my_ball = pygame.image.load('beach_ball.png')
+x = 50
+y = 50
+x_speed = 10
+y_speed = 10
+while True:
+    for event in pygame.event.get():Listing 16.15 Bouncing a beach ball
+【PG】Listing 16.16 Bouncing a beach ball in 2-D. . . reverse direction, by making 
+speed the opposite sign
+Here’s the speed variable
+When ball hits either edge of the window . . .
+Put the ball-display code here, inside the while  loop
+Add code for y-speed  
+(vertical motion)
+【PG】把显示球的代码放在这里，也就是while循环内部
+【PG】图灵社区会员 FreeLink 专享 尊重版权

@@ -1,0 +1,29 @@
+【PG】附录 B　Python 2 与Python 3 的差异　
+
+【PG】取余操作符（ %）用于计算整数相除的余数， 其在 Python 3 中的工作方式和在Python 2 中一样。
+
+Python 2：
+>>> print 5%2
+1
+
+Python 3：
+>>> print(5%2)1
+
+【PG】range()
+
+在Python 2 中，range() 函数返回一个列表。 但在 Python 3 中，range() 返回一个range对象。如果是循环访问的话，Python 3 中range对象的工作方式和Python 2 中的列表基本一样。 但 如果你想打印它， 是不能看到 range对象中的各个单独的值的。
+
+Python 2：
+>>> print range(5)
+[0, 1, 2, 3, 4]
+
+Python 3：
+>>> print(range(5))range(0, 5)
+
+【PG】Python 2 到 Python 3 的转换
+
+有一个名为 2to3的工具会尝试自动将 Python 2 代码转换为 Python 3 代码。如果你在使用 Python 3，可以拿本书中的代码清单试一下。很多代码在转换后都能正常工作。但我们没有测试本书中的代码经 2to3转 换后能否正常工作， 所以我们不保证它适用于本书所有的代码清单。
+
+尽管 Python 3是Python的最新版本 ，但 Python 2 现在还是被广泛支持。因为非常非常多的人编写的 Python 2代码不能在 Python 3 中正常工作， 所以很多公司和个人都继续使用 Python 2。有很多模块还没有升级，无法支持 Python 3，甚至有一些模块从来没有升级过。 Python 2 的资源要远比 Python 3 的多，这也是我们决定在本书 中继续使用 Python 2 的一个原因 。但如果你想尝试在自己的编程项目中使用 Python 3， 我们祝你好运。
+
+图灵社区会员 FreeLink 专享 尊重版权

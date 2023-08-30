@@ -1,0 +1,46 @@
+【PG】370　　第 25章　Skier 游戏的说明
+
+【PG】x=320，因为窗口的宽度是 640像素。因此滑雪者的初始位置是 [320, 100]。
+
+【PG】滑雪者类定义的第一部分是下面这样：
+class SkierClass(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self )
+        self.image = 
+pygame.image.load("skier_down.png")
+        self.rect = self.image.get_rect( )
+        self.rect.center = [320, 100]        
+        self.angle = 0
+
+【PG】我们用一个类来改变滑雪者的状态， 它会在angle的值改变时载入正确的图片，
+并设置好滑雪者的速度。速度由 x和y两个值构成。我们只改变左右方向的速度（x
+方向的速度， x-speed），但是 y方向的速度（y-speed）决定了场景向上滚动的速度
+（滑雪者向“ 下”滑 的速度） 。当他垂直向下运动时，y方向的速度比较快，而当他转
+向时，y方向的速度则比较慢。速度的计算公式如下：
+speed = [self.angle, 6 - abs(self.angle) * 2]
+此行代码中的 abs用于取得 angle的绝对值，也就是说我们忽略符号（+ 和-）
+后的值。对于y方向的速度来说，滑雪者左转还是右转都没有影响，只要知道转的
+程度就行了。
+
+【PG】用于转弯的全部代码如下：
+def turn(self, direction):  
+        self.angle = self.angle + direction
+        if self.angle < -2:  self.angle = -2        
+        if self.angle >  2:  self.angle =  2 
+        center = self.rect.center
+        self.image = pygame.image.load(skier_images[self.angle])        
+        self.rect = self.image.get_rect( )
+        self.rect.center = center
+        speed = [self.angle, 6 - abs(self.angle) * 2]        
+        return speed
+
+【PG】我们还需要一个方法来控制滑雪者左右来回移动，以保证他不会滑出窗口边缘：
+def move(self, speed):
+        self.rect.centerx = self.rect.centerx + speed[0]        
+        if self.rect.centerx < 20:  self.rect.centerx = 20
+        if self.rect.centerx > 620: self.rect.centerx = 62 0
+
+【PG】我们使用方向键来控制滑雪者左右运动，所以要添加 Pygame初始化和事件循环
+的代码，这样就可以让只有滑雪者的程序运行起来。代码如下所示。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

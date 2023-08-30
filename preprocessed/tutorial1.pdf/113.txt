@@ -1,31 +1,30 @@
 【PG】8.6　没有数字的计数　　 87
+
 【PG】嘿，谁把我们放反了？
+
 【PG】可以利用这一点来建立一个倒计时的定时器程序。只需要再增加两行代码。在IDLE中打开一个新的编辑器窗口，键入代码清单8-6中的程序。试着运行这个程序。
 
-【PG】CHAPTER 8 Loop the Loop
-【PG】Now we’re stepping by 5.
-【PG】How about counting backwards?
-【PG】When the third parameter in the range() function is negative, the loop counts down instead of up. Remember that the loop starts at the first number and goes up to (or down to) but not including the second number, so in our last example we only got down to 2, not 1.
-【PG】We can use this to make a countdown timer program. We only need to add a couple more lines. Open a new editor window in IDLE and type in the program in listing 8.6. Then try running it. 
+【PG】Now we’re stepping by 5. 
+How about counting backwards?
+When the third parameter in the range() function is negative, the loop counts down instead of up. Remember that the loop starts at the first number and goes up to (or down to) but not including the second number, so in our last example we only got down to 2, not 1.
+We can use this to make a countdown timer program. We only need to add a couple more lines. Open a new editor window in IDLE and type in the program in listing 8.6. Then try running it. 
 
 【PG】import time
-    for i in range (10, 0, -1):    
-        print i
-        time.sleep(1)  
-    print "BLAST OFF!"
+for i in range (10, 0, -1):    
+    print i
+    time.sleep(1)  
+print "BLAST OFF!"
 
-【PG】Don’t worry about the stuff in the program that I haven’t told you about yet, like import, time, and sleep. We’re going to find out all about that in the following chapters. Just try the Listing 8.6 Ready for lift-off?
-【PG】>>> for i in range(10, 1, -1):    
-        print i
-        time.sleep(1)  
-    print "BLAST OFF!"
+【PG】Don’t worry about the stuff in the program that I haven’t told you about yet, like import, time, and sleep. We’re going to find out all about that in the following chapters. Just try the Listing 8.6 Ready for lift-off?>>> 
+for i in range(10, 1, -1):    
+    print i
+    time.sleep(1)  
 
-【PG】Hey, who put us in reverse?
 【PG】Counts backwards
-【PG】Waits one second
+Waits one second
 
-【PG】代码清单 8-6　准备好了吗？
-【PG】先不用担心这个程序里还没有讲到的内容，比如说import、time和sleep。所有这些内容都会在后面的章节中讲清楚。你只需要试着运行代码清单8-6中的程序，看看它是怎么工作的。这里的关键是range(10,0,-1)部分，它会让循环从10反向计数到1。
+【PG】代码清单8-6　准备好了吗？先不用担心这个程序里还没有讲到的内容，比如说import、time和sleep。所有这些内容都会在后面的章节中讲清楚。你只需要试着运行代码清单8-6中的程序，看看它是怎么工作的。这里的关键是range(10,0,-1)部分，它会让循环从10反向计数到1。
 
-【PG】8.6　没有数字的计数
-【PG】在所有前面的例子中，循环变量都是一个数。按编程术语来讲，可以这么说：循环迭代处理一个数字列表。但是列表不一定非得是数字列表。从卡特的试验我们看到，它也可以是字符列表（一个字符串），还可以是一个字符串列表，或者是其他列表。要了解它如何工作，最好的办法就是举个例子来说明。试着运行代码清单8-7中的程序，看看会发生什么。图灵社区会员FreeLink专享尊重版权
+【PG】在所有前面的例子中，循环变量都是一个数。按编程术语来讲，可以这么说：循环迭代处理一个数字列表。但是列表不一定非得是数字列表。从卡特的试验我们看到，它也可以是字符列表（一个字符串），还可以是一个字符串列表，或者是其他列表。要了解它如何工作，最好的办法就是举个例子来说明。试着运行代码清单8-7中的程序，看看会发生什么。 
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

@@ -1,0 +1,35 @@
+【PG】12.16　字典　　 139
+
+【PG】The third name you entered is: Nick
+
+【PG】4.  修改第 1题的程序， 让用户替换其中一个名字。 用户应该能选择要替换哪个
+名字，然后键入新名字。最后显示这个新的列表：
+
+Enter 5 names:
+Tony
+Paul
+Nick
+Michel
+Kevin
+
+The names are Tony Paul Nick Michel Kevin
+Replace one name. Which one? (1-5): 4
+New name: Peter
+The names are Tony Paul Nick Peter Kevin
+
+【PG】5.  编写一个字典程序， 让用户可以添加单词和定义， 然后可以查找这些单词。
+确保当要查找的单词不存在时， 用 户能够知晓。 运行的时候， 它应该是像这
+样的：
+
+Add or look up a word (a/l)? a
+Type the word: computer
+Type the definition: A machine that does very fast math
+Word added!
+
+Add or look up a word (a/l)? l
+Type the word: computer
+A machine that does very fast math
+
+Add or look up a word (a/l)? l
+Type the word: qwerty
+That word isn't in the dictionary yet.

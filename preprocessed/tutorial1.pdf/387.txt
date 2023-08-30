@@ -1,0 +1,45 @@
+【PG】24.6 电子宠物　　 361
+
+【PG】法来收集错误消息并进行处理 ，而不是让程序直接停止 。这可以利用 try-except 块来做到。
+
+【PG】例如，如果想打开一个文件 ，但是这个文件并不存在 ，你就会得到一条错误消息。如果你没有处理这个错误 ，程序会在这里停止 。不过，也许你想让用户重新输入文件名 （没准她只是敲错了 ） 。利用try-except 块，你可以获取到错误信息并继续执行。
+
+【PG】对于打开文件的例子 ，try-except 块如下所示 ：352 Hello World!
+Here’s what it looks like, using the example of opening a file:
+The thing that you want to try (that might cause an error) goes in the try block. In this case, it’s trying to open a file. If that happens without an error, the except  part is skipped. 
+If the code in the try block causes an error, the code in the except  block runs. The code in the except  block tells the program what to do if there was an error. You can think of it this way:
+
+【PG】The try-except  statements are Python’s way of doing what’s generally called error handling . Error handling lets you write code where things can go wrong—even things that would normally stop your program—so that your program will still work. We’re not going to talk about error handling in any more detail in this book, but I wanted to show you the basics, because you’ll see it in the Virtual Pet code.
+
+【PG】Let’s have a look at the code, which is shown in listing 24.4. The notes will explain most of what’s going on. This one is a bit long, so if you don’t feel like typing it all in, you can find it in the \examples\VirtualPet  folder (if you ran the book’s installer). It can also be downloaded from the book’s web site ( www.helloworldbook.com ). The PythonCard resource file and all the graphics are there too. Try running it, and then look at the code and make sure you understand how it works.
+
+【PG】from PythonCard import model, timer, dialog
+import pickle, datetime, wx
+class MyBackground(model.Background):
+    def on_initialize(self, event):
+        self.doctor = False
+        self.walking = False        self.sleeping = False
+        self.playing = False
+        self.eating = False        self.time_cycle = 0
+        self.hunger = 0
+        self.happiness  = 8        self.health = 8try:
+    file = open("somefile.txt", "r")
+except:    print "Couldn't open the file.  Do you want to reenter the filename?"
+
+【PG】Listing 24.4 VirtualPet.py
+
+【PG】try:    to do this (don’t do anything else...)
+except:    if there was an error, then do this
+
+【PG】Initializes values你想尝试的部分 （可能导致一个错误 ）要放在try块中。在这个例子中就是尝试打开一个文件 。
+
+【PG】如果可以打开文件而不会导致错误 ，就会跳过except部分。如果try块中的代码确实导致一个错误 ，就会运行 except块中的代码 。except块中的代码告诉程序一旦出现错误该做些什么 。你可以这样来考虑 ：
+try:
+    做这件事 (不做其他事情 ……)
+except:    如果有错误，就做这件事
+
+【PG】try-except 语句是 Python处理错误所采用的方法 ，这通常称为错误处理（error handling） 。错误处理允许你编写可能出错的代码 （甚至是很严重的错误 ，倘若没有错误处理 ，这些错误在正常情况下甚至会让你的程序停止 ） ，使程序仍能继续运行。我们不打算在这本书里更详细地讨论错误处理 ，不过我希望你能了解一些基础知识，因为在电子宠物代码中就会看到错误处理 。
+
+【PG】下面来看这个代码 ，见代码清单 24-4。这里的说明已经对大部分工作做了解释。这个代码有点长 ，所以如果你不想自己键入 ，可以在 \Examples\V irtualPet文件夹找到这个程序 （如果你运行了本书的安装程序 ） 。也可以从这本书的网站 （www.helloworldbook2.com ）下载。PyQt UI文件和所有图片也都已经提供 。试着运行这个程序，然后再看代码 ，确保你能理解它是如何工作的 。 
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

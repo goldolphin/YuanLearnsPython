@@ -1,0 +1,85 @@
+【PG】21.4　数字格式化　　 289
+【PG】使用一个空格代替 +：280 Hello World!
+【PG】Python truncated the value to the next lowest integer. However, this is different from 
+the int()  function (which we saw in chapter 4) , because format strings don’t create a 
+new value like int()  does—they just change how the value is displayed.
+【PG】Just now, we printed 12.67 in integer format, and it printed 12. But the value of the variable 
+number  has not been changed. Check it and see:
+【PG】The value of number  hasn’t changed. We just made it pr int differently using the format string.
+【PG】Floating point numbers: %f or %F
+【PG】For decimal numbers, you can use either the 
+uppercase or lowercase f in the format string ( %f or %F):
+【PG】If you use just %f by itself, the number will display with six decimal places. If you add .n 
+before the f, where n is any integer, it’ll round the number off to that many decimal places:
+【PG】You can see how it rounded the number 12.3456 to two decimal places: 12.35.
+【PG】If you specify more decimal places than are actually in the number, Python will pad (fill in) 
+the number with zeros:
+【PG】Here the number only had four places after the decimal, but we asked for eight, so the 
+other four were filled in with zeros.
+【PG】If the number is negative, %f will always display the - sign. If you want the number to 
+always display a sign, even if it’s positive, use a + sign right after the % (this is good for lining 
+up lists of positive and negative numbers):
+【PG】If you want your list of positive and negative numbers to line up, but don’t want to see 
+the + sign on positive numbers, use a 
+space instead of the +, right after the %:>>> print number
+【PG】12.67
+【PG】>>> number = 12.3456
+【PG】>>> print '%f' % number12.345600
+【PG】>>> print '%.2F' % number
+【PG】12.35
+【PG】>>> print '%.8f' % number
+【PG】12.34560000
+【PG】>>> print '%+f' % number
+【PG】+12.345600
+【PG】>>> number2 = -98.76
+【PG】>>> print '% .2f' % number2
+【PG】-98.76>>> print '% .2f' % number
+【PG】12.35
+【PG】输出中的 12前面有一个空格， 所以，尽管 98前面有负号而 12前面没有正负
+【PG】号，这两个数也能对齐。
+【PG】E 记法：%e和%E
+【PG】我们在第 3章讨论过 E记法，前面说过我会告诉你如何使用 E记法来打印数字。
+【PG】好吧，现在就来介绍这个内容。281 $)"15&3 Print Formatting and Strings
+【PG】Notice that there is a space before 12 in the outp ut, so tha t the 12 and 98  line  up on e below 
+the o ther, even  though  one has a sign  and th e other doesn’t.
+【PG】E-notation: %e and %E
+【PG】When we  talked  about E-notati on (in chapte r 3), I pr omised I’d show you how to make num-
+bers print using E-nota tion. W ell, here it is.
+【PG】The %e format string is used to print E-nota tion. It always pr ints six decimal pl aces un less 
+you te ll it otherw ise. 
+【PG】You can pr int more or fewer decimal places by using a .n after the %, just like 
+with /f_loa ts:
+【PG】The %.3e  rounded oﬀ to three decimal places, and the %.8e  added some zero es to make up 
+the extra digits.
+【PG】You can use
+ a lowerc ase or upperc ase e, and the outp ut wil l use the same case you used in 
+the fo rmat string:
+【PG】Aut oma tic /f_loat or E-n otation: %g and %G
+【PG】If you want Py thon to automatica lly choose /f_loat notation or E-notat ion for you, use 
+the %g form at string. Aga in, if you use up perc ase, you’ll get a n up perc ase E in 
+the outp ut.
+【PG】Did you no tice how Python automa tically chose E-notation for the big number and re gular 
+/f_loating -poi nt n otation for  the  smal ler nu mber?
+【PG】How do I print a percent sign?
+【PG】You might be w ondering, because the perc ent sign ( %) is a special character for fo rmat 
+strings, how you ma ke a % sign print?>>> number = 12.3456
+【PG】>>> print '%e' % nu mber
+【PG】1.234560e+01
+【PG】>>> number = 12.3456
+【PG】>>> print '%.3e' % number
+【PG】1.235e+01
+【PG】>>> print '%.8e' % number
+【PG】1.23456000e+01
+【PG】>>> print '%E' % nu mber
+【PG】1.234560E+01
+【PG】>>> number1 = 12.3
+【PG】>>> number2 = 456712345.6
+【PG】>>> print '%g' % nu mber1
+【PG】12.3>>> print '%g' % nu mber2
+【PG】4.56712e+08
+【PG】%.3e四舍五入为 3位小数，%.8e增加了一些 0来填充不足的小数位。
+【PG】小写或大写 e都是可以的 ，你 在格式字符串中使用什么大小写形式， 输出时也
+会显示同样的大小写：
+【PG】自动浮点数或 E 记法： %g和%G
+【PG】如果你希望 Python自动选择浮点数记法或 E记法，可以使用 %g格式字符串。
+【PG】同样，如果使用大写，输出中就会得到一个大写的 E：

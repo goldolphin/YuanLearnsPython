@@ -1,0 +1,33 @@
+【PG】第 18章　一种新的输入——事件
+
+【PG】DOWN按键名。还有其他事件吗？其他按键名是什么？
+
+实际上还有相当多的事件 ，所以这里不打算一一列出。不过 Pygame网站上提供了所有事件的列表。可以在 Pygame文档的 event部分找到这个事件列表：www. pygame.org/docs/ref/event.html 按键名列表放在 key部分：www. pygame.org/docs/ref/key.html
+
+以下是我们将要使用的一些常用事件：
+
+QUIT
+
+KEYDOWN
+
+KEYUP
+
+MOUSEMOTION
+
+MOUSEBUTTONUP
+
+MOUSEBUTTONDOWN
+
+Pygame还给每个可以按下的键命了名。我们刚才看到了向上和向下箭头，它们的名字分别是 K-UP和K-DOWN。后面还会看到另外一些按键名，它们都以 K_开头，后面是按键的名字，例如： K_a, K_b（对应字母键 ） K_SPACE K_ESCAPE 等等。
+
+【PG】18.3 鼠标事件
+
+我们刚才看到了如何从键盘得到按键事件，以及如何使用这些事件来控制程序中的某些方面。前面使用箭头键让沙滩球向上和向下移动。现在打算使用鼠标来控制球。从中你会了解到如何处理鼠标事件以及如何使用鼠标位置信息。
+
+最常用的 3类鼠标事件如下：
+
+MOUSEBUTTONUP
+
+MOUSEBUTTONDOWN
+
+MOUSEMOTION

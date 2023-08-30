@@ -1,0 +1,77 @@
+【PG】 第 19章 声 音
+
+在下一章，我们将建立一个不同类型的图形程序：一个有按钮、菜单的程序，也就是一个 GUI。
+
+【PG】 110 Hello World!
+
+Just imagine how tedious it would be to work out the calories for all these combinations by hand, even if you had a calculator to do the math. It’s way more fun to write a program to figure it all out for you. Looping and a bit of math in Python make it a snap!
+
+What did you learn?
+
+In this chapter, you learned about
+- nested loops.
+- variable loops.
+- permutations and combinations.
+- decision trees.
+
+Test your knowledge
+1. How do you make a variable loop in Python?
+2. How do you make a nested loop in Python?
+
+# 4       0        0        0        1        1        60
+# 5       0        0        1        0        0        80
+# 6       0        0        1        0        1        120
+# 7       0        0        1        1        0        100
+# 8       0        0        1        1        1        140
+# 9       0        1        0        0        0        120
+# 10      0        1        0        0        1        160
+# 11      0        1        0        1        0        140
+# 12      0        1        0        1        1        180
+# 13      0        1        1        0        0        200
+# 14      0        1        1        0        1        240
+# 15      0        1        1        1        0        220
+# 16      0        1        1        1        1        260
+# 17      1        0        0        0        0        140
+# 18      1        0        0        0        1        180
+# 19      1        0        0        1        0        160
+# 20      1        0        0        1        1        200
+# 21      1        0        1        0        0        220
+# 22      1        0        1        0        1        260
+# 23      1        0        1        1        0        240
+# 24      1        0        1        1        1        280
+# 25      1        1        0        0        0        260
+# 26      1        1        0        0        1        300
+# 27      1        1        0        1        0        280
+# 28      1        1        0        1        1        320
+# 29      1        1        1        0        0        340
+# 30      1        1        1        0        1        380
+# 31      1        1        1        1        0        360
+# 32      1        1        1        1        1        400
+
+【PG】你学到了什么
+
+在这一章，你学到了以下内容：
+- 如何向程序添加声音。
+- 如何播放声音片段（通常是.wav文件）。
+- 如何播放音乐文件（通常是.mp3文件）。
+- 如何知道一个声音已经播放完毕。
+- 如何控制音效和音乐的音量。
+- 如何让音乐重复，使它反复播放。
+- 如何让音乐淡出。
+
+测试题
+1. 可以用哪几种类型的文件存储声音？
+2. 哪个 Pygame 模块用来播放音乐？
+3. 如何设置一个 Pygame 声音对象的音量？
+4. 如何设置背景音乐的音量？
+5. 如何让音乐淡出？
+
+动手试一试
+试着向第 1章中的猜数游戏添加声音。尽管这个游戏是文本模式的，但与这一章中的例子一样，仍然需要增加一个 Pygame 窗口。在 \examples\sounds 文件夹（和网站上）有一些声音可供你使用：
+- Ahoy.wav
+- TooLow.wav
+- TooHigh.wav
+- WhatsYerGuess.wav
+- AvastGotIt.wav
+- NoMore.wav
+或者，你也可以录制自己的声音，这可能很有意思。可以使用一个录音工具，比如 Windows 中的 Sound Recorder，或者可以从 audacity.sourceforge.net/ 下载一个免费程序 Audacity（很多操作系统上都提供了这个工具）。

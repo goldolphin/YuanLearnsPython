@@ -1,0 +1,37 @@
+【PG】第 22章 文件输入与输出
+【PG】应该能得到这样的输出：305 CHAPTER 22 File Input and Output
+
+【PG】import pickle
+【PG】pickle_file = open('my_pickled_list.pkl', 'r')
+【PG】recovered_list = pickle.load(pickle_file)
+【PG】pickle_file.close()
+【PG】print recovered_list
+【PG】You should get output that looks like this:
+【PG】It looks like the unpickling worked! We got back the same items we pickled. The E-notation looks a little different, but it’s the same number, at least to 16 decimal places. The difference is from roundoff error, which we talked about in chapter 4.
+
+【PG】In the next section, we’re going to use what we have learned about file input and output to help us make a new game. 
+【PG】Game time again—Hangman
+【PG】Why do we have a game in the chapter on files? Well, one thing that makes a game of Hangman interesting is to have a nice big list of words from which to choose the puzzles. The easiest way to do that is to read it from a file. We’ll also use PythonCard for this game to show that using Pygame isn’t the only way to make graphical games.
+
+【PG】I’m not going to explain this program in quite as much detail as some other programs. By now, you should be able to look at the code and figure out how most of it works on your own. I’ll just give you a little guidance to help you along.
+【PG】The Hangman GUI
+【PG】The main GUI for our Hangman program looks like this:
+【PG】This shows all the parts of the hanged man, but when the program runs, we’ll start by hiding all his parts. When the player guesses a wrong letter, we’ll reveal another part of the man. If the whole man is drawn, the player gets one more guess, and then it’s game over!
+
+【PG】Listing 22.7 Unpickling using load()
+【PG】['Fred', 73, 'Hello there', 8.1987599999999997e-012]
+【PG】看来真还原了！我们又得到了之前“ 被腌”的元素。E 记法看起来有点不同，不过还是同一个数，至少16位小数是一样的。这里的差别是四舍五入造成的，这个问题我们在第4章讨论过。
+
+【PG】22.9 又到了游戏时间—Hangman
+【PG】既然讨论的是文件，为什么要在这一章建立一个游戏呢？嗯，Hangman游戏之所以有趣，原因在于它有一个庞大的词汇表，可以从这个词汇表中选择题目。要做到这一点，最容易的办法就是从文件中读取。我们仍然使用PythonCard来完成这个游戏，也想由此说明并非只能使用Pygame建立图形化游戏。
+
+【PG】我不打算像介绍其他程序那样详细地解释这个程序。现在你应该已经会看代码了，相信你能自己搞清楚其中大部分代码的作用。我只会稍稍给你一点指导，帮助你顺利读懂代码。
+【PG】Hangman GUI
+【PG】我们的Hangman程序的主GUI是像右图这样的：
+【PG】这里显示了上吊小人的各个部分，不过程序运行时，我们首先会隐藏小人的所有部分。玩家猜错一个字母时，就会显示这个小人的下一部分。如果整个小人都显示出来，玩家可以再猜一次，然后游戏结束！
+【PG】玩家猜一个字母时，程序会查看这个字母是否在秘密词中。如果确实是秘密词中的字母，就把这个字母显示出来。在窗口下方，玩家可以看见到目前为止他猜过的所有字母。玩家什么时候都可以尝试猜词。
+【PG】下面概括一下这个程序的工作原理。
+【PG】开始时，程序完成以下工作：
+【PG】从文件加载词汇表；
+【PG】从每行的末尾去除换行符；
+【PG】图灵社区会员FreeLink专享尊重版权

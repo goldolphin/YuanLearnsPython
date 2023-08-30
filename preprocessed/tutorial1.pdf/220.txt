@@ -1,0 +1,37 @@
+【PG】194　第 16章　图　　形
+【PG】import pygame, sys, random
+【PG】from pygame.color import THECOLORS
+【PG】pygame.init( )
+【PG】screen = pygame.display.set_mode([640,480] )
+【PG】screen.fill([255, 255, 255])
+【PG】for i in range (100) :
+    width = random.randint(0, 250); height = random.randint(0, 100)    top = random.randint(0, 400); left = random.randint(0, 500)    color_name = random.choice(THECOLORS.keys())   
+    color = THECOLORS[color_name]    
+    line_width = random.randint(1, 3)    pygame.draw.rect(screen, color, [lef t, top, width, height], line_width )
+【PG】pygame.display.flip()
+【PG】running = True
+【PG】while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:             running = False
+【PG】pygame.quit( )
+
+【PG】16.4　单个像素
+【PG】有时我们并不想画一个圆或矩形， 而是希望画单个的点或像素。 比如，我们要创建数学程序，想画一条正弦曲线。如果你不知道什么是正弦曲线也不用担心。 学习本章的内容， 只要知道这是一种波浪形的曲线就可以了。另外也不用担心后面几个示例程序中的数学公式，按代码清单原样键入这些程序就行。这些公式只是为了保证得到大小合适的波浪形状，能够放入我们的 Pygame 窗口中。
+【PG】.嘿，伙计！这些正弦曲线通常用来表示声音。比如在音乐里。我吗？我喜欢在起伏的海浪上做音乐。
+【PG】由于没有 pygame.draw.sinewave() 这种方法， 所以我们必须利用单个的点来画这样一条曲线。一种方法是画很小的圆或矩形（圆或矩形的大小只有一个或两个像素）。代码清单 16-7 显示了用矩形画出来的曲线是什么样的。
+【PG】代码清单 16-7　用大量很小的矩形画曲线
+【PG】import pygame, sys
+【PG】import math      
+【PG】pygame.init( )
+【PG】screen = pygame.display.set_mode([640,480])
+【PG】screen.fill([255, 255, 255])                                
+【PG】for x in range(0, 640):  
+    y = int(math.sin(x/640.0 * 4 * ma th.pi) * 200 + 240)    
+    pygame.draw.rec t(screen, [0,0,0],[x, y, 1, 1], 1)       
+【PG】pygame.display.flip()
+【PG】running = True
+【PG】while running:    
+    for event in pygame.eve nt.get():
+        if event.type == pygame.QUIT:             
+            running = False
+【PG】pygame.quit( )

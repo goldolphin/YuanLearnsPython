@@ -1,0 +1,20 @@
+【PG】20.7　菜单上是什么　　 277
+
+【PG】对于菜单项（行为）来说，我们希望处理的不是 clicked 事件，而是一个 triggered 事件。我们需要连接到事件处理器的菜单项叫做 action_CtoF ，而我们要连接的事件处理器则是按钮的事件处理器，叫做 btn_CtoF_clicked 。将菜单项和事件处理器连接起来的代码是这样的：
+
+self.action_CtoF.triggered.connect(self.btn_CtoF_clicked)
+
+【PG】同样，还有一个 FtoC 菜单项。
+
+【PG】对于 Exit 菜单项而言，我们需要创建一个新的事件处理器来绑定事件。我们将事件处理器命名为 menuExit_selected ，连接事件的代码是这样的：
+
+self.actionExit.triggered.connect(self.menuExit_selected)
+
+【PG】Exit 菜单项的事件处理器的函数体其实只有一行代码，将窗口关闭即可：
+
+def menuExit_selected(self):
+    self.close()
+
+【PG】最后，将当前加载的 UI 文件（第三行）改为添加菜单之后保存的文件，即 tempconv_menu.ui 。
+
+【PG】做完上面这些修改之后，整个代码应该如下面的代码清单所示。

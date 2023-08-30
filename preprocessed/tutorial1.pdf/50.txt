@@ -4,8 +4,7 @@
 还有另一个标签， 那 么它还在计算机的内存
 里。不过，如 果它上面再没有任何标签了，
 Python就会发现再没有人需要它了， 所以会把
-它从内存中删除
-。
+它从内存中删除。
 这样一来 ，内 存中就不会塞满那些没人用
 的东西。 Python会自动完成所有这些清理工
 作，根本不用你操心。
@@ -37,8 +36,7 @@ We just moved the tag (reassigned the name) from one thing to the other. Some ki
 things in Python (like numbers and strings) cannot be changed. You can reassign their names to something else (like we just did), but you can’t change the original thing.
 There are other kinds of things in Python that can be changed. We will learn more about 
 this in chapter 12, when we talk about lists.
-
-【PG】The new me
+The new me
 You can also make a variable equal to itself:
 I bet you’re thinking, “Well, that’s pretty useless!” And you’d be right. It’s kind of like saying 
 “I am me. ” But with a small change, you can 
@@ -49,11 +47,10 @@ become a whole new you ! Try this:
 >>> Score = Score + 1
 >>> print Score
 8
-
-【PG】Changes Score  
+Changes Score  
 from 7 to 8
-把Score从7改为 8
-What happened here? In the first line, the Score  tag was stuck on the value 7. We made a 
+
+【PG】What happened here? In the first line, the Score  tag was stuck on the value 7. We made a 
 new thing, which was Score + 1 , or 7 + 1. That new thing is 8. Then we took the Score  tag 
 off the old thing (7) and stuck it on the new thing (8). So Score  has been reassigned from 7 
 to 8. 
@@ -63,4 +60,6 @@ out to be quite useful, and you’ll see it in a lot of programs. The most commo
 increment  a variable (increase it by a certain amount), like we just did, or the opposite, to 
 decrement a variable (decrease it by a certain amount). 
 
-【PG】Tag Moved
+【PG】标签被移走
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

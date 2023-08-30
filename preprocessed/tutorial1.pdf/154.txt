@@ -1,0 +1,30 @@
+【PG】第 12章　收集起来 —列表与字典
+
+【PG】>>> letters = ['d', 'a', 'e', 'c', 'b']
+【PG】>>> letters.sort()
+【PG】>>> print letters
+['a', 'b', 'c', 'd', 'e']
+
+【PG】在这里我们看到一个新的列表方法 reverse() ，它会把列表中元素的顺序倒过来 。
+
+【PG】另一种方法是向 sort()增加了一个参数，直接让它按降序排序（从大到小） ：
+>>> letters = ['d', 'a', 'e', 'c', 'b']
+>>> letters.sort (reverse = True)>>> print letters['e', 'd', 'c', 'b', 'a']
+
+【PG】这个参数名为 reverse，它会按照你的意愿，将列表按逆序排序。
+
+【PG】要记住，我 们刚才讨论的所有排序和逆置都会对原来的列表做出修改。 这说明，你原来的列表已经没有了。 如果希望保留原来的顺序，而对列表的副本进行排序，可以使用分片记法建立副本，也就是与原列表相等的另一个列表（有关的内容已经在这一章前面讨论过）：
+>>> letters.reverse()
+>>> print letters
+['e', 'd', 'c', 'b', 'a']
+>>> original _list = ['Tom', 'James', 'Sarah', 'Fred']
+>>> new_list = original _list[:]
+>>> new_list.sort()
+>>> print original _list
+['Tom', 'James', 'Sarah', 'Fred']
+>>> print new _list
+['Fred', 'James', 'Sarah', 'Tom']
+
+【PG】卡特，很高兴你问这个问题。如果你还记得很早很早以前我们刚开始谈到名字和变量时（第2章） ，曾经说过，完成name1 = name2之类的操作时，就是为同一个东西建立一个新的名字。应该还记得这个图：嘿，建立列表副本时，你使用了new_list=original_list[:] new_list = original_list而不是直接用。为什么最后还要一个额外的分片呢？
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

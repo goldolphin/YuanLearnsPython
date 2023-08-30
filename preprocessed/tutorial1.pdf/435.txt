@@ -1,0 +1,88 @@
+【PG】附录 C　自测题答案　　 409
+【PG】动手试一试
+【PG】1. 下面的程序使用一个 for循环打印用户选择的乘法表：
+ 375  Answers to Self-Test Questions
+Try it out
+1Here is a program to print a multiplication table of the user’s choice using a for loop:
+2Here is the same multiplication table using a while loop:
+3Here is the multiplication table with a user-defined range: 
+Notice in the for line that the second thing in range()  includes a variable, not just a 
+number. We will learn more about that in chapter 11.
+Chapter 9: Just for You—Comments
+Try it out
+1Here’s a sample of some comments I would add to the temperature-conversion program:
+# program to print multiplication table up to 10
+number = int(raw_input('Which table would you like? '))print 'Here is your table:'
+for i in range(1, 11):
+    print number, 'x', i, '=', number * i
+
+【PG】# program to print mult table (while loop)
+number = int(raw_input('Which table would you like? '))
+print 'Here is your table:'
+i = 1while i <= 10:
+    print number, 'times', i, '=', number * i
+    i = i + 1
+
+【PG】# program to print multiplication table
+# user inputs how high they want it to gonumber = int(raw_input('Which table would you like? '))
+limit = int(raw_input('How high would you like it to go? 
+'))
+print 'Here is your table:'for i in range(1, limit + 1):                                          
+    print number, 'times', i, '=', number * i
+# tempconv1.py
+# program to convert a Fahrenheit temperature to CelsiusFahr = 75
+Cel = (Fahr – 32) * 5.0 / 9   #decimal division, not integer
+print
+"Fahrenheit = ", Fahr, "Celsius = ", Cel
+
+【PG】2. 下面的程序使用 while循环打印同一个乘法表：
+ 375  Answers to Self-Test Questions
+Try it out
+1Here is a program to print a multiplication table of the user’s choice using a for loop:
+2Here is the same multiplication table using a while  loop:
+3Here is the multiplication table with a user-defined range: 
+Notice in the for line that the second thing in range()  includes a variable, not just a 
+number. We will learn more about that in chapter 11.
+Chapter 9: Just for You—Comments
+Try it out
+1Here’s a sample of some comments I would add to the temperature-conversion program:
+# program to print multiplication table up to 10
+number = int(raw_input('Which table would you like? '))print 'Here is your table:'
+for i in range(1, 11):
+    print number, 'x', i, '=', number * i
+
+# program to print multiplication table (while loop)
+number = int(raw_input('Which table would you like? '))
+print 'Here is your table:'
+i = 1while i <= 10:
+    print number, 'times', i, '=', number * i
+    i = i + 1
+
+【PG】# program to print multiplication table
+# user inputs how high they want it to gonumber = int(raw_input('Which table would you like? '))
+limit = int(raw_input('How high would you like it to go? 
+'))
+print 'Here is your table:'for i in range(1, limit + 1):                                          
+    print number, 'times', i, '=', number * i
+# tempconv1.py
+# program to convert a Fahrenheit temperature to CelsiusFahr = 75
+Cel = (Fahr – 32) * 5.0 / 9   #decimal division, not integer
+print
+"Fahrenheit = ", Fahr, "Celsius = ", Cel
+
+【PG】3. 下面的程序会根据用户定义的范围打印乘法表：
+ # program to print multiplication table
+# user inputs how high they want it to go
+number = int(raw_input('Which table would you like? '))
+limit = int(raw_input('How high would you like it to go? '))
+print 'Here is your table:'
+for i in range(1, limit + 1):                                          
+    print number, 'times', i, '=', number * i
+注意for代码行中 range() 的第二项包含一个变量， 而不是一个数。 我们将在第 11章介绍有关的更多内容。
+【PG】第9章
+动手试一试
+【PG】1. 下面是我为温度转换程序增加的一些注释：
+ # tempconv1.py
+# program to convert a Fahrenheit temperature to CelsiusFahr = 75
+Cel = (Fahr – 32) * 5.0 / 9   #decimal division, not integer 
+print“Fahrenheit = ”, Fahr, “ Celsius = ”, Cel

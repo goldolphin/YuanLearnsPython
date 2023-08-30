@@ -1,0 +1,35 @@
+【PG】148　　第 13章　函　　数
+
+【PG】13.5　返回值的函数
+
+【PG】目前为止， 函数只是为我们做一些工作。 不过函数的一个突出作用是： 它们还可以向你发回一些东西。
+
+【PG】我们已经知道 ，可 以向函数发送信息（ 参数） ，不过函数还可以向调用者发回信息。从函数返回的值称为结果（result）或返回值（return value） 。
+
+【PG】返回一个值
+
+【PG】要让函数返回一个值， 需要在函数中使用 Python关键字return。下面给出一个例子：
+
+【PG】def calculateTax(price, tax _rate):
+taxTotal = price + (price * tax _rate)
+return taxTotal
+
+【PG】这会把值taxTotal 发回到调用这个函数的程序部分。
+
+【PG】不过发回这个值时 ，它 会去哪里呢？ 返回值会回到调用这个函数的代码。 看下面的例子：
+
+【PG】totalPrice = calculateTax(7.99, 0.06)
+
+【PG】calculateTax 函数会返回一个值：8.4694，这个值将赋给 totalPrice 。
+
+【PG】使用表达式的任何地方都可以使用函数来返回值 。可 以把返回值赋给一个变量（就像前面一样） ，也可以在另一个表达式中使用 ，或者打印出来，例如：
+
+【PG】>>>print calculateTax(7.99, 0.06)
+8.4694
+【PG】>>>total = calculateTax(7.99, 0.06) + calculateTax(6.59, 0.08)
+
+【PG】调用者调用者参数
+
+【PG】函数函数
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

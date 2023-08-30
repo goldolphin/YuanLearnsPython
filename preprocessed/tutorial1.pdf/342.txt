@@ -1,0 +1,38 @@
+【PG】316　　第 22章　文件输入与输出
+
+【PG】def wrong(self):
+        self.pieces_shown += 1
+        for i in range(self.pieces_shown):
+            self.pieces[i].setHidden(False)        if self.pieces_shown == len(self.pieces):
+            message = "You lose.  The word was " + self.currentword
+            Qt Gui.QMessageBox.warning(self,"Hangman",message)
+            self.new_game()
+
+【PG】我们使用 self.pieces_shown 来跟踪上吊小人显示了多少部分。 如果所有的部分都显示出来了，我们就使用一个对话框来告知玩家他输了。
+
+【PG】检查猜到的字母
+这个程序最难的一部分就是检查玩家猜到的字母， 看它是否出现在秘密词中。
+这个工作之所以困难， 是 因为字母可能在一个单词中出现多次。 例如，如果秘密词是lever，玩家猜到了 e，就必须把第 2个和第 4个字母都显示出来 ，因为它们都是 e。
+我们有几个函数来完成这项工作 。ﬁnd_letters() 函数会查找某个字母在单词中出现的所有位置， 并 返回一个包含这些位置的列表。 例如，对于字母 e和单词lever，这个函数会返回 [1, 3]，因为字母 e出现在这个字符串的索引 1和索引 3的位置上。 （记住 ，索引从 0开始。 ）代码如下：308 Hello World!
+
+【PG】If there were a lot more parts to the man, nested if blocks would get difficult to keep track of, and we might find another way to do this. Maybe you can think of one!
+
+【PG】Checking the letter guesses
+One of the trickiest parts of this program is chec king the player’s guessed letter to see if it appears in the secret word. What  makes it tricky is that the letter could appear more than once in the word. For example, if the secret word is “lever, ” and the player guesses e, you have to reveal both the second and fourth letters because they’re both e.
+Carter needed a little help with this part, so I wrote a couple of functions that do this. The find_letters()  function finds all the places a particular letter appears in a word and returns a list of those positions. For example, for the letter e and the word “lever, ” it would return [1, 3] , because the letter e appears at index 1 and index 3 in the string. (Remember that the indices start at 0.) Here’s the code:
+
+def find_letters(letter, a_string):
+    locations = []        start = 0
+    while a_string.find(letter, start, len(a_string)) != -1:
+        location = a_string.find(letter, start, len(a_string))        locations.append(location)
+        start = location + 1
+    return locations
+
+【PG】The replace_letters()  function takes the list from find_letters()  and replaces the dashes at those positions with the corr ect letter. In our example (the letter e in “lever”), it would replace -----  with -e-e- . It shows the player where the correctly guessed letters appear in the word, and leaves the rest as dashes. Here’s the code:
+
+def replace_letters(string, locations, letter):
+    new_string = ''
+    for i in range (0, len(string)):
+        if i in locations:            new_string = new_string + letter
+        else:
+            new_string = new_string + string[i]    return new_string

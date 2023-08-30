@@ -1,0 +1,67 @@
+【PG】第 24章　计算机仿真
+
+【PG】def feed_Click(self):
+    if self.sleep_test():
+        self.imageList = self.eatImages
+        self.eating = True
+        self.walking = False
+        self.playing = False
+        self.doctor = False
+
+【PG】def play_Click(self):
+    if self.sleep_test():
+        self.imageList = self.playImages
+        self.playing = True
+        self.walking = False
+        self.eating = False
+        self.doctor = False
+
+【PG】def walk_Click(self):
+    if self.sleep_test():
+        self.imageList = self.walkImages
+        self.walking = True
+        self.eating = False
+        self.playing = False
+        self.doctor = False
+
+【PG】def stop_Click(self):
+    if not self.sleeping:
+        self.imageList = self.not    s e g a m I g n i h
+        self.walking = False
+        self.eating = False
+        self.playing = False
+        self.doctor = False
+
+【PG】def animation_timer(self):
+    if self.sleeping and not self.forceAwake:
+        self.imageList = self.sleepImages
+    self.imageIndex += 1
+    if self.imageIndex >= len(self.imageList):
+        self.imageIndex = 0
+    icon = QtGui.QIcon()
+    current_image = self.imageList[self.imageIndex]
+    icon.addPixmap(QtGui.QPixmap(current_image),
+                   QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+    self.petPic.setIcon(icon)
+    self.progressBar_1.setProperty("value", (8-self.hunger)*(100/8.0))
+    self.progressBar_2.setProperty("value", self.happiness*(100/8.0))
+    self.progressBar_3.setProperty("value", self.health*(100/8.0))
+
+【PG】def tick_timer(self):
+    self.time_cycle += 1
+    if self.time_cycle == 60:
+        self.time_cycle = 0
+    if self.time_cycle <= 48 or self.forceAwake:
+        self.sleeping = False
+    else:
+        self.sleeping = True
+    if self.time_cycle == 0:
+        self.forceAwake = False
+
+【PG】喂食按钮事件处理器
+【PG】玩耍按钮事件处理器
+【PG】散步按钮事件处理器
+【PG】停止按钮事件处理器
+【PG】动画定时器（第 0.5秒）事件处理器
+【PG】更新宠物的图像（动画）5秒定时器事件处理器开始
+【PG】检查在睡觉还是醒着图灵社区会员 FreeLink 专享 尊重版权

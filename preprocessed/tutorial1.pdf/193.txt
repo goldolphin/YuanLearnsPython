@@ -1,0 +1,23 @@
+【PG】14.6　一个示例类—— HotDog　　 167
+
+这个代码清单有点儿长， 但我还是建议你自己键入这些代码， 而且你已经有了之前代码清单 14-5中的部分代码， 不过，如果你的手指确实很累， 或者你没有时间，也可以在 \examples 文件夹或本书网站上找到这个代码 。
+
+运行这个程序，看看能得到什么。结果应该如下：
+158 Hello World!
+myDog = HotDog()
+print myDog
+print "Cooking hot dog for 4 minutes..."myDog.cook(4)
+print myDog
+print "Cooking hot dog for 3 more minutes..."myDog.cook(3)
+print myDog
+print "What happens if I cook it for 10 more minutes?"myDog.cook(10)
+print myDog
+print "Now, I'm going to add some stuff on my hot dog"myDog.addCondiment("ketchup")
+myDog.addCondiment("mustard")
+print myDog
+
+【PG】创建实例
+查看是否一切
+正常
+
+【PG】程序的第一部分创建了类。 第二部分测试了烤这个虚拟热狗和添加配料的方法。 不 过从最后几行代码来看，我认为烤得太过了。这太浪费番茄酱和芥末酱了！

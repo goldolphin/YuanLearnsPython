@@ -1,0 +1,45 @@
+【PG】17.2　嘣 ! 碰撞检测　　 217                                                                       
+【PG】size = width, height = 640, 480 
+【PG】screen = pygame.display.set_mode(size)        
+【PG】screen.fill([255, 255, 255])                  
+【PG】img_file = "beach_ball.png"                   
+【PG】group = pygame.sprite.Group()     
+【PG】for row in range (0, 2):                     
+【PG】    for column in range (0, 2):
+【PG】        location = [column * 180 + 10, row * 180 + 10]
+【PG】        speed = [choice([-2, 2]), choice([-2, 2])]        
+【PG】        ball = MyBallClass(img_file, location, speed)
+【PG】        group.add(ball)   
+【PG】running = True
+【PG】while running:
+【PG】    for event in pygame.event.get():
+【PG】        if event.type == pygame.QUIT:             
+【PG】            running = False
+【PG】    animate(group)     
+【PG】pygame.quit( )
+【PG】
+【PG】This is easier to see if you make the animation steps bigger. You can do this by increasing the speed from 2 to 5 and also increasing the delay between each step from 20 to 50.
+【PG】
+【PG】The most interesting new thing here is how the collision detection works. The Pygame sprite  module has a function called spritecollide() , which looks for collisions between a single sprite and any sprite in a group. If you’re checking for collisions between sprites in the same group, you have to do it in three steps:
+【PG】�First, you remove the sprite from the group.
+【PG】�Next, you check for collisions between the sprite and the rest of the group.
+【PG】�Finally, you add the sprite back to the group.
+【PG】This happens in the for loop in lines 23 to 29 (in the middle part of the animate()  function). If we don’t remove the sprite from the group first, spritecollide()  will detect a collision between the sprite and itself, because it’s in the group. This might seem kind of odd at first, but it makes sense if you think about it for a while.
+【PG】Run the program and see how it looks. Did you notice any strange behavior? I noticed two things:
+【PG】�When the balls collide, they do a “stutter” or a double bump.
+【PG】�Sometimes a ball gets “stuck” along the edge of the window and stutters along for a while. 
+【PG】Why does this happen? Well, it has to do with the way we wrote the animate()  function. Notice that we move one ball, then we check its collisions, then we move another ball, then we check its collisions, and so on. We should probably do all the moving first, and then do all the collision checking after that.
+【PG】So we want to take line 31, ball.move() , and put it in its own loop, like this:
+【PG】def animate(group):
+        screen.fill([255,255,255])
+        for ball in group:
+            ball.move()
+        for ball in group:
+            group.remove(ball)
+            if pygame.sprite.spritecollide(ball, group, False):
+                ball.speed[0] = -ball.speed[0]            
+                ball.speed[1] = -ball.speed[1]
+            group.add(ball)
+            screen.blit(ball.image, ball.rect)
+        pygame.display.flip()    
+        pygame.time.delay(20)

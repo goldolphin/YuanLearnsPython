@@ -1,0 +1,92 @@
+【PG】第 21章　打印格式化与字符串
+
+【PG】distance = 149597870700
+【PG】myString = 'The sun is {0:.4e} meters from the earth '.format(distance)
+
+因为你不再使用 %来区分格式化字符串， 所以如果要打印一个 %的话，也不需
+要再做任何特殊工作：
+>>> print 'I got {0:.1f}% in math '.format(math)
+I got 87% in math
+
+Python程序员们会觉得使用 format() 语法更好， 尤其是在 Python 3 中，但你
+可以自由选择。本书中的例子都使用 %语法。
+
+【PG】21.6　更多字符串处理
+
+最早学习字符串时（ 第2章） ，我们已经看到， 可以用 +号把两个字符串联接起
+来，就像这样：282 Hello World!
+
+Well, Python is smart enough to figure out when you’re using a % sign to start a format 
+string, and when you just 
+want to print one. Try this:
+
+How does it know? There wasn’t a second % outside the string, and there was no variable to 
+format, so Python assumed that the % was just another character in your string.
+
+Storing formatted numbers
+
+Sometimes you don’t want to print the formatted number right away, but rather store it 
+in a string to use later. That’s easy. Instead of printing it, just assign it to a variable, 
+like this:
+
+Instead of directly printing the formatted number, we assigned it to the variable my_string . 
+Then we combined my_string  with some other text and printed our sentence.
+
+Storing the formatted number as a string is very useful for GUIs and other graphical pro-
+grams like games. Once you have a variable name for the formatted string, you can display 
+it however you want: in a text box, button, dialog, or game screen.
+
+Strings ’n’ things
+
+When we first learned about strings (back in chapter 2), we saw that you could combine two 
+of them with the + sign, like this:
+
+Now we’re going to find out more things you can do with strings.
+
+Strings in Python are really objects  (see, everything is an object . . . ) and they have their own 
+methods  for doing things like searching, splitting, and combining. These are known as string 
+methods .
+
+Splitting strings
+
+Sometimes you need to split up a long string into a number of smaller ones. Usually you 
+want to do this at particular points in the string, like whenever a certain character appears. For example, a common way of storing data in a text file is to have items 
+separated from each other by a comma. So you might have a list of names that looks 
+like this:
+
+>>> name_string = "Sam,Brad,Alex,Cameron,Toby,Gwen,Jenn,Connor"
+
+Suppose you want to put these names in a list, with each item being one name. You need to 
+split this string wherever there’s a comma. The Python method for doing this is called 
+split() , and it works like this:
+
+You tell it what character to use as the split marker, and it gives you back a list, which is the 
+original string broken up into parts. If we printed the output from this example, the one big 
+string of names would be split up into individual items in a list:
+
+>>> names = name_string.split(',')
+>>> print names
+['Sam', 'Brad', 'Alex', 'Cameron', 'Toby', 'Gwen', 'Jenn', 'Connor']
+
+You can have more than one character as the split marker. For instance, you could use 
+'Toby, ' as the split marker, 
+and you’d get the following list:
+
+>>> parts = name_string.split('Toby,')
+>>> print parts
+['Sam,Brad,Alex,Cameron', 'Gwen,Jenn,Connor']
+
+This time, the string got split into two parts: all the stuff on one side of 'Toby, ' and all the 
+stuff on the other side of 'Toby, '. Notice that 'Toby, ' doesn’t appear in the list, because the 
+split marker gets thrown away.
+
+There’s one other thing to know. If you don’t give Python any split marker, it ’ll split the 
+string at any whitespace :
+
+>>> names = name_string.split() 
+>>> print names
+['Sam,Brad,Alex,Cameron,Toby,Gwen,Jenn,Connor']
+
+要指出使用哪个字符作为分解标记， 这个方法会返回一个列表， 也就是把原来
+的字符串分解为许多部分 。如果打印这个例子的输出 ，这个长长的名字串会分解为一
+个列表中的单个列表项 ：

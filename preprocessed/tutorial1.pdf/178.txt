@@ -1,0 +1,39 @@
+【PG】第 13章 函数
+【PG】代码清单 13-7 尝试在函数内部修改一个全局变量
+def calculateTax(price, tax_rate):
+    total = price + (price * tax_rate)  
+    my_price = 10000       
+    print "my_price (inside function) = ", my_price  
+    return total                                            
+my_price = float(raw_input ("Enter a price: ") )
+totalPrice = calculateTax(my_price, 0.06)                   
+print "price = ", my_price, " Total price = ", totalPrice              
+print "my_price (outside function) = ", my_price
+
+【PG】CHAPTER 13 Functions
+【PG】尝试在函数内部修改一个全局变量，你会得到一个新的局部变量。尝试运行一下代码。
+def calculateTax(price, tax_rate):
+    total = price + (price * tax_rate)  
+    my_price = 10000      
+    print "my_price (inside function) = ", my_price   
+    return total                                            
+my_price = float(raw_input ("Enter a price: ")) 
+totalPrice = calculateTax(my_price, 0.06)                   
+print "price = ", my_price, " Total price = ", totalPrice  
+print "my_price (outside function) = ", my_price
+如果你运行代码清单 13.7，输出会像这样：
+可以看到，现在有两个名为 my_price 的不同变量，分别有不同的值。一个是 calculateTax() 函数中的局部变量，我们将它设置为 10000。另一个是主程序中定义的全局变量，用来获取用户的输入，它的值是 7.99。 
+
+【PG】强制为全局
+在上一节中，我们看到如果试图从函数内改变一个全局变量的值，Python 会创建一个新的局部变量。这是为了防止函数无意地改变全局变量。但是，有些情况下确实要在函数中改变一个全局变量。这该怎么做呢？Python 有一个关键字 global，它可以让你这么做。你可以像这样使用它：
+代码清单 13-7 尝试在函数内部修改一个全局变量
+def calculateTax(price, tax_rate):
+    global my_price 
+    my_price = 10000      
+    print "my_price (inside function) = ", my_price   
+    return total                                            
+my_price = float(raw_input ("Enter a price: ")) 
+totalPrice = calculateTax(my_price, 0.06)                   
+print "price = ", my_price, " Total price = ", totalPrice  
+print "my_price (outside function) = ", my_price
+在函数内部修改 my_price从函数内打印 my_price告诉 Python 你想使用全局版本的 my_price从函数外打印 my_price打印局部版本的 my_price打印全局版本的 my_price如果运行代码清单 13-7中的代码，会有如下的输出：

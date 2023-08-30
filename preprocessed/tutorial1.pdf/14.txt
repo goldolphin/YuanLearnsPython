@@ -1,19 +1,21 @@
-【段落编号1】前　　言
-Python是免费的。 你可以下载 Python， 还可以下载很多很多用 Python编写的既好玩又有用的程序，所有这些都是免费的。
+【PG】xii　　前　　言
 
-【段落编号2】Python是开源（open source）软件。从某个角度来讲， “开源”的含义是指任何用户都可以扩展（extend）Python， 也就是创建一些新“ 工具”。补充这些新工具后， 就可以用 Python做更多的事情， 或者尽管是做同样的事情， 但是有了这些新工具后会比原先更容易。 很多人已经做了这种扩展， 目前已经有非常多的免费 Python工具可以供你下载。
+【PG】Python是免费的。 你可以下载 Python， 还可以下载很多很多用 Python编写的既好玩又有用的程序，所有这些都是免费的。
 
-【段落编号3】Python并不是一个“ 玩具”。确实，它非常适合学习编程， 不过实际上全世界每天都有成千上万的专业人士在使用这种语言， 甚至包括类似 NASA（美国航空航天局）和Google这些机构的程序员。 所以，学习 Python后，你不用转换语言再去学一种“ 真正的”语言来编写“ 真正的”程序；很多工作都完全可以使用 Python完成。
+【PG】Python是开源（open source）软件。从某个角度来讲，“开源”的含义是指任何用户都可以扩展（extend）Python，也就是创建一些新“工具”。补充这些新工具后，就可以用Python做更多的事情，或者尽管是做同样的事情，但是有了这些新工具后会比原先更容易。很多人已经做了这种扩展，目前已经有非常多的免费 Python工具可以供你下载。
 
-【段落编号4】Python可以在各种不同类型的计算机上运行。 Windows 电脑、苹果电脑和运行Linux的计算机上都可以使用 Python。 大多数情况下， 如果一个 Python程序可以在你家里的 Windows 电脑上运行， 那么这个程序同样也可以在你学校的苹果电脑上运行。 本书适用于几乎所有安装了 Python的计算机。 （ 另外要记住，如果你要用的计算机上还没有安装 Python，完全可以免费安装。 ）
+【PG】Python并不是一个“玩具”。确实，它非常适合学习编程，不过实际上全世界每天都有成千上万的专业人士在使用这种语言，甚至包括类似NASA（美国航空航天局）和Google这些机构的程序员。所以，学习Python后，你不用转换语言再去学一种“真正的”语言来编写“真正的”程序；很多工作都完全可以使用Python完成。
 
-【段落编号5】我自己很钟爱 Python， 非常喜欢学习和使用这种语言， 我想你也会和我一样。
+【PG】Python可以在各种不同类型的计算机上运行。Windows电脑、苹果电脑和运行Linux的计算机上都可以使用Python。大多数情况下，如果一个Python程序可以在你家里的Windows电脑上运行，那么这个程序同样也可以在你学校的苹果电脑上运行。本书适用于几乎所有安装了Python的计算机。（另外要记住，如果你要用的计算机上还没有安装Python，完全可以免费安装。）
 
-【段落编号6】#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=Ifno
+【PG】我自己很钟爱Python，非常喜欢学习和使用这种语言，我想你也会和我一样。
 
-【段落编号7】如果没有参数，就退出程序。arguments=arguments[0]separator=string.whitespaceheader='Page'+str(self.count)footer=time.asctime()+'\t(c)BobGao'f=open(arguments,'r')out=open(arguments+'.out','w')self.header_written=Falseforlineinfileandout:ifnotself.header_written:out.write(header.center(80)+ '\n')out.write(line)self.line_count+=1ifself.line_count==55:self.count+=1out.write(footer.center(80)+'\n')self.header_written=Falseself.line_count=0else:self.header_written=Trueout.write(line)f.close();out.close();print'Done.'如果没有参数，就退出程序。arguments=arguments[0]
+【PG】#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=IfnoIfnoargumentsarguments1;self.count=1;
 
-【段落编号8】print>>>Helloif#
-print>>>Helloif#
-像程序员一样思考
-这本书会使用 Python语言，不过你在这里学到的有关编程的大多数内容也适用于所有计算机语言。学习用 Python编程可以让你有一个很好的起点，有了这个基础，将来学习任何其他语言都会很轻松。图灵社区会员 FreeLink 专享 尊重版权
+【PG】#!/bin/envpython#Paginateaprint>>>Helloif#print>>>Helloif#
+
+【PG】像程序员一样思考
+
+【PG】这本书会使用Python语言，不过你在这里学到的有关编程的大多数内容也适用于所有计算机语言。学习用Python编程可以让你有一个很好的起点，有了这个基础，将来学习任何其他语言都会很轻松。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

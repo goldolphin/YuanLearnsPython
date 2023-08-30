@@ -1,0 +1,22 @@
+【PG】92 第 8章 转 圈 圈
+
+【PG】3. 向乘法表程序中再加点东西。询问用户想要的乘法表之后，再问问用户希望最大乘到几。输出应当如下所示：88 Hello World!
+
+【PG】2 You probably used a for loop in your program for question #1. That’s how most people would do it. But just for practice, try doing the same thing with a while loop. Or if you used a while loop in question #1, try it with a for loop.
+
+【PG】3 Add something else to the multiplication table program. After asking which table the user wants, ask her how high the table should go. The output should look like this:
+You can do this with the for loop version of the program, the while  loop version, or both.W hich multiplication table would you like?
+How high do you want to go?
+12
+Here's your table:
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 217 x 4 = 28
+7 x 5 = 35
+7 x 6 = 427 x 7 = 49
+7 x 8 = 56
+7 x 9 = 637 x 10 = 70
+7 x 11 = 77
+7 x 12 = 84
+
+【PG】可以用for循环或者while循环的版本来完成，或者两种做法都试试看。图灵社区会员 FreeLink 专享 尊重版权

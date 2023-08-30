@@ -1,55 +1,69 @@
 【PG】第 7章　判断再判断
-这行代码        if not (age < 8):
-与这行代码：if age >= 8:
-两者的含义是一样的。 在这两种情况下， 如果年龄是 8岁或者超过 8岁就会执行代码块，如果年龄小于 8就不会执行 。
+【PG】这行代码        if not (age < 8):
+【PG】与这行代码：if age >= 8:
+【PG】两者的含义是一样的。 在这两种情况下， 如果年龄是 8岁或者超过 8岁就会执
+【PG】行代码块，如果年龄小于 8就不会执行 。
 
-【PG】第4章中，我 们见过诸如 +、-、*和/等数学运算符。 在本章中， 我们了解了比较操作符 <、 >、==等。and、or和not关键字也是操作符。 它们被称为逻辑操作符（logical operator） 。这些操作符用来修改比较，可以结合两个或多个比较（and和or），或者取反（not）。
-表7-1列出了目前为止我们讨论过的所有操作符。
-
+【PG】第4章中，我 们见过诸如 +、-、*和/等数学运算符。 在本章中， 我们了解了
+【PG】比较操作符 <、 >、==等。and、or和not关键字也是操作符。 它们被称为逻辑操作
+【PG】符（logical operator ） 。这些操作符用来修改比较， 可以结合两个或多个比较（ and和
+【PG】or） ，或者取反（ not） 。
+【PG】表7-1列出了目前为止我们讨论过的所有操作符 。
 【PG】表7-1　数学和比较操作符列表
-操作符 名　　字 作　　用
-数学运算符
-= 赋值 将一个值赋至一个名（变量）
-+ 加 两个数相加。这个操作符也可以用来连接字符串
-- 减 两个数相减
-+= 自增 将一个数增1
--= 自减 将一个数减1
-* 乘 两个数相乘
-/ 除 两个数相除。如果两个数都是整数，结果只是整数商而没有余数
-% 取余 得到两个数整除的余数
-** 求幂 将一个数自乘得到幂。这个数以及幂可以是整数或浮点数
-比较操作符
-== 相等 检查两个东西是否相等
-< 小于 检查第一个数是否小于第二个数
-> 大于 检查第一个数是否大于第二个数
-<= 小于或等于 检查第一个数是否小于或等于第二个数
->= 大于或等于 检查第一个数是否大于或等于第二个数
-!= <>不等于 检查两个东西是否不相等（这两个操作符都可以使用）
-
+【PG】操作符 名　　字 作　　用
+【PG】数学运算符
+【PG】= 赋值 将一个值赋至一个名（变量）
+【PG】+ 加 两个数相加。这个操作符也可以用来连接字符串
+【PG】- 减 两个数相减
+【PG】+= 自增 将一个数增 1
+【PG】-= 自减 将一个数减 1
+【PG】* 乘 两个数相乘
+【PG】/ 除 两个数相除。如果两个数都是整数，结果只是整数商而没有余数
+【PG】% 取余 得到两个数整除的余数
+【PG】** 求幂 将一个数自乘得到幂。这个数以及幂可以是整数或浮点数
+【PG】比较操作符
+【PG】== 相等 检查两个东西是否相等
+【PG】< 小于 检查第一个数是否小于第二个数
+【PG】> 大于 检查第一个数是否大于第二个数
+【PG】<= 小于或等于 检查第一个数是否小于或等于第二个数
+【PG】>= 大于或等于 检查第一个数是否大于或等于第二个数
+【PG】!=
+【PG】<>不等于 检查两个东西是否不相等（这两个操作符都可以使用）
 【PG】你可能想在这一页上夹个书签，这样下次就能很容易地查阅这个表了。72 Hello World!
-You might want to bookmark this page so you can refer back to this table easily.
+【PG】You might want to bookmark this page so you can refer back to this table easily.
 
 【PG】What did you learn?
-In this chapter, you learned about 
-�comparison tests and the relational operators.
-�indenting and blocks of code.
-�combining tests using and and or.
-�reversing a test using not.
+【PG】In this chapter, you learned about 
+【PG】�comparison tests and the relational operators.
+【PG】�indenting and blocks of code.
+【PG】�combining tests using and and or.
+【PG】�reversing a test using not.
 
 【PG】Test your knowledge
-1What will the output be when this program is run:
-2From the program in the first question, wh at will the output be if you change my_number to 25?
-3What kind of if statement would you use to check if a number was greater than 30 but less than or equal to 40?
-4What kind of if statement would you use to check if the user entered the letter “Q” in either uppercase or lowercase? 
+【PG】1What will the output be 
+【PG】when this program is run:
+【PG】2From the program in the first question, wh at will the output be if you change 
+【PG】my_number  to 25?
+【PG】3What kind of if statement would you use to check if a number was greater than 30 
+【PG】but less than or equal to 40?
+【PG】4What kind of if statement would you use to check if the user entered the letter “Q” in 
+【PG】either uppercase or lowercase? 
 
 【PG】Try it out 
-1A store is having a sale. They’re giving 10 pe rcent off purchases of $10 or lower, and 20 percent off purchases of greater than $10.  Write a program that asks the purchase price and displays the discount (10% or 20%) and the final price.
-2A soccer team is looking for girls from ages 10 to 12 to play on their team. Write a pro- gram to ask the user’s age and if male or female (using “m” or “f”). Display a message indicating whether the person is eligible to play on the team.
-Bonus: Make the program so that it doesn’ t ask for the age unless the user is a girl.
+【PG】1A store is having a sale. They’re giving 10 pe rcent off purchases of $10 or lower, and 20 
+【PG】percent off purchases of greater than $10.  Write a program that asks the purchase 
+【PG】price and displays the discount ( 10% or 20%) and the final price.
+【PG】2A soccer team is looking for girls from ages 10 to 12 to play on their team. Write a pro-
+【PG】gram to ask the user’s age and if male or female (using “m” or “f”). Display a message indicating whether the person is eligible to play on the team.
+【PG】Bonus: Make the program so that it doesn’ t ask for the age unless the user is a girl.
 
-【PG】!= <>Not equal to Checks whether two things ar e not equal. (Either operator can be used.)Table 7.1 List of math and comparison operators (continued)
-Operator Name What it does
-my_number = 7
-if my_number < 20:    print 'Under 20'
-else:
-    print '20 or over'图灵社区会员 FreeLink 专享 尊重版权
+【PG】!=
+【PG】<>Not equal to Checks whether two things ar e not equal. (Either operator can be 
+【PG】used.)
+【PG】Table 7.1 List of math and comparison operators  (continued)
+【PG】Operator Name What it does
+【PG】my_number = 7
+【PG】if my_number < 20:    print 'Under 20'
+【PG】else:
+【PG】    print '20 or over'
+【PG】图灵社区会员 FreeLink 专享 尊重版权

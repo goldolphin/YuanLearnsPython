@@ -1,0 +1,69 @@
+【PG】第 18章 一种新的输入——事件
+
+如果运行代码清单 18-5中的代码，应该能看到这样的结果。
+
+如果在编辑器中注意观察，可以看到这大约有 75行代码（加上一些空行）。这是目前为止我们创建的最大的程序了， 虽然运行时看起来很简单，但却包含了丰富的内容。
+
+下一章，我们将要学习 Pygame 中的声音，另外还会向这个 PyPong 游戏添加一些声音。
+
+【PG】Just imagine how tedious it would be to work out the calories for all these combinations by hand, even if you had a calculator to do the math. It’s way more fun to write a program to figure it all out for you. Looping and a bit of math in Python make it a snap!
+
+What did you learn?
+
+In this chapter, you learned about
+- nested loops.
+- variable loops.
+- permutations and combinations.
+- decision trees.
+
+Test your knowledge
+
+1. How do you make a variable loop in Python?
+2. How do you make a nested loop in Python?
+
+【PG】# 4       0        0        0        1        1        60
+# 5       0        0        1        0        0        80
+# 6       0        0        1        0        1        120
+# 7       0        0        1        1        0        100
+# 8       0        0        1        1        1        140
+# 9       0        1        0        0        0        120
+# 10      0        1        0        0        1        160
+# 11      0        1        0        1        0        140
+# 12      0        1        0        1        1        180
+# 13      0        1        1        0        0        200
+# 14      0        1        1        0        1        240
+# 15      0        1        1        1        0        220
+# 16      0        1        1        1        1        260
+# 17      1        0        0        0        0        140
+# 18      1        0        0        0        1        180
+# 19      1        0        0        1        0        160
+# 20      1        0        0        1        1        200
+# 21      1        0        1        0        0        220
+# 22      1        0        1        0        1        260
+# 23      1        0        1        1        0        240
+# 24      1        0        1        1        1        280
+# 25      1        1        0        0        0        260
+# 26      1        1        0        0        1        300
+# 27      1        1        0        1        0        280
+# 28      1        1        0        1        1        320
+# 29      1        1        1        0        0        340
+# 30      1        1        1        0        1        380
+# 31      1        1        1        1        0        360
+# 32      1        1        1        1        1        400
+
+【PG】你学到了什么
+
+在这一章，你学到了以下内容：
+- 事件。
+- Pygame 事件循环。
+- 事件处理。
+- 键盘事件。
+- 鼠标事件。
+- 定时器事件（以及用户事件类型）。
+- pygame.font （用于向 Pygame 程序添加文本）。
+- 把所有内容集中在一起建立一个游戏！
+
+测试题
+
+1. 程序可以响应哪两种事件？
+2. 处理事件的代码叫什么？

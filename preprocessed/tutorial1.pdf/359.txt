@@ -1,0 +1,53 @@
+【PG】23.4 Crazy Eights 333
+
+【PG】这里给出这个程序的规则。这是一个有两个玩家参与的游戏。每个玩家有5张牌，其他的牌都面朝下扣着。翻开一张牌，开始出牌。这个游戏的目标是要在另一个人之前而且在取完一副牌之前出光所有牌。
+
+【PG】(1)每一轮，玩家必须做下面的操作之一：
+出一张牌，要与翻开的牌花色相同；
+出一张牌，要与翻开的牌点数相同；
+出一张8。
+
+【PG】(2)如果玩家出了一张8，他可以“叫花色”，这说明他可以选择花色，下一个玩家要根据这个花色出牌。
+
+【PG】(3)如果玩家无法出牌，必须从这副牌中选择一张牌，增加到自己手中。
+
+【PG】(4)如果玩家出光了手中的所有牌，他就赢了，根据另一个玩家手中剩余的牌计算得分：
+每个8得50分；
+每个花牌（J、Q和K）得10分；
+每个其他的牌按分值得分；
+每个A得1分。
+
+【PG】(5)如果一副牌发光时仍没有人获胜，游戏结束。在这种情况下，每个玩家会根据对方剩余的牌计算得分。
+
+【PG】(6)可以一直玩到达到某个总分，或者直到你累了，得分最高的获胜。
+
+【PG】首先要对我们的纸牌对象稍做点修改。Crazy Eights中的分值与前面基本上一样，只是8除外，它的分值是50分而不是8分。可以修改Card类中的__init__方法，让8值50分，不过这会影响可能用到cards模块的所有其他游戏。最好在主程序中做这个修改，而类定义不变。我们可以这样做：324 Hello World!
+
+card games for playing on the computer are those where you can play with just two players—you against the computer. Crazy Eights is one of those games that works well with two players, so we’re going to make a Crazy Eights game where the user plays against the computer.
+
+【PG】Here are the rules for our program. It is a game for two players. Each player gets five cards. The rest of the cards are placed face down, and then one card is turned face up to start the discard pile. The object of the game is to get rid of all your cards before anyone else and before the deck runs out.
+
+【PG】1At each turn, a player has to do one of the following:
+�play a card of the same suit as the up card.
+�play a card of the same rank as the up card.
+�play an 8.
+
+【PG】2If the player plays an 8, he can “call the suit,” which means he gets to choose the suit that the next player is trying to match.
+
+【PG】3If the player can’t play any of his cards, he must pick up a card from the deck and add it to his hand.
+
+【PG】4If a player gets rid of all his cards, he wins that game, and gets points depending on what the other player has left in his hand:
+�50 points for each 8.
+�10 points for each face card.
+�face value for every other card.
+�1 point for each Ace.
+
+【PG】5If the deck runs out and no one can make a play, the game is over. In that case, both players get points for the other player's remaining cards.
+
+【PG】6You can play up to a certain point total, or just keep playing until you're tired, and the one with the most points wins.
+
+【PG】现在已经做好准备，可以具体建立游戏了。程序需要做以下工作。
+跟踪面朝上的牌。
+得到玩家的下一步选择（出牌还是抽牌）。
+
+【PG】在这里，将新牌增加到一副牌之前，要检查它是不是一个8。如果是，就把它的分值设置为50。

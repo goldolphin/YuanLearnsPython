@@ -1,0 +1,67 @@
+【PG】18.2　键盘事件　　 229
+
+【PG】import pygame, sys                                  
+【PG】pygame.init()                                       
+【PG】screen = pygame.display.set_mode([640,480])          
+【PG】background = pygame.Surface(screen.get_size())       
+【PG】background.fill([255, 255, 255])                     
+【PG】clock = pygame.time.Clock()                       
+【PG】class Ball(pygame.sprite.Sprite):                                        
+    def __init__(self, image_file, speed, location):              
+        pygame.sprite.Sprite.__init__(self)         
+        self.image = pygame.image.load(image_file)                   
+        self.rect = self.image.get_rect()                              
+        self.rect.left, self.rect.top = location                      
+        self.speed = speed                                           
+                                                                       
+    def move(self):                                                     
+        if self.rect.left <= screen.get_rect().left or \               
+                self.rect.right >= screen.get_rect().right:             
+            self.speed[0] = - self.speed[0]                                    newpos = self.re ct.move(self.speed)          
+        self.rect = newpos 
+ 
+my_ball = Ball('beach_ball.png', [10,0], [20, 20])
+running = True
+while running: 
+    for event in pygame.event.get():  
+        if event.type == pygame.QUIT: 
+            running = False 
+        elif event.type == pygame.KEYDOWN:                    
+            if event.key == pygame.K_UP:                       
+                my_ball.rect.top = my_ball.rect.top - 10       
+            elif event.key == pygame.K_DOWN:                   
+                my_ball.rect.top = my_ball.rect.top + 10  
+ 
+    clock.tick(30) 
+    screen.blit(background, (0, 0))                           
+    my_ball.move()                                             
+    screen.blit(my_ball.image, my_ball.rect)                  
+    pygame.display.flip()                          
+
+【PG】创建 Ball的一个实例
+
+【PG】检查按键，让球上移或下移
+
+【PG】完全重绘
+
+【PG】运行代码清单 18-2中的程序，试着按下向上箭头和向下箭头。起作用吗？
+
+【PG】重复按键
+
+【PG】你可能已经注意到， 如果保持按下向上或向下箭头不放， 球只会向上或向下移
+动一步。 这 是因为， 我们没有告诉程序如果按键一直按下时该怎么做。 用户按键时，
+会生成一个 KEYDOWN 事件，不过 Pygame中还有一个设置， 可以在按键一直按下时
+生成多个KEYDOWN 事件。这称为按键重复 （key repeat） 。你要告诉它开始重复之前等
+待多长时间， 另 外还要指出多长时间重复一次。 这些值的单位都是毫秒（ 千分之一
+秒） 。可能像这样 ：delay = 100
+interval = 50
+pygame.key.set _repeat(delay, interval)
+
+【PG】delay值告诉 Pygame在开始重复之前等待多长时间， interval 值告诉 Pygame
+按键要以多快的速度重复，也就是说，各个 KEYDOWN 事件之间要间隔多长时间。
+试着把这个代码增加到代码清单 18-2 （放在pygame.init 后面，不过要在
+while循环前面） ，看看这会让程序的行为有什么变化。
+
+【PG】事件名和按键名
+
+【PG】查找按下的向上或向下箭头时， 我们要寻找 KEYDOWN 事件类型以及 K_UP和K_DOWN.

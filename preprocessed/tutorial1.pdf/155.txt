@@ -1,0 +1,78 @@
+【PG】12.13　列表排序　　 129
+
+【PG】所以为一个东西指定另一个名字时， 只是向同一个东西增加一个新的标签。在卡特的这个例子中，new_list和original_list都表示同一个列表。可以用任何一个名字来改变列表（例如，可以对它排序）。不过，这里仍然只有一个列表，就如：
+
+124 Hello World!
+new_list = original_list
+
+【PG】Hey, when you made a copy of the list, you used new_list = original_list[:] instead of just new_list = original_list. Why did we need the extra slice thing at the end?
+
+【PG】The parameter is called reverse, and it does exactly what you’d expect—it makes the list sort in reverse order.
+Remember that all of the sorting and reversing we just talked about modifies the original list. That means your original order is lost. If you want to preserve the original order and sort a copy of the list, you could use slice notation, which we talked about earlier in this chapter, to make a copy—another list equal to the original:
+
+【PG】I’m very glad you asked that, Carter. If you remember wayyyyy back when we first talked about names and variables (in chapter 2), we said that, when you do something like name1 = name2, you’re just making a new name for the same thing. Remember this picture:
+
+【PG】So giving something another name just adds a new tag to the same thing. In Carter’s example, new_list and original_list both refer to the same list. You can change the list (for example, you can sort it) by using either name. But there is still only one list. It looks like this:
+
+>>> original_list = ['Tom', 'James', 'Sarah', 'Fred']
+>>> new_list = original_list[:]
+>>> new_list.sort()
+>>> print original_list
+['Tom', 'James', 'Sarah', 'Fred']
+>>> print new_list
+['Fred', 'James', 'Sarah', 'Tom']
+
+【PG】original = [5,2,3,1,4]
+new = original
+new
+original
+new
+5,2,3,1,4
+5,2,3,1,4
+
+【PG】We sorted new, but original also got sorted, because new and original are just two different names for the same list. There are not two different lists.
+You can, of course, move the new tag to a whole new list, like this:
+
+【PG】That’s the same thing we did with strings and numbers in chapter 2.
+This means that, if you really want to make a copy of a list, you need to do something different from new = original. The easiest way to do this is to use slice notation, like I did above: new = original[:]. This means “copy everything in the list, from the first item to the last item.” Then you get this:
+
+【PG】There are now two separate lists. We made a copy of the original and called it new. Now if we sort one list, the other one won’t be sorted.
+Another way to sort—sorted()
+There is another way to get a sorted copy of a list without changing the order of the original list. Python has a function called sorted() for that purpose. It works like this:
+
+【PG】The sorted() function gives you a sorted copy of the original list.
+
+original = [5,2,3,1,4] 
+new = original
+
+new
+original
+new
+5,2,3,1,4
+5,2,3,1,4
+
+【PG】We sorted new, but original also got sorted, because new and original are just two different names for the same list. There are not two different lists.
+You can, of course, move the new tag to a whole new list, like this:
+
+【PG】That’s the same thing we did with strings and numbers in chapter 2.
+This means that, if you really want to make a copy of a list, you need to do something different from new = original. The easiest way to do this is to use slice notation, like I did above: new = original[:]. This means “copy everything in the list, from the first item to the last item.” Then you get this:
+
+【PG】There are now two separate lists. We made a copy of the original and called it new. Now if we sort one list, the other one won’t be sorted.
+Another way to sort—sorted()
+There is another way to get a sorted copy of a list without changing the order of the original list. Python has a function called sorted() for that purpose. It works like this:
+
+【PG】The sorted() function gives you a sorted copy of the original list.
+
+original = [5,2,3,1,4]
+new = original[:]
+newer = sorted(original)
+
+print original
+print newer
+
+【PG】第2章对字符串和数就是这样做的。
+这说明，如果你确实想建立一个列表的副本，就要另想办法，而不能只是用new = original。要达到这个目的，最容易的方法是使用分片记法，就像前面所做的：new = original[:]。这表示“复制列表中的所有内容，从第一个元素到最后一个元素”。这样就可以得到：
+
+【PG】这里有两个不同的列表。我们建立了原列表的副本，命名为new。现在如果对一个列表排序，另一个列表将不会同时排序。
+
+【PG】图灵社区会员FreeLink专享尊重版权

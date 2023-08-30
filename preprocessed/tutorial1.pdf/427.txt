@@ -1,0 +1,117 @@
+【PG】附录 C　自测题答案　　 401
+
+【PG】3. 可以这样做：367  Answers to Self-Test Questions
+
+【PG】3You would do something like this:
+
+【PG】4Using variables, your “minutes per day” program would look something like this:
+
+【PG】5To see what would happen if there were 26 hours in the day, you would do this:
+
+【PG】Chapter 3: Basic Math
+
+【PG】Test your knowledge
+
+【PG】1Python uses the * (asterisk) symbol for multiplication.
+
+【PG】2Python would say that 8 / 3 = 2 . Because 8 and 3 are both integers, Python gives the answer rounded down to the nearest integer.
+
+【PG】3To get the remainder, use the Modulus operator: 8 % 3 .
+
+【PG】4To get the decimal answer for 8 / 3 , change one of them into a decimal number: 8.0 / 3 or 8 / 3.0 .
+
+【PG】5What’s another way of calculating 6 * 6 * 6 * 6 in Python? 6 ** 4
+
+【PG】617,000,000 in E-notation would be written as 1.7e7.
+
+【PG】74.56e-5 is the same as 0.0000456.
+
+【PG】Try it out
+
+【PG】Here are some ways to solve these problems. You might have come up with a different way to do the same thing.
+
+【PG】1a) Calculate how much each person should pay at the restaurant:
+
+【PG】Rounding this off, each person should pay $13.52.
+
+【PG】b) Calculate the area and perimeter of a rectangle:
+
+【PG】firstName = "Fred"
+
+【PG】print firstName
+
+【PG】DaysPerWeek = 7
+
+【PG】HoursPerDay = 24
+
+【PG】MinutesPerHour = 60
+
+【PG】print DaysPerWeek * HoursPerDay * MinutesPerHour
+
+【PG】HoursPerDay = 26
+
+【PG】print DaysPerWeek * HoursPerDay * MinutesPerHour
+
+【PG】print 35.27 * 1.15 / 3
+
+【PG】13.5201666667
+
+【PG】length = 16.7
+
+【PG】width = 12.5
+
+【PG】Perimeter = 2 * length + 2 * width
+
+【PG】Area = length * width
+
+【PG】print 'Length = ', length, ' Width = ', width
+
+【PG】print "Area = ", Area
+
+【PG】print "Perimeter = ", Perimeter
+
+【PG】5. 要看如果一天有 26小时会有什么结果，可以这样做：
+
+【PG】第3章
+
+【PG】测试题
+
+【PG】1. Python 使用*（星号）表示乘法。
+
+【PG】2. Python 会得出结果 8/3=2。因为 8和3都是整数， 所以 Python 2 会把答案向下取整为最接近的整数。（注意，在Python 3 中，你会得出结果 2.66666666667，因为 Python 3 不像 Python 2 那样对整数默认做整除运算。）
+
+【PG】3. 要得到余数，可以使用取余操作符： 8 % 3。
+
+【PG】4. 要得到8/3的小数结果， 需要把其中一个数改为小数： 8.0/3或8/3.0。（注意，在Python 3中，会自动得出小数结果。）
+
+【PG】5. Python 中计算6 * 6 * 6 * 6 的另一种做法是什么？ 6 ** 4
+
+【PG】6. 17,000,000 采用 E记法要写作 1.7e7。
+
+【PG】7. 4.56e-5 就是0.0000456。
+
+【PG】动手试一试
+
+【PG】解决这些问题还有其他方法。你可能会提出不同的方法来做这些事情。
+
+【PG】1. (a) 计算每个人在餐厅要付多少钱：
+
+【PG】把它四舍五入，每个人应当付 $13.52。
+
+【PG】(b) 计算一个矩形的面积和周长：
+
+【PG】length = 16.7
+
+【PG】width = 12.5
+
+【PG】Perimeter = 2 * length + 2 * width
+
+【PG】Area = length * width
+
+【PG】print 'Length = ', length, ' Width = ', width
+
+【PG】print "Area = ", Area
+
+【PG】print "Perimeter = ", Perimeter
+
+【PG】4. 如果使用变量，你的“每周有多少分钟”程序应该类似下面的代码：

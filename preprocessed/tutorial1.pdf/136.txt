@@ -1,0 +1,36 @@
+【PG】第 11章　嵌套与可变循环
+
+【PG】要解释这个问题，最好的办法就是举一个例子。下面假设你要在学校开春季交易会期间开个热狗店，你想做个广告海报，用数字显示如何订购热狗、小面包、番茄酱、芥末酱和洋葱的所有可能的组合。所以我们需要得出总共有多少种可能的组合。考虑这个问题的一种方法就是使用决策树（decision tree）。下面的图显示了这个热狗问题的决策树。
+
+【PG】每个决策点都有两种选择，是（Y）或者否（N）。这棵树的每一条不同的路径分别描述了热狗各部分的不同的组合。这里突出显示的路径是这样选择的：热狗选择Y，小面包选择N，芥末酱选择Y，番茄酱选择Y。
+
+【PG】现在我们使用嵌套循环来列出所有组合，也就是这棵决策树的所有路径。由于这里有5个决策点，所以在我们的决策树中有5层，相应地，在程序中就会有5个嵌套循环。（上图只显示了决策树的前4层。）
+
+【PG】在IDLE编辑器窗口中键入代码清单11-6中的代码，保存为hotdog1.py。
+
+【PG】代码清单11-6　热狗组合开始
+
+print "\tDog \tBun \tKetchup\t Mustard\t Onions"
+count = 1
+for dog in [0, 1]:     
+    for bun in [0, 1]:         
+        for ketchup in [0, 1]:              
+            for mustard in [0, 1]:                 
+                for onion in [0, 1]:  
+                    print "#", count, "\t",
+                    print dog, "\t", bun, "\t", ketchup, "\t",
+                    print mustard, "\t", onion                    
+                    count = count + 1
+
+【PG】以上是代码清单11-6的程序代码。这个程序使用嵌套循环来输出所有的热狗组合，其中决策点的选择通过0和1表示。最后运行程序会得出所有可能的组合，共32种。
+
+【PG】Hot dog choice
+Bun choice
+Mustard choice
+Ketchup choice
+Onion loop
+Mustard loop
+Ketchup loop
+Dog loop
+Bun loop
+图灵社区会员FreeLink专享 尊重版权

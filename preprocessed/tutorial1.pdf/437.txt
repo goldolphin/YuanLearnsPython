@@ -1,0 +1,51 @@
+【PG】附录 C　自测题答案　　 411
+
+【PG】2. 下面这个程序会在各个数旁边打印一行星号：
+
+【PG】Chapter 12: Collecting Things Together—Lists
+【PG】Test your knowledge
+【PG】1You can add something to a list using append() , insert() , or extend() .
+【PG】2You can remove something from a list using remove() , pop() , or del() .
+【PG】3To get a sorted copy of the list, you can do either of these:
+【PG】�make a copy of the list, using slices: new_list = my_list[:] , and then sort the new 
+【PG】list: new_list.sort()
+【PG】�use the sorted()  function: new_list = sorted(my_list)
+【PG】4You find out whether a certain value is in a list by using the in keyword.
+【PG】5You find out the location of a value in a list by using the index()  method.
+【PG】6A tuple is a collection that is like a list, except that you can’t change it. Tuples are 
+【PG】immutable (unchangeable), while lists are mutable (changeable).
+【PG】7You can make a list of lists in several ways:
+【PG】�by using nested square brackets: 
+【PG】�by using append() , and appending a list:
+
+【PG】# Countdown timer asks the user where to start
+【PG】# and prints stars beside each number
+【PG】import time
+【PG】start = int(raw_input("Countdown timer:  How many seconds? ", ))
+【PG】for i in range (start, 0, -1):    print i,
+【PG】    for star in range(i):
+【PG】        print '*',    print
+【PG】    time.sleep(1)
+【PG】print "BLAST OFF!"
+【PG】my_list = [[1, 2, 3], ['a', 'b', 'c'], ['red', 'green', blue']]
+【PG】>>> my_list = []
+【PG】>>> my_list.append([1, 2, 3])>>> my_list.append(['a', 'b', 'c'])
+【PG】>>> my_list.append(['red', 'green', 'blue'])
+【PG】>>> print my_list[[1, 2, 3], ['a', 'b', 'c'], ['red', 'green', 'blue']]
+
+【PG】第12章
+【PG】测试题
+【PG】1. 可以使用 append() 、insert() 或extend() 向列表增加元素。
+【PG】2. 可以使用 remove() 、pop()或del()从列表删除元素。
+【PG】3. 要得到列表的一个有序副本，可以采用下面任意一种做法：
+【PG】 建立列表的副本，使用分片： new_list = my _list[:]，然后对新列表排
+【PG】序：new_list.sort()
+【PG】使用sorted() 函数：new_list = sorted(my _list)
+【PG】4. 使用in关键字可以得出一个特定值是否在一个列表中。
+【PG】5. 使用index() 方法可以得出一个值在列表中的位置。
+【PG】6.  元组是一个与列表类似的集合， 只 不过元组不能改变。 元组是不可改变的，
+【PG】而列表是可改变的。
+【PG】7. 可以采用多种方法建立一个双重列表。
+【PG】使用嵌套的中括号：
+【PG】 >>> my_list = [[1, 2, 3],['a','b','c'],['red', 'green', blue']]
+【PG】使用append() ，并追加一个列表：

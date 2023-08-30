@@ -1,0 +1,41 @@
+【PG】25.2　障碍物　　 379
+
+【PG】灵放到了一个 sprite组中，所以我们可以直接用 spritecollide() 函数来检测滑雪者是否碰到树或者小旗 。接下来我们需要知道这个障碍物是什么 （树还是小旗 ） ，然后：
+
+【PG】如果是树 ，则 将滑雪者的图像切换为“ 碰撞”的图像， 并将分数 减去 100。
+
+【PG】如果是小旗，则将分数加 10 ，然后将小旗从屏幕中移除。 为此所需的代码位于主循环中，看起来像下面这样：
+
+【PG】hit =  pygame.spri te.spritecollide(skier, obstacles, False) 
+
+【PG】if hit:
+        if hit[0].type == "tree" and not hit[0].passed:  
+            points = points - 100                   
+            skier.image = pygame.image.load("skier_crash.png")     
+            animate()                                                         pygame.time.delay(1000)                         
+            skier.image = pygame.image.load("skier_down.png")       
+            skier.angle = 0                                         
+            speed = [0, 6]                            
+            hit[0].passed = True  
+        
+        elif hit[0].type == "flag" and not hit[0].passed:  
+            points += 10                                   
+            hit[0].kill()     
+
+【PG】变量hit告诉我们滑雪者撞到了哪个障碍物 。它是一个列表 ，但在这里列表中只有一个条目 ，因为滑雪者一次只可能碰到一个障碍物 ，所以他碰到的障碍物是 hit[0]。
+
+【PG】passed变量用于标记是否碰撞过树。 这能保证当滑雪者在撞树之后继续往下滑时，不会立刻运行撞到同一棵树的逻辑。
+
+【PG】现在我们需要显示分数 。这只需要再写 3行代码。 在初始化代码中， 我们创建一个font对象，它是 Pygame的Font类的实例：
+
+【PG】font = pygame.font.Font(None, 50)
+
+【PG】在主循环中，我们使用一个新的分数文本来渲染 font对象：
+
+【PG】score_text = font.render("Score: " +str(points), 1, (0, 0, 0) )
+
+【PG】在animate() 函数中，我们在左上角显示分数：
+
+【PG】screen.blit(score_text, [10, 10] )
+
+【PG】这就是这个游戏的全部了。 如果你把这些组合在一起， 会发现这就是第 10章的图灵社区会员 FreeLink 专享 尊重版权

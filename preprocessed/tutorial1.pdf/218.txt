@@ -1,0 +1,69 @@
+【PG】第 16章 图形
+
+#!/bin/env python 
+# Paginate a text le, adding a header and footer 
+import sys, time, string 
+
+# If no arguments were given, print a helpful message 
+if len(sys.argv)!=2: 
+    print 'Usage: pyprint lename' 
+    sys.exit(0) 
+
+class PrinterFormatter: 
+    # Increment the page count, and reset the line count 
+    self.header_written=1 ; self.count=1 ; self.page=self.page+1 
+    def __init__(self): 
+        self.header_written=0 
+        
+def Thinking like a (Pygame) programmer 
+Once you create a rectangle with Rect(left, top, width, height), there are several other attributes that you can use to move and align the Rect: 
+These are just for convenience. So, if you want to move a rectangle so that its center is at a certain point, you don’t have to figure out what the top and left coordinates should be; you can access the center location directly. 
+•the four edges: top, left, bottom, right 
+•the four corners: topleft, bottomleft, topright, bottomright 
+•the middle of each side: midtop, midleft, midbottom, midright 
+•the center: center, centerx, centery 
+•dimensions: size, width, height 
+
+【PG】Hello if 
+【PG】Hello if 
+【PG】Hello if 
+
+像（Pygame）程序员一样思考 
+如果用Rect(left, top, width, height) 创建一个矩形，还可以使用其他一些属性来移动和对齐这个 Rect： 
+4条边 ：top、left、bottom、right 
+4个角 :  topleft 、bottomleft 、topright 、bottomright 
+每条边的中点： midtop、midleft 、midbottom 、midright 
+中心：center、centerx 、centery 
+尺寸：size、width、height 
+这些属性只是为了提供方便。 所以，如果你想移动一个矩形，让它的中心位于某个点，不必得出上坐标和左坐标分别是什么；可以直接访问中心位置。
+
+线宽 
+画形状时最后需要指定的一点是线的粗细。 在之前的例子中，我们使用的线宽都是 0，这会填充整个形状。如果使用不同的线宽，会看到形状的轮廓。 
+试着把线宽改为 2：
+
+Make this 2把它设置为 2 
+试试看有什么结果。再试试其他线宽。 
+
+现代艺术 
+想不想让计算机生成某种现代艺术？玩玩呗，试试代码清单 16-5。也可以在代码清单 16-4的基础上做些修改，或者干脆从头开始键入。 
+
+代码清单 16-5 使用 draw.rect 实现艺术创作 
+import pygame, sys, random 
+pygame.init( ) 
+screen = pygame.display.set_mode([640,480] ) 
+screen.fill([255, 255, 255]) 
+for i in range (100) : 
+    width = random.randint(0, 250 ) 
+    height = random.randint(0, 100) 
+    top = random.randint(0, 400) 
+    left = random.randint(0, 500) 
+    pygame.draw.rect(screen, [0,0,0], [left, top, width, height], 1) 
+pygame.display.flip() 
+running = True 
+while running: 
+    for event in pygame.event.get(): 
+        if event.type == pygame.QUIT: 
+            running = False 
+pygame.quit( )
+
+图灵社区会员 FreeLink 专享 尊重版权

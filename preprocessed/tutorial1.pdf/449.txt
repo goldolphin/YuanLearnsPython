@@ -1,0 +1,69 @@
+【PG】附录 C　自测题答案　　 423
+
+【PG】388 Hello World!
+【PG】Try it out
+
+【PG】1The program would look like this:
+
+【PG】2The code to line up the times table using tabs would look like this:
+Notice the \t in front of the word times  and after the = sign.
+
+【PG】3Here is a program to 
+print the fractions of 8:
+The first part, print str(i) + '/8 = , prints the fraction. The last part, %.3f' % fraction , prints the decimal number with 3 decimal places.
+
+【PG】Chapter 22: File Input and Output
+【PG】Test your knowledge
+【PG】1The kind of object in Python that’s used to work with files is called a file object .
+【PG】2You create a file object by using the open()  function, which is one of Python’s built-in functions.
+【PG】3A filename  is the name used to store the file on the disk (or on other storage, like a flash drive). A file object is the thing used to work with files in Python. The name of the file object does not have to be the same as the filename on the disk.
+【PG】4When a program is done reading or writing a file, the program should close the file.
+【PG】5If you open a file in append mode and write something to it, the information you write gets added (appended) to  the end of the file.
+【PG】6If you open a file in write mode and then write something to the file, everything that was in the file is lost and is replaced with the new data.
+【PG】7To reset the read point of a file back to the beginning, use the seek()  method, with an argument of 0, like this:
+name = raw_input("What is your name? ")
+age = int(raw_input("How old are you? "))
+color = raw_input("What is your favorite color? ")
+print "Your name is", name,
+print "you are ", age, "years old,",
+print "and you like the color", color
+
+【PG】for looper in range(1, 11):
+    print looper, "\ttimes 8 =\t", looper * 8
+for i in range(1, 9):
+    fraction = i / 8.0    
+    print str(i) + '/8 = %.3f' % fraction
+myFile.seek(0)
+
+【PG】注意单词times前面和=号后面的\t。
+
+【PG】3. 下面的程序会打印 8的各个分数 ：
+第一部分print str(i) + '/8 = 打印分数 。最后一部分 %.3f' % fraction,打印小数结果（带 3个小数位）。
+
+【PG】第22章
+【PG】测试题
+【PG】1. Python 中用来处理文件的对象称为文件对象。
+【PG】2. 要使用open()函数创建文件对象，这是 Python的内置函数之一。
+【PG】3.  文件名是磁盘上 （或其他存储介质 ，如flash盘）存储文件时使用的名字 。Python中处理文件时要使用文件对象 。文件对象名与磁盘上的文件名不必相同。
+【PG】4. 程序完成文件的读写后，应当关闭文件。
+【PG】5.  如果以追加模式打开一个文件， 并 在文件中写入内容， 你写入的信息会增加（追加）到文件末尾。
+【PG】6.  如果以写模式打开一个文件， 然 后在文件中写入内容， 文件中原来的所有内容都会丢失，替换为新的数据。
+【PG】7.  要重置为从文件起始位置开始读 ，可以使用 seek() 方法，并传入参数 0，如下：
+
+【PG】name = raw_input("What is your name? ")
+age = int(raw_input("How old are you? "))
+color = raw_input("What is your favorite color? ")
+print "Your name is", name,
+print "you are ", age, "years old,",
+print "and you like the color", color
+
+【PG】for looper in range(1, 11):
+    print looper, "\ttimes 8 =\t", looper * 8
+for i in range(1, 9):
+    fraction = i / 8.0    
+    print str(i) + '/8 = %.3f' % fraction
+myFile.seek(0)
+
+【PG】8.  使用pickle把Python对象保存到文件时， 可以使用 pickle.dump() 方法，
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

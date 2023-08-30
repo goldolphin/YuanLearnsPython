@@ -1,0 +1,78 @@
+【PG】附录 C　自测题答案　　 425
+【PG】name = raw_input("Enter your name: ")
+【PG】age = raw_input("Enter your age: ")
+【PG】color = raw_input("Enter your favorite color: ")
+【PG】food = raw_input("Enter your favorite food: ")
+【PG】my_data = open("my_data_file.txt", 'w')
+【PG】my_data.write(name + "\n" )
+【PG】my_data.write(age + "\n" )
+【PG】my_data.write(color + "\n" )
+【PG】my_data.write(food)
+【PG】my_data.close()
+
+【PG】3. 下面的程序使用 pickle模块保存一些数据：
+【PG】 390 Hello World!
+【PG】Here is a program that saves some data using the pickle  module:
+【PG】Chapter 23: Take a Chance—Randomness
+【PG】Test your knowledge
+【PG】1A random event  is something that happens (an “event”) where you don’t know ahead of 
+time what the outcome will be. Two examples are flipping a coin (you don’t know if it 
+will come up heads or tails), and rolling a pair of dice (you don’t know what numbers 
+will come up on the dice).
+
+【PG】2Rolling an 11-sided die is different from rolling two 6-sided dice because, with an 
+11-sided die, all numbers from 2 to 12 have an equal probability of coming up. With 
+two 6-sided dice, some number s (totals of the two dice) will come up more often than 
+others.
+
+【PG】3Here are two ways to simulate rolling a die in Python:
+
+【PG】and
+
+【PG】4To represent a single card, we used an object.
+
+【PG】5To represent a deck of cards, we used a list. Each item in the list was one card (an 
+object).
+
+【PG】my_data.write(name + "\n")
+【PG】my_data.write(age + "\n")
+【PG】my_data.write(color + "\n")
+【PG】my_data.write(food)
+【PG】my_data.close()
+
+【PG】import pickle
+【PG】name = raw_input("Enter your name: ")
+【PG】age = raw_input("Enter your age: ")
+【PG】color = raw_input("Enter your favorite color: ")
+【PG】food = raw_input("Enter your favorite food: ")
+【PG】my_list = [name, age, color, food]
+【PG】pickle_file = open("my_pickle_file.pkl", 'w')
+【PG】pickle.dump(my_list, pickle_file)
+【PG】pickle_file.close()
+
+【PG】import random
+【PG】sides = [1, 2, 3, 4, 5, 6]
+【PG】die_1 = random.choice(sides)
+
+【PG】import random
+【PG】die_1 = random.randint(1, 6)
+
+【PG】390 Hello World!
+【PG】Here is a program that saves some data using the pickle  module:
+【PG】Chapter 23: Take a Chance—Randomness
+【PG】Test your knowledge
+【PG】1A random event  is something that happens (an “event”) where you don’t know ahead of 
+time what the outcome will be. Two examples are flipping a coin (you don’t know if it 
+will come up heads or tails), and rolling a pair of dice (you don’t know what numbers 
+will come up on the dice).
+
+【PG】2Rolling an 11-sided die is different from rolling two 6-sided dice because, with an 
+11-sided die, all numbers from 2 to 12 have an equal probability of coming up. With 
+two 6-sided dice, some number s (totals of the two dice) will come up more often than 
+others.
+
+【PG】3Here are two ways to simulate rolling a die in Python:
+
+【PG】和     
+
+【PG】4. 我们使用了一个对象来表示一张牌。

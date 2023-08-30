@@ -1,17 +1,21 @@
 【PG】3.5　非常大和非常小　　 37
-【PG】可以试试看： >>> c = 2.6e75
+可以试试看： >>> c = 2.6e75
 >>> d = 1.2e74>>> print c + d2.72e+75
-【PG】这一次 Python会自动用 E记法显示答案， 因为显示一个有 73个0的数太不可
+这一次 Python会自动用 E记法显示答案， 因为显示一个有 73个0的数太不可
 思议了！
-【PG】如果希望用 E记法显示类似 14 500 000的数，需要给 Python下达一些特殊的指
+
+如果希望用 E记法显示类似 14 500 000的数，需要给 Python下达一些特殊的指
 令。我们将在本书的第 21章学习更多相关内容 。
-【PG】没错，伙计！没什么可担心的，对不对？编程
+
+没错，伙计！没什么可
+担心的，对不对？编程
 实在是小菜一碟！
 
-【PG】如果你还不太理解 E记法到底是怎么回事， 不用担
+如果你还不太理解 E记法到底是怎么回事， 不用担
 心。这本书后面的程序中不会用到它 。我 只是想让你了
 解一下它的原理，没准以后你会用到。
-【PG】如果使用 Python来 完成一些数学运算， 得到的答案
+
+如果使用 Python来 完成一些数学运算， 得到的答案
 是一个类似 5.673745e16 的数 ，至少现在你知道这是一个
 非常大的数，而不是出现了什么错误。
 
@@ -20,8 +24,9 @@
 3**5表示 35，或“3的5次幂”，也就是 3 * 3 * 3 * 3 * 3，等于 243。
 3e5 表示 3  * 105 或者“3 乘以 10的5次幂”，也就是 3 * 10 * 10 * 10 * 10 
 *10，结果等于 300 000。
-【PG】求幂是指一个数自乘得到幂。E 记法表示乘以 10的几次幂 。 
-【PG】有些人可能会把 3e5和3**5都读作“3 指数 5”，不过，它们是完全不同的。 怎
+
+求幂是指一个数自乘得到幂。E 记法表示乘以 10的几次幂 。 
+有些人可能会把 3e5和3**5都读作“3 指数 5”，不过，它们是完全不同的。 怎
 么读并不重要，只要你懂得它们分别代表什么含义。
 
 【PG】What did you learn?
@@ -29,10 +34,9 @@ In this chapter, you learned
 �how to do basic math operations in Python.
 �about integers and floats.
 �about exponentiation (raising numbers to a power).
-【PG】If you don’t quite understand how E-notation works, don’t worry. It’s not used for the programs in the rest of this book. I just wanted to show you how it works in case you ever need it.
-【PG】At least now, if you use Python to do 
-some math and you get a number like 5.673745e16 for an answer, you will know that it is a really big number, and not some kind of error.
-【PG】Yeah, Mon! 
-No worries, eh? This 
-programming thing is 
-a breeze!
+
+如果你不是太理解 E记法的工作原理，不用担心。 在本书剩余部分的程序中不会
+用到它。只是希望你能够对其有所了解黑
+
+现在，如果你用 Python做数学运算，得到一个 5.673745e16 这样的数，
+你可以知道它是一个非常大的数字，而不是什么错 误信息。

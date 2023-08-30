@@ -1,0 +1,60 @@
+【PG】11.5　使用嵌套循环　　 115
+【PG】测试题
+【PG】1. Python 中如何建立可变循环？
+【PG】2. Python 中如何建立嵌套循环 ？
+【PG】3. 下面的代码总共会打印出多少星号：
+【PG】4. 第 3题中的代码会得到什么输出？
+【PG】5. 如果一个决策树有 4层，每 层有两个选择， 共有多少种可能的选择（ 决策树
+【PG】有多少条路径）？
+
+【PG】动手试一试
+【PG】1. 还记得第 8章创建的倒计时定时器程序吗？在这儿呢，提醒你一下：
+【PG】CHAPTER 11 Nested and Variable Loops
+【PG】3What’s the total number of stars that will be printed by the 
+【PG】following code:
+【PG】4What will the output from the co de in question #3 look like?
+【PG】5If a decision tree has four levels and tw o choices per level, how many possible choices 
+【PG】(paths through the decision tree) are there?
+
+【PG】Try it out
+【PG】1Remember the countdown-timer program we created in chapter 8? Here it is, to 
+【PG】refresh your memory:
+
+【PG】Modify the program to use a variable loop. The program should ask the user where the
+【PG】countdown should start, like this:
+
+【PG】2Take the program you wrote in question #1, and have it print a row of stars beside 
+【PG】each number, like this:
+【PG】(Hint: You probably need to use a nested loop.)
+for i in range(5):
+    for j in range(3):
+        print '*',
+import time
+for i in range (10, 0, -1):
+    print i    
+    time.sleep(1)
+print "BLAST OFF!"
+Countdown timer:  How many 
+seconds?  4
+4
+3
+2
+1BLAST OFF! 
+Countdown timer:  How many 
+seconds?  4
+4 * * * *
+3 * * *
+2 *
+1 *
+BLAST OFF!    
+
+【PG】2. 根据第 1题写的程序，让它除了打印各个数之外还要打印一行星号，如下：
+【PG】Countdown timer:  How many seconds?  4
+【PG】4 * * * *
+【PG】3 * * *
+【PG】2 *
+【PG】1 *
+【PG】BLAST OFF! 
+【PG】（提示：可能需要使用一个嵌套循环。 ）
+
+图灵社区会员 FreeLink 专享 尊重版权

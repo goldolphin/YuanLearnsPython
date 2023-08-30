@@ -1,0 +1,28 @@
+【PG】13.3　向函数传递参数　　 143
+
+【PG】你可能会说：可以不用函数，用循环也能做同样的事情。
+
+【PG】Warren Sande
+123 Main Street
+Ottawa, Ontario, CanadaK2M 2E9
+Warren Sande
+123 Main StreetOttawa, Ontario, CanadaK2M 2E9
+Warren Sande
+123 Main StreetOttawa, Ontario, CanadaK2M 2E9
+S
+
+【PG】13.3　向函数传递参数
+
+【PG】现在来看括号做什么用： 它用来传递参数（argument）！
+
+【PG】嗯，我可以用循环来做同样的事情，而不是使用函数 !我就知道你会这么讲 ……对于这种情况，你确实可以用循环做同样的事情。不过，如果希望在程序的不同位置打印地址，而不是全部都一次完成，循环就实现不了了。
+
+【PG】使用函数还有一个原因 ，每 次函数运行时可以让它有不同的表现。我们将在下一节了解这是如何做到的。
+
+【PG】就像那天我和你的争论吗？
+
+【PG】不，卡特，计算机非常听话，它们永远也不会争论①。在编程中，参数这个词是指你交给函数的一条信息。我们把这称为：你向函数传递参数。
+
+【PG】① argument 也有“争论”的意思，卡特显然是把这里的 argument 理解为“争论”了。 —编者注
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

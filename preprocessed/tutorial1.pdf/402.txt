@@ -1,0 +1,55 @@
+【PG】第 25章　Skier 游戏的说明
+
+【PG】问得好。在当前的代码中，我们让它们继续在窗口上边界外向上滚动，这样其位置的y值（负值）绝对值会越来越大。如果游戏运行了比较长的时间，则会创建并积累大量的障碍物场景。这有可能会导致程序变慢或者在某个时间点发生内存不足的情况。所以我们需要做一点清理工作。
+
+【PG】在障碍物类的update()方法中，我们添加一个判断逻辑，看看障碍物是否已经移出屏幕。如果是的话，就移除它。Pygame有一个名为kill()的原生方法可用来做这件事。新的update()方法看起来像下面这样。
+
+【PG】def update(self):
+        global speed
+        self.rect.centery -= speed[1]
+        if self.rect.centery < -32:             
+            self.kill()                      
+        检查障碍物是否已移出屏幕
+        移除它
+
+【PG】现在我们可以将滑雪者和障碍物的代码放到一起了。我们需要SkierClass和ObstacleClass。
+
+【PG】我们的animate()函数需要同时绘制滑雪者和障碍物。我们的初始化代码需要创建滑雪者和初始地图。主循环需要同时包括滑雪者的键盘事件绑定和障碍物场景的创建。
+
+【PG】基本上，这组合了代码清单25-1和代码清单25-2，结果如下所示。
+
+【PG】代码清单25-3　滑雪者代码与障碍物代码相结合
+
+【PG】import pygame, sys, random
+skier_images = ["skier_down.png", "skier_right1.png", "skier_right2.png",
+                 "skier_left2.png", "skier_left1.png"]                  
+                                                                       
+class SkierClass(pygame.sprite.Sprite):                                  
+    def __init__(self):                                                  
+        pygame.sprite.Sprite.__init__(self)                              
+        self.image = pygame.image.load("skier_down.png")                
+        self.rect = self.image.get_rect()                            
+        self.rect.center = [320, 100]                                
+        self.angle = 0                                                 
+                                                                       
+    def turn(self, direction):                                         
+        self.angle = self.angle + direction                              
+        if self.angle < -2:  
+            self.angle = -2                             
+        if self.angle >  2:  
+            self.angle =  2                             
+        center = self.rect.center                                        
+        self.image = pygame.image.load(skier_images[self.angle])         
+        self.rect = self.image.get_rect()                                
+        self.rect.center = center                                        
+        speed = [self.angle, 6 - abs(self.angle) * 2]                    
+        return speed                                                     
+                                                                         
+    def move(self, speed):                                               
+        self.rect.centerx = self.rect.centerx + speed[0]               
+        if self.rect.centerx < 20:  
+            self.rect.centerx = 20             
+        if self.rect.centerx > 620: 
+            self.rect.centerx = 620 
+
+【PG】如果这些障碍物向上滚出了屏幕，会发生什么？

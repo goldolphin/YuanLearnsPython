@@ -1,0 +1,59 @@
+【PG】354 第 24章 计算机仿真
+注意，将两个datetime 对象相减时 ，我们得到的不是另一个 datetime ，而是一个timedelta 对象。Python会自动完成这一点 。
+
+【PG】小段时间
+到目前为止 ，我们一直都在讨论按整秒度量的时间 。但是时间对象 （date、time、datetime 和timedelta ）比这更精确 。它们可以精确度量到微秒级 ，也就是百万分之一秒。
+要了解这一点 ，可以试试now()方法，它会给出计算机时钟的当前时间 ：345 $)"15&3 Comp uter Si mulations
+And you can combine a date  and a time  to mak e a datetime  object by using the combine() method of the datetime  class in the datetime  modu le:
+Now that we have seen what a datetime  object is and so me of its pr oper ties, we’ll look at how you ca n co mpare two of th em to  /f_ind the diﬀerenc e between them (how much time has passed betw een one and the o ther).
+Diﬀerence between two times
+Quite of ten in simulati ons, we n eed to know how  much  time  has passed. For example,  in a Virtual Pet program, we might need to know how much time has pa ssed since the pet was fed so w e can /f_igure out how hung ry it is.
+The datetime  mo dule has an object class that w ill h elp us /f_igure out the diﬀeren ce between two dates or times. The class is called timedelta . Remember that delta  means “ diﬀerence.” So a timedelta  is a diﬀerence betwee n two times.
+To create  a timedelta  and /f_i gure out the diﬀer ence between two times, you just subtract them, like this:
+Notice that, whe n we subtra cted the two datetime  objects, what we got wasn’t  another datetime , but ra ther a timedelta  object. Python does that auto matically.
+
+【PG】Small pieces of time
+Up to now, we ha ve just be en look ing at time measur ed in whole seco nds. But the time obje cts (date , time , datetime , and timedelta ) are more prec ise th an th at. They can me asure down  to the micr osec ond, wh ich is one  million th of a second.
+To see this, try out the now()  method, which gives you the curr ent time of yo ur co mputer’s clock:
+>>> yesterday = datetime.datetime (2012, 10, 23)
+>>> tomorrow = datetime.datetime( 2012, 10, 25)
+>>> difference = tomorrow - yesterday
+>>> print difference
+2 days, 0:00:00
+>>> print type(difference)
+<type 'd atetime.timedelta'>
+>>>>>> when = datetime.datetime.com bine(today, some_time)
+(FUTUIFEJGGFSFODFPGUIFUXPEBUFT
+5PNPSSPXB OEZFTUFSEBZBSFEBZTBQBSU5IFEJGGFSFODFJTBtimedelta PCKFDU
+>>> print datetime. datetime.now()
+2012-10-24 21:25:44.343000
+注意这个时间不仅仅包含秒 ，还包括不到 1秒的部分 ：346 Hello World!
+Notice how the time doesn’t just have seconds, it has fractions of a second:
+On my computer, the last three digits will always be 0 because my operating system’s clock only goes to milliseconds (thousandths of  a second). But that’s plenty precise enough for me!
+It’s important to know that, although it looks like a float, the seconds are actually stored as a number of seconds (an integer) and a number of microseconds (an integer): 44 seconds and 343000 microseconds. To make this into a float, you need a little formula. Assuming you have a time object called some_time , and you want the number of seconds as a float, here’s what the formula looks like:
+The float()  function is used to make sure we don’t get caught by the integer-division gotcha.
+
+You can use the now()  method and a timedelta  object to test your typing speed. The program in listing 24.2 displays a random message, and the user has to type the same message in. The program times how long it takes to type it in, and then calculates the typing speed. Give it a try.
+
+import time, datetime, random
+messages = [
+    "Of all the trees we could've hit, we had to get one that hits back.",    "If he doesn't stop trying to save your life he's going to kill you.",
+    "It is our choices that show what we truly are, far more than our abilities.",
+    "I am a wizard, not a baboon brandishing a stick.",    "Greatness inspires envy, envy engenders spite, spite spawns lies.",
+    "In dreams, we enter a world that's entirely our own.",
+    "It is my belief that the truth is generally preferable to lies.",    "Dawn seemed to follow midnight with indecent haste."
+    ]
+print "Typing speed test. Type the following message. I will time you."
+time.sleep(2)
+print "\nReady..."
+time.sleep(1)
+print "\nSet..."
+time.sleep(1)
+print "\nGo:"
+seconds_float = some_time.seconds + some_time.microseconds / float(1000000)
+Listing 24.2 Measuring time differences—typing speed test
+Uses time  module for the sleep()  function
+Prints instructions
+
+【PG】这里使用ﬂoat()函数来确保不会遭遇整数相除问题。
+可以使用 now()方法和一个timedelta 对象来测试你的打字速度。代码清单24-2中的程序会显示一条随机消息，用户必须键入这条消息。程序将检

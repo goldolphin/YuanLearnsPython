@@ -1,0 +1,120 @@
+【PG】第 11章　嵌套与可变循环
+【PG】要打印 3个乘法表， 只需要把原来的循环（ 打印一个乘法表 ）包含在一个外循
+【PG】环中（运行 3次） 。这样，程序就会打印 3个乘法表而不只是一个。 代码清单 11-1显
+【PG】示了相应的代码。
+【PG】代码清单 11-1　一次打印 3 个乘法表
+100 Hello World!
+
+【PG】What if we wanted to print three multiplication  tables at once? That’s the kind of thing a 
+【PG】nested loop  is perfect for. A nested loop is one loop inside another loop. For each iteration of 
+【PG】the outer loop, the inner loop goes through all of its iterations.
+【PG】To print three multiplication tables, we’d just enclose the original loop (which prints a sin-
+【PG】gle multiplication table) in an outer loop (w hich runs three times). This makes the program 
+【PG】print three tables instead of one. List ing 11.1 shows what the code looks like.
+【PG】for multiplier in range (5, 8):
+【PG】    for i in range (1, 11): 
+【PG】        print i, "x", multiplier, "=", i * multiplier    print
+【PG】Notice that we had to indent the inner loop and the print statement an extra four spaces 
+【PG】from the beginning of the outer for loop. This program will print the 5 times, 6 times, 
+【PG】and 7 times tables, 
+【PG】up to 10 for each table: Listing 11.1 Printing three multiplication tables at once
+【PG】This inner loop 
+【PG】prints a single tableThis outer 
+【PG】loop runs 3 
+【PG】iterations, 
+【PG】with values 5, 6, 7
+【PG】>>> ==================== RESTART ===================
+【PG】>>>
+【PG】1 x 5 = 5
+【PG】2 x 5 = 10
+【PG】3 x 5 = 15
+【PG】4 x 5 = 20
+【PG】5 x 5 = 25
+【PG】6 x 5 = 30
+【PG】7 x 5 = 35
+【PG】8 x 5 = 40
+【PG】9 x 5 = 45
+【PG】10 x 5 = 50
+【PG】1 x 6 = 6
+【PG】2 x 6 = 12
+【PG】3 x 6 = 18
+【PG】4 x 6 = 24
+【PG】5 x 6 = 30
+【PG】6 x 6 = 36
+【PG】7 x 6 = 42
+【PG】8 x 6 = 48
+【PG】9 x 6 = 54
+【PG】10 x 6 = 60
+【PG】1 x 7 = 7
+【PG】2 x 7 = 14
+【PG】3 x 7 = 21
+【PG】4 x 7 = 28
+【PG】5 x 7 = 35
+【PG】6 x 7 = 42
+【PG】7 x 7 = 49
+【PG】8 x 7 = 56
+【PG】9 x 7 = 63
+【PG】10 x 7 = 70
+100 Hello World!
+
+【PG】内循环打印一个乘法表
+【PG】注意必须将内循环缩进， 而且print语句距外部 for循环开始位置还要多加 4
+【PG】个空格。这个程序会分别打印 5、 6和7的乘法表，每个表分别从 1乘到 10：
+【PG】可以在屏幕上打印一些星号 ，并 统计有多少个， 你可能认为这很没意思， 不过
+【PG】要了解嵌套循环到底是怎么回事， 这 确实是一个很好的办法。 在下一节， 我们就来
+【PG】完成这个工作。
+
+【PG】100 Hello World!
+
+【PG】What if we wanted to print three multiplication  tables at once? That’s the kind of thing a 
+【PG】nested loop  is perfect for. A nested loop is one loop inside another loop. For each iteration of 
+【PG】the outer loop, the inner loop goes through all of its iterations.
+【PG】To print three multiplication tables, we’d just enclose the original loop (which prints a sin-
+【PG】gle multiplication table) in an outer loop (w hich runs three times). This makes the program 
+【PG】print three tables instead of one. List ing 11.1 shows what the code looks like.
+【PG】for multiplier in range (5, 8):
+【PG】    for i in range (1, 11): 
+【PG】        print i, "x", multiplier, "=", i * multiplier    print
+【PG】Notice that we had to indent the inner loop and the print statement an extra four spaces 
+【PG】from the beginning of the outer for loop. This program will print the 5 times, 6 times, 
+【PG】and 7 times tables, 
+【PG】up to 10 for each table: Listing 11.1 Printing three multiplication tables at once
+【PG】This inner loop 
+【PG】prints a single tableThis outer 
+【PG】loop runs 3 
+【PG】iterations, 
+【PG】with values 5, 6, 7
+【PG】>>> ==================== RESTART ===================
+【PG】>>>
+【PG】1 x 5 = 5
+【PG】2 x 5 = 10
+【PG】3 x 5 = 15
+【PG】4 x 5 = 20
+【PG】5 x 5 = 25
+【PG】6 x 5 = 30
+【PG】7 x 5 = 35
+【PG】8 x 5 = 40
+【PG】9 x 5 = 45
+【PG】10 x 5 = 50
+【PG】1 x 6 = 6
+【PG】2 x 6 = 12
+【PG】3 x 6 = 18
+【PG】4 x 6 = 24
+【PG】5 x 6 = 30
+【PG】6 x 6 = 36
+【PG】7 x 6 = 42
+【PG】8 x 6 = 48
+【PG】9 x 6 = 54
+【PG】10 x 6 = 60
+【PG】1 x 7 = 7
+【PG】2 x 7 = 14
+【PG】3 x 7 = 21
+【PG】4 x 7 = 28
+【PG】5 x 7 = 35
+【PG】6 x 7 = 42
+【PG】7 x 7 = 49
+【PG】8 x 7 = 56
+【PG】9 x 7 = 63
+【PG】10 x 7 = 70
+
+【PG】外循环分别用值 5, 6, 7做3次迭代

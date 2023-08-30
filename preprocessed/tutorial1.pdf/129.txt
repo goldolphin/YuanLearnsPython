@@ -1,0 +1,54 @@
+【PG】11.1　嵌套循环　　 103
+
+【PG】第 11 章
+嵌套与可变循环
+
+我们已经看到了， 在循环体（ 也就是代码块 ）中可以放入其他代码， 这些代码
+本身也可以有自己的代码块。如果查看第 1章中的猜数程序，可以看到：
+
+while guess != secret and tries < 6:
+        guess = input("What's yer guess? ")        if guess < secret:
+                print "Too low, ye scurvy dog!"
+        elif guess > secret:                print "Too high, landlubber!"
+        tries = tries + 1
+
+The outer, light gray block is a while  loop block, and the dark gray blocks are if and elif 
+blocks within that while  loop block. 
+
+【PG】You can also put a loop within another loop. These loops are called nested loops .
+
+【PG】Nested loops
+
+Remember the multiplication table program you wrote for the “Try it out” section in 
+chapter 8? Without the user-input part , it might look something like this:
+
+multiplier = 5
+for i in range (1, 11):    print i, "x", multiplier, "=", i * multiplier
+
+The outer, light gray block is a while  loop block, and the dark gray blocks are if and elif 
+blocks within that while  loop block. 
+
+You can also put a loop within another loop. These loops are called nested loops .
+
+Nested loops
+Remember the multiplication table program you wrote for the “Try it out” section in 
+chapter 8? Without the user-input part , it might look something like this:
+
+multiplier = 5
+for i in range (1, 11):    print i, "x", multiplier, "=", i * multiplier
+
+If you wanted to print out three multiplication tables at once, nested loops are great for 
+this. A nested loop is just a loop inside another loop. For each iteration of the outer loop, 
+the inner loop completes all of its iterations.
+
+【PG】11.1　嵌套循环
+
+还记得第 8章“动手试一试 ”中你写的乘法表程序吗？ 如果不考虑用户输入部
+分，代码会是这样：
+
+multiplier = 5
+for i in range (1, 11):    print i, "x", multiplier, "=", i * multiplier
+
+如果想一次打印 3个乘法表呢？ 这种事情正是嵌套循环最擅长的。 嵌套循环就
+是一个循环出现在另一个循环里。 对 于外循环的每次迭代， 内循环都要完成它的所
+有迭代。

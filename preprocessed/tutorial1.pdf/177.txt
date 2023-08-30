@@ -1,0 +1,45 @@
+【PG】13.6　变量作用域　　 151
+
+如果运行这个程序，会得到这样一个错误：在代码清单 13-5中，试图在函数之外打印一个函数内的变量时，会得到一条错误消息。这个变量不存在，也就是说它在作用域之外（out of scope）。如果反过来：从函数内打印一个全局变量，你认为会发生什么？代码清单 13-6试图从calculateTax()函数中打印变量my_price。试试看会发生什么。
+
+【PG】代码清单 13-6　在函数中使用全局变量
+
+142 Hello World!
+have the values we gave them earlier. They would still be in scope. Because we can use them anywhere in the program, we say they’re global variables.
+
+In listing 13.5, when we were outside the function and tried to print a variable that was inside the function, we got an error. The variable didn’t exist; it was out of scope. What do you think will happen if we do the opposite: try to print a global variable from inside the function? Listing 13.6 tries to print the variable my_price from inside the calculateTax() function. Try it and see what happens.
+
+def calculateTax(price, tax_rate):
+    total = price + (price * tax_rate)
+    print my_price
+    return total 
+
+my_price = float(raw_input ("Enter a price: "))
+totalPrice = calculateTax(my_price, 0.06) 
+print "price = ", my_price, " Total price = ", totalPrice
+
+Did it work? Yes! But why? When we started talking about variable scope, I told you that Python uses memory management to automatically create local variables when a function runs. The memory manager does some other things, too. In a function, if you use a variable name that has been defined in the main program, Python will let you use the global variable as long as you don’t try to change it. So you can do this:
+
+print my_price
+
+or this:
+
+your_price = my_price
+
+because neither of these changes my_price.
+
+If any part of the function tries to change the variable, Python creates a new local variable instead. So if you do this,
+
+my_price = my_price + 10
+
+then my_price is a new local variable that Python creates when the function runs.
+
+In the example in listing 13.6, the value that was printed was the global variable my_price, because the function didn’t change it. The program in listing 13.7 shows you that, if you do try to change my_price inside the function, Python will create a new local variable. Try running this program and see what happens:
+
+【PG】Listing 13.6 Using a global variable inside a function
+Tries to print my_price
+print my_price  
+your_price = my_price
+my_price = my_price + 10
+
+图灵社区会员 FreeLink 专享 尊重版权

@@ -1,0 +1,80 @@
+【PG】11.5 使用嵌套循环 113
+
+【PG】综合上面的内容，增加卡路里计算的热狗程序版本如代码清单 11-7所示。
+
+【PG】代码清单 11-7 能计算卡路里的热狗程序长代码行
+
+【PG】注意到以上代码中行末的反斜线（\） 字符了吗？ 如果有一个很长的语句，在一行里放不下，就可以使用反斜线字符告诉 Python，“这一行还没有结束。下一行的内容也是这一行的一部分”。这里使用了两个反斜线把一个长代码行分成了 3 个小代码行。反斜线也称为行联接符（line continuation character），很多编程语言都有这种行联接符。
+
+【PG】还可以在整个表达式前后两边额外加一对小括号，这样不必使用反斜线也可以把语句分为多行，就像下面这样：
+
+tot_cal = ((dog * dog_cal) + (bun * bun_cal) + 
+          (mustard * mus_cal) + (ketchup * ket_cal) + (onion * onion_cal))
+
+Lists calories for each part of the hot dog
+
+Prints headings
+
+Dog is the outer loop
+
+Nested loops
+
+Calculates calories in the inner loop
+
+【PG】尝试在 IDLE 中运行代码清单 11-7 中的程序。输出应该如下：
+
+Listing 11.7 Hot dog program with calorie counter
+
+Long lines of code
+
+【PG】Did you notice the backslash (\) characters at the end of the lines in the previous code? If you have a long expression that won’t fit on a single line, you can use the backslash character to tell Python, “This line isn’t done. Treat whatever is on the next line as if it’s part of this line.” Here we used two backslashes to split our long line into three short lines. The backslash is called a line-continuation character, and several programming languages have them.
+
+dog_cal = 140
+
+bun_cal = 120
+
+ket_cal = 80 
+
+mus_cal = 20
+
+onion_cal = 40
+
+print "\tDog \tBun \tKetchup\tMustard\tOnions\tCalories"
+
+count = 1
+
+for dog in [0, 1]:
+
+    for bun in [0, 1]:
+
+        for ketchup in [0, 1]:
+
+            for mustard in [0, 1]:
+
+                for onion in [0, 1]:
+
+                    total_cal = (bun * bun_cal)+(dog * dog_cal) + \ 
+
+                         (ketchup * ket_cal)+(mustard * mus_cal) + \
+
+                               (onion * onion_cal) 
+
+                    print "#", count, "\t",     
+
+                    print dog, "\t", bun, "\t", ketchup, "\t",
+
+                    print mustard, "\t", onion,                    
+
+                    print "\t", total_cal
+
+                    count = count + 1 
+
+【PG】列出热狗各部分的卡路里
+
+【PG】打印表头
+
+【PG】热狗循环是外循环
+
+【PG】嵌套循环
+
+【PG】内循环中计算卡路里

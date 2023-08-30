@@ -1,0 +1,42 @@
+【PG】282　　第 21章　打印格式化与字符串
+
+【PG】21.1　换行
+print语句我们已经见过很多次了。 如果这个语句使用不只一次会发生什么？
+可以试试这个小程序：274 Hello World!
+New lines
+
+【PG】We have already seen the print  statement many times. What happens if you use it more 
+than once? Try this short program:
+When you run it, the 
+output should look like this:
+Why did these two things print on 
+different lines? Why didn’t the output look like this:
+Unless you tell it otherwise, Python will start each print  on a new line. After the Hi, Python 
+moves down one line and back to the first column to print There . Python inserts a newline  
+character between the two words. A newline is like pressing Enter in your text editor. 
+
+【PG】Print and the comma
+The print  statement automatically puts a newline at the end of whatever it prints, unless 
+you tell it not to. And how do you tell it not to? By adding a comma 
+(like we saw in chapter 5):print "Hi"
+print "There"
+>>> =================== RESTART ===================
+>>>
+Hi
+There
+HiThere
+
+【PG】Thinking like a programmer
+Remember back in chapter 5 you learned about 
+CR and LF (carriage return and line feed) for marking the end of a line of text? And remember how I said that some systems use one or the other, or both? Newline is the generic name for the end-of-line marker on any system. In Win-dows, newline = CR + LF. In Linux, newline = LF, and in Mac OS X, newline = CR. That way, you don’t have to worry about what system you’re on. Just put a newline wherever you want to start a new line.
+
+【PG】print 和逗号
+print语句会自动在它打印的内容末尾加一个换行符， 除非你明确指出不要这么做。怎么告诉它不换行呢？ 可以加一个逗号（ 就 像第5章中的一样） ：
+print 'Hi',
+print 'There'
+
+【PG】#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=1;f.count=1header_written=1;
+
+【PG】print>>>Hello if #
+print>>>Hello if #
+print>>>Hello if #

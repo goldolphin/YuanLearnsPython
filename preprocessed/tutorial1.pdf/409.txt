@@ -1,0 +1,32 @@
+【PG】26.2　创建一个 Python Battle 机器人　　 383
+
+【PG】26.2　创建一个 Python Battle 机器人
+我们来创建一个机器人， 以便与 CircleAI 和RandomAI 战斗。第一步是制定一
+个策略。因为这是我们创建的第一个 Python Battle 机器人，所以我们最好从一个简
+单的策略开始。
+(1)如果面对着一个敌人，那么我应该攻击它。
+(2)如果面对着墙，则我应该转弯。
+(3)否则，我继续向前走。
+尽管这不是最高级的策略，但它可能刚好可以打败 CircleAI 。如果它打不过，我
+们还可以再回来改进它。
+
+【PG】第二步是开始编码机器人。创建一个新 Python文件（我把它叫作 better_than_
+circleai.py），然后输入以下代码：
+class AI:
+    def __init__(self):
+        pass
+    def turn(self):
+        pass
+这是所有机器人都必须具备的基础代码。在游戏开始时创建机器人，此时__init__() 函数会被调用。turn()函数会在每一回合被调用， 并决定机器人做什么。
+这个类必须叫作 AI，否则 Python Battle 游戏不知道你的 AI 代码在哪里。
+编写机器人的下一步是添加能让机器人执行我们制定的策略的代码。你将使用以下函数来控制机器人的移动：
+self.robot.lookInFront()
+self.robot.turnRight()
+self.robot.turnLeft()
+self.robot.goForth()
+self.robot.attack()
+这些函数需要采用self.robot.xx() 的形式调用，因为self指向 AI 对象本身，而不是 AI控制的机器人。AI 对象是不会移动或者攻击的，它只负责告知机器人需要做什么，具体的移动和攻击是由机器人对象来执行的。
+
+【PG】我们来编写 turn() 方法。移除代码中的 pass，添加下面的代码：
+self.robot.goForth()
+如果你现在测试一下这个机器人，会看到每一回合它都会尝试向前移动。 这会。

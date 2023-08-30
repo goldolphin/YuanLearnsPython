@@ -1,0 +1,52 @@
+【PG】252　　第 19章　声　　音
+
+【PG】import pygame, sys
+pygame.init( )
+pygame.mixer.init( )
+screen = pygame.display.set_mode([640,480] )
+pygame.time.delay(1000)
+pygame.mixer.music.load("bg_music.mp3" )
+pygame.mixer.music.set_volume(0.3) 
+pygame.mixer.music.play()
+splat = pygame.mixer.Sound("splat.wav" )
+splat.set_volume(0.5) 
+
+【PG】running = True
+while running:
+    for event in pygame.event.get():        
+        if event.type == pygame.QUIT: 
+            running = False
+    if not pygame.mixer.music.get_busy(): 
+        splat.play()
+        pygame.time.delay(1000)    
+        running = False
+pygame.quit( )
+
+【PG】检查音乐是否播放完毕
+等待 1秒钟让“啪啪”
+声结束
+
+【PG】这个代码会播放一次歌曲，接下来播放音效，然后程序会结束。
+
+【PG】19.5　重复音乐
+
+【PG】如果要使用一首歌作为游戏的背景音
+乐，你可能希望只要程序在运行， 音 乐就
+一直继续下去。 music模块可以做到这一
+点。可以让音乐重复播放一定的次数， 比
+如：pygame.mixer.music.play(3)
+
+【PG】这会让歌曲播放 3次。
+还可以传入一个特殊值 -1，这会让歌
+曲永远重复下去，如下：
+pygame.mixer.music.play(-1)
+
+【PG】这样一来， 歌曲会一直重复播放， 或者只要 Pygame程序在运行就一直播放。
+（实际上，不一定非得是 -1。任何负数都可以达到这个目的。 ）
+
+【PG】19.6　为 PyPong增加声音
+
+【PG】我们已经了解了播放声音的基础知识 ，下面向我们的 PyPong游戏添加一些声音 。
+
+【PG】首先，每 次球碰到球拍时要增加一个声音。 我们已经知道球什么时候碰到球拍，Pygame文档中称，pygame.mixer.music.play(3)会 播 放 4次歌曲：第 一次再加 3次重复。 这一点他们弄错了。这行代码只会播
+放3次歌曲。

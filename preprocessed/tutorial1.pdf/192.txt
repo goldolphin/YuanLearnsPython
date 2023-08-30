@@ -1,0 +1,112 @@
+【PG】166　　第 14章　对　　象
+
+【PG】现在来测试 cook()方法。把下面的代码行增加到代码清单 14-5中：
+
+【PG】Run the program again. Now, the output should look like this:
+So our cook()  method seems to work. The cooked_level  went from 0 to 4, and the string updated too (from Raw to Medium ).
+
+【PG】Let’s try adding some condiments. We need a new method for that. We could also add our __str__() function so it’ll be easier to print the object. Edit the program so it looks like listing 14.6.
+
+【PG】class HotDog:
+    def __init__(self):
+        self.cooked_level = 0
+        self.cooked_string = "Raw"        
+        self.condiments = []
+    def __str__(self):
+        msg = "hot dog"        
+        if len(self.condiments) > 0: 
+            msg = msg + " with "
+        for i in self.condiments:            
+            msg = msg+i+", "
+        msg = msg.strip(", ")
+        msg = self.cooked_string + " " + msg + "."        
+        return msg
+    def cook(self, time):
+        self.cooked_level=self.cooked_level+time
+        if self.cooked_level > 8:            
+            self.cooked_string = "Charcoal"
+        elif self.cooked_level > 5:
+            self.cooked_string = "Well-done"        
+        elif self.cooked_level > 3:
+            self.cooked_string = "Medium"
+        else:            
+            self.cooked_string = "Raw"
+    def addCondiment(self, condiment): 
+        self.condiments.append(condiment)
+【PG】print "Now I'm going to cook the hot dog"    
+    myDog.cook(4)
+    print myDog.cooked_level
+    print myDog.cooked_string
+    
+【PG】Listing 14.6 HotDog class with cook(), add_condiments(), and __str__()
+
+【PG】Cooks the hot dog for 4 minutes
+Checks the new cooked attributes
+>>>
+0
+Raw
+[]
+
+【PG】Now I'm going to cook the hot dog
+4
+Medium
+
+【PG】Before cooking
+After cooking
+Defines the class
+Defines the new __str__() method
+Defines the new add_condiments() method
+
+【PG】再运行这个程序，现在输出会变成：把热狗烤 4分钟
+检查新的 cooked属性
+烤前
+烤后
+看来我们的 cook()方法能正常工作。 cooked_level从0变成4，而且字符串也得到更新（从 Raw变成Medium）。
+下面来增加一些配料。这需要一个新的方法。另外还可以自己增加 __str__()函数，让打印对象更为容易。按代码清单 14-6编辑程序。
+【PG】代码清单 14-6　包含 cook() 、add_condiments() 和__str__() 的HotDog类
+
+【PG】class HotDog:  
+    def __init__(self):                                         
+        self.cooked_level = 0                                  
+        self.cooked_string = "Raw"                               
+        self.condiments = []                                   
+    def __str__(self):                                         
+        msg = "hot dog"                                        
+        if len(self.condiments) > 0:                         
+            msg = msg + " with "                            
+        for i in self.condimen ts:                            
+            msg = msg+i+", "                               
+        msg = msg.strip(", ")                               
+        msg = self.cooked_string + " " + msg + "."    
+        return msg                                             
+    def cook(self, time):                                      
+        self.cooked_level=self.cooked_level+ time               
+        if self.cooked_level > 8:                             
+            self.cooked_string = "Charcoal"                     
+        elif self.cooked_level > 5:                           
+            self.cooked_string = "Well-done"                  
+        elif self.cooked_level > 3:                             
+            self.cooked_string = "Medium "                     
+        else:                                                    
+            self.cooked_string = "Raw"                         
+    def addCondiment(self, condimen t):     
+         self.condiments.append(condime nt)  
+myDog = HotDog()                
+print myDog                                                     
+print "Cooking hot dog for 4 minutes... "                     
+myDog.cook(4)                                                 
+print myDog                                                  
+print "Cooking hot dog for 3 more minu tes..."                
+myDog.cook(3)                                                 
+print myDog                                                  
+print "What happens if I cook it for 10 more minutes?"         
+myDog.cook(10)                                                 
+print myDog                                                   
+print "Now, I'm going to add some stuff on my hot dog"         
+myDog.addCondiment("ketchup")                                  
+myDog.addCondiment("mustard")                                 
+print myDog                                                 
+
+【PG】定义新的 __str__()方法
+【PG】定义新的 add_condiments()方法
+【PG】定义类

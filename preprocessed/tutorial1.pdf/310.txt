@@ -1,0 +1,55 @@
+【PG】284　　第 21章　打印格式化与字符串
+【PG】行） 。现在我们来看如何利用制表符控制屏幕上内容的水平间隔。
+【PG】制表符（Tab， 也叫做进格符 ）在按列对齐方面非常有用。 要了解制表符是如何
+【PG】工作的， 可 以想一想屏幕上的每一行都划分为多个大小相同的块时是什么样。 下面
+【PG】假设每一个块为 8个字符宽 。插入一个制表符时，就会移到下一个块开始的位置。
+【PG】要了解具体怎么做 ，最 好的办法就是试一试。 制表符的特殊代码是 \t，所以可
+【PG】以在交互模式先试试：276 Hello World!
+
+【PG】Notice that the XYZ is a few characters away from the ABC. In fact, the XYZ is exactly eight 
+【PG】characters from the start of the line. That’s because the size of the block is 8. Another way 
+【PG】to say this is that there’s a tab stop  every eight characters.
+【PG】Here’s an example of some 
+【PG】different print  statements, 
+【PG】with some shading added 
+【PG】to show where the tab
+【PG】stops are:
+
+【PG】You can think of the screen (or each line) as being laid out in blocks of eight spaces. Notice 
+【PG】that, as the ABC sequence gets longer, the XYZ stays in the same place. The \t tells Python to 
+【PG】start the XYZ at the next tab stop, or at the next available block. But once the ABC sequence 
+【PG】gets big enough to fill the first block, Python moves the XYZ over to the next tab stop.
+
+【PG】Tabs are good for arranging things in columns, so that everything lines up. Let’s use this, as 
+【PG】well as what we know about loops, to print a table of squares and cubes. Open a new win-
+【PG】dow in IDLE, and type in the sh ort program in listing 21.1. Save it and run it. (I called mine 
+【PG】squbes.py , short for “squares and cubes. ”)
+【PG】Listing 21.1 A program to print squares and cubes
+【PG】print "Number \tSquare \tCube"
+【PG】for i in range (1, 11):
+【PG】    print i, '\t', i**2, '\t', i**3
+【PG】 >>> print 'ABC\tXYZ'
+【PG】ABC     XYZ
+【PG】ABC XYZ
+【PG】ABCDE XYZ
+【PG】ABCDEF XYZ
+【PG】>>> print 'ABC\tXYZ'
+【PG】>>> print 'ABCDE\tXYZ'
+【PG】>>> print 'ABCDEF\tXYZ'
+【PG】ABCDEFG XYZ
+【PG】ABCDEFGHI XYZ
+【PG】>>> print 'ABCDEFG\tXYZ'
+【PG】>>> print 'ABCDEFGHI\tXYZ'
+
+【PG】可以将屏幕（ 或者每一行 ）视为按 8个空格为一块来摆放。 注意，尽管ABC序
+【PG】列越来越长， 但XYZ仍保持在原来的位置上。 \t告诉 Python让XYZ从下一个制
+【PG】表点开始， 或 者从下一个可用的块开始。 不过，一旦ABC序列长到将第一块填满，
+【PG】Python就会把XYZ下移到下一个制表点。
+【PG】按列组织内容时 ，制 表符很有用， 能让所有内容都对齐。 下面就要利用这一点
+【PG】以及我们了解的关于循环的知识， 打 印一个关于正方形和立方体的表格。 在IDLE中
+【PG】打开一个新窗口， 键 入代码清单 21-1中的小程序， 保存这个程序并运行。 （ 我把这个
+【PG】程序命名为 squbes.py ，这是“squares and cubes”的简写。 ）
+【PG】代码清单 21-1　打印正方形和立方体的程序
+
+【PG】运行这个程序时，应该能看到输出像下面显示的那样准确地对齐：
+【PG】图灵社区会员 FreeLink 专享 尊重版权

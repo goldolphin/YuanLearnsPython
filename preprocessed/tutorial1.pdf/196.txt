@@ -1,0 +1,40 @@
+【PG】第 14章　对　　象
+
+在面向对象编程中， 类可以从其他类继承属性和方法。 这样就有了类的整个“家族”，这个“家族”中的每个类共享相同的属性和方法。 这样一来， 每次向“家族”增加新成员时就不必从头开始。
+
+从其他类继承属性或方法的类称为派生类（derived class）或子类（subclass）。可以举一个例子来解释这个概念。
+
+假想我们要建立一个游戏 ，玩 家一路上可以捡起不同的东西，比如食物、钱或衣服。可以建一个类，名为GameObject。GameObject类有name等属性（例如coin、apple或hat）和pickUp()等方法（它会把硬币增加到玩家的物品集合中）。所有游戏对象都有这些共同的方法和属性。
+
+然后，可以为硬币建立一个子类。Coin类从GameObject派生。它要继承GameObject的属性和方法，所以Coin类会自动有一个name属性和pickUp()方法。Coin类还需要一个value属性（这个硬币价值多少）和一个spend()方法（可以用这个硬币去买东西）。
+
+下面来看这些类的代码：
+class GameObject:                                      
+    def __init__(self, name):                            
+        self.name = name                               
+                                                    
+    def pickUp(self, player):                      
+        # put code here to add the objec t
+        # to the player's collection   
+class Coin(GameObject):
+    def __init__(self, value):
+        GameObject.__init__(self, "coin")        
+        self.value = value
+    def spend(self, buyer, seller):                     
+        # put code here to remove the coi n
+        # from the buyer's money and     
+        # add it to the seller's money 
+
+【PG】未雨绸缪
+
+在上面的例子中，我们并没有在方法中加入任何实际代码，只有一些注释来解释这些方法要做什么。这是一种未雨绸缪的方法，是对以后要增加的内容提前做出计划或提前考虑。具体的代码要取决于游戏如何工作。程序员编写比较复杂的代码时通常就会采用这种做法来组织他们的想法。“空”函数或方法称为代码桩（code stub）。
+
+定义GameObject类
+
+定义GameObject类Coin是的GameObject的子类
+
+在__init__()中，继承GameObject的初始化方法并补充新内容
+
+Coin类新的spend()方法
+
+图灵社区会员FreeLink专享 尊重版权

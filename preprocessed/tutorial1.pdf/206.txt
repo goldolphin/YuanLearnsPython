@@ -1,0 +1,44 @@
+【PG】180　第 15章　模　　块
+【PG】sleep()。可以告诉它你要它睡多长时间（多少秒） 。
+【PG】代码清单 15-3中 的程序展示了 sleep() 函数如何工作。 键入这个程序， 保存并运行，看看会发生什么。
+
+【PG】代码清单 15-3　让程序睡眠
+
+171  CHAPTER  15 Modules
+Time
+The time  module lets you get information from your computer’s clock, like the date and the time. It also lets you add delays to your programs. (Sometimes the computer does things too quickly, and you have to slow it down.)
+
+The sleep() function in the time module is used to add a delay—that is, to make the program wait and do nothing for a while. It’s like putting your program to sleep, which is why the function is called sleep(). You tell it how many seconds you want it to sleep.
+
+The program in listing 15.3 demonstrates how the sleep() function works. Try typing, saving, and running it, and see what happens.
+
+import time
+print "How",time.sleep(2)
+print "are",
+time.sleep(2)print "you",
+time.sleep(2)
+print "today?"
+
+Notice that, when we called the sleep() function, we had to put time.  in front of it. That’s because, even though we imported time, we didn’t make it part of the main program’s namespace. So every time we want to use the sleep() function, we have to call time.sleep().
+
+If we tried something like this, it wouldn’t work, because sleep isn’t in our namespace. We’d get an error message like this:
+
+NameError: name 'sleep' is not defined
+
+But if you import it like this, that tells Python, “Look for the variable (or function or object) named sleep in the time module, and include it in my namespace.” Now, we could use the sleep function without putting time. in front of it:
+
+【PG】Listing 15.3 Putting your program to sleep
+
+import time
+sleep(5)
+
+from time import sleep
+from time import sleep
+print 'Hello, talk to you again in 5 seconds...'
+sleep(5)print 'Hi again'
+
+If we want to get the convenience of importing names into our local namespace, but don’t know exactly what names we need from the module, we can use the * wildcard to import all names into our namespace:
+
+from time import *
+
+The * symbol means “all”, so this will import all available names from the module. Be careful with this command, however. If we create a name in our program that’s the same as a name in the time module, we’ll get a collision. Importing all names with the * wildcard isn’t the best practice; it’s better to import only what you really need.

@@ -1,0 +1,63 @@
+【PG】404 附录 C 自测题答案
+
+【PG】在一个小程序里试试看：370 Hello World!
+Try it in a short program and see:
+So raw_input()  gives you a string.
+
+【PG】2 To get raw_input()  to print a prompt message, put some text in quotes inside the 
+parentheses, like this:
+
+【PG】3 To get an integer using raw_input() , use int()  to convert the string you get from 
+raw_input() . You can do it in two steps, like this:
+Or you can do it in a single step, like this:
+
+【PG】4 This is very similar to the previous question, except you use float()  instead of int() .
+
+【PG】Try It Out
+1 Your instructions in interactive 
+mode should look something like this:
+Oops! There’s no space. You can either 
+add a space at the end of your first name,
+or try this:
+or you could just use a comma, like this:
+
+【PG】2 The program should 
+look something like this:
+
+【PG】print "enter a number: ",
+answer = raw_input()
+print type(answer)
+>>> ============== RESTART ==============
+>>>enter a number: 12
+<type 'str'>
+>>>
+answer = raw_input("Type in a number: ")
+something = raw_input()
+answer = int(something)
+answer = int(raw_input())
+>>> first = 'Warren'
+>>> last = 'Sande'>>> print first + last
+WarrenSande
+>>> first = 'Warren '
+>>> print first + ' ' + last
+Warren Sande
+>>> first = 'Warren'
+>>> last = 'Sande'
+>>> print first, last
+Warren Sande
+
+【PG】3 要使用raw_input() 得到一个整数， 可以使用 int()转换从raw_input()得到的字符串。这个工作可以分两步来完成，如下：
+
+【PG】或者也可以一步完成，如下：
+
+【PG】4. 与上一题类似，只不过要使用 ﬂoat()而不是int()。
+
+【PG】动手试一试
+1. 交互模式中，这个指令应当如下所示：
+
+【PG】唉呀！没有空格。可以在你的名字末尾加一个空格。
+或者这样试试看：
+
+【PG】还可以使用一个逗号，如下：
+
+【PG】2. 这个程序应当类似下面的代码：

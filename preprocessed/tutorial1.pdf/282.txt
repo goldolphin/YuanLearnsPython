@@ -1,0 +1,42 @@
+【PG】256 第 19章 声 音
+这里就要使用前面定义的done变量了，它会告诉我们游戏何时结束。可以把代码修改成下面这样：
+
+【PG】249 CHAPTER 19 Sound
+I noticed something else. Even after the game is over, it sounds like the ball is still bouncing off the walls!?One thing we can use is the variable called done, which tells us when the game is over. We can just change our code to look like this:
+Try that and make sure it works.
+
+【PG】Hmmm . . . We might need to think about this one a bit. We have our done variable to tell us when the game is over, and we’re using that to know when to play our bye sound and also when to display the final message with the score. But what’s the ball doing?
+
+【PG】Even though the ball has reached the bottom of the window, it’s still moving! There’s nothing to stop the ball from going farther down, so its y-value just keeps getting bigger. It’s “below” the bottom of the screen where we can’t see it, but we can still hear it! The ball is still moving, so it’s still bouncing off the “sides” whenever its x-value gets big enough or small enough. That happens in the move() method, and that method keeps running as long as the while loop is running.
+
+【PG】How can we fix it? There are a few ways. We could
+- stop the ball from moving by setting its speed to [0,0] when the game is over.
+- check if the ball is below the bottom of the window, and don’t play the hit_wall sound if it is.
+- check the done variable and don’t play the hit_wall sound if the game is done.
+
+【PG】I picked the second one, but any of them would work. I’ll leave it up to you to pick one and modify your code to fix this problem.
+
+if myBall.rect.top >= screen.get_rect().bottom:
+    if not done: 
+        splat.play()
+    lives = lives - 1
+    if lives == 0: 
+        if not done:
+            bye.play()  Makes sure the sound only plays once
+
+【PG】试试看，确认程序能正常工作。确保声音只播放一次
+
+【PG】嗯……这个问题可能需要稍稍考虑一下。这里通过done变量来告诉我们游戏何时结束，利用这一点，我们能够知道什么时候播放bye声音，以及什么时候显示最后的分数消息。不过这球在干嘛？我注意到另外一个问题。
+
+【PG】尽管游戏已经结束，但听起来球好像还在墙上不停地反弹！?
+
+【PG】尽管球已经到达窗口底边，但它仍然在不停地移动！球在继续向下走，越走越远，没有什么来阻止它，所以它的y值会越来越大。虽然它在屏幕底边的“下面”，我们看不到，但是仍然能够听到它的声音！球仍在移动，所以当球的x值变得足够大或者足够小时，它还会在“左右两边”上反弹。这种情况发生在move()方法中，只要while循环在运行，这个方法就会一直运行。
+
+【PG】怎么解决这个问题呢？我们可以采用以下几种办法。
+- 游戏结束时把球的速度设置为[0,0]来阻止球继续移动。
+- 查看球是否在窗口底边以下，如果是，就不再播放hit_wall声音。
+- 检查done变量，如果游戏已经结束就不再播放hit_wall声音。
+
+【PG】我选择了第二种方法，不过上面这几种方法都能奏效。你可以选择以上的任意一种方法，修改你的代码来解决这个问题。
+
+图灵社区会员FreeLink专享 尊重版权

@@ -2,105 +2,70 @@
 
 【PG】CHAPTER  7 Decisions, Decisions
 
-【PG】Listing 7.1 shows an example program using comparisons. Start a new file in the 
-IDLE editor, type this program in, and save it—call it compare.py . Then Run  it. Try running it 
-several times, using different numbers. Try numbers where the first one is bigger, where the 
-first one is smaller, and where the two numbers are equal, and see what you get.
+【PG】Listing 7.1 shows an example program using comparisons. Start a new file in the IDLE editor, type this program in, and save it—call it compare.py . Then Run  it. Try running it several times, using different numbers. Try numbers where the first one is bigger, where the first one is smaller, and where the two numbers are equal, and see what you get.
 
 num1 = float(raw_input("Enter the first number: "))
 num2 = float(raw_input("Enter the second number: "))
 if num1 < num2:
     print num1, "is less than", num2
-if num1 > num2:    print num1, "is greater than", num2
-if num1 == num2:       
+if num1 > num2:
+    print num1, "is greater than", num2
+if num1 == num2:
     print num1, "is equal to", num2
 if num1 != num2:
     print num1, "is not equal to", num2
 
 【PG】What happens if the test is false?
 
-【PG】We’ve seen how to make Python do something if the result of a test is true . But what does it 
-do if the test is false ? In Python, there are three possibilities:
+【PG】We’ve seen how to make Python do something if the result of a test is true . But what does it do if the test is false ? In Python, there are three possibilities:
 
-【PG】�Do another test. If the first test comes out false, you can get Python to  test something 
-else with the keyword elif , 
-(which is short for “else if”) like this:
+【PG】�Do another test. If the first test comes out false, you can get Python to test something else with the keyword elif , (which is short for “else if”) like this:
 
-【PG】Listing 7.1 Using the comparison operators
-
-【PG】Remember that 
-this is a double equal sign
-
-if answer >= 10:    print "You got at least 10!"
-elif answer >= 5:    print "You got at least 5!"
-elif answer >= 3:
-    print "You got at least 3!"
-
-if
-answer>=10
-elif
-answer>=5
-elif
-answer>=3
-True
-True
-True
-Got at 
-least 10!
-Got at 
-least 5!
-Got at 
-least 3!
-False
-False
-False
-Got at 
-least 5!
-Got at 
-least 3!
-Got at 
-least 10!
-
-【PG】在if后面，elif语句你想要有多少就可以有多少。
-如果所有其他测试结果都是假 ，做其他工作 。这要利用  else关键字完成 。它
-总是在最后出现 ，也就是完成 if和所有elif语句之后 。
+Listing 7.1 Using the comparison operators
+Remember that this is a double equal sign
 
 if answer >= 10:
     print "You got at least 10!"
-elif answer >= 5:    print "You got at least 5!"
-elif answer >= 3:    print "You got at least 3!"
-else:    print "You got less than 3."
+elif answer >= 5:
+    print "You got at least 5!"
+elif answer >= 3:
+    print "You got at least 3!"
 
-if 
-answer>=10
-elif
-answer>=5
-elif
-answer>=3
-True
-True
-True
-Got at
-least 10!
-Got at
-least 5!
-Got at
-least 3!
-Got less
-than 3!
-False
-False
-False
-else
+if answer>=10
+elif answer>=5
+elif answer>=3
+True True True
+Got at least 10!
+Got at least 5!
+Got at least 3!
+False False False
+Got at least 5!
+Got at least 3!
+Got at least 10!
 
-【PG】继续。如果  if块后面没有放任何其他东西， 程序会继续执行下一行代码
-（如果有的话） ，或者会结束 （如果再没有更多代码） 。
+【PG】在if后面，elif语句你想要有多少就可以有多少。如果所有其他测试结果都是假 ，做其他工作 。这要利用  else关键字完成 。它总是在最后出现 ，也就是完成 if和所有elif语句之后 。
 
-【PG】Got at 
-least 5!
-Got at 
-least 3!
-Got at 
-least 10!
+if answer >= 10:
+    print "You got at least 10!"
+elif answer >= 5:
+    print "You got at least 5!"
+elif answer >= 3:
+    print "You got at least 3!"
+else:
+    print "You got less than 3."
+
+if answer>=10elifanswer>=5elifanswer>=3
+True True True
+Got at least 10!
+Got at least 5!
+Got at least 3!
+Got less than 3!
+False False Falseelse
+
+【PG】继续。如果  if块后面没有放任何其他东西， 程序会继续执行下一行代码（如果有的话） ，或者会结束 （如果再没有更多代码） 。
+
+Got at least 5!
+Got at least 3!
+Got at least 10!
 
 【PG】图灵社区会员 FreeLink 专享 尊重版权

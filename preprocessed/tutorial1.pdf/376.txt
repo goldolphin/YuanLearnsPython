@@ -1,0 +1,85 @@
+【PG】第 24章　计算机仿真
+
+【PG】def display_final():
+    final1 = "Game over"                                         
+    final2 = "You landed at %.1f m/s" % velocity               
+    if velocity > -5:                                            
+        final3 = "Nice landing!"                                  
+        final4 = "I hear NASA is hiring!"                          
+    elif velocity > -15:                                           
+        final3 = "Ouch!  A bit rough, but you survived."            
+        final4 = "You'll do better next time."                     
+    else:                                                          
+        final3 = "Yikes!  You crashed a 30 Billion dollar ship."   
+        final4 = "How are you getting home?"                      
+    pygame.draw.rect(screen, [0, 0, 0], [5, 5, 350, 280],0)          
+    f1_font = pygame.font.Font(None, 70)                             
+    f1_surf = f1_font.render(final1, 1, (255, 255, 255))             
+    screen.blit(f1_surf, [20, 50])                                   
+    f2_font = pygame.font.Font(None, 40)                            
+    f2_surf = f2_font.render(final2, 1, (255, 255, 255))             
+    screen.blit(f2_surf, [20, 110])                                  
+    f3_font = pygame.font.Font(None, 26)                             
+    f3_surf = f3_font.render(final3, 1, (255, 255, 255))             
+    screen.blit(f3_surf, [20, 150])                                  
+    f4_font = pygame.font.Font(None, 26)                             
+    f4_surf = f4_font.render(final4, 1, (255, 255, 255))             
+    screen.blit(f4_surf, [20, 180])                                  
+    pygame.display.flip()                                            
+
+【PG】myThrottle = ThrottleClass([15, 500])    
+running = True                                                   
+while running:                                                
+    clock.tick(30)     
+    fps = clock.get_fps( )
+    if fps < 1:  fps = 30
+    if height > 0.01:    
+        calculate_velocity( )
+        screen.fill([0, 0, 0])        display_stats()
+        pygame.draw.rect(screen, [0, 0, 255], [80, 350, 24, 100], 2) 
+        fuelbar = 96 * fuel / 5000                                     
+        pygame.draw.rect(screen, [0,255,0],
+                [84,448-fuelbar,18, fuelbar], 0)         
+        pygame.draw.rect(screen, [255, 0, 0],                            
+                [25, 300, 10, 200],0)  
+        screen.blit(moon, [0, 500, 400, 100])   
+        pygame.draw.rect(screen, [60, 60, 60],                           
+                [220, 535, 70, 5],0)           
+        screen.blit(myThrottle.image, myThrottle.rect) 
+        display_flames()                                                 
+        screen.blit(ship, [230, y_pos, 50, 90])     
+        instruct1 = "Land softly without running out of fuel"            
+        instruct2 = "Good landing: < 15m/s   Great landing: < 5m/s"      
+        inst1_font = pygame.font.Font(None, 24)                          
+        inst1_surf = inst1_font.render(instruct1, 1, (255, 255, 255))    
+【PG】创建推进器对象
+【PG】燃油量
+【PG】降落点
+【PG】画出推进器滑块
+【PG】画出所有内容
+        screen.blit(inst1_surf, [50, 550])                           
+        inst2_font = pygame.font.Font(None, 24)                        
+        inst2_surf = inst1_font.render(instruct2, 1, (255, 255, 255))
+        screen.blit(inst2_surf, [20, 575])
+        pygame.display.flip()  
+    
+    else:             
+        display_final()                  
+    for event in pygame.event.get():                                
+        if event.type == pygame.QUIT:                                
+            running = False                                         
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            held_down = True                                        
+        elif event.type == pygame.MOUSEBUTTONUP:                    
+            held_down = False                                      
+        elif event.type == pygame.MOUSEMOTION:                    
+            if held_down:                                           
+                myThrottle.rect.centery = event.pos[1]   
+                if myThrottle.rect.centery < 300:                   
+                    myThrot tle.rect.centery = 300                    
+                if myThrottle.rect.centery > 500:                    
+                    myThrottle.rect.centery = 500                    
+pygame.quit( )【PG】检查鼠标是否拖动推进器
+【PG】游戏结束。打印最终得分
+【PG】更新推进器位置
+【PG】图灵社区会员 FreeLink 专享 尊重版权

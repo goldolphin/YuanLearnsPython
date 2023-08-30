@@ -1,0 +1,87 @@
+【PG】第 14章 对象
+
+【PG】下面是热狗的方法。
+
+【PG】cook()：把热狗烤一段时间。这会让热狗越来越熟。
+
+【PG】add_condiment()：给热狗加一些配料。
+
+【PG】__init__()：创建实例并设置默认属性。
+
+【PG】__str__()：让print的结果看起来更好一些。
+
+【PG】首先，需要定义类。先定义__init__()方法，它会为热狗设置默认属性：
+
+【PG】cooked_string —— A string describing how well-done the hot dog is.
+
+【PG】condiments —— A list of what’s on the hot dog, like ketchup, mustard, and so on.
+
+【PG】These are the methods:
+
+【PG】cook() —— Cooks the hot dog for some period of time. This will make the hot dog more well-done.
+
+【PG】add_condiment() —— Adds condiments to the hot dog.
+
+【PG】__init__() —— Creates our instance and sets the default properties.
+
+【PG】__str__() —— Makes the print look nicer.
+
+【PG】First, we need to define the class. Let’s start with the __init__() method, which will set the default attributes for a hot dog:
+
+【PG】We start with a raw hot dog and no condiments.
+
+【PG】Now, let’s make a method to cook our hot dog:
+
+【PG】Before we go any further, let’s test this part. First, we need to create an instance of a hot dog, and we’ll check the attributes, too.
+
+【PG】def cook(self, time):
+        self.cooked_level = self.cooked_level + time
+        if self.cooked_level > 8:
+            self.cooked_string = "Charcoal"        
+        elif self.cooked_level > 5:
+            self.cooked_string = "Well-done"
+        elif self.cooked_level > 3:            
+            self.cooked_string = "Medium"
+        else:
+            self.cooked_string = "Raw"
+
+【PG】class HotDog:
+    def __init__(self):
+        self.cooked_level = 0        
+        self.cooked_string = "Raw"
+        self.condiments = []
+
+【PG】myDog = HotDog()
+print myDog.cooked_level
+print myDog.cooked_string
+print myDog.condiments
+
+【PG】现在，来建立一个方法烤热狗：先从一个没有加任何配料的生热狗开始。
+
+【PG】继续下面的工作之前，先对这一部分做个测试。首先，需要创建热狗的一个实例，还要检查它的属性。
+
+【PG】def cook(self, time):
+        self.cooked_level = self.cooked_level + time
+        if self.cooked_level > 8:                       
+            self.cooked_string = "Charcoal"               
+        elif self.cooked_level > 5:                        
+            self.cooked_string = "Well-done" 
+        elif self.cooked_level > 3:                         
+            self.cooked_string = "Medium"             
+        else:                                           
+            self.cooked_string = "Raw"
+
+【PG】class HotDog:
+    def __init__(self):
+        self.cooked_level = 0
+        self.cooked_string = "Raw"
+        self.condiments = []
+
+【PG】myDog = HotDog()
+print myDog.cooked_level
+print myDog.cooked_string
+print myDog.condiments
+
+【PG】下面把这些内容都放在一个程序中，运行这个程序。代码清单14-5显示了（到目前为止）完整的程序。
+
+【PG】图灵社区会员FreeLink专享，尊重版权。

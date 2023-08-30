@@ -1,0 +1,223 @@
+【PG】342　　第 23章　碰运气——随机性
+
+【PG】这部分是这样的：
+
+333  CHAPTER  23 Take a Chance—Randomness
+
+    else:
+        if len(deck) >0:
+            next_card = random.choice(deck)
+            c_hand.append(next_card)                                                  
+            deck.remove(next_card)                                        
+            print "  Computer drew a card"                                  
+        else:            
+            print"  Computer is blocked"
+            blocked += 1                                                  
+    print "Computer has %i cards left" % (len(c_hand))
+
+【PG】We’re almost done—just a couple more things  to add. You might have noticed that the 
+computer’s turn was defined as a function, and we used some global variables in that func-
+tion. We could also have passed the variables to the function, but using globals works just as well and is more like the real world, where the deck is “global”—anybody can reach over 
+and take a card from it.
+
+【PG】The player’s turn is also a function, but we didn’t show the first part of that function defini-
+tion. It would look like this:
+
+【PG】There’s just one more thing we need. We have to keep track of who wins!
+
+【PG】Keeping score
+
+【PG】The last thing we need for our game to be complete is scoring. When a game ends, we need 
+to keep track of how many points the winner got for the cards remaining in the loser’s hand. 
+We should display the points for that game, as well as the total for all games. Once we add those things in, the main loop will look something like listing 23.11.
+
+【PG】done = False
+p_total = c_total = 0
+while not done:    
+    game_done = Falsedef player_turn():
+    global deck, p_hand, blocked, up_card, active_suit
+    valid_play = False
+    is_eight = False    
+    print "\nYour hand: ",
+    for card in p_hand:
+        print card.short_name,    
+    print "   Up card: ", up_card.short_name
+    if up_card.rank == '8':
+        print"   Suit is", active_suit 
+    print "What would you like to do? ",
+    response = raw_input ("Type a card to play or 'Draw' to take a card: " )
+    if response.lower().startswith('d'):
+        if len(deck) == 0:
+            print "    No cards left in the deck!"
+        else:
+            next_card = deck.pop()
+            p_hand.append(next_card)
+            print "    You drew", next_card.short_name
+            valid_play = True
+    elif response.lower().startswith('q'):
+        done = True
+        game_done = True
+    else:
+        for card in p_hand:
+            if response.upper() == card.short_name:
+                valid_play = True
+                p_hand.remove(card)
+                up_card = card
+                print "    You played", card.short_name
+                # Determine if wild card
+                if card.rank == '8':
+                    active_suit = card.suit
+                elif card.rank == 'Q':
+                    next_player = 'computer'
+                break
+        if not valid_play:
+            print "    Invalid response, try again."
+    if not game_done:
+        if len(p_hand) == 0:
+            game_done = True
+            print "You won!"
+            # display game score here
+            p_points = 0            
+            for card in c_hand:
+                p_points += card.value
+            p_total += p_points            
+            print "You got %i points for computer's hand" % p_points
+        if not game_done: 
+            computer_turn()
+        if len(c_hand) == 0:            
+            game_done = True
+            print
+            print "Computer won!"            
+            # display game score here   
+            c_points = 0
+            for card in p_hand:
+                c_points += card.value
+            c_total += c_points
+            print "Computer got %i points for your hand" % c_points
+        if blocked >= 2:            
+            game_done = True
+            print "Both players blocked.  GAME OVER."
+            player_points = 0
+            for card in c_hand:
+                player_points += card.value
+            p_total += player_points            
+            c_points = 0
+            for card in p_hand:
+                c_points += card.value            
+            c_total += c_points
+            print "You got %i points for computer's hand" % player_points
+            print "Computer got %i points for your hand" % c_points    
+    play_again = raw_input("Play again (Y/N)? ")
+    if play_again.lower().startswith('y'):
+        done = False        
+        print "\nSo far, you have %i points" % p_total
+        print  "and the computer has %i points.\n" % c_total
+    else:        
+        done = True
+            
+print "\n Final Score:"
+print "You: %i     Computer: %i" % (p_total, c_total)
+
+【PG】The init_cards()  function (not shown here) just sets up the deck and creates the player’s 
+hand (5 cards), computer’s hand (5 cards), and the first up card B.B
+
+Sets up deck and player 
+and computer hands
+
+【PG】Player wins
+Adds points from 
+computer’s remaining cards
+Adds points from this game 
+to total
+
+【PG】Computer wins
+Adds points from 
+player’s remaining cards
+Adds points from this game to total
+
+【PG】Both blocked, 
+so both get points
+Prints game points
+Prints total points so far
+Prints final totals
+
+【PG】现在还有一点要做。我们必须跟踪最终谁获胜！
+记录分数
+要完成这个游戏， 还需要最后一点： 这就是记录得分。 游戏结束时， 需要得到
+赢家的得分， 这 要根据输家剩余的牌来计算。 我们要显示这次游戏的得分， 还要显
+示所有游戏的总分。加入这些内容后，就得到了类似代码清单 23-1 1的主循环。
+
+代码清单 23-11　增加了得分的主循环
+
+【PG】Draws, because no possible plays
+No cards left in deck—computer is blocked
+
+【PG】334 Hello World!
+
+    blocked = 0
+    init_cards()
+    while not game_done:
+        player_turn()         
+        if len(p_hand) == 0:
+            game_done = True
+            print            print "You won!"
+            # display game score here
+            p_points = 0            
+            for card in c_hand:
+                p_points += card.value
+            p_total += p_points            
+            print "You got %i points for computer's hand" % p_points
+        if not game_done: 
+            computer_turn()
+        if len(c_hand) == 0:            
+            game_done = True
+            print
+            print "Computer won!"            
+            # display game score here   
+            c_points = 0
+            for card in p_hand:
+                c_points += card.value            
+            c_total += c_points
+            print "Computer got %i points for your hand" % c_points
+        if blocked >= 2:            
+            game_done = True
+            print "Both players blocked.  GAME OVER."
+            player_points = 0
+            for card in c_hand:
+                player_points += card.value
+            p_total += player_points            
+            c_points = 0
+            for card in p_hand:
+                c_points += card.value            
+            c_total += c_points
+            print "You got %i points for computer's hand" % player_points
+            print "Computer got %i points for your hand" % c_points    
+    play_again = raw_input("Play again (Y/N)? ")
+    if play_again.lower().startswith('y'):
+        done = False        
+        print "\nSo far, you have %i points" % p_total
+        print  "and the computer has %i points.\n" % c_total
+    else:        
+        done = True
+            
+print "\n Final Score:"
+print "You: %i     Computer: %i" % (p_total, c_total)
+
+【PG】The init_cards()  function (not shown here) just sets up the deck and creates the player’s 
+hand (5 cards), computer’s hand (5 cards), and the first up card B.B
+
+【PG】Sets up deck and player and computer hands
+
+【PG】Player wins
+Adds points from computer’s remaining cards
+Adds points from this game to total
+
+【PG】Computer wins
+Adds points from player’s remaining cards
+Adds points from this game to total
+
+【PG】Both blocked, 
+so both get points
+Prints game points
+Prints total points so far
+Prints final totals

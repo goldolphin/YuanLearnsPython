@@ -1,0 +1,45 @@
+【PG】第 23章　碰运气——随机性
+这里，列表中包含从 1到6的数字。
+
+【PG】多个骰子
+如果想模拟掷两个骰子呢？ 如果你只是想把两个骰子的结果相加来得到总数，可能会考虑这样做：
+
+After all, the total of two dice can be from 2 to 12, right? Well, yes and no. You will get a 
+random number between 2 and 12, but not in the same way as adding up two random 
+numbers from 1 to 6. What that code line does is like rolling one big 11-sided die, not two 
+6-sided dice. But what’s the difference? That gets into a topic called probability . The easiest 
+way to see the difference is to try it out and see.
+
+【PG】Let’s roll the dice many time s and keep track of how many times each total comes up. 
+We’ll do that with a loop and a list. The loop will roll the dice, and the list will keep track of 
+how many times each total comes up. Let’s start with the single 11-sided die, as shown in 
+listing 23.1.
+
+
+import random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  
+for i in range(1000):
+    dice_total = random.randint(2, 12)
+    totals[dice_total] += 1  
+    
+for i in range (2, 13):    print "total", i, "came up", totals[i], "times"
+
+The list has indexes from 0 to 12, but we won’t use the first two, because we don’t care 
+about totals 0 or 1—they’ll never happen B. When we get a result, we add 1 to that list 
+item C. If the total is 7, we add one to totals[7] . So totals[2]  is the number of 2s we got, 
+totals[3]  is the number of 3s  we got, and so on.
+
+如果你运行该代码，你将得到类似于这样的结果：
+
+total 2 came up 95 times
+total 3 came up 81 timestotal 4 came up 85 times
+total 5 came up 86 times
+total 6 came up 100 timestotal 7 came up 85 times
+total 8 came up 94 times
+total 9 came up 98 timestotal 10 came up 93 times
+total 11 came up 84 times
+total 12 came up 99 times
+
+【PG】得到一个结果时， 我们将相应的列表项增 1。如果结果为 7，就将totals[7] 增1。所以totals[2] 就是得到 2的次数，totals[3] 是得到 3的次数。依此类推。
+
+【PG】如果想模拟掷两个骰子的结果，我们需要修改上述的代码。具体的，请参见原文。

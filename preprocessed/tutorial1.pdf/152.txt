@@ -1,0 +1,26 @@
+【PG】126　　第 12章　收集起来 —列表与字典
+【PG】可以在交互模式中试试下面的命令：
+>>> 'a' in letters
+True
+>>> 's' in letters
+False
+【PG】可以看到， 名为letters 的列表中确实包含一个元素 a，但是不包含元素 s。所以a在列表中，而s不 在列表中。现在可以结合使用 in和remove() 编写一些代码，保证即使值不在列表中也不会给出错误：
+if 'a' in letters:
+    letters.remove('a')
+【PG】查找索引
+为了找出一个元素位于列表中的什么位置，可以使用 index() 方法，如下：
+>>> letters = ['a', 'b', 'c', 'd', 'e']
+>>> print letters.index('d')
+3
+【PG】所以我们知道 d的索引是 3，这说明它是列表中的第 4个元素。就像remove() 一样，如果在列表中没有找到这个值， index() 会给出一个错误，所以最好结合使用 in，就像这样：
+if 'd' in letters:
+    print letters.index('d')
+【PG】12.12　循环处理列表
+最早开始讨论循环时， 我们看到循环完成了一个值列表的迭代处理。 我们还了解了range() 函数，并用它作为快捷方式为循环生成数字列表。前面已经看到range() 确实可以提供一个数字列表。
+不过循环完全可以迭代处理任何列表 ，而 不一定非得是数字列表。假设要显示出我们的字母列表，一行显示一个元素，可以这样做：
+>>> letters = ['a', 'b', 'c', 'd', 'e']
+>>> for letter in letters:
+    print letter
+【PG】术语箱
+布尔（boolean）是一种只使用两个值（1 和 0，或者 true 和 false）的算术运算。这是数学家乔治 ·布尔发明的，用 and、or和not来结合 true 和 false 条件（由 1 和 0 表示）时，就会用到布尔运算，我们在第 7 章中已经见过。
+【PG】图灵社区会员 FreeLink 专享 尊重版权

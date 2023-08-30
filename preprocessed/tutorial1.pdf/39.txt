@@ -1,11 +1,10 @@
-【PG】1.8　你的第二个程序　　 13
+【PG】1.8 你的第二个程序 13
 
 【PG】12 Hello World!
 if guess == secret:                        
     print "Avast! Ye got it!  Found my secret, ye did!"
 else:
-    print "No more guesses!  Better luck next time, matey!"    
-print "The secret number was", secret
+    print "No more guesses!  Better luck next time, matey!"    print "The secret number was", secret
 
 When you are typing it in, notice the indenting of the lines after the while instruction, and 
 the extra indenting of the lines after if and elif . Also notice the colons at the ends of some 
@@ -14,19 +13,16 @@ the next line for you.
 
 Once you’ve saved it, run it using Run > Run Module , just like you did for the first program. 
 Try playing it and see what happens. Here is a sample of when I ran it:
+
 It took me five guesses to get the secret number, which turned out to be 12.
 
-We will be learning all about the while , if, else , elif , and 
-input  instructions in the next few chapters. But you can 
-probably already get the basic idea of how this program 
-works:
+We will be learning all about the while , if, else , elif , and input instructions in the next few chapters. But you can probably already get the basic idea of how this program works:
+
 �The secret number is randomly picked by the program. 
 �The user inputs his guesses. 
-�The program keeps checking the guess against the 
-secret number: is it higher or lower? 
+�The program keeps checking the guess against the secret number: is it higher or lower? 
 �The user keeps trying until he guesses the number or runs out of turns.
-�When the guess matches the secret number, the player 
-wins.
+�When the guess matches the secret number, the player wins.
 
 >>> ======================= RESTART =======================
 >>>AHOY!  I'm the Dread Pirate Roberts, and I have a secret!
@@ -37,10 +33,50 @@ Too high, landlubber!What's yer guess? 10
 Too low, ye scurvy dog!
 What's yer guess? 11Too low, ye scurvy dog!
 What's yer guess? 12
-Avast! Ye got it!  Found my secret, ye did!>>>Prints 
-message at 
-end of game
+Avast! Ye got it!  Found my secret, ye did!
+>>>Prints message at end of game
 
 【PG】我猜了 5次才猜到这个秘密数，也就是 12。
 
-后面几章我们会学习有关 while、if、else、elif和input指令
+后面几章我们会学习有关 while、if、else、elif和input指令的所有内容。 不过估计你已经大致了解了这个程序的基本过程了。
+
+由程序随机选取秘密数。
+用户输入他猜的数。
+程序根据秘密数检查用户猜的结果： 太大还是太 
+小？
+用户不断尝试， 直 到猜出这个数， 或者用完所有机 
+会。猜到的数与秘密数一致时，玩家获胜。
+
+【PG】13 CHAPTER 1 Getting Started
+
+【PG】What did you learn?
+
+Whew! We covered quite a lot. In this chapter, you
+�installed Python.
+�learned how to start IDLE.
+�learned about interactive mode.
+�gave Python some instructions, and it executed them.
+�saw that Python knows how to do arithmetic (including really big numbers!)
+�started the IDLE text editor to type in your first program.
+�ran your first Python program!
+�learned about error messages.
+�ran your second Python program: the number-guessing game.
+
+【PG】Test your knowledge
+
+1How do you start IDLE?
+2What does print  do?
+3What is the symbol for multiplication in Python?
+4What does IDLE display when you start to run a program?
+5What is another word for running a program?
+
+【PG】Try it out
+
+1In interactive mode, use Python to calculate the number of minutes in a week.
+2Write a short program to print three lines: your name, your birth date, and your favorite color. The output should look something like this:
+
+Save the program and run it. If the program doesn’t do what you expect, or you get any error messages, try to fix it and make it work.
+
+My name is Warren Sande.    
+I was born January 1, 1970.
+My favorite color is blue.

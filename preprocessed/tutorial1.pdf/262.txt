@@ -1,0 +1,72 @@
+【PG】第 18章 一种新的输入——事件
+
+【PG】236
+
+【PG】Hello World!
+
+【PG】He looks a little scared.
+
+【PG】We’ll start with a simple one-player version. Our game will need:
+    �a ball to bounce around.
+    �a paddle to hit the ball with.
+    �a way to control the paddle.
+    �a way to keep score and display the score in the window.
+    �a way to keep track of “lives”—how many turns you get.
+
+【PG】We’ll cover each of these requirements one-by-one as we build up our program.
+
+【PG】The ball
+The beach ball we have been using so far is a bit big for a Pong game. We need something smaller. Carter and I came up with this wacky tennis ball guy for our game:
+
+【PG】Hey, you’d be scared too if you were about to get whacked around by a paddle!
+
+【PG】We’re going to use sprites for this game, so we need to make a sprite for our ball and then create an instance of it. We’ll use the Ball class with __init__() and move() methods.
+
+【PG】class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, speed, location):
+        pygame.sprite.Sprite.__init__(self)  #call Sprite initializer
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        self.speed = speed
+    def move(self):
+        self.rect = self.rect.move(self.speed)
+        if self.rect.left < 0 or self.rect.right > width:
+            self.speed[0] = -self.speed[0]
+        if self.rect.top <= 0:
+            self.speed[1] = -self.speed[1]
+
+【PG】Bounces off the sides of the window
+Bounces off the top of the window
+在窗口两边反弹
+在窗口顶边反弹
+
+【PG】创建球的实例时，我们会告诉它使用哪个图像、球的速度以及球的起始位置：
+myBall = MyBallClass('wackyball.bmp', ball_speed, [50, 50])
+
+【PG】还需要把这个球增加到一个组，以便完成球和球拍之间的碰撞检测。可以创建组，同时把球增加到这个组：
+ballGroup = pygame.sprite.Group(myBall)
+
+【PG】球拍
+对于球拍，我们仍然坚持 Pong游戏的传统，只是使用一个简单的矩形。我们将要使用一个白色背景，所以把球拍创建为一个黑色矩形。也要为球拍建立一个精灵类和实例：
+
+【PG】class MyPaddleClass(pygame.sprite.Sprite):
+    def __init__(self, location):
+        pygame.sprite.Sprite.__init__(self)  #call Sprite initializer
+        image_surface = pygame.surface.Surface([100, 20])
+        image_surface.fill([0,0,0])
+        self.image = image_surface.convert()
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+paddle = MyPaddleClass([270, 400])
+
+【PG】Notice that, for the paddle, we didn’t load an image from an image file; we created one by filling a rectangular surface with black. But every sprite needs an image attribute, so we used the Surface.convert() method to convert the surface into an image.
+
+【PG】The paddle can only move left or right, not up or down. We’ll make the paddle’s x-position (its left-right position) follow the mouse, so the user will control the paddle with the mouse. Because we’ll do this right in the event loop, we don’t need a separate move() method for the paddle.
+
+【PG】Controlling the paddle
+As I mentioned in the last section, we’re going to control the paddle with the mouse. We’ll use the MOUSEMOTION event, which means the paddle will move whenever the mouse moves inside the Pygame window. Because Pygame only “sees” the mouse when it’s inside the Pygame window, the paddle will automatically be limited to the edges of the window. We’ll make the center of the paddle follow the mouse. The code should look like this:
+myBall = MyBallClass('wackyball.bmp', ball_speed, [50, 50])
+ballGroup = pygame.sprite.Group(myBall)
+elif event.type == pygame.MOUSEMOTION:
+    paddle.rect.centerx = event.pos[0]

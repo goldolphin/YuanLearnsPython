@@ -1,0 +1,58 @@
+【PG】22.9　又到了游戏时间—Hangman　　 315
+让小人的所有部分都不可见；
+从词汇表随机选择一个词；
+根据秘密词中的字母个数显示相同数目的横线。
+玩家点击 Guess!按钮时，程序做以下工作。
+检查猜的是一个字母还是一个词。
+如果是一个字母：
+■ 检查秘密词，查看是否包含这个字母。
+■ 如果玩家猜对了，用这个字母取代横线，显示这个字母出现在什么位置。
+■ 如果玩家猜错了，显示小人的另一部分。
+■ 把猜出的字母增加到 Previous guesses 显示区。
+■ 查看玩家是否已经猜出单词（猜出所有字母） 。
+如果是一个词：
+■ 检查玩家猜得正确与否。
+■ 如果正确， 显示一个对话框，指出 You Won!（你赢了！）并开始新游戏。
+查看玩家是不是已经没有机会了， 如 果是，显示一个对话框， 指出 You Lost 
+（你失败了） ，并显示这个秘密词到底是什么。
+
+【PG】从词汇表得到单词
+这一章讨论的是文件，所以下面来看程序中得到词汇表的部分。相应代码如下：307  CHAPTER  22 File Input and Output
+Getting words from the word list
+This is a chapter about files, so let’s look at the part of the program that gets the word list. 
+The code looks like this:
+The words.txt  file is just a text file, so we can read it using readlines() . Then, to pick a 
+word from the list, we use the 
+random.choice()  function, like this:
+Revealing the man
+There are several ways we could have kept track of which parts of the man are already 
+revealed and which part to reveal next. Carter decided to use nested if statements, which 
+works fine. It looks like this:
+There are six parts of the hanged man, so we need six nested if blocks. Notice that, if all 
+the parts are visible and there’s a wrong guess, you get the message saying you lost.def wrong_guess(self):
+        dialog.alertDialog(self, "WRONG!!!", 'Hangman')
+        if self.components.head.visible == True:            if self.components.body.visible == True:
+               if self.components.arm1.visible == True:
+                  if self.components.arm2.visible == True:                     if self.components.foot1.visible == True:
+                        if self.components.foot2.visible == True:
+                             dialog.alertDialog(self,                                "You lost! Word was "+self.currentword, 
+                                  'Hangman')
+                                self.new_game()                            else:
+                                self.components.foot2.visible = True
+                        else:                            self.components.foot1.visible = True
+                    else:
+                        self.components.arm2.visible = True                else:
+                    self.components.arm1.visible = True
+            else:                self.components.body.visible = True
+        else:
+            self.components.head.visible = Truef = open("words.txt", 'r')
+self.lines = f.readlines()
+for line in self.lines:   line.strip()
+f.close()Removes newline 
+characters from each line
+self.currentword = random.choice(self.lines)
+
+【PG】显示小人
+要跟踪已经显示了小人的哪些部分， 另外下一步要显示哪一部分， 这有很多方
+法。我们决定使用一个循环，代码如下：
+图灵社区会员 FreeLink 专享 尊重版权

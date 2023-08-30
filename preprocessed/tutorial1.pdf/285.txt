@@ -1,0 +1,77 @@
+【PG】19.8　为 PyPong添加音乐　　 
+
+【PG】myBall = MyBallClass('wackyball.bmp', [12,6], [50, 50])  
+ballGroup = pygame.sprite.Group(myBall)  
+paddle = MyPaddleClass([270, 400])  
+lives = 3 
+points = 0 
+
+【PG】font = pygame.font.Font(None, 50) 
+score_text = font.render(str(points), 1, (0, 0, 0)) 
+textpos = [10, 10] 
+done = False  
+running = True  
+
+while running:     
+    clock.tick(30) 
+    screen.fill([255, 255, 255]) 
+
+    for event in pygame.event.get():         
+        if event.type == pygame.QUIT: 
+            running = False  
+        elif event.type == pygame.MOUSEMOTION: 
+            paddle.rect.centerx = event.pos[0] 
+
+    if pygame.sprite.spritecollide(paddle, ballGroup, False):         
+        hit.play()                   
+        myBall.speed[1] = -myBall.speed[1] 
+
+    myBall.move() 
+
+    if not done:         
+        screen.blit(myBall.image, myBall.rect)         
+        screen.blit(paddle.image, paddle.rect)  
+        screen.blit(score_text, textpos)  
+
+        for i in range (lives):             
+            width = screen.get_width() 
+            screen.blit(myBall.image, [width - 40 * i, 20])  
+        pygame.display.flip()  
+        
+    if myBall.rect.top >= screen.get_rect().bottom:         
+        if not done: 
+            splat.play()   
+        lives = lives - 1 
+        if lives <= 0:  
+            if not done:  
+                pygame.time.delay(1000)  
+                bye.play()                       
+            final_text1 = "Game Over"  
+            final_text2 = "Your final score is:  " + str(points) 
+            ft1_font = pygame.font.Font(None, 70)  
+            ft1_surf = font.render(final_text1, 1, (0, 0, 0))  
+            ft2_font = pygame.font.Font(None, 50)  
+            ft2_surf = font.render(final_text2, 1, (0, 0, 0))             
+            screen.blit(ft1_surf, [screen.get_width()/2 - \
+                        ft1_surf.get_width()/2, 100]) 
+            screen.blit(ft2_surf, [screen.get_width()/2 - \
+                        ft2_surf.get_width()/2, 200]) 
+            pygame.display.flip() 
+            done = True  
+            pygame.mixer.music.fadeout(2000)      
+        else:             
+            pygame.time.delay(1000)   
+            new_life.play()         
+            myBall.rect.topleft = [50, 50] 
+            screen.blit(myBall.image, myBall.rect) 
+            pygame.display.flip() 
+            pygame.time.delay(1000 )
+
+pygame.quit( )玩家丢一条命时播放声音
+等待 1秒，然后播放结束声音
+音乐淡出
+开始新的一条命时播放声音
+
+这个代码太长了！（ 大约 100行，还要加上一些空行。 ） 这个程序完全可以写得短一些， 不 过那样一来， 读代码和理解起来都会更困难。 其实这几章我们一直都在构建这个程序，每章补充一点内容，所以你并不需要一次键入所有这些代码。如果你是按顺序读这本书 ，现 在应该已经了解程序的各个部分分别做什么， 也应该知道这些部分如何整合到一起。 不 过万一你需要这个程序的完整代码， 也可以在\examples 文 件夹（如果已经安装本书的安装程序的话 ）和网站上找到这个程序的代码清单。 
+
+图灵社区会员 FreeLink 专享 尊重版权

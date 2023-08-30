@@ -1,0 +1,126 @@
+【PG】8.8　跳出循环——break和continue　　 89
+
+【PG】就是现在！该跳出来了！
+
+85 CHAPTER 8 Loop the Loop
+
+【PG】That’s it! Time to bail!
+
+NOT DONE YET
+
+Am I done yet?
+
+DONE
+
+Basically, a while loop keeps asking “Am I done 
+yet? . . . Am I done yet? . . . Am I done yet? 
+. . . ” until it’s done. It’s done when the 
+condition is no longer true.
+
+While loops use the Python keyword while. Listing 8.8 shows an example. Type the program in, try it, and see how it works. (Remember, you have to Save it and then Run it.)
+
+【PG】print "Type 3 to continue, anything else to quit."
+
+someInput = raw_input()
+
+while someInput == '3':     
+
+【PG】    print "Thank you for the 3.  Very kind of you."    
+    print "Type 3 to continue, anything else to quit."
+    someInput = raw_input()
+
+【PG】print "That's not 3, so I'm quitting now."
+
+This program keeps asking for input from the user. While  the input is equal to 3, the condition is true , and the loop keeps running. That’s why this kind of conditional loop is also called a while loop , and it uses the Python while  keyword. When the input is not equal to 3, the condition is false , and the loop stops.
+
+【PG】Bailing out of a loop—break  and continue
+
+There are times when you want to get out of a 
+loop in the middle, before a for loop is 
+finished counting, or before a while  loop has 
+found its end condition. There are two ways 
+to do this: you can jump ahead to the next 
+iteration of the loop with continue , or you 
+can stop looping altogether with break . 
+Let’s look at these more closely.
+
+【PG】Jumping ahead— continue
+
+If you want to stop executing the current iteration of the loop and skip ahead to the next iteration, the continue  statement is what you need. The best way to show this is with an example. Look at listing 8.9.
+
+【PG】Listing 8.8 A conditional or while loop
+
+Keep looping 
+as long as 
+someInput ='3'
+Body of the loop
+只要 someInput ='3' 就一直循环
+
+循环体代码清单 8-8 条件或 while 循环
+
+This program keeps asking for input from the user. While the input is equal to 3, the condition is true, and the loop keeps running. That’s why this kind of conditional loop is also called a while loop and uses the Python while keyword. When the input is not equal to 3, the condition is false, and the loop stops.
+
+【PG】8.8　跳出循环——break和continue
+
+有时可能希望在中间离开循环，也就是for循环结束计数之前，或者while循
+环找到结束条件之前。有两种方法来做到：可以用continue直接跳到循环的下一次
+迭代，或者用break完全中止循环。下面会更详细地说明。
+
+【PG】提前跳转—continue
+
+如果希望停止执行循环的当前迭代，提前跳到下一次迭代，你需要的就是一条continue语句。要说明这一点，最好的办法就是看一个例子，请看代码清单 8-9。
+
+【PG】86 Hello World!
+
+for i in range(1, 6):
+    print
+    print 'i =', i,
+    print 'Hello, how',
+    if i == 3:
+        continue
+    print 'are you today?'
+
+If we run this program, the output looks like this:
+
+Notice that, the third time through the loop (when i == 3 ), the body of the loop didn’t finish—it jumped ahead to the next iteration ( i == 4 ). That was the continue statement at work. It works the same way in while loops.
+
+【PG】Bailing out—break
+
+What if we want to jump out of the loop completely—never finish counting, or give up waiting for the end condition? The break statement does that.
+
+Let’s change only line 6 of listing 8.9, replacing continue with break, and rerun the program to see what happens.
+
+This time, the loop didn’t just skip the rest of iteration 3; it stopped altogether. That’s what break does. It works the same way in while loops. 
+
+I should tell you that some people think using break and continue is a bad idea. Personally, I don’t think they’re bad, but I rarely use them. I thought I’d tell you about break and continue just in case you ever need them.
+
+【PG】Listing 8.9 Using continue in a loop
+
+>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?
+i = 2 Hello how are you today?
+i = 3 Hello how
+i = 4 Hello how are you today?
+i = 5 Hello how are you today?
+>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?
+i = 2 Hello how are you today?
+i = 3 Hello how
+
+【PG】代码清单 8-9 循环中使用continue
+
+运行这个程序时，输出如下：
+
+Notice that, the third time through the loop (when i == 3 ), the body of the loop didn’t finish—it jumped ahead to the next iteration ( i == 4 ). That was the continue statement at work. It works the same way in while loops.
+
+Bailing out—break
+
+What if we want to jump out of the loop completely—never finish counting, or give up waiting for the end condition? The break statement does that.
+
+Let’s change only line 6 of listing 8.9, replacing continue with break , and rerun the program to see what happens.
+
+This time, the loop didn’t just skip the rest of iteration 3; it stopped altogether. That’s what break  does. It works the same way in while  loops. 
+
+I should tell you that some people think using break  and continue  is a bad idea. Personally, I don’t think they’re bad, but I rarely use them. I thought I’d tell you about break and continue just in case you ever need them.

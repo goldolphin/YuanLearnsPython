@@ -1,0 +1,83 @@
+【PG】第 24章　计算机仿真
+
+【PG】代码清单 24-1显示了 Lunar Lander 的代码，相应的文件是 Listing_24-1.py ，可以在 \Examples\LunarLander 文件夹找到这个文件 ，或者也可以在网站 （www.helloworldbook2.com ）上找到。在文件夹和网站上还可以找到相关的图片 （飞船和月球） 。查看代码和说明 ，一定要确保你能理解所有内容 。先不用担心高度 、速度和加速度的公式 。在高中物理中将会学到这些知识 ，不过考完试后可能很快就会忘掉（除非你在美国航空航天局工作 ） 。也许这个程序能帮你记住这些公式 ！
+
+【PG】代码清单 24-1　Lunar Lander
+
+【PG】import pygame, sys 
+pygame.init( )
+screen = pygame.display.set_mode([400,600])     
+screen.fill([0, 0, 0])                            
+ship = pygame.image.load('lunarlander.png')      
+moon = pygame.image.load('moonsurface.png')      
+ground  = 540    
+start = 90                                       
+clock = pygame.time.Clock()                  
+ship_mass = 5000.0                             
+fuel = 5000.0                                   
+velocity = -100.0                              
+gravity = 10                                
+height = 2000                              
+thrust = 0                                       
+delta_v = 0                                       
+y_pos = 90                                       
+held_down = False                               
+【PG】初始化程序降落点是 y = 540
+
+【PG】class ThrottleClass(pygame.sprite.Sprite):                          
+    def __init__(self, location = [0,0]):                           
+        pygame.sprite.Sprite.__init__(self)                         
+        image_surface = pygame.surface.Surface([30, 10])           
+        image_surface.fill([128,128,128])                         
+        self.image = image_surface.convert()                    
+        self.rect = self.image.get_rect()                     
+        self.rect.left, self.rect.centery = location               
+        
+def calculate_velocity():                                               
+    global thrust, fuel, velocity, delta_v, height, y_pos              
+    delta_t = 1/fps                      
+    thrust = (500 - myThrottle.rect.centery) * 5.0            
+    fuel -= thrust * 0.1 / fps  
+    if fuel < 0:  fuel = 0.0                                      
+    if fuel < 0.1:  thrust = 0.0                                         
+    delta_v = delta_t * (-gravity + 200 * thrust / (ship_mass + fuel)) 
+    velocity = velocity + delta_v                                      
+    delta_h = velocity * delta_t                                        
+    height = height + delta_h                                          
+    y_pos = ground - (height * (ground - start) / 2000) - 90        
+    
+def display_stats():
+    v_str = "velocity: %i m/s" % velocity                             
+    h_str = "height:   %.1f" % height                                 
+    t_str = "thrust:   %i" % thrust                                   
+    a_str = "acceleration: %.1f" % (delta_v * fps)                    
+    f_str = "fuel:  %i" % fuel                                        
+    v_font = pygame.font.Font(None, 26)                              
+    v_surf = v_font.render(v_str, 1, (255, 255, 255)) 
+    screen.blit(v_surf, [10, 50])                                     
+    a_font = pygame.font.Font(None, 26)                              
+    a_surf = a_font.render(a_str, 1, (255, 255, 255))                 
+    screen.blit(a_surf, [10, 100])                                    
+    h_font = pygame.font.Font(None, 26)                               
+    h_surf = h_font.render(h_str, 1, (255, 255, 255))                
+    screen.blit(h_surf, [10, 150])                                    
+    t_font = pygame.font.Font(None, 26)                               
+    t_surf = t_font.render(t_str, 1, (255, 255, 255))                
+    screen.blit(t_surf, [10, 200])                                    
+    f_font = pygame.font.Font(None, 26)                               
+    f_surf = f_font.render(f_str, 1, (255, 255, 255))                
+    screen.blit(f_surf, [60, 300])                                    
+    def display_flames():  
+    flame_size = thrust / 15                                          
+    for i in range (2):                                             
+        startx = 252 - 10 + i * 19                                   
+        starty = y_pos + 83                                           
+        pygame.draw.polygon(screen, [255, 109, 14], [(startx, starty),
+                                       (startx + 4, starty + flame_size),
+                                       (startx + 8, starty)], 0)   【PG】     推进器 的精灵类
+【PG】“滴答”对应 Pygame 循环的一帧
+【PG】计算高度、速度、加速度和燃料
+【PG】根据推力减少燃料
+【PG】物理公式将高度转换为Pygame y位置
+【PG】将推进器精灵的 y位置转换为推力
+【PG】图灵社区会员 FreeLink 专享 尊重版权

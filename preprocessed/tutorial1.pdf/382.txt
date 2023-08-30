@@ -1,0 +1,96 @@
+【PG】第 24章　计算机仿真
+
+【PG】将时间保存到一个文件中有两种方法 。可以把一个字符串直接写入文件 ，如下：
+
+347 $)"15&3 Comp uter Si mulations
+
+message = random.choice(messages)
+print "\ n " + message
+start_ti me = datetime.datetime.no w()
+typing =  raw_input('>')
+end_time  = datetime.datetime.now()
+diff = e nd_time - start_time
+typing_t ime = diff.seconds + diff .microseconds / float(10 00000)
+cps = le n(message) / typing_time
+wpm = cp s * 60 / 5.0
+print "\ nYou typed %i characters in %.1f seconds." % (len (message),
+                              typ ing_time)
+print "T hat's %.2f chars per sec,  or %.1f words per minut e" %(cps, wpm)
+if typin g == message:
+    prin t "You didn't make any mi stakes."
+else:
+    prin t "But, you made at least  one mistake."
+
+【PG】There’s one more th ing you sh ould know ab out timedelta  objects. Unl ike datetime  objects, 
+which have year, m onth, day, hour, minute, seco nd (and microsecon ds), a timedelta  object 
+only has days, seco nds, and micros econds. If you want the mont hs or years, you ha ve to cal-
+culate th em fr om the number of days. If you want minute s or h ours, you ha ve to calc ulate 
+them fr om the seconds.
+
+【PG】As we mentioned at the start of the chap ter, sometimes we need to save a time va lue to a 
+/f_ile (on the hard disk) so it can be sa ved even when the pr ogram isn’t runn ing. If you sa ve 
+the now()  time when ever a progra m /f_ini shes, you  can check the time when the prog ram 
+star ts aga in and print a me ssage like th is:
+
+Of course, m ost programs  don’ t do  that, but there are some progra ms t hat ne ed to k now 
+how long  they  have been  idle, or no t running.  One example  is a Virt ual Pe t prog ram. Just 
+like the virtual pet keychains you can buy, you might want the prog ram to ke ep track of 
+time even when you’re not using it. So, for ex ample, if you end the pr ogram and then come 
+back to  it two days later, your  virt ual pe t sh ould be very hu ngry! The on ly wa y for  the pro-
+gram to k now how hungry the pet s hould be is fo r it to know how m uch  time  has passed 
+since the la st time it was fed. That incl udes the time the prog ram was shut do wn.
+
+【PG】There  are a couple of wa ys we  could sa ve the time to a /f_ile . We coul d just wr ite a  string  to 
+the /f_ile, like th is: It has been 2 days, 7 hours, 23 minutes since you last used this program.
+
+1JDLTNFTTBHFGSPNMJTU
+4UBSUTDMPDL
+4UPQTDMPDL $BMDVMB UFT
+FMBQTFEUJNF
+'PSUZQJOHTQFFE
+
+XPSE DIBSBDUFST
+%JTQMBZTSFTVMUTXJUI
+QSJOUGPSNBUUJOH
+
+timeFile.write ("2012-10-24 14:23:37")
+
+要读这个时间戳时 ，可以使用一些字符串方法 （如split()）将这个字符串分
+解为各个部分 ，如天、月、年以及小时 、分和秒。这种做法应该是可行的 。
+另
+一种方法是使用 pickle模块，这在第 22章介绍过 。pickle模块允许你把任
+何类型的变量保存到文件中 ，也包括对象 。由于我们要使用 datetime 对象跟踪时
+间，所以使用pickle可以很容易地把时间对象存入文件 ，还能很方便地读取 。
+
+【PG】下面来看一个非常简单的例子 ，它会打印一条消息 ，指出程序最后一次运行的
+时间。这个程序要完成下面的工作 。
+
+查
+找一个 pickle文 件并打开这个文件 。Python有一个  os（操作系统 operating 
+system的缩写）模块，可以告诉我们这个文件是否存在 。这里要使用的方法名为isﬁle()。
+如果文件存在 ，就认为程序之前运行过 ，得出它最后一次运行的时间 （根据 
+pickle文件中的时间得出 ） 。
+然后用当前时间写一个新的 pickle文件。 
+如果这是程序第一次运行 ，就没有 pickle文件可以打开 ，所以会显示一条消 
+息，指出我们创建了一个新的 pickle文件。代码清单 24-3给出了这个程序的代码 。可以试试看结果如何 。
+
+【PG】代码清单
+24-3　使用 pickle 把时间保存到文件中
+
+import datetime, pickle
+import os
+first_time = True
+if os.path.isfile("last_run.pkl"):
+    pickle_file = open("last_run.pkl", 'r')
+    last_time = pickle.load(pickle_file)    
+    pickle_file.close()
+    print "The last time this program was run was ", last_time
+    first_time = False
+pickle_file = open("last_run.pkl", 'w')
+pickle.dump(datetime.datetime.now(), pickle_file)
+pickle_file.close()
+if first_time:
+    print "Created new pickle file."
+
+【PG】Now we have all the pieces we need to make a simple Virtual Pet program, which we’ll do in 
+the next section.

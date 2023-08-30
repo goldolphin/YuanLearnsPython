@@ -1,0 +1,88 @@
+【PG】23.4　Crazy Eights　　 335
+到一条错误消息。这只是一个主循环。我们还需要其他部分来构成一个完整的程序。
+这个代码对应一次游戏。 如果希望继续玩多次， 可以把整个代码包在另一个外
+部while循环中：
+这就得到了程序的
+主结构。下 面需要增加
+各个部分来实现我们需
+要的功能。
+像程序员一样思考
+前面描述的方法称为“ 自顶向下 ”编程
+方法。
+这种方法先从需求大纲开始， 然后填入
+具体细节。
+另一种方法叫做“ 自下而上 ”编程。采
+用这种方法时， 首先创建各个部分， 如“轮
+到玩家出牌 ”、“轮到计算机出牌 ”等，然后
+把它们放在一起，就像搭积木一样。
+这两种方法各有优缺点。 究竟选择哪一
+种方法不是这本书要讨论的主题。 但是我想
+你应当知道可以采用不同的方法来构建一个
+程序。
+
+【PG】明牌
+最开始发牌时， 要从一副牌中选一张牌翻过来面朝上， 作为不要的一堆牌（ 弃
+牌堆）中的第一张牌。 玩 家出牌时， 他出的这张牌也要面朝上放在弃牌堆中。 弃牌
+堆中显示的牌叫做明牌（ up card） 。 可以为弃牌堆建立一个列表来跟踪明牌， 具体做
+法与代码清单 23-5的 测试代码中为“ 一手牌”建立列表相同。 不过我们并不关心弃
+牌堆中的所有牌。 我 们只关心最后增加的那张牌。 所以可以使用 Card对象的一个实
+例来跟踪这张牌。
+玩家或计算机出牌时，我们会这样做：327  CHAPTER  23 Take a Chance—Randomness
+The face-up card
+When the hand is first dealt, one card from th e deck is turned up to start the discard pile. 
+When any player plays a card, it goes on the discard pile, face up. The card that’s showing 
+on the discard pile at any time is called the up card . We could keep track of this by making a 
+list for the discard pile, the same way we made a list for the “hand” in our test code in listing 
+23.5. But we don’t really care about all the card s in the discard pile. We only care about the 
+last card added to it. So we can just use a single instance of a Card  object to keep track of it.
+When the player or computer plays 
+a card, we’ll do so mething like this:
+The active suit
+Usually, the active suit (the one the player or computer is trying to match) is the same as 
+the suit of the up card. But there’s an exception. When an 8 has been played, the player calls 
+the suit. So if he plays the 8 of Diamonds, he might call Clubs as the suit. That means that 
+the next play must match Clubs, even though a Diamond (the 8 of Diamonds) is showing.
+This means we need to keep track of the active suit, because it might be different from the 
+suit that’s showing. We can use a 
+variable, active_suit , to do this:
+Whenever a card is played, we’ll update the active suit, and when a player plays an 8, he’ll choose the new active suit.
+
+【PG】The player’s turn
+When it’s the player’s turn, the first thing we need to do is get his choice of what to do. He can play a card from his hand (if possible) or draw from the deck. If we were making a GUI version of this program, we’d have the player click the card he wanted to play, or click the 
+deck to draw. But we’re going to start with a text-based version of the program, so he’ll 
+have to type in a choice, and then we’ll have to check what he typed and figure out what he wants to do and whether that input is valid. 
+To give you an idea of what kind of input the player will need to provide, we’ll look at a 
+sample game. The player’s input is in bold.
+Crazy Eights
+Your hand: 4S, 7D, KC, 10D, QS    Up Card:  6C
+What would you like to do?  Type a card name or "Draw" to take a card:  KC
+You played the KC (King of Clubs)
+Computer plays 8S  (8 of spades) and changes suit to Diamonds
+
+【PG】Part of the main loop is figuring out when the game is over. It can be over when either the 
+player or the computer is out of cards. It can also be over if neither of them is out of cards but both of them are blocked (that is, they have no valid plays). The 
+blocked  variable is set 
+in the code for the player’s turn (if the player is blocked) and the computer’s turn (if the computer is blocked). We wait until 
+blocked = 2 , to make sure both player and computer 
+are blocked B.
+Note that listing 23.6 is not a complete program, so if you try to run it, you will get an error.  
+It is just the main loop.  We still need all the other parts to make the program complete.
+
+【PG】This code is for a single game. If we want to keep playing more games, we can wrap the 
+whole thing in 
+another, outer while  loop:
+This gives us the main structure of the program. Now we need to add the individual pieces to do what we need.  done = False
+p_total = c_total = 0
+while not done:     [play a game... see listing 23.6]
+play_again = raw_input("Play again (Y/N)? ")
+    if play_again.lower().startswith('y'):        done = False    else:
+        done = True
+#!/bin/env python # Paginate a text file, adding a header and footer import sys, time, string # If no arguments were given, print a helpful message if len(sys.argv)!=2: print 'Usage: pyprint filename'sys.exit(0)class # Increment the page count, and reset the line count self.header_written=1 ; self.count=1 ; self.page=self.page+1PrinterFormatter:self.header_written=0def # Increment the page count, and reset the line count self.header_written=1 ; self.count=1 ; self.page=self.page+1 #!/bin/env Thinking like a programmer
+The approach described above is called 
+"top-down" programming. 
+That's where you start with the outline 
+of what is needed and then fill in the details.
+Another way to do it is "bottom-up". In 
+that method, you would first create all the individual parts, like the player's turn, the computer's turn, etc., and then put them together like building blocks.
+Both approaches have advantages and 
+disadvantages. Deciding how to choose one over the other is not a topic for this book. But I thought you should know that there are different ways to tackle build-ing a program.

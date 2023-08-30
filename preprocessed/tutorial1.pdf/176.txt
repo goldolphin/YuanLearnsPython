@@ -1,0 +1,19 @@
+【PG】第 13章　函　　数
+
+【PG】函数运行时，函数之外的名字被搁置一边，而没有用到。只有函数内部的名字会被用到。程序中使用（或者可以使用）变量的部分称为这个变量的作用域（scope）。
+
+【PG】局部变量
+
+【PG】在代码清单 13-4 中，变量 price 和 total 只在函数内使用。我们说 price、total 和 tax_rate 的作用域是 calculateTax() 函数。这也称为这些变量是局部的（local）。price、total 和 tax_rate 变量是 calculateTax() 函数中的局部变量。
+
+【PG】要了解这是什么意思，一种方法是向代码清单 13-4 中的程序增加一行代码，尝试在函数之外的某个位置打印 price 的值。代码清单 13-5 做了这个尝试。
+
+【PG】代码清单 13-5 尝试打印一个局部变量
+
+【PG】如果运行这个程序，会得到这样一个错误：
+
+【PG】The last line of the error message tells the story: when we’re not inside the calculateTax() function, the variable price is not defined. It only exists while the function is running. When we tried to print the value of price from outside the function (when the function was not running), we got an error.
+
+【PG】全局变量
+
+【PG】与局部变量 price 对应，代码清单 13-5 中的变量 my_price 和 totalPrice 在函数之外定义（程序主部分中）。我们使用全局变量（global）表示有更大作用域的变量。在这种情况下，更大是指程序的主部分，而不是函数内部。如果扩展代码清单 13-5 中的程序，完全可以在另一个位置使用变量 my_price 和 totalPrice，它们仍然有之前给定的值。它们仍在合法的作用域中（in scope）。因为我们可以在程序的任何地方使用这些变量，所以把它们称作全局变量（global variable）。

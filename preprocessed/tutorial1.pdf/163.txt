@@ -1,0 +1,35 @@
+【PG】12.16　字典　　 137
+可以做到的，只是需要做更多的工作：
+>>> for value in sorted(phoneNumbers.values()):
+        for key in phoneNumbers.keys():            
+            if phoneNumbers[key] == value:                
+                print key, phoneNumbers[key]
+Bob 444-4321
+John 555-1234
+Mary 555-6789
+Jenny 867-5309
+
+我们首先取得排序之后的值的列表， 然后针对列表中的每个值， 循环遍历字典中的所有键，直到找到与该值关联的键。
+
+【PG】下面是字典可以做的其他一些事情。
+使用del删除一个条目：
+　>>> del phoneNumbers["John"] 
+>>> print phoneNumbers
+{'Bob': '444-4321', 'Mary': '555-6789', 'Jenny': '867-5309'}
+
+使用clear() 删除所有条目（清空字典） ：  
+　>>> phoneNumbers.clear() 
+>>> print phoneNumbers {}
+
+使用in确定某个键在字典中是否存在：  
+　>>> phoneNumbers = {'Bob':'444-4321', 'Mary':'555-6789','Jenny':'867-5309'}
+>>> "Bob" in phoneNumbers 
+True 
+>>> "Barb" in phoneNumbers 
+False
+
+字典在 Python代码中使用得很广泛。
+
+这些当然不是有关 Python字典的全部内容， 但你应该对其有了大致的了解， 这样你就可以在代码中使用字典，也可以认出在其他代码中出现的字典。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

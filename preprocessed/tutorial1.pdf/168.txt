@@ -1,0 +1,31 @@
+【PG】142　　第 13章　函　　数
+【PG】(2) 调用函数时，跳到函数中的第一行代码。
+【PG】(3) 执行函数中的每一行代码。
+【PG】(4) 函数完成时，从离开主程序的那个位置继续执行。
+
+【PG】13.2　调用函数
+【PG】调用函数是指运行函数里的代码。 如果我们定义了一个函数， 但是从来不调用
+【PG】它，这些代码就永远也不会运行。
+【PG】调用函数时要使用函数名和一对括号 。有 时括号里还会有些东西， 有时也可能
+【PG】什么也没有。
+【PG】试着运行代码清单 13-1中的程序 ，看看会发生什么。你会看到这样的结果：
+【PG】>>> =================== RESTART ===================
+【PG】>>>Warren Sande123 Main StreetOttawa, Ontario, CanadaK2M 2E9>>>
+【PG】从下面这个更简单的程序也可以得到同样的输出：
+【PG】print "Warren Sande"
+【PG】print "123 Main Street"
+【PG】print "Ottawa, Ontario, Canada"
+【PG】print "K2M 2E9"
+【PG】那为什么要自找麻烦使用代码清单 13-1中的函数让问题更复杂呢？
+【PG】使用函数的主要原因是， 一旦定义了函数 ，就可以通过调用反复地使用。所以如
+【PG】果我们想把地址打印 5次， 可以这样做：printMyAddress()
+【PG】printMyAddress()
+【PG】printMyAddress()
+【PG】printMyAddress()
+【PG】printMyAddress()
+【PG】输出将是：Warren Sande
+【PG】123 Main StreetOttawa, Ontario, CanadaK2M 2E9
+【PG】Warren Sande
+【PG】123 Main StreetOttawa, Ontario, CanadaK2M 2E9
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

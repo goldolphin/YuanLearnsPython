@@ -1,0 +1,36 @@
+【PG】14.4　这个点是什么　　 157
+
+【PG】球的属性可能包括：
+The ball’s attributes would look like this:
+Those are all things you can describe about the ball.
+The ball’s methods would look like this:
+Those are all things you can do to the ball.
+
+【PG】What are attributes?
+Attributes are all things you know (or can find out) about the ball. The ball’s attributes are chunks of information—numbers, strings, and so on. Sound familiar? Yes, they’re variables. They’re just variables that are included inside the object.
+
+【PG】You can display them:
+You can assign values to them:
+You can assign them to regular, non-object variables:
+You can also assign them to attributes in other objects: 
+
+【PG】What are methods?
+Methods are things you can do with an object. They’re chunks of code that you can call to do something. Sound familiar? Yes, methods are just functions that are included inside the object. You can do all the things with methods that you can do with any other function, including passing arguments and returning values.
+
+【PG】Object = attributes + methods
+So objects are a way of collecting together attributes and methods (things you know, and things you can do) for a thing. Attributes are information, and methods are actions.
+
+【PG】这些都是关于球的描述。
+
+【PG】在前面的球例子中，你可能已经注意到对象名与属性或方法名之间的点。这是Python使用对象属性和方法的一种记法：object.attribute或object.method()。就这么简单。这称为点记法，很多编程语言中都使用了这种记法。
+
+【PG】什么是属性
+属性就是你所知道（或者可以得出）的关于球的所有方面。球的属性就是一些信息（数字、字符串等等）。听起来很熟悉？没错，它们就是变量，只不过是包含在对象中的变量。可以显示，可以为它们赋值，可以把它们赋给常规的、不是对象的变量，还可以把它们赋给其他对象的属性。
+
+【PG】什么是方法
+方法就是可以对对象做的操作，它们是一些代码块，可以调用这些代码块来完成某个工作。听起来很熟悉？没错，方法就是包含在对象中的函数。函数能做到的，方法都可以做到，包括传递参数和返回值。
+
+【PG】14.3　对象 = 属性 + 方法
+所以利用对象，可以把一个东西的属性和方法（你知道的事情和你可以做的事情）收集在一起。属性是信息，方法是动作。
+
+【PG】这些都是可以对球做的操作。

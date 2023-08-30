@@ -1,0 +1,47 @@
+【PG】第 26章　Python Battle
+
+例如，calculateCoordinates(2,3,(5,5)) 用于查找距离 (5,5)左边（左边方向值为3） 2个方块远的方块。
+
+现在我们可以想出一个策略。我采用一个很简单的策略：
+(1)向着敌人所在的方向前进。
+(2)如果可能，则发动攻击。
+
+【PG】我们从前一个机器人的一些基础代码开始：
+
+class AI:
+    def __init__(self):
+        pass
+    def turn(self):        
+        if self.robot.lookInFront() == "bot":
+            self.robot.attack()
+
+这段代码会处理我们策略的第二部分： “如果可能， 则发动攻击。 ”现在我们需要处理第一部分。
+
+【PG】我们将下面的代码加到 turn()函数中：
+
+else:
+     self.goTowards(self.robot.locateEnemy()[0] )
+
+这会调用 AI类的方法 self.goTowards() 并传入敌人的位置作为参数。 self.robot.locateEnemy() 方法会返回一个包含敌人位置和方向的列表。 如果你运行这段代码， 它不会正常工作，因为我们还没有定义 self.goTowards()。现在我们来定义它：
+
+def goTowards(self,enemyLocation) :
+     myLocation = self.robot.position
+     delta = (enemyLocation[0]-myLocation[0],
+              enemyLocation[1]-myLocation[1])
+
+首先算出 delta，即目标位置和机器人位置的差距。 然后，你需要知道要想面向敌人，机器人应该面向哪个方向：
+
+if abs(delta[0]) > abs(delta[1]) :
+     if delta[0] < 0:
+         targetOrientation = 3       
+     else:                  
+         targetOrientation = 1             
+else:
+    if delta[1] < 0:        targetOrientation = 0     
+    else:
+        targetOrientation = 2        面向左
+面向右
+面向下
+面向上
+
+【PG】现在你需要沿着这个方向走。如果已经面向这个方向的话，则很简单：

@@ -1,0 +1,24 @@
+【PG】附录 B
+【PG】Python 2 与 Python 3 的差异
+【PG】在本书中， 我们提到了 Python 2 与Python 3 的几处差异。 本书使用的是 Python 
+2，但我们也希望你能读懂 Python 3的代码，并具备让代码兼容 Python 3 的能力。本
+附录只讨论与本书内容有关的 Python特 性的差异。 （ 比如，Python 3 处理 Unicode字
+符串的方式是不同的， 但 因为我们在本书中没有涉及 Unicode， 所以不讨论这部分差
+异。 ）
+
+【PG】在这个前提下，Python 3 与Python 2存在以下一些差异 。
+【PG】print
+【PG】在Python 3 中，print是一个函数，这意味着你不能这样写：
+print "Hello, World! "
+而需要这样写：
+print("Hello, World! ")
+【PG】还有一些与此相关的差异。 你不能像在 Python 2 中那样， 在结尾处使用一个逗
+号，使下一个 print语句输出的内容与本次输出的内容显示在同一行：
+print "Hello",
+print "World!"
+【PG】在Python 3 中，你需要这样做：
+print("Hello", end=")
+print("World!")
+【PG】你也可以给 end参数传不同的值， 但是用到的情况非常少。 如果你有兴趣的话，
+可以查一下 Python 3 的文档 。
+【PG】图灵社区会员 FreeLink 专享 尊重版权

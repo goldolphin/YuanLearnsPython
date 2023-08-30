@@ -1,0 +1,85 @@
+【PG】23.3 创建一副牌
+　　331
+【PG】322 Hello World!
+        if self.rank_id == 1:                               
+            self.rank = "Ace"                               
+            self.value = 1                                          elif self.rank_id == 11:                            
+            self.rank = "Jack"                              
+            self.value = 10                                         elif self.rank_id == 12:                            
+            self.rank = "Queen"                             
+            self.value = 10                                         elif self.rank_id == 13:                            
+            self.rank = "King"                              
+            self.value = 10                                         elif 2 <= self.rank_id <= 10:                       
+            self.rank = str(self.rank_id)
+            self.value = self.rank_id                               else:
+            self.rank = "RankError"                         
+            self.value = -1            
+        if self.suit_id == 1:                               
+            self.suit = "Diamonds"        elif self.suit_id == 2:                                         self.suit = "Hearts"                            
+        elif self.suit_id == 3:                             
+            self.suit = "Spades"                                    elif self.suit_id == 4:                             
+            self.suit = "Clubs"                             
+        else:                                                           self.suit = "SuitError"                         
+        self.short_name = self.rank[0] + self.suit[0]
+        if self.rank == '10':            self.short_name = self.rank + self.suit[0]
+        self.long_name = self.rank + " of " + self.suit
+【PG】Listing 23.4 isn’t a complete program. It’s just the class definition for our Card  class. Because 
+this is something we could use over and over in different programs, maybe we should make 
+it a module . Save the code in listing 23.4 as cards.py. 
+【PG】The error checking in the code B makes sure that rank_id  and suit_id  are in range and 
+that they are integers. If they aren’t, you would see something like “7 of SuitError” or “RankError of Clubs” when displaying the card in a program.
+
+【PG】Now we need to make some instances of cards— in fact, a whole deck would be nice! To test 
+our 
+Card  class, let’s make a program to create a deck of 52 cards and then pick 5 cards at 
+random and display their attributes. Li sting 23.5 has some code for that. 
+import random
+from cards import Card
+【PG】Listing 23.5 Making a deck of cards
+Creates rank  and 
+value  attributes 
+perfoms some 
+error checking B
+Creates suit  
+attribute 
+Imports our cards  
+module
+
+【PG】完成一些错误检查
+创建 
+suit属性
+deck = [] 
+for suit_id in range(1, 5): 
+    for rank_id in range(1, 14):
+        deck.append(Card(suit_id, rank_id))
+        
+hand = []
+for cards in range(0, 5):
+    a = random.choice(deck)    
+    hand.append(a)
+    deck.remove(a)
+print    
+for card in hand:
+    print card.short_name, '=' ,card.long_name, "  Value:", card.value
+
+【PG】The inner loop goes through each card in the suit, and the outer loop goes through each 
+suit B (13 cards * 4 suits = 52 cards). Then the code picks five cards from the deck and puts 
+them in a hand C. It also removes the cards from the deck.
+
+【PG】If you run the code in listing 23.5, you should get something like this:
+【PG】If you run it again, you should get five different cards. And no matter how many times you 
+run it, you should never get the same card twice in one hand. 
+
+【PG】So now we can make a deck of cards and randomly draw cards from it to add them to a 
+hand. It sounds like we have the basic things we need to make a card game! In the next section, we’ll make a card game that you can play against the computer.
+
+【PG】Crazy Eights
+　　You might have heard of a card game called “Crazy Eights.” You might even have played it. 
+One thing about card games on the computer is that it’s difficult to have multiple 
+players. That’s because, in most card games, you’re not supposed to see the 
+other players’ cards. If everyone is looking at the same computer, everybody will see everyone else’s cards. So the best 
+solution is to make a solitaire version— where you play against the computer. 
+
+【PG】Uses nested for loops to make a deck B
+Picks 5 cards from the 
+deck to make a handC

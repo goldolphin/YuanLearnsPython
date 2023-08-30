@@ -1,0 +1,108 @@
+【PG】8.8　跳出循环——break 和continue　　 91
+【PG】用continue 跳到下一次迭代。
+【PG】用break跳出循环。
+【PG】测试题
+【PG】1. 下面的循环会运行多少次？
+【PG】87  CHAPTER  8 Loop the Loop
+【PG】What did you learn?
+【PG】In this chapter, you learned about
+【PG】�for loops (also called counting loops).
+【PG】�the range()  function—a shortcut for counting loops.
+【PG】�different step sizes for range() .
+【PG】�while  loops (also called conditional loops).
+【PG】�skipping to the next iteration with continue .
+【PG】�jumping out of a loop with break .
+【PG】Test your knowledge
+【PG】1How many times would the following loop run?
+【PG】2How many times would the following loop run? 
+【PG】And what would the values of i be for each loop?
+【PG】3What list of numbers would range (1, 8)  give you?
+【PG】4What list of numbers would range (8)  give you?
+【PG】5What list of numbers would range (2, 9, 2)  give you?
+【PG】6What list of numbers would range (10, 0, -2)  give you?
+【PG】7What keyword do you use to stop the current iteration of a loop and jump ahead to 
+【PG】the next iteration?
+【PG】8When does a while  loop end?
+【PG】Try it out
+【PG】1Write a program to print a multiplication tabl e (a times table). At the start, it should 
+【PG】ask the user which table to print. The ou tput should look something like this:
+【PG】for i in range (1, 6):
+【PG】    print 'Hi, Warren'
+【PG】for i in range (1, 6, 2):
+【PG】    print 'Hi, Warren'
+【PG】Which multiplication table would you like?
+【PG】5Here's your table:
+【PG】5 x 1 = 5
+【PG】5 x 2 = 10
+【PG】5 x 3 = 15
+【PG】5 x 4 = 20
+【PG】5 x 5 = 25
+【PG】5 x 6 = 30
+【PG】5 x 7 = 35
+【PG】5 x 8 = 40
+【PG】5 x 9 = 45
+【PG】5 x 10 = 50
+【PG】2. 下面的循环会运行多少次？每次循环时 i的值是什么？
+【PG】　  87  CHAPTER  8 Loop the Loop
+【PG】What did you learn?
+【PG】In this chapter, you learned about
+【PG】�for loops (also called counting loops).
+【PG】�the range()  function—a shortcut for counting loops.
+【PG】�different step sizes for range() .
+【PG】�while  loops (also called conditional loops).
+【PG】�skipping to the next iteration with continue .
+【PG】�jumping out of a loop with break .
+【PG】Test your knowledge
+【PG】1How many times would the following loop run?
+【PG】2How many times would the following loop run? 
+【PG】And what would the values of i be for each loop?
+【PG】3What list of numbers would range (1, 8)  give you?
+【PG】4What list of numbers would range (8)  give you?
+【PG】5What list of numbers would range (2, 9, 2)  give you?
+【PG】6What list of numbers would range (10, 0, -2)  give you?
+【PG】7What keyword do you use to stop the current iteration of a loop and jump ahead to 
+【PG】the next iteration?
+【PG】8When does a while  loop end?
+【PG】Try it out
+【PG】1Write a program to print a multiplication tabl e (a times table). At the start, it should 
+【PG】ask the user which table to print. The ou tput should look something like this:
+【PG】for i in range (1, 6):
+【PG】    print 'Hi, Warren'
+【PG】for i in range (1, 6, 2):
+【PG】    print 'Hi, Warren'
+【PG】Which multiplication table would you like?
+【PG】5Here's your table:
+【PG】5 x 1 = 5
+【PG】5 x 2 = 10
+【PG】5 x 3 = 15
+【PG】5 x 4 = 20
+【PG】5 x 5 = 25
+【PG】5 x 6 = 30
+【PG】5 x 7 = 35
+【PG】5 x 8 = 40
+【PG】5 x 9 = 45
+【PG】5 x 10 = 50
+【PG】3. range(1, 8)  会给出一个怎样的数字列表？
+【PG】4. range(8)  会给出一个怎样的数字列表？
+【PG】5. range(2, 9, 2)  会给出一个怎样的数字列表？
+【PG】6. range(10, 0, -2)  会给出一个怎样的数字列表？
+【PG】7. 使用哪个关键字停止循环的当前迭代，提前跳到下一次迭代？
+【PG】8. while循环什么时候结束？
+【PG】动手试一试
+【PG】1.  编写一个程序， 显示一个乘法表。 开始时要询问用户显示哪个数的乘法表。
+【PG】输出应该如下所示：
+【PG】Which multiplication table would you like?
+【PG】5Here's your table:
+【PG】5 x 1 = 5
+【PG】5 x 2 = 10
+【PG】5 x 3 = 15
+【PG】5 x 4 = 20
+【PG】5 x 5 = 25
+【PG】5 x 6 = 30
+【PG】5 x 7 = 35
+【PG】5 x 8 = 40
+【PG】5 x 9 = 45
+【PG】5 x 10 = 50
+【PG】2.  完成第 1题的程序时你可能使用了 for循环。大多数人都会这么做。 不过，
+【PG】可以再做个练习， 试 着用while循环完成同样的工作。 或者如果你在第 1题
+【PG】中使用了while循环，现在可以试着用 for循环来完成。

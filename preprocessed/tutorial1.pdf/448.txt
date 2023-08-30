@@ -1,0 +1,49 @@
+【PG】422　　附录 C　自测题答案
+
+【PG】5. 要让组件完成某项工作，需要一个事件处理器。
+【PG】6. 在 Qt Designer 中要使用 &（与字符）定义热键。
+【PG】7. Qt Designer 中微调框的内容总是一个整数 。
+
+【PG】动手试一试
+【PG】1.  我们已经在网站上给出了使用 Qt Designer 完成的猜数程序 ，见TIO_CH20_1.py
+和TIO_CH20_1.rsrc.ui。
+【PG】2.  要解决这个微调框问题， 需要在 Qt Designer 中选择微调组件。 在属性编辑器
+中改变minimum 和maximum 属性。minimum 属性应当取一个很小的值， 比
+如–10x00，maximum 可以非常大，比如 1000000。
+
+【PG】第21章
+测试题
+【PG】1.  如果有两个单独的 print语句，而且希望所有内容都打印在同一行上，可以
+在第一个print语句的末尾加一个逗号，如下：
+
+【PG】2.  要增加额外的空行，可以另外增加 print语句（其中不含任何内容 ） ，或者打印
+换行符 \n，如下：
+
+【PG】3.  要让内容按列对齐，可以使用制表符 \t。
+【PG】4.  要用 E记法打印一个数 ，需要使用格式字符串 %e或%E，如下：
+
+【PG】动手试一试
+【PG】1A version of the number-guessing program using PythonCard is posted on the web 
+site as TIO_CH20_1.py and TIO_CH20_1.rsrc.py .
+【PG】2To fix the spinner problem, select the spinne r component in Resource Editor. In the 
+Property Editor, change the min and max properties. The min property should be some-
+thing like -1000 , and the max can be something very large like 1000000 .
+
+【PG】Chapter 21: Print Formatting and Strings
+【PG】Test your knowledge
+【PG】1If you have two separate print  statements, and you want everything to print on the 
+same line, put a comma at the end of the first 
+print  statement, like this:
+
+【PG】2To add extra blank lines when you print something, you can either add extra print  
+statements with nothing in them, like this:
+or you can print newline characters, \n, like this:
+
+【PG】3To line things up in columns, use the tab character, \t.
+【PG】4To make a number print in E-notation, 
+use the format string %e or %E, like this:
+
+【PG】也可以打印换行符 \n，如下：
+
+【PG】3. 要让内容按列对齐，可以使用制表符 \t。
+【PG】4. 要用 E记法打印一个数 ，需要使用格式字符串 %e或%E，如下：

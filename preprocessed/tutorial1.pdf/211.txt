@@ -1,0 +1,35 @@
+【PG】16.3　在窗口中画图　　 185
+
+【PG】16.3　在窗口中画图
+
+现在我们有了一个 Pygame窗口，在我们优雅地将它关闭之前它会一直打开。 代码清单 16-2的 第3行中的 [640, 480] 是窗口的大小， 表示 640像素宽、480 像素高。
+
+下面就在这里面画一些图形。按照代码清单 16-4修改你的程序 。
+
+【PG】代码清单 16-3　画一个圆
+
+import pygame, sys
+pygame.init( )
+screen = pygame.display.set_mode([640,480] )
+screen.fill([255,255,255])               
+pygame.draw.circle(screen, [255,0,0],[100,100], 30, 0) 
+pygame.display.flip()  
+
+running = True
+while running:
+    for event in pygame.even t.get():
+        if event.type == pygame.QUIT: 
+            running = Fals e
+pygame.quit( )
+
+用白色背景填充窗口
+
+增加这 3行代码
+
+画一个圆
+
+把你的监视器翻过来……
+
+开玩笑的，别当真！
+
+图灵社区会员 FreeLink 专享 尊重版权

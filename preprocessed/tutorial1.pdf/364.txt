@@ -1,0 +1,171 @@
+【PG】第 23章　碰运气——随机性
+
+【PG】如果已经出了一张牌，我们还需要告诉他现在的有效花色。因此，让我们添加几行代码，如清单 23.7 中所示。
+
+【PG】像清单 23.6 一样，清单 23.7 也不是一个完整的程序。我们仍在构建需要完成程序的部分。但是，当清单 23.7 中的代码运行时（作为完整程序的一部分），它会产生如下输出：
+
+【PG】如果您想使用卡牌的长名称而不是短名称，则输出将如下所示：
+
+【PG】在我们的例子中，我们将使用短名称。
+
+【PG】得到玩家的选择
+
+【PG】现在我们需要询问玩家想做什么，并处理他的响应。他主要有两种选择：
+
+【PG】出一张牌
+
+【PG】抽一张牌
+
+【PG】如果他决定出一张牌，我们需要确保这张牌是合法的。我们之前说过，需要检查三个方面：
+
+【PG】-他选择的是否是合法的牌？（他是不是想出一张“蜀葵”4？）
+
+【PG】-该牌是否在他的手中？
+
+【PG】-所选的牌是否合法？（是否与明牌的点数或花色一致，或者是不是一张8？）
+
+【PG】但是，如果再考虑一下，可以想到：他手里只能有合法的牌。所以如果我们检查到这张牌确实在他手里，就不用再考虑检查这张牌是否合法。他手里不可能有类似“蜀葵”4之类的牌，因为这在一副牌中根本不存在。
+
+【PG】清单 23.7 显示玩家手中的牌
+
+【PG】您的手牌：4S、QS、3C    明牌：8C    花色：黑桃
+
+【PG】您的手牌：黑桃4、黑桃Q、梅花3    明牌：梅花8    花色：黑桃
+
+【PG】在我们的例子中，我们将使用短名称。
+
+【PG】得到玩家的选择
+
+【PG】现在我们需要询问玩家想做什么，并处理他的响应。他主要有两种选择：
+
+【PG】出一张牌
+
+【PG】抽一张牌
+
+【PG】如果他决定出一张牌，我们需要确保这张牌是合法的。我们之前说过，需要检查三个方面：
+
+【PG】-他选择的是否是合法的牌？（他是不是想出一张“蜀葵”4？）
+
+【PG】-该牌是否在他的手中？
+
+【PG】-所选的牌是否合法？（是否与明牌的点数或花色一致，或者是不是一张8？）
+
+【PG】但是，如果再考虑一下，可以想到：他手里只能有合法的牌。所以如果我们检查到这张牌确实在他手里，就不用再考虑检查这张牌是否合法。他手里不可能有类似“蜀葵”4之类的牌，因为这在一副牌中根本不存在。
+
+【PG】下面的代码可以得到并验证玩家的选择，见代码清单 23-8。
+
+【PG】清单 23-8 得到玩家的选择
+
+【PG】card = random.choice(deck)                         
+p_hand.append(card)                                 
+deck.remove(card)                                 
+print "You drew", card.short_name                 
+else:                                                   
+    print "There are no cards left in the deck"       
+    blocked += 1                                       
+return                                               
+else:
+    for card in p_hand:
+        if response.upper() == card.short_name :
+            selected_card = card
+    if selected_card == None :
+        response = raw_input("You don't have that card. Try again:")
+if selected_card.rank == '8': 
+    valid_play = True
+    is_eight = True
+elif selected_card.suit == active_suit: 
+    valid_play = True    
+elif selected_card.rank == up_card.rank:  
+    valid_play = True                                    
+if not valid_play:
+    response = raw_input("That's not a legal play. Try again: ")
+
+【PG】已经抽牌，所以返回到主循环如果“抽牌”，从这副牌中取牌，并增加到玩家手中。
+
+【PG】print "What would you like to do? ",
+response = raw_input ("Type a card to play or 'Draw' to take a card: " )
+valid_play = False
+while not valid_play:     
+    selected_card = None
+    while selected_card == None:       
+        if response.lower() == 'draw': 
+            valid_play = True            
+            if len(deck) > 0:           
+                card = random.choice(deck)                         
+                p_hand.append(card)                                 
+                deck.remove(card)                                 
+                print "You drew", card.short_name                 
+            else:                                                   
+                print "There are no cards left in the deck"       
+                blocked += 1                                       
+                return                                               
+        else:
+            for card in p_hand:
+                if response.upper() == card.short_name :
+                    selected_card = card
+            if selected_card == None :
+                response = raw_input("You don't have that card. Try again:")
+    if selected_card.rank == '8': 
+        valid_play = True
+        is_eight = True
+    elif selected_card.suit  == active_suit: 
+        valid_play = True    
+    elif selected_card.rank  == up_card.rank:  
+        valid_play = True                                    
+    if not valid_play:
+        response = raw_input("That's not a legal play. Try again: ")
+
+【PG】验证（validate）是指确保一样东西是合法的，即允许的或者合理的。
+
+【PG】这将完全执行与前一个示例相同的操作。choice() 函数随机选择列表中的一项。在这种情况下，列表是从1到6的数字。 
+
+【PG】更多骰子
+
+【PG】如果您想模拟掷两个骰子的情况，您可能会想到按以下方式实现： 
+
+【PG】毕竟，两个骰子的总和可以是从2到12的任意一个数字，对吧？是和不是。您将获得从2到12之间的随机数字，但不是以从1到6中随机选择两个数字然后将它们加起来的方式得到的。这行代码的作用就像抛一个11面的大骰子，而不是掷两个6面的骰子。但是有什么区别呢？这涉及到一个概率的主题。最简单的方式是试一下看看有什么区别。
+
+【PG】我们可以多次掷骰子并跟踪每种总数出现的次数。我们可以使用循环和列表来完成这个任务。循环将掷骰子，而列表将记录每种总数出现的次数。让我们首先看一下按照清单 23.1 中所示的方式掷单个11面的骰子。
+
+【PG】import random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+for i in range(1000):
+    dice_total = random.randint(2, 12)
+    totals[dice_total] += 1  
+
+for i in range (2, 13):    
+    print "total", i, "came up", totals[i], "times"
+
+【PG】列表的索引从0到12，但我们不使用前两个，因为我们不关心0或1的总数（它们永远不会出现）。当我们得到一个结果时，我们添加1到该列表项。如果总数为7，则我们将1添加到 totals[7]。因此，totals[2]是我们得到2的次数，totals[3]是我们得到3的次数，以此类推。
+
+【PG】如果您运行此代码，您将获得下面这种输出：
+
+【PG】清单 23.1 掷单个11面的骰子 1,000 次。
+
+【PG】two_dice = random.randint(2, 12)
+
+【PG】列表有13个项目，从0到12进行索引B。
+
+【PG】将此结果的计数添加1C。
+
+【PG】总共2出现95次
+
+【PG】总共3出现81次
+
+【PG】总共4出现85次
+
+【PG】总共5出现86次
+
+【PG】总共6出现100次
+
+【PG】总共7出现85次
+
+【PG】总共8出现94次
+
+【PG】总共9出现98次
+
+【PG】总共10出现93次
+
+【PG】总共11出现84次
+
+【PG】总共12出现99此

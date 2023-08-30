@@ -1,0 +1,82 @@
+【PG】24.5　把时间保存到文件　　 355
+
+【PG】346 Hello World!
+Notice how the time doesn’t just 
+have seconds, it has fractions of a second:
+On my computer, the last three digits will always be 0 because my operating system’s 
+clock only goes to milliseconds (thousandths of  a second). But that’s plenty precise enough 
+for me!
+
+【PG】It’s important to know that, although it looks li ke a float, the seconds are actually stored as 
+a number of seconds (an integer) and a number of microseconds (an integer): 44 seconds 
+and 343000 microseconds. To make this into a float, you need a little formula. Assuming you 
+have a time object called some_time , and you want the number of seconds as a float, here’s 
+what the formula looks like:
+The float()  function is used to make sure we don’t get 
+caught by the integer-division gotcha.
+
+【PG】You can use the now()  method and a timedelta  object to 
+test your typing speed. Th e program in listing 24.2 
+displays a random message, and the user has to type the 
+same message in. The program times how long it takes to 
+type it in, and then calculates the typing speed. 
+Give it a try.
+import time, datetime, random
+messages = [
+    "Of all the trees we could've hit, we had to get one that hits back.",    "If he doesn't stop trying to save your life he's going to kill you.",
+    "It is our choices that show what we truly are, far more than our abilities.",
+    "I am a wizard, not a baboon brandishing a stick.",    "Greatness inspires envy, envy engenders spite, spite spawns lies.",
+    "In dreams, we enter a world that's entirely our own.",
+    "It is my belief that the truth is generally preferable to lies.",    "Dawn seemed to follow midnight with indecent haste."
+    ]
+print "Typing speed test. Type the following message. I will time you."
+time.sleep(2)
+print "\nReady..."
+time.sleep(1)
+print "\nSet..."
+time.sleep(1)
+print "\nGo:"
+
+【PG】seconds_float = some_time.seconds + some_time.microseconds / float(1000000)
+Listing 24.2 Measuring time differences—typing speed test44.343000
+Uses time  module for 
+the sleep()  function
+Prints instructions
+message = random.choice(messages)
+print "\n " + message
+start_time = datetime.datetime.now()
+typing = raw_input('>')
+end_time = datetime.datetime.now()
+diff = end_time - start_time
+typing_time = diff.seconds + diff.microseconds / float(1000000)
+cps = len(message) / typing_time
+wpm = cps * 60 / 5.0
+print "\nYou typed %i characters in %.1f seconds." % (len(message),
+                              typing_time)
+print "That's %.2f chars per sec, or %.1f words per minute" %(cps, wpm)
+if typing == message:
+    print "You didn't make any mistakes."
+else:    
+    print "But, you made at least one mistake."
+
+【PG】There’s one more thing you should know about timedelta  objects. Unlike datetime  objects, 
+which have year, month, day, hour, minute, second (and microseconds), a timedelta  object 
+only has days, seconds, and microseconds. If you want the months or years, you have to cal-
+culate them from the number of days. If you want minutes or hours, you have to calculate 
+them from the seconds.
+
+【PG】Saving time to a file
+As we mentioned at the start of the chapter, sometimes we need to save a time value to a 
+file (on the hard disk) so it can be saved even when the program isn’t running. If you save 
+the now()  time whenever a program finishes, you can check the time when the program 
+starts again and print a message like this:
+
+【PG】Of course, most programs don’t do that, but there are some programs that need to know 
+how long they have been idle, or not running. One example is a Virtual Pet program. Just 
+like the virtual pet keychains you can buy, you might want the program to keep track of 
+time even when you’re not using it. So, for example, if you end the program and then come 
+back to it two days later, your virtual pet should be very hungry! The only way for the pro-gram to know how hungry the pet should be is for it to know how much time has passed 
+since the last time it was fed. That incl udes the time the program was shut down.
+
+【PG】There are a couple of ways we could save the time to a file. We could just write a string to 
+the file, like this: It has been 2 days, 7 hours, 23 minutes since you last used this program.

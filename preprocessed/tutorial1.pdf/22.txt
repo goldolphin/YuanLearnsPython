@@ -1,6 +1,7 @@
-【段落编号1】第 2 版致谢
-【段落编号2】在更新这本书的过程中， 很多曾为第 1版的问世作出贡献的人再次帮助了我。
-【段落编号3】除了前面列出来的那些人以外， 我们还要感谢帮忙审校本书第 2版的人们：Ben Ooms、Brian T. Young 、Cody Roseborough 、Dave Briccetti 、Elizabet Gordon 、Iris Faraway、Mason Jenkins、Rick Gordon、Shawn Stebner 和Zachary Young。
-【段落编号4】此外还要感谢 Ignacio Beltran-Torres 和Daniel Soltis， 他们在这一版出版之前对最终的手稿做了非常仔细的技术校对。
-【段落编号5】最后，我们还要感谢 Manning 出版公司的所有员工， 是他们让这一版比第 1版更胜一筹。
-【段落编号6】图灵社区会员 FreeLink 专享 尊重版权
+【PG】第 2 版致谢
+
+在更新这本书的过程中，很多曾为第 1版的问世作出贡献的人再次帮助了我。除了前面列出来的那些人以外，我们还要感谢帮忙审校本书第 2版的人们：Ben Ooms、Brian T. Young、Cody Roseborough、Dave Briccetti、Elizabet Gordon、Iris Faraway、Mason Jenkins、Rick Gordon、Shawn Stebner和Zachary Young。此外还要感谢 Ignacio Beltran-Torres 和Daniel Soltis，他们在这一版出版之前对最终的手稿做了非常仔细的技术校对。
+
+【PG】最后，我们还要感谢 Manning 出版公司的所有员工，是他们让这一版比第 1版更胜一筹。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

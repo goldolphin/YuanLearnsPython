@@ -1,0 +1,77 @@
+【PG】19.7　更多声音　　 255
+
+【PG】还可以在新的一条命开始时增加一个声音。 这种情况在代码清单 18-5的最后 3
+行代码发生（ 也就是else块中） 。这一次我们会在开始新的一条命之前留出一点时
+间来播放音效：
+else:
+   pygame.time.delay(1000)   new_life.play()
+   myBall.rect.topleft = [50, 50]   screen.blit(myBall.image, myBall.rect)   pygame.display.ﬂip()   pygame.time.delay(1000)
+
+【PG】与原来的程序不同， 现在不是等待 2秒，我们会等待 1秒（1000 毫秒） ，再播放
+声音，然后在开始下一轮之前再等待 1秒。 可以试试看，听听效果如何。
+
+【PG】这里还要增加一个音效 ：游 戏结束时需要播放一个声音。 这种情况在代码清单
+18-5的第 65行发生 （if lives == 0: ） 。在这里增加下面这行代码，就会播放 bye
+声音：if lives == 0:
+    bye.play()
+试试看效果如何。
+
+【PG】At the end of 
+the game, the bye sound 
+and the splat sound started 
+playing over and over!
+
+【PG】Next we can add the code to play a sound when the player misses the ball and loses a life. 
+We detect this in the main while  loop, in line 67 of the original listing 18.5 ( if
+myBall.rect.top >= screen.get_rect().bottom: ). We just need to add a line like this:
+
+【PG】Plays the sound for missing 
+a ball and losing a life
+if myBall.rect.top >= screen.get_rect().bottom:
+        splat.play()
+        # lose a life if the ball hits the bottom
+        lives = lives - 1
+
+【PG】We can also add a sound when the new life starts. This happens in the last three lines of list-
+ing 18.5, in the else  block. This time we’ll give our sound effect a little time to play before 
+we start the new life:
+
+else:
+    pygame.time.delay(1000)            
+    new_life.play()    myBall.rect.topleft = [50, 50]
+    screen.blit(myBall.image, myBall.rect)
+    pygame.display.flip()    pygame.time.delay(1000) 
+
+【PG】Instead of waiting two seconds (like we did in the original program), we wait one second 
+(1000 milliseconds), play the sound, and then wait another second before starting the new 
+turn. Give it a try and see how it sounds. 
+
+【PG】There’s one more sound effect to add, and that’s when the game is over. This happens in 
+line 69 of listing 18.5 ( if lives == 0: ). 
+Add the line to play the bye sound here:
+if lives == 0:
+    bye.play() 
+
+【PG】Try this and see how it works.
+
+【PG】Oops! We forgot something.  The code that plays the bye 
+sound and the splat  sound is in the main while  loop, 
+which doesn’t stop until the Pygame window is closed, so 
+it keeps playing over and over as long as the while  loop 
+runs! We need to add something to make sure it only plays once. 
+
+【PG】当漏球而丢掉一条
+命时播放声音
+if myBall.rect.top >= screen.get_rect().bottom:
+        splat.play()
+        # lose a life if the ball hits the bottom
+        lives = lives - 1
+
+【PG】游戏结束时，开始没完没了
+地响起 bye和splat声！
+
+【PG】唉呀！我们忘了一件事。 播放bye声音
+和splat声音的代码放在主 while循环中，
+Pygame窗口关闭前它们是不会停止的， 所 以只
+要while循环在运行， 声音就会反复播放！ 需要
+增加一些代码来确保它只会播放一次。

@@ -1,22 +1,74 @@
 【PG】6.4　选择你的口味　　 57
-EasyGui msgbox就是包含一条消息和一个 OK按钮的对话框。 不
+【PG】EasyGui msgbox就是包含一条消息和一个 OK按钮的对话框。 不
 过还可以有不同类型的对话框，包含更多的按钮和其他内容。
 
 【PG】6.4　选择你的口味
-我们将举一个挑选冰淇淋口味的例子来学习利用 EasyGui从用户
+【PG】我们将举一个挑选冰淇淋口味的例子来学习利用 EasyGui从用户
 得到输入（冰淇淋口味）的不同方法。
 
 【PG】有多个按钮的对话框
 下面来创建一个包含多个按钮的对话框（ 如消息框 ） 。具体做法
 是使用一个按钮框（button box ，buttonbox ） 。下面来建立一个程序，
 而不是在交互模式中完成。
-在IDLE中新建一个文件 。键入代码清单 6-1中的程序。
+
+【PG】在IDLE中新建一个文件 。键入代码清单 6-1中的程序。
+【PG】代码清单 6-1　使用按钮得到输入
+55  CHAPTER  6 GUIs—Graphical User Interfaces
+The 'OK'  part was Python and EasyGui telling you that the user clicked the OK button. 
+EasyGui gives you back information to tell you what the user did in the GUI—what 
+button she clicked, what she typed, etc. Yo u can give this response a name (assign it 
+to a variable). Try this:
+Click OK on the message 
+box to close it. Then type this:
+Now the user’s response, OK, has the variable name user_response . Let’s look at a few other 
+ways to get input with EasyGui.
+
+【PG】The message box that we just saw is real ly just one example of something called a dialog 
+box. Dialog boxes are GUI elements that are used to tell the user something or get some 
+input from the user. The input might be a button click (like OK), or a filename, or some text 
+(a string).The EasyGui 
+msgbox  is just a dialog box with a message and a single button, OK. But we can 
+have different kinds of dialog boxes with more buttons and other things.
 
 【PG】Pick your flavor
-We’re going to use the example of choosing your favorite flavor of ice cream 
+【PG】We’re going to use the example of choosing your favorite flavor of ice cream 
 to look at some different ways to get input (the ice cream flavor) from the user with EasyGui.
 
 【PG】Dialog box with multiple buttons
-Let’s make a dialog box (like a message box) with more than one button. The 
+【PG】Let’s make a dialog box (like a message box) with more than one button. The 
 way to do this is with a button box  (buttonbox ). Let’s make a program, rather 
 than do it in interactive mode.
+
+【PG】Start a new file in SPE (or another text ed itor if you’re not using SPE). Type in 
+the program in listing 6.1.
+import easygui
+flavor = easygui.buttonbox("What is your favorite ice cream flavor?",
+                  choices = ['Vanilla', 'Chocolate', 'Strawberry'] )   
+easygui.msgbox ("You picked " + flavor)
+
+【PG】Listing 6.1 Getting input using buttons
+>>> user_response = easygui.msgbox("Hello there!")
+>>> print user_response
+OK
+>>>
+
+【PG】A list of 
+choices选择 
+列表
+方括号中的代码称为一个列表（list） 。 我们还没有讨论列表， 这部分内容将在第
+12章介绍。 对 现在来说， 只需要键入
+这些代码， 让 这个 EasyGui程序能够
+工作（如 果你确实很好奇， 也可以跳
+到第 12章看个究竟 ……） 。
+
+【PG】保存文件 （我 的文件就命名为ice_cream1.py） ， 运行这个程序， 你
+就会看到右边这个界面。
+【PG】然后，根 据你选择的口味， 你会
+看到右图这样的结果了。
+
+【PG】这是怎么做到的 ？用户点击的
+按钮的标签就是输入 （ input） 。我们为这个输入指定了一个变量名， 在这里就是
+ﬂavor。这就像使用 raw_input()，只不过用户并不是键入， 而是点击一个按钮。
+这正是 GUI的关键 。　
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

@@ -1,0 +1,154 @@
+【PG】214 第 17章 动画精灵和碰撞检测
+
+【PG】206 Hello World!
+
+【PG】A move() method
+Because we’re creating the balls as instances of MyBallClass, it makes sense to move them using a class method. So let’s create a new class method called move():
+Sprites (actually the rects within them) have a built-in method called move(). This method requires a parameter called speed to tell it how far (that is, how fast) to move the object. Because we’re dealing with 2-D graphics, the speed is a list of two numbers, one for x-speed and one for y-speed. We also check for the ball hitting the edges of the window, so we can “bounce” the balls around the screen.
+
+Let’s change the MyBallClass definition to add the speed property and the move() method:
+
+Notice the change in line 2 (def __init__(self, image_file, location, speed):) and the addition of line 7 (self.speed = speed), as well as the new move() method in lines 9 to 15.
+
+Now when we create each instance of a ball, we need to tell it the speed as well as the image file and location:
+
+def move(self):
+    self.rect = self.rect.move(self.speed)
+    if self.rect.left < 0 or self.rect.right > width:
+        self.speed[0] = -self.speed[0]
+    if self.rect.top < 0 or self.rect.bottom > height:
+        self.speed[1] = -self.speed[1]
+        
+class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, location, speed):
+        pygame.sprite.Sprite.__init__(self)  #call Sprite initializer       
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location        
+        self.speed = speed
+           
+    def move(self):
+        self.rect = self.rect.move(self.speed)
+        if self.rect.left < 0 or self.rect.right > width:
+            self.speed[0] = -self.speed[0]
+        if self.rect.top < 0 or self.rect.bottom > height:
+            self.speed[1] = -self.speed[1]
+
+【PG】Checks for hitting sides of the window, and if so, reverses the x-speed
+Checks for hitting top or bottom of the window, and if so, reverses the y-speed
+Adds the location argument
+Adds this line to create a speed attribute for the ball
+Adds this method for moving the ball
+
+speed = [2, 2]
+ball = MyBallClass(img_file, location, speed)
+
+前面的代码把所有球都创建为相同的速度（相同方向），不过如果球的移动有些随机性可能更有意思。下面使用random.choice()函数来设置速度，如下：
+
+【PG】207 CHAPTER 17 Sprites and Collision Detection
+The preceding code will create all the balls with the same speed (same direction), but it would be fun to see the balls move around a bit randomly. Let’s use the random.choice() function to set the speed, like this:
+
+This will choose either -2 or 2 for both the x and y speed.
+
+Listing 17.2 shows the complete program.
+
+import sys, pygame
+from random import *
+#-----ball subclass definition -----------------------------
+class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, location, speed):
+        pygame.sprite.Sprite.__init__(self)  #call Sprite initializer       
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        self.speed = speed
+    def move(self):
+        self.rect = self.rect.move(self.speed)        
+        if self.rect.left < 0 or self.rect.right > width:                 
+            self.speed[0] = -self.speed[0]                                
+        if self.rect.top < 0 or self.rect.bottom > height:                
+            self.speed[1] = -self.speed[1]                                
+#----- Main Program -----------------------------
+size = width, height = 640, 480
+screen = pygame.display.set_mode(size)
+screen.fill([255, 255, 255])
+img_file = "beach_ball.png"
+balls = []
+for row in range(0, 3):
+    for column in range(0, 3):
+        location = [column * 180 + 10, row * 180 + 10]
+        speed = [choice([-2, 2]), choice([-2, 2])]
+        ball = MyBallClass(img_file, location, speed)
+        balls.append(ball)
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: 
+            sys.exit()
+    pygame.time.delay(20)
+    screen.fill([255, 255, 255])    
+    for ball in balls:
+        ball.move()
+        screen.blit(ball.image, ball.rect)    
+    pygame.display.flip()
+
+Listing 17.2 A program for moving balls around using sprites
+
+from random import *
+speed = [choice([-2, 2]), choice([-2, 2])]
+Creates list to keep track of balls
+Adds each ball to the list as it’s created
+Redraws the screen
+
+This will choose either -2 or 2 for both the x and y speed.
+代码清单17-2给出了完整的程序。
+
+【PG】代码清单17-2 使用动画精灵移动球的程序
+
+import sys, pygame
+from random import *
+
+class MyBallClass(pygame.sprite.Sprite):    
+    def __init__(self, image_file, location, speed):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect( )
+        self.rect.left, self.rect.top = location
+        self.speed = speed
+     
+    def move(self):        
+        self.rect = self.rect.move(self.speed )
+        if self.rect.left < 0 or self.rect.right > width:                 
+            self.speed[0] = -self.speed[0]                                
+        
+        if self.rect.top < 0 or self.rect.bottom > height:                
+            self.speed[1] = -self.speed[1]   
+    
+size = width, height = 640, 480
+screen = pygame.display.set_mode(size)
+screen.fill([255, 255, 255])
+img_file = "beach_ball.png"
+balls = []
+for row in range(0, 3):
+    for column in range(0, 3):
+        location = [column * 180 + 10, row * 180 + 10]
+        speed = [choice([-2, 2]), choice([-2, 2])]        
+        ball = MyBallClass(img_file, location, speed)
+        balls.append(ball)    
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: 
+            running = False    
+    pygame.time.delay(20)
+    screen.fill([255, 255, 255])                                  
+    for ball in balls:                                             
+        ball.move()                                            
+        screen.blit(ball.image, ball.rect) 
+    pygame.display.flip()                                             
+pygame.quit()
+
+创建各个球时把球增加到列表
+
+Ball类定义
+
+图灵社区会员 FreeLink 专享 尊重版权

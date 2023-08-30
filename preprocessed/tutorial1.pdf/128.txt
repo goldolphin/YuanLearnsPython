@@ -1,0 +1,47 @@
+【PG】102　　第 10章　游戏时间到了
+
+【PG】代码清单 10-1的代码已经放在 \examples\skier 文件夹中， 所以如果你键入的程序无法执行， 或者不想完全自己键入， 也可以使用这个文件。 不过不管你是否相信，与简单地打开和查看代码清单相比，亲手键入这些代码会让你有更多收获。
+
+【PG】在后面的几章 ，我们将会学习用于 Skier中的所有关键字和技术。 本书第 25章将用一整章来详细解释 Skier程 序的工作原理。 但是现在，你只需要键入这个程序，试着运行看看。
+
+【PG】86 Hello World!
+for i in range (1, 6):
+    print
+    print 'i =', i,
+    print 'Hello, how',    if i == 3:
+        continue
+    print 'are you today?'
+If we run this program, the output looks like this:
+
+Notice that, the third time through the loop (when i == 3 ), the body of the loop didn’t 
+finish—it jumped ahead to the next iteration ( i == 4 ). That was the continue  statement 
+at work. It works the same way in while  loops.
+
+【PG】Bailing out— break
+What if we want to jump out of the loop completely—never finish counting, or give up waiting for the end condition? The break  statement does that.
+
+Let’s change only line 6 of listing 8.9, replacing continue  with break , and rerun the program to see what happens.
+
+This time, the loop didn’t just skip the rest of iteration 3; it stopped altogether. That’s what 
+break  does. It works the same way in while  loops. 
+
+【PG】I should tell you that some people think using break  and continue  is a bad idea. Personally, I don’t think they’re bad, but I rarely use them. I thought I’d tell you about break  and continue  just in case you ever need them. Listing 8.9 Using continue  in a loop
+
+>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?i = 2 Hello how are you today?
+i = 3 Hello how
+i = 4 Hello how are you today?
+i = 5 Hello how are you today?
+>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?
+i = 2 Hello how are you today?
+i = 3 Hello how
+
+【PG】动手试一试
+这一章你要做的只是键入这个 Skier程序（代码清单 10-1） ，再运行试试看。 如果运行时遇到错误，看看错误消息，试着找出错误究竟出现在哪里。
+
+祝你好运！
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

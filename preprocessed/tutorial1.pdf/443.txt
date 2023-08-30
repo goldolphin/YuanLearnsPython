@@ -1,0 +1,52 @@
+【PG】附录 C　自测题答案　　 417
+
+【PG】第15章 测试题
+
+【PG】1. 使用模块有下面这些好处：
+可以只写一次代码，并在多个程序中使用；
+你可以使用其他人写的模块；
+代码文件会更小，所以更容易发现代码中的问题；
+可以只使用完成工作真正需要的部分（模块） 。
+
+【PG】2. 要创建模块，需要编写一些 Python代码并保存在文件中。
+
+【PG】3. 想使用一个模块时，要用 import关键字导入。
+
+【PG】4. 导入模块与导入命名空间是一样的。
+
+【PG】5. 导入 time模块从而能访问这个模块中的所有名字有两种方法 ，
+ 分别是：
+
+【PG】Try it out
+
+【PG】1To write a module, just put the code for your “big name” function in a file—something 
+like bigname.py . Then, to import the module and call the function, do 
+something like this:
+
+or you could do this:
+
+【PG】2To bring c_to_f()  into the main 
+program’s namespace, you can do this:
+
+or this:
+
+【PG】3A short program to print five random 
+integers from 1 to 20 would look like this:
+
+【PG】4A short program that prints out a random decimal number every 3 seconds for 30 sec-onds would look like this:
+
+【PG】动手试一试
+
+【PG】1.  要编写一个模块， 只需要把“ 用大写字母打印名字 ”函数中的代码放在一个
+文件中，比如 bigname.py 文件 。然后，要导入这个模块并调用函数，
+ 可以这样做：
+
+或者这样做：
+
+【PG】2. 要把c_to_f()导入主程序的命名空间，可以这样做：
+
+或者这样做：
+
+【PG】3. 下面这个小程序会打印从 1到20的5个随机整数：
+
+【PG】4. 下面这个小程序会工作 30秒，每 3秒打印一个随机小数：

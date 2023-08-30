@@ -1,0 +1,76 @@
+【PG】12.15　双重列表 ： 数据表　　 131
+
+【PG】有时还需要一个包含行和列的表。
+
+【PG】Mutable and immutable
+
+【PG】If you remember back to chapter 2, we said that you couldn’t actually change a number or string, you could only change what number or string a name  was assigned to (in other words, move the tag). But lists are one of the types in Python that can be  changed. As we just saw, lists can have items appended or dele ted, and the items can be sorted or reversed.
+
+【PG】These two different kinds of variables are called mutable  and immutable . Mutable  just means “able to be changed”  or “changeable. ” Immutable  means “not able to be changed” or “unchangeable. ” In Python, numbers and strings are immutable (cannot be changed), and lists are mutable (can be changed).
+
+【PG】Tuple—an immutable list
+
+【PG】There are times when you don’t want a list to be changeable. So, is there an immutable kind of list in Python? The answer is yes. There is a type called a tuple , which is exactly that, an immutable (unchangeable) list. You make one like this:
+
+【PG】You use round brackets, instead of the square ones that lists use. Because tuples are immutable (unchangeable), you can’t do things like sort them or append or delete items. Once you create a tuple with a set of items, it stays that way.
+
+【PG】Lists of lists: tables of data
+
+【PG】When thinking about how data is stored in a program, it’s useful to visualize it. A variable has a single value. A list is like a row of values strung together. Sometimes you need a table  with rows and columns.
+
+【PG】my_tuple = ("red", "green", "blue")
+myFriends Kim Curtis Shaun Jenn Karla classMarks Math Science Reading Spelling
+55 656361 97 9577 81 72 886792 TomJoe BethmyTeacher Mr. Wilson
+
+【PG】Mutable and immutable
+
+【PG】If you remember back to chapter 2, we said that you couldn’t actually change a number or string, you could only change what number or string a name  was assigned to (in other words, move the tag). But lists are one of the types in Python that can be  changed. As we just saw, lists can have items appended or dele ted, and the items can be sorted or reversed.
+
+【PG】These two different kinds of variables are called mutable  and immutable . Mutable  just means “able to be changed”  or “changeable. ” Immutable  means “not able to be changed” or “unchangeable. ” In Python, numbers and strings are immutable (cannot be changed), and lists are mutable (can be changed).
+
+【PG】Tuple—an immutable list
+
+【PG】There are times when you don’t want a list to be changeable. So, is there an immutable kind of list in Python? The answer is yes. There is a type called a tuple , which is exactly that, an immutable (unchangeable) list. You make one like this:
+
+【PG】You use round brackets, instead of the square ones that lists use. Because tuples are immutable (unchangeable), you can’t do things like sort them or append or delete items. Once you create a tuple with a set of items, it stays that way.
+
+【PG】Lists of lists: tables of data
+
+【PG】When thinking about how data is stored in a program, it’s useful to visualize it. A variable has a single value. A list is like a row of values strung together. Sometimes you need a table  with rows and columns.
+
+【PG】my_tuple = ("red", "green", "blue")
+myFriends Kim Curtis Shaun Jenn Karla classMarks Math Science Reading Spelling
+55 656361 97 9577 81 72 886792 TomJoe BethmyTeacher Mr. Wilson
+
+【PG】如何保存数据表呢？ 我们已经知道， 列表中包含多个元素， 可以把每个学生的成绩放在一个列表中，像这样：
+
+>>> joeMarks = [55, 63, 77, 81]
+>>> tomMarks = [65, 61, 67, 72]
+>>> bethMarks = [97, 95, 92, 88]
+
+【PG】或者对应每个课程使用一个列表， 如下：
+
+>>> mathMarks = [55, 65, 97]
+>>> scienceMarks = [63, 61, 95]
+>>> readingMarks = [77, 67, 92]
+>>> spellingMarks = [81, 72, 88]
+
+【PG】不过我们可能希望把所有数据都收集到一个数据结构中。
+
+【PG】术语箱
+
+【PG】数据结构（data structure）是一种在程序中收集、存储或表示数据的方法。数据结构包括变量、列表和其他一些我们还没有讨论到的内容。实际上，数据结构这个词就表示程序中数据的组织方式。
+
+【PG】要为我们的成绩建立一个数据结构，可以这样做：
+
+>>> classMarks = [joeMarks, tomMarks, bethMarks]
+>>> print classMarks
+[[55, 63, 77, 81], [65, 61, 67, 72], [97, 95, 92, 88]]
+
+【PG】这会得到一个元素列表， 其中每个元素本身又是一个列表。 我们创建了一个“列表的列表”  （list of list） ，也就是双重列表。 classMarks 列表中的每个元素本身又都是一个列表。
+
+【PG】还可以直接创建 classMarks ，而不需要先创建 joeMarks 、tomMarks 和 bethMarks ，如下：
+
+【PG】列表就像是把一行值串在一起。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

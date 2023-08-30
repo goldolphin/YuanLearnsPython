@@ -1,0 +1,51 @@
+【PG】第 16章 图形
+
+【PG】代码清单 16-1 创建一个 Pygame 窗口
+
+【PG】That’s just like our first programs, although it wasn’t a problem then, because you could see the output in the IDLE window even after the program ran. 
+
+【PG】Pygame and IDLE
+
+【PG】Remember when we used EasyGui to make our first GUI programs, and I mentioned that some people have trouble using EasyGui with IDLE? Well, the same goes for Pygame and IDLE. On my system, I can’t run some Pygame programs properly from IDLE. For the rest of this chapter, and for any other programs in the rest of the book that use Pygame, I recommend you use SPE instead of IDLE, just like we did with EasyGui back in chapter 6. 
+
+【PG】The only thing you might have to do differently is use the Run in Terminal option (or Run in Terminal without arguments), instead of the normal Run option. Play around with it, experiment, and I’m sure you’ll figure it out. That’s a big part of what programming is about—figuring things out for yourself! 
+
+【PG】A Pygame window
+
+【PG】The first thing we need to do is make a window where we’ll start drawing our graphics. Listing 16.1 shows a very simple program that just makes a Pygame window.
+
+【PG】import pygame
+pygame.init()
+screen = pygame.display.set_mode([640, 480])
+
+【PG】Try running this program. What did you see? If you were looking closely, you might have seen a window (filled with black) pop on the screen very briefly. What’s up with that? 
+
+【PG】Well, Pygame is meant for making games. Games don’t just do things on their own—they have to interact with the player. So Pygame has something called an event loop that constantly checks for the user doing something, like pressing keys or moving the mouse. Pygame programs need to keep the event loop running all the time, and as soon as the event loop stops, the program stops. In our first Pygame program, we didn’t start the event loop, so the program stopped very soon after it started.
+
+【PG】That’s right. But in Pygame, the window only stays open while the program is running. So we have to keep it running. Listing 16.1 Making a Pygame window 
+
+【PG】试着运行这个程序。你看到了什么？取决于你使用的操作系统，你可能会看到屏幕非常迅速地弹出了一个窗口（填充为黑色）。你也可能发现弹出的窗口无法关闭。这是怎么回事？
+
+【PG】嗯，Pygame的作用就是为了建立游戏。游戏本身不做任何事情，只是与玩家交互。所以Pygame有一个事件循环（event loop）不断检查用户在做什么，比如按键、移动鼠标或关闭窗口。Pygame程序需要有个事件循环一直运行。在我们的第一个Pygame程序中，并没有启动事件循环，所以程序没有正常运行。
+
+【PG】要想保持Pygame事件循环一直运行，一种方法是使用while循环。我们希望这个循环可以随着程序的运行一直运行下去。因为Pygame程序通常没有菜单，所以用户要关闭程序的话，需要使用窗口右上角的×（Windows），或者左上角的关闭按钮（MacOS）。对Linux系统来说，关闭按钮的位置取决于使用的窗口管理器和GUI框架。但如果你在使用Linux，我想你应该知道怎么关闭窗口。
+
+【PG】下面的代码清单打开了一个Pygame窗口，并在用户关闭它之前一直保持运行状态：
+
+【PG】代码清单 16-2 使 Pygame 窗口正确工作
+
+【PG】import pygame
+pygame.init()
+screen = pygame.display.set_mode([640, 480])
+running  = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+pygame.quit()
+
+【PG】运行以上代码，你会看到一个正常工作的Pygame窗口，该窗口会在你尝试关闭时关闭。
+
+【PG】while循环中的语句到底是如何工作的呢？它使用了Pygame的事件循环。但这个话题我们留到第18章再讲，届时我们会讲解Pygame中的事件。
+
+【PG】图灵社区会员FreeLink专享 尊重版权

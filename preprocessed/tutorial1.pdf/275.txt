@@ -1,0 +1,48 @@
+【PG】19.3　播放声音　　 249
+
+我们还需要一个 while循环来保证 Pygame程序一直运行。 另外，尽管目前没有画任何图形， 但Pygame程 序仍然需要有一个窗口。 而且，在某些系统上， mixer初始化还需要一点时间 。如果播放声音太快 ，你可能只能听到声音的一部分 ，或者根本什么都听不到 。所以我们会等一会 ，直到mixer准备好。这个代码见代码清单 19-1。
+
+【PG】代码清单 19-1　尝试在 Pygame 中播放声音
+import pygame, sys
+pygame.init()                                           
+pygame.mixer.init( )
+screen = pygame.display.set_mode([640,480])                    
+pygame.time.delay(1000)                                          
+splat = pygame.mixer.Sound("splat.wav")                          
+splat.play()
+running = True                 
+while running:                                              
+    for event in pygame.event.get():                    
+        if event.type == pygame.QUIT:                     
+            running = False  
+pygame.quit( )
+
+初始化 Pygame 和mixer
+创建一个 Pygame窗口
+等1秒钟让 mixer完成初始化
+创建声音对象播放声音
+Pygame事件循环
+试着运行这个程序，看看它的效果如何。
+
+现在来使用 mixer.music 模块播放一些音乐。 只需要修改代码清单 19-1中的几行代码。新代码见代码清单 19-2 。
+
+【PG】代码清单 19-2　播放音乐
+import pygame, sys
+pygame.init( )
+pygame.mixer.init( )
+screen = pygame.display.set_mode([640,480] )
+pygame.time.delay(1000)
+pygame.mixer.music.load("bg_music.mp3")  
+pygame.mixer.music.play()        
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:             
+            running = False
+pygame.quit( )
+
+修改这两行代码
+
+再来试一试，确保你能听到音乐。 
+
+图灵社区会员 FreeLink 专享 尊重版权

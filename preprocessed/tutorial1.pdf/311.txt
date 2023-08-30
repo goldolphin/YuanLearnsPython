@@ -1,0 +1,107 @@
+【PG】21.3　在字符串中插入变量　　 285
+
+【PG】277  CHAPTER  21 Print Formatting and Strings
+When you run it, you should see output that’s nicely lined up, like this:
+How do we print a backslash?
+
+Because the backslash character (\) is used for special printing codes, how do we tell Python when we want to actually print a \ character, in stead of using it as part of a code? The trick is just to put two of them together:
+The first \ tells Python that something special is coming, and the second one tells Python what the special thing is: a \ character.
+
+【PG】Inserting variables in strings
+Up until now, when we wanted to put a variable in the middle of a string, we did something like this:
+If we ran that code, we’d get this:
+But there’s another way to insert variables into strings that gives us more control over how they’ll look, especially numbers. We can use format strings , which use the percent sign ( %). 
+Let’s say you want to insert a string variable in the middle of a print  statement, like we just did. The way to do it with format strings is like this:
+The 
+% sign is used in two places. It’s used in the middle of the string to say where the variable will go. Then it’s used again after the string to tell Python that the variable we want to insert in the string is coming next.>>> ====================== RESTART ======================
+>>>
+Number  Square  Cube1       1       1
+2       4       8
+3       9       274       16      64
+5       25      125
+6       36      2167       49      343
+8       64      512
+9       81      72910      100     1000
+>>>
+>>> print 'hi\\there'
+hi\there
+name = 'Warren Sande'
+print 'My name is', name, 'and I wrote this book.'
+My name is Warren Sande and I wrote this book.
+name  = 'Warren Sande'
+print 'My name is %s and I wrote this book' % name
+
+【PG】术语箱
+当你使用两个反斜线来打印一个反斜线字符时，第一个反斜线叫做“转义字符” （escape character） 。我们说第一个反斜线会将第二个反斜线“转义” ，这样第二个反斜线就会被当成普通字符输出，而不是当成特殊字符。
+
+【PG】21.3　在字符串中插入变量
+之前，如果我们想在字符串中间加变量，都是这样做的：
+
+【PG】277  CHAPTER  21 Print Formatting and Strings
+When you run it, you should see output that’s nicely lined up, like this:
+How do we print a backslash?
+
+Because the backslash character (\) is used for special printing codes, how do we tell Python when we want to actually print a \ character, in stead of using it as part of a code? The trick is just to put two of them together:
+The first \ tells Python that something special is coming, and the second one tells Python what the special thing is: a \ character.
+
+【PG】Inserting variables in strings
+Up until now, when we wanted to put a variable in the middle of a string, we did something like this:
+If we ran that code, we’d get this:
+But there’s another way to insert variables into strings that gives us more control over how they’ll look, especially numbers. We can use format strings , which use the percent sign ( %). 
+Let’s say you want to insert a string variable in the middle of a print  statement, like we just did. The way to do it with format strings is like this:
+The 
+% sign is used in two places. It’s used in the middle of the string to say where the variable will go. Then it’s used again after the string to tell Python that the variable we want to insert in the string is coming next.>>> ====================== RESTART ======================
+>>>
+Number  Square  Cube1       1       1
+2       4       8
+3       9       274       16      64
+5       25      125
+6       36      2167       49      343
+8       64      512
+9       81      72910      100     1000
+>>>
+>>> print 'hi\\there'
+hi\there
+name = 'Warren Sande'
+print 'My name is', name, 'and I wrote this book.'
+My name is Warren Sande and I wrote this book.
+name  = 'Warren Sande'
+print 'My name is %s and I wrote this book' % name
+
+运行这个代码时，会得到：
+
+【PG】277  CHAPTER  21 Print Formatting and Strings
+When you run it, you should see output that’s nicely lined up, like this:
+How do we print a backslash?
+
+Because the backslash character (\) is used for special printing codes, how do we tell Python when we want to actually print a \ character, in stead of using it as part of a code? The trick is just to put two of them together:
+The first \ tells Python that something special is coming, and the second one tells Python what the special thing is: a \ character.
+
+【PG】Inserting variables in strings
+Up until now, when we wanted to put a variable in the middle of a string, we did something like this:
+If we ran that code, we’d get this:
+But there’s another way to insert variables into strings that gives us more control over how they’ll look, especially numbers. We can use format strings , which use the percent sign ( %). 
+Let’s say you want to insert a string variable in the middle of a print  statement, like we just did. The way to do it with format strings is like this:
+The 
+% sign is used in two places. It’s used in the middle of the string to say where the variable will go. Then it’s used again after the string to tell Python that the variable we want to insert in the string is coming next.>>> ====================== RESTART ======================
+>>>
+Number  Square  Cube1       1       1
+2       4       8
+3       9       274       16      64
+5       25      125
+6       36      2167       49      343
+8       64      512
+9       81      72910      100     1000
+>>>
+>>> print 'hi\\there'
+hi\there
+name = 'Warren Sande'
+print 'My name is', name, 'and I wrote this book.'
+My name is Warren Sande and I wrote this book.
+name  = 'Warren Sande'
+print 'My name is %s and I wrote this book' % name
+
+不过要在字符串中插入变量还有一种方法， 利用这种方法， 可以更好地控制变量（特别是数字 ）的显示。 我们可以使用格式字符串（format string） ， 其中使用了百分号（%） 。下面假设希望在print语句中间插入一个字符串变量， 就像前面一样。
+
+【PG】术语箱
+当你使用两个反斜线来打印一个反斜线字符时，第一个反斜线叫做“转义字符” （escape character） 。我们说第一个反斜线会将第二个反斜线“转义” ，这样第二个反斜线就会被当成普通字符输出，而不是当成特殊字符。

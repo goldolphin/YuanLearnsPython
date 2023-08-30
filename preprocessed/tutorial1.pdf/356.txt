@@ -1,0 +1,58 @@
+【PG】第 23章　碰运气——随机性
+
+【PG】rank_id是从1到13的数，其中1=A，2=23=3，10=10，11=J，12=Q，13=K。增加这两个属性的原因是，这样我们可以很容易地使用一个嵌套for循环建立一副52张牌。可以用一个内循环对应点数（1到13），另外用一个外循环对应花色（1到4）。纸牌对象的__init__()方法根据suit_id和rank_id创建其他属性（花色、点数和分值）。这样还可以很容易地比较两张牌的点数，看哪一张牌的点数更大。
+
+【PG】还应当另外增加两个属性，来方便在程序中使用这个纸牌对象。程序需要打印纸牌时，它可能希望打印类似“4H”或“4 of Hearts”（红桃4）。对于花牌，可能打印成“JD”或“Jack of Diamonds”（方块J）。我们将增加属性short_name和long_name，这样程序很容易就可以打印纸牌的不同描述（包括短名和长名）。
+
+【PG】下面为纸牌建立一个类。见代码清单23-4。
+
+【PG】class Card: 
+    def __init__(self, suit_id, rank_id):
+        self.rank_id = rank_id
+        self.suit_id = suit_id
+        
+        if self.rank_id == 1:
+            self.rank = "Ace"
+            self.value = 1
+        elif self.rank_id == 11:
+            self.rank = "Jack"
+            self.value = 10 
+        elif self.rank_id == 12:
+            self.rank = "Queen"
+            self.value = 10 
+        elif self.rank_id == 13:
+            self.rank = "King"
+            self.value = 10 
+        elif 2 <= self.rank_id <= 10:
+            self.rank = str(self.rank_id)
+            self.value = self.rank_id 
+        else:
+            self.rank = "RankError"
+            self.value = -1
+            
+        if self.suit_id == 1:
+            self.suit = "Diamonds"
+        elif self.suit_id == 2:
+            self.suit = "Hearts"
+        elif self.suit_id == 3:
+            self.suit = "Spades"
+        elif self.suit_id == 4:
+            self.suit = "Clubs" 
+        else:
+            self.suit = "SuitError"
+        
+        self.short_name = self.rank[0] + self.suit[0] 
+        if self.rank == '10':
+            self.short_name = self.rank + self.suit[0] 
+        self.long_name = self.rank + " of " + self.suit
+
+【PG】Listing 23.4 isn’t a complete program. It’s just the class definition for our Card class. Because this is something we could use over and over in different programs, maybe we should make it a module. Save the code in listing 23.4 as cards.py.
+
+【PG】代码清单23-4 The Card class有一些错误检查，确保rank_id和suit_id在范围内并且是整数。如果不是，当在程序中显示纸牌时，你会看到类似“7 of SuitError”或“RankError of Clubs”的东西。
+
+【PG】现在我们需要制作一些纸牌实例，事实上，一整副纸牌会很好！为了测试我们的Card类，让我们编写一个程序，创建一副52张牌，然后随机选择5张牌，并显示它们的属性。代码清单23-5 里有一些相关代码。
+
+【PG】import random
+from cards import Card
+
+【PG】代码清单23-5 Making a deck of cards创建rank和value属性，执行了一些错误检查，创建了suit属性，导入了我们的cards模块。

@@ -1,0 +1,92 @@
+【PG】22.6　文本文件和二进制文件　　 307
+
+【PG】这只会读文件的第一行 。如果再在同一个程序中使用 readline() ，Python会记
+住目前在什么位置 。所以，第二次使用时 ，你会得到文件的第二行 。代码清单 22-2显
+示了这样的一个例子 。
+
+【PG】代码清单 22-2　多次使用 readline()
+298 Hello World!
+Why? Why not 
+leave it open so 
+we can access 
+it later?
+
+【PG】There’s one more thing we need to add to the program in listing 22.1. When we’re 
+done with the file, we should close it:
+                     Well, Carter, if another program needs to use the file             and our program hasn’t closed it, the other program 
+       might not be able to access the file. It’s generally a good 
+       idea to close files when you’re done using them.
+
+【PG】Once the file is in our program as a list of strings, we can do 
+whatever we want with it. This list is just like any other Python 
+list, so we can loop through it, sort it, append items, delete items, and so on. The strings are 
+like any other strings, so we can print them, convert them to 
+int or float  (if they contain 
+numbers), use them as labels in a GUI, or do anything else that you’d do with a string.
+
+【PG】Reading one line at a time
+The readlines()  method reads all the lines of a file , right up until the end of the file. 
+If you want to read just one line at a time, you can use the readline()  method, 
+like this:
+
+【PG】This will read just the first line of the file. If you use readline()  again in the same program, 
+Python remembers where it was. So the second time you use it, you’ll get the second line of 
+the file. Listing 22.2 shows an example of this.
+
+【PG】my_file = open('notes.txt', 'r')
+first_line = my_file.readline()
+second_line = my_file.readline()
+print "first line = ", first_line
+print "second line = ", second_line
+my_file.close()
+
+【PG】The output of that program would look like this:
+Listing 22.2 Using readline()  more than once
+first_line = my_file.readline()
+>>>================== RESTART ====================
+>>>
+first line =  Wash the car
+second line =  Make my bed
+>>>
+
+【PG】readline() 方法一次只读取一行 ，所以它不会把结果放入一个列表 。每次使用
+readline() 时，都只是得到一个字符串。
+
+【PG】回到起始位置
+如果已经使用了几次 readline() ，现在希望退回到文件的起始位置， 可以使用
+seek()方法，就像这样：
+ 
+【PG】The seek()  method makes Python go to whatever place in the file you tell it. The number in 
+brackets is the number of bytes from the start of the file. So setting it to 0 takes it right back 
+to the start of the file.
+
+【PG】Text files and binary files
+All the examples of opening files and reading lines of text so far are assuming one thing: the 
+file actually has text in it! Remember that text is just one of the kinds of things we can store in 
+a file. Programmers lump together all other kinds of files and call them binary files .
+
+【PG】There are two main types of files you can open:
+
+�Text files —These have text in them, with letters, numbers, punctuation, and some 
+special characters, like newlines.
+
+�Binary files —These don’t have text in them. They might have music, pictures, or some 
+kind of data, but because they don’t have text, they don’t have lines either, because 
+there are no newlines . 
+
+【PG】That means you can’t use readline()  or readlines()  on a binary file. If you try to read a 
+“line” from a .wav file, for example, you don’t know what you’ll get. Most likely, you’ll get a 
+whole bunch of gobbledygook that looks like this:
+
+【PG】There’s something that looks like text at the start of the .wav  file, but then it gets crazy. 
+That’s because a .wav  file doesn’t have text in it, it has sound. 
+
+【PG】The readline()  and readlines()  methods are only for reading text files.
+
+【PG】first_line = my_file.readline()
+second_line = my_file.readline()
+my_file.seek(0)
+first_line_again = my_file.readline()
+
+【PG】seek()方法会让 Python找到文件中你指示的位置。括号中的数字就是从文件
+起始位置算起的字节数。所以如果把它设置为 0，就会回到文件的起始位置。

@@ -1,0 +1,49 @@
+【PG】14.6 一个示例类——HotDog 165
+
+【PG】代码清单 14-5 热狗程序的开始部分 156 Hello World!
+
+【PG】Let’s put this together into a program and run it. Listing 14.5 shows the complete program (so far).
+
+class HotDog:
+    def __init__(self):
+        self.cooked_level = 0
+        self.cooked_string = "Raw"
+        self.condiments = []
+    def cook(self, time):
+        self.cooked_level = self.cooked_level + time
+        if self.cooked_level > 8:
+            self.cooked_string = "Charcoal"
+        elif self.cooked_level > 5:
+            self.cooked_string = "Well-done"
+        elif self.cooked_level > 3:
+            self.cooked_string = "Medium"
+        else:
+            self.cooked_string = "Raw"
+
+myDog = HotDog()
+print myDog.cooked_level
+print myDog.cooked_string
+print myDog.condiments
+
+【PG】Now, run the code in listing 14.5 and see what you get. It should look like this:
+We see that the attributes are cooked_level = 0, cooked_string = "Raw", and condiments is empty.
+
+【PG】Listing 14.5 Start of our hot dog program
+
+#!/bin/env python # Paginate a text file, adding a header and footer import sys, time, string # If no arguments were given, print a helpful message if len(sys.argv)!=2: print 'Usage: pyprint filename' sys.exit(0)class # Increment the page count, and reset the line count and reset a self.header_written=1 ; self.count=
+
+【PG】#!/bin/env python # !Bin/en 
+Thinking like a (Python) programmer
+
+【PG】Another convention in Python is that the name of a class always starts with an uppercase (capital) letter. So far we have seen Ball and HotDog, so we have been following the convention. 
+
+【PG】print >>>Hello if #print>>>Helloif#print>>>Helloif#
+>>>
+0Raw
+[]
+
+【PG】>>>The cooked_level
+The cooked_string
+The condiments
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

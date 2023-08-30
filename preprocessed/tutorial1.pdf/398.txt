@@ -1,0 +1,32 @@
+【PG】第 25章　Skier 游戏的说明
+
+【PG】如果 event.key == pygame.K_LEFT:
+【PG】    speed = skier.turn(-1)
+【PG】elif event.key == pygame.K_RIGHT:
+【PG】    speed = skier.turn(1)
+【PG】skier.move(speed)
+【PG】animate()
+【PG】pygame.quit()
+【PG】左方向键向左转，右方向键向右转。Pygame主事件循环。
+
+【PG】25.2　障碍物
+
+【PG】接下来学习怎么制作障碍物，也就是树和小旗。在这一部分，为了简化起见，我们再次从零开始—没有滑雪者，只有障碍物。我们会在最后将滑雪者的代码和障碍物的代码放到一起。
+
+【PG】Skier游戏的窗口大小是 640 × 640像素。为了简化，也为了防止障碍物靠得太近，我们将窗口分割为一个 10 × 10的网格。这样，一共有 100个格子，每个格子的大小是 64×64像素。因为我们的障碍物尺寸并不是太大，所以即使两个障碍物位于相邻的格子中，它们之间也有一些空隙。
+
+【PG】创建单个障碍物
+
+【PG】首先我们需要创建单个障碍物。为此，我们创建了一个名为 ObstacleClass 的类。和滑雪者一样，这也是一个 Pygame Sprite类。
+
+class ObstacleClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, location, type):
+        pygame.sprite.Sprite.__init__(self)
+        self.image_file = image_file
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.center = location
+        self.type = type
+        self.passed = False
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

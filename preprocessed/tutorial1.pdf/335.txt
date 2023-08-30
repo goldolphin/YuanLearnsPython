@@ -1,0 +1,58 @@
+【PG】22.7　写文件　　 309
+
+【PG】22.7　写文件
+
+如果你想更持久地存储程序的信息， 可以看着屏幕， 把这些信息抄写在纸上。不过这样根本无法体现出计算机的作用！比较好的做法是把信息保存在硬盘上 ，这 样一来， 即使程序不再运行（ 即计算机已经关机 ） ，你的数据仍然能保留下来， 供 以后使用。 其实你早已经这么做了。 每次保存学校作业、图片、歌曲或者 Python程序时 ，实际上都是将它们存储到硬盘上。
+
+【PG】从前的美好时光
+
+在我们那个年代， 只有纸！ 没有显示器、 打印机， 甚至没有键盘。 要通过在卡片上打孔来“ 写”代码。然后把这叠卡片塞进一个大机器里， 它会把这些打孔卡转换成计算机能够理解的电子信号。 有时需要花几天时间才能得到一个答案。 唉，可真是又费劲又麻烦！
+
+【PG】前面已经提到，在文件中添加内容有两种方法。
+
+写—这表示开始新文件，或者覆盖现有的文件。
+
+追加—这表示增加到现有的文件，保留原来已有的内容。
+
+要写文件或追加文件 ，首 先必须打开文件。 像前面一样要使用 open()函数，只不过第二个参数有所不同。要读文件，需要使用 'r'作为文件模式： 
+
+【PG】Correction! You can open a file for appending if it’s not there. It’ll just create a new one that’s blank!
+
+As I mentioned earlier, there are two ways you can put things in a file:
+
+- writing —This means starting a new file or overwriting an existing one.
+- appending —This means adding to an existing file and keeping what’s already there.
+
+To write or append to a file, you first have to open the file. You use the open() function, just like we did before, except that the second parameter will be different:
+
+- For reading, you use 'r' as the file mode:
+- For writing, you use 'w' as the file mode:
+- For appending, you use 'a' as the file mode:
+
+If you use ' a' for append mode, the filename has to be one that already exists on the hard drive, or you'll get an error. That's because append is for adding to an existing file.
+Carter is right, again! If you use 'w' for write mode, there are two possibilities:
+
+- If the file already exists, whatever is in the file will be lost and replaced with whatever you write there.
+- If the file doesn't exist, a new file with that name will be created, and whatever you write will go into the new file.
+
+Let's look at some examples.
+
+【PG】Appending to a file
+
+First we'll take the notes.txt file that we created earlier and append something to it. Let's add another line that says "Spend allowance." If you were looking closely when we did the readlines() example, you might have noticed that there's no \n, no newline, at the end of the last line. So we need to add one, and then add our new string. To write strings to a file, we use the write() method, like in listing 22.3.
+
+todo_list = open('notes.txt', 'a')
+todo_list.write('\nSpend allowance')
+todo_list.close()
+
+Listing 22.3 Using append mode
+
+my_file = open('new_notes.txt', 'r')
+my_file = open('new_notes.txt', 'w')
+my_file = open('notes.txt', 'a')
+
+Closes the file
+Opens the file in append mode
+Adds our string to the end
+
+要追加文件，需要使用 'a'作为文件模式：

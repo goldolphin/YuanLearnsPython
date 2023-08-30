@@ -1,61 +1,54 @@
 【PG】7.9 使用 not　　 75
 【PG】你学到了什么
-在这一章，你学到了以下内容。
-比较测试和关系操作符。
-缩进和代码块。
-使用and和or结合测试。
-使用not来进行反向测试。
-
+【PG】在这一章，你学到了以下内容。
+【PG】比较测试和关系操作符。
+【PG】缩进和代码块。
+【PG】使用 and 和 or 结合测试。
+【PG】使用 not 来进行反向测试。
 【PG】测试题
 【PG】1. 运行这个程序会得到什么输出：72 Hello World!
-You might want to bookmark this page so you can refer back to this table easily.
-
+【PG】You might want to bookmark this page so you can refer back to this table easily.
 【PG】What did you learn?
 【PG】In this chapter, you learned about 
-�comparison tests and the relational operators.
-�indenting and blocks of code.
-�combining tests using and and or.
-�reversing a test using not.
-
+【PG】�comparison tests and the relational operators.
+【PG】�indenting and blocks of code.
+【PG】�combining tests using and and or.
+【PG】�reversing a test using not.
 【PG】Test your knowledge
 【PG】1What will the output be 
-when this program is run:
+【PG】when this program is run:
 【PG】2From the program in the first question, wh at will the output be if you change 
-my_number  to 25?
+【PG】my_number  to 25?
 【PG】3What kind of if statement would you use to check if a number was greater than 30 
-but less than or equal to 40?
+【PG】but less than or equal to 40?
 【PG】4What kind of if statement would you use to check if the user entered the letter “Q” in 
-either uppercase or lowercase? 
-
+【PG】either uppercase or lowercase? 
 【PG】Try it out 
 【PG】1A store is having a sale. They’re giving 10 percent off purchases of $10 or lower, and 20 
-percent off purchases of greater than $10.  Write a program that asks the purchase 
-price and displays the discount ( 10% or 20%) and the final price.
+【PG】percent off purchases of greater than $10.  Write a program that asks the purchase 
+【PG】price and displays the discount ( 10% or 20%) and the final price.
 【PG】2A soccer team is looking for girls from ages 10 to 12 to play on their team. Write a pro-gram to ask the user’s age and if male or female (using “m” or “f”). Display a message indicating whether the person is eligible to play on the team.
-Bonus: Make the program so that it doesn’ t ask for the age unless the user is a girl.
-
+【PG】Bonus: Make the program so that it doesn’ t ask for the age unless the user is a girl.
 【PG】<>Not equal to Checks whether two things ar e not equal. (Either operator can be 
-used.)Table 7.1 List of math and comparison operators  (continued)
-Operator Name What it does
-my_number = 7
-if my_number < 20:    print 'Under 20'
-else:
-    print '20 or over'
-
-【PG】2. 基于第一个问题中的程序，如果把 my_number改为 25，输出会是什么？
-【PG】3. 要检查一个数是否大于 30但小于或等于 40 ，要用哪种 if语句？
+【PG】used.)Table 7.1 List of math and comparison operators  (continued)
+【PG】Operator Name What it does
+【PG】my_number = 7
+【PG】if my_number < 20:    print 'Under 20'
+【PG】else:
+【PG】    print '20 or over'
+【PG】2. 基于第一个问题中的程序，如果把 my_number 改为 25，输出会是什么？
+【PG】3. 要检查一个数是否大于 30 但小于或等于 40 ，要用哪种 if语句？
 【PG】4. 要检查用户输入的字母“Q”是大写还是小写，要使用哪种 if语句？
-
 【PG】动手试一试
 【PG】1.  一家商场在降价促销。 如果购买金额低于或等于 10元，会给 10%的折扣，
-如果购买金额大于 10元 ，会给 20%的折扣。 编写一个程序， 询问购买价格，
-再显示折扣（10% 或20% ）和最终价格。
+【PG】如果购买金额大于 10元 ，会给 20%的折扣。 编写一个程序， 询问购买价格，
+【PG】再显示折扣（10% 或20% ）和最终价格。
 【PG】2.  一个足球队在寻找年龄在 10到12岁之间的小女孩加入 。编写一个程序 ，询问
-用户的年龄和性别 （m表示男性 ，f表示女性 ） 。显示一条消息指出这个人是否
-可以加入球队 。
+【PG】用户的年龄和性别 （m表示男性 ，f表示女性 ） 。显示一条消息指出这个人是否
+【PG】可以加入球队 。
 【PG】　额外提示：要合理地建立程序，如果用户不是女孩就不必询问年龄。
 【PG】3.   你在长途旅行， 刚 到一个加油站， 距下一个加油站还有 200 km。 编写一个程
-序确定是不是需要在这里加油，还是可以等到下一个加油站再加油。
+【PG】序确定是不是需要在这里加油，还是可以等到下一个加油站再加油。
 【PG】　这个程序应当问下面几个问题。
 【PG】你的油箱有多大（单位是升）？
 【PG】油箱有多满（按百分比，例如，半满就是 50%）？ 
@@ -63,29 +56,19 @@ else:
 【PG】　 输出应该像这样：73  CHAPTER  7 Decisions, Decisions
 【PG】3You’re on a long car trip and arrive at a gas station. It’s 200 km to the next station. 
 【PG】Write a program to figure out if you need to  buy gas here, or if you can wait for the 
-next station.
+【PG】next station.
 【PG】The program should ask these questions:
 【PG】�How big is your tank, in liters?
 【PG】�How full is your tank (in percent—for example, half full = 50)?
 【PG】�How many km per liter does your car get?
 【PG】The output should 
 【PG】look something like this:
-【PG】Size of tank:  60
-【PG】percent full:  40
-【PG】km per liter:  10
-【PG】You can go another 240 km
-【PG】The next gas station is 200 km away
-【PG】You can wait for the next station.
-【PG】Size of tank:  60
-【PG】percent full:  30
-【PG】km per liter:  8
-【PG】You can go another 144 kmThe next gas station is 200 km away
-【PG】Get gas now!
-
+【PG】                                         or 
+【PG】Bonus: Include a 5 liter buffer in your prog ram, in case the fuel gauge isn’t accurate.
 【PG】4Make a program where the user has to enter a secret password to use the program. 
-You’ll know the password, of course (because  it’ll be in your code). But your friends 
-will either have to ask you, guess the password, or learn enough Python to look at the 
-code and figure it out!
-The program can be anything you want, including one you have already written, or 
-just a simple one that displays a message like “You’re in!” when he enters the right 
-password.
+【PG】You’ll know the password, of course (because  it’ll be in your code). But your friends 
+【PG】will either have to ask you, guess the password, or learn enough Python to look at the 
+【PG】code and figure it out!
+【PG】The program can be anything you want, including one you have already written, or 
+【PG】just a simple one that displays a message like “You’re in!” when he enters the right 
+【PG】password.

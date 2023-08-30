@@ -1,0 +1,36 @@
+【PG】190　第 16章　图　　形
+
+【PG】我们建立了一个 640像素宽、480 像素高的窗口。如果希望在窗口正中间画圆，需要在 [320, 240]上绘制。这个位置离左边界320像素，离上边界240像素。
+
+【PG】下面尝试在窗口中间画圆。运行代码清单 16-4中的程序。
+
+【PG】代码清单 16-4　把圆放在窗口中间
+
+import pygame, sys
+pygame.init( )
+screen = pygame.display.set_mode([640,480] )
+screen.fill([255, 255, 255])
+pygame.draw.circle(screen, [255,0,0],[320,240], 30, 0)
+pygame.display.flip()
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:             
+            running = False
+pygame.quit( )
+
+【PG】将[100, 100]改为[320, 240]，这里使用坐标[320, 240]作为圆心。把运行代码清单 16-3的结果与运行代码清单16-4时看到的结果做个比较，看看有什么差别。
+
+【PG】形状大小
+
+【PG】使用Pygame的draw函数画形状时，必须指定形状的尺寸。对于圆来说，只有一个尺寸，也就是半径。而像矩形之类的形状，则必须指定长和宽。
+
+【PG】Pygame有一种特殊的对象，名为rect（这是“rectangle”（矩形）的简写），用来定义矩形区域。rect要使用左上角坐标、宽和高来定义：
+
+Rect(left, top, width, height)
+
+【PG】这里同时定义了位置和大小。下面是一个例子：
+
+my_rect = Rect(250, 150, 300, 200)
+
+【PG】图灵社区会员FreeLink专享 尊重版权

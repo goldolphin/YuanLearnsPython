@@ -1,0 +1,93 @@
+【PG】附录 C　自测题答案
+
+【PG】382 Hello World!
+
+【PG】Chapter 15: Modules
+
+【PG】Test your knowledge
+1Some of the advantages of using modules are
+�you can write some code once and use it in many programs.
+�you can use modules that other people have written.
+�your code files are smaller, so it’s easier to find things in your code.
+�you can use only the parts (modules) you need to do the job.
+
+2You create a module by writing some Py thon code and saving it in a file. 
+
+3When you want to use a module, you use the import  keyword.
+
+4Importing a module is the same as importing a namespace .
+
+5The two ways to import the time module so we have access to all the names in the 
+module are
+
+and
+
+【PG】Try it out
+1To write a module, just put the code for your “big name” function in a file—something 
+like bigname.py . Then, to import the module and call the function, do 
+something like this:
+or you could do this:
+
+2To bring c_to_f()  into the main 
+program’s namespace, you can do this:
+or this:
+
+3A short program to print five random 
+integers from 1 to 20 would look like this:
+
+4A short program that prints out a random decimal number every 3 seconds for 30 sec-onds would look like this:
+
+import time
+from time import *
+import bigname
+bigname.printMyNameBig()
+from bigname import *
+printMyNameBig()
+from my_module import c_to_f
+from my_module import *
+import random
+for i in range(5):    print random.randint(1, 20)
+import random, time
+for i in range(10):    print random.random()
+    time.sleep(3)
+
+【PG】第16章
+
+【PG】测试题
+1. RGB值[255, 255, 255] 得到白色。
+2. RGB值[0, 255, 0] 得到绿色 ；
+3. 要画矩形，可以使用 Pygame方法pygame.draw.rect() ；
+4. 要画线把多个点连在一起 （如连连看 ） ，可以使用pygame.draw.lines() 方法。
+5. “像素”是“图像元素”的简写，表示屏幕上（或纸上）的一个点。
+6. 在一个 Pygame窗口中 ，位置 [0, 0]位于左上角。
+7. 在这个图中，位置 [50, 200] 位于字母 B 。
+8. 在这个图中，位置 [300, 50] 位于字母 D 。
+9. 可以使用 blit()方法在 Pygame中复制图像。
+10. 要移动一个图像或者完成动画，可以使用以下两个步骤：
+从原来的位置擦除图像；
+在新位置上绘制图像。
+
+【PG】动手试一试
+1.  下面的程序会在屏幕上画出一些不同的形状。 也可以在 \answers 文件夹和网
+站上找到 TIO_CH16_1.py。
+
+ import pygame, sys
+pygame.init( )
+screen=pygame.display.set_mode((640, 480))
+screen.fill((250, 120, 0))
+pygame.draw.arc(screen,(255,255,0),pygame.rect.Rect(43,368,277,235),
+-6.25, 0, 15)
+pygame.draw.rect(screen,(255, 0, 0),pygame.rect .Rect(334,191,190,290))
+pygame.draw.rect(screen,(128, 64, 0),pygame.rect .Rect(391,349,76,132))
+pygame.draw.line(screen,(0, 255, 0),(268, 259),(438,84),25)
+pygame.draw.line(screen,(0, 255, 0),(578, 259),(438,84),25)
+pygame.draw.circle(screen, (0, 0, 0), (452, 409), 11, 2)pygame.draw.polygon(screen, (0, 0, 255),[(39, 39), (44, 136), (59, 136),
+(60,102),(92,102),(94,131),(107, 141), (111, 50), (97, 50), (93, 
+86), (60, 82), (58, 38)], 5)
+pygame.draw.rect(screen,(0,0,255), pygame.rect.Rect(143,90,23,63),5 )
+pygame.draw.circle(screen, (0, 0, 255), (153, 60), 15, 5)
+clock = pygame.time.Clock( )
+pygame.display.flip()
+running = True
+while running:
+    clock.tick(60)

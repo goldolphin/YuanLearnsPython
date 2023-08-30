@@ -1,0 +1,96 @@
+【PG】11.4　更多可变嵌套循环　　 107
+
+【PG】代码清单 11-3　利用双重嵌套循环生成星号块
+
+CHAPTER  11 Nested and Variable Loops
+
+We can even have nested-nested loops (or double-nested loops). That would look like the 
+ones in listing 11.3.
+
+numBlocks = int(raw_input ('How many blocks of stars do you want? '))
+numLines = int(raw_input ('How many lines in each block? '))
+numStars = int(raw_input ('How many stars per line? '))
+for block in range(0, numBlocks):    
+    for line in range(0, numLines):
+        for star in range(0, numStars): 
+            print '*',        
+        print
+    print
+
+【PG】Here’s the output:
+
+We say the loop is nested “three deep. ”
+
+【PG】Even more variable nested loops
+
+Listing 11.4 shows a trickier version of the program from listing 11.3.
+
+numBlocks = int(raw_input('How many blocks of stars do you want? '))
+for block in range(1, numBlocks + 1):    
+    for line in range(1, block * 2 ): 
+        for star in range(1, (block + line) * 2):
+            print '*',        
+        print
+    print
+
+Listing 11.3 Blocks of stars with double-nested loops
+
+Listing 11.4 A trickier version of blocks of stars
+
+>>> ======================= RESTART =======================
+>>>
+How many blocks of stars do you want? 3
+How many lines of stars in each block? 4
+How many stars per line? 8
+* * * * * * * * 
+* * * * * * * * 
+* * * * * * * * 
+* * * * * * * * 
+* * * * * * * * * * * * * * * * 
+* * * * * * * * * * * * * * 
+* * * * * * * * * * * * * * * * * * * 
+* * * * * * * * * * * * * * * * 
+* * * * * * * * * * * * * * * 
+* * * * * * * * * * * * * * * * * * 
+
+【PG】Formulas for number of lines and stars
+
+numBlocks = int(raw_input ('How many blocks of stars do you want? ') )
+numLines = int(raw_input ('How many lines in each block? ') )
+numStars = int(raw_input ('How many stars per line? ') )
+for block in range(0, numBlocks) :
+    for line in range(0, numLines) :
+        for star in range(0, numStars):  
+            print '*' ,
+        print
+    print
+【PG】会得到下面的输出：
+
+103  CHAPTER  11 Nested and Variable Loops
+
+We can even have nested-nested loops (or double-nested loops). That would look like the 
+ones in listing 11.3.
+
+numBlocks = int(raw_input ('How many blocks of stars do you want? '))
+numLines = int(raw_input ('How many lines in each block? '))
+numStars = int(raw_input ('How many stars per line? '))
+for block in range(0, numBlocks):    
+    for line in range(0, numLines):
+        for star in range(0, numStars): 
+            print '*',        
+        print
+    print
+
+【PG】Here’s the output:
+
+We say the loop is nested “three deep. ”
+
+【PG】11.4　更多可变嵌套循环
+
+【PG】代码清单 11-4是代码清单 11-3的一个更复杂的版本。
+
+【PG】代码清单 11-4　更复杂的星号块
+
+行数和星号数的公式
+
+图灵社区会员 FreeLink 专享 尊重版权

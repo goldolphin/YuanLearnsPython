@@ -1,0 +1,32 @@
+【PG】第 13章 函数：
+
+假设你希望对你的所有家庭成员使用这个地址打印函数。所有人的地址都是一样的，但是每一次人名会有所不同。不能在函数中把人名硬编码写成 Warren Sande，你可以建立一个变量。调用函数时将这个变量传递到函数。
+
+要说明这是如何工作的，最容易的方法就是举例子。在代码清单 13-2中，我修改了地址打印函数，要使用一个对应人名的参数。参数是有名字的，就像其他变量一样。我把这个变量命名为 myName。
+
+函数运行时，变量 myName 会填入调用函数时为它传入的任何参数。调用函数时，我们把参数放在括号里，通过这种方式将参数传入函数。
+
+因此，在代码清单 13-2中，参数 myName 赋值为 Carter Sande。
+
+【PG】代码清单 13-2 向函数传递参数调用者函数参数：
+
+def printMyAddress(myName):
+    print myName                 
+    print "123 Main Street"           
+    print "Ottawa, Ontario", Canada
+    print "K2M 2E9"                       
+printMyAddress("Carter Sande")
+
+如果我们运行代码清单 13-2，得到的结果如下：
+
+Listing 13.2 Passing an argument to a function
+CALLER FUNCTION
+P asses myName argument to the function
+Prints the name
+P asses “Carter Sande” as the argument to the function; the variable myName inside the function will have the value “Carter Sande”
+
+如果我们将 myName 参数传入函数，将“Carter Sande”作为参数传入函数；函数中的变量 myName 的值将是“Carter Sande”。
+
+运行代码，你会得到期望的结果：Carter Sande 123 Main Street Ottawa, Ontario, Canada K2M 2E9。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

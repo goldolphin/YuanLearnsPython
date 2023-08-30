@@ -1,0 +1,40 @@
+【PG】18.5　另一个游戏——PyPong 　　 241
+
+【PG】lives的变量，把它设置为 3。lives = 3
+
+【PG】玩家漏了球而且球掉到窗口底边后， 要将lives减1，等待几秒， 然后重新开始，又提供一个新球：
+
+if myBall.rect.top >= screen.get _rect().bottom:
+    lives = lives - 1
+    pygame.time.delay(2000)    
+    myBall.rect.topleft = [50, 50]
+
+【PG】这个代码要放在 while循环中。 
+
+【PG】顺便说一句， 为什么对于球我们会写成 myBall.rect ，而对于screen要写为get_rect()呢？这有下面几个原因。
+
+myBall 是一个动画精灵，动画精灵都包含一个 rect。
+
+screen 是一个表面， 而表面不包含 rect。可以用get_rect()函数找到包围一个表面的 rect。
+
+【PG】如果做了上述修改，并运行程序，你会看到玩家现在有 3条命 。
+
+【PG】增加一个生命计数器
+
+很多游戏会给玩家多条命， 大多数这样的游戏都会采用某种方法显示还剩下几条命。我们这个游戏也可以做到这一点。
+
+一种简单的方法是显示一些球 ，剩 几条命就显示几个球。 可以把这些球放在右上角。以下是画出生命计数器的 for循环中使用的小公式：
+
+for i in range (lives):
+    width = screen.get _rect().width
+    screen.blit(myBall.image, [width - 40 * i, 20])
+
+【PG】这个代码也要放在主 while循环中， 应当放在事件循环前面（ 但要在screen.blit(score _text, textpos) 代码行之后） 。
+
+【PG】游戏结束
+
+最后还需要增加一点： 当玩家丢掉最后一条命时要显示一个“ 游戏结束 ”的消息。我们要建立两个字体对象， 分 别包含我们的消息和玩家的最后分数， 渲染这两个文本（创建绘有文本的表面） ，再将这些表面块移到 screen。
+
+另外还要在最后一局结束后避免球再次出现 。为了做到这一点， 要建立一个done变量告诉我们何时游戏结束。运行在主 while循环中的以下代码会完成这项工作。
+
+图灵社区会员 FreeLink 专享 尊重版权

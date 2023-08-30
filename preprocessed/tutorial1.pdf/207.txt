@@ -1,0 +1,66 @@
+【PG】15.7　标准模块　　 181
+
+【PG】还记得第 8 章代码清单 8-6 中的倒计时程序吗？ 现在你应该知道那个程序中
+time.sleep(1) 的作用了吧。
+
+【PG】随机数
+
+【PG】random 模块用于生成随机数。这在游戏和仿真中非常有用。
+
+【PG】下面试着在交互模式中使用 random 模块：172 Hello World!
+
+Each time you use random.randint() , you get a new, random integer. Because we passed 
+the arguments 0 and 100 to it, the integer will be between 0 and 100. We used ran-
+dom.randint()  in the number-guessing program in chapter 1 to create the secret number.
+
+If you want a random decimal number, use random.random() . You don’t have to put any-
+thing between the brackets, because random.random()  always gives you a number between 
+0 and 1.
+
+If you want a random number between, say, 0 and 10, you can just multiply the result by 10.
+from time import *
+>>> import random
+>>> print random.randint(0, 100)
+4
+>>> print random.randint(0, 100)72
+>>> print random.random()
+0.270985467261>>> print random.random()
+0.569236541309
+>>> print random.random() * 10
+3.61204895736>>> print random.random() * 10
+8.10985427783
+
+【PG】每次使用 random.randint() 时，会得到一个新的随机整数。 由于我们为它传
+递的参数是 0 和 100 ，所以得到的整数会介于 0 到 100 之间。我们在第 1 章的猜数程
+序中就是使用 random.randint() 来创建秘密数。
+
+【PG】如果你想得到一个随机的小数 ，可 以使用 random.random() 。不用在括号里放
+任何参数，因为 random.random() 总是会提供一个介于 0 到 1 之间的数：172 Hello World!
+
+【PG】如果你想得到其他范围内的一个随机数， 比如说 0 到 10 之间，只需要将结果乘
+以 10：172 Hello World!
+
+【PG】如果我们想让导入的名字自动转到本地命名空间中（这样我们就不必每次指定模块
+名了），但又不知道在模块中需要哪些名称，我们可以使用星号（*）将所有名称导入到
+命名空间中：
+
+【PG】星号（*）的意思是所有可用的名称都要导入。我们必须小心此操作。如果我们在
+程序中创建的名称与 time 模块中的名称相同，则会发生冲突。使用 * 导入不是最好
+的方法。最好只导入需要的部分。
+
+【PG】还记得第 8 章代码清单 8-6 中的倒计时程序吗？ 现在你知道了那个程序中的
+time.sleep(1) 是做什么用的了。
+
+【PG】在这一章，你学到了以下内容。
+
+【PG】什么是模块。
+
+【PG】如何创建模块。
+
+【PG】如何在另一个程序中使用模块。
+
+【PG】什么是命名空间。
+
+【PG】局部和全局命名空间和变量是什么意思。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

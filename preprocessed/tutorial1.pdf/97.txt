@@ -1,9 +1,7 @@
-【PG】7.6　测试多个条件　　 7168 Hello World!
-
-【PG】You can have as many elif  statements as you want after the if.
-【PG】Do something else  if all the other tests come out false. You do this with the else keyword. This always goes at the end, after you’ve done the if and any elif  statements:
+【PG】7.6　测试多个条件　　 
+【PG】You can have as many elif statements as you want after the if.
+【PG】Do something else if all the other tests come out false. You do this with the else keyword. This always goes at the end, after you’ve done the if and any elif statements: 
 【PG】Move on. If you don’t put anything else after the if block, the program will continue on to the next line of code (if there is one) or it’ll end (if there is no more code).
-
 【PG】Try making a program with the code above by adding a line at the beginning to input a number:
 if answer >= 10:
     print "You got at least 10!"
@@ -13,18 +11,14 @@ elif answer >= 3:
     print "You got at least 3!"
 else:
     print "You got less than 3."
-
-if answer>=10
-elif answer>=5
-elif answer>=3
+if answer>=10elifanswer>=5elifanswer>=3
 True True True
 Got at least 10!
 Got at least 5!
 Got at least 3!
 False False False
-else if answer>=10
-elif answer>=5
-elif answer>=3
+else
+if answer>=10elifanswer>=5elifanswer>=3
 TrueTrue True
 Got at least 10!
 Got at least 5!
@@ -35,20 +29,14 @@ answer = float(raw_input ("Enter a number from 1 to 15"))
 【PG】试着用上面的代码建立一个程序，在最开始增加一行代码输入一个数：
 answer = ﬂoat(raw _input ("Enter a number from 1 to 15"))
 【PG】记住要保存这个文件（ 这一次由你来选择文件名 ） ，再运行这个程序。 用不同的输入多试几次，看看会得到什么结果。
-
 【PG】7.6　测试多个条件
 如果想要测试好几件事情该怎么办 ？假设你要为 8岁以上的人创建一个游戏 ，另外你希望玩家至少上三年级 。这就要满足两个条件 。下面是测试这两个条件的一种方法 ：69  CHAPTER  7 Decisions, Decisions
-
-【PG】Remember to save the file (you pick the name this time), and then run it. Try it a few times with different inputs to see what you get.
-
+【PG】Remember to save the file (you pick the name this time), and then run it. Try it a few times  with different inputs to see what you get.
 【PG】Testing for more than one condition
-What if we want to test for more than one thing? Let’s say you made a game that was for eight-year-olds and up, and you want to make sure the player is in at least third grade. There are two conditions to meet. Here is one way you could test for both conditions:
-
-【PG】Notice that the first print  line is indented eight spaces, not just four spaces. That’s because each if needs its own block, so each one has its own indenting.
-
+【PG】What if we want to test for more than one thing? Let’s say you made a game that was for eight-year-olds and up, and you want to make sure the player is in at least third grade. There are two conditions to meet. Here is one way you could test for both conditions:
+【PG】Notice that the first print line is indented eight spaces, not just four spaces. That’s because each if needs its own block, so each one has its own indenting.
 【PG】Using “and”
-That last example will work fine. But there is a shorter way to do the same thing. You can combine conditions like this:
-
+【PG】That last example will work fine. But there is a shorter way to do the same thing. You can combine conditions like this:
 【PG】We combined the two conditions using the and keyword. The and means that both of the conditions have to be true for the following block to execute.
 age = float(raw_input("Enter your age: "))
 grade = int(raw_input("Enter your grade: "))
@@ -56,7 +44,6 @@ if age >= 8 and grade >= 3:
     print "You can play this game."
 else:
     print "Sorry, you can’t play the game."
-
 age = float(raw_input("Enter your age: "))
 grade = int(raw_input("Enter your grade: "))
 if age >= 8:
@@ -64,13 +51,12 @@ if age >= 8:
         print "You can play this game."
     else:
         print "Sorry, you can’t play the game."
-
 【PG】Combine conditions with “and”
- age>=8 grade>=3
+age>=8 grade>=3
 False False True True
 You can play!
 if and (Only get here if both conditions are true)
-
-【PG】注意第一个 print行缩进 8个空格， 而不只是 4个空格。 这是因为每个 if都需要自己的代码块，所以都要缩进 4个空格 。Got at least 5! Got at least 3! Got at least 10!
-
-【PG】图灵社区会员 FreeLink 专享 尊重版权
+【PG】注意第一个 print行缩进 8个空格， 而不只是 4个空格。 这是因为每个 if都需要自己的代码块，所以都要缩进 4个空格。 
+Got at least 5!
+Got at least 3!
+Got at least 10!

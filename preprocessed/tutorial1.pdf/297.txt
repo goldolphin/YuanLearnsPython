@@ -1,0 +1,46 @@
+【PG】20.6　TempGUI　　 271
+将按钮的 objectName 属性改为btnFtoC。
+将按钮的 text属性改为 <<<Fahrenheit  to Celsius。
+ 将按钮的 font  size改为 12。如果你在属性编辑器中找到了 font属性，
+点击上面有三个点的按钮 ，它 长得像这样：
+ 。然后你会看到字体对话
+框，你应该在自己最喜欢的文字处理软件中见过这个对话框。
+
+【PG】(2)  向窗口中再拖入一个 Push Button，将它放到第一个按钮上方， 并将尺寸改为
+你想要的大小，然后修改以下设置：
+将按钮的 objectName 属性改为btnCtoF。
+将按钮的 text属性改为Celsius  to Fahrenheit  >>>。
+将按钮的 font  size改为 12。
+
+【PG】(3)向窗口中拖入一个 Line Edit 组件 ，然后将它放到两个按钮的左边：
+将组件的 objectName 属性改为editCel。
+
+【PG】(4) 向窗口中拖入一个 Spin Box组件 ，然后将它放在两个按钮的右边：
+将组件的 objectName 属性改为spinFahr 。
+
+【PG】(5) 向窗口中拖入一个 Label组件 ，然后将它放在 Line Edit 组件的下方：
+将组件的 text属性改为Celsius。
+将组件的 font size 改为 10。
+
+【PG】(6) 向窗口中拖入一个 Label组件 ，然后将它放在 Spin Box 的下方：
+将挂件的 text属性改为Fahrenheit 。
+将挂件的 font size 改为 10。
+
+【PG】现在所有 GUI元 素（组件，也称为控件或部件 ）都已经摆放好， 并且赋予了我
+们想要的名字和标签。把这个 UI文件保存为 tempconv .ui（在 Qt Designer 中选择 File 
+ Save As） 。记得将文件路径改为你通常保存 Python程序的位置 。
+
+【PG】接下来，在IDLE中 新建一个文件， 键入基本的 PyQt代码（或者也可以从我们
+的第一个程序复制） ：
+import sys
+from PyQt4 import QtCore, QtGui, uic
+form_class = uic.loadUiType("tempconv.ui")[0]
+class MyWindowClass(QtGui.QMainWindow, form_class):
+    def __init__(self, parent=None) :
+        QtGui.QMainWindow.__init__(self, parent)
+        self.setupUi(self)app = QtGui.QApplication(sys.argv)
+myWindow = MyWindowClass()
+myWindow.show()
+app.exec_() 
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

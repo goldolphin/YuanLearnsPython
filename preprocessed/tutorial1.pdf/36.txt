@@ -1,13 +1,43 @@
-【段落编号10】出发吧
-然后程序开始运行。 当然，这个程序确实没太大用处。 不过起码你能让计算机
-听从你的号令了。随着学习的深入，我们的程序会越来越有意思。
+【PG】第 1章　出发吧
 
-【段落编号1.7】如果出问题
+然后程序开始运行。 当然，这个程序确实没太大用处。 不过起码你能让计算机听从你的号令了。随着学习的深入，我们的程序会越来越有意思。
+
+【PG】1.7　如果出问题
+
 如果程序中出现错误无法运行， 怎么办呢？ 可能会发生两种不同类型的错误。下面就来了解这两种错误，这样无论遇到哪一种错误你都能知道如何应对。
 
-【段落编号】语法错误
-IDLE在尝试运行程序前会对程序做一些检查。 如果 IDLE发现一个错误， 这往往是一个语法错误（ syntax error） 。 语法就是一种编程语言的拼写和文法规则， 所以出现语法错误意味着你键入的某个内容不是正确的 Python代码 。下面给出一个例子：
+【PG】语法错误
 
-【段落编号】运行时错误
-可能发生的第二种错误是运行程序之前 Python（ 或IDLE）无法检测出来的错
-误。这种错误只是在程序运行时才会发生， 所 以被称为运行时错误（runtime error） 。下面是程序中出现运行时错误的例子：
+IDLE在尝试运行程序前会对程序做一些检查。 如果 IDLE发现一个错误， 这往往是一个语法错误（ syntax error） 。 语法就是一种编程语言的拼写和文法规则， 所以出现语法错误意味着你键入的某个内容不是正确的 Python代码 。
+
+下面给出一个例子：
+
+9  CHAPTER  1 Getting Started
+You will see that the Python shell window (the one that first came up when you started IDLE) becomes active again, and you will see something like the following:
+The RESTART  part tells you that you started running a program. (This will be helpful when you are running your programs over and over again to test them.)
+Then the program runs. Okay, so it doesn’t do very much. But you got the computer to do what you told it to do. Our programs will get more interesting as we go along.
+
+【PG】如果出了差错
+
+如果你的程序出现错误而不能运行怎么办？可能会遇到两种不同的错误。接下来我们来了解一下这两种错误，这样你就知道如果遇到里面任何一种错误时应该如何应对。
+
+【PG】语法错误
+
+IDLE在尝试运行程序前会对程序做一些检查。 如果IDLE发现一个错误， 这往往是一个语法错误（syntax error）。语法是一种编程语言的拼写和文法规则，所以出现语法错误的意味着你输入的某些内容不是标准的Python代码。
+
+下面给出一个例子：
+
+我们在print和Bye for now!"之间漏了一个引号。如果你尝试运行这个程序，IDLE会弹出一个消息说“程序有错误：无效语法。”，你需要查看你的代码来找出问题所在。IDLE会用红色标记出它发现错误的位置。可能不是问题所在的精确位置，但应该很接近。
+
+【PG】运行时错误
+
+可能发生的另一种错误是无法在程序运行之前通过Python（或IDLE）检测出的错误。这种错误只有在程序运行时才会发生，所以被称为运行时错误（runtime error）。
+
+下面是一个程序中出现运行时错误的例子：
+
+print "Hello, and welcome to Python!"
+print "I hope you will enjoy learning to program."print "Bye for now!" + 5
+
+如果你保存这个程序并试图运行，它会开始运行。前两行会打印出来，但是接下来你会得到一个错误消息：
+
+图灵社区会员 FreeLink 专享 尊重版权

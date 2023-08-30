@@ -1,22 +1,32 @@
 【PG】5.2　print 命令和逗号　　 47
+
 【PG】如果运行这些代码行，并键入你的名字，会得到：Enter your name:
 Warren
-【PG】如果希望用户在消息的同一行上键入他的答案，只需要在print语句的末尾放上一个逗号，就像这样：
-print "Enter your name: ",
-someName = raw_input()
-【PG】注意逗号放在结束引号的外面。
-【PG】如果运行这个代码，会得到： Enter your name: Warren
-【PG】逗号可以用来把多个print语句合并到同一行上。逗号只是表示“打印完这个内容后不要跳转到下一行”。代码清单 5-1的最后一行就是这么做的。
-【PG】在IDLE编辑器窗口中键入代码清单 5-2中的代码，并运行这个程序。
-【PG】代码清单 5-2　逗号用来做什么？
+如果希望用户在消息的同一行上键入他的答案， 只需要在 print语句的末尾放
+上一个逗号，就像这样：print "Enter your name: ",
+someName = raw _input()
+注意逗号放在结束引号的外面。
+如果运行这个代码，会得到： Enter your name: Warren
+
+【PG】逗号可以用来把多个 print语句合并到同一行上。 逗号只是表示“ 打印完这个
+内容后不要跳转到下一行” 。代码清单 5-1的最后一行就是这么做的 。
+
+【PG】在IDLE编辑器窗口中键入代码清单 5-2中的代码 ，并运行这个程序。
+代码清单 5-2　逗号用来做什么？
 print "My",
 print "name",print "is",print "Dave."
-【PG】运行这个程序时应该会得到这样的结果： My name is Dave.
-【PG】注意到了吗？引号中的每个词末尾都没有空格，但是运行这个程序时每个单词之间却出现了空格。使用逗号将多个print语句合并到同一行时，Python会增加一个空格。
+运行这个程序时应该会得到这样的结果： My name is Dave.
+
+【PG】注意到了吗？ 引号中的每个词末尾都没有空格， 但是运行这个程序时每个单词
+之间却出现了空格。 使 用逗号将多个 print语句合并到同一行时，Python 会增加一
+个空格。
+
 【PG】行尾逗号
-【PG】在Python 3中，通过在行尾添加逗号使得打印的内容都在同一行的方法不再有效。而且，在Python 3中使用print()时，要打印的内容必须被包含在一对括号中。所以如果你在使用Python 3，代码清单 5-2应该是这样：
-print("My", end="  ")
-print("name", end="  ")
-print("is", end="  ")
-print("Dave.", end="  ")
-【PG】图灵社区会员 FreeLink 专享 尊重版权
+在Python 3 中，通过在行尾添加逗号使得打印的内容都在同一行的
+方法不再有效。 而且，在Python 3 中使用print() 时，要打印的内容
+必须被包含在一对括号中。 所以如果你在使用 Python 3， 代码清单 5-2
+应该是这样：
+print( "My" , end="  ")
+print( "name" , end="  ")
+print( "is" , end="  ")
+print( "Dave." , end="  ")

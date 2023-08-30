@@ -1,0 +1,116 @@
+【PG】附录 C　自测题答案
+（除非他们居住在其他城市） 。
+
+【PG】动手试一试
+
+【PG】1. 以下是一个使用 EasyGui的温度转换程序：
+# tempgui1.py
+# EasyGui version of temperature-conversion program# converts Fahrenheit to Celsius
+import easygui
+easygui.msgbox('This program converts Fahrenheit to Celsius')
+temperature = easygui.enterbox ('Type in a temperature in Fahrenheit:')
+Fahr = float(temperature)
+Cel = (Fahr - 32) * 5.0 / 9
+easygui.msgbox('That is ' + str(Cel) + ' degrees Celsius.' )
+
+【PG】2.  下面这个程序会询问你的名字以及地址的各个部分， 然后显示完整的地址。
+要理解这个程序， 如果了解如何强制换行会很有帮助： 换行会让后面的文本从新的一行开始。 为 达到这个目的， 需要使用 \n。这会在第 21章解释， 不过下面先提前了解一下：
+# address.py
+# Enter parts of your address and display the whole thing
+import easygui
+name = easygui.enterbox("What is your name?" )
+addr = easygui.enterbox("What is your street address?")
+city = easygui.enterbox("What is your city?" )
+state = easygui.enterbox("What is your state or province?" )
+code = easygui.enterbox("What is your postal code or zip code?" )
+whole_addr = name + "\n" + addr + "\n" + city + ", " + state + "\n" + code
+easygui.msgbox(whole_addr, "Here is your address:")
+
+【PG】第7章
+测试题
+
+【PG】1. 输出将是：372 Hello World!
+
+【PG】Try it out
+
+【PG】1Here is a temperature-conversion program using EasyGui:
+【PG】2Here is a program that asks for your name and the parts of your address and then displays the whole address. For this one, it helps to know a little tidbit that we will talk about in a later chapter: how to force a newline. A newline makes the following text start on a new line. To do this, you use \n. This is explained in chapter 21, but here is a preview:
+
+【PG】Chapter 7: Decisions, Decisions
+
+【PG】Test your knowledge
+
+【PG】1The output would be
+Because my_number is less than 20, the test in the if statement is true, so the block following the if (in this case, just a single line) is executed.
+
+【PG】2The output would beBecause my_number is greater than 20, the test in the if statement is false, so the code in the block following the if is not executed. The code from the else block is executed instead.
+
+# tempgui1.py
+# EasyGui version of temperature-conversion program# converts Fahrenheit to Celsius
+import easygui
+easygui.msgbox('This program converts Fahrenheit to Celsius')
+temperature  = easygui.enterbox('Type in a temperature in Fahrenheit:')
+Fahr = float(temperature)
+Cel = (Fahr - 32) * 5.0 / 9
+easygui.msgbox('That is ' + str(Cel) + ' degrees Celsius.')
+
+# address.py
+# Enter parts of your address and display the whole thing
+import easygui
+name = easygui.enterbox("What is your name?")
+addr = easygui.enterbox("What is your street address?")
+city = easygui.enterbox("What is your city?")
+state = easygui.enterbox("What is your state or province?")
+code = easygui.enterbox("What is your postal code or zip code?")
+whole_addr  = name + "\n" + addr + "\n" + city + ", " + state + "\n" + 
+code
+easygui.msgbox(whole_addr, "Here is your address:")
+
+【PG】Under 20
+20 or over
+
+因为my_number小于 20， if语句中的测试为 true，所以会执行 if后面的块（这里只有一行代码）。
+
+【PG】2. 输出将是：372 Hello World!
+
+【PG】Try it out
+
+【PG】1Here is a temperature-conversion program using EasyGui:
+【PG】2Here is a program that asks for your name and the parts of your address and then displays the whole address. For this one, it helps to know a little tidbit that we will talk about in a later chapter: how to force a newline. A newline makes the following text start on a new line. To do this, you use \n. This is explained in chapter 21, but here is a preview:
+
+【PG】Chapter 7: Decisions, Decisions
+
+【PG】Test your knowledge
+
+【PG】1The output would be
+Because my_number is less than 20, the test in the if statement is true, so the block following the if (in this case, just a single line) is executed.
+
+【PG】2The output would beBecause my_number is greater than 20, the test in the if statement is false, so the code in the block following the if is not executed. The code from the else block is executed instead.
+
+# tempgui1.py
+# EasyGui version of temperature-conversion program# converts Fahrenheit to Celsius
+import easygui
+easygui.msgbox('This program converts Fahrenheit to Celsius')
+temperature  = easygui.enterbox('Type in a temperature in Fahrenheit:')
+Fahr = float(temperature)
+Cel = (Fahr - 32) * 5.0 / 9
+easygui.msgbox('That is ' + str(Cel) + ' degrees Celsius.')
+
+# address.py
+# Enter parts of your address and display the whole thing
+import easygui
+name = easygui.enterbox("What is your name?")
+addr = easygui.enterbox("What is your street address?")
+city = easygui.enterbox("What is your city?")
+state = easygui.enterbox("What is your state or province?")
+code = easygui.enterbox("What is your postal code or zip code?")
+whole_addr  = name + "\n" + addr + "\n" + city + ", " + state + "\n" + 
+code
+easygui.msgbox(whole_addr, "Here is your address:")
+
+【PG】Under 20
+20 or over
+
+因为my_number大于 20，if语句中的测试为false，所以if后面的块代码不会执行。相反，会执行else块中的代码。
+
+图灵社区会员FreeLink 专享 尊重版权

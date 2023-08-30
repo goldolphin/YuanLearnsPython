@@ -1,0 +1,87 @@
+【PG】附录 C　自测题答案　　 413
+
+【PG】3. 下面这个程序只打印列表中的第 3个名字：
+ 378 Hello World!
+�by making individual lists and then combining them:
+8You get a single value from a list of lists by using two indexes (or indices):
+The answer would be 'green' .
+Try it out
+1Here is a program that will get five names, put them in a list, an d then print them out:
+2Here is a program that will print th e original list and a sorted version:
+3Here is a program to print only the third name in the list:
+
+【PG】4Here is a program to allow the user to replace a name in the list:
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+list3 = ['red', 'green', 'blue']
+my_list = [list1, list2, list3]
+my_list = [[1, 2, 3], ['a', 'b', 'c'], ['red', 'green', 'blue']]
+my_color = my_list[2][1] 
+nameList = []
+print "Enter 5 names (press the Enter key after each name):"
+for i in range(5):
+    name = raw_input()    
+    nameList.append(name)
+print "The names are:", nameList
+nameList = []
+print "Enter 5 names (press the Enter key after each name):"
+for i in range(5):
+    name = raw_input()
+    nameList.append(name)
+print "The names are:", nameList
+print "The sorted names are:", sorted(nameList)
+nameList = []
+print "Enter 5 names (press the Enter key after each name):"
+for i in range(5):
+    name = raw_input()
+    nameList.append(name)
+print "The third name is:", nameList[2]
+nameList = []
+print "Enter 5 names (press the Enter key after each name):"
+for i in range(5):
+    name = raw_input()
+    nameList.append(name)
+
+【PG】4. 下面这个程序允许用户替换列表中的一个名字：
+ 378 Hello World!
+�by making individual lists and then combining them:
+8You get a single value from a list of lists by using two indexes (or indices):
+The answer would be 'green' .
+Try it out
+1Here is a program that will get five names, put them in a list, an d then print them out:
+2Here is a program that will print th e original list and a sorted version:
+3Here is a program to print only the third name in the list:
+4Here is a program to allow the user to replace a name in the list:
+
+【PG】379  Answers to Self-Test Questions
+Chapter 13: Functions
+Test your knowledge
+1You use the def keyword to create a function.
+2You call a function by using its name with parentheses.
+3You pass arguments to a function by putting  the arguments in the parentheses when 
+you call the function.
+4There is no limit to the number of arguments a function can have.
+5The function sends information back to the caller using the return  keyword.
+6After a function is finished running, any local variables are destroyed.
+Try it out
+1The function is just a bunch of print  statements:
+The program that calls it could look like this:
+2Here’s my example for printing addresses with seven arguments:
+
+【PG】5. 下面这个程序允许用户创建包含单词和对应定义的词典：
+ user_dictionary = {}
+while 1:
+    command = raw_input( "'a' to add word,'l' to lookup a word,'q' to quit")
+    if command == "a":        
+        word = raw_input("Type the word: ")
+        definition = raw_input("Type the definition: ")
+        user_dictionary[word] = definition
+        print "Word added!"
+    elif command == "l" :
+        word = raw_input("Type the word: ")
+        if word in user_dictionary.keys() :
+            print user_dictionary[word ]
+        else :
+            print "That word isn't in the dictionary yet. "
+    elif command == 'q' :
+        break

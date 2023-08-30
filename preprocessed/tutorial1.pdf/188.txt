@@ -1,0 +1,26 @@
+【PG】162 第 14章 对象
+另一个特殊方法是 __str__()，它会告诉 Python打印（print）一个对象时具体显示什么内容。Python 会默认以下内容 。
+实例在哪里定义 （卡特的例子中 ，就是在 __main__中，这是程序的主部分 ） 。
+类名（ Ball） 。
+存储实例的内存位置（ 0x00BB83A0 部分） 。
+
+【PG】不过，如果你希望 print为对象显示其他的内容，可以定义自己的 __str__()，这会覆盖内置的 __str__()方法。代码清单 14-4举了个例子。
+
+【PG】We already saw the __init__() method that initializes an object when it’s created. Every object has an __init__() method built in. If you don’t put one in your class definition, the built-in one takes over, and all it does is create the object.
+Another special method is __str__() , which tells Python what to display when you print an object. By default, Python tells you...
+这一段回顾了 __init__() 和 __str__() 方法的作用，并提供了默认输出的信息。
+
+【PG】现在运行这个程序，可以得到下面的结果：
+这看起来比 <__main__.Ball instance at 0x00BB83A0> 好多了，你认为呢？
+所有“魔法”方法都在方法名称前后各使用两条下划线。
+什么是self
+你可能已经注意到，在类属性和方法定义中多处出现了“self”，比如：
+
+【PG】When we call a method for one of these instances, like this,
+the method has to know which instance called it. Is it cartersBall that needs to bounce, or warrensBall? The self argument is what tells the method which object called it. It’s called the instance reference.
+
+【PG】By the way, the name self has no special meaning in Python. That’s just the name everybody uses for the instance reference...
+
+【PG】In chapter 11, we made a program about hot dogs. Now, as an example of how to use objects, we’re going to make a class for a hot dog.
+
+【PG】For this example, we’ll assume that hot dogs always have a bun. (It’s too messy otherwise.) We’ll give our hot dog some attributes and some methods.这里是介绍热狗类的特殊方法和属性。

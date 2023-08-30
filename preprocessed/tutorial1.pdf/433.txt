@@ -1,0 +1,72 @@
+【PG】附录 C　自测题答案　　 407
+
+【PG】3.要查看一个数是否大于 30但小于或等于 40，可以使用下面的代码：
+
+373 Answers to Self-Test Questions
+3To check if a number is greater than 30, but less than or equal to 40, you would use 
+something like this:
+You could also do this:
+
+【PG】4.要检查字母“Q”是大写还是小写，可以这样做：
+
+373 Answers to Self-Test Questions
+3To check if a number is greater than 30, but less than or equal to 40, you would use 
+something like this:
+You could also do this:
+4To check for the letter “Q” in uppercase or lowercase, you could do something like 
+this:
+Notice that the string we printed uses double quotes, but there are single quotes 
+inside it, around the “Q” . In case you were  wondering how to print quote marks, that’s 
+one way to do it: use the other kind of quote marks to enclose your string. 
+Try it out
+
+【PG】注意，我们打印的字符串使用了双引号，不过其中的“Q”两边是单引号。如果想知道如何打印引号，可以用另一种引号包围字符串。
+
+【PG】动手试一试
+
+【PG】1.下面给出一个答案：
+
+# program to calculate store discount
+# 10% off for $10 or less, 20% off for more than $10
+item_price = float(raw_input ('enter the price of the item: '))
+if item_price <= 10.0:    discount = item_price * 0.10
+else:
+    discount = item_price * 0.20final_price = item_price - discount
+print 'You got ', discount, 'off,  so your final price was', final_price
+
+【PG】这里没有考虑把答案四舍五入为两位小数（美分） ，也没有显示美元符。
+
+【PG】2.以下给出一种做法：
+
+373 Answers to Self-Test Questions
+3To check if a number is greater than 30, but less than or equal to 40, you would use 
+something like this:
+You could also do this:
+4To check for the letter “Q” in uppercase or lowercase, you could do something like 
+this:
+Notice that the string we printed uses double quotes, but there are single quotes 
+inside it, around the “Q” . In case you were  wondering how to print quote marks, that’s 
+one way to do it: use the other kind of quote marks to enclose your string. 
+Try it out
+
+# program to calculate store discount
+# 10% off for $10 or less, 20% off for more than $10
+item_price = float(raw_input ('enter the price of the item: '))
+if item_price <= 10.0:    discount = item_price * 0.10
+else:
+    discount = item_price * 0.20final_price = item_price - discount
+print 'You got ', discount, 'off, so your final price was', final_price
+
+# program to check age and gender of soccer players
+# accept girls who are 10 to 12 years old
+gender = raw_input("Are you male or female? ('m' or 'f') ")
+if gender  == 'f':    age = int(raw_input('What is your age? '))
+    if age >= 10 and age <= 12:
+        print 'You can play on the team'    else:
+        print 'You are not the right age.'
+else:    print 'Only girls are allowed on this team.'
+
+if number > 30  and  number <= 40:    print 'The number is between 30 and 40'
+if 30 < number <= 40:    print "The number is between 30 and 40"
+if answer == 'Q' or answer == 'q':
+    print "you typed a 'Q' "

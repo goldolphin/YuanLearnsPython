@@ -1,0 +1,42 @@
+【PG】18.2　键盘事件　　 227
+
+【PG】class Ball(pygame.sprite.Sprite):                                      
+    def __init__(self, image_file, speed, location):                   
+        pygame.sprite.Sprite.__init__(self)                             
+        self.image = pygame.image.load(image_file)                      
+        self.rect = self.image.get_rect()                               
+        self.rect.left, self.rect.top = location                        
+        self.speed = speed                                               
+                                                                       
+    def move(self):                                                    
+        if self.rect.left <= screen.get_rect().left or \              
+                self.rect.right >= screen.get_rect().right:             
+            self.speed[0] = - self.speed[0]                             
+        newpos = self.rect.move(self.speed)                            
+        self.rect = newpos                          
+    my_ball = Ball('beach_ball.png', [10,0], [20, 20])  
+
+【PG】running = True
+while running:                                              
+    for event in pygame.event.get():                                      
+        if event.type == pygame.QUIT:                                     
+            running = False                                                     
+    clock.tick(30)         
+    screen.blit(background, (0, 0))                                  
+    my_ball.move()                                                     
+    screen.blit(my_ball.image, my_ball.rect)                        
+    pygame.display.flip()                                             
+pygame.quit( )
+
+【PG】创建 Ball的一个实例
+【PG】完全重绘这是时钟   速度，位置
+【PG】这里要注意一个问题 ，移动球时我们没有 “擦除”球，而是做了不同的处理 。我们已经知道 ，在新位置上重画球之前要从原位置 “擦除”动画精灵有两种方法 ：一种方法是在每个动画精灵的原位置上涂上背景颜色 ，另一种方法是直接重绘每一帧的整个背景—实际上每一次都会从一个空屏幕开始 。在这里，我们采用了第二种做法 。不过这里不是每次循环时使用 screen.ﬁll() ，而是建立了一个名为 background 的表面，用白色填充 。每次循环时 ，只需把这个背景 “块移”到显示表面 screen。这样也能达到目的 ；这只是完成这项工作的不同方法而已 。
+
+【PG】按键事件
+【PG】现在我们要增加一个事件处理器 ，当按下向上箭头时让球上移 ，按下向下箭头时让球下移 。Pygame包括多个不同模块 。这一章中我们将使用的模块是 pygame.event 。
+【PG】我们已经保证 Pygame事 件循环会一直运行（ while循环） 。这个循环在扫描一个名为QUIT的特殊事件。while running:  
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = Fals e
+pygame.event.get() 方法从事件队列得到所有事件的一个列表。 for循环迭代处理这个列表中的每一个事件， 如 果看到一个 QUIT事件，它会将running 设置为False，这会导致while循环结束， 并结束程序。 了解到这一点后，现在你应该已经完全清楚“点击 ×结束程序 ”代码是如何工作的。
+【PG】不过对于这个例子 ，我 们还希望检测另外一种不同类型的事件。 我们希望知道图灵社区会员 FreeLink 专享 尊重版权

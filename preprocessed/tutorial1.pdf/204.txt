@@ -1,0 +1,34 @@
+【PG】第 15章　模　　块
+【PG】John Young 学校学校导入命名空间
+
+下面假设你们学校（John Young 学校）根本没有一个名叫 Fred 的人。如果校长通过广播系统想找 Fred，她肯定找不到这个人。现在假设与你们学校同在一条街上的另一个学校（Stephen Leacock 学校）正在进行部分校舍维修，这个学校把一个班级临时搬到你们学校的活动房里上课。在这个班里，恰好有一个学生名叫 Fred。不过这个活动房还没有连上广播系统。如果校长找 Fred，肯定还是找不到。但是，如果她把这个新的活动房连入广播系统，然后再找 Fred，就会找到 Stephen Leacock 学校的 Fred。
+
+【PG】连 接 另 一 个 学 校 的 活 动 房 屋 ，这 在 Python 中 就 像 导 入 一 个 模 块。
+
+导入了模块，就可以访问这个模块中的所有名字，包括所有变量、函数以及对象。导入模块的含义与导入一个命名空间是一样的。导入模块时，就导入了命名空间。
+
+导入命名空间（模块）有两种方法。可以这样做：import StephenLeacock。如果这样做，StephenLeacock 仍然是一个单独的命名空间。你可以访问这个命名空间，但是在使用之前必须明确地指定想要哪一个命名空间。所以校长必须这样做：如果校长想找到 Fred，除了名字（Fred）外，她还必须给出命名空间（Stephen Leacock）。在前面的温度转换程序中就是这样做的。为了让这个程序正常工作，我们写了这样一行代码：请Fred到办公室来一趟！call_to_ofﬁce(StephenLeacock.Fred)
+
+【PG】169  CHAPTER  15 Modules
+
+Will Fred please come to the office!
+
+In general terms, programmers refer to smaller namespaces (like your classroom) as local namespaces and larger ones (like the whole school) as global namespaces.
+
+【PG】Importing namespaces
+
+Let’s assume that there’s nobody in your school, John Young School, named Fred. If the principal goes on the public address system and asks for Fred, she won’t get anyone. Now imagine that another school down the road, Stephen Leacock School, is having some repairs done, so one of their classes moves into a portable at your school. In that class, there’s a student named Fred. But that portable isn’t connected to the public address system yet. If the principal calls for Fred, she won’t get anybody. But if she connects the new portable to the public address system and then calls for Fred, she will get the Fred from Stephen Leacock School.
+
+Connecting the portable from the other school is like importing a module in Python. When you import a module, you have access to all the names in that module: all the variables, all the functions, and all the objects.
+
+Importing a module means the same thing as importing a namespace. When you import the module, you import the namespace.
+
+There are two ways to import a namespace (or module). You can do it like this:
+
+If you do it that way, StephenLeacock is still a separate namespace. You have access to the namespace, but you have to specify which namespace you want before you use it. So the principal would have to do something like this:She would still have to give the namespace (StephenLeacock) as well as the name (Fred) if she wanted to reach Fred. That’s what we did a few pages ago with our temperature-conversion program. To make it work, we wrote this:We specified the namespace (my_module) as well as the name of the function (c_to_f).
+
+The other way to import a namespace is like this:from StephenLeacock import Fred.这里指定了命名空间（my_module）以及函数名（c_to_f）。
+
+【PG】用from 导入
+
+导入命名空间的另一种方法是： from StephenLeacock import Fred。如果校长这样做，会把 StephenLeacock 的名字 Fred 包含到她的命名空间中，现在就可以这样找到 Fred：call_to_ofﬁce(Fred)。因为 Fred 现在就在校长的命名空间中，所以她不必再去 Stephen Leacock 命名空间找 Fred。图灵社区会员 FreeLink 专享 尊重版权。

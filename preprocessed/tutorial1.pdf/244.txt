@@ -1,0 +1,53 @@
+【PG】第 17章　动画精灵和碰撞检测
+
+【PG】Hello World!
+
+【PG】The most interesting new thing here is how the collision detection works. The Pygame sprite  module has a function called spritecollide() , which looks for collisions between a single sprite and any sprite in a group. If you’re checking for collisions between sprites in the same  group, you have to do it in three steps:
+�First, you remove the sprite from the group.
+�Next, you check for collisions between the sprite and the rest of the group.
+�Finally, you add the sprite back to the group.
+This happens in the for loop in lines 23 to 29 (in the middle part of the animate()  function). If we don’t remove the sprite from the group first, spritecollide()  will detect a collision between the sprite and itself, because it’s in the group. This might seem kind of odd at first, but it makes sense if you think about it for a while.
+
+【PG】Run the program and see how it looks. Did you notice any strange behavior? I noticed two things:
+�When the balls collide, they do a “stutter” or a double bump.
+�Sometimes a ball gets “stuck” along the edge of the window and stutters along for a while. 
+
+【PG】Why does this happen? Well, it has to do with the way we wrote the animate() function. Notice that we move one ball, then we check its collisions, then we move another ball, then we check its collisions, and so on. We should probably do all the moving first, and then do all the collision checking after that.
+
+【PG】So we want to take line 31, ball.move() , and put it in its own loop, like this:
+
+def animate(group):
+    screen.fill([255,255,255])
+    for ball in group:        
+        ball.move()
+    for ball in group:
+        group.remove(ball)
+        if pygame.sprite.spritecollide(ball, group, False):
+            ball.speed[0] = -ball.speed[0]
+            ball.speed[1] = -ball.speed[1]
+        group.add(ball)
+                 
+        screen.blit(ball.image, ball.rect)
+    pygame.display.flip()    
+    pygame.time.delay(20)   
+
+【PG】This is easier to see if you make the animation steps bigger. You can do this by increasing the speed from 2 to 5 and also increasing the delay between each step from 20 to 50.
+
+【PG】Moves all the balls first
+Then does collision detection and bounces them
+
+【PG】试试看，效果是不是比原来好一些。
+
+【PG】可以对这个代码做些试验，改变某些值，比如速度（ time.delay() 数） ，球数、球原先的位置、随机性等，来看球会有什么变化。
+
+【PG】矩形碰撞与像素完美碰撞
+
+【PG】你会注意到，球“碰撞”时并不总是完全接触。这是因为 spritecollide() 没有使用球的圆形轮廓来检测碰撞。它使用了球的 rect，也就是球的外围矩形。如果想看看具体是怎样的，可以画一个矩形包围球图像，并且使用这个新图像而不是原先常规的沙滩球图像。我已经为你做好了这个新图像，你可以试一试：img_ﬁle = “b_ball_rect.png ”看上去就像右图显示的这样：
+
+【PG】如果希望球的圆形部分（而不是矩形边界）真正接触时球才会相互反弹，就必须使用一种称为“像素完美碰撞检测”的方法。spritecollide() 函数没有这样做，而是使用了更简单的“矩形碰撞检测”。
+
+【PG】它们的区别如下。使用矩形碰撞检测，两个球矩形区的任何部分相互接触时就会“碰撞”。而使用像素完美碰撞检测，两个球本身接触时才会碰撞。如下：
+
+【PG】矩形碰撞 像素完美碰撞
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

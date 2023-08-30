@@ -1,0 +1,110 @@
+【PG】23.4　Crazy Eights　　 337
+
+【PG】This isn’t a complete game, but you get the idea. The player has to type in things like QS or 
+Draw  to tell the program his choice. The program has to check that what the player typed in 
+makes sense. We’ll use some string methods (from chapter 21) to help us with that.
+
+【PG】Displaying the hand
+Before we ask the player what he wants to do, we should show him what cards are in his 
+hand and what the up 
+card is. Here’s some code for that:Your hand:  4S, 7D, 10D, QS   Up Card:  8S    Suit:  Diamonds
+What would you like to do?  Type a card name or "Draw" to take a card: 10D
+You played 10D (10 of Diamonds)
+Computer plays QD (Queen of Diamonds)
+Your hand:  4S, 7D QS   Up card:  QD
+What would you like to do?  Type a card name or "Draw" to take a card: 7D
+You played 7D (7 of Diamonds)Computer plays 9D (9 of Diamonds)
+Your hand:  4S, QS   Up card: 9D
+What would you like to do?  Type a card name or "Draw" to take a card: QM
+That is not a valid card.  Try again:  QD
+You do not have that card in your hand.  Try again: QS
+That is not a legal play.  You must match suit, match rank, play an 8, or draw a 
+card
+Try again: Draw
+You drew 3CComputer draws a card
+Your hand:  4S, QS, 3C   Up card:  9D
+What would you like to do?  Type a card name or "Draw" to take a card: Draw
+You drew 8CComputer plays 2D
+Your hand:  4S, QS, 3C, 8C   Up card:  2D
+What would you like to do?  Type a card name or "Draw" to take a card: 8C
+You played 8C (8 of Clubs)
+Your hand:  4S, QS, 3C   Pick a suit: S
+You picked spades
+Computer draws a card
+Your hand:  4S, QS, 3C   Up card: 8C   Suit:  Spades
+What would you like to do?  Type a card name or "Draw" to take a card: QS
+You played QS (Queen of Spades)   .   .   .
+
+【PG】print "\nYour hand: ", for card in p_hand:
+    print card.short_name,print "   Up card: ", up_card.short_name
+
+【PG】尽管这还不是一个完整的游戏， 不过你应该已经有些了解了。 玩家必须键入 QS
+或Draw之类的文本， 把他的选择告诉程序。 程序要检查玩家键入的内容是合法的。
+这里将要使用一些字符串方法（第 21章中介绍的方法 ）来提供帮助。
+
+【PG】显示手中的牌
+询问玩家想要做什么之前， 我们应当为他显示他手中有哪些牌以及明牌是什么。
+下面是相关的代码：print "\nYour hand: ",
+for card in p_hand:
+    print card.short_name ,
+print "   Up card: ",    up_card.short_name
+如果出了一张 8，我们还要告诉他当前花色是什么。 所以下面再增加几行代码，
+如代码清单 23-7所示。
+
+【PG】代码清单 23-7　显示玩家手中的牌
+print "\nYour hand: ",
+for card in p_hand:
+    print card.short_name,
+print "   Up card: ", up_card.short_nameif up_card.rank == '8':
+    print"   Suit is", active_suit 
+就像代码清单 23-6一样，代码清单 23-7也不是一个完整的程序。 我们还需要构
+建其他部分才能建立一个完整的程序。 不过运行代码清单 23-7中的代码时（ 作为完
+整程序的一部分） ，它会给出类似下面的输出 ：
+
+【PG】如果想使用纸牌的长名而不是短名，输出会像这样：
+In our examples, we’ll use the short names.
+
+【PG】Getting the player’s choice
+Now we need to ask the player what he wants to do and process his response. He has two 
+main choices:
+�play a card
+�draw a card
+
+【PG】If he decides to play a card, we need to make sure that the play is valid. We said before that we need to check three things:
+�Is his choice a valid card? (Did he try to play the 4 of Marshmallows?)
+�Is the card in his hand?
+�Is the chosen card a legal play? (Does it match the rank or suit of the up card, or is
+it an 8?)
+
+【PG】But if you think about it, his hand can only have valid cards in it. So if we check that the card 
+is in his hand, we don’t have to worry about checking whether it is valid. He can’t have the 4 
+of Marshmallows in his hand, because it never existed in the deck.
+
+【PG】Listing 23.7 Displaying what’s in the player’s hand
+Your hand:  4S, QS, 3C   Up card: 8C   Suit:  Spades
+Your hand:  4 of Spades, Queen of Spades, 3 of Clubs
+Up Card:  8 of Clubs    Suit:  Spades
+
+【PG】如果想使用纸牌的长名而不是短名，输出会像这样：
+Your hand:  4 of Spades, Queen of Spades, 3 of Clubs
+Up Card:  8 of Clubs    Suit:  Spades
+
+【PG】就像代码清单 23-6一样，代码清单 23-7也不是一个完整的程序。 我们还需要构
+建其他部分才能建立一个完整的程序。 不过运行代码清单 23-7中的代码时（ 作为完
+整程序的一部分） ，它会给出类似下面的输出 ：
+
+【PG】Getting the player’s choice
+Now we need to ask the player what he wants to do and process his response. He has two 
+main choices:
+�play a card
+�draw a card
+
+【PG】If he decides to play a card, we need to make sure that the play is valid. We said before that we need to check three things:
+�Is his choice a valid card? (Did he try to play the 4 of Marshmallows?)
+�Is the card in his hand?
+�Is the chosen card a legal play? (Does it match the rank or suit of the up card, or is
+it an 8?)
+
+【PG】But if you think about it, his hand can only have valid cards in it. So if we check that the card 
+is in his hand, we don’t have to worry about checking whether it is valid. He can’t have the 4 
+of Marshmallows in his hand, because it never existed in the deck.

@@ -1,0 +1,22 @@
+【PG】15.5　如何使用模块　　 175
+
+【PG】中包含其他模块的 Python关键字是import。可以这样使用 ：
+下面写一个程序来使用我们刚才编写的模块 ，这里我们想用 c_to_f()函数完成温度转换 。
+
+【PG】前面已经了解了如何使用函数并向它传递参数 。这 里惟一不同的是， 函数与主程序不在同一个文件中， 而 在另外的一个单独的文件中， 所以必须使用 import。代码清单 15-2中的程序使用了我们刚才编写的模块 my_module.py 。
+
+【PG】import my_module
+celsius = float(raw_input ("Enter a temperature in Celsius: "))
+fahrenheit = c_to_f(celsius)print "That's ", fahrenheit, " degrees Fahrenheit"
+
+【PG】Create a new IDLE editor window, and type in this program. Save it as modular.py , and then run it to see what happens. You will need to save it in the same folder (or directory) as my_module.py .
+
+【PG】Did it work? You should have seen something like this:
+It didn’t work! What happened? The error message says that the function c_to_f()  isn’t defined. But we know it’s defined in my_module , and we did import that module.
+
+【PG】The answer is that we have to be more specific in telling Python about functions that are defined in other modules. One way to fix the problem is to change the line to
+
+import my_module
+fahrenheit = my_module.c_to_f(celsius)
+
+【PG】Now we’re telling Python explicitly: the c_to_f() function is in the my_module module. Try running the program again with this change and see if it works.

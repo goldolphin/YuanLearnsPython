@@ -1,0 +1,48 @@
+【PG】20.7　菜单上是什么　　 275
+
+【PG】现在，一旦点击 Celsius to Fahrenheit 按钮，可以看到 IDLE shell 窗口中会打印出cel和fahr变量的值。 对cel取几个不同的值， 看看会发生什么。 我得到了下面的结果：
+
+265  CHAPTER  20 More GUIs
+SaturnUranusNeptunePlutoyou are 
+insanely 
+cold!If I enter -50 
+in the Celsius box, and 
+click the button, I should get 
+about -58 Fahrenheit.
+But it 
+says 0. What's 
+happening?Hey, 
+I found a 
+bug!This will display the number with two decimal places. We also don’t need the str()  func-
+tion in line 13 anymore (because this code give s us a string), so that line should now look 
+like this:
+
+【PG】Hmmm . . . Maybe it’s time to do some debugging . What if our users want to convert temperatures in Antarctica? Or on Pluto?
+
+【PG】Squashing a bug
+
+We said before that one good way to see what’s going on in the program is to print out the value of some of the variables while the program is running. So let’s try that.
+
+Because it’s the Fahrenheit value in the Celsius to Fahrenheit conversion that seems not to be working, we’ll start there. Add this line after line 7 ( fahr = cel * 9.0 / 5 + 32 ) in listing 20.2:
+
+Now, whenever you click the Celsius to Fahrenheit  button, you can see the cel and fahr  variables printed out in the IDLE (or SPE) shell window. Try it with a few different values for cel and see what happens. I got something like this:
+
+>>> ============================ RESTART ============================
+>>>
+cel =  50.0   fahr =  122.0cel =  0.0   fahr =  32.0
+cel =  -10.0   fahr =  14.0
+cel =  -50.0   fahr =  -58.0self.components.tfCel.text = celStr
+print 'cel = ', cel, '  fahr = ', fahr
+看起来fahr值计算得很正确。 那为什么华氏度框不能显示小于 0（或大于 99）的数呢？
+
+【PG】再回到 Qt Designer ，点击用来显示和输入华氏度的 spinFahr微调框。现在来看属性编辑器窗口 ，滚动属性编辑器查看不同的属性 。有没有看到两个名为 minimum 和maximum 的属性（位于微调框属性列表底端附近 ）？它们的值是什么 ？现在你能不能猜出问题出在哪里 ？
+
+【PG】20.7　菜单上是什么
+
+我们的温度转换 GUI上有一些按钮， 用来完成转换。 很多程序还会提供一个菜单来完成某些功能。 有时这些工作也可以通过点击一个按钮来完成，那为什么要采用两种不同方法完成同样的事情呢？
+
+是这样的 ，有些用户更习惯使用菜单， 而不喜欢点击按钮。 复杂的程序可能会有很多功能，如果不使用菜单就会需要很多的按钮， 这会使 GUI变得杂乱无章。 另外，菜单还可以通过键盘来操作， 有 些人发现， 与把手从键盘拿开再使用鼠标相比， 直接使用菜单速度会更快。
+
+下面来增加一些菜单项 ，为 用户提供另外一种完成温度转换的途径。 我们也可以添加 File➤Exit （文件➤退出） ，几乎每个程序都有这个菜单项 。我完全不懂这些新型的现代菜单到底是些什么。嗯，我觉得“Format”看上去不错……
+
+图灵社区会员 FreeLink 专享 尊重版权

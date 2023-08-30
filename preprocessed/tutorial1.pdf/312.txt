@@ -1,0 +1,112 @@
+【PG】第 21章 打印格式化与字符串
+
+【PG】如果利用格式字符串，可以这样做：
+
+277　CHAPTER 21 Print Formatting and Strings
+When you run it, you should see output that’s nicely lined up, like this:
+
+【PG】How do we print a backslash?
+
+Because the backslash character (\) is used for special printing codes, how do we tell Python when we want to actually print a \ character, instead of using it as part of a code? The trick is just to put two of them together:
+
+The first \ tells Python that something special is coming, and the second one tells Python what the special thing is: a \ character.
+
+【PG】Inserting variables in strings
+
+Up until now, when we wanted to put a variable in the middle of a string, we did something like this:
+
+【PG】If we ran that code, we’d get this:
+
+【PG】But there’s another way to insert variables into strings that gives us more control over how they’ll look, especially numbers. We can use format strings, which use the percent sign (%).
+
+【PG】Let’s say you want to insert a string variable in the middle of a print statement, like we just did. The way to do it with format strings is like this:
+
+The % sign is used in two places. It’s used in the middle of the string to say where the variable will go. Then it’s used again after the string to tell Python that the variable we want to insert in the string is coming next. 
+
+【PG】Number Square Cube 1 1 1 2 4 8 3 9 27 4 16 64 5 25 125 6 36 216 7 49 343 8 64 512 9 81 729 10 100 1000
+
+【PG】print 'hi\there'
+
+hi\there
+
+name = 'Warren Sande'
+print 'My name is', name, 'and I wrote this book.'
+
+My name is Warren Sande and I wrote this book.
+
+name = 'Warren Sande'
+print 'My name is %s and I wrote this book' % name
+
+【PG】这里有两处用到 %符号。先是用在字符串中间 ，指示要把变量放在什么位置。然后在字符串后面再次用到，告诉Python接下来就是我们希望在字符串中插入的变量。%s表示我们想插入一个字符串变量。 如果想插入整数，要使用%i；想插入浮点数，则要使用%f。
+
+【PG】下面再给几个例子：
+
+【PG】Hello
+【PG】World!
+
+【PG】The %s means that it’s a string variable we want to insert. For an integer, we’d use %i; for a float, we’d use %f. 
+
+【PG】When you run this, you’ll get the following:
+
+【PG】Here’s another one:
+
+【PG】When you run this, you’ll get the following:
+
+【PG】The %s, %f, and %i are called format strings, and they’re a kind of code for how you want the variable to look.
+
+【PG】There are some other things you can add to the format strings to make numbers print exactly how you want. There are also a few different format strings you can use to get things like E-notation. (Remember that from chapter 3?) We’ll look at these in the next few sections. 
+
+【PG】Number formatting
+
+When we print numbers, we’d like to have control over how they look:
+
+- how many decimal places they display
+- whether to use regular or E-notation
+- whether to add leading or trailing zeros
+- whether to display + or - signs in front of the numbers
+
+With format strings, Python gives us the flexibility we need to do all this and more!
+
+【PG】For example, if you were using a program that told you the weather forecast, which would you rather see:
+
+【PG】Getting numbers to look right is important for many programs.
+
+【PG】Let’s start with an example. Let’s say we want to print a decimal number with exactly two decimal places. Try this in interactive mode:
+
+age = 13
+print 'I am %i years old.' % age
+
+I am 13 years old.
+
+average = 75.6
+print 'The average on our math test was %f percent.' % average
+
+The average on our math test was 75.600000 percent.
+
+Today’s High: 72.45672132, Low 45.4985756
+Today’s High: 72, Low: 45
+
+【PG】>>> dec_number = 12.3456
+>>> print 'It is %.2f degrees today.' % dec_number
+
+It is 12.35 degrees today.
+
+【PG】%s, %f, and %i都称为格式字符串，这些代码用来指示如何显示变量。格式字符串中还可以增加一些其他内容，从而完全按你希望的方式打印数字。你还可以使用一些不同的格式字符串得到类似E记法的结果。（应该还记得第3章介绍的E记法吧？）我们将在后面几节学习这些内容。
+
+【PG】21.4 数字格式化
+
+打印数字时，我们希望对数字如何显示有一些控制：
+
+- 显示多少位小数；
+- 使用常规记法还是E记法；
+- 是否增加前导或末尾的0；
+- 是否在数字前面显示正负号（+或–）。
+
+利用格式字符串，Python为我们提供了充分的灵活性，不仅可以完成这些工作，甚至还可以做更多事情！例如，如果你在使用一个天气预报程序，你想看到下面哪一个结果呢？
+
+- Today’s High: 72.45672132, Low: 45.4985756
+- Today’s High: 72, Low: 45
+
+获取正确的数字显示对许多程序非常重要。
+
+【PG】让我们从一个例子开始。假设我们想打印一个小数，并确保它只有两个小数点。尝试在交互模式下运行以下代码：

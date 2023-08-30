@@ -1,0 +1,66 @@
+【PG】附录 C　自测题答案　　 405
+
+【PG】3. 这个程序应当类似下面的代码：
+
+【PG】4You can just add a few lines to the program from #3 above:
+
+【PG】5The program should look like this:
+
+【PG】Chapter 6: GUIs—Graphical User Interfaces
+
+【PG】Test your knowledge
+
+【PG】1To bring up a message box with EasyGui, use msgbox(), like this:
+
+【PG】2To get a string as input using EasyGui, use an enterbox.
+
+【PG】3To get an integer as input, you can use an enterbox (which gets a string from the user), then convert it to an int. Or you can use an integerbox.
+
+【PG】4To get a float from the user, you can use an enterbox (which gives you a string), then use the float() function to convert the string to a float.
+
+【PG】5A default value is like an “automatic answer.” Here’s one way you might use a default: if you were writing a program where all the students in your class had to enter their name and address, you might have the name of the city where you live as the default city in the address. That way, the students wouldn’t have to type it in unless they lived in a different city.
+
+【PG】length = float(raw_input ('length of the room in feet: '))
+width = float(raw_input ('width of the room in feet: '))
+area = length * width
+print 'The area is', area, 'square feet.'
+
+【PG】length = float(raw_input ('length of the room in feet: '))
+width = float(raw_input ('width of the room in feet: '))
+cost_per_yard = float(raw_input ('cost per square yard: '))
+area_feet = length * width
+area_yards = area_feet / 9.0
+total_cost = area_yards * cost_per_yard
+print 'The area is', area_feet, 'square feet.'
+print 'That is', area_yards, 'square yards.'
+print 'Which will cost', total_cost
+
+【PG】quarters = int(raw_input("How many quarters? "))
+dimes = int(raw_input("How many dimes? "))
+nickels = int(raw_input("How many nickels? "))
+pennies = int(raw_input("How many pennies? "))
+total  = 0.25 * quarters + 0.10 * dimes + 0.05 * nickels + 0.01 * pennies
+print "You nave a total of: ", total
+
+【PG】4. 可以为上面第 3题的程序增加几行代码：
+
+【PG】5. 程序应该类似下面的代码：
+
+【PG】quarters = int(raw_input("How many quarters? ") )
+dimes = int(raw_input("How many dimes? ") )
+nickels = int(raw_input("How many nickels? "))
+pennies = int(raw_input("How many pennies? "))
+total = 0.25 * quarters + 0.10 * dimes + 0.05 * nickels + 0.01 * pennies
+print "You nave a total of: ", total
+
+【PG】第6章 测试题
+
+【PG】1. 要用 EasyGui显示一个消息框，可以使用 msgbox() ，如下：
+
+【PG】2. 要用 EasyGui得到一个字符串输入，要使用 enterbox。
+
+【PG】3. 要得到整数输入，可以使用 enterbox （这会由用户得到一个字符串） ，然后把它转换为 int。或者也可以直接使用 integerbox。
+
+【PG】4. 要从用户那里得到浮点数，可以使用一个 enterbox （这会提供一个字符串），然后使用 float()函数把这个字符串转换成一个浮点数。
+
+【PG】5. 默认值就像“自动获得的答案”。以下是一种可能使用默认值的情况：你在编写程序，你班里的所有学生都必须输入他们的名字和地址，你可以把你居住的城市名作为地址中的默认城市。这样一来，学生们就不用再键入城市了。

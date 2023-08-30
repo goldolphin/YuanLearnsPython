@@ -1,0 +1,41 @@
+【PG】20.2　让 GUI做点事情　　 267
+
+【PG】序构建出来， 即创建一个类的实例（instance） 。 我们是通过接近结尾处的 myWindow 
+= MyWindowClass() 来创建实例的。 myWindow 是MyWindowClass 类的一个实例。
+
+【PG】把上面的代码键入到 IDLE或SPE编辑器窗口中 ，保存为 MyFirstGui.py。
+
+【PG】主代码：MyFirstGui.py
+UI文件：  MyFirstGui.ui 
+
+【PG】这两个文件还要保存在同一个位置上， 这样主程序才能找到 UI文件并在程序启动时加载。
+
+【PG】现在可以从 SPE或IDLE运 行这个程序。 你会看到窗口打开， 可以点击按钮，
+不过什么都不会发生。 我们已经让程序运行起来， 但是还没有为按钮编写任何代码。现在点击标题栏中的 ×， 关闭这个程序。
+
+【PG】下面来完成一个简单的任务 。点 击按钮时， 让它移动到窗口中的一个新位置。增加代码清单 20-2中的第 10行到第 7行代码 。
+
+【PG】代码清单 20-2　为 Hello 按钮增加一个事件处理器
+import sys
+from PyQt4 import QtCore, QtGui, uic
+form_class = uic.loadUiType("MyFirstGui.ui")[0]
+class MyWindowClass(QtGui.QMainWindow, form_class):
+    def __init__(self, parent=None) :
+        QtGui.QMainWindow.__init__(self, parent)
+        self.setupUi(self)
+        self.pushButton.clicked.connect(self.button_clicked)
+                                                                   def button_clicked(self):           
+        x = self.pushButton.x()   
+        y = self.pushButton.y()   
+        x += 50                    
+        y += 50                    
+        self.pushButton.move(x, y)   
+app = QtGui.QApplication(sys.argv)
+myWindow = MyWindowClass()myWindow.show()
+app.exec_()
+
+【PG】将事件处理器与事件相连接，事件处理器点击时移动按钮增加这几行代 码，每次点击鼠标时让按钮移动。一定要让整个 def块比class语句多缩进 4个空格， 如代码清单所示。 为什么要这么做？ 这是因为所有组件都在窗口中， 也就是说要作为窗口的一部分。 所以按钮事件处理器的代码应该放在这个类定义内。
+
+【PG】试着运行这个代码，看看会发生什么。下一节将详细分析这个代码。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

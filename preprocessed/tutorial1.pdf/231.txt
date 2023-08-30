@@ -1,0 +1,48 @@
+【PG】16.9　让球反弹　　 205
+
+让球在窗口两边反弹的关键是第 19行和第 20行。通过第 19行的代码（ if x> 
+screen.get_width()-90orx<0: ） ，检查球是否在窗口边界上， 如果是， 就在第 20
+行让它的方向反转（ x_speed=-x_speed ） 。
+试试看效果怎么样。
+
+【PG】在 2D 空间中反弹
+
+到目前为止 ，我们只是让球来回移动 ，或者说这只是一个方向上的运动 。现在，让
+它同时还会上下移动 。为达到这个目的 ，只需要再做一些修改 ，如代码清单 16-15所示。
+
+代码清单 16-15 　在 2D 空间中让沙滩球反弹
+import pygame, sys
+pygame.init( )
+screen = pygame.display.set_mode([640,480] )
+screen.fill([255, 255, 255])my_ball = pygame.image.load('beach_ball.png')
+x = 50
+y = 50
+x_speed = 10
+y_speed = 10        running = True
+while running:
+    for event in pygame.event.get():        if event.type == pygame.QUIT: 
+            running = Fals e
+    pygame.time.delay(20)
+    pygame.draw.rec t(screen, [255,255,255], [x, y, 90, 90], 0)  
+    x = x + x_speed    y = y + y_speed     if x > screen.get_width() - 90  or  x < 0:
+        x_speed = - x_speed
+    if y > screen.get_height() - 90 or y < 0:               
+        y_speed = -y_speed                                  
+    screen.blit(my_ball, [x, y])
+    pygame.display.flip()pygame.quit( )
+
+为y-speed 增加代码 
+（垂直运动）
+
+让球在窗口的顶边 
+或底边反弹
+
+我们在前面的程序中增加了第 9行（y_speed=10 ） 、第18行（y=y+y_speed ） 、第
+21行（ify> screen.get_height()-90ory<0: ）和第 22行（y_speed=-y_speed ） 。
+现在试试看效果怎么样 ！
+
+如果想让球慢下来，有几种方法可以做到。
+可以减少速度变量（ x_speed 和y_speed） 。这会减少每一个动画步中球移动
+的距离，所以运动也会更流畅。
+
+图灵社区会员 FreeLink 专享 尊重版权

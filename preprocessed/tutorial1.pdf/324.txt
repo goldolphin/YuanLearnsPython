@@ -1,0 +1,65 @@
+【PG】第 21章　打印格式化与字符串
+【PG】你学到了什么
+在这一章，你学到了以下内容。
+如何调整垂直间隔（添加或删除换行符） 。
+如何用制表符设置水平间隔。
+如果使用格式字符串显示不同的数字格式。
+使用格式字符串的两种方法： %符号和format() 方法。
+如何用 split() 分解字符串和用 join()联接字符串。
+如何使用 startswith() 、endswith() 、in和index()。
+如何用 strip() 去除字符串末尾的部分。
+如何用 upper() 和lower() 将字符串转换为全大写或全小写。
+【PG】测试题
+1. 如果有两个单独的 print语句，如下：288 Hello World!
+【PG】Changing case
+There are two more string methods I want to show you. They are for changing the case of a 
+string from uppercase to lowercase or vice versa. Sometimes you want to compare two 
+strings like “Hello” and “hello” , and you want to know if they have the same letters, even if 
+the case is not the same. One way to do this is  to make all the letters in both strings lower-
+case, and then do the comparison.  
+Python has a string method for that. It is 
+called lower() . Try this in interactive mode:
+There is a similar method called upper():
+You can make all-lowercase (or all-uppercase) copies of your original strings and then com-
+pare the copies to check if they are the same, ignoring case.
+【PG】What did you learn?
+In this chapter, you learned
+�how to adjust vertical spacing (adding or deleting newlines).
+�how to set horizontal spacing with tabs.
+�how to display different number formats using format strings.
+�how to split strings with split()  and join them with join() .
+�how to search strings with startswith() , endswith() , in , and index() .
+�how to remove things from the end of strings with strip() .
+�how to make strings all uppercase or all lowercase with upper()  and lower() .
+【PG】Test your knowledge
+1If you have two separate print  statements, like this,
+how would you make everything print on the same line?
+2How can you add extra blank lines when printing something?
+3What special printing code do you use to line things up in columns?
+4What format string do you use to force a number to print in E-notation?>>> string1 = "Hello"
+>>> string2 = string1.lower()
+>>> print string2 hello
+>>>string3 = string1.upper()
+>>> print string3
+HELLO
+print "What is"
+print "your name?"
+【PG】动手试一试
+1.  编写一个程序， 询问一个人的姓名、 年龄和最喜欢的颜色， 然后打印在一句
+话里。运行这个程序时应该看到类似这样的结果：289  CHAPTER  21 Print Formatting and Strings
+Try it out
+1Write a program that asks for a person’s name, age, and favorite color, and then prints 
+it out in one sentence. A run of the program should look like this:
+2Remember our times-table program from chap ter 8 (listing 8.5)? Write an improved 
+version that uses tabs to make sure everything lines up nicely in columns.
+3Write a program that calculates all the fractions of 8 (for example, 1/8, 2/8, 3/8, . . . up 
+to 8/8) and displays them with exactly three decimal places.>>> ======================== RESTART ========================
+>>>
+What is your name? Sam
+How old are you? 12What is your favorite color? green
+Your name is Sam you are 12 years old and you like green
+>>>
+2.  还记得第 8章中的乘法表程序（ 代码清单 8-5）吗？现在编写这个程序的一个
+改进版本，使用制表符确保所有内容都能很好地按列对齐。
+3.  编写一个程序计算 8的所有分数（ 例 如， 1/8, 2/8, 3/8…… 直到 8/8） ，要显示 3
+位小数。

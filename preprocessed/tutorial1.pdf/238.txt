@@ -1,0 +1,21 @@
+【PG】212　第 17章　动画精灵和碰撞检测
+
+【PG】for ball in balls :
+    screen.blit(ball.image, ball.rect)
+pygame.display.flip() 
+
+【PG】running = True
+while running :
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:  
+            running = Falsepygame.quit( )
+
+如果运行这个程序， 会看到9个沙滩球出现在 Pygame窗口中， 就 像右图显示的这样：
+
+稍后，我们就会让它们动起来。
+
+【PG】有没有注意到第 10行和第 11行有一个小小的变化？（ 就是设置 Pygame窗口大小的那两行代码。）我们将代码  screen = pygame.display.set_mode([640,480])替换为 size = width, height = 640, 480 screen = pygame.display.set_mode(size)
+
+【PG】这个代码不仅设置了窗口的大小（ 像前面一样 ） ，还定义了两个变量， width和height，后面将会用到这两个变量。 这里有一点很棒， 我们不仅定义了一个列表size（其中包含两个元素 ） ，还定义了两个整型变量width和height，而且所有这些都在一个语句中完成。另外，我们的列表两边没有加中括号， 在Python中这是允许的。
+
+【PG】我这样做只是想告诉你： 在Python中有时做同样的事情可以有多种不同的方法 。这些方法不存在绝对的优劣（ 只要它们都能工作 ） ，不能说哪种方法一定比另一种方图灵社区会员 FreeLink 专享 尊重版权

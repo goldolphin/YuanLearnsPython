@@ -1,0 +1,173 @@
+【PG】22.9　又到了游戏时间—Hangman　　 319
+ 
+【PG】    def menuExit_selected(self):
+        self.close()
+app = QtGui.QApplication(sys.argv)
+myapp = MyWidget(None)
+myapp.show()
+app.exec_()        
+
+【PG】    self.gallows = [self.line1, self.line2, self.line3, self.line4]
+        self.pieces_shown = 0
+        self.currentword = ""
+        f=open("words.txt", 'r')                                    
+        self.lines = f.readlines()                                     
+        f.close()                                                       
+        self.new_game()                
+
+   【PG】 def new_game(self):
+        self.guesses.setText("" )
+        self.currentword = random.choice(self.lines)    
+        self.currentword = self.currentword.strip()
+        for i in self.pieces:                                          
+            i.setFrameShadow(QtGui.QFrame.Plain)                        
+            i.setHidden(True)                    
+        for i in self.gallows:                                           
+            i.setFrameShadow(QtGui.QFrame.Plain)                         
+        self.word.setText(dashes(self.currentword))  
+        self.pieces_shown = 0
+        
+    def btn_guess_clicked(self):
+        guess = str(self.guessBox.text())                                
+        if str(self.guesses.text()) != "":                              
+            self.guesses.setText(str(self.guesses.text())+", "+guess)   
+        else:                                                           
+            s elf.guesses.setText(guess)                                 
+        if len(guess) == 1:                                          
+            if guess in self.currentword:                              
+                locations = find_letters(guess, self.currentword)     
+                self.word.setText(replace_letters(str(self.word.text()), 
+                                                  locations,guess))   
+                if str(self.word.text()) == self.currentword:      
+                    self.win()                                      
+            else:                                                       
+                self.wrong()                                             
+        else:                                                         
+            if guess == self.currentword:                           
+                self.win()                                            
+            else:                                                    
+                self.wrong()                    
+        self.guessBox.setText("")                    
+    def win(self):                                                       
+        QtGui.QMessageBox.inform ation(self,"Hangman","You win!")         
+        self.new_game()                                               
+    def wrong(self):
+        self.pieces_shown += 1                                            
+        for i in range(self.pieces_shown):        
+            s elf.pieces[i].setHidden(False)  
+        if self.pieces_shown == len(self.pieces):                        
+            m essage = "You lose.  The word was " + self.currentword     
+            Qt Gui.QMessageBox.warning(self,"Hangman", message)      
+            s elf.new_game()
+
+【PG】为了简化起见， 我们的 Hangman 程序只使用了小写字母。 我们提供的单词表只
+有小写字母，用户也必须将其猜测的内容以小写形式输入。
+
+【PG】新游戏开始时 ，315  CHAPTER  23 Take a Chance—Randomness
+This would do exactly the same thing as the previous example. The choice()  function ran-
+domly chooses an item from a list. In this case, the list is the numbers from 1/uni00A0to/uni00A06.
+
+【PG】More than one die
+What if you want to simulate rolling two dice? If  you’re just going to add up the two dice to 
+get the total, you might think of doing it this way:
+After all, the total of two dice can be from 2 to 12, right? Well, yes and no. You will get a 
+random number between 2 and 12, but not in the same way as adding up two random 
+numbers from 1 to 6. What that code line does is like rolling one big 11-sided die, not two 
+6-sided dice. But what’s the difference? That gets into a topic called probability . The easiest 
+way to see the difference is to try it out and see.
+
+【PG】Let’s roll the dice many time s and keep track of how many times each total comes up. 
+We’ll do that with a loop and a list. The loop will roll the dice, and the list will keep track of 
+how many times each total comes up. Let’s start with the single 11-sided die, as shown in 
+listing 23.1.
+
+【PG】import random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  
+for i in range(1000):
+    dice_total = random.randint(2, 12)
+    totals[dice_total] += 1  
+    
+for i in range (2, 13):    print "total", i, "came up", totals[i], "times"
+
+【PG】The list has indexes from 0 to 12, but we won’t use the first two, because we don’t care 
+about totals 0 or 1—they’ll never happen B. When we get a result, we add 1 to that list 
+item C. If the total is 7, we add one to totals[7] . So totals[2]  is the number of 2s we got, 
+totals[3]  is the number of 3s  we got, and so on.
+If you run this code, you 
+should get something like this:
+
+【PG】Listing 23.1 Rolling a single 11-sided die 1,000 times
+
+【PG】two_dice = random.randint(2, 12)
+
+【PG】List has 13 items, with index 0 to 12B
+
+【PG】Adds 1 to the count of this totalC
+
+【PG】total 2 came up 95 times
+
+【PG】total 3 came up 81 times
+
+【PG】total 4 came up 85 times
+
+【PG】total 5 came up 86 times
+
+【PG】total 6 came up 100 times
+
+【PG】total 7 came up 85 times
+
+【PG】total 8 came up 94 times
+
+【PG】total 9 came up 98 times
+
+【PG】total 10 came up 93 times
+
+【PG】total 11 came up 84 times
+
+【PG】total 12 came up 99 times
+
+【PG】处的dashes() 函数使用横杠替换了字母。 但它并没有替换标点符号，比如撇号。所以如果单词是 doesn’t ，玩家将会看到 -----'- 。
+
+【PG】建议你自己创建这个程序 。可 以用 Qt Designer 构建 GUI，即使看上去与这里的版本不完全一样也没有关系。 不 过一定要仔细查看代码， 看看组件分别使用什么名
+字。代码中的名字必须与 .ui文件中的名字一致 。
+
+【PG】尽可能自己键入代码 。运 行程序， 看看结果怎么样。 如果你想做些不同的尝试，那就放手去做！ 充 分尝试， 大胆试验， 并享受其中的快乐。 这正是编程最有意思也
+最有收获的地方，大多数知识都是通过这个途径获得的。
+
+【PG】311  CHAPTER  22 File Input and Output
+        else:
+            self.components.head.visible = True
+    def on_btnGuessLetter_mouseClick(self, event):
+        result = dialog.textEntryDialog(self, 'enter the letter here:', 'Hangman', '')
+        guess = result.text
+        if len(guess) == 1:            self.components.stYourGuesses.text = \
+              self.components.stYourGuesses.text + "  " + guess + " "
+            if result.text in self.currentword:                locations = find_letters(guess, self.currentword)
+                self.components.stDisplayWord.text = replace_letters \
+                  (self.components.stDisplayWord.text, locations, guess)                if self.components.stDisplayWord.text.find('-') == -1:
+                    dialog.alertDialog(self, 'You win!!!!!', 'Hangman')
+                    self.new_game()            else:
+                self.wrong_guess()
+        else:            dialog.alertDialog(self, 'Type one letter only', 'Hangman')
+    def on_cmdNewGame_command(self, event):
+        self.new_game()
+
+【PG】I encourage you to try creating this program on your own. You can build the GUI in 
+PythonCard using Resource Editor. It doesn’t matter if it doesn’t look exactly the same as 
+the version I have here. Just make sure you look at the code to see what names to use for the components. The names in the code have to match the names in the resource file.
+Type in the code if you can. Run the program and see how it works. And if you think of 
+something different to try, go for it! Have fun, play around with it, and experiment. 
+That’s one of the most fun and rewarding parts of programming, and it’s how you’ll learn the most.
+
+【PG】What did you learn?
+In this chapter, you learned
+�what a file is.
+�how to open and close files.
+�different ways to open a file: reading, writing, and appending.
+�different ways to write things to a file: write()  or print >> .
+�how to use pickle  to save lists and objects (and othe r Python data structures) to a file.
+�a lot about folders (also called directories), file locations, and paths.
+
+【PG】Shows another part of the man when guess is wrong
+Lets player guess a letter
+Starts a new game

@@ -1,0 +1,33 @@
+【PG】17.1 动画精灵　　 211
+
+【PG】要仔细分析这些代码的最后一行。 location 是一个 [x, y ]位置，这是个包含两个元素的列表。 因为=号的一边是包含两个元素的列表（ x和y） ，所以可以在另一边赋两个值。这里我们为动画精灵矩形的 left和top属性赋值。
+
+【PG】既然已经定义了 MyBallClass ，接下来必须创建它的一些实例 。 （要记住，类定义只是一个蓝图 ；现在必须动手盖房子 。 ）我们仍然需要和上一章同样的代码来创建 Pygame 窗口，另外还要在屏幕上创建一些球 ，按行列摆放 。这要利用一个嵌套循环来完成 ：
+
+【PG】We also need to blit the balls to the display surface. (Remember that funny word, blit? We talked about it in the last chapter.)
+
+【PG】Putting it all together, our program is shown in listing 17.1.
+
+【PG】import sys, pygame
+class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, location):
+        pygame.sprite.Sprite.__init__(self)  #call Sprite initializer
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        
+size = width, height = 640, 480
+screen = pygame.display.set_mode(size)
+screen.fill([255, 255, 255])                             
+img_file = "beach_ball.png"
+balls = []
+for row in range (0, 3):
+    for column in range (0, 3):
+        location = [column * 180 + 10, row * 180 + 10]
+        ball = MyBallClass(img_file, location)
+        balls.append(ball)
+for ball in balls:
+    screen.blit(ball.image, ball.rect)
+pygame.display.flip()
+
+【PG】定义 Ball 子类、设置窗口大小、将球增加到列表、图灵社区会员 FreeLink 专享 尊重版权

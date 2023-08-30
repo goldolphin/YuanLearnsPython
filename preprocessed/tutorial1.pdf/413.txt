@@ -1,0 +1,96 @@
+【PG】26.4 坐标系统 387
+
+【PG】if self.robot.rotation == targetOrientation:
+    self.robot.goForth()
+
+否则，你需要找到应该往哪个方向转。首先，你需要知道如果要转到正确的方向，需要左转多少次：
+
+【PG】else:
+    leftTurnsNeeded = (self.robot.rotation - targetOrientation) % 4
+
+接下来，需要转到正确的方向。如果需要左转 2 次以上，则可以只右转 1 次：
+
+【PG】if leftTurnsNeeded <= 2:
+    self.robot.turnLeft()
+else:
+    self.robot.turnRight()
+
+以下是机器人的完整代码。
+
+代码清单 26-2 更复杂的机器人
+
+class AI:
+    def __init__(self):
+        pass
+
+    def turn(self):
+        if self.robot.lookInFront() == "bot":
+            self.robot.attack()
+        else:
+            self.goTowards(self.robot.locateEnemy()[0])
+    
+    def goTowards(self, enemyLocation):
+        myLocation = self.robot.position
+        delta = (enemyLocation[0] - myLocation[0], enemyLocation[1] - myLocation[1])
+        if abs(delta[0]) > abs(delta[1]):
+            if delta[0] < 0:
+                targetOrientation = 3
+            else:
+                targetOrientation = 1
+        else:
+            if delta[1] < 0:
+                targetOrientation = 0
+            else:
+                targetOrientation = 2
+
+        if self.robot.rotation == targetOrientation:
+            self.robot.goForth()
+        else:
+            leftTurnsNeeded = (self.robot.rotation - targetOrientation) % 4
+            if leftTurnsNeeded <= 2:
+                self.robot.turnLeft()
+            else:
+                self.robot.turnRight()
+
+面向左
+
+面向右
+
+class AI:
+    def __init__(self):
+        pass
+
+    def turn(self):
+        if self.robot.lookInFront() == "bot":
+            self.robot.attack()
+        else:
+            self.goTowards(self.robot.locateEnemy()[0])
+    
+    def goTowards(self, enemyLocation):
+        myLocation = self.robot.position
+        delta = (enemyLocation[0] - myLocation[0], enemyLocation[1] - myLocation[1])
+        if abs(delta[0]) > abs(delta[1]):
+            if delta[0] < 0:
+                targetOrientation = 3
+            else:
+                targetOrientation = 1
+        else:
+            if delta[1] < 0:
+                targetOrientation = 0
+            else:
+                targetOrientation = 2
+
+        if self.robot.rotation == targetOrientation:
+            self.robot.goForth()
+        else:
+            leftTurnsNeeded = (self.robot.rotation - targetOrientation) % 4
+            if leftTurnsNeeded <= 2:
+                self.robot.turnLeft()
+            else:
+                self.robot.turnRight()
+
+面向上
+
+面向下
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

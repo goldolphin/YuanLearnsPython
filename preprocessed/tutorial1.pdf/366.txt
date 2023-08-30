@@ -1,0 +1,93 @@
+【PG】第 23章　碰运气——随机性
+
+【PG】如果玩家出的是 8，那么他需要告诉我们下一个花色是什么。由于 player_turn() 函数变得有点长了，所以我们将获取新花色的步骤转换成一个名为 get_new_suit() 的单独函数。清单 23.9 显示了这个函数的代码。
+
+def get_new_suit():
+    global active_suit
+    got_suit = False   
+    while not got_suit:
+        suit = raw_input("Pick a suit: ")
+        if suit.lower() == 'd':            
+            active_suit = "Diamonds"
+            got_suit = True
+        elif suit.lower() == 's':            
+            active_suit = "Spades"
+            got_suit = True
+        elif suit.lower() == 'h':            
+            active_suit = "Hearts"
+            got_suit = True
+        elif suit.lower() == 'c':            
+            active_suit = "Clubs"            
+            got_suit = True
+        else:
+            print"Not a valid suit.  Try again. ",      
+    print "You picked", active_suit
+
+【PG】这是玩家回合所需要的所有内容。在下一节中，我们将使计算机变得足够聪明，可以玩疯狂八张。
+
+【PG】计算机的回合
+
+【PG】玩家回合结束后，计算机需要出牌，因此我们需要告诉程序如何玩疯狂八张。它必须遵循与玩家相同的规则，但程序需要决定要出的牌。我们需要明确告诉它如何处理所有可能的情况：
+
+•出一张 8（并挑选一个新花色）
+•出另一张牌
+•抽牌
+
+【PG】为了简化问题，我们将告诉计算机，如果它有 8，就总是要出 8。这可能不是最好的策略，但它是一个简单的策略。
+
+【PG】如果计算机打出了 8，则必须挑选新花色。最简单的方法是计算计算机手中每种花色的牌数，并选择它拥有最多牌数的花色。同样，这不是最完美的策略，但它是编写代码最简单的方法。
+
+【PG】如果计算机手中没有 8，程序将遍历所有牌并查看哪些牌可供出牌。在这些牌中，它将选择最高价值的牌进行出牌。清单 23.9 显示了获取玩家出 8 时新花色的代码。
+
+【PG】代码清单 23.10 显示了计算机回合的相应代码，并提供了解释。
+
+【PG】代码清单 23-10 轮到计算机选择
+
+def computer_turn():
+    global c_hand, deck, up_card, active_suit, blocked
+    options = []
+    for card in c_hand:
+        if card.rank == '8':      
+            c_hand.remove(card)
+            up_card  = card
+            print "  Computer played ", card.short_name
+            #suit totals:  [diamonds, hearts, spades, clubs]     
+            suit_totals = [0, 0, 0, 0]            
+            for suit in range(1, 5): 
+                for card in c_hand:
+                    if card.suit_id == suit:
+                        suit_totals[suit-1] += 1
+            long_suit = 0
+            for i in range (4):
+                if suit_totals[i] > long_suit :
+                    long_suit = i
+            if long_suit == 0:  active_suit = "Diamonds"   
+            if long_suit == 1:  active_suit = "Hearts"                               
+            if long_suit == 2:  active_suit = "Spades"                               
+            if long_suit == 3:  active_suit = "Clubs"                             
+            print "  Computer changed suit to ", active_suit
+            return                      
+        else: 
+            if card.suit == active_suit:                   
+                options.append(card)                             
+            elif card.rank == up_card.rank:   
+                options.append(card)                         
+            if len(options) > 0:
+                best_play = options[0 ]
+                for card in options:                 
+                    if card.value > best_play.value:   
+                        best_play = card                
+                c_hand.remove(best_play)                                    
+                up_card = best_play                                         
+                active_suit = up_card.suit                                 
+                print "  Computer played ", best_play.short_name 
+            else:
+                if len(deck) >0:
+                    next_card = random.choice(deck)                        
+                    c_hand.append(next_card)                               
+                    deck.remove(next_card)                                 
+                    print "  Computer drew a card"      
+                else:
+                    print"  Computer is blocked"      
+                    blocked += 1                           
+    print "Computer has %i cards left" % (len(c_hand))

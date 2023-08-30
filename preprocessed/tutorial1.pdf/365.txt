@@ -1,0 +1,110 @@
+【PG】23.4　Crazy Eights　　 339
+                card = random.choice(deck)                         
+                p_hand.append(card)                                 
+                deck.remove(card)                                 
+                print "You drew", card.short_name                 
+            else:                                                   
+                print "There are no cards left in the deck"       
+                blocked += 1                                       
+            return                                               
+        else:
+            for card in p_hand:
+                if response.upper() == card.short_name :
+                    select ed_card = card
+            if selected_card == None :
+                response = raw_input("You don't have that card. Try again:")
+    if selected_card.rank == '8': 
+        valid_play = True
+        is_eight = True
+    elif selected_card.suit  == active_suit: 
+        valid_play = True    elif selected_card.rank  == up_card.rank:  
+        valid_play = True                                    if not valid_play:
+        response = raw_input("That's not a legal play.  Try again: ")
+
+【PG】315  CHAPTER  23 Take a Chance—Randomness
+This would do exactly the same thing as the previous example. The choice()  function ran-
+domly chooses an item from a list. In this case, the list is the numbers from 1/uni00A0to/uni00A06.
+More than one die
+What if you want to simulate rolling two dice? If  you’re just going to add up the two dice to 
+get the total, you might think of doing it this way:
+After all, the total of two dice can be from 2 to 12, right? Well, yes and no. You will get a 
+random number between 2 and 12, but not in the same way as adding up two random 
+numbers from 1 to 6. What that code line does is like rolling one big 11-sided die, not two 
+6-sided dice. But what’s the difference? That gets into a topic called probability . The easiest 
+way to see the difference is to try it out and see.
+
+【PG】Let’s roll the dice many time s and keep track of how many times each total comes up. 
+We’ll do that with a loop and a list. The loop will roll the dice, and the list will keep track of 
+how many times each total comes up. Let’s start with the single 11-sided die, as shown in 
+listing 23.1.
+import random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  
+for i in range(1000):
+    dice_total = random.randint(2, 12)
+    totals[dice_total] += 1  
+    
+for i in range (2, 13):    print "total", i, "came up", totals[i], "times"
+
+【PG】The list has indexes from 0 to 12, but we won’t use the first two, because we don’t care 
+about totals 0 or 1—they’ll never happen B. When we get a result, we add 1 to that list 
+item C. If the total is 7, we add one to totals[7] . So totals[2]  is the number of 2s we got, 
+totals[3]  is the number of 3s  we got, and so on.
+If you run this code, you 
+should get something like this:Listing 23.1 Rolling a single 11-sided die 1,000 times
+
+【PG】two_dice = random.randint(2, 12)
+List has 13 items, 
+with index 0 to 12B
+Adds 1 to the 
+count of this totalC
+total 2 came up 95 times
+total 3 came up 81 timestotal 4 came up 85 times
+total 5 came up 86 times
+total 6 came up 100 timestotal 7 came up 85 times
+total 8 came up 94 times
+total 9 came up 98 timestotal 10 came up 93 times
+total 11 came up 84 times
+total 12 came up 99 times
+
+【PG】在这里， 我们会得到一个合法的选择： 玩家可能抽牌， 也可能出一张合法的
+牌。如果玩家抽牌，只要这副牌中还有剩余的牌，就在玩家手里增加一张牌。
+如果出一张牌，需要从玩家手里删除这张牌，让它成为明牌：
+p_hand.remove(selected_card )
+up_card  = selected_car d
+active_suit = up_card.sui t
+print "You played", selected_card.short_name
+如果出的牌是一张 8，玩家要告诉我们他下一步想要什么花色。 因为player_
+turn()函数稍有点长， 我们把得到新花色的代码放在一个单独的函数中， 名为get_
+new_suit() 。代码清单 23-9显示了这个函数的代码。
+代码清单 23-9　玩家出一张 8 时得到新花色
+
+【PG】If the card played was an 8, the player needs to tell us what suit he wants next. Because the 
+player_turn()  function is getting a bit long, we’ll make getting the new suit into a separate 
+function called get_new_suit() . Listing 23.9 shows the code for this function.
+def get_new_suit():
+    global active_suit
+    got_suit = False    while not got_suit:
+        suit = raw_input("Pick a suit: ")
+        if suit.lower() == 'd':            active_suit = "Diamonds"
+            got_suit = True
+        elif suit.lower() == 's':            active_suit = "Spades"
+            got_suit = True
+        elif suit.lower() == 'h':            active_suit = "Hearts"
+            got_suit = True
+        elif suit.lower() == 'c':            active_suit = "Clubs"            got_suit = True
+        else:
+            print"Not a valid suit.  Try again. ",      print "You picked", active_suit
+
+【PG】This is everything we need for the player’s turn. In the next section, we’ll make the com-
+puter smart enough to play Crazy Eights.
+The computer’s turn
+After the player’s turn, the computer has to play, so we need to tell the program how to play Crazy Eights. It has to follow the same rules as the player, but the program needs to decide 
+what card to play. We have to specifically tell it how to handle all possible situations:
+�playing an 8 (and picking a new suit)
+�playing another card
+�drawing
+To make things a bit simpler, we’ll tell the computer to always play an 8 if it has one. This might not be the best strategy, but it’s a simple one.
+If the computer plays an 8, it must pick the new suit. The easiest way to do that is to count 
+the number of cards of each suit in the computer’s hand and pick the suit that it has the most of. Again, this isn’t a perfect strate gy, but it’s one of the simplest to code.
+If there’s no 8 in the computer’s hand, the program will go through all the cards and see 
+which ones are possible plays. Out of these cards, it’ll pick the one with the highest value and play that one.

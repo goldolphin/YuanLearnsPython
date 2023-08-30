@@ -1,0 +1,31 @@
+【PG】23.2　掷骰子　　 325
+【PG】如果查看总数， 可以看到所有数出现的次数大致相同， 都介于 80到100之间。它们出现的次数并不完全一样， 因为这些数都是随机的。 不过它们都很接近， 而且哪些数出现次数更多并没有明显的规律。 你 可以运行这个程序， 多试几次， 确认这一点。或者你也可以把循环次数增加到 10 000或100 000试试看 。
+
+【PG】现在用两个 6面的骰子做同样的事情 。代码清单 23-2中的代码会完成这项工作 。
+代码清单 23-2　将两个 6 面的骰子掷 1000 次
+import random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+for i in range(1000):    
+    die_1 = random.randint(1, 6)
+    die_2 = random.randint(1, 6)
+    dice_total = die_1 + die_2    
+    totals[dice_total] += 1
+for i in range (2, 13):
+    print "total", i, "came up", totals[i], "times"
+
+【PG】如果你运行代码清单23-2，应该会得到以下类似的输出：
+total 2 came up 22 times
+total 3 came up 61 times
+total 4 came up 93 times
+total 5 came up 111 times
+total 6 came up 141 times
+total 7 came up 163 times
+total 8 came up 134 times
+total 9 came up 117 times
+total 10 came up 74 times
+total 11 came up 62 times
+total 12 came up 22 times
+
+【PG】注意到最大和最小的数出现比较少，而中间的数字（如6和7）出现得更频繁一些。这与只有一个11面骰子的情况有所不同。如果多运行几次，然后计算某个总数出现次数的百分比，会得到右图这样的结果： 
+
+【PG】结果一个11面的骰子和两个6面的骰子出现某个总和的概率不同。

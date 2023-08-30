@@ -1,0 +1,65 @@
+【PG】第 21章　打印格式化与字符串
+
+【PG】实际上， 我们已经知道怎么做了。 前面讨论列表时（ 第12章） ，曾经见过可以
+用这种方法来检查某个元素是否在一个列表中：
+
+【PG】286 Hello World!
+This code will keep looping until it finds a li ne that starts with “Instructions. ” Remember 
+that lines[i]  means that i is the index  for lines . So you’d start with lines[0]  (the first 
+line), then lines[1]  (the second line), and so on. When the while  loop finishes, i will be 
+equal to the index of the line that starts with “Instructions, ” which is the one you’re 
+looking for.
+
+【PG】Searching anywhere in a string: in and index()
+【PG】The startswith()  and endswith()  methods work really well for finding things at the start 
+or end of a string. But what if you want to find something in the middle of a string? 
+Let’s say you had a bunch of 
+strings that had street addresses, like this:
+Maybe you want to find all the addresses with “Maple” in them. None of them start or end 
+with “Maple, ” but two of them contain the word “Maple. ” How would you find them?
+
+【PG】Actually, we already saw how to do this. When we were talking about lists (back in chapter 
+12), we saw that you could check 
+whether an item is in a list by doing this:
+【PG】We used the keyword in to check whether a certain item was in the list. The in keyword 
+also works for strings. A string is basically a list of characters, so you can do this:
+The 
+in keyword just tells you whether the substring is somewhere  in the string you’re check-
+ing. It doesn’t tell you where it is. For that, you need the index()  method. Like with lists, 
+index()  tells you where in the bigger string the smaller string starts. 
+
+【PG】Here’s an example:657 Maple Lane
+47 Birch Street95 Maple Drive
+if someItem in my_list:
+    print "Found it!"
+>>> addr1 = '657 Maple Lane'
+>>> if 'Maple' in addr1:
+        print "That address has 'Maple' in it." 
+When you’re looking for a smaller 
+string, like “Maple”, within a bigger string, like “657 Maple Lane”, the smaller string is called a substring.
+>>> addr1 = '657 Maple Lane'
+>>> if 'Maple' in addr1:        position = addr1.index('Maple')
+        print "found 'Maple' at index", position
+
+【PG】术语箱
+在较大的字符串（如 657 Maple Lane）中查找较小的字符串（如 Maple）时，较小的这个字符串称为子串（substring） 。
+in关键字只能指出子串是不是位于你检查的字符串中的某个位置，但没有告诉你它到底在什么位置。要得到这个位置，需要使用index()方法。类似于搜索列表，index()会指出较小串从较大字符串中的哪个位置开始。右面是一个例子。
+
+显示：“found 'Maple' at index 4”，这说明单词Maple从字符串“657 Maple Lane”的位置4开始。与列表一样，字符串中字母的索引（或位置）都是从0开始，所以“M”位于索引4。
+
+【PG】Removing part of a string
+【PG】Quite often you’ll want to remove or strip off  part of a string. Usually, you’ll want to strip 
+something off the end, like a newline character or some extra spaces. Python has a string 
+method called strip() to do exactly this. You 
+just tell it what you want stripped off, like this:
+
+【PG】In this case, we stripped the “de” off the end of my name. If there were no “de” at the end, nothing 
+would be stripped off:
+
+【PG】If you don’t tell strip() what to strip off, it’ll strip off any whitespace. Like we said before, 
+that includes spaces, tabs, and newlines. So if we had extra spaces to get rid of, we could 
+do this:
+
+【PG】Notice that the extra spaces after my name were removed. The good thing is that you don’t 
+need to tell strip() how many spaces to remove. It’ll remove all whitespace at the end of 
+the string.

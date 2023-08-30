@@ -7,7 +7,7 @@
                    或者：
 
 【PG】CHAPTER  3 Basic Math
-【PG】What's that letter ‘e’ 
+What's that letter ‘e’ 
 doing in the middle of
 the number?
 SIncrement and decrement
@@ -20,21 +20,7 @@ You use them like this:
 The first one adds one to the number. (It changes from 7 to 8.) The second one subtracts 
 one from the number. (It changes from 7 to 6.)
 
-【PG】Really big  and really small
-Remember, in chapter 1, when we multiplied those two really big numbers together? We got a very big number for the answer. Sometimes, Python shows you big numbers a bit differently. Try this 
-in interactive mode:
-(It doesn’t matter exactly what numbers you type in—any big numbers with decimals
-will do.)
-The e is one way of displaying really big or really small 
-numbers on a computer. It’s called E-notation. When we’re 
-working with really big (or really small) numbers, showing all the digits and decimal places can be kind of a pain. These kinds of numbers show up a lot in math and science. 
-
-【PG】number增1
-number减1
-其中第一个例子将 number增1（这会从 7变成 8） 。第二个例子将 number减去 1
-（从 7变成 6 ） 。
-
-【PG】3.5　非常大和非常小
+【PG】非常大和非常小
 还记得第 1章中将两个非常大的数相乘吗 ？我们得到的答案也是一个非常大的数 。S实 际 上， 既 然 你 提 到 了 这 一
 点，应该说操作符和操作员确实很接
 近……就 像老式电话接线员连接电话

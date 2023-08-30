@@ -1,0 +1,42 @@
+【PG】第 16章　图　　形
+
+【PG】还可以增加延迟设置。 在代码清单 16-15中，延迟是 20。这是以毫秒为单位，也就是千分之一秒。所以每次循环时，程序会等待 0.02秒。如果增加这个数值，运动会变慢。如果减少这个数值，运动就会加速。可以试着改变速度和延迟来看最后的效果。
+
+【PG】16.10　让球翻转
+
+【PG】现在来看让球一直移动的第二种选择。不是让它在屏幕边界反弹，而是让它翻转。这表示，球在屏幕右边界消失时，又会在左边界重新出现。
+
+【PG】为了让问题更简单一些，我们先来看只是水平移动球的情况。程序见代码清单16-16。
+
+【PG】代码清单 16-16　利用翻转移动沙滩球图像
+
+import pygame, sys
+pygame.init()
+screen = pygame.display.set_mode([640,480])
+screen.fill([255, 255, 255])
+my_ball = pygame.image.load('beach_ball.png')
+x = 50
+y = 50
+x_speed = 5
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    pygame.time.delay(20)
+    pygame.draw.rect(screen, [255,255,255], [x, y, 90, 90], 0)
+    x = x + x_speed
+    if x > screen.get_width():
+        x = 0
+    screen.blit(my_ball, [x, y])
+    pygame.display.flip()
+pygame.quit()
+
+【PG】如果球在最右边……
+……重新从左边开始
+
+【PG】第17行（ifx>screen.get_width():）和第18行（x=0）中，我们检查球什么时候达到窗口的右边界，并把它移回（或者翻转）到左边界。
+
+【PG】你可能注意到了，球在右边出现时，它会“突然跳到”[0, 50]。可能更自然的做法是从屏幕后面“滑入”。把第18行（x=0）改为x=-90，再看看是不是有差别。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

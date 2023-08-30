@@ -1,0 +1,63 @@
+【PG】第 17章　动画精灵和碰撞检测
+
+【PG】def animate(group):
+    screen.fill([255,255,255])
+    for ball in group:
+        ball.move()
+    for ball in group:
+        group.remove(ball)
+        if pygame.sprite.spritecollide(ball, group, False):
+            ball.speed[0] = -ball.speed[0]
+            ball.speed[1] = -ball.speed[1]
+        group.add(ball)
+        screen.blit(ball.image, ball.rect)
+    pygame.display.flip()
+
+【PG】size = width, height = 640, 480
+screen = pygame.display.set_mode(size)
+screen.fill([255, 255, 255])
+img_file = "beach_ball.png"
+clock = pygame.time.Clock()
+group = pygame.sprite.Group()
+for row in range (0, 2):
+    for column in range (0, 2):
+        location = [column * 180 + 10, row * 180 + 10]
+        speed = [choice([-4, 4]), choice([-4, 4])]
+        ball = MyBallClass(img_file, location, speed)
+        group.add(ball)
+
+【PG】running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = Fals e
+            frame_rate = clock.get_fps()
+            print "frame rate = ", frame_rate
+    animate(group)
+    clock.tick(30)
+pygame.quit()
+
+【PG】import sys, pygame
+from random import *
+
+class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, location, speed):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        self.speed = speed 
+    def move(self):
+        self.rect = self.rect.move(self.speed)
+        if self.rect.left < 0 or self.rect.right > width:
+            self.speed[0] = -self.speed[0]
+        if self.rect.top< 0 or self.rect.bottom > height:
+            self.speed[1] = -self.speed[1]
+
+【PG】Pygame和动画精灵的基本知识就介绍完了。在下一章中，我们将使用Pygame
+建立一个真正的游戏，我们还会介绍另外一些你能完成的工作，比如增加文本（显
+示游戏得分）、声音和鼠标及键盘输入。
+
+【PG】你学到了什么
+在这一章，你学到了以下内容。
+Pygame中的动画精灵，以及如何使用动画精灵处理多个移动的图像。

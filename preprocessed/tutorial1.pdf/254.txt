@@ -1,0 +1,71 @@
+【PG】第 18章　一种新的输入——事件
+
+【PG】何时按下一个按键，所以要查找 KEYDOWN 事件。我们需要这样的代码：
+if event.type == pygame.KEYDOWN
+由于前面已经有了一个 if语句，可以直接用 elif增加另一个条件（ 我们已经在第 7章介绍过这个内容） ：
+while running:                                                             
+    for event in pygame.event.get():                                    
+        if event.type == pygame.QUIT:                                   
+            running = False                                                  
+        elif event.type == pygame.KEYDOWN:
+            # do something                      这是用来检测按键的新增部分
+            
+【PG】按下按键时我们想做什么呢？ 我们说过， 如果按下向上箭头， 要让球上移， 如果按下向下箭头，要让球下移。所以可以这样做：
+while True :
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:             running = False
+        elif event.type == pygame.KEYDOWN :
+            if event.key == pygame.K_UP:
+                my_ball.rect.top = my_ball.rect.top - 10
+            elif event.key == pygame.K_DOWN:
+                my_ball.rect.top = my_ball.rect.top + 10让球上移
+10个像素
+让球下移
+10个像素
+K_UP和K_DOWN是Pygame中向上和向下箭头的名字。 对代码清单 18-1完成以上修改，程序现在如代码清单 18-2所示 。
+
+【PG】代码清单 18-2　响应向上和向下箭头键的反弹球
+
+import pygame, sys
+pygame.init()
+screen = pygame.display.set_mode([640,480])
+background = pygame.Surface(screen.get_size())
+background.fill([255, 255, 255])
+clock = pygame.time.Clock()
+
+class Ball(pygame.sprite.Sprite):
+    def __init__(self, image_file, speed, location):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        self.speed = speed
+
+    def move(self):
+        if self.rect.left <= screen.get_rect().left or \
+                self.rect.right >= screen.get_rect().right:
+            self.speed[0] = - self.speed[0]
+        newpos = self.rect.move(self.speed)
+        self.rect = newpos 
+
+my_ball = Ball('beach_ball.png', [10,0], [20, 20])
+running = True
+
+while running: 
+    for event in pygame.event.get():  
+        if event.type == pygame.QUIT: 
+            running = False 
+        elif event.type == pygame.KEYDOWN:                    
+            if event.key == pygame.K_UP:                       
+                my_ball.rect.top = my_ball.rect.top - 10       
+            elif event.key == pygame.K_DOWN:                   
+                my_ball.rect.top = my_ball.rect.top + 10  
+
+    clock.tick(30) 
+    screen.blit(background, (0, 0))                           
+    my_ball.move()                                             
+    screen.blit(my_ball.image, my_ball.rect)                  
+    pygame.display.flip()                          
+
+pygame.quit( )初始化
+Ball类定义，包括move()方法

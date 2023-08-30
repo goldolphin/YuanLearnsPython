@@ -1,0 +1,25 @@
+【PG】第 18章　一种新的输入——事件
+现在，要跟踪分数 ……因为我们已经用球的 move()方法检测了球什么时候碰到窗口的顶边（来完成反弹） ，所以只需要在这里再增加几行 ：
+if self.rect.top <= 0 :
+    self.speed[1] = -self.speed[1]    
+    score = score + 1                                          
+    score_surf = score_font.render(str(score), 1, (0, 0, 0))
+
+两行新代码球碰到顶边时还是
+有一个错误！
+Traceback (most recent call last):
+   File "C:...", line 59, in <module>myBall.move()   File "C:\...", line 24, in movescore = score + 1UnboundLocalError: local variable 'score'referenced before assignment
+
+【PG】唉呀！我们忘记命名空间的问题了。还记得第15章中那个又大又长的解释吗？
+现在可以看到命名空间的一个实际例子了。尽管我们确实有一个名为score的变量，但是这里试图从Ball类的move()方法中使用这个变量。这个类在寻找一个名为score的局部变量，而这个局部变量并不存在。实际上，我们希望使用先前已经创建的全局变量，所以只需要告诉move()方法使用全局变量score，如下：
+def move(self):
+    global score
+    
+还要让score_font（分数的font对象）和score_surf（包含渲染文本的表面块）作为全局变量，因为它们是用move()方法更新的。所以代码实际上应当像这样：
+def move(self):
+    global score, score_font, score_surf
+    
+现在应该能正常工作了！再试试看。应该能看到窗口左上角的分数，而且当你把球弹到窗口顶边时这个分数应该会增加。
+
+【PG】跟踪还有几条命
+现在来跟踪还有几条命。对目前来说，如果漏了球，它就会从窗口底边掉下去，再也看不到了。我们希望给玩家 3条命或者 3个机会，所以下面建立一个名为

@@ -1,0 +1,32 @@
+【PG】12.16　字典　　 133
+
+【PG】classMarks列表并不知道Joe、Tom和Beth这些名字，也不知道数学（Math）、科学（Science）、阅读（Reading）和拼写（Spelling）这些课程。这里之所以这样标，是因为我们知道想要在这个列表中储存什么信息。不过，对于Python来说，它们只是列表中一些已经编号的位置而已。这就像邮局里编号的邮箱。邮箱上没有名字，只有编号。邮递员只负责明确哪封信归哪个邮箱，而你知道哪个邮箱是你的。
+
+【PG】要对classMarks表加标签，一种更准确的方法应该是这样：你来负责？我想这是我的工作。
+
+129 CHAPTER 12 Collecting Things Together—Lists
+
+【PG】A more accurate way to label the classMarks table would be like this:
+
+【PG】Now it’s easier to see that the mark 77 is stored in classMarks[0][2]. If we were writing a program using classMarks to store our data, we’d have to keep track of which data was stored in which row and column. Just like the postmaster, we’d have the job of keeping track of which slot belongs to which piece of data.
+
+【PG】What did you learn? In this chapter, you learned what lists are, how to add things to a list, how to delete things from a list, and how to find out if a list contains a certain value.
+
+You mind? I’m trying to work here. GRRRRRR!
+
+[0] [1] [2] [3]
+55
+656361
+97 9577 81
+72
+886792
+
+classMarks[0]
+classMarks[1]
+classMarks[2]
+
+【PG】classMarks现在可以更容易地看出成绩77存储在classMarks[0][2]中。如果编写一个程序使用classMarks存储我们的数据，就必须知道哪些数据存储在哪一行哪一列。就像邮递员一样，我们的任务是明确哪个位置属于哪个数据。
+
+【PG】12.16　字典
+
+【PG】从上文可以看出，Python列表是一种将元素组织在一起的方式。在编程中，你会经常想以另一种方式组织元素，即将某个值和另一个值关联起来。这种组织方式就是字典。

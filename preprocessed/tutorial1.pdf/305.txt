@@ -1,0 +1,38 @@
+【PG】20.7　菜单上是什么　　 279
+在使用 C，华氏转摄氏使用 F吧。所以我们将对应的文本分别改为 &Convert、&C to F和&F to C。热键组合分别是 Alt-C-C和Alt-C-F。在Qt Designer 中定义完热键之后，就不需要再做其他事情了，即没有新的代码需要编写。 PyQt和操作系统会处理热键的下划线和键盘输入 。你只需保存 UI文件即可，你可以将它存为一个不同的名字，比如tempconv_menu_hotkeys.ui。 如果使用了不同的名字，记得修改代码清单 20-4中的第三行来加载这个 UI文件 ：
+form_class = uic.loadUiType( "tempconv_menu_hotkeys.ui " )[0]
+
+我在我的 Mac上试过了。按下Option键，也就是 Alt键时，我并没有看到菜单栏中有下划线，也没有看到高亮的字母。
+
+在Mac OS X 中菜单有热键吗？答案是“没有”。因为所有的 Mac电脑自诞生之日起就有鼠标（或者触摸板），所以Mac OS会假设你会使用鼠标来操作菜单。在Mac OS上，菜单项没有键盘快捷键或者热键系统。很多功能都有快捷键，而且其中有一些会和菜单项对应。但你并不能像在 Windows 上那样直接使用热键操作菜单系统。
+
+这就是温度转换 GUI的全部内容。在第 22章，我们将会使用 PyQt来实现一个Hangman游戏。
+
+【PG】Celsius to Fahrenheit button and the Convert Celsius to Fahrenheit menu item a command called cmdCtoF. This command would be run when the button is clicked or the menu item is selected. To make this work, go into Resource Editor and select the btnCtoF component. Scroll through the list of properties until you see command. Change the value from None to cmdCtoF. Do the same thing for the other button, but call the command cmdFtoC. Then start the Menu Editor, and select the &Celsius to Fahrenheit menu item. You’ll notice that there’s a text box for Command, which is empty. In this box, type cmdCtoF. Do the same for the &Fahrenheit to Celsius menu item, but call the command cmdFtoC.
+Now we have both a button and a menu item with the command property set to cmdCtoF. The other button and menu item both have their command property set to cmdFtoC. Now we just have to change the names of the event handlers. Because we’re sharing an event handler between a button and a menu item, there will only need to be two event handlers, not four. The code should look like listing 20.5.
+from PythonCard import model
+class MainWindow(model.Background):
+    def on_cmdCtoF_command(self, event):
+        Cel = float(self.components.tfCel.text)
+        Fahr = Cel * 9.0 / 5 + 32
+        print 'cel = ', Cel, ' fahr = ', Fahr
+        self.components.spinFahr.value = int(Fahr)
+    def on_cmdFtoC_command(self, event):
+        Fahr = self.components.spinFahr.value
+        Cel = (Fahr - 32) * 5.0 / 9 
+        Cel = '%.2f' % Cel
+        self.components.tfCel.text = Cel
+app = model.Application(MainWindow)
+app.MainLoop()
+Now there are only two event handlers, and no extra functions are required. The command property is a good way to share an event handler between two or more components, if the components have to do the same things (like a button and a menu item do).
+
+That’s it for the temperature-conversion GUI. In chapter 22, we’ll use PythonCard to make a version of the Hangman game.
+
+【PG】你学到了什么
+在这一章，我们学到了以下内容。
+PyQt。
+Qt Designer。
+构成GUI的组件—按钮、文本等。
+事件处理器—让组件具体做事情。
+菜单项和热键。
+图灵社区会员FreeLink专享尊重版权

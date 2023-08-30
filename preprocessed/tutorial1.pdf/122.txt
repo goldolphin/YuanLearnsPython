@@ -1,0 +1,74 @@
+【PG】第 9章　全都为了你——注释
+性！尽管写程序时很明白， 但是等以后再看程序时， 很
+可能对原先的想法一头雾水。
+
+至于应该在注释中放什么内容并没有
+严格的规定 ，不 过建议你尽可能增加注
+释。现在看来， 注 释越多越好。 宁可过于
+谨慎注释过多， 也 比注释过少要好。 积累
+更多的编程经验后， 你 就会慢慢了解加多
+少注释以及加哪种注释最适合了。
+
+本书中的注释
+在你手上的这本书中 ，你可能看不到代码清单中有多少注释 。这是因为这本书
+使用了“注解”，也就是代码旁边的说明 。不过如果查看 \examples 文件夹中或者网
+站上的代码清单 ，你会看到所有代码中都有注释 。
+
+【PG】9.6　注释掉
+还可以使用注释临时跳过程序中的某些部分。作为注释的所有内容都会被忽略。
+#print "Hello"
+print "World"
+>>> =============== RESTART ================
+>>>World>>>
+由于print "Hello" 被注释掉，所以这一行不会执行，不会打印“Hello” 。
+调试程序时 ，如果只希望某些部分运行而将另外的部分忽略 ，这会很有用 。如
+果你希望计算机忽略某些代码行 ，只需要在那些代码行前面加一个 #，或者在这段
+代码前后加上三重引号 。
+
+【PG】大多数代码编辑器 （包括IDLE）都有一个特性， 允许你很快地注释整个代码块
+（也能很快地取消注释） 。要做到这一点 ，在 IDLE的编辑器中要看 Format菜单。当时我是怎
+么想的？
+
+86 Hello World!
+
+for i in range (1, 6):
+    print
+    print 'i =', i,
+    print 'Hello, how',
+    if i == 3:
+        continue
+    print 'are you today?'
+
+If we run this program, 
+the output looks like this:
+Notice that, the third time through the loop (when i == 3 ), the body of the loop didn’t 
+finish—it jumped ahead to the next iteration ( i == 4 ). That was the continue  statement 
+at work. It works the same way in while  loops.
+
+Bailing out— break
+What if we want to jump out of the loop completely—never finish counting, or give up 
+waiting for the end condition? The break  statement does that.
+Let’s change only line 6 of listing 8.9, replacing continue  with break , and rerun the program 
+to see what happens.
+
+This time, the loop didn’t just skip the rest of  iteration 3; it stopped altogether. That’s what 
+break  does. It works the same way in while  loops. 
+
+I should tell you that some people think using break  and continue  is a bad idea. Personally, 
+I don’t think they’re bad, but I rarely use them. I thought I’d tell you about break  and 
+continue  just in case you ever need them.
+
+Listing 8.9 Using continue  in a loop
+>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?
+i = 2 Hello how are you today?
+i = 3 Hello how
+i = 4 Hello how are you today?
+i = 5 Hello how are you today?
+
+>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?
+i = 2 Hello how are you today?
+i = 3 Hello how

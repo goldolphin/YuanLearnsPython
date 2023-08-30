@@ -1,0 +1,33 @@
+【PG】18.3　鼠标事件　　 231
+
+【PG】最简单的事情是： 只要鼠标在 Pygame窗口中移动， 就让沙滩球随着鼠标位置移动。要移动沙滩球， 我们将使用球的 rect.center 属性。这样一来， 球的中心就会跟着鼠标移动。
+
+【PG】我们要把while循环中检测按键事件的代码替换为检测鼠标事件。
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: 
+            running = Fals e
+        elif event.type == pygame.MOUSEMOTION:
+            my_ball.rect.center = event.pos 检测鼠标移动并移动球
+
+【PG】这比检测键盘事件还要简单 。对代码清单 18-2完成以上修改 ，并试着运行这个程序。event.pos 部分是鼠标的位置 （x和y坐标） 。只需要把球的中心移动到这个位置 。注意，只要鼠标在移动 ，球就跟着移动 。也就是说 ，只要MOUSEMOVE 事件正在发生 ，球就会随着移动 。改变球的 rect.center 会同时改变 x和y位置。我们不再只是让球向上或向下移动， 而 是会上下左右同时移动。 如果没有鼠标事件（ 可能因为鼠标没有移动，或者鼠标光标落在 Pygame窗口之外 ） ，球就会继续在左右两边反弹。
+
+【PG】现在试着只是在鼠标按钮保持按下时才让鼠标控制起作用 。鼠 标按钮保持按下时移动鼠标称为拖动（ dragging） 。 并没有一种 MOUSEDRAG 事件类型， 所以需要使用现有的事件类型来得到我们希望的效果。
+
+【PG】如何区分是否在拖动鼠标呢 ？拖动意味着鼠标移动时鼠标按钮一直保持按下 。我们可以利用MOUSEBUTTONDOWN 事件得到鼠标按钮何时按下 ，另外利用MOUSEBUTTONUP事件可以得到按钮何时松开（ 还原，不再按下 ） 。因此只需跟踪按钮的状态， 可以通过建立一个变量来做到，我们将这个变量命名为 held_down。具体做法如下：
+
+held_down = False
+while running:    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: 
+            running = Fals e
+        elif event.type == pygame.MOUSEBUTTONDOWN :
+            held_down = True           
+        elif event.type == pygame.MOUSEBUTTONUP :
+            held_down = False     
+        elif event.type == pygame.MOUSEMOTION:            
+            if held_down:
+                my_ball.rect.center = event.pos
+
+【PG】确定鼠标按钮是否保持按下，只有在拖动鼠标时才执行。拖动条件（ 鼠标移动时鼠标按钮保持按下 ）在以上代码的最后一个elif块中检测。前面已经修改过代码清单 18-2 ，在这个修改后的代码中， 对while循环完成上。

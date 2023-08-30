@@ -1,0 +1,56 @@
+【PG】90　　第 8章　转　圈　圈
+
+【PG】86 Hello World!
+
+【PG】for i in range (1, 6):
+    print
+    print 'i =', i,
+    print 'Hello, how',    if i == 3:
+        continue
+    print 'are you today?'
+If we run this program, 
+the output looks like this:
+
+【PG】Notice that, the third time through the loop (when i == 3 ), the body of the loop didn’t 
+【PG】finish—it jumped ahead to the next iteration ( i == 4 ). That was the continue  statement 
+【PG】at work. It works the same way in while  loops.
+
+【PG】Bailing out— break
+What if we want to jump out of the loop co mpletely—never finish counting, or give up 
+waiting for the end condition? The break  statement does that.
+
+【PG】Let’s change only line 6 of listing 8.9, replacing continue  with break , and rerun the program 
+【PG】to see what happens.
+
+【PG】This time, the loop didn’t just skip the rest of  iteration 3; it stopped altogether. That’s what 
+【PG】break  does. It works the same way in while  loops. 
+
+【PG】I should tell you that some people think using break  and continue  is a bad idea. Personally, 
+I don’t think they’re bad, but I rarely use them. I thought I’d tell you about break  and 
+continue  just in case you ever need them. Listing 8.9 Using continue  in a loop
+
+【PG】>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?i = 2 Hello how are you today?
+i = 3 Hello how
+i = 4 Hello how are you today?
+i = 5 Hello how are you today?
+>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?
+i = 2 Hello how are you today?
+i = 3 Hello how
+
+【PG】你学到了什么
+
+【PG】在这一章，你学到了以下内容。
+
+【PG】for循环（也称为计数循环） 。
+
+【PG】range() 函数—计数循环的一个捷径。
+
+【PG】range() 的不同步长大小。
+
+【PG】while 循环（也称为条件循环） 。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

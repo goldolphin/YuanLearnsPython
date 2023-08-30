@@ -1,0 +1,57 @@
+【PG】16.3　在窗口中画图　　 191
+
+这会创建一个矩形， 它的左上角距离窗口左边界 250像素，距离窗口上边界 150像素，宽为 300像素，高为 200像素。下面来试试看。
+
+用下面这行代码替换代码清单 16-4中的第 5行 ，看看结果是什么：
+
+【PG】Size of shapes
+
+When you use Pygame’s draw  functions to draw shapes, you have to specify what size to make the shape. For a circle, there is only one size: the radius. For something like a rectan-gle, you’d have to specif y the length and width. 
+
+Pygame has a special kind of object called a rect  (short for “rectangle”) that is used for defining rectangular areas. You define a rect  using the coordinates of its top-left corner and its width and height: 
+
+This defines both the location and the size. Here’s an example:
+
+This would create a rectangle where the top-left corner is 250 pixels from the left side of the window and 150 pixels down from the top of the window. The rectangle would be 300 pixels wide and 200 pixels high. Let’s try it and see.
+
+Substitute this line for line 5 in listing 16.5 and see what it looks like:
+
+The location and size of the rectangle can be a simple list (or tuple) of numbers or a Pygame Rect  object. So you could also substitute the preceding line with two lines like this:
+
+【PG】或者
+
+Here’s what the rectangle should look like. 
+
+I added some dimensions to show you which numbers mean what:
+
+	Rect(left, top, width, height)
+	my_rect = Rect(250, 150, 300, 200)
+
+【PG】Color of the rectangle	Location and size of the rectangle	Line width (or filled)
+	pygame.draw.rect(screen, [255,0,0], [250, 150, 300, 200], 0)
+	my_list = [250, 150, 300, 200]
+	pygame.draw.rect(screen, [255,0,0], my_list, 0)
+	my_rect = pygame.Rect(250, 150, 300, 200)
+	pygame.draw.rect(screen, [255,0,0], my_rect, 0)
+
+或者
+
+Here’s what the rectangle should look like. 
+
+I added some dimensions to show you which numbers mean what:
+
+	Rect(left, top, width, height)
+	my_rect = Rect(250, 150, 300, 200)
+
+【PG】Color of the rectangle	Location and size of the rectangle	Line width (or filled)
+	pygame.draw.rect(screen, [255,0,0], [250, 150, 300, 200], 0)
+	my_list = [250, 150, 300, 200]
+	pygame.draw.rect(screen, [255,0,0], my_list, 0)
+	my_rect = pygame.Rect(250, 150, 300, 200)
+	pygame.draw.rect(screen, [255,0,0], my_rect, 0)
+
+这就是最后得到的矩形。 我增加了一些尺寸标注来说明每个数字分别表示什么含义。
+
+注意这里只向 pygame.draw.rect 传递了 4 个参数， 因为 rect 用一个参数就表示了位置和大小。 在 pygame.draw.circle 中，位置和大小分别由两个不同的参数表示，所以需要传递 5 个参数。
+
+左 250 上 150

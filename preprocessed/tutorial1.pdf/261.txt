@@ -1,0 +1,48 @@
+【PG】18.5　另一个游戏——PyPong 　　 235
+               
+                    
+【PG】从前的美好时光
+
+Pong是最早人们在家里玩的视频游戏之一。 原来的 Pong游戏没有任何软件 —只是一堆电路！ 那时还没有家用计算机。Pong 要插入到你的电视上， 你要用操纵杆来控制“ 球拍”。下面是这个游戏在电视屏幕上的效果图：
+
+【PG】很少有人知道的秘密：
+奶奶不仅是一个 Pong 游戏高手，还是乒乓球世界冠军呢！
+
+【PG】球
+
+我们之前使用的沙滩球对于 Pong游戏来说有点大。 我们需要小一点的球。 卡特和我为这个游戏想出了这个有些滑稽的网球小人：
+
+【PG】他好像被吓着了。
+嘿，如果你被球拍打来打去，也会吓得够呛！
+
+【PG】我们将在这个游戏中使用动画精灵， 所以需要为我们的球建立一个精灵， 然后为它创建一个实例。我们将使用包含 __init__()和move()方法的Ball类。
+
+【PG】We’ll start with a simple one-player version. Our game will need
+�a ball to bounce around.
+�a paddle to hit the ball with.
+�a way to control the paddle.
+�a way to keep score and display the score in the window.
+�a way to keep track of “lives”—how many turns you get.
+We’ll cover each of these requirements one-by-one as we build up our program.
+
+【PG】The ball
+
+The beach ball we have been using so far is a bit big for a Pong game. We need something smaller. Carter and I came up with this wacky tennis ball guy for our game:
+
+【PG】Hey, you’d be scared too if you were about to get whacked around by a paddle!
+
+【PG】We’re going to use sprites for this game, so we need to make a sprite for our ball and then create an instance of it. We’ll use the Ball class with __init__() and move() methods.
+
+class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, speed, location):        
+        pygame.sprite.Sprite.__init__(self)  #call Sprite initializer
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        self.speed = speed
+    def move(self):
+        self.rect = self.rect.move(self.speed)
+        if self.rect.left < 0 or self.rect.right > width:            
+            self.speed[0] = -self.speed[0]
+        if self.rect.top <= 0 :
+            self.speed[1] = -self.speed[1]

@@ -1,0 +1,129 @@
+【PG】21.6　更多字符串处理　　 295
+名字 Frankenstein 确实以字母 F开头，所以第一个结果是 True。名字 Frankenstein 确实
+以Frank开 头， 所以第二个结果也是 True。不
+过，名字 Frankenstein 不 是以 Flop开头，所以
+这一个结果是 False。
+因为startswith() 方法返回一个 True或
+False值，所以可以在比较或 if语句中使用这
+个方法，比如可以这样：
+【PG】285  CHAPTER  21 Print Formatting and Strings
+Assume that the lines of the recipe are in a list, and that each line is a separate item in the 
+list. How would you find the “Instructions” section? Python has a couple of methods that 
+would help you.
+The startswith()  method tells you whether a string starts with a certain character or 
+characters. An example is the easiest way 
+to show this. Try this in interactive mode:
+The name “Frankenstein” starts with the letter 
+“F, ” so the first one was True . The name 
+“Frankenstein” starts with the letters “Frank, ” so 
+the second one was True . The name 
+“Frankenstein” does not start with “Flop, ” so 
+that one was False .
+Because the startswith()  method returns a 
+True  or False  value, you can use it in compari-
+sons or if statements, like this:
+There’s a similar method called endswith()  
+that does just what you’d expect:
+Now, to get back to the problem at hand . . . If you wanted to find the start of the “Instruc-
+tions” section of the recipe, 
+you could do something like this:
+>>> name = "Frankenstein"
+>>> name.startswith('F')
+True
+>>> name.startswith("Frank")
+True
+>>> name.startswith("Flop")
+False
+>>>
+>>> if name.startswith("Frank"):
+        print "Can I call you Frank?"
+>>> name = "Frankenstein"
+>>> name.endswith('n')
+True
+>>> name.endswith('stein')
+True
+>>> name.endswith('stone')
+False
+i = 0
+while not lines[i].startswith("Instructions"):
+    i = i + 1
+Can I call you Frank?
+【PG】现在，回到我们的问题 ……如果想找到食谱的“Instructions” 部分从哪里开始，
+可以这样做：
+285  CHAPTER  21 Print Formatting and Strings
+Assume that the lines of the recipe are in a list, and that each line is a separate item in the 
+list. How would you find the “Instructions” section? Python has a couple of methods that 
+would help you.
+The startswith()  method tells you whether a string starts with a certain character or 
+characters. An example is the easiest way 
+to show this. Try this in interactive mode:
+The name “Frankenstein” starts with the letter 
+“F, ” so the first one was True . The name 
+“Frankenstein” starts with the letters “Frank, ” so 
+the second one was True . The name 
+“Frankenstein” does not start with “Flop, ” so 
+that one was False .
+Because the startswith()  method returns a 
+True  or False  value, you can use it in compari-
+sons or if statements, like this:
+There’s a similar method called endswith()  
+that does just what you’d expect:
+Now, to get back to the problem at hand . . . If you wanted to find the start of the “Instruc-
+tions” section of the recipe, 
+you could do something like this:
+>>> name = "Frankenstein"
+>>> name.startswith('F')
+True
+>>> name.startswith("Frank")
+True
+>>> name.startswith("Flop")
+False
+>>>
+>>> if name.startswith("Frank"):
+        print "Can I call you Frank?"
+>>> name = "Frankenstein"
+>>> name.endswith('n')
+True
+>>> name.endswith('stein')
+True
+>>> name.endswith('stone')
+False
+i = 0
+while not lines[i].startswith("Instructions"):
+    i = i + 1
+Can I call you Frank?
+这个代码会一直循环， 直到找到以“Instructions” 开头的一行。 应该记得，
+lines[i] 表示i是lines的索引。 所以要从 lines[0] （第1行）开始，然后是
+lines[1] （第2行） ，依此类推。 while循环结束时， i会等于“Instructions” 开头
+的那一行的索引，这正是你要找的位置。
+在字符串中搜索： in和index()
+startswith() 和endswith() 方法可以很好地查找位于字符串开头和末尾位置
+的内容。不过如果想在一个字符串中间找某个内容呢？
+下面假设你有一些包含街道地址的字符串，如下：
+【PG】Maybe you want to find all the addresses with “Maple” in them. None of them start or end 
+with “Maple, ” but two of them contain the word “Maple. ” How would you find them?
+Actually, we already saw how to do this. When we were talking about lists (back in chapter 
+12), we saw that you could check 
+whether an item is in a list by doing this:
+We used the keyword in to check whether a certain item was in the list. The in keyword 
+also works for strings. A string is basically a list of characters, so you can do this:
+【PG】The 
+in keyword just tells you whether the substring is somewhere  in the string you’re check-
+ing. It doesn’t tell you where it is. For that, you need the index()  method. Like with lists, 
+index()  tells you where in the bigger string the smaller string starts. 
+Here’s an example:
+657 Maple Lane
+47 Birch Street
+95 Maple Drive
+if someItem in my_list:
+    print "Found it!"
+>>> addr1 = '657 Maple Lane'
+>>> if 'Maple' in addr1:
+        print "That address has 'Maple' in it." 
+When you’re looking for a smaller 
+string, like “Maple”, within a bigger string, like “657 Maple Lane”, the smaller string is called a substring.
+>>> addr1 = '657 Maple Lane'
+>>> if 'Maple' in addr1:        position = addr1.index('Maple')
+        print "found 'Maple' at index", position
+也许你想找出所有包含 Maple的地址。 这里所有字符串都不是以 Maple开头或
+结尾的，但是其中有两个确实包含有单词 Maple。怎么找到它们呢？

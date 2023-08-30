@@ -1,0 +1,53 @@
+【PG】242　　第 18章　一种新的输入——事件
+
+【PG】if myBall.rect.top >= screen.get_rect().bottom:
+    lives = lives - 1 
+    if lives == 0:  
+        final_text1 = "Game Over "
+        final_text2 = "Your final score is:  " + str(score )
+        ft1_font = pygame.font.Font(None, 70)        ft1_surf = ft1_font.render(final_text1, 1, (0, 0, 0) )
+        ft2_font = pygame.font.Font(None, 50)        ft2_surf = ft2_font.render(final_text2, 1, (0, 0, 0) )
+        screen.blit(ft1_surf, [screen.get_width()/2 - \           
+                    ft1_surf.get_width()/2, 100])                   
+        screen.blit(ft2_surf, [screen.get_width()/2 - \             
+                    ft2_surf.get_width()/2, 200])                  
+        pygame.display.flip()        done = True    else:  #wait 2 seconds, then start the next ball
+        pygame.time.delay(2000 )
+        myBall.rect.topleft = [(screen.get_rect().width) - 40*lives, 20]
+
+【PG】如果球碰到底边就减一条命，行联接符将文本在窗口中居中放置。
+
+【PG】把所有这些内容集中在一起， 可以得到最终的 PyPong程序，如代码清单 18-5
+所示。
+
+【PG】代码清单 18-5　最终的 PyPong 代码
+
+【PG】import pygame, sys 
+
+【PG】class MyBallClass(pygame.sprite.Sprite):                              
+    def __init__(self, image_file, speed, location):                    
+        pygame.sprite.Sprite.__init__(self)                              
+        self.image = pygame.image.load(image_file)                     
+        self.rect = self.image.get_rect()                               
+        self.rect.left, self.rect.top = location                        
+        self.speed = speed                                               
+                                                                        
+    def move(self):                                                             
+        global score, score_surf, score_font                             
+        self.rect = self.rect.move(self.speed)                           
+        if self.rect.left < 0 or self.rect.right > screen.get_width():  
+            self.speed[0] = -self.speed[0]                              
+                                                                         
+        if self.rect.top <= 0 :                                          
+            self.speed[1] = -self.speed[1]                               
+            score = score + 1                                                       score_surf = score_font.render(str(score), 1, (0, 0, 0)) 
+
+【PG】class MyPaddleClass(pygame.sprite.Sprite):                              
+    def __init__(self, location = [0,0]):                                
+        pygame.sprite.Sprite.__init__(self)                             
+        image_surface = pygame.surface.Surface([100, 20])              
+        image_surface.fill([0,0,0])  
+
+【PG】定义 Ball类
+【PG】定义球拍类
+【PG】图灵社区会员 FreeLink 专享 尊重版权

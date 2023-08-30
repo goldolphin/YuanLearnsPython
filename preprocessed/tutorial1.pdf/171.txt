@@ -1,0 +1,31 @@
+【PG】13.3　向函数传递参数　　 145
+
+【PG】这看上去与第一个程序（ 没有使用参数 ）得到的输出完全相同。 不过，我们每
+次可以用不同方式打印地址，比如：printMyAddress("Carter Sande")
+printMyAddress("Warren Sande")printMyAddress("Kyra Sande")printMyAddress("Patricia Sande")
+现在每次调用函数时输出都不同。 人名会变， 因为我们每次都向函数传入了不
+同的人名。
+
+【PG】>>> ============================ RESTART ============================>>>Carter Sande
+123 Main Street
+Ottawa, Ontario, Canada
+K2M 2E9
+Warren Sande
+123 Main Street
+Ottawa, Ontario, Canada
+K2M 2E9
+Kyra Sande
+123 Main Street
+Ottawa, Ontario, Canada
+K2M 2E9
+Patricia Sande
+123 Main Street
+Ottawa, Ontario, Canada
+K2M 2E9
+
+【PG】注意，我们向函数传入什么值， 函数中就会使用什么值， 并作为地址的人名部分打印出来。
+如果我想向我们街道上的所有人发信，该怎么做呢？
+每一次街道门牌号都不相同。
+如果每次函数运行时有多个信息不同， 就需要多个参数。下面就来讨论这个问题。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

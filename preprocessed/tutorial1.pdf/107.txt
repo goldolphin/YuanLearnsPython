@@ -1,9 +1,8 @@
 【PG】8.3　一条捷径——range()　　 81
 
-【PG】现在我们终于见识了循环的威力。 如果没有循环， 要得到同样的结果必须编写这样一个程序：
+【PG】现在我们终于见识了循环的威力。 如果没有循环， 要得到同样的结果必须编写这样一个程序：78 Hello World!
 
-【PG】78 Hello World!
-Now we’re starting to see the power of loops. Without loops, we’d have had to write a program like this one to get the same result:
+【PG】Now we’re starting to see the power of loops. Without loops, we’d have had to write a program like this one to get the same result:
 
 【PG】To make a longer multiplication table (say, up to 10 or 20), this program would be a lot longer, but our loop program would be almost  the same (just with more numbers in the list). Loops make this much easier!
 
@@ -11,11 +10,11 @@ Now we’re starting to see the power of loops. Without loops, we’d have had t
 
 【PG】In the previous example, we only looped 5 times:
 
-【PG】But what if we wanted the loop to run 100 times, or 1000 times? That would be a lot of typing!
+【PG】But what if we wanted the loop to run 100 times,  or 1000 times? That would be a lot of typing!
 
-【PG】Luckily, there’s a shortcut. The range() function lets you just enter the starting and ending values, and it creates all the values in between for you. range() creates a list containing a range of numbers.
+【PG】Luckily, there’s a shortcut. The range()  function lets you just enter the starting and ending values, and it creates all the values in between for you. range()  creates a list containing a range of numbers.
 
-【PG】Listing 8.4 uses the range() function in our multiplication table example.
+【PG】Listing 8.4 uses the range()  function in our multiplication table example.
 
 for looper in range (1, 5):
     print looper, "times 8 =", looper * 8
@@ -25,20 +24,21 @@ print "2 times 8 =", 2 * 8
 print "3 times 8 =", 3 * 8
 print "4 times 8 =", 4 * 8
 print "5 times 8 =", 5 * 8
-for looper in [1, 2, 3, 4, 5]:
+
+for looper  in [1, 2, 3, 4, 5]:
 for looper in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,...
 
-【PG】要建立一个更长的乘法表（比如说，从1到10或者到20），这个程序可能会更长，不过我们的循环程序几乎不变（只不过列表中会有更多的数）。循环使问题简单多了！
+【PG】要建立一个更长的乘法表（ 比如说， 从1到10或者到 20） ，这个程序可能会更长，不过我们的循环程序几乎不变（ 只不过列表中会有更多的数 ） 。循环使问题简单多了！
 
 【PG】8.3　一条捷径—— range()
 
-【PG】在上面的例子中，我们只循环了5次：for looper in [1, 2, 3, 4, 5]:
+【PG】在上面的例子中，我们只循环了 5次： for looper in [1, 2, 3, 4, 5]: 
 
-【PG】如果希望循环运行100次或者1000次呢？这就得键入很多很多的数！
+【PG】如果希望循环运行 100次或者 1000次呢？这就得键入很多很多的数！
 
-【PG】很幸运，这里有一条捷径。利用range()函数，你可以只输入起始值和结束值，它就会为你创建这二者之间的所有值。range()会创建一个列表，其中包含某个范围内的数。
+【PG】很幸运， 这里有一条捷径。 利用range() 函数，你可以只输入起始值和结束值，它就会为你创建这二者之间的所有值。 range() 会创建一个列表， 其中包含某个范围内的数。
 
-【PG】代码清单 8-4仍然使用我们在乘法表中用到的例子，不过这里使用了range()函数。
+【PG】代码清单 8-4仍 然使用我们在乘法表中用到的例子， 不过这里使用了 range() 函数。
 
 【PG】代码清单 8-4　使用 range() 的循环
 

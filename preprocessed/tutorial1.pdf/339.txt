@@ -1,0 +1,24 @@
+【PG】22.8　在文件中保存内容 ： pickle　　 313
+要“腌”某个东西， 比如列表， 需要使用 dump()函数。 （腌菜要倒到罐子里，
+想到这一点就很容易记住这个函数①。 ）dump()函数需要一个文件对象， 我们知道如
+何建立文件对象： 
+
+import pickle
+my_list  = ['Fred', 73, 'Hello there', 81.9876e-13]
+pickle_file = open('my_pickled_list.pkl', 'w')
+pickle.dump(my_list, pickle_file)
+pickle_file.close()
+
+【PG】接下来我们将介绍如何使用 load()函数将被“腌”的数据从文件中读取出来并反序列化。 
+
+import pickle
+pickle_file = open('my_pickled_list.pkl', 'r')
+recovered_list = pickle.load(pickle_file)
+pickle_file.close()
+print recovered_list
+
+我们将用这个方法来制作一个新游戏，名叫“Hangman”。在游戏中，我们需要从文件中读取一些字，并从其中选取作为猜测的单词。这也是我们在文件输入输出章节介绍游戏的原因。 
+
+【PG】接下来，我们将用PythonCard来制作这个游戏的GUI界面。这在Pygame不是唯一制作图形游戏的方法。 
+
+【PG】接下来的程序是一个类似“猜字母”的游戏，叫作Hangman。通过从文件中读取一个巨大的单词列表，这个游戏会根据用户输入的猜测单词和猜错单词情况进行游戏。整个游戏主要分为单词列表读取和控制台游戏两个部分。整个程序非常有趣。

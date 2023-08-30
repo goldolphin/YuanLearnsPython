@@ -1,0 +1,52 @@
+【PG】Skier 101
+【PG】pygame.init()                                               
+【PG】screen = pygame.display.set_mode([640,640])                
+【PG】clock = pygame.time.Clock()                                
+【PG】skier = SkierClass()                                       
+【PG】speed = [0, 6]                                             obstacles = pygame.sprite.Group()                           
+【PG】map_position = 0                                           points = 0                                                  
+【PG】create_map()                                               
+【PG】font = pygame.font.Font(None, 50)                         
+【PG】running = True                                     
+【PG】while running:                               
+   
+ 
+【PG】clock.tick(30)             
+    【PG】for event in pygame.event.get():                           
+        【PG】if event.type == pygame.QUIT:                          
+            【PG】running = False                                     
+        【PG】if event.type == pygame.KEYDOWN:                       
+            【PG】if event.key == pygame.K_LEFT:                     
+                【PG】speed = skier.turn(-1)                         
+            【PG】elif event.key == pygame.K_RIGHT:                                  speed = skier.turn(1)                         
+    【PG】skier.move(speed)                          map_position += speed[1]      
+                                       if map_position >=640:                                
+        【PG】create_map()                                         
+        【PG】map_position = 0          
+   
+【PG】hit =  pygame.sprite.spritecollide(skier, obstacles, False )
+    【PG】if hit:                                                                    if hit[0].type == "tree" and not hit[0].passed:                
+            【PG】points = points - 100                                       
+            【PG】skier.image = pygame.image.load("skier_crash.png")       
+            【PG】animate()                                                            pygame.time.delay(1000)                                   
+            【PG】skier.image = pygame.image.load("skier_down.png")        
+            【PG】skier.angle = 0                                         
+            【PG】speed = [0, 6]                                          
+            【PG】hit[0].passed = True                                     
+        【PG】elif hit[0].type == "flag" and not hit[0].passed:           
+            【PG】points += 10                                             
+            【PG】hit[0].kill()                                        
+                                                                      
+    【PG】obstacles.update()
+    【PG】score_text = font.render("Score: " +str(points), 1, (0, 0, 0))  
+    【PG】animate()pygame.quit( )做好准备
+
+【PG】每秒更新 30次图形
+【PG】检查按键
+【PG】或窗口是否关闭
+【PG】创建一个新窗口，
+【PG】包含场景移动滑雪者开始主循环
+【PG】滚动场景
+【PG】检查是否碰到树或得到小旗
+【PG】显示得分
+【PG】图灵社区会员 FreeLink 专享 尊重版权

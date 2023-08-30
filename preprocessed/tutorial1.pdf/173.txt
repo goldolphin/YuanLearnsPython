@@ -1,0 +1,39 @@
+【PG】13.4　有多个参数的函数　　 147
+
+【PG】要向街道上的每一个人发送卡特的信， 我们的地址打印函数需要两个参数： 一个对应人名，另一个对应门牌号码。代码清单 13-3显示了这个函数。
+
+【PG】代码清单 13-3　带两个参数的函数138 Hello World!
+To send Carter’s letters to everyone on the street, our address-printing function will need 
+two arguments: one for the name, and one for the house number. Listing 13.3 shows what 
+this would look like.
+def printMyAddress(someName, houseNum):
+    print someName 
+    print houseNum,    print "Main Street"           
+    print "Ottawa, Ontario, Canada"          
+    print "K2M 2E9"                       print                             
+printMyAddress("Carter Sande", "45")
+printMyAddress("Jack Black", "64")
+printMyAddress("Tom Green", "22")
+printMyAddress("Todd White", "36")
+
+【PG】When we use multiple arguments (or parameters), we separate them with a comma, just like items in a list, which brings us to our next topic. . . .
+
+【PG】How many is too many?
+
+【PG】I said before that you can pass as many arguments as you want to a function. That is true, but if your function has more than five or six arguments, it might be time to think of doing things another way. One thing you can do is collect all the arguments in a list and then pass the list to the function. That way, you’re passing a single variable (the list variable), which just happens to contain a bunch of values. It might make your code easier to read.
+
+【PG】Listing 13.3 Function with two arguments
+Uses two variables, for two arguments
+Comma makes house number and street print on the same line
+Both variables get printed
+Calls the function passing it two parameters
+CALLERFUNCTION
+ARGUMENTS
+两个变量都要打印
+使用两个变量，对应两个参数
+逗号使门牌号和街道显示在同一行上
+调用函数并传入两个参数
+
+【PG】使用多个参数时， 要用逗号来分隔， 就像列表中的元素一样， 这就引入了下一个话题……多少才算太多
+
+【PG】前面说过， 想向函数传递多少参数就可以有多少个参数。 这一点不假， 但是如果你的函数有超过 5到6个参数，可能就应该考虑采用别的做法了。 一种做法是把所有参数收集到一个列表中，然后把这个列表传递到函数。这样一来，就只是传递一个变量（列表变量），只不过其中包含有一组值。这样可以让你的代码更易读。

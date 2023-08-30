@@ -1,0 +1,55 @@
+【PG】第 24章　计算机仿真
+即使你不能完全读懂这个代码也不用担心 。如果你希望学习更多有关 PyQt的内
+容，可以先看看 PyQt网站：www.riverbank computing.co.uk/software/pyqt/into 。
+在本章中 ，我们只是稍稍了解了计算机仿真的一点皮毛 ，知道了模拟真实世界
+中一些方面的基本思想 ，比如重力和时间 。实际上，计算机仿真在科学 、工程、医
+药、金融和很多其他领域都得到了广泛使用 。其中很多仿真非常复杂 ，即使用最快
+的计算机运行也需要花费几天甚至几个星期 。不过钥匙链上的小电子宠物也是一种
+仿真，有时最简单的仿真也是最有意思的。
+
+【PG】
+    def on_close(self, event):
+        file = open("savedata_vp.pkl", "w")        save_list = [self.happiness, self.health, self.hunger, \
+          datetime.datetime.now(), self.time_cycle]
+        pickle.dump(save_list, file)        event.Skip()
+app = model.Application(MyBackground)
+app.MainLoop()
+The sleep_test()  function uses a PythonCard dialog box with a slight twist. You might 
+remember that PythonCard is based on another Python module called wxPython. That’s 
+why you need to install wxPython when you install 
+PythonCard. Sometimes you can use special 
+wxPython arguments to change the behavior of PythonCard. In this case, we changed the 
+standard PythonCard message dialog, which 
+would look like this:
+We turned it into a dialog with an exclamation 
+mark and Ye s  and No  buttons, like this:
+Don’t worry if you don’t understand all this code. You can learn more about PythonCard and 
+wxPython if you want. A good place to start is the PythonCard web site:http://pythoncard.sourceforge.net/.
+
+【PG】在这章中，我们只是稍微了解了计算机仿真的一点皮毛。我们知道了模拟真实世界
+中一些方面的基本思想，比如重力和时间，但是计算机仿真在科学、工程、医药、金
+融等领域都得到广泛的使用。许多仿真非常复杂，即使使用最快的计算机也需要花费几
+天甚至几个星期才能运行。但是，即使是钥匙链上的小宠物也是一种仿真，有时最简单
+的仿真也是最有趣的。
+
+【PG】你学到了什么
+在这一章，你学到了以下内容 。
+什么是计算机仿真，为什么使用计算机仿真。 
+如何模拟重力、加速度和作用力。 
+如何跟踪和模拟时间。 
+如何使用pickle将时间戳保存到文件。 
+关于错误处理的一些知识（try-except）。 
+如何使用定时器生成周期性的事件。 
+
+【PG】测试题
+1. 列出使用计算机仿真的3个原因。
+2. 列出你见过或知道的3种计算机仿真。
+3. 使用哪种对象来存储两个日期或时间之差？
+
+【PG】动手试一试
+1. 为Lunar Lander程序增加一个“脱离轨道”测试。如果飞船飞出了窗口顶
+边，而且速度超过+100m/s，就停止程序，并显示一条消息，比如“You have 
+escaped the moon’s gravity. No landing today!”（你已经脱离月球重力，无法着
+陆！）
+
+【PG】图灵社区会员FreeLink专享尊重版权

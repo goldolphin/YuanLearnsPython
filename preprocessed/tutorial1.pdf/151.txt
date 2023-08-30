@@ -1,0 +1,40 @@
+【PG】12.11　搜索列表　　 125
+
+【PG】用pop() 删除元素
+
+pop()从列表中取出最后一个元素交给你。 这说明， 你可以为它指派一个名字，
+比如：>>> letters = ['a', 'b', 'c', 'd', 'e']
+>>> lastLetter = letters.pop()
+>>> print letters['a', 'b', 'c', 'd']
+>>> print lastLettere
+
+使用pop()时还可以提供一个索引，如：
+>>> letters = ['a', 'b', 'c', 'd', 'e']
+>>> second = letters.pop(1)
+>>> print second
+b
+>>> print letters['a', 'c', 'd', 'e']
+
+在这里我们弹出了第 2个字母（ 索引 1） ，也就是 b。弹出的元素赋给 second，
+而且会从letters 删除。
+括号里没有提供参数时 ，pop()会返回最后一个元素， 并把它从列表中删除。
+如果在括号里放入一个数， pop(n)会给出这个索引位置上的元素， 而且会把它从列表中删除。
+
+【PG】12.11　搜索列表
+
+列表中有多个元素时，怎么查找这些元素呢？对列表通常有两种处理：
+查找元素是否在列表中；
+查找元素在列表中的哪个位置（元素的索引） 。
+
+in关键字
+
+要找出某个元素是否在列表中，可以使用 in关键字，例如：
+if 'a' in letters:
+    print "found 'a' in letters"
+else:
+    print "didn't ﬁnd 'a' in letters"
+
+'a' in letters 部分是一个布尔或逻辑表达式。如果 a在这个列表中，它会返
+回值True，否则返回 False。
+
+图灵社区会员 FreeLink 专享 尊重版权

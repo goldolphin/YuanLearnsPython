@@ -1,0 +1,97 @@
+【PG】108　　第 11章　嵌套与可变循环
+
+【PG】How many blocks of stars do you want? 3
+
+【PG】* * * *
+* * * * *
+* * * * * * *
+* * * * * * * * *
+* * * * * * *
+* * * * * * * * *
+* * * * * * * * * * * * *
+* * * * * * * * * * * * * * *
+
+【PG】Here’s the output:
+In listing 11.4, the loop variables of the outer loops are used to set the ranges for the inner 
+loops. So instead of each block having the same number of lines and each line having the same number of stars, they’re different each time through the loop.
+You can nest loops as deep as you want. It can get a bit hairy keeping track of what’s going 
+on, so it sometimes helps to print out the values of the loop variables, as in listing 11.5. 
+
+numBlocks = int(raw_input('How many blocks of stars do you want? '))
+for block in range(1, numBlocks + 1):
+    print 'block = ', block        for line in range(1, block * 2 ):
+        for star in range(1, (block + line) * 2): 
+            print '*',        print '  line = ', line, 'star = ', star 
+    print
+
+【PG】Here’s the output of the program:
+Listing 11.5 Printing the loop variables in nested loops
+
+【PG】How many blocks of stars do you want? 3
+
+【PG】* * *
+* * * * *
+* * * * * * *
+* * * * * * * * *
+* * * * * * *
+* * * * * * * * *
+* * * * * * * * * * * * *
+* * * * * * * * * * * * * * *
+
+【PG】Displays variables
+
+【PG】How many blocks of stars do you want? 3
+
+【PG】block =  1
+* * *   line =  1  star = 3
+【PG】block =  2
+* * * * *   line =  1  star = 5
+* * * * * * *   line =  2  star = 7
+* * * * * * * * *   line =  3  star = 9
+【PG】block =  3
+* * * * * * *   line =  1  star = 7
+* * * * * * * * *   line =  2  star = 9
+* * * * * * * * * * *   line =  3  star = 11* * * * * * * * * * * * *   line =  4  star = 13
+* * * * * * * * * * * * * * *   line =  5  star = 15
+
+【PG】Here’s the output:
+In listing 11.4, the loop variables of the outer loops are used to set the ranges for the inner 
+loops. So instead of each block having the same number of lines and each line having the same number of stars, they’re different each time through the loop.
+You can nest loops as deep as you want. It can get a bit hairy keeping track of what’s going 
+on, so it sometimes helps to print out the values of the loop variables, as in listing 11.5. 
+
+numBlocks = int(raw_input('How many blocks of stars do you want? '))
+for block in range(1, numBlocks + 1):
+    print 'block = ', block        for line in range(1, block * 2 ):
+        for star in range(1, (block + line) * 2): 
+            print '*',        print '  line = ', line, 'star = ', star 
+    print
+
+【PG】Here’s the output of the program:
+Listing 11.5 Printing the loop variables in nested loops
+
+【PG】How many blocks of stars do you want? 3
+
+【PG】block =  1
+* * *   line =  1  star = 3
+【PG】block =  2
+* * * * *   line =  1  star = 5
+* * * * * * *   line =  2  star = 7
+* * * * * * * * *   line =  3  star = 9
+【PG】block =  3
+* * * * * * *   line =  1  star = 7
+* * * * * * * * *   line =  2  star = 9
+* * * * * * * * * * *   line =  3  star = 11* * * * * * * * * * * * *   line =  4  star = 13
+* * * * * * * * * * * * * * *   line =  5  star = 15
+
+【PG】代码清单 11-4中，外循环的循环变量用来为内循环设置范围。 所以每个星号块
+不再有相同的行数， 而且每一行也不再有相同的星号数， 每次循环时行数和星号数
+都不同。
+你希望循环嵌套多深 ，就 可以有多深。 要明白这样的嵌套循环会让人很头疼，
+所以有时打印出循环变量的值会很有帮助，如代码清单 11-5所示 。
+代码清单 11-5　在嵌套循环中打印循环变量
+
+【PG】显示变量
+
+【PG】以下是这个程序的输出：
+图灵社区会员 FreeLink 专享 尊重版权

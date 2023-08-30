@@ -1,0 +1,79 @@
+【PG】414　　附录 C　自测题答案第13章
+
+【PG】测试题
+1. 使用def关键字来创建一个函数。
+2. 调用函数时要使用函数名和一对小括号。
+3. 调用函数时把参数放在小括号里，就可以向这个函数传入参数。
+4. 一个函数可以有任意多个参数，对此没有任何限制。
+5. 函数使用return关键字向调用者发回信息。
+6. 函数完成运行后，所有局部变量都会撤销。
+
+【PG】动手试一试
+1. 这个函数只需要一组 print语句：
+
+【PG】379  Answers to Self-Test Questions
+Chapter 13: Functions
+Test your knowledge
+1You use the def keyword to create a function.
+2You call a function by using its name with parentheses.
+3You pass arguments to a function by putting the arguments in the parentheses when 
+you call the function.
+4There is no limit to the number of arguments a function can have.
+5The function sends information back to the caller using the return  keyword.
+6After a function is finished running, any local variables are destroyed.
+Try it out
+1The function is just a bunch of print  statements:
+The program that calls it could look like this:
+
+【PG】2Here’s my example for printing addresses with seven arguments:
+print "The names are:", nameList
+print "Replace one name.  Which one? (1-5):",
+replace = int(raw_input())new = raw_input("New name: ")
+nameList[replace - 1] = new
+print "The names are:", nameList
+
+def printMyNameBig():
+    print "  CCCC       A       RRRRR  TTTTTTT  EEEEEE  RRRRR  "
+    print " C    C     A A      R    R    T     E       R    R "
+    print "C          A   A     R    R    T     EEEE    R    R "
+    print "C         AAAAAAA    RRRRR     T     E       RRRRR  "
+    print " C    C  A       A   R    R    T     E       R    R "
+    print "  CCCC  A         A  R     R   T     EEEEEE  R     R"
+
+# define a function with seven arguments 
+def printAddr(name, num, str, city, prov, pcode, country):     
+    print name 
+    print num, 
+    print str     
+    print city, 
+    if prov !="": 
+        print ", "+prov   
+    else: 
+        print "" 
+    print pcode 
+
+for i in range(5):
+    printMyNameBig()
+
+【PG】调用这个函数的程序如下所示：
+
+【PG】2. 下面给出我的做法，这里利用 7个参数打印地址：
+# define a function with seven arguments  
+def printAddr(name, num, street, city, prov, pcode, country):  
+    print name 
+    print num, 
+    print street
+    print city, 
+    if prov !="": 
+        print ", "+prov   
+    else: 
+        print "" 
+    print pcode
+    print country 
+    print 
+
+#call the function and pass seven arguments to it  
+printAddr("Sam", "45", "Main St.", "Ottawa", "ON", "K2M 2E9", "Canada")
+printAddr("Jian" , "64", "2nd Ave.", "Hong Kong", "", "235643", "China")
+
+【PG】3. 没有具体答案，可以动手试一试。

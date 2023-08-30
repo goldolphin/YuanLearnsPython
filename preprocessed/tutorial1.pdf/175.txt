@@ -1,0 +1,24 @@
+【PG】13.6 变量作用域　　 149
+
+【PG】对返回值也可以不做任何处理， 就像这样：
+
+>>>calculateTax(7.49, 0.07)
+
+在上面这个例子中， 函数会运行， 计算出税后总价格， 不过我们没有使用这个结果。
+
+【PG】下面用一个有返回值的函数建立程序。在代码清单13-4中，calculateTax()函数返回了一个值。向这个函数提供税前价格和税率，它会返回税后价格。我们把这个值赋给一个变量。所以不像前面那样只是使用函数的名，这里还需要一个变量和一个等号（=），然后是函数名。变量会赋为calculateTax()函数返回的结果。
+
+【PG】def calculateTax(price, tax_rate):
+    total = price + (price * tax_rate)
+    return total
+my_price = float(raw_input ("Enter a price: "))
+totalPrice = calculateTax(my_price, 0.06)
+print "price = ", my_price, " Total price = ", totalPrice 
+
+【PG】试着键入代码清单13-4中的程序，保存并运行这个程序。注意这个代码中的税率固定为0.06（等于6个百分点）。如果程序必须处理不同的税率，可以让用户输入价格的同时还要输入税率。
+
+【PG】变量作用域
+
+【PG】你可能已经注意到，有些变量在函数之外，如totalPrice，还有一些变量在函数内部，如total。这些变量只是同一个东西的两个不同名字。这就像第2章中所说的YourTeacher = MyTeacher。
+
+【PG】在我们的calculateTax例子中，totalPrice和total是贴在同一个东西上的两个标签。对于函数而言，函数内的名字只是在函数运行时才会创建。在函数运行之前或者完成运行之后甚至根本不存在。Python提供了内存管理（memory management），可以自动完成这个工作。Python在函数运行时会创建新的名字在函数内使用，当函数完成时会把它们删除。最后这部分很重要：函数运行结束时，其中的所有名字都不再存在。

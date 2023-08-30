@@ -1,0 +1,27 @@
+【PG】196　第 16章　图　　形
+
+【PG】在for循环中，并没有画出各个点 ，我们只是创建了 draw.lines() 将要连接的点列表。然后在for循环之外调用一次 draw.lines() 。整个程序如代码清单 16-8所示。
+
+【PG】代码清单 16-8　一条完美连接的正弦曲线
+
+import pygame, sys
+import math
+pygame.init( )
+screen = pygame.display.set_mode([640,480] )
+screen.fill([255, 255, 255])
+plotPoints = []
+for x in range(0, 640):
+    y = int(math.sin(x/640.0 * 4 * ma th.pi) * 200 + 240)       
+    plotPoints.append([x, y] )
+pygame.draw.lines(screen, [0,0,0],False, plotPoint s, 1)      
+pygame.display.flip()
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:             
+            running = False
+pygame.quit( )
+
+【PG】计算每个点的 y坐标，将各个点添加到列表，用draw.lines() 函数画出整条曲线。现在运行这个程序时，可以看到如右图所示的曲线。这就好多了，点与点之间不再有间隔。如果把线宽增加到2，看上去会更好，如右图所示。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

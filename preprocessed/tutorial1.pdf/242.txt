@@ -1,0 +1,58 @@
+【PG】第 17章　动画精灵和碰撞检测
+
+【PG】这里还要对代码稍稍做些整理， 把完成球动画的部分（ 代码清单 17-2中的最后几行）放在一个函数中， 我们把这个函数命名为 animate() 。animate() 函数还包括完成碰撞检测的代码。两个球碰撞时，我们会让它们反向。代码清单 17-3显示了相应的代码 。
+
+【PG】代码清单 17-3　使用一个动画精灵组而不是列表
+
+size = width, height = 640, 480 
+screen = pygame.display.set_mode(size)        
+screen.fill([255, 255, 255])                  
+img_file = "beach_ball.png"                   
+group = pygame.sprite.Group()     
+for row in range (0, 2):                     
+    for column in range (0, 2):
+        location = [column * 180 + 10, row * 180 + 10]
+        speed = [choice([-2, 2]), choice([-2, 2])]        
+        ball = MyBallClass(img_file, location, speed)
+        group.add(ball)   
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:             
+            running = False
+    animate(group)     
+pygame.quit( )
+
+【PG】将各个球增加到组
+
+import sys, pygame
+from random import *
+class MyBallClass(pygame.sprite.Sprite):                              
+    def __init__(self, image_file, location, speed):                   
+        pygame.sprite.Sprite.__init__(self)                            
+        self.image = pygame.image.load(image_file)                               
+        self.rect = self.image.get_rect()                              
+        self.rect.left, self.rect.top = location
+        self.speed = speed                                              
+                                                                        
+    def move(self):                                                    
+        self.rect = self.rect.move(self.speed)                          
+        if self.rect.left < 0 or self.rect.right > width:               
+            self.speed[0] = -self.speed[0]                              
+        if self.rect.top < 0 or self.rect.bottom > height:              
+            self.speed[1] = -self.speed[1]                         
+def animate(group):                                                 
+    screen.fill([255,255,255])                                     
+    for ball in group:                                                      
+        group.remove(ball)       
+        if pygame.sprite.spritecollide(ball, group, False):
+            ball.speed[0] = -ball.speed[0]
+            ball.speed[1] = -ball.speed[1]                          
+                                            
+        group.add(ball) 
+        ball.move()                                                      screen.blit(ball.image, ball.rect)                      
+    pygame.display.flip()                                           pygame.time.delay(20)                                       
+
+【PG】Ball类定义新的animate()函数将球再添加回原来的组中，这一次只创建 4个球。主程序从这里开始。
+
+【PG】创建精灵组检查精灵与组之间的碰撞，从组删除精灵。

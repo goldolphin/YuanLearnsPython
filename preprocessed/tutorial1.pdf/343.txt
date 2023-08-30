@@ -1,0 +1,107 @@
+【PG】22.9　又到了游戏时间—Hangman　　 317
+玩家猜一个字母时 ，我们使用刚才定义的两个函数 ﬁnd_letters() 和replace_
+letters() ：
+ if len(guess) == 1:                    
+            if guess in self.currentword:                       
+                locations = find_letters(guess, self.currentword)        
+                self.word.setText(replace_letters(str(self.word.text()),
+                                                  locations,guess))                if str(self.word.text()) == self.currentword:
+                    self.win()               
+            else:
+                self.wrong()
+
+【PG】整个程序大约 95行代码，另外我还加入了一些空行 ，让代码看起来更美观 。代码
+清单 22-8给出了整个程序 ，这里加了对各个不同部分做的一些解释 。如果使用本书的
+安装程序 ，你的计算机上的 \Examples\Hangman 文件夹中应该已经有这个代码了 ，另外
+也可以在网站上找到这个代码 ，包括 hangman.py 、hangman.ui 和words.txt。切记，正如
+我们在第 20章提到的 ，如果你使用的是 Mac，则需要在 Qt Designer 中打开 hangman.ui ，
+并勾选掉menubar 对象的nativeMenuBar 属性。
+
+【PG】代码清单 22-8　完整的 hangman.py 程序
+import sys
+from PyQt4 import QtCore, QtGui, uic
+import random
+form_class = uic.loadUiType("hangman.ui")[0]
+def find_letters(letter, a_string):                               
+    locations = []                                                 
+    start = 0                                                      
+    while a_string.find(letter, start, len(a_string)) != -1:        
+        location = a_string.find(letter, start, len(a_string))    
+        locations.append(location)                                 
+        start = location + 1                                      
+    return locations                                                
+                                                                   
+def replace_letters(string, locations, letter):                     
+    new_string = ''                                                
+    for i in range (0, len(string)):                                
+        if i in locations:                                         
+            n ew_string = new_string + letter                       
+        else:                                                      
+            n ew_string = new_string + string[i]                    
+    return new_string                                    
+def dashes(word):                        
+    letters = "abcdefghijklmnopqrstuvwxyz"                           
+    new_string = ''                                                 
+    for i in word:                                                  
+        if i in letters:                                             
+            new_string += "-"                                       
+        else:                                                       
+            new_string += i                                          
+    return new_string                                   
+class MyWidget(QtGui.QMainWindow, form_class):
+    def __init__(self, parent=None):
+        QtGui.QMainWindow.__in it__(self, parent)
+        self.setupUi(self)        self.btn_guess.clicked.connect(self.btn_guess_clicked)        
+        self.actionExit.triggered.connect(self.menuExit_selected )
+        self.pieces = [self.head, self.body, self.leftarm, self.leftleg, 
+                       self.rightarm, self.rightleg] 
+
+【PG】CHAPTER  23 Take a Chance—Randomness
+This would do exactly the same thing as the previous example. The choice()  function ran-
+domly chooses an item from a list. In this case, the list is the numbers from 1/uni00A0to/uni00A06.
+
+【PG】More than one die
+What if you want to simulate rolling two dice? If  you’re just going to add up the two dice to 
+get the total, you might think of doing it this way:
+After all, the total of two dice can be from 2 to 12, right? Well, yes and no. You will get a 
+random number between 2 and 12, but not in the same way as adding up two random 
+numbers from 1 to 6. What that code line does is like rolling one big 11-sided die, not two 
+6-sided dice. But what’s the difference? That gets into a topic called probability . The easiest 
+way to see the difference is to try it out and see.
+
+【PG】Let’s roll the dice many time s and keep track of how many times each total comes up. 
+We’ll do that with a loop and a list. The loop will roll the dice, and the list will keep track of 
+how many times each total comes up. Let’s start with the single 11-sided die, as shown in 
+listing 23.1.
+
+import random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  
+for i in range(1000):
+    dice_total = random.randint(2, 12)
+    totals[dice_total] += 1  
+    
+for i in range (2, 13):    print "total", i, "came up", totals[i], "times"
+
+【PG】The list has indexes from 0 to 12, but we won’t use the first two, because we don’t care 
+about totals 0 or 1—they’ll never happen B. When we get a result, we add 1 to that list 
+item C. If the total is 7, we add one to totals[7] . So totals[2]  is the number of 2s we got, 
+totals[3]  is the number of 3s  we got, and so on.
+
+【PG】If you run this code, you 
+should get something like this:Listing 23.1 Rolling a single 11-sided die 1,000 times
+two_dice = random.randint(2, 12)
+List has 13 items, 
+with index 0 to 12B
+Adds 1 to the 
+count of this totalC
+total 2 came up 95 times
+total 3 came up 81 timestotal 4 came up 85 times
+total 5 came up 86 times
+total 6 came up 100 timestotal 7 came up 85 times
+total 8 came up 94 times
+total 9 came up 98 timestotal 10 came up 93 times
+total 11 came up 84 times
+total 12 came up 99 times
+
+【PG】查找字母
+图灵社区会员 FreeLink 专享 尊重版权

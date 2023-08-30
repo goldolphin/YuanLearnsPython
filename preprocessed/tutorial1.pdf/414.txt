@@ -1,0 +1,15 @@
+【PG】第 26章　Python Battle
+
+【PG】什么？！ CircleAI 又赢了！现在，我们来试着挑战一下 CircleAI。我确信我们的辛苦工作会得到回报，我们一定能打败它。将 AI保存为 morecomplicatedai.py ，然后重新运行 Python Battle：
+
+>>> Enter red AI: circleai
+>>> Enter blue AI: morecomplicatedai
+>>>   .
+>>>   .
+>>> Red wins with 10 health!
+
+【PG】我想我们需要稍微修订一下策略以便打败 CircleAI。CircleAI这么难打败 ，主要是因为我们很难打到它 。如果你打算从侧面或者后面攻击它 ，那么在你第二次打到它之前它就会跑掉 。同时，因为它靠墙走 ，所以你只有一个侧面可以攻击 。如果你从前面攻击的话 ，它就很可能拿到第一次攻击的机会并最终获胜 。尽管 CircleAI不是最高级的策略 ，但它确实很难打败 。
+
+【PG】你也许能设计出一个可以稳妥打败 CircleAI 的AI，但 前提是你知道自己要对付的 AI是 CircleAI。 如果你不知道对方 AI将 要使用的策略，打败它将更加困难！
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

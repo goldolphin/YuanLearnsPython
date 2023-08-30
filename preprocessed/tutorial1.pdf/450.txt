@@ -1,0 +1,93 @@
+【PG】附录 C　自测题答案并指定希望保存的对象以及文件名作为参数，如下：
+
+389 Answers to Self-Test Questions
+8 To save a Python object to a file using pickle, you use the pickle.dump() method, with the object you want to save and the filename as arguments, like this:
+9 To unpickle or retrieve an object from a pickle file, use the pickle.load() method, with the pickle file as an argument, like this:
+Try it out
+
+【PG】Here is a simple program to create silly sentences:
+The word files should just be lists of words separated by commas.
+
+【PG】Here is a program that saves some data in a text file: pickle.dump(myObject, "my_pickle_file.pkl")
+import random
+noun_file = open("nouns.txt", 'r')
+nouns = noun_file.readline()
+noun_list = nouns.split(',')
+noun_file.close()
+adj_file = open("adjectives.txt", 'r')
+adjectives = adj_file.readline()
+adj_list = adjectives.split(',')
+adj_file.close()
+verb_file = open("verbs.txt", 'r')
+verbs = verb_file.readline()
+verb_list = verbs.split(',')
+verb_file.close()
+adverb_file = open("adverbs.txt", 'r')
+adverbs = adverb_file.readline()
+adverb_list = adverbs.split(',')
+adverb_file.close()
+noun = random.choice(noun_list)
+adj = random.choice(adj_list)
+verb = random.choice(verb_list)
+adverb = random.choice(adverb_list)
+print "The", adj, noun, verb, adverb + '.'
+name = raw_input("Enter your name: ")
+age = raw_input("Enter your age: ")
+color = raw_input("Enter your favorite color: ")
+food = raw_input("Enter your favorite food: ")
+my_data = open("my_data_file.txt", 'w')
+myObject = pickle.load("my_pickle_file.pkl")
+
+【PG】动手试一试
+
+1. 下面是创建滑稽句子的一个简单程序：
+
+【PG】389 Answers to Self-Test Questions
+8 To save a Python object to a file using pickle, you use the pickle.dump() method, with the object you want to save and the filename as arguments, like this:
+9 To unpickle or retrieve an object from a pickle file, use the pickle.load() method, with the pickle file as an argument, like this:
+Try it out
+
+【PG】Here is a simple program to create silly sentences:
+The word files should just be lists of words separated by commas.
+
+【PG】Here is a program that saves some data in a text file: pickle.dump(myObject, "my_pickle_file.pkl")
+import random
+noun_file = open("nouns.txt", 'r')
+nouns = noun_file.readline()
+noun_list = nouns.split(',')
+noun_file.close()
+adj_file = open("adjectives.txt", 'r')
+adjectives = adj_file.readline()
+adj_list = adjectives.split(',')
+adj_file.close()
+verb_file = open("verbs.txt", 'r')
+verbs = verb_file.readline()
+verb_list = verbs.split(',')
+verb_file.close()
+adverb_file = open("adverbs.txt", 'r')
+adverbs = adverb_file.readline()
+adverb_list = adverbs.split(',')
+adverb_file.close()
+noun = random.choice(noun_list)
+adj = random.choice(adj_list)
+verb = random.choice(verb_list)
+adverb = random.choice(adverb_list)
+print "The", adj, noun, verb, adverb + '.'
+name = raw_input("Enter your name: ")
+age = raw_input("Enter your age: ")
+color = raw_input("Enter your favorite color: ")
+food = raw_input("Enter your favorite food: ")
+my_data = open("my_data_file.txt", 'w')
+myObject = pickle.load("my_pickle_file.pkl")
+
+2. 下面的程序会把一些数据保存在文本文件中：
+name = raw_input("Enter your name: ")
+age = raw_input("Enter your age: ")
+color = raw_input("Enter your favorite color: ")
+food = raw_input("Enter your favorite food: ")
+my_data = open("my_data_file.txt", 'w')
+my_data.write(name + "\n" )
+my_data.write(age + "\n" )
+my_data.write(color + "\n" )
+my_data.write(food)
+my_data.close()

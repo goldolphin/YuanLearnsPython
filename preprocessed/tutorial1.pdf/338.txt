@@ -1,0 +1,54 @@
+【PG】312　　第 22章　文件输入与输出
+写模式或追加模式打开文件，不过打开文件后可以使用 print写文件，就像这样：
+my_file = open("new_file.txt", 'w' )
+print >> my_file, "Hello there, neighbor!"
+my_file.close()
+这里的两个 >符号（有时称为山形符号 ）告诉print要把它的输出发送到一个文件中而不是屏幕上。这称为重定向（redirecting）输出。
+
+【PG】有时使用 print比write() 更方便， 因为print还会额外完成一些工作， 比如把数字自动转换为字符串等。 如果要在文件中放入文本， 你可以使用 print，也可以使用write()。
+
+【PG】22.8　在文件中保存内容： pickle
+在本章第一部分中， 我们讨论了怎样读写文本文件。
+在硬盘上存储信息有很多方法，文本文件只是其中的一种。如果你想存储列表或对象之类的内容呢？有时列表中的元素可能是字符串，不过并不一定是这样。另外，对象又该怎么存储呢？也许可以把所有对象的属性都转换为字符串，再写到一个文本文件中，但是之后你还得把这个过程反过来，从文件恢复对象。这就复杂化了。
+
+【PG】幸运的是，Python提供了一种更简便的方法来存储列表和对象。这是一个Python模块，名为pickle。这个名字很滑稽，可以这样想：腌菜是一种储藏食物以备以后使用的方法。在Python中，你要把数据“腌起来”（pickle），使数据能够保存在硬盘上供以后使用。这很有道理！
+
+使用pickle
+假设有一个列表，其中包含不同类型的内容，如下：
+my_list  = ['Fred', 73, 'Hello there', 81.9876e-13]
+要使用pickle，首先必须导入pickle模块：
+
+Pickling
+Let’s say we have a list with different kinds of things in it, like this:
+
+【PG】Then to “pickle” something, like a list, you use the dump() function. (That’s easy to remember if you think of dumping your pickles into the jar.) The dump() function needs a file object, and we know how to make one of those:
+
+We open it for writing with 'w' because we’re going to be storing something in this file. You can pick whatever name and extension you want. I picked .pkl as the extension, short for “pickle.” Then we dump() our list into the pickle file:
+
+The whole process looks like listing 22.6.
+
+import pickle
+my_list  = ['Fred', 73, 'Hello there', 81.9876e-13]
+pickle_file = open('my_pickled_list.pkl', 'w')
+pickle.dump(my_list, pickle_file)
+pickle_file.close()
+
+【PG】You can use this same method to store any kind of data structure to a file. But what about getting it back? That’s next.
+
+Unpickling
+In real life, once you pickle something, it stays pickled. You can’t undo it. But in Python, when you “preserve” some data by pickling it, you can also reverse the process and get your data back the way it was.
+
+The function to “unpickle” something is load(). You give it a file object for the file that contains the pickled data, and it gives you back the data in its original form. Let’s try it. If you ran the program in listing 22.6, you should have a file called my_pickled_list.pkl in the same place where you store your programs. Now try the program in listing 22.7 and see if you get the same list back.
+
+Listing 22.6 Using pickle to store a list to a file
+
+my_list  = ['Fred', 73, 'Hello there', 81.9876e-13]
+import pickle
+pickle_file = open('my_pickled_list.pkl', 'w')
+pickle.dump(my_list, pickle_file)
+
+我是一个小腌菜！
+我是一个特大腌菜！
+我们都被泡在这里以备将来使用！我是一个大腌菜！
+
+图灵社区会员 FreeLink 专享 尊重版权

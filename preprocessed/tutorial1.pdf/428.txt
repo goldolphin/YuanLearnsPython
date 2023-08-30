@@ -1,0 +1,143 @@
+【PG】附录 C　自测题答案
+
+【PG】下面是运行这个程序的示例输出：368 Hello World!
+
+【PG】Here’s a program to convert temperatures from Fahrenheit to Celsius:
+
+【PG】Calculate the time it will take to drive a certain distance at a given speed: (Remember to make at least one of the numbers in the division a decimal, unless you want the answer to be rounded down to an integer.)
+
+【PG】Chapter 4: Types of Data
+
+【PG】Test your knowledge
+
+【PG】1The int() function always rounds down (to the next integer to the left on the number line).
+
+【PG】2In our temperature-conversion program, would these have worked? Try them and see what happens: 
+
+【PG】Why didn’t it work? Remember that everything inside the parentheses is done first. So it goes like this:
+
+【PG】Then Because it goes from left to right, 5 / 9 gets done first. Because 5 and 9 are both integers, Python does integer division and rounds the answer down. Because the answer is less than 1, it gets rounded down to 0. Then 
+
+【PG】Then fahrenheit = 75 celsius = 5.0/9 * (fahrenheit - 32) print "Fahrenheit = ", fahrenheit, "Celsius =", celsius Length = 16.7 Width = 12.5 Area = 208.75 Perimeter = 58.4 distance = 200 speed = 80.0 time = distance / speed print "time =", time cel = float(5 / 9 * (fahr – 32)) cel = 5 / 9 * float(fahr – 32) >>> fahr = 75 >>> cel = float(5 / 9 * (fahr – 32)) >>> print cel 0.0 75 - 32 = 43 5 / 9 = 0 0 * 43 = 0 float(0) = 0.0
+
+【PG】下面是一个把华式度转换为摄氏度的程序：
+
+【PG】3. 计算以某个速度行驶一定距离需要花多长时间： （要记住 ，除法中至少有一个数是小数，除非答案会向下取整为一个整数）。
+
+【PG】第4章 测试题
+
+【PG】1. int()函数总是向下取整（这个数左边的最大整数） 。
+
+【PG】2. 在我们的温度转换程序中，可以这样做吗？试试看，会发生什么：368 Hello World!
+
+【PG】Why didn’t it work? Remember that everything inside the parentheses is done first. So it goes like this:
+
+【PG】Then Because it goes from left to right, 5 / 9 gets done first. Because 5 and 9 are both integers, Python does integer division and rounds the answer down. Because the answer is less than 1, it gets rounded down to 0. Then 
+
+【PG】Then fahrenheit = 75 celsius = 5.0/9 * (fahrenheit - 32) print "Fahrenheit = ", fahrenheit, "Celsius =", celsius Length = 16.7 Width = 12.5 Area = 208.75 Perimeter = 58.4 distance = 200 speed = 80.0 time = distance / speed print "time =", time cel = float(5 / 9 * (fahr – 32)) cel = 5 / 9 * float(fahr – 32) >>> fahr = 75 >>> cel = float(5 / 9 * (fahr – 32)) >>> print cel 0.0 75 - 32 = 43 5 / 9 = 0 0 * 43 = 0 float(0) = 0.0
+
+【PG】然后再这样做： 
+
+【PG】因为它会从左到右计算，所以先完成5/9。因为5和9都是整数，所以Python会完成整除，将答案向下取整。由于这个答案小于1，所以会取整为0。然后得到: 368 Hello World!
+
+【PG】Here’s a program to convert temperatures from Fahrenheit to Celsius: 
+
+【PG】Calculate the time it will take to drive a certain distance at a given speed: (Remember to make at least one of the numbers in the division a decimal, unless you want the answer to be rounded down to an integer.)
+
+【PG】Chapter 4: Types of Data
+
+【PG】Test your knowledge
+
+【PG】1The int() function always rounds down (to the next integer to the left on the number line).
+
+【PG】2In our temperature-conversion program, would these have worked? Try them and see what happens: 
+
+【PG】Why didn’t it work? Remember that everything inside the parentheses is done first. So it goes like this:
+
+【PG】Then Because it goes from left to right, 5 / 9 gets done first. Because 5 and 9 are both integers, Python does integer division and rounds the answer down. Because the answer is less than 1, it gets rounded down to 0. Then 
+
+【PG】Then fahrenheit = 75 celsius = 5.0/9 * (fahrenheit - 32) print "Fahrenheit = ", fahrenheit, "Celsius =", celsius Length = 16.7 Width = 12.5 Area = 208.75 Perimeter = 58.4 distance = 200 speed = 80.0 time = distance / speed print "time =", time cel = float(5 / 9 * (fahr – 32)) cel = 5 / 9 * float(fahr – 32) >>> fahr = 75 >>> cel = float(5 / 9 * (fahr – 32)) >>> print cel 0.0 75 - 32 = 43 5 / 9 = 0 0 * 43 = 0 float(0) = 0.0368 Hello World!
+
+【PG】Here’s a program to convert temperatures from Fahrenheit to Celsius:
+
+【PG】Calculate the time it will take to drive a certain distance at a given speed: (Remember to make at least one of the numbers in the division a decimal, unless you want the answer to be rounded down to an integer.)
+
+【PG】Chapter 4: Types of Data
+
+【PG】Test your knowledge
+
+【PG】1The int() function always rounds down (to the next integer to the left on the number line).
+
+【PG】2In our temperature-conversion program, would these have worked? Try them and see what happens: 
+
+【PG】Why didn’t it work? Remember that everything inside the parentheses is done first. So it goes like this:
+
+【PG】Then Because it goes from left to right, 5 / 9 gets done first. Because 5 and 9 are both integers, Python does integer division and rounds the answer down. Because the answer is less than 1, it gets rounded down to 0. Then 
+
+【PG】Then fahrenheit = 75 celsius = 5.0/9 * (fahrenheit - 32) print "Fahrenheit = ", fahrenheit, "Celsius =", celsius Length = 16.7 Width = 12.5 Area = 208.75 Perimeter = 58.4 distance = 200 speed = 80.0 time = distance / speed print "time =", time cel = float(5 / 9 * (fahr – 32)) cel = 5 / 9 * float(fahr – 32) >>> fahr = 75 >>> cel = float(5 / 9 * (fahr – 32)) >>> print cel 0.0 75 - 32 = 43 5 / 9 = 0 0 * 43 = 0 float(0) = 0.0368 Hello World!
+
+【PG】Here’s a program to convert temperatures from Fahrenheit to Celsius:
+
+【PG】Calculate the time it will take to drive a certain distance at a given speed: (Remember to make at least one of the numbers in the division a decimal, unless you want the answer to be rounded down to an integer.)
+
+【PG】Chapter 4: Types of Data
+
+【PG】Test your knowledge
+
+【PG】1The int() function always rounds down (to the next integer to the left on the number line).
+
+【PG】2In our temperature-conversion program, would these have worked? Try them and see what happens: 
+
+【PG】Why didn’t it work? Remember that everything inside the parentheses is done first. So it goes like this:
+
+【PG】Then Because it goes from left to right, 5 / 9 gets done first. Because 5 and 9 are both integers, Python does integer division and rounds the answer down. Because the answer is less than 1, it gets rounded down to 0. Then 
+
+【PG】Then fahrenheit = 75 celsius = 5.0/9 * (fahrenheit - 32) print "Fahrenheit = ", fahrenheit, "Celsius =", celsius Length = 16.7 Width = 12.5 Area = 208.75 Perimeter = 58.4 distance = 200 speed = 80.0 time = distance / speed print "time =", time cel = float(5 / 9 * (fahr – 32)) cel = 5 / 9 * float(fahr – 32) >>> fahr = 75 >>> cel = float(5 / 9 * (fahr – 32)) >>> print cel 0.0 75 - 32 = 43 5 / 9 = 0 0 * 43 = 0 float(0) = 0.0
+
+【PG】然后再这样做： 
+
+【PG】因为它会从左到右计算，所以先完成5/9。因为5和9都是整数，所以Python会完成整除，将答案向下取整。由于这个答案小于1，所以会取整为0。然后得到: 368 Hello World!
+
+【PG】Here’s a program to convert temperatures from Fahrenheit to Celsius: 
+
+【PG】Calculate the time it will take to drive a certain distance at a given speed: (Remember to make at least one of the numbers in the division a decimal, unless you want the answer to be rounded down to an integer.)
+
+【PG】Chapter 4: Types of Data
+
+【PG】Test your knowledge
+
+【PG】1The int() function always rounds down (to the next integer to the left on the number line).
+
+【PG】2In our temperature-conversion program, would these have worked? Try them and see what happens: 
+
+【PG】Why didn’t it work? Remember that everything inside the parentheses is done first. So it goes like this:
+
+【PG】Then Because it goes from left to right, 5 / 9 gets done first. Because 5 and 9 are both integers, Python does integer division and rounds the answer down. Because the answer is less than 1, it gets rounded down to 0. Then 
+
+【PG】Then fahrenheit = 75 celsius = 5.0/9 * (fahrenheit - 32) print "Fahrenheit = ", fahrenheit, "Celsius =", celsius Length = 16.7 Width = 12.5 Area = 208.75 Perimeter = 58.4 distance = 200 speed = 80.0 time = distance / speed print "time =", time cel = float(5 / 9 * (fahr – 32)) cel = 5 / 9 * float(fahr – 32) >>> fahr = 75 >>> cel = float(5 / 9 * (fahr – 32)) >>> print cel 0.0 75 - 32 = 43 5 / 9 = 0 0 * 43 = 0 float(0) = 0.0
+
+【PG】然后再这样做： 
+
+【PG】因为它会从左到右计算，所以先完成5/9。因为5和9都是整数，所以Python会完成整除，将答案向下取整。由于这个答案小于1，所以会取整为0。然后得到: 368 Hello World!
+
+【PG】Here’s a program to convert temperatures from Fahrenheit to Celsius:
+
+【PG】Calculate the time it will take to drive a certain distance at a given speed: (Remember to make at least one of the numbers in the division a decimal, unless you want the answer to be rounded down to an integer.)
+
+【PG】Chapter 4: Types of Data
+
+【PG】Test your knowledge
+
+【PG】1The int() function always rounds down (to the next integer to the left on the number line).
+
+【PG】2In our temperature-conversion program, would these have worked? Try them and see what happens: 
+
+【PG】Why didn’t it work? Remember that everything inside the parentheses is done first. So it goes like this:
+
+【PG】Then Because it goes from left to right, 5 / 9 gets done first. Because 5 and 9 are both integers, Python does integer division and rounds the answer down. Because the answer is less than 1, it gets rounded down to 0. Then 
+
+【PG】Then fahrenheit = 75 celsius = 5.0/9 * (fahrenheit - 32) print "Fahrenheit = ", fahrenheit, "Celsius =", celsius Length = 16.7 Width = 12.5 Area = 208.75 Perimeter = 58.4 distance = 200 speed = 80.0 time = distance / speed print "time =", time cel = float(5 / 9 * (fahr – 32)) cel = 5 / 9 * float(fahr – 32) >>> fahr = 75 >>> cel = float(5 / 9 * (fahr – 32)) >>> print cel 0.0 75 - 32 = 43 5 / 9 = 0 0 * 43 = 0 float(0) = 0.0
+
+【PG】然后再这样做： 
+
+【PG】因为它会从左到右计算，所以先完成5/9。因为5和9都是整数，所以Python会完成整除，将答案向下取整。由于这个答案小于1，所以会取整为0。然后得到: 368 Hello World!

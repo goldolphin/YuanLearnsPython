@@ -1,0 +1,74 @@
+【PG】20.6　TempGUI　　 273
+
+【PG】华氏度转换为摄氏度
+要完成另一个方向的转换（从华氏度转换为摄氏度） ，代码很类似。这个转换的公式是：
+
+【PG】Now we have the GUI elements (components, or controls, or widgets) placed, and we have given them the names and labels we want. Save the resource file as TempGui.rsrc.py  by selecting File > Save As  in Resource Editor.
+
+【PG】Next, start a new file in your code editor (SPE or IDLE), and type in the basic PythonCard code (or copy it from our first program): 
+
+【PG】We won’t bother with the pass  keyword, because that’s just a placeholder for when there’s nothing defined in a block. We’re going to define several event handlers for our MainWindow class.
+
+【PG】Converting Celsius to Fahrenheit
+First, let’s get the Celsius to Fahrenheit function working. The formula for converting Celsius to Fahrenheit is: 
+
+【PG】We need to get the Celsius temperature from the tfCel  text box, do the calculation, and put the result in the spinFahr  Fahrenheit spin box. That should all happen when the user clicks the Celsius to Fahrenheit  button, so the code to do it  should go in that button’s event handler: 
+
+【PG】To get the value from the Celsius box, we use self.components.tfCel.text . This value is a string, so we have to convert it to a float: 
+
+【PG】Then we need to do the conversion: 
+
+【PG】Next, we need to put that value in the Fahrenheit box. There’s one catch here: spinners can only have integer values in them, not floats. 
+
+【PG】So we have to make sure we convert the value to an int before putting it in the spinner. The number in the spinner is its value property,  so the code looks like this: 
+
+【PG】Converting Fahrenheit to Celsius
+The code for converting the other way (from Fahrenheit to Celsius) is very similar. The formula for that conversion is: 
+
+【PG】This code要放在 Fahrenheit to Celsius 按钮的事件处理器中。我们将事件处理器连接到按钮上（在窗口的 __init__() 方法中） ：
+ 
+【PG】Then we apply the formula: 
+
+【PG】Finally, we convert this to a string and put it 
+in the Celsius text box: 
+
+【PG】One thing you’ll notice when you run the program is that, when you convert a Fahrenheit temperature to Celsius, the answer has a lot of decimal places, and some of them might get cut off in the text box. There’s a way to fix this—it’s called print formatting . 
+
+【PG】We haven’t covered it yet, so you can either skip ahead to chapter 21 to get the full explanation of how it works, or you can just type in the code I’ll  give you here.
+
+【PG】Add the following code line between lines 12 (cel = (fahr - 32) * 5.0 / 9 ) and 13 ( self.components.tfCel.text = str(cel) ) in listing 20.2: 
+
+【PG】Save this program as TempGui.py . You can run it and try out the GUI.
+
+【PG】The whole thing should look like listing 20.2.
+
+【PG】代码清单 20-3　温度转换程序
+
+【PG】import sys
+from PyQt4 import QtCore, QtGui, uic
+form_class = uic.loadUiType("tempconv.ui")[0] 
+class MyWindowClass(QtGui.QMainWindow, form_class):
+    def __init__(self, parent=None) :
+        QtGui.QMainWindow.__init__(self, parent)
+        self.setupUi(self)
+        self.btn_CtoF.clicked.connect(self.btn_CtoF_clicked)         
+        self.btn_FtoC.clicked.connect(self.btn_FtoC_clicked) 
+        
+    def btn_CtoF_clicked(self):                            
+        cel = float(self.editCel.text())                     
+        fahr = cel * 9 / 5.0 + 32                           
+        self.spinFahr.setValue(int(fahr + 0.5))  
+        
+    def btn_FtoC_clicked(self):                          
+        fahr = self.spinFahr.value()                     
+        cel = (fahr - 32) * 5 / 9.0                   
+        self.editCel.setText(str(cel))      
+app = QtGui.QApplication(sys.argv)
+myWindow = MyWindowClass(None)
+myWindow.show()
+app.exec_()
+
+【PG】加载 UI定义
+【PG】绑定按钮的事件处理器 
+【PG】CtoF按钮的事件处理器 
+【PG】FtoC按钮的事件处理器

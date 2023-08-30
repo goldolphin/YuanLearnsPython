@@ -1,0 +1,37 @@
+【PG】第 19章　声　　音
+
+【PG】启动pygame.mixer
+要播放声音， 首先必须初始化（initialize） pygame.mixer 。还记得初始化是什
+么意思吗？指的是开始时让某个东西做好准备。 
+让pygame.mixer 做好准备很容易 。只需要在初始化 Pygame之后增加一行代码 ：
+pygame.mixer.init()
+
+【PG】所以，使用 Pygame处理声音的程序中最前面几行代码应该像这样：
+import pygame
+pygame.init()
+pygame.mixer.init()
+
+【PG】现在我们已经做好准备可以播放声音了。 这些程序主要使用两种类型的声音。
+第一种是音效或声音片段。 这 些声音往往很短， 通常保存在 .wav文件中。 对于这种
+类型的声音， pygame.mixer 会使用一个 Sound对象，如下：
+splat = pygame.mixer.Sound("splat.wav")
+splat.play()
+
+【PG】另一种大量使用的声音是音乐。 音乐大多存储在 .mp3、.wma 或.ogg文件中。
+要播放这些音乐，  Pygame 会使用mixer中的music模块。可以这样来使用：
+pygame.mixer.music.load("bg _music.mp3")
+pygame.mixer.music.play()
+这样歌曲（ 或音乐文件里的任何音乐 ）会播放一
+次，然后停止。
+
+【PG】下面来试着播放一些声音 。首 先来播放“ 啪啪”
+声。如果使用这本书的安装程序
+来安装， 那么这些例子的所有声音
+文件都已经在你的硬盘上了
+。否则
+，可以在本书的网站（
+www.helloworldbook2.com.）上找到这些
+声音文件。件没有复制到程序文件夹， 就要把文件
+名替换为完整的文件位置。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权
