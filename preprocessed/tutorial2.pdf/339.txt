@@ -1,0 +1,15 @@
+【PG】315 CHAPTER 22 File Input and Output
+
+【PG】One important thing to know is that you can name a file anything you want and use any extension. You can make a text file (in Notepad, for instance) and call it my_notes.mp3. That does not make it a sound file. It still has just text in it, so it’s really a text file. You have given it a file extension that makes it look like it’s a sound file, which will probably confuse people and computers. When naming a file, it’s a very good idea to use a file extension that matches what kind of file it is.
+
+【PG】File locations
+
+【PG】Up until now, we have been working with files that are stored in the same location as the program itself. We haven’t worried about how to find the file, because it’s in the same place as the program.
+It’s like, when you’re in your room, you don’t have to worry about how to find your closet—it’s right there. But if you’re in another room, in another house, or in another city, then finding your closet is more complicated!
+
+【PG】Every file needs to be stored somewhere, so in addition to a name, every file has a location. Hard drives and other storage media are organized into folders or directories. Folders and directories are two names for the same thing. They’re a way of grouping files together. The way the folders or directories are arranged and connected is called a folder structure or directory structure.
+In Windows, each storage media has a letter, like C for the hard drive, or maybe E for a flash drive. In Mac OS X and Linux, each storage media has a name (for example, hda or FLASH DRIVE). Each storage unit can be divided up into a number of folders, such as Music, Pictures, and Programs. If you look at it in a file viewer like Windows Explorer, it will look like this:
+
+【PG】Folders can also have other folders within them, and those folders can have other folders within them, and so on. Here’s an example of three levels of folders:
+
+Download from Wow! eBook <www.wowebook.com>

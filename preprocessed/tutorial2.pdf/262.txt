@@ -1,0 +1,57 @@
+【PG】238 Hello World!
+
+【PG】K_UP  and K_DOWN  are Pygame’s names for the up and down arrow keys. Make the change to listing 18.1, and the program should now look like this.
+
+impor t pygame, sys                                  
+pygame.ini t()                                       
+screen = pygame.display.se t_mode([640,480])          
+background = pygame.Surface(screen.ge t_size())       
+background.fill([255, 255, 255])                     
+clock = pygame. time.Clock()                       
+class Ball(pygame.spri te.Spri te):                                        
+    def __ini t__(self, image_file, speed, loca tion):              
+        pygame.spri te.Spri te.__ini t__(self)         
+        self.image = pygame.image.load(image_file)                   
+        self.rec t = self.image.ge t_rec t()                              
+        self.rec t.lef t, self.rec t.top = loca tion                      
+        self.speed = speed                                           
+                                                                       
+    def move(self):                                                     
+        if self.rec t.lef t <= screen.ge t_rec t().lef t or \               
+                self.rec t.righ t >= screen.ge t_rec t().righ t:             
+            self.speed[0] = - self.speed[0]                            
+        newpos = self.rec t.move(self.speed)          
+        self.rec t = newpos 
+my_ball = Ball( 'beach_ball.png' , [10,0], [20, 20])
+running = True
+while running: 
+    for even t in pygame.even t.get(): 
+        if even t.type == pygame.QUIT: 
+            running = False 
+        elif even t.type == pygame.KEYDOWN:                    
+            if even t.key == pygame.K_UP:                       
+                my_ball.rec t.top = my_ball.rec t.top - 10       
+            elif even t.key == pygame.K_DOWN:                   
+                my_ball.rec t.top = my_ball.rec t.top + 10  
+    clock. tick(30) 
+    screen.bli t(background, (0, 0))                           
+    my_ball.move()                                             
+    screen.bli t(my_ball.image, my_ball.rec t)                  
+    pygame.display.flip()                          
+pygame.qui t()
+
+【PG】Run the program in listing 18.2, and try the up and down arrow keys. Does it work?
+
+【PG】Repeating keys
+You might have noticed that, if you hold down the up or down arrow key, the ball only moves 
+one step up or down. That’s because we didn’t tell our program what to do if a key was held 
+down . When the user pressed the key, it generated a single KEYDOWN  event, but there’s a setting Listing 18.2 Bouncing ball with up and down arrow keys
+Initializes everything
+The Ball class definition, 
+including move() method
+Makes an instance 
+of the ball
+Checks for key presses 
+and moves ball up or down
+Redraws everything
+Download from Wow! eBook <www.wowebook.com>

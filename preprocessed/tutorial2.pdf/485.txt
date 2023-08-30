@@ -1,0 +1,113 @@
+【PG】461 INDEX
+operators (continued)
+less than 69
+list 75
+logical 75
+not equal 69
+or74
+order of operations 32
+os (Python module) 373
+out-of-scope variables 154
+output 15, 55, 313
+redirecting 327
+P
+padding 301
+parameter 150
+parentheses 32, 47, 114, 127, 147
+pass 176
+passing arguments to functions 147–148
+path 316
+permutation 110
+PhoneGap 411
+pickle 327, 373
+dump() 328
+load() 329
+pixel 193
+pixel-perfect collision detection 227
+playing music 259
+plus sign, + 305, 307
+polymorphism 173
+Pong 244
+pop() 127
+print 4, 18, 20, 293
+print formatting 285, 293
+automatic float 302
+comma 48, 295
+concatenation 295
+E-notation 302
+floating point 301
+in Python 2.6 and later 304
+integers 300
+number formatting 299
+pad 301
+storing formatted numbers 304
+printing prompt messages (for raw_input()) 49
+probability 337, 339, 341
+process 15, 55
+processing 15
+prompt 3
+properties 160
+Property Editor (PyQt) 287
+
+【PG】Pygame 100, 189, 363
+.draw 196
+.draw.circle() 192
+.draw.lines() 202
+.draw.rect() 197, 364
+.event 236.event.get() 237
+.font 249
+.image.load() 206
+.mixer 257
+.sound 256
+.time.Clock() 229
+animation 208
+clock.get_fps() 229
+clock.tick() 229
+collision detection 223, 246
+color names 194
+colordict.py 194
+colormixer.py 194
+colors 194
+coordinates 195
+display 192
+displaying text 249
+drawing shapes 191
+event handlers 234
+event loop 190, 234
+event names 239
+events 233
+flip() 192
+font object 249, 364
+frame rate 229
+grouping sprites 224
+images 205
+key names 239
+KEYDOWN event 237
+line width 198
+location 195
+mixer 257
+mouse events 240
+pixel-perfect 226
+PyPong 244
+QUIT event 237
+rect 196
+screen.get_height() 213
+screen.get_width() 212
+set_timer() 242
+size 196
+Sprite.kill() 394
+spritecollide() 225–226
+sprites 217
+Surface.get_at() 204
+Surface.set_at() 205
+surfaces 193
+time 228
+time.delay() 228
+timer events 241
+user-defined events 242
+
+【PG】PyMunk 410
+PyPong 244
+adding music 267
+adding sounds 263
+Download from Wow! eBook <www.wowebook.com>

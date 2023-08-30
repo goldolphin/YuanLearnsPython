@@ -1,0 +1,33 @@
+【PG】6.2 第一个 GUI　　 55
+
+【PG】6.2 第一个 GUI
+我们一直都在使用 GUI，实际上已经用过很多。Web 浏览器是 GUI，IDLE 也是
+GUI。现在我们就来建立自己的 GUI 。为了做到这一点， 要从 EasyGui寻求一些帮
+助。
+
+EasyGui是一个 Python模 块，利用这个模块可以很容易地建立简单的 GUI。我
+们还没有具体讨论过模块（ 第15章 会介绍这方面的内容 ） ，不过应该知道： 模块就
+是一种扩展方法，通过它可以向 Python增加非内置的内容 。
+
+如果你使用这本书的安装程序来安装 Python ，那么你已经安装了 EasyGui。 否
+则，可以从 http://easygui.sourcefor ge.net/下载。
+
+安装 EasyGui
+可以下载 easygui.py 或者一个包含 easygui.py 的zip文件。要安装这个模块， 只
+需要把文件 easygui.py 放在 Python能找到的位置 。这个位置是哪里呢？
+
+Python 路径
+Python会在硬盘上的一组位置中查找可以使用的模块。 这个工作可能有些复杂，
+因为在 Windows、Mac OS X 和Linux上 ，所查找的这组位置各不相同。 不过，如果
+把easygui.py 放 在Python安装的位置中，Python 肯定能找到它。 所以，要在你的硬
+盘上查找一个名叫 Python27 的文件夹 ，再把 easygui.py 放在这个文件夹里。
+
+建立 GUI
+启动 IDLE，在交互模式键入以下命令：>>> import easygui
+这会告诉 Python你打算使用 EasyGui模块。如果没有得到错误消息， 说明
+Python找到了 EasyGui模 块。如果收到一个错误消息， 或者 EasyGui看上去无效，
+可以访问本书网站（www.helloworldbook2.com ） ，从中可以找到一些其他的帮助。
+
+现在来建立一个包含 OK按钮的简单消息框 ：
+>>> easygui.msgbox("Hello There!")
+图灵社区会员 FreeLink 专享 尊重版权

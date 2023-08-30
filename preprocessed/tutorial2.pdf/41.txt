@@ -1,0 +1,33 @@
+【PG】Chapter 2 Remember This: Memory and Variables
+
+【PG】I typed 
+>>> print Teacher 
+
+【PG】So, why didn't it print "Teacher"? 
+It printed "Mr. Morton " instead.
+
+【PG】Names
+Go back to the Python Shell window. (If you closed IDLE since doing the example
+in chapter 1, open it again.) At the prompt, type (Remember, the >>> is the prompt
+that Python displays. You just type what is after it and press Enter.) You should see this:
+
+【PG】You just created a thing that is made up of the letters “Mr. Morton”, and you gave it
+the name Teacher. The equal sign ( =) tells Python to assign or "make equal to." You
+assigned the name Teacher to the series of letters “Mr. Morton.”
+
+【PG】Somewhere in a chunk of your computer’s memory, the letters “Mr. Morton” exist. You
+don’t need to know exactly where. You told Python that the name for that series of letters
+is Teacher, and that’s how you will refer to it from now on. A name is like a label or tag or
+sticky note that you attach to something to identify what it is. 
+
+【PG】When you put quotes around something, Python takes it literally. It prints exactly what
+is in the quotes. When you don’t put quotes around the thing, Python has to figure out what
+the thing is. It could be a number (like 5), an expression (like 5 + 3), or a name (like Teacher). 
+Because you made a name, Teacher, Python prints the thing that belongs to that name, which happens 
+to be the series of letters “Mr. Morton.” 
+
+【PG】It’s just like if someone said, “Write down your address. ” You wouldn’t write this: >>> Teacher = "Mr. Morton" 
+>>> print Teacher
+Mr. Morton
+>>>
+Download from Wow! eBook <www.wowebook.com>

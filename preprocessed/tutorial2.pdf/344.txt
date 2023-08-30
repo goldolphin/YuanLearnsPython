@@ -1,0 +1,33 @@
+【PG】320 Hello World!
+
+【PG】Reading a file
+As I mentioned in the last section, you open a file and create a file object using the open()
+function. This is one of Python’s built-in functions. To open the file for reading, you use 'r'
+as the second argument, like this:
+
+【PG】If you try to open a file for reading that does not exist, you’ll get an error. (After all, you can’t 
+read something that’s not there, right?)
+
+【PG】Python has a couple more built-in functions for getting information from the file into your 
+program once the file is open. To read lines of text from a file, you can use the readlines()
+method, like this:
+This will read the whole file and make a list, with one line of text in each item of the list. 
+
+【PG】Let’s say the notes.txt  file contained a short list of things we need to do today:
+We could have used a program like Notepad to create this file. In fact, why don’t you make a 
+file like this using Notepad (or your favorite text editor) right now? Call it notes.txt , and 
+save it in the same place you save your Python programs. Then close Notepad.
+
+【PG】If we open this file with a short Python program and read it, the code might look like this.
+my_file = open('notes.txt', 'r')
+lines = my_file.readlines()
+print lines
+The output would be like this (depending on what you put in the file):
+The lines of text were read from the file, and they were put into a list, which we called 
+lines . Each item in the list is a string containing one line from the file. Notice the \n part at 
+
+【PG】Listing 22.1 Opening and reading from a file
+>>>======================= RESTART =========================
+>>> 
+['Wash the car\n', 'Make my bed\n', 'Collec t allowance']
+Download from Wow! eBook <www.wowebook.com>

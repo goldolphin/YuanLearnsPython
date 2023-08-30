@@ -1,0 +1,37 @@
+【PG】404 Hello World!
+
+【PG】The coordinate system
+In Python Battle, the coordinate system goes from (1,1) to (10,10). It starts from the top-left, 
+just like Pygame. Walls surround the playing field in every direction. We can use 
+self.robot.position  to find the position of the robot in the coordinate system.
+
+【PG】Directions
+Directions are stored as a number from 0–3. 0 is up (North), 1 is right (East), 2 is down 
+(South), and 3 is left (West). When the robot turns right, it adds 1 to its direction. When it 
+turns left, it subtracts 1 from its direction. It’s that simple. We can use self.robot.rotation
+to find the robot’s direction.
+
+【PG】calculateCoordinates()
+The calculateCoordinates()  function take three parameters: distance , direction , and 
+position . Basically, it finds the coordinates of the space that is distance  squares from 
+position  in direction . For example, calculateCoordinates(2,3,(5,5))  finds the space 
+that’s two squares to the left (left is direction 3) of square (5,5). 
+
+【PG】Now we can come up with a strategy. I’m going with a straightforward one:
+1Go in the direction of the enemy.
+2Attack when possible.
+
+【PG】Let’s start with some of the basic code from the previous robot:
+This code will handle the second part of our strategy: “attack when possible. ” Now we need 
+to code the first part. Let’s add this code to the turn()  function:
+
+【PG】This will call the method of our AI class called self.goTowards()  with the enemy’s position 
+as the argument. The self.robot.locateEnemy()  method returns a list containing the class AI:
+    def __ini t__(self):
+        pass
+    def turn(self):
+        if self.robo t.lookInFron t() == "bot":
+            self.robo t.attack()
+else:
+     self.goTowards(self.robo t.loca teEnemy()[0])
+Download from Wow! eBook <www.wowebook.com>

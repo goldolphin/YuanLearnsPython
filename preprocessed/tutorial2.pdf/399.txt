@@ -1,0 +1,34 @@
+【PG】375 CHAPTER  24 Computer Simulations
+
+【PG】■Playing with the pet will make its happiness increase.
+■Taking the pet to the doctor will make its health increase.
+■The pet will have six different graphics:
+■One for sleeping
+■One for being awake but doing nothing
+■One for walking
+■One for playing
+■One for eating
+■One for going to the doctor
+The graphics will use some simple animation. In the next few sections, you’ll see how this 
+all goes together in a program.
+
+【PG】The GUI
+Carter and I have created a PyQt GUI for our Virtual Pet 
+program. It has buttons (actually icons on a toolbar) to do 
+the activities. It has progress bars for the vital stats. As you 
+can see, there’s also a place to show the graphic of what the 
+pet is doing.
+
+【PG】Notice that the title bar of the window says Virtual Pet . How 
+do you set the window title? Create a new form in the Qt 
+Designer application, and click the MainWindow  object in 
+the Object Inspector. Then, in the Property Editor, find the 
+property called windowTitle , and change it to Virtual Pet
+(or whatever you want to show in the title bar).
+
+【PG】The group of buttons for the activities is a type of PyQt 
+widget called Toolbar . The toolbar has actions  in it just like 
+a menu does, but the difference with a toolbar is that each 
+action has an icon  associated with it. 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

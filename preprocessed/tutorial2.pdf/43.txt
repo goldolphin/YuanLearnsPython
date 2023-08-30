@@ -1,0 +1,61 @@
+【PG】19 CHAPTER  2 Remember This: Memory and Variables
+【PG】#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#
+Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1;#!/bin/envpython#Paginateatex
+ift
+el,addingaheaderandfooterimportsys,time,string
+I#
+fnoargumentsweregiven,printahelpfulmessega
+ilf
+en(sys.argv)!=2:print'Usage:pyprin
+sft
+lef.page=self.page+1PrinterFormatter:self.header_written=0def#Incrementthepagecount,andresetthelinecount
+
+【PG】Thinking like a programmer
+When you assign a value to a name (like 
+assigning the value “Mr. Morton” to Teacher), 
+it is stored in memory and is called a variable . 
+In most programming languages, we say you 
+store a value in a variable.
+But Python does things a little
+differently from most other computer
+languages. Instead  of storing values in 
+variables,  it’s more like putting names 
+on values .
+Some Python programmers say that 
+Python doesn’t have “variables”—
+it has “names” instead. But they behave 
+pretty much the same way. This is a book 
+about programming (that just happens to use 
+Python), not a book only about Python. So we 
+will use the terms variable, name,  or 
+variable name when talking about a Python 
+name. It really doesn’t matter what you 
+call them, as long as you understand 
+how variables behave and how to use 
+them in your programs.
+By the way, Guido van Rossum, the 
+person who created Python, says in his 
+Python tutorial: “The ‘=’ sign is used 
+to assign a value to a variable.” So I 
+guess he thinks Python 
+has variables!
+
+【PG】A clean way to store things
+Using names in Python is like going to a 
+dry cleaner… Your clothes are placed on a 
+hanger, your name is attached, and they 
+are put on a big revolving hanger-trolley. 
+When you go back to pick up your clothes, 
+you don’t need to know exactly where they 
+are stored on the big hanger-trolley. You 
+just give the person your name, and they 
+return your clothes. In fact, your clothes 
+might be in a different spot than when you 
+brought them in. But the dry cleaner keeps 
+track of that for you. All you need is 
+your name to retrieve your clothes. 
+Variables are the same. You don’t need 
+to know exactly where in memory the infor -
+mation is stored. You just need to use the 
+same name as when you stored it.
+Download from Wow! eBook <www.wowebook.com>

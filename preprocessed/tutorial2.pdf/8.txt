@@ -1,0 +1,38 @@
+【PG】18 A New Kind of Input—Events 233
+Events 233■Keyboard events 235■Mouse events 240
+Timer events 241■Time for another game—PyPong 244
+
+【PG】19 Sound 256
+More help from Pygame—mixer 256■Making sounds vs. playing 
+sounds 257■Playing sounds 257■Controlling volume 260
+Repeating music 262■Adding sounds to PyPong 263■More 
+wacky sounds 264■Adding music to PyPong 267
+
+【PG】20 More GUIs 272
+Working with PyQt 272■Making our GUI do something 277
+The return of event handlers 279■Moving the button 280
+More useful GUIs 280■TempGUI 281■What’s on the menu? 287
+
+【PG】21 Print Formatting and Strings 293
+New lines 294■Horizontal spacing—tabs 296■Inserting variables 
+in strings 298■Number formatting 299■Formatting, the new 
+way 304■Strings ’n’ things 305
+
+【PG】22 File Input and Output 313
+What’s a file? 314■Filenames 314■File locations 315
+Opening a file 319■Reading a file 320■Text files and binary 
+files 322■Writing to a file 323■Saving your stuff in files: 
+pickle 327■Game time again—Hangman 329■Try it out 336
+
+【PG】23 Take a Chance—Randomness 337
+What’s randomness? 338■Rolling the dice 338■Creating a deck 
+of cards 343■Crazy Eights 348
+
+【PG】24 Computer Simulations 361
+Modeling the real world 361■Lunar Lander 362■Keeping 
+time 367■Time objects 368■Saving time to a file 372
+Virtual Pet 374
+
+【PG】25 Skier Explained 385
+The skier 385■The obstacles 389
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,60 @@
+【PG】268 Hello World!
+【PG】impor t pygame, sys 
+【PG】class MyBallClass(pygame.spri te.Spri te): 
+    def __ini t__(self, image_file, speed, loca tion = [0,0]): 
+        pygame.spri te.Spri te.__ini t__(self)   
+        self.image = pygame.image.load(image_file) 
+        self.rec t = self.image.ge t_rec t() 
+        self.rec t.lef t, self.rec t.top = loca tion 
+        self.speed = speed 
+    def move(self): 
+        global poin ts, score_ text 
+        self.rec t = self.rec t.move(self.speed) 
+        if self.rec t.lef t < 0 or self.rec t.righ t > screen.ge t_wid th():
+            self.speed[0] = -self.speed[0] 
+            if self.rec t.top < screen.ge t_heigh t(): 
+                hi t_wall.play()             
+                                               
+        if self.rec t.top <= 0 : 
+            self.speed[1] = -self.speed[1] 
+            poin ts = poin ts + 1 
+            score_ text = fon t.render( str(poin ts), 1, (0, 0, 0)) 
+            ge t_poin t.play()  
+【PG】class MyPaddleClass(pygame.spri te.Spri te): 
+    def __ini t__(self, loca tion = [0,0]): 
+        pygame.spri te.Spri te.__ini t__(self) 
+        image_surface = pygame.surface.Surface([100, 20]) 
+        image_surface.fill([0,0,0]) 
+        self.image    = image_surface.conver t() 
+        self.rec t = self.image.ge t_rec t() 
+        self.rec t.lef t, self.rec t.top = loca tion 
+【PG】pygame.ini t()                      
+pygame.mixer.ini t()
+pygame.mixer.music.load( "bg_music.mp3" )  
+pygame.mixer.music.se t_volume(0.3)      
+pygame.mixer.music.play(-1)       
+hit = pygame.mixer.Sound( "hit_paddle.wav" )                          
+hit.set_volume(0.4)                                                 
+new_life = pygame.mixer.Sound( "new_life.wav" )
+new_life.se t_volume(0.5)                                            
+spla t = pygame.mixer.Sound( "spla t.wav")                             
+spla t.set_volume(0.6)               
+hit_wall = pygame.mixer.Sound( "hit_wall.wav" )                       
+hit_wall.se t_volume(0.4)                                          
+                              
+get_poin t = pygame.mixer.Sound( "get_poin t.wav")                     
+get_poin t.set_volume(0.2)                     
+bye = pygame.mixer.Sound( "game_over.wav" )  
+bye.se t_volume(0.6)                          
+screen = pygame.display.se t_mode([640,480]) 
+clock = pygame. time.Clock() 
+
+【PG】Listing 19.5 PyPong with sound and music
+【PG】Plays sound when the ball hits the side wall
+【PG】Plays sound when the ball hits the top (player gets a point)
+【PG】Initializes Pygame’s sound module
+【PG】Loads music file
+【PG】Sets volume of the music
+【PG】Starts playing the music; repeats forever
+【PG】Creates sound objects, loads sounds, and sets volume for each
+【PG】Download from Wow! eBook <www.wowebook.com>

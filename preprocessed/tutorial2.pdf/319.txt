@@ -1,0 +1,41 @@
+【PG】295 CHAPTER  21 Print Formatting and Strings
+
+【PG】print  and the comma
+
+【PG】The print  statement automatically puts a newline at the end of whatever it prints, unless 
+you tell it not to. And how do you tell it not to? By adding a comma (like you saw in 
+chapter 5):
+(Again, this won’t work in Python 3.) Notice that there’s a space between Hi and There . 
+When you use a comma to prevent Python from printing the newline, it prints a space 
+instead.
+
+【PG】If you want to print two things right together without a space, you can use concatenation , 
+which you saw before:
+Remember that concatenation is like adding strings together, but it has a special name 
+because “adding” is only for numbers. 
+
+【PG】Adding our own newlines
+
+【PG】What if you want to add your own newlines? For example, what if you want an extra row of 
+space between Hi and There ? The easiest way is just to add an extra print  statement:
+
+【PG】When you run it, you’ll get this:prin t 'Hi',
+prin t 'There'
+>>> =================== RESTART ===================
+>>> 
+Hi There
+
+【PG】prin t 'Hi' + 'There'
+>>> =================== RESTART ===================
+>>> 
+HiThere
+
+【PG】prin t "Hi"
+prin t
+prin t "There"
+>>> =================== RESTART ===================
+>>> 
+Hi
+There
+
+【PG】Download from Wow! eBook <www.wowebook.com>

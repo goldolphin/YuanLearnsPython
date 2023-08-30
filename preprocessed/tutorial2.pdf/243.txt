@@ -1,0 +1,50 @@
+【PG】219 CHAPTER  17 Sprites and Collision Detection
+The last line in this code is worth taking a closer look at. location  is an [x, y] location, which 
+is a list with two items. Because we have a list with two items on one side of the = sign 
+(x and y), we can assign two things on the other side. Here, we assigned the left  and top
+attributes of the sprite’s rectangle. 
+
+【PG】Now that we’ve defined MyBallClass , we have to create some instances of it. (Remember, the 
+class definition is just a blueprint; now we have to build some houses.) We still need the same 
+code we used in the last chapter to create a Pygame window. We’re also going to create some 
+balls on the screen, arranged in rows and columns. We’ll do that with a nested loop:
+
+【PG】We also need to blit the balls to the display surface. (Remember that funny word, blit? We 
+talked about it in the last chapter.)
+Putting it all together, our program is shown in the following listing.
+impor t sys, pygame
+class MyBallClass(pygame.spri te.Spri te):                              
+    def __ini t__(self, image_file, loca tion):                         
+        pygame.spri te.Spri te.__ini t__(self)                           
+        self.image = pygame.image.load(image_file)                 
+        self.rec t = self.image.ge t_rec t()    
+        self.rec t.lef t, self.rec t.top = loca tion                 
+    
+size = wid th, heigh t = 640, 480     
+screen = pygame.display.se t_mode(size)     
+screen.fill([255, 255, 255])                             
+img_file = "beach_ball.png"
+balls = []
+for row in range (0, 3):
+    for column in range (0, 3):
+        loca tion = [column * 180 + 10, row * 180 + 10]
+        ball = MyBallClass(img_file, loca tion)
+        balls.append(ball)            img_file = "beach_ball.png"
+balls = []
+for row in range (0, 3):
+    for column in range (0, 3):
+        loca tion = [column * 180 + 10, row * 180 + 10]
+        ball = MyBallClass(img_file, loca tion)
+        balls.append(ball)                         Collect the balls in a list
+for ball in balls:
+    screen.bli t(ball.image, ball.rec t)
+pygame.display.flip()
+Listing 17.1 Using sprites to put multiple ball images on the screenMakes the location different 
+each time through the loop
+Creates a ball 
+at that location
+Defines ball 
+subclass
+Sets window size
+Adds balls to a list
+Download from Wow! eBook <www.wowebook.com>

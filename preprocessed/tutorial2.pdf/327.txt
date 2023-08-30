@@ -1,0 +1,37 @@
+【PG】303 CHAPTER  21 Print Formatting and Strings
+
+【PG】How do we print a percent sign?
+You might be wondering, because the percent sign (%) is a special character for format 
+strings, how you make a % sign print?
+Well, sometimes Python is smart enough to figure out when you’re using a % sign to start a 
+format string and when you just want to print one. Try this:
+In this case, there wasn’t a second % outside the string, and there was no variable to format, 
+so Python assumed that the % was just another character in your string.
+
+【PG】But if you are printing with format strings and you want to print a percent sign, you use 
+two percent signs, just like you used two backslashes to print a backslash. We say the first 
+percent sign is escaping  the second percent sign, just like in the Word Box earlier in this 
+chapter:
+The first % starts the format string. The two %% together tell Python that you actually want to 
+print a % character. Then you have the % outside the quotes that tells Python the variable 
+you want to print is coming next.
+
+【PG】More than one format string
+What if you want to put more than one format string in a single print  statement? Here’s 
+how you do that:
+You can put as many format strings as you want in the print  statement and then a tuple 
+of variables you want to print. Remember that a tuple is like a list, except it uses round 
+brackets instead of square ones, and a tuple is immutable. This is one instance where 
+Python is picky—you have to use a tuple; you can’t use a list. The only exception is when 
+you have just a single variable to format; then it doesn’t need to be in a tuple. (You saw that 
+in most of our examples.) Make sure the number of format strings (inside the quotes) and 
+the number of variables (outside the quotes) matches, or you’ll get an error message. 
+
+>>> prin t 'I go t 90% on my ma th test!'
+I go t 90% on my ma th test!
+>>> ma th = 75.4
+>>> prin t 'I go t %.1f%% on my ma th test' % ma th
+I go t 75.4% on my ma th test
+>>> ma th = 75.4
+>>> science = 82.1
+>>> prin t 'I go t %.1f in ma th and %.1f in science' % (ma th, science)

@@ -1,0 +1,40 @@
+【PG】 448 Hello World!
+
+【PG】 Rolling an 11-sided die is different from rolling two 6-sided dice because, with an 
+11-sided die, all numbers from 2 to 12 have an equal probability of coming up. 
+With two 6-sided dice, some numbers (totals of the two dice) will come up more 
+often than others.
+
+【PG】 Here are two ways to simulate rolling a die in Python: and
+
+【PG】 To represent a single card, we used an object.
+
+【PG】 To represent a deck of cards, we used a list. Each item in the list was one card (an 
+object).
+
+【PG】 To remove a card from a deck or a hand, we used the remove()  method for lists, like 
+this: deck.remove()  or hand.remove() .
+
+【PG】 Just try it and see what happens.
+
+【PG】 Test your knowledge
+
+Computer simulations are used for a number of reasons:
+■To save money (to do experiments that would be too expensive to do in the real 
+world).
+■To protect people and equipment (to do experiments that would be too dangerous 
+in the real world).
+■To try things that simply aren’t possible in the real world (like making a big asteroid 
+crash into the Moon).
+■To speed up time (to make an experiment go faster than it would in the real world). 
+This is good for studying things that take a long time, like glaciers melting.
+■To slow down time (to make an experiment go slower than it would in the real 
+world). This is good for studying things that happen very fast, like electrons zipping 
+down a wire.
+
+【PG】 import random
+sides = [1, 2, 3, 4, 5, 6]
+die_1 = random.choice(sides)
+import random
+die_1 = random.randin t(1, 6)
+Download from Wow! eBook <www.wowebook.com>

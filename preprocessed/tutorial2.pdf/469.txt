@@ -1,0 +1,36 @@
+【PG】445 APPENDIX  C Answers to Self-Test Questions
+【PG】3To line things up in columns, use the tab character, \t.
+【PG】4To make a number print in E-notation, use the format string %e or %E, like this:
+Try it out
+【PG】1The program would look like this:
+【PG】2The code to line up the times table using tabs would look like this:
+Notice the \t in front of the word times  and after the = sign.
+【PG】3Here is a program to print the fractions of 8:
+The first part, print str(i) + '/8 = , prints the fraction. The last part, %.3f' % 
+fraction , prints the decimal number with three decimal places.
+
+【PG】Chapter 22: File Input and Output
+Test your knowledge
+【PG】1The kind of object in Python that’s used to work with files is called a file object .
+【PG】2You create a file object by using the open()  function, which is one of Python’s built-in 
+functions.
+【PG】3A filename  is the name used to store the file on the disk (or on other storage, like a 
+flash drive). A file object  is the thing used to work with files in Python. The name of the 
+file object does not have to be the same as the filename on the disk.
+【PG】4When a program is done reading or writing a file, the program should close the file.
+
+>>> number = 12.3456
+>>> prin t '%e' % number
+1.234560e+001
+name = raw_inpu t("Wha t is your name? " )
+age = int(raw_inpu t("How old are you? " ))
+color = raw_inpu t("Wha t is your favori te color? " )
+prin t "Your name is" , name,
+prin t "you are" , age, "years old," ,
+prin t "and you like the color" , color
+for looper in range(1, 11):
+    prin t looper, "\ttimes 8 =\ t", looper * 8
+for i in range(1, 9):
+    frac tion = i / 8.0
+    prin t str(i) + '/8 = %.3f' % frac tion
+Download from Wow! eBook <www.wowebook.com>

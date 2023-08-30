@@ -1,0 +1,59 @@
+【PG】164 Hello World!
+
+【PG】class Ball:                               
+                                             
+    def bounce(self):                         
+        if self.direc tion == "down":    
+            self.direc tion = "up"    
+                                                                            
+myBall = Ball()        
+myBall.direc tion = "down"              
+myBall.color = "red"                      
+myBall.size = "small"                 
+                                                                            
+prin t "I jus t crea ted a ball."      
+prin t "My ball is" , myBall.size                 
+prin t "My ball is" , myBall.color                  
+prin t "My ball's direc tion is", myBall.direc tion 
+prin t "Now I'm going to bounce the ball"                                    
+prin t                                                    
+myBall.bounce()                         
+prin t "Now the ball's direc tion is", myBall.direc tion    
+
+【PG】If you run the program in listing 14.2, you should see this:
+Notice that after we called the bounce()  method, the ball’s direction  changed from down  to 
+up, which is exactly what the code in the bounce()  method is supposed to do.
+
+【PG】Initializing an object
+When we created our ball object, it didn’t have anything filled in for the size , color , or 
+direction . We had to fill those in after  we created the object. But there’s a way to set the 
+properties of an object when it’s being created. This is called initializing  the object. 
+
+【PG】Listing 14.2 Using the Ball  class
+>>> ========================== RESTART ==========================
+>>> 
+I jus t crea ted a ball.          
+My ball is small                 
+My ball is red                   
+My ball's direc tion is down
+Now I'm going to bounce the ball
+Now the ball's direc tion is up
+
+【PG】Here’s our class, 
+same as before
+Makes an instance of our class
+Sets some 
+attributes
+Prints the object’s 
+attributes
+Uses a method
+The attributes as 
+we set themNow we bounce() 
+the ball
+It changed direction, 
+from down to up
+
+【PG】Initializing  means “getting something ready at the start.” 
+When we initialize  something in software, we make it ready to 
+use by getting it into the state or condition that we want.
+Download from Wow! eBook <www.wowebook.com>

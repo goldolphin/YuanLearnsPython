@@ -1,0 +1,51 @@
+【PG】369 CHAPTER  24 Computer Simulations
+
+【PG】Let’s see what we have:
+We have created a datetime  object, called when , which contains date and time values.
+
+【PG】When creating a datetime  object, the order of the parameters (the numbers in brackets) is 
+year, month, day, hour, minute, second. But if you can’t remember that, you can put them in 
+any order you want, as long as you tell Python which one is which, like this:
+
+【PG】There are some other things you can do with datetime  objects. You can get the individual 
+pieces like year, day, or minute. You can also get a formatted string of the date and time. 
+Try these in interactive mode:
+
+【PG】A datetime  object has both the date and the time. If you only care about the date, there’s 
+also a date  class that only has the year, month, and day. If you only care about the time, 
+there’s a time  class that only has the hour, minute, and second. Here’s what they look like:
+
+【PG】Just like with the datetime  object, you can pass the parameters in a different order if you 
+specify which is which:
+
+【PG】There’s also a way to break up a datetime  object into a date  object and a time  object:
+
+>>> prin t when
+2012-10-24 10:45:56
+>>> when = da tetime.da tetime(hour=10, year=2012, minu te=45, mon th=10, 
+                        second=56, day=24)
+>>> prin t when.year    
+2012                                                 
+>>> prin t when.day                                
+24                                  
+>>> prin t when.c time()   
+Wed Oc t 24 10:45:56 2012
+
+【PG】>>> today = da tetime.da te(2012, 10, 24)
+>>> some_ time = da tetime. time(10, 45, 56)
+>>> prin t today
+2012-10-24
+>>> prin t some_ time
+
+【PG】>>> today = da tetime.da te(mon th=10, day=24, year=2012)
+>>> some_ time = da tetime. time(second=56, hour=10, minu te=45)
+>>> today = when.da te()
+>>> some_ time = when. time()
+
+【PG】Gets individual parts of 
+datetime object
+Prints string 
+version of date 
+and time
+
+【PG】Download from Wow! eBook <www.wowebook.com>

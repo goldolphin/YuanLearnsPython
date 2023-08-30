@@ -1,0 +1,57 @@
+【PG】388 Hello World!
+
+【PG】We use the arrow keys to steer the skier left and right, so we’ll add our Pygame initialization and event loop code, which gives us a working program that only has the skier. This is shown in the following listing.
+
+【PG】impor t pygame, sys, random
+skier_images = [ "skier_down.png" ,                         
+                  "skier_righ t1.png", "skier_righ t2.png",    
+                 "skier_lef t2.png", "skier_lef t1.png"]      
+
+【PG】class SkierClass(pygame.spri te.Spri te):
+    def __ini t__(self):
+        pygame.spri te.Spri te.__ini t__(self)
+        self.image = pygame.image.load( "skier_down.png" )
+        self.rec t = self.image.ge t_rec t()
+        self.rec t.cen ter = [320, 100]
+        self.angle = 0
+        
+    def turn(self, direc tion): 
+        self.angle = self.angle + direc tion
+        if self.angle < -2:  self.angle = -2   
+        if self.angle >  2:  self.angle =  2  
+        cen ter = self.rec t.cen ter
+        self.image = pygame.image.load(skier_images[self.angle])
+        self.rec t = self.image.ge t_rec t()
+        self.rec t.cen ter = cen ter
+        speed = [self.angle, 6 - abs(self.angle) * 2]
+        return speed
+    
+    def move(self, speed):                                     
+        self.rec t.cen terx = self.rec t.cen terx + speed[0]            
+        if self.rec t.cen terx < 20:  self.rec t.cen terx = 20 
+        if self.rec t.cen terx > 620: self.rec t.cen terx = 620  
+
+【PG】def anima te():                                                    
+    screen.fill([255, 255, 255])                                   
+    screen.bli t(skier.image, skier.rec t)  
+    pygame.display.flip()                  
+pygame.ini t()
+screen = pygame.display.se t_mode([640,640])
+clock = pygame. time.Clock()
+skier = SkierClass()
+speed = [0, 6]
+running  = True                                                   
+
+【PG】while running:                                                     
+    clock. tick(30)                                                   
+    for even t in pygame.even t.get():    
+        if even t.type == pygame.QUIT: running = False               
+        if even t.type == pygame.KEYDOWN:                  Listing 25.1 Building the Skier game—skier only
+
+【PG】Different images for the skier depending on his direction
+Don’t let the skier turn more than +/-2
+Move the skier left and right
+Redraw the screen
+Check for keypresses
+Main Pygame event loop
+Download from Wow! eBook <www.wowebook.com>

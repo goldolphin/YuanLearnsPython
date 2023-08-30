@@ -1,0 +1,36 @@
+【PG】422 Hello World!
+Try it out
+
+【PG】1Here are some ways to solve these problems. You might have come up with a different way to do the same thing.
+a) Calculate how much each person should pay at the restaurant:
+Rounding this off, each person should pay $13.52.
+b) Calculate the area and perimeter of a rectangle:
+Here’s a sample run of the program:
+
+【PG】2Here’s a program to convert temperatures from Fahrenheit to Celsius:
+
+【PG】3Calculate the time it will take to drive a certain distance at a given speed:
+(Remember to make at least one of the numbers in the division a decimal, unless you want the answer to be rounded down to an integer.)
+
+【PG】Chapter 4: Types of Data
+Test your knowledge
+1The int()  function always rounds down (to the next integer closest to zero on the number line). >>> prin t 35.27 * 1.15 / 3
+>>> 13.5201666667
+leng th = 16.7
+width = 12.5
+Perime ter = 2 * leng th + 2 * wid th
+Area = leng th * wid th
+prin t 'Leng th = ', leng th, ' Wid th = ', wid th
+prin t "Area = " , Area
+prin t "Perime ter = ", Perime ter
+Leng th = 16.7 Wid th = 12.5
+Area = 208.75
+Perime ter = 58.4
+fahrenhei t = 75
+celsius  = 5.0/9 * (fahrenhei t - 32)
+prin t "Fahrenhei t  = ", fahrenhei t, "Celsius =" , celsius
+distance = 200
+speed = 80.0
+time = dis tance / speed
+prin t "time =", time
+Download from Wow! eBook <www.wowebook.com>

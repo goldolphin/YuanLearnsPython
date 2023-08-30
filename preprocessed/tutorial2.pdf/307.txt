@@ -1,0 +1,33 @@
+【PG】283 CHAPTER  20 More GUIs
+
+【PG】Drag a Label  widget onto the form, and place it below the Spin Box widget:
+■Change the text  property of the label to Fahrenheit .
+■Change the label’s font size  to 10.
+
+【PG】Now we have the GUI elements (widgets, or components, or controls) placed, and we have given them the names and labels we want. Save the UI file as tempconv.ui  by selecting File > Save As  in Qt Designer. Remember to change the location where the file is saved to the location where you normally save your Python programs.
+
+【PG】Next, start a new file in IDLE , and type in the basic PyQt code (or copy it from our first program):
+
+【PG】Converting Celsius to Fahrenheit
+First, let’s get the Celsius to Fahrenheit function working. The formula for converting Celsius to Fahrenheit is
+We need to get the Celsius temperature from the editCel  Line Edit widget, do the calculation, and put the result in the spinFahr  Fahrenheit Spin Box widget. That should all happen when the user clicks the Celsius to Fahrenheit  button, so the code to do it should go in that button’s event handler.
+First we need to connect the button’s clicked  event to the event handler:
+This code goes in the __init__()  method of the MyWindow  class, just like it did in our first program.
+
+import sys
+from PyQt4 import QtCore, QtGui, uic
+form_class = uic.loadUiType( "tempconv.ui" )[0]
+class MyWindowClass(QtGui.QMainWindow, form_class):
+    def __init__(self, parent=None):
+        QtGui.QMainWindow.__init__(self, parent)
+        self.setupUi(self)
+
+app = QtGui.QApplication(sys.argv)
+myWindow = MyWindowClass()
+myWindow.show()
+app.exec_() 
+
+fahr = cel * 9.0 / 5 + 32
+self.btn_CtoF.clicked.connect(self.btn_CtoF_clicked) 
+
+Download from Wow! eBook <www.wowebook.com>

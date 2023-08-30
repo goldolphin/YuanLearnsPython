@@ -1,0 +1,36 @@
+【PG】316 Hello World!
+【PG】The first level is Music . The next level has New Music  and 
+Old Music , and the next level has Kind of old music  and 
+Really old music .  
+
+【PG】When you’re trying to find a file or folder in Windows Explorer 
+(or some other file browser), the folders are like branches of a tree. 
+The root  is the drive itself, like C: or E:. Each main folder is like a main 
+branch of the tree. The folders within each main folder are like 
+smaller branches, and so on.
+
+【PG】But when you need to access files from within a program, the 
+tree idea doesn’t quite work. Your program can’t click folders 
+and browse around the tree to find individual files. It needs a more 
+direct way to find the file. Fortunately, there’s another way to represent the tree structure. If 
+you look in the address bar of Windows Explorer when you click different folders and 
+subfolders, you’ll see something that looks like this:
+
+【PG】That’s called the path . The path is a description of where the file is in the folder structure. 
+This particular path reads like this:
+1Start at the E: drive.
+2Go into the folder called Music .
+3In the Music  folder, go into a subfolder called Old Music .
+4In the Old Music  subfolder, go into a subfolder called Really old music .
+5In the Really old music  subfolder, there’s a file called my_song.mp3 .
+
+【PG】You can get to any file on your computer using a path like this. That’s the way programs find and open files. Here’s an example:
+You can always get to a file using its full pathname. That’s the name including all the folder 
+names right down the tree to the root (the drive, like C:). The name in this example is a full 
+pathname. E:\Music\Old Music\Really old music\my_song.mp3
+
+【PG】The folders within other folders are called subfolders . If you’re 
+using the term directories , you’d 
+call them subdirectories .
+
+【PG】Download from Wow! eBook <www.wowebook.com>

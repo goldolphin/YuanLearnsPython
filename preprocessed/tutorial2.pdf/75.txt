@@ -1,0 +1,43 @@
+【PG】51 CHAPTER  5 Input
+We can also combine the last three lines of listing 5.3 into one, like this:
+This is really just shorthand for the three print  statements we had before.
+
+【PG】Using int()  with raw_input()
+If the number you want the user to enter will always be an integer (no decimals), you can 
+convert it with int() , like this:prin t "Tha t is", celsius, "degrees Celsius"
+response = raw_inpu t("How many s tuden ts are in your class: " )
+numberOfS tuden ts = int(response) 
+
+【PG】Thinking like a (Python) programmer
+There is another way to get numbers as 
+input. Python 2 has a function called 
+input() that gives you a number 
+directly, so you don’t have to use int()
+or float()to convert it. We used it 
+in the number-guessing program in 
+chapter 1, because it is the simplest 
+way to get a number from the user. 
+But to keep things consistent, we will 
+always use raw_input()  for the rest of 
+this book. Also, the input() function 
+(the one that gets numbers directly 
+without having to convert them) is 
+removed in Python 3. There is only 
+raw_input() . To make things just 
+a little more confusing, the Python 2 
+raw_input()  function is called input() in 
+Python 3, but it is the same function 
+that you saw in this chapter, the one 
+that only gets strings. Because you know 
+how to create a number from a string, 
+I recommend you use raw_input()  instead 
+of input() in Python 2.
+
+【PG】#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpful
+sem
+sageiflen(sys.argv)!=2:print'asUge:pyprintfilename'sys.exit(0)class
+nI#
+crementthepagecount,andresetthelinecountself.header_writt
+1=ne
+;self.count=1;self.page=self.page+1PrinterFormatter:self.header_written=0def#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1;self.page=self.page+1write_header(self):#Iftheheaderforthispagehasjustbeenwritten,don'telf.header_written=1;self.count=1;self.page=self.page+1write_header(self):#Iftheheaderforthispagehasjustbeenwritten,print>>>Helloif#print>>>Helloif#print>>>Helloif#
+Download from Wow! eBook <www.wowebook.com>

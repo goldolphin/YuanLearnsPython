@@ -1,0 +1,11 @@
+【PG】xxiv ABOUT THIS BOOK 
+
+【PG】This book is designed for those who are interested in learning about the basics of web development. Whether you are a complete beginner or have some experience with web development, this book provides a comprehensive guide to the fundamentals. 
+
+【PG】The book covers HTML, CSS, and JavaScript, as well as the tools and techniques that are commonly used in web development. It is written in a clear and concise manner, with step-by-step instructions and plenty of examples to help you understand the concepts. 
+
+【PG】Throughout the book, you will learn how to build a complete web application from scratch. You will start with a basic HTML webpage, and then gradually add CSS and JavaScript to create a fully functional web application. 
+
+【PG】In addition, the book includes several projects that you can complete to practice your skills. These projects range from simple applications to more complex projects that require a deeper understanding of web development. 
+
+【PG】By the end of this book, you will have a solid foundation in web development and be ready to tackle more advanced topics. So, whether you are looking to start a career in web development or simply want to learn more about the subject, this book is an excellent resource.

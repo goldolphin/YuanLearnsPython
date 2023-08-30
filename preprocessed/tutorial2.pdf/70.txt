@@ -1,0 +1,25 @@
+【PG】Until now, if you wanted your program to “crunch some numbers, ” you had to put those 
+numbers right in the code. For example, if you wrote the temperature-conversion program 
+in the “Try it out” section of chapter 3, you probably put the temperature to convert right in 
+the code. If you wanted to convert a different temperature, you would have to change 
+the code.
+
+【PG】What if you want to have the user enter any temperature she wants when the program 
+runs? We said before that a program has three components: input, processing, and output. 
+Our first program had only output. The temperature-conversion program had some 
+processing (converting the temperature) and some output, but no input. It’s time to add 
+the third ingredient to our programs: input . Input means getting something, some kind of 
+information, into a program while it is running. 
+
+【PG】That way we can write programs 
+that interact with the user, which 
+will make things a lot more 
+interesting.
+
+【PG】Python has a built-in function, 
+called raw_input() , that is used to 
+get input from the user. In the rest 
+of this chapter, you’ll learn how to 
+use raw_input()  in your programs.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

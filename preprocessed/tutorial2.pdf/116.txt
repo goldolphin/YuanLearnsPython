@@ -1,0 +1,33 @@
+【PG】92 Hello World!
+
+【PG】This time, the loop didn’t just skip the rest of iteration 3; it stopped altogether. That’s what 
+break  does. It works the same way in while  loops. 
+
+【PG】I should tell you that some people think using break  and continue  is a bad idea. Personally, 
+I don’t think they’re bad, but I rarely use them. I thought I’d tell you about break  and con-
+tinue  just in case you ever need them. 
+
+【PG】What did you learn?
+In this chapter, you learned about
+■for loops (also called counting loops)
+■The range()  function—a shortcut for counting loops
+■Different step sizes for range()
+■while  loops (also called conditional loops)
+■Skipping to the next iteration with continue
+■Jumping out of a loop with break
+
+【PG】Test your knowledge
+1How many times would the following loop run?
+2How many times would the following loop run? And what would the values of i be for 
+each loop?
+3What list of numbers would range (1, 8)  give you?
+4What list of numbers would range (8)  give you?
+5What list of numbers would range (2, 9, 2)  give you?
+6What list of numbers would range (10, 0, -2)  give you?
+7What keyword do you use to stop the current iteration of a loop and jump ahead to 
+the next iteration?
+8When does a while  loop end?for i in range(1, 6):
+    prin t 'Hi, Warren'
+for i in range(1, 6, 2):
+    prin t 'Hi, Warren'
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,44 @@
+【PG】Chapter 15 Modules
+【PG】
+from time import sleep
+or
+from pygame import display
+You see? 
+You can use from to 
+import certain parts 
+of a module.You can 
+also import certain 
+features from a 
+module like
+【PG】
+It didn’t work! What happened? The error message says that the function c_to_f()  isn’t 
+defined. But we know it’s defined in my_module , and we did import that module.
+The answer is that we have to be more specific in telling Python about functions that are 
+defined in other modules. One way to fix the problem is to change the line
+to
+Now we’re specifically telling Python that the c_to_f()  function is in the my_module  mod -
+ule. Try the program with this change and see if it works.
+【PG】
+Namespaces
+What Carter mentioned is 
+related to something 
+called namespaces . This is a 
+bit of a complicated topic, 
+but it’s something you 
+need to know about, 
+so now is a good time 
+to talk about it.
+【PG】
+What’s a namespace?
+Imagine that you’re in Mr. Morton’s class at school, and there’s someone named Shawn in 
+your class. Now imagine that, in another class in your school taught by Mrs. Wheeler, there’s 
+another Shawn. If you’re in your own class and you say, “Shawn has a new backpack, ” 
+everyone in your class will know (or at least they’ll assume) that you mean the Shawn in 
+your class. If you meant the other one, you’d say, “Shawn in Mrs. Wheeler’s class, ” or “the 
+other Shawn, ” or something like that.
+In your class, there’s only one Shawn, so when you say “Shawn, ” your classmates know 
+which person you’re talking about. To put this another way, in the space of your class, 
+【PG】fahrenhei t = c_ to_f(celsius)
+fahrenhei t = my_module.c_ to_f(celsius)
+【PG】
+Download from Wow! eBook <www.wowebook.com>

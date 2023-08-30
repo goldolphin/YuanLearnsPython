@@ -1,0 +1,38 @@
+【PG】443  APPENDIX  C Answers to Self-Test Questions
+【PG】8These are the three steps to use a font object: 
+■Create a font object.
+■Render the text, creating a surface.
+■Blit this surface to the display surface.
+
+【PG】Try it out
+1Why does the ball behave strangely when it hits the side of the paddle instead of the 
+top? Because you have a collision, so the code tries to reverse the ball’s y-direction 
+(make it go up instead of down). But because the ball is coming in from the side, it’s 
+still “colliding” with the paddle, even after reversing direction. The next time through 
+the loop (one frame later), it reverses direction again, so it’s going down again, and so 
+on. A simple way to fix this is to always set the ball to go “up” (a negative y-speed) 
+when it collides with the paddle. It’s not perfect, because it means even if the ball hits 
+the side of the paddle, it will bounce up—not too realistic! But it solves the problem of 
+the ball bouncing around in the paddle. If you want a more realistic solution, it will 
+require a bit more code. You would probably need to add something where you check 
+which edge of the paddle the ball has collided with before “bouncing” it.
+
+2An example of some code that adds randomness to the program is posted on the web 
+site as TIO_CH18_2.py .
+
+【PG】Chapter 19: Sound
+Test your knowledge
+1Types of files used for storing sound include Wave ( .wav ), MP3 ( .mp3 ), Ogg Vorbis 
+(.ogg ), and Windows Media Audio ( .wma ).
+2The pygame.mixer  module is used for playing music.
+3You set the volume for Pygame sound objects using the set_volume()  method of each 
+sound object.
+4You set the volume of background music using pygame.mixer.music.set_volume() . 
+5To make music fade out, use the pygame.mixer.music.fadeout()  method. Use the 
+number of milliseconds (thousandths of a second) of fade time as an argument. For 
+example, pygame.mixer.music.fadeout(2000)  will fade out the sound in 2 seconds.
+
+【PG】Try it out
+1The code for a number-guessing program with sound is on the web site, as 
+TIO_CH19_1.py .
+Download from Wow! eBook <www.wowebook.com>

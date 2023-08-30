@@ -1,0 +1,51 @@
+【PG】259 CHAPTER  19 Sound
+We still need a while  loop to keep the Pygame program running. Also, even though we 
+won’t be drawing any graphics right now, Pygame programs are not happy unless they have 
+a window. And on some systems, mixer  takes a little time to initialize. If you try to start 
+playing a sound too quickly, you’ll hear only part of it or none at all. So we will wait a bit for 
+mixer  to get ready. The code should look something like the following listing.
+impor t pygame, sys
+pygame.ini t()                                           
+pygame.mixer.ini t()
+screen = pygame.display.se t_mode([640,480])                    
+pygame. time.delay(1000)                                          
+spla t = pygame.mixer.Sound( "spla t.wav")                          
+spla t.play()
+running = True                 
+while running:                                              
+    for even t in pygame.even t.get():                    
+        if even t.type == pygame.QUIT:                     
+            running = False  
+pygame.qui t()
+
+【PG】Try this and see how it works.
+
+【PG】Now let’s try playing some music using the mixer.music  module. We only need to change a 
+couple of lines in listing 19.1. The new code is shown next.
+impor t pygame, sys
+pygame.ini t()
+pygame.mixer.ini t()
+screen = pygame.display.se t_mode([640,480])
+pygame. time.delay(1000)
+pygame.mixer.music.load( "bg_music.mp3" )  
+pygame.mixer.music.play()        
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()
+
+【PG】Give that a try, and make sure you can hear the music play.
+
+【PG】Listing 19.1 Trying out sounds in Pygame
+Listing 19.2 Playing musicInitializes Pygame 
+and mixerCreates a Pygame window
+Waits a second for mixer 
+to finish initializing
+Creates the sound objectPlays the sound
+The usual Pygame 
+event loop
+These are the two 
+changed lines
+Download from Wow! eBook <www.wowebook.com>

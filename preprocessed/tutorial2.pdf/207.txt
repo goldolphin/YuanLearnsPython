@@ -1,0 +1,33 @@
+【PG】CHAPTER  15 Modules
+The other way the principal could get the correct Shawn is to go to the doorway of your 
+class and say, “Shawn, would you please come with me. ” There would be only one Shawn 
+listening, and she would get the right one. In that case, the namespace would be just one 
+classroom, not the whole school.
+
+【PG】In general terms, programmers refer to smaller namespaces (like your classroom) as local
+namespaces and larger ones (like the whole school) as global  namespaces.
+
+【PG】Importing namespaces
+Let’s assume that there’s nobody named Fred in 
+your school, John Young School. If the principal 
+goes on the public address system and asks for 
+Fred, she won’t get anyone. Now imagine that 
+another school down the road, Stephen Leacock 
+School, is having some repairs done, so one of 
+their classes moves into a portable at your 
+school. 
+
+【PG】In that class, there’s a student named 
+Fred. But that portable isn’t connected to the 
+public address system yet. If the principal calls 
+for Fred, she won’t get anybody. But if she 
+connects the new portable to the public address 
+system and then calls for Fred, she will get the 
+Fred from Stephen Leacock School.
+Shawn, 
+would you please 
+come with me.
+Will Fred 
+please come 
+to the office!
+Download from Wow! eBook <www.wowebook.com>

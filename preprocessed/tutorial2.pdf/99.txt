@@ -1,0 +1,44 @@
+【PG】75 CHAPTER  7 Decisions, Decisions
+
+【PG】This line 
+means the same as this one:
+In both cases, the block executes if the age is 8 or higher, and it doesn’t if the age is lower 
+than 8.
+
+【PG】In chapter 4, you saw math operators  like +, -, *, and /. In this chapter, you saw the 
+comparison operators  <, >, ==, and so on. The and, or, and not keywords are also operators. 
+They’re called logical operators . They’re used to modify comparisons by combining two 
+or more of them ( and, or) or reversing them ( not).
+
+【PG】Table 7.1 lists all the operators we’ve talked about so far.
+
+【PG】Table 7.1 List of math and comparison operators
+Operator Name What it does
+Math operators
+= Assignment Assigns a value to a name (variable).
++ Addition Adds two numbers together. This can also be used to concatenate strings.
+- Subtraction Subtracts two numbers.
++= Increment Adds one to a number.
+-= Decrement Subtracts one from a number.
+* Multiplication Multiplies two numbers together.
+/ Division Divides two numbers. If both numbers are integers, the result will be just 
+the integer quotient, with no remainder.
+% Modulus Gets the remainder (or modulus ) for integer division of two numbers.
+** Exponentiation Raises a number to a power. Both the number and the power can be 
+integers or floats.
+Comparison operators
+== Equality Checks whether two things are equal.
+< Less than Checks whether the first number is less than the second number.
+> Greater than Checks whether the first number is greater than the second number.
+<= Less than or equal 
+toChecks whether the first number is less than or equal to the 
+second number.
+>= Greater than or 
+equal toChecks whether the first number is greater than or equal to the 
+second number.
+!=
+<>Not equal to Checks whether two things are not equal. (Either operator can be used.)
+
+【PG】if not (age < 8):
+if age >= 8:
+Download from Wow! eBook <www.wowebook.com>

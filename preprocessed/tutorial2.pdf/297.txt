@@ -1,0 +1,18 @@
+【PG】273 CHAPTER  20 More GUIs
+When using Qt, you create the UI using something called Qt Designer. Let’s see how that works.
+
+【PG】Qt Designer 
+When you installed PyQt, one of the 
+things that was installed was a pro -
+gram called Qt Designer. Find the icon 
+for it (for example, in the Start menu in 
+Windows), and launch Qt Designer. 
+When you do, you should see the Qt 
+window open, and in the middle, you’ll 
+see the New Form  dialog:
+
+【PG】Form  is the programming term for a GUI window. Because you’re going to make a new GUI 
+window, pick the Main Window  option and then click the Create  button. Now let’s look at 
+the rest of the Qt window.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

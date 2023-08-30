@@ -1,0 +1,33 @@
+【PG】 196 Hello World!
+
+【PG】 Let’s try drawing the circle in the middle of the window. Here’s the program.
+impor t pygame, sys
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+pygame.draw.circle(screen, [255,0,0],[320,240], 30, 0) 
+pygame.display.flip()
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()
+
+【PG】 The location [320, 240] is used as the center of the circle. Compare the results of running 
+listing 16.3 to the results you saw when you ran listing 16.4 to see the difference.
+
+【PG】 Size of shapes
+When you use Pygame’s draw  functions to draw shapes, you have to specify what size to 
+make the shape. For a circle, there is only one size: the radius. For something like a 
+rectangle, you’d have to specify the length and width. 
+
+【PG】 Pygame has a special kind of object called a rect  (short for rectangle ) that is used for 
+defining rectangular areas. You define a rect  using the coordinates of its top-left corner 
+and its width and height: Listing 16.4 Putting the circle in the middle of the window
+Rect(lef t, top, wid th, heigh t)
+Change this from 
+[100, 100] to 
+[320, 240]
+
+【PG】 Download from Wow! eBook <www.wowebook.com>

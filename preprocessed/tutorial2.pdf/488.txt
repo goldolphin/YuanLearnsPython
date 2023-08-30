@@ -1,0 +1,59 @@
+【PG】464 Hello World!
+type conversion 40
+type() 44
+types of data 40
+typing speed test 371
+U
+underscore character, _ 21
+Unity 411
+unpickling using load() 329
+up arrow, K_UP 238
+upper() 311
+uppercase 311
+user event 241
+user-defined events 242
+
+【PG】V
+validate 354
+value (dictionary) 137
+values() 139
+van Rossum, Guido 19, 410
+variable 19, 21, 24–25, 133
+count 113
+counter 343
+global 154, 156
+immutable 133
+in the scope 153
+local 153
+mutable 133
+naming 157
+out of scope 154
+scope 153variable loops 106
+variable name rules 21, 26, 413
+variable name, loop 84
+variable nested loop 107
+variables 118
+
+【PG】inserting into strings 298
+velocity 362
+Virtual Pet 374
+VirtualPet.py 379
+volume control 260
+W
+wave files 257
+web browser 56
+while 90
+while loop 89, 104
+whitespace 307, 311
+whole number 41
+widgets (PyQt) 274, 281
+Windows Media Audio (WMA) files 257
+working directory 317–318
+write 314
+writing to a file 319, 324, 328
+using print 327
+X
+x-axis 195
+Y
+y-axis 195
+Download from Wow! eBook <www.wowebook.com>

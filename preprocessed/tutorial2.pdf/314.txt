@@ -1,0 +1,38 @@
+【PG】290 Hello World!
+        def menuExi t_selec ted(self):      
+        self.close()               
+
+【PG】app = Q tGui.QApplica tion(sys.argv)
+myWindow = MyWindowClass( None)
+myWindow.show()
+app.exec_() 
+
+【PG】Hotkeys
+We said before that one reason some people prefer using menus to using buttons is that 
+they can use menus with the keyboard, without having to use the mouse. Right now, our 
+menus work with the mouse, but we haven’t made them work with the keyboard yet. The 
+way we do that is by adding hotkeys.
+
+Hotkeys  (also called shortcut keys ) let you select menu items by using only the keyboard. In 
+Windows and Linux, you activate the menu system by using the Alt key. (We’ll talk about 
+Mac OS in a minute.) When you press the Alt key, 
+you’ll see a certain letter of each menu item 
+highlighted, usually with an underline. The 
+underlined letter is the one you use to activate 
+that menu. So, for instance, to get into the File 
+menu, you press Alt-F . That is, you hold down Alt 
+and then press the F key. Once you have done 
+that, you can see the items in the File menu, and 
+you can see what the hotkeys are for each menu 
+item. Try this with the IDLE shell window:
+To open a new window, you use Alt-F-N . (Hold 
+Down Alt, press F, and then press N.)
+
+【PG】Now, we’re going to define hotkeys in the menu for the temperature-conversion GUI. To 
+define a hotkey, all you have to do is put the & character in front of the letter that you want 
+to be the hotkey. You do this in the Title  property for a menu (like File) or in the Text
+property for a menu item (like Exit ). For the File menu, the convention is to make F the 
+hotkey; and for Exit , make X the hot key. So File becomes &File , and Exit  becomes E&xit .
+
+【PG】The new Exit menu item event handler
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,45 @@
+【PG】146 Hello World!
+
+【PG】Well, I could do 
+the same thing with 
+a loop instead of 
+using a function!
+
+【PG】And the output would be
+You might say that you could do the same thing with a loop instead of a function.
+
+【PG】I knew that was coming…. In this case, you could
+do the same thing with a loop. But if you wanted 
+to print the address at different places in a pro -
+gram instead of all at once, a loop wouldn’t work.
+
+【PG】Another reason to use a function is that you can make it behave 
+differently each time it runs. You’re going to see how to do that in 
+   the next section.
+
+【PG】Warren Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+
+【PG】Warren Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+
+【PG】Warren Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+
+【PG】Warren Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+
+【PG】Warren Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+
+【PG】Download from Wow! eBook <www.wowebook.com>

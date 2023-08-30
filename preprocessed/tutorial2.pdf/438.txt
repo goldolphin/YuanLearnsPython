@@ -1,0 +1,18 @@
+【PG】414 Hello World!
+
+【PG】I recommend that you not use the underscore character at the beginning or end of a variable name unless you know exactly why you’re using it. In some situations, using the underscore character at the beginning or end of an identifier has a special meaning. So avoid this:
+■_first_number = 15
+■student_name_ = "John"
+
+【PG】Here are some examples of valid variable names:
+■my_answer
+■answer23
+■answer_23
+■YourAnswer
+■Your2ndAnswer
+
+【PG】Here are some examples of invalid variable names:
+■23answer  (Variable names can’t start with a number.)
+■your-answer  (The hyphen character isn’t allowed.)
+■my answer  (Spaces aren’t allowed.)
+Download from Wow! eBook <www.wowebook.com>

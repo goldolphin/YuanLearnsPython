@@ -1,0 +1,50 @@
+【PG】224 Hello World!
+
+【PG】Pygame also has a way of grouping sprites together. For example, in a bowling game, all the pins might be in one group, and the ball would be in a group of its own. 
+
+【PG】Groups and collision detection go hand in hand. In the bowling example, you’d want to detect when the ball hits any of the pins, so you’d look for collisions between the ball sprite and any sprites in the pins group. You can also detect collisions within a group (like the pins hitting each other).
+
+【PG】Let’s work through an example. We’ll start with our bouncing beach balls, but to make it easier to see what’s going on, we’ll start with just four balls instead of nine. And instead of making a list of the balls like we did in the last example, we’ll use Pygame’s group  class.
+
+【PG】We’ll also clean up the code a bit by putting the part that animates the balls (the last few lines in listing 17.2) into a function, which we’ll call animate() . The animate()  function will also have the code for collision detection. When two balls collide, we’ll make them reverse direction.
+
+【PG】The next listing shows the code.
+
+【PG】impor t sys, pygame
+from random impor t *
+class MyBallClass(pygame.spri te.Spri te):                              
+    def __ini t__(self, image_file, loca tion, speed):                   
+        pygame.spri te.Spri te.__ini t__(self)                            
+        self.image = pygame.image.load(image_file)                       
+        self.rec t = self.image.ge t_rec t()                              
+        self.rec t.lef t, self.rec t.top = loca tion
+        self.speed = speed                                              
+                                                                        
+    def move(self):                                                    
+        self.rec t = self.rec t.move(self.speed)                          
+        if self.rec t.lef t < 0 or self.rec t.righ t > wid th:               
+            self.speed[0] = -self.speed[0]                              
+        if self.rec t.top < 0 or self.rec t.bottom > heigh t:              
+            self.speed[1] = -self.speed[1]                         
+def anima te(group):                                                 
+    screen.fill([255,255,255])                                     
+    for ball in group:                                              
+        group.remove(ball)       
+        if pygame.spri te.spri tecollide(ball, group, False):
+            ball.speed[0] = -ball.speed[0]
+            ball.speed[1] = -ball.speed[1]                          
+                                            
+        group.add(ball) 
+        ball.move()                                              
+        screen.bli t(ball.image, ball.rec t)                      
+    pygame.display.flip()                                       
+    pygame. time.delay(20)                                        
+
+【PG】Listing 17.3 Collision detection, using a sprite group instead of a list
+
+【PG】The ball class definition
+【PG】Removes sprite from the group
+【PG】The new animate() function
+【PG】Checks for collisions between the sprite and the group
+【PG】Adds ball back into the group
+【PG】Download from Wow! eBook <www.wowebook.com>

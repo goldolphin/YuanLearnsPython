@@ -1,0 +1,24 @@
+【PG】362 Hello World!
+
+【PG】Passenger of a student pilot?) So they use simulators, which give them all the same controls as the real plane or spacecraft to practice on.
+
+【PG】In a simulation, you can do many things: 
+
+■Try an experiment or practice a skill without having any equipment (except your computer) and without putting anyone in danger 
+
+■Speed up or slow down time 
+
+■Do many experiments at once 
+
+■Try things that would be costly, dangerous, or impossible in the real world 
+
+【PG】The first simulation we’re going to do is one involving gravity. We’re going to try to land a spacecraft on the Moon, but we only have a certain amount of fuel, so we have to be careful how we use our thrusters. This is a very simple version of an arcade game called Lunar Lander that was popular many years ago.
+
+【PG】Lunar Lander 
+
+We’ll start with our spacecraft some distance above the Moon’s surface. The Moon’s gravity will start to pull it down, and we’ll have to use the thrusters to slow its descent and make a soft landing. 
+At right you can see what the program will look like. The small grey bar on the left side is the throttle. You drag it up or down with the mouse to control the thrust of the engines. The fuel gauge tells you how much fuel you have left, and the text gives you information on your velocity, acceleration, height, and thrust.
+
+【PG】Simulating the landing
+
+In order to simulate a spacecraft landing, you have to understand how the force of gravity and the force of the spacecraft’s engine balance against each other. For our simulation, we’ll assume the force of gravity is constant. That’s not quite true, but as long as the spacecraft isn’t too far from the Moon, gravity is very nearly constant—close enough for our simulation.

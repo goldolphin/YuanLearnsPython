@@ -1,0 +1,18 @@
+【PG】232 Hello World!
+
+【PG】■Collision detection
+■pygame.clock  and frame rate
+
+【PG】Test your knowledge
+1What is rect collision detection?
+2What is pixel-perfect collision detection, and how is it different from rect collision 
+detection?
+3What are two ways to keep track of a number of sprite objects together?
+4What are two ways to control the speed of animation in your code?
+5Why is using pygame.clock  more accurate than using pygame.time.delay() ?
+6How can you tell what frame rate your program is running at?
+
+【PG】Try it out
+If you typed in all the code examples in this chapter, you’ve tried enough out. If you didn’t, 
+go back and do that. I promise you’ll learn something from it!
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,21 @@
+【PG】410 Hello World!
+
+【PG】Another language that looks similar to Squeak is Scratch. Scratch also lets you make programs with drag-and-drop, similar to Squeak. Scratch programs can also be shared on the web. Scratch is available at scratch.mit.edu .
+
+【PG】Python
+There are many places to learn more about Python. The online Python documentation is very complete, but it can be a bit hard to read. It includes a Language Reference, a Library Reference, a Global Module Index, and a Tutorial by Guido van Rossum, who created Python. You can find it here: docs.python.org .
+
+Many books have been written about more advanced Python. In fact, there are so many that I can’t recommend just one or two. It depends on your tastes, your learning style, and the particular things you want to do with Python. But I’m sure that if you want to go further with Python, you’ll be able to find the right books for you.
+
+Mailing lists are also useful. You can post a message, and other users will do their best to answer it. Most of the lists have archive pages where you can read or search older messages to see if someone has already asked your question.
+
+【PG】Game programming and Pygame
+If making games is what you want to do, many books are available on the subject—too many to list here. You’ll probably want to learn about something called OpenGL, which is short for Open Graphics Language. This is a graphics system that many games use. OpenGL is available in Python by using a module called PyOpenGL, and there are several books about it. 
+
+If Pygame caught your interest, there are a few places you can look to find out more. The Pygame site, pygame.org , has many examples and tutorials. 
+
+If you really want to do game programming with Pygame, you can check out a couple of very good resources. One is the Pygame mailing list. I have found it very helpful. You can find out about it at pygame.org/wiki/info . The mailing-list address is pygame-users@seul.org .
+
+If you want to have accurate physics in your game, you can use a library called PyMunk. PyMunk is based around something called Chipmunk Physics. Chipmunk lets you create circles, lines, and shapes in a 2D world. Then it simulates basic physics forces like gravity and friction acting on those shapes. PyMunk is available from pymunk.org . 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

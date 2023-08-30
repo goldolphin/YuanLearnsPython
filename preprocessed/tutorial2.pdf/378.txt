@@ -1,0 +1,30 @@
+【PG】354 Hello World!
+
+【PG】If you wanted to use the long names for the cards instead of the short names, the output would look something like this: In our examples, we’ll use the short names.
+
+【PG】Getting the player’s choice
+
+Now we need to ask the player what he wants to do and process his response. He has two main choices:
+
+■Play a card
+■Draw a card
+
+If he decides to play a card, we need to make sure the play is valid. We said before that we need to check three things:
+
+■Is his choice a valid card? (Did he try to play the 4 of Marshmallows?)
+■Is the card in his hand?
+■Is the chosen card a legal play? (Does it match the rank or suit of the up card, or is it an 8?)
+
+But if you think about it, his hand can only have valid cards in it. So if we check that the card is in his hand, we don’t have to worry about checking whether it is valid. He can’t have the 4 of Marshmallows in his hand, because it never existed in the deck.
+
+So let’s look at some code that will get the player’s choice and validate it. It’s shown in listing 23.8.
+
+【PG】prin t "Wha t would you like to do? ", response = raw_inpu t ("Type a card to play or 'Draw' to take a card: " )valid_play = Falsewhile not valid_play:     selec ted_card = None    while selec ted_card == None:        if response.lower() == 'draw':             valid_play = True             if len(deck) > 0:   Your hand:  4 of Spades, Queen of Spades, 3 of ClubsUp Card:  8 of Clubs    Sui t:  SpadesListing 23.8 Getting the player’s choice
+
+【PG】Validate  means to make sure something is valid, which means it is allowed or makes sense.
+
+【PG】Keeps trying until player enters something valid
+
+【PG】Gets a card the player  has in hand, or draws
+
+【PG】Download from Wow! eBook <www.wowebook.com>

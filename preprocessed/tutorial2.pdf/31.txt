@@ -1,0 +1,39 @@
+【PG】7 CHAPTER  1 Getting Started
+Hey, those 
+numbers don't fit 
+on my calculator!
+That’s right. With the computer, you can
+do math on really, really big numbers. 
+Here’s something else you can do:
+        
+Or try this:
+
+【PG】Besides math, another thing computers are good at is doing things over and over again. 
+Here we told Python to print “Hello” 20 times. 
+We’ll do more in interactive mode later, but right now it’s …
+Time to program
+
+【PG】The examples we’ve looked at so far are single Python instructions (in interactive mode). 
+Although that’s great for checking out some of the things Python can do, those examples 
+aren’t really programs. As I mentioned before, a program is a number of instructions 
+collected together. So let’s make our first Python program.
+First, you need a way to type in the program. If 
+you just type it in the interactive window, 
+Python won’t “remember” it. You need to use a 
+text editor (like Notepad for Windows, or 
+TextEdit for Mac OS X, or vi for Linux) that can 
+save the program to the hard drive. IDLE comes 
+with a text editor that is much better for what 
+you need than Notepad. To find it, select 
+File > New Window  from IDLE’s menus.
+
+【PG】>>> prin t "cat" + "dog"
+catdog
+>>>
+>>> prin t "Hello " * 20
+Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
+
+【PG】When I am talking about menu selections, likeFile > New, the ﬁrst part (Filein this case) is the main menu. The> tells you that the next thing (Newin this case) is an item in the File menu. I will use that notation throughoutthe book.
+
+Download from Wow! eBook <www.wowebook.com>

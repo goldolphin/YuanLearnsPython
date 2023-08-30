@@ -1,0 +1,20 @@
+【PG】38 Hello World!
+
+【PG】Exponents vs. E-notation
+Don’t get confused between raising a number to a power (also called exponentiation ) and E-notation:
+■3**5 means 35, or “three to the fifth power” or 3 * 3 * 3 * 3 * 3, which is equal to 243.
+■3e5 means 3 * 105 or “three times ten to the fifth power, ” or 3 * 10 * 10 * 10 * 10 *10, which is equal to 300,000.
+■Raising to a power means you are raising the number itself to that power. E-notation means you are multiplying by a power of 10. 
+Some people would read both 3e5 and 3**5 as “three exponent five, ” but they are two different things. It doesn’t matter so much how you say it, as long as you understand what each one means.
+
+【PG】What did you learn?
+In this chapter, you learned
+■How to do basic math operations in Python
+■About integers and floats
+■About exponentiation (raising numbers to a power)
+■How to calculate the modulus (the remainder)
+■All about E-notationIf you don’t quite understand how E-notation works, don’t worry. It’s not used for the programs in the rest of this book. I just wanted to show you how it works in case you ever need it.
+
+【PG】At least now, if you use Python to do some math and you get a number like 5.673745e16 for an answer, you will know that it is a really big number, and not some kind of error.Yeah, Mon! 
+No worries, eh? This programming thing is a breeze!
+Download from Wow! eBook <www.wowebook.com>

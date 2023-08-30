@@ -1,0 +1,59 @@
+【PG】355 CHAPTER  23 Take a Chance—Randomness
+                card = random.choice(deck)                         
+                p_hand.append(card)                                 
+                deck.remove(card)                                 
+                prin t "You drew" , card.shor t_name                 
+            else:                                                   
+                prin t "There are no cards lef t in the deck"       
+                blocked += 1                                       
+            return                                                
+【PG】        else:
+                for card in p_hand:
+                    if response.upper() == card.shor t_name:
+                        selec ted_card = card
+                if selec ted_card == None:
+                    response = raw_inpu t("You don' t have that card. Try again:" )
+        if selec ted_card.rank == '8': 
+            valid_play = True
+            is_eigh t = True
+        elif selec ted_card.sui t  == ac tive_sui t: 
+            valid_play = True
+        elif selec ted_card.rank  == up_card.rank:  
+            valid_play = True
+                                
+        if not valid_play:
+            response = raw_inpu t("Tha t's no t a legal play.  Try again: " )
+【PG】 At this point, we have a choice that’s valid: either drawing or playing a valid card. If the 
+player draws, we add a card to his hand, as long as there are cards left in the deck.
+If playing a card, we need to remove the card from the hand and make it the up card: 
+If the card played was an 8, the player needs to tell us what suit he wants next. Because the 
+player_turn()  function is getting a bit long, we’ll make getting the new suit into a separate 
+function called get_new_suit() . The next listing shows the code for this function.
+【PG】def get_new_sui t():
+        global active_sui t
+        go t_sui t = False
+        while not got_sui t:  
+            sui t = raw_inpu t("Pick a sui t: ")
+            if suit.lower() == 'd':
+                ac tive_sui t = "Diamonds"
+    p_hand.remove(selec ted_card)
+    up_card  = selec ted_card
+    active_sui t = up_card.sui t
+    prin t "You played" , selec ted_card.shor t_name
+【PG】Listing 23.9 Getting the new suit when the player plays an 8Got “draw”, 
+so returns 
+to main loopIf “draw”, takes card 
+from deck and adds 
+it to player’s handb
+Checks if the selected card is
+in player’s hand—keeps 
+trying until it is (or he draws)
+Playing an 8 is 
+always legal
+Checks if selected card 
+matches up-card suit
+Checks if selected card 
+matches up-card rank
+Keeps trying until player 
+enters a valid suit
+Download from Wow! eBook <www.wowebook.com>

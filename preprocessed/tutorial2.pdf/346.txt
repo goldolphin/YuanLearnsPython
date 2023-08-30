@@ -1,0 +1,31 @@
+【PG】322 Hello World!
+The output of that program would look like this:
+【PG】The readline()  method only reads one line at a time, so it doesn’t put the results into a list. 
+Each time you use readline() , you get a single string.
+【PG】Going back to the start
+If you have used readline()  a few times and you want to start back at the beginning of the 
+file, you can use the seek()  method, like this: 
+The seek()  method makes Python go to whatever place in the file you tell it. The number in 
+brackets is the number of bytes from the start of the file. So setting it to 0 takes it right back 
+to the start of the file.
+【PG】Text files and binary files
+All the examples of opening files and reading lines of text so far are assuming one thing: the 
+file actually has text in it! Remember that text is just one of the kinds of things you can store in 
+a file. Programmers lump together all other kinds of files and call them binary files .
+There are two main types of files you can open:
+■Text files —These have text in them, with letters, numbers, punctuation, and some 
+special characters, like newlines.
+■Binary files —These don’t have text in them. They might have music, pictures, or some 
+kind of data, but because they don’t have text, they don’t have lines either, because 
+there are no newlines . 
+That means you can’t use readline()  or readlines()  on a binary file. If you try to read a 
+“line” from a .wav file, for example, you don’t know what you’ll get. Most likely, you’ll get a 
+whole bunch of gobbledygook that looks like this:>>>================== RESTART ====================
+>>> 
+firs t line =  Wash the car
+second line =  Make my bed
+firs t_line = my_file.readline()
+second_line = my_file.readline()
+my_file.seek(0)
+firs t_line_again = my_file.readline()
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,26 @@
+【PG】18 Hello World!
+(Well, maybe Carter would, because he likes to kid around …)
+
+【PG】You would write 
+something like this:
+If you wrote “Your Address” , you would be taking the statement literally. Python doesn’t 
+take things literally unless you use quote marks. Here’s another example:
+With quote marks, Python printed exactly what you told it: 53 + 28. 
+Without quote marks, Python treated the 53 + 28 as an arithmetic expression , and it evaluated
+that expression. In this case, it was an expression for adding two numbers together, so 
+Python gave you the sum. 
+
+【PG】Python takes care of figuring out how much memory it needs to store the letters and what 
+part of the memory it will use. To retrieve your information (get it back), you just need to 
+use the same name again. You used the name  along with the print  keyword, which displays 
+things (like numbers or text) on the screen.
+
+【PG】>>> prin t "53 + 28"
+53 + 28
+>>> prin t 53 + 28
+81
+
+【PG】An arithmetic expression  is a combination of numbers 
+and symbols that Python can figure out the value of.
+Evaluate  just means “figure out the value of.”
+Download from Wow! eBook <www.wowebook.com>

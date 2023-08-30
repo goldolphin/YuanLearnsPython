@@ -1,0 +1,29 @@
+【PG】296 Hello World!
+【PG】Special printing codes
+【PG】There’s another way to add newlines. Python has some special codes you can add to strings to make them print differently. These special printing codes all start with a backlash ( \) character. The code for a newline is \n. Try this in interactive mode:
+【PG】The \n made the two words Hello  and World  print on different lines, because it added a newline in between.
+
+【PG】Horizontal spacing—tabs
+【PG】You just saw how to control vertical spacing (by adding newlines or using commas to prevent newlines). Now we’ll look at how to control the spacing of things across the screen, horizontally, with tabs . 
+【PG】Tabs are useful for lining things up in columns. To understand how tabs work, think of each line on the screen as being divided into blocks, with each block being the same size. Let’s say each block is eight characters wide. When you insert a tab, you move over to the start of the next block. 
+【PG】The best way to see how this works is to try it. The special code for tab is \t, so try this in interactive mode:
+【PG】Notice that the XYZ is a few characters away from the ABC. In fact, the XYZ is exactly eight characters from the start of the line. That’s because the size of the block is eight. Another way to say this is that there’s a tab stop  every eight characters.
+【PG】Here’s an example of some different print statements, with some shading added to show where the tab stops are:
+>>> prin t "Hello World"
+Hello World
+>>> prin t "Hello \nWorld"
+Hello
+World
+>>> prin t 'ABC\ tXYZ'
+ABC     XYZ
+ABCXYZ
+ABCDEXYZ
+ABCDEFXYZ
+>>> print 'AB C\tXYZ'
+>>> print 'AB CDE\tXYZ'
+>>> print 'AB CDEF\tXYZ'
+ABCDEFGXYZ
+ABCDEFGHI XYZ
+>>> print 'AB CDEFG\tXYZ'
+>>> print 'AB CDEFGHI\tXYZ'
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,44 @@
+【PG】Hello World!
+Syntax errors
+IDLE does some checking of your program before it even tries to run it. If IDLE finds an error, 
+it’s usually a syntax error . Syntax is the spelling and grammar rules for a programming lan -
+guage, so a syntax error  means you’ve typed something that isn’t proper Python code.
+
+Here is an example:
+We missed a quotation mark between print  and Bye for now!"
+If you tried to run this program, IDLE would pop up a message saying “There’s an error in 
+your program: invalid syntax. ” Then you would have to look at your code to see what’s 
+wrong. IDLE’s editor will highlight (in red) the place where it found the error. It might not be 
+exactly where the problem is, but it should be close.
+
+【PG】Runtime errors
+The second kind of error that can happen is one that Python (or IDLE) can’t detect before it 
+runs the program. This kind of error only happens when the program runs, so it’s called a 
+runtime error . Here’s an example of a runtime error in a program:
+
+If you save this and try to run it, the program actually starts to run. The first two lines are 
+printed, but then you get an error message:prin t "Hello, and welcome to Py thon!"
+prin t "I hope you will enjoy learning to program."
+prin t Bye for now!"   
+prin t "Hello, and welcome to Py thon!"
+prin t "I hope you will enjoy learning to program."
+prin t "Bye for now!" + 5
+>>> ============================ RESTART ============================
+>>> 
+Hello, and welcome to Py thon!
+I hope you will enjoy learning to program.
+                                     
+Traceback (mos t recen t call las t):           
+  File "C:/HelloWorld/examples/error1.py", line 3, in <module>  
+    prin t "Bye for now!" + 5                        
+TypeError: canno t conca tenate 's tr' and 'in t' objec ts  
+>>>
+
+【PG】Missing quotation mark
+Start of the 
+error message Where the 
+error was
+The “bad” line of code
+What Python 
+thinks is wrong
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,48 @@
+【PG】 285 CHAPTER  20 More GUIs
+
+【PG】 Then, in the event handler, we need to get the Fahrenheit temperature from the spin box:
+This value is already an integer, so we don’t have to do any type conversion. Then we apply 
+the formula:
+Finally, we convert this to a string and put it in the Celsius  box:
+
+【PG】 The whole thing should look like the following listing.
+impor t sys
+from PyQt4 impor t QtCore, Q tGui, uic
+form_class = uic.loadUiType( "tempconv.ui" )[0] 
+class MyWindowClass(Q tGui.QMainWindow, form_class):
+    def __ini t__(self, paren t=None):
+        Q tGui.QMainWindow.__ini t__(self, paren t)
+        self.se tupUi(self)
+        self.b tn_CtoF.clicked.connec t(self.b tn_CtoF_clicked) 
+        self.b tn_FtoC.clicked.connec t(self.b tn_FtoC_clicked) 
+        
+    def btn_CtoF_clicked(self):                            
+        cel = floa t(self.edi tCel. text())                     
+        fahr = cel * 9 / 5.0 + 32                           
+        self.spinFahr.se tValue(int(fahr + 0.5))  
+          
+    def btn_FtoC_clicked(self):                          
+        fahr = self.spinFahr.value()                     
+        cel = (fahr - 32) * 5 / 9.0                   
+        self.edi tCel.se tText(str(cel))      
+app = Q tGui.QApplica tion(sys.argv)
+myWindow = MyWindowClass( None)
+myWindow.show()
+app.exec_() 
+
+【PG】 One thing you’ll notice when you run the program is that, when you convert a Fahrenheit 
+temperature to Celsius, the answer has a lot of decimal places, and some of them might get 
+cut off in the text box. There’s a way to fix this—it’s called print formatting . We haven’t 
+
+【PG】 fahr = self.spinFahr.value()
+cel = (fahr - 32) * 5.0 / 9
+self.edi tCel.se tText(str(cel))
+Listing 20.3 Temperature-conversion program
+Loads the UI definition
+Binds the event handlers 
+of the buttons
+Event handler for
+the CtoF button
+Event handler for 
+the FtoC button
+Download from Wow! eBook <www.wowebook.com>

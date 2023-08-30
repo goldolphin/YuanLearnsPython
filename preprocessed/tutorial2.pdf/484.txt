@@ -1,0 +1,111 @@
+【PG】460 Hello World!
+looping (continued)
+counting by steps 79
+counting loops 79
+endless 80
+for loops 79
+infinite 80
+iteration 105
+list of strings 89
+naming convention 84
+nested 104
+runaway 80
+skipping ahead 91
+through a list 128
+while loops 89
+
+【PG】lower() 311
+lowercase 311
+Lua 411
+Lunar Lander 364
+M
+Mac OS X, .app 314
+magic methods 166
+math 28
+memory 16, 338
+memory management 153, 155
+menu (PyQt) 287
+methods 161
+code stubs 175
+inheritance 174
+magic 166
+passing arguments 161
+polymorphism 173
+returning values 161
+special 166
+microsecond 370
+millisecond 371
+module 56, 179, 272, 347
+import 180
+modules 143, 178
+creating 179
+importing 180, 184
+namespace 181
+Python Standard Library 185
+using 180
+modulus, % 34, 300
+
+【PG】mouse dragging (Pygame) 240
+mouse events (Pygame) 240
+.mp3 314
+MP3 files 257
+msgbox() (EasyGui) 57
+multiline comments 96
+multiplication 6
+music 258
+background 261
+fadeout() 267
+get_busy() 261PyPong 267
+repeat forever 262
+repeating 262
+set_volume() 260
+music and sound with volume adjustment 260
+mutable 133
+N
+name 16–17
+namespaces 181, 250
+global 183
+local 183
+naming convention for loop variables 84
+naming variables 157
+nested loops 104, 112, 345
+nested-nested loop 108
+newline character, \n 294, 296, 320, 322
+not 74
+not-equal-to sign, != 69
+number formatting 299
+number sign, # 95, 98
+numbers 22
+
+【PG】object oriented 159
+object syntax 119
+objects 143, 159
+attributes 160
+change attributes 172
+class 162, 167
+collect functions and data together 159
+creating 162
+creating an instance of 163
+derived class 174
+dot notation 162
+inheritance 173–174
+__init__ () 165
+initializing 164
+instance 162
+instance reference 167
+methods 160–161
+polymorphism 173
+self 167
+__str__() 166
+subclass 174
+variables 161
+Ogg Vorbis files 257
+open source xiv
+open() 319
+OpenGL 410
+opening and reading from a file 320
+operating system, os 373
+operators 31, 69
+chaining 69
+equal 66
+greater than 69

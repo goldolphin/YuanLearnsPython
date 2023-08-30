@@ -1,0 +1,36 @@
+【PG】306 Hello World!
+
+【PG】Suppose you want to put these names in a list, with each item being one name. You need to 
+split this string wherever there’s a comma. The Python method for doing this is called 
+split() , and it works like this:
+You tell it what character to use as the split marker, and it gives you back a list, which is the 
+original string broken into parts.
+
+【PG】If we printed the output from this example, the one big string of names would be split into individual items in a list:
+You can have more than one character as the split marker. For instance, you could use 
+'Toby,'  as the split marker, and you’d get the following list:>>> names = name_s tring.spli t(',')
+>>> prin t names
+['Sam','Brad','Alex','Cameron','Toby','Gwen','Jenn','Connor']
+>>> for name in names:
+        prin t name
+    
+Sam
+Brad
+Alex
+Cameron
+Toby
+Gwen
+Jenn
+Connor
+>>> par ts = name_s tring.spli t('Toby,')
+>>> prin t parts
+['Sam,Brad,Alex,Cameron', 'Gwen,Jenn,Connor']
+>>> for part in par ts:
+      prin t part
+Sam,Brad,Alex,Cameron
+Gwen,Jenn,Connor
+
+【PG】Please not me...
+don’t split me!
+
+【PG】Download from Wow! eBook <www.wowebook.com>

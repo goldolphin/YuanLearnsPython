@@ -1,0 +1,32 @@
+【PG】Chapter 8 Loop the Loop
+or game controller, process that input, and 
+update the screen. When we start writing these 
+kinds of programs, we’ll be using lots of loops. 
+There’s a good chance one of our programs 
+will get stuck in a loop at some point, so we 
+need to know how to get it unstuck!
+
+【PG】What are the square brackets for?
+You might have noticed that the list of loop values is enclosed in square brackets. The 
+square brackets and the commas between the numbers are the way you make a list in 
+Python. You’ll learn more about lists soon (in chapter 12, to be exact). But for now, just 
+know that a list is a kind of “container” for storing a bunch of things together. In this case, 
+the things are numbers—the values that looper  takes as it goes through different iterations 
+of the loop. 
+
+【PG】Using a counting loop
+Now let’s do something a bit more useful with loops. Let’s print a multiplication table. It 
+only takes a small change to our program. Here’s the new version.
+for looper in [1, 2, 3, 4, 5]:
+    prin t looper, "times 8 =" , looper * 8
+Save it as Loop3.py , and run it. You should see something like this:Listing 8.3 Printing the 8 times table
+>>> =================== RESTART ===================
+>>> 
+1 times 8 = 8
+2 times 8 = 16
+3 times 8 = 24
+4 times 8 = 32
+5 times 8 = 40
+
+【PG】How do I get out of here?
+Download from Wow! eBook <www.wowebook.com>

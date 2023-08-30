@@ -1,0 +1,30 @@
+【PG】122 Hello World!
+
+【PG】back is always the difference between the two index numbers. (4 – 1 = 3, and we got three 
+items back.)
+
+【PG】Here’s one other thing that is important to remember about slicing a list: What you get back 
+when you slice a list is another (usually smaller) list. This smaller list is called a slice of the 
+original list. The original list isn’t changed. The slice is a partial copy  of the original.
+
+【PG】Look at the difference here:
+In the first case, we got back an item. In the second case, we got back a list containing the 
+item. It’s a subtle difference, but you need to know about it. In the first case, we used a 
+single index to get one item  out of the list. In the second case, we used slice notation  to get 
+a one-item slice  of the list.
+
+【PG】To really see the difference, try this:>>> print letters[1]
+b
+>>> print letters[1:2]
+['b']
+>>> print type(letters[1])
+<type 'str'>
+>>> print type(letters[1:2])
+
+【PG】<type 'list'>
+
+【PG】I love
+le toast with
+la cheese!
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,49 @@
+【PG】50 Hello World!
+It’s like the  raw_input()  func -
+tion has print  built in. We’ll use 
+that shortcut from now on.
+
+【PG】Inputting numbers
+You have seen how to use raw_input()  to get strings. But what if you want to get a number 
+instead? After all, the reason we started talking about input was to let the user enter 
+temperatures for the temperature-conversion program. 
+
+You already know the answer if you read chapter 4. We can use the int()  or float()  func -
+tion to create a number from the string that raw_input()  gives you. It would look like this:
+We get the user’s input as a string, using raw_input() . Then we make a number from that, 
+using float() . Once we have the temperature as a float, we give it the name fahrenheit . 
+But there is a little shortcut. We can do it all in one step, like this:
+This does exactly the same thing. It gets the string from the user and then creates a number 
+from it. It just does it with a bit less code. 
+
+【PG】Now let’s use this in our temperature-conversion program. Try the following program, and 
+see what you get. 
+prin t "This program conver ts Fahrenhei t to Celsius"
+prin t "Type in a tempera ture in Fahrenhei t: ",   
+fahrenhei t = floa t(raw_inpu t())              
+celsius = (fahrenhei t - 32) * 5.0 / 9
+prin t "Tha t is",                  
+prin t celsius,             
+prin t "degrees Celsius"
+
+temp_s tring = raw_inpu t() 
+fahrenhei t = floa t(temp_s tring)
+fahrenhei t = floa t(raw_inpu t())
+
+【PG】Listing 5.3 Converting temperatures using raw_input()
+Use float(raw_input()) 
+to get Fahrenheit 
+temperature from user
+Notice the commas at 
+the ends of these lines
+
+【PG】No need to use print  with this baby!
+Why pay more for print  when
+raw_input()  
+has it built right in?! 
+And it can be yours for only 
+3 easy payments of $99.95!
+That's right!
+raw_input() ,
+There’s NOTHING ELSE TO BUY!
+Download from Wow! eBook <www.wowebook.com>

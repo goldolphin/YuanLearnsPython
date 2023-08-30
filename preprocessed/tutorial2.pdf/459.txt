@@ -1,0 +1,38 @@
+【PG】435  APPENDIX  C Answers to Self-Test Questions
+
+【PG】Here is a program to allow the user to create a dictionary with words and definitions:
+
+【PG】Chapter 13: Functions
+Test your knowledge
+1You use the def keyword to create a function.
+2You call a function by using its name with parentheses.
+3You pass arguments to a function by putting the arguments in the parentheses when you call the function.
+4There is no limit to the number of arguments a function can have.
+5The function sends information back to the caller using the return  keyword.
+6After a function is finished running, any local variables are destroyed.
+
+【PG】Try it out
+1The function is just a bunch of print  statements:user_dic tionary = {}
+while 1:
+    command = raw_inpu t("'a' to add word,  'l' to lookup a word,  'q' to qui t ")
+    if command == "a":
+        word = raw_inpu t("Type the word: " )
+        defini tion = raw_inpu t("Type the defini tion: ")
+        user_dic tionary[word] = defini tion
+        prin t "Word added!"
+    elif command == "l":
+        word = raw_inpu t("Type the word: " )
+        if word in user_dic tionary.keys():
+            prin t user_dic tionary[word]
+        else:
+            prin t "Tha t word isn' t in the dic tionary ye t."
+    elif command == 'q':
+        break   
+def prin tMyNameBig():
+    prin t "  CCCC       A       RRRRR  TTTTTTT  EEEEEE  RRRRR  "
+    prin t " C    C     A A      R    R    T     E       R    R "
+    prin t "C          A   A     R    R    T     EEEE    R    R "
+    prin t "C         AAAAAAA    RRRRR     T     E       RRRRR  "
+    prin t " C    C  A       A   R    R    T     E       R    R "
+    prin t "  CCCC  A         A  R     R   T     EEEEEE  R     R"
+Download from Wow! eBook <www.wowebook.com>

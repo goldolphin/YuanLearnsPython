@@ -1,0 +1,13 @@
+【PG】337AAKKCHAPTER 2 3
+
+【PG】Take a Chance—Randomness
+
+One of the most fun things about games is that you never know what will happen. Games are unpredictable. They’re random. It’s this randomness that makes them interesting.
+
+As you have already seen, computers can simulate random behavior. In our number-guessing program (in chapter 1), we used the random module to generate a random integer, which the user had to guess. You also used random to pick words for the silly sentence program in the “Try it out” section in chapter 22.
+
+Computers can also simulate the random behavior of rolling dice or shuffling a deck of cards. This makes it possible to create computer games with cards or dice (or other randomly behaving objects). For example, almost everyone has tried playing Solitaire on Windows, which is a card game where the program randomly shuffles the cards before each game. Computer Backgammon, which uses two dice, is also very popular.
+
+In this chapter, you’ll learn how to use the random module to make computer-generated dice and decks of cards that you can play games with. We’ll also look at how you can use computer-generated random events to explore the idea of probability, which is how likely something is to happen.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

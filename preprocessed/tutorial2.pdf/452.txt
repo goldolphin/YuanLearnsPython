@@ -1,0 +1,36 @@
+【PG】428 Hello World!
+【PG】Chapter 7: Decisions, Decisions
+【PG】Test your knowledge
+1The output would be
+Because my_number  is less than 20, the test in the if statement is true , so the block 
+following the if (in this case, just a single line) is executed.
+
+2The output would be
+Because my_number  is greater than 20, the test in the if statement is false , so the 
+code in the block following the if is not executed. The code from the else  block is 
+executed instead.
+
+3To check if a number is greater than 30, but less than or equal to 40, you would use 
+something like this:
+You could also do this:
+
+4To check for the letter Q in uppercase or lowercase, you could do something like this:
+Notice that the string we printed uses double quotes, but there are single quotes 
+inside it, around the Q. In case you were wondering how to print quote marks, that’s 
+one way to do it: use the other kind of quote marks to enclose your string. 
+
+【PG】Try it out
+1Here is one answer:Under 20
+20 or over
+if number > 30  and  number <= 40:
+    prin t 'The number is be tween 30 and 40'
+if 30 < number <= 40:
+    prin t "The number is be tween 30 and 40"
+if answer == 'Q' or answer == 'q':
+    prin t "you typed a 'Q' "
+# program to calcula te store discoun t
+# 10% off for $10 or less, 20% off for more than $10
+item_price = floa t(raw_inpu t ('enter the price of the i tem: '))
+if item_price <= 10.0:
+    discoun t = i tem_price * 0.10
+Download from Wow! eBook <www.wowebook.com>

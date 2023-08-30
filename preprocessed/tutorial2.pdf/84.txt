@@ -1,0 +1,30 @@
+【PG】
+60 Hello World!
+The same thing happened to me. But that big choice box didn’t fit very well in this book. So 
+I cheated a bit! I modified easygui.py  to let me make the choice box smaller so it would look 
+nice in this book. It’s not something you need to do, but if you really want to, here are the 
+steps. I warn you, it’s a bit complicated!
+1Find the section in the easygui.py  file that starts with def __choicebox  (around line 
+934 in my version of easygui.py ). Remember that most editors show you the code line 
+numbers somewhere near the bottom of the window.
+2About 30 lines down from that (around line 970), you’ll see some lines that look like this:
+Change the 0.8 to 0.4 and the 0.5 to 0.25. Save the changes to easygui.py . The next
+time you run the program, the choice box window will be smaller.
+
+【PG】
+Text input
+The examples in this chapter have let the user pick from a set of choices that you, as the 
+programmer, provided. What if you want something more like raw_input() , where the user 
+can type in text? That way, she can enter any flavor she wants. EasyGui has something 
+called an enter box  (enterbox ) to do just that. Try the program in the following listing.
+impor t easygui
+flavor = easygui.en terbox("Wha t is your favori te ice cream flavor?" )
+easygui.msgbox ( "You en tered " + flavor)
+When you run it, you should see 
+something like this:
+And then, when you type in your favorite flavor and click OK, it’ll be displayed in the 
+message box, just like before.
+This is just like raw_input() . It gets text (a string) from the user.root_wid th = int((screen_wid th * 0.8))
+root_heigh t = int((screen_heigh t * 0.5))
+Listing 6.3 Getting input using an enter box
+Download from Wow! eBook <www.wowebook.com>

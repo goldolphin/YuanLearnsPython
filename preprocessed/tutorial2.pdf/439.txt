@@ -1,0 +1,24 @@
+【PG】415APPENDIX B
+Differences Between 
+Python 2 and 3
+
+【PG】Throughout the book, we have mentioned several differences between Python 2 and 
+Python 3. The book uses Python 2, but we also want you to know how to recognize Python 
+3 code and make your code compatible with Python 3 if you want to. This appendix only 
+talks about the Python 2 to 3 differences in the parts of Python that we have covered in this 
+book. (For example, Python 3 handles Unicode strings differently, but because we didn’t 
+talk about Unicode, we won’t talk about the Python 3 Unicode changes.)
+
+【PG】With that in mind, here are some of the ways Python 3 is different from Python 2.
+
+【PG】print
+In Python 3, print  is a function. That means instead of writing
+you need to write
+There are some other differences related to this. 
+
+【PG】You can’t just put a comma at the end to make output from the next print  appear on the same line, as you did in Python 2:prin t "Hello, World!"
+prin t("Hello, World!" )
+prin t "Hello",
+prin t "World!"
+
+【PG】Download from Wow! eBook <www.wowebook.com>

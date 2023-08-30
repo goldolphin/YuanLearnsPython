@@ -1,0 +1,54 @@
+【PG】212 Hello World!
+
+【PG】To make things easier, we’re going to make some changes to our code:
+■We’re going to have the ball bouncing around forever (or until we close the Pygame 
+window). Because we already have a while  loop that runs as long as the window is 
+open, we’ll move our ball-display code inside that loop. (That’s the while  loop that is 
+in the last part of the program.)
+■Instead of always adding 5 to the ball’s position, we’ll make a new variable, speed , to 
+determine how fast to move the ball on each iteration. We’re also going to speed the 
+ball up a bit by setting this value at 10.
+
+【PG】The new code is in the following listing.
+impor t pygame, sys
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+my_ball = pygame.image.load( 'beach_ball.png' )
+x = 50
+y = 50
+x_speed = 10 
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+    
+    pygame. time.delay(20)
+    pygame.draw.rec t(screen, [255,255,255], [x, y, 90, 90], 0)          
+    x = x + x_speed                                                 
+    if x > screen.ge t_wid th() - 90  or  x < 0:                    
+        x_speed = - x_speed                                         
+    screen.bli t(my_ball, [x, y])                                        
+    pygame.display.flip()                                               
+pygame.qui t()
+
+【PG】The key to bouncing the ball off the sides of the window is lines 19 and 20. In line 19 ( if x 
+> screen.get_width() - 90 or x < 0: ), we detect whether the ball is at the edge of the 
+window, and if it is, we reverse its direction in line 20 ( x_speed = - x_speed ).
+Try this and see how it works.
+
+【PG】Bouncing in 2-D
+So far, we only have the ball moving back and forth, or one-dimensional motion. Now, let’s 
+get it moving up and down at the same time. To do this, we only need a few changes, as 
+shown here.
+
+Listing 16.14 Bouncing a beach ball
+… reverse direction by making 
+speed the opposite signHere’s the 
+speed variable
+ When ball hits either 
+edge of the window …Put the ball-display 
+code here, inside 
+the while loop
+Download from Wow! eBook <www.wowebook.com>

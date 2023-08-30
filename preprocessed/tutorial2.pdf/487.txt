@@ -1,0 +1,14 @@
+【PG】463 INDEX
+【PG】single-line comments 95
+【PG】Skier 99 explained 385 SkiFree 99
+【PG】sleep() 185 slice notation 122, 130 slice, shortcut 123
+【PG】software xii
+【PG】sort() 129 sorted() 139
+【PG】sound 256 .mp3 258 .ogg 258 .wav 258 .wma 258
+【PG】background music 261 generate 257 looping 262 MP3 files 257 music 258 Ogg Vorbis files 257 output 256 playing 257 pygame.mixer 258 volume 260 wave files 257 WMA files 257 sound clips 258 sound effects 258 sound file, .mp3 314 sounds, PyPong 263
+【PG】spacing, horizontal 296 Spin Box widget (PyQt) 282 split marker 306 whitespace 307 split() 306, 373 split marker 306 sprite 217 spritecollide() 225–226 sprite groups 224 sprite properties image 218, 246 rect 218 square brackets 81, 118, 135, 138
+【PG】Squeak 409 standard modules 185 star, * 185, 187 startswith() 308 stopping a program 80 storing information 314 __str__() 166 str() 40
+【PG】string 22–23, 44, 47, 86, 305, 319 changing case 311 changing to a float 43 joining 307 long 23 removing parts of 310 searching for 308 splitting 305 triple-quoted 23, 96 string formatting, in Python 2.6 and later 304 string methods 305 endswith() 309 index() 310 join() 307 lower() 311 searching 308 split() 306 startswith() 308 strip() 310 upper() 311 string variable (print formatting), %s 298 strip() 310 style 84, 97 subtraction 29 superscript 36 Surface.get at() 205 Surface.set at() 204 syntax 10 syntax error 10
+【PG】T
+【PG】tab 113, 296 tab stop 296 table 133 text editor 7 text file 322 text file, .txt 314
+【PG】time current 368 delta 368, 370 real 367 saving to a file 372 time (Python module) 185 sleep() 185 time class 369 time simulation 367 time.delay() 228 timedelta 370–371 timer 241, 377 timers 242 timestamp 368 traceback 10–11 triple-quoted string 23, 96 True 65, 127 truncating 300 try-except 378 except block 378 try block 378 tuple 133, 303 .txt 314 Download from Wow! eBook <www.wowebook.com>

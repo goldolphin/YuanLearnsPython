@@ -1,0 +1,38 @@
+【PG】401 CHAPTER  26 Python Battle
+【PG】■Attack the space directly in front of it
+【PG】■Stay still
+
+【PG】In addition, a robot can look at the board any time it wants. The goal of the game is to 
+successfully attack an enemy 10 times.
+While you were watching CircleAI and RandomAI play against each other, did you notice the 
+red and blue squares? When a robot drives over a square, that square turns the same color 
+as the bot (red or blue). After 1,000 turns, if neither robot has attacked the other, or if the 
+robots are tied in health points, whoever has the most squares in their color wins.
+
+【PG】Creating a Python Battle Robot
+Let’s make a robot to try to beat CircleAI and RandomAI. The first step in making a robot is 
+to come up with a strategy. For our first Python Battle Robot, we should probably start with 
+a simple strategy:
+1If I’m facing the enemy, I should attack him.
+2If I’m facing a wall, I should turn around.
+3Otherwise, I should drive forward.
+Although this isn’t the most advanced strategy, it might just beat CircleAI. If it doesn’t, we 
+can always go back and tweak it a bit.
+
+【PG】The second step is to start coding the robot. Create a new Python file (I’m going to call mine 
+better_than_circleai.py ), and type in this code:
+This is the basic code that all robots must start from. The __init__()  function is called 
+when the AI is created at the start of the game. The turn()  function is called every round, 
+and it decides what the robot does. The class has to be called AI, or Python Battle won’t 
+know where to find your AI code.
+
+【PG】The next step in coding the robot is to add the code that makes the bot carry out our strat -
+egy. You’ll be using these functions to make the robot move around:
+■self.robot.lookInFront()
+■self.robot.turnRight()
+■self.robot.turnLeft()class AI:
+    def __ini t__(self):
+        pass
+    def turn(self):
+        pass
+Download from Wow! eBook <www.wowebook.com>

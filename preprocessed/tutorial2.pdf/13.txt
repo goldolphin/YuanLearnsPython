@@ -1,0 +1,24 @@
+【PG】xiii PREFACE
+【PG】There are many different programming languages. This book will teach you how to use one 
+of those languages—one called Python—to tell the computer what to do.
+【PG】We highly recommend using the Hello World installer , which installs the correct version of 
+Python you need to use this book. You can find it at www.helloworldbook2.com .
+
+【PG】Why learn programming?
+【PG】Even if you don’t become a professional programmer (most people don’t), there are lots of 
+reasons to learn programming:
+■The most important is because you want to! Programming can be very interesting and
+rewarding, as a hobby or a profession.
+■If you ’ re interested in computers and want to know more about how they work and
+how you can make them do what you want, that’s a good reason to learn about pro -
+gramming.
+■Maybe you want to make your own games, or maybe you can’t find a program that
+does exactly what you want or need it to do, so you want to write your own.
+
+【PG】>>> print “Hello” Ah! Now I 
+get it! Hello!Hello About 
+time!No, no, no!
+I only speak 
+human-ese!1110001101
+0001110011
+Download from Wow! eBook <www.wowebook.com>

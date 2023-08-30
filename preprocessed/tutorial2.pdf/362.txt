@@ -1,0 +1,17 @@
+【PG】338 Hello World!
+
+【PG】What’s randomness?
+
+【PG】Before we start talking about how to make programs have random behavior, you should understand what “random” really means. Take the example of flipping a coin. If you toss a coin in the air and let it land, it will land either heads-up or tails-up. For a normal coin, the chances of getting heads are the same as the chances of getting tails. Sometimes you’ll get heads, sometimes tails. On any one toss, you don’t know what you’ll get. Because the outcome of a toss can’t be predicted, we say it’s random. Tossing a coin is an example of a random event.
+
+【PG】If you toss the coin many times, you’ll probably get about the same number of heads as tails. But you can never really be sure. If you toss the coin 4 times, you might get 2 heads and 2 tails. But you could get 3 heads and 1 tail, 1 head and 3 tails, or even 4 heads (or tails) in a row. If you toss the coin 100 times, you might get 50 heads. But you could get 20, 44, 67, or even all 100 tosses coming up heads! That’s very unlikely, but it could happen. The point is that each event is random. Although there might be some pattern to it if you made a lot of tosses, each individual toss has the same chance of coming up heads or tails. Another way to say this is that the coin has no memory. So even if you just tossed 99 heads in a row, and you think it’s nearly impossible to get 100 heads in a row, the next toss still has a 50 percent chance of being heads. That’s what random means.
+
+【PG】A random event is an event with two or more possible outcomes, where you can’t predict which outcome will happen. The outcome could be the order of cards in a shuffled deck, or the number of spots that show when you roll the dice, or which side a coin will land on.
+
+【PG】Rolling the dice
+
+【PG】Almost everyone has played a game using dice. Whether it’s Monopoly, Yahtzee, Trouble, Backgammon, or some other game, rolling dice is one of the most common ways to generate a random event in a game. Dice are very easy to simulate in a program, and Python’s random module has a couple of ways to do it. One is the randint() function, which picks a random integer. Because the number of spots on the sides of a die are integers (1, 2, 3, 4, 5, and 6), rolling a single die could be simulated like this:
+
+impor t random
+die_1 = random.randin t(1, 6)
+Download from Wow! eBook <www.wowebook.com>

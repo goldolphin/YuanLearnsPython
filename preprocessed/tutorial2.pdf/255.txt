@@ -1,0 +1,59 @@
+【PG】CHAPTER  17 Sprites and Collision Detection
+def anima te(group):                                               
+    screen.fill([255,255,255])                                        
+    for ball in group:                                                 
+        ball.move()                                                     
+    for ball in group:                                                 
+        group.remove(ball)                                             
+        if pygame.spri te.spri tecollide(ball, group, False):          
+            ball.speed[0] = -ball.speed[0]                             
+            ball.speed[1] = -ball.speed[1]                           
+        group.add(ball)                                                
+        screen.bli t(ball.image, ball.rec t)                            
+    pygame.display.flip()                                   
+                                     
+size = wid th, heigh t = 640, 480                                    
+screen = pygame.display.se t_mode(size)                             
+screen.fill([255, 255, 255])                                       
+img_file = "beach_ball.png"                                        
+clock = pygame. time.Clock()     
+group = pygame.spri te.Group()                                      
+for row in range (0, 2):                                            
+    for column in range (0, 2):                                     
+        loca tion = [column * 180 + 10, row * 180 + 10]             
+        speed = [choice([-4, 4]), choice([-4, 4])]                 
+        ball = MyBallClass(img_file, loca tion, speed)            
+        group.add(ball)   #add the ball to the group           
+                                                               
+running = True
+while running:       
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+            frame_ra te = clock.ge t_fps()    
+            prin t "frame ra te = ", frame_ra te  
+    anima te(group)                             
+    clock. tick(30)       
+pygame.qui t()
+
+【PG】That covers the basics of Pygame and sprites. In the next chapter, we’ll make a real game 
+using Pygame, and you’ll see some other things you can do, like adding text (for game 
+scores) and mouse and keyboard input.
+
+【PG】What did you learn?
+In this chapter, you learned about
+■Sprites in Pygame and how to use them to handle multiple moving images
+■Groups of spritesThe animate 
+function
+time.delay() has 
+been removed
+Creates instance 
+of ClockInitializes 
+everything and 
+draws beach balls
+The main while loop starts here
+Checks the 
+frame rate
+clock.tick now controls the frame rate 
+(limited by the speed of the computer)
+Download from Wow! eBook <www.wowebook.com>

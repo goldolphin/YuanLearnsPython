@@ -1,0 +1,16 @@
+【PG】Chapter 2 5
+【PG】Skier Explained
+
+【PG】In Chapter 10, you typed in a Skier game (hopefully!) and ran it. There were some notes in the code, but we didn’t give any other explanation. Typing in code and running it, even if you don’t completely understand it, can be a great way to learn programming in general or learn a particular language.
+
+【PG】But now that you know more about Python, maybe you’re a little curious about how the Skier program works. In this chapter, we’re going to go through it in detail. 
+
+【PG】The skier
+
+【PG】First we’ll program the skier. When you played the Skier program, you probably noticed that the skier only moves back and forth across the screen. He doesn’t move up and down. The illusion of skiing “down” the hill is created by the scenery (trees and flags) scrolling up past him. 
+
+【PG】There are five different images for the skier going down the hill: one for going straight down, two for turning left (a little and a lot), and two for turning right (a little and a lot). At the start of the program, we made a list of these images, and we put them in the list in a certain order:
+skier_images = [ "skier_down.png" , 
+                "skier_righ t1.png", "skier_righ t2.png",
+                "skier_lef t2.png", "skier_lef t1.png"]
+Download from Wow! eBook <www.wowebook.com>

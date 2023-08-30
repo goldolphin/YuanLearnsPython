@@ -1,0 +1,30 @@
+【PG】182 Hello World!
+
+【PG】there’s only one name “Shawn. ” Your class is your namespace , and in that namespace, there’s 
+only one Shawn, so there’s no confusion.
+
+【PG】Now, if the principal has to call Shawn to the office over the public address system, she 
+can’t just say, “Would Shawn please come to the office. ” If she did that, both Shawns would 
+show up at the office. For the principal using the public address system, the namespace is 
+the whole school. That means everyone in the school is listening for the name, not just one 
+class. So she has to be more specific about which Shawn she means. She would have to say 
+something like, “Would Shawn from Mr. Morton’s class please come to the office. ”
+
+【PG】Shawn has a new backpack!
+
+【PG】Would Shawn 
+from Mr. Morton’s 
+class please come 
+to the office.
+
+【PG】Would Shawn 
+from Mr. Morton’s 
+class please come 
+to the office.
+
+【PG】Would Shawn 
+from Mr. Morton’s 
+class please come 
+to the office.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

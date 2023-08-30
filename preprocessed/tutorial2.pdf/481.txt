@@ -1,0 +1,116 @@
+【PG】457 INDEX
+decrement a variable, -= 25, 35
+def 143
+defaults (EasyGui) 61
+define a function 143
+del 126, 140
+delta 368, 370
+derived class 174
+dialog box 57, 272
+input 57
+dice 338
+different combinations 341
+rolling two 339
+dictionaries 117, 136
+clear() 140
+compared to lists 138
+keys() 139
+values() 139
+directories 315
+display surface (Pygame) 193
+double-buffered 194
+flip() 192, 194
+division 29
+documentation 94
+dot notation 138, 162
+double backslash, \\ 317
+double equal sign, == 68
+double star sign, ** 33
+double-buffered 194
+double-nested loop 108
+
+【PG】down arrow, K_DOWN 238
+dragging 240
+drawing a circle 191
+E
+EasyGui 56
+buttonbox() 58
+choicebox() 59
+enterbox() 60
+integerbox() 61
+learning more 62
+making the choice box smaller 60
+message box 56
+text input 60
+easygui.py 56
+elif 70, 104
+else 71
+endless loops 80
+end-of-line comments 95
+endswith() 309
+E-notation 35–36, 38, 329
+Enter key 3
+enterbox() 60
+entry box (PyQt)
+Line Edit 282
+Spin Box 282
+equal sign, = 68
+
+【PG】error handling 378
+error message 5, 11
+errors 10
+handling 378
+escape character 297
+escaping 297, 303
+
+【PG】event handlers 234, 279, 377
+binding 279
+parameters 280
+event loop 190, 234
+event queue 234, 237
+event-driven programs 233
+events 233–234, 279
+event handlers 234, 279
+event loop 234
+event queue 234, 237
+key events 236
+keyboard 235
+KEYDOWN 235, 237
+mouse 240
+MOUSEBUTTONDOWN 240
+MOUSEBUTTONUP 240–241
+MOUSEMOTION 240, 246
+pygame.event.get() 237
+QUIT 237
+timer 241
+timer events 241
+user event 241
+user-defined 242
+
+【PG】executable file, .exe 314
+execute 5
+exponents 33, 38
+extend() 124–125
+extension 314
+
+【PG】False value 65, 127
+file 313–314
+.app 314
+.exe 314
+.mp3 314
+.py 314, 318
+.txt 314
+adding to 319
+appending 319, 324–325
+binary 322
+closing 321, 325
+creating 319
+extension 314
+filename 319
+folders 315
+location 314
+name 314
+opening 319
+path 316
+pathname 316
+Download from Wow! eBook <www.wowebook.com>

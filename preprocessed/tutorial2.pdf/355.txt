@@ -1,0 +1,42 @@
+【PG】331 CHAPTER  22 File Input and Output
+When the player clicks the Guess!  button, the program does these things:
+■Checks whether the guess is a single letter or a word
+■If it’s a letter:
+■Checks the secret word to see if it contains the letter
+■If the player’s guess is right, shows the places where the letter occurs by replacing 
+the dash with the letter
+■If the player’s guess is wrong, reveals a part of the man
+■Adds the guessed letter to the Previous guesses  display
+■Checks to see if the player has completed the word (guessed all the letters)
+■If it’s a word:
+■Checks to see if the player’s guess is correct
+■If it is, shows a dialog saying Y ou Won!  and starts a new game
+■Checks to see if the player is out of turns—if so, shows a dialog saying Y ou Lost  and 
+shows what the secret word was
+
+【PG】Getting words from the word list
+This is a chapter about files, so let’s look at the part of the program that gets the word list. 
+The code looks like this:
+The words.txt  file is just a text file, so we can read it using readlines() . Then, to pick a 
+word from the list, we use the random.choice()  function, like this:
+
+【PG】Revealing the man
+There are several ways we could have kept track of which parts of the man are already 
+revealed and which part to reveal next. We decided to use a loop. It looks like this:f = open("words. txt", 'r')
+self.lines = f.readlines()
+for line in self.lines:
+   line.s trip()
+f.close()
+self.curren tword = random.choice(self.lines)
+def wrong(self):
+        self.pieces_shown += 1
+        for i in range(self.pieces_shown):
+            self.pieces[i].se tHidden(False)
+        if self.pieces_shown == len(self.pieces):
+            message = "You lose.  The word was " + self.curren tword
+            Q tGui.QMessageBox.warning(self, "Hangman" ,message)
+            self.new_game()Removes newline 
+characters 
+from each line
+
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,50 @@
+【PG】282 Hello World!
+using the same names for our components, which will make it easier to follow the code 
+later on.
+Don’t worry about getting the components exactly lined up or exactly the same as shown 
+here, as long as they’re roughly the same.
+
+
+【PG】Creating the new GUI
+The first step is to make a new PyQt project. When you close the UI you have open 
+(MyFirstGui), Designer will open the New Form  window again, and you can make sure 
+Main Window  is selected as the type of form, and click Create .
+Now you need to start adding widgets: the Celsius entry box is a Line Edit  widget, the 
+Fahrenheit entry box is a Spin Box , the labels under each temperature entry box are Label
+widgets, and there are two Push Button  components. You’ll have to scroll down in the 
+Widget Box on the left side to find some of these. Here are the steps to make the GUI:
+
+
+【PG】1Find the Push Button  widget in the Widget Box. Drag it over onto the form, and it will 
+make a new button on the form. Then do the following:
+■Make the button the size you want by dragging the handles or entering new 
+numbers in the geometry  properties (like you saw in MyFirstGui).
+■Change the button’s objectName  property to btnFtoC .
+■Change the button’s text  property to <<< Fahrenheit to Celsius .
+■Change the button’s font size  to 12. If you find the font  property in the Property 
+Editor and click the little button with three dots in it that looks like this: . 
+You’ll get a Font dialog just like one you’ve probably seen in your favorite 
+word processor.
+
+
+【PG】2Drag another Push Button  onto the form, place it above the first button, make it the 
+size you want, and change these settings:
+■Change the button’s objectName  property to btnCtoF .
+■Change the button’s text  property to Celsius to Fahrenheit >>> .
+■Change the button’s font size  to 12.
+
+
+【PG】3Drag a Line Edit  widget onto the form, and place it to the left of the two buttons:
+■Change the Line Edit widget’s objectName  property to editCel .
+
+
+【PG】4Drag a Spin Box  widget onto the form, and place it to the right of the two buttons:
+■Change the objectName  of the Spin Box to spinFahr .
+
+
+【PG】5Drag a Label  widget onto the form, and place it below the Line Edit widget:
+■Change the text  property of the label to Celsius .
+■Change the label’s font size  to 10.
+
+
+Download from Wow! eBook <www.wowebook.com>

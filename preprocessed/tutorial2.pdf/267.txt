@@ -1,0 +1,54 @@
+【PG】243 CHAPTER  18 A New Kind of Input—Events
+【PG】Like before, we’ll use the event to move the ball up or down. But because the ball won’t be controlled by a user this time, we should make it bounce off the top and bottom as well as the sides. The complete program, based on modifying listing 18.2, is shown next.
+
+【PG】impor t pygame, sys                                    
+pygame.ini t()                                        
+screen = pygame.display.se t_mode([640,480])         
+background = pygame.Surface(screen.ge t_size())       
+background.fill([255, 255, 255])                    
+clock = pygame. time.Clock() 
+
+【PG】class Ball(pygame.spri te.Spri te):                                     
+    def __ini t__(self, image_file, speed, loca tion):           
+        pygame.spri te.Spri te.__ini t__(self)                          
+        self.image = pygame.image.load(image_file)                 
+        self.rec t = self.image.ge t_rec t()                              
+        self.rec t.lef t, self.rec t.top = loca tion                      
+        self.speed = speed                                            
+    def move(self):                                                  
+        if self.rec t.lef t <= screen.ge t_rec t().lef t or \
+                self.rec t.righ t >= screen.ge t_rec t().righ t:            
+            self.speed[0] = - self.speed[0]         
+        newpos = self.rec t.move(self.speed)    
+        self.rec t = newpos
+
+【PG】my_ball = Ball( 'beach_ball.png' , [10,0], [20, 20]) 
+pygame. time.se t_timer(pygame.USEREVENT, 1000)   
+direc tion = 1 
+running = True
+while running: 
+    for even t in pygame.even t.get(): 
+        if even t.type == pygame.QUIT: 
+            running = False 
+        elif even t.type == pygame.USEREVENT:                             
+            my_ball.rec t.cen tery = my_ball.rec t.cen tery + (30*direc tion) 
+            if my_ball.rec t.top <= 0 or  \
+            my_ball.rec t.bottom >= screen.ge t_rec t().bo ttom:         
+                direc tion = -direc tion             
+    clock. tick(30) 
+    screen.bli t(background, (0, 0))                   
+    my_ball.move()                                   
+    screen.bli t(my_ball.image, my_ball.rec t)       
+    pygame.display.flip()                
+pygame.qui t()
+
+【PG】Remember, the \ is the line-continuation character b. You can use it to write something on two lines that would normally go on a single line. (Just don’t type any spaces after the \ or the line continuation won’t work.)
+
+【PG】Listing 18.3 Using a timer event to move the ball up and down
+【PG】Initializes everything
+【PG】This line continues bThe Ball class definition
+【PG】Makes an instance of Ball
+【PG】Creates a timer: 1000 ms = 1 second
+【PG】This line continues bThe event handler for the timer
+【PG】Redraws everything
+【PG】Download from Wow! eBook <www.wowebook.com>

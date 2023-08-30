@@ -1,0 +1,26 @@
+【PG】Hello World!
+
+【PG】So now we can make a deck of cards and randomly draw cards from it to add them to a hand. It sounds like we have the basic things we need to make a card game! In the next section, we’ll make a card game that you can play against the computer.
+
+【PG】Crazy Eights
+
+【PG】You might have heard of a card game called Crazy Eights. You might even have played it. One thing about card games on the computer is that it’s difficult to have multiple players. That’s because, in most card games, you’re not supposed to see the other players’ cards. If everyone is looking at the same computer, everybody will see everyone else’s cards. So the best card games for playing on the computer are those where you can play with just two players—you against the computer. Crazy Eights is one of those games that works well with two players, so we’re going to make a Crazy Eights game where the user plays against the computer.
+
+【PG】Here are the rules for our program. It is a game for two players. Each player gets five cards. The rest of the cards are placed face down, and then one card is turned face up to start the discard pile. The object of the game is to get rid of all your cards before anyone else and before the deck runs out:
+
+1At each turn, a player has to do one of the following:
+■Play a card of the same suit as the up card.
+■Play a card of the same rank as the up card.
+■Play an 8.
+
+2If the player plays an 8, he can “call the suit, ” which means he gets to choose the suit that the next player is trying to match.
+
+3If the player can’t play any of his cards, he must pick up a card from the deck and add it to his hand.
+
+4If a player gets rid of all his cards, he wins that game, and he gets points depending on what the other player has left in his hand:
+■50 points for each 8
+■10 points for each face card
+■Face value for every other card
+■1 point for each Ace
+
+【PG】Download from Wow! eBook <www.wowebook.com>

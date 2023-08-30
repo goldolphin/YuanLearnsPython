@@ -1,0 +1,33 @@
+【PG】63 CHAPTER  6 GUIs—Graphical User Interfaces
+
+【PG】What did you learn?
+
+【PG】In this chapter, you learned 
+
+■How to make simple GUIs with EasyGui 
+
+■How to display messages using a message box: msgbox 
+
+■How to get input using buttons, choice boxes, and text-entry boxes: buttonbox , choicebox , enterbox , integerbox 
+
+■How to set the default input for a text box 
+
+■How to use Python’s built-in help system 
+
+【PG】#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1=self.page=self.page+1PrintFormat...
+ 
+【PG】#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1;self.page=self.page+1write_header(self):#Iftheheaderforthispagehasjustbeenwritten,don't
+
+【PG】#Thinking like a (Python) programmer
+
+【PG】If you want to find out more about something to do with Python, like EasyGui (or anything else), there is a built-in help system that you might want to try.
+
+【PG】If you’re in interactive mode, you can type >>>help() at the interactive prompt to get into the help system. The prompt will change to look like this: help >
+
+【PG】Once you’re there, just type the name of the thing you want help with, like this: help> time.sleep or help> ea sygui.m sgbox and you’ll get some information.
+
+【PG】To get out of the help system and back to the regular interactive prompt, just type the word quit: help> quit >>> 
+
+【PG】Some of the help is hard to read and understand, and you won’t always find what you are looking for. But if you are looking for more information on something in Python, it’s worth a try. 
+
+Download from Wow! eBook <www.wowebook.com>

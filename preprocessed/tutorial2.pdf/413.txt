@@ -1,0 +1,23 @@
+【PG】389 CHAPTER  25 Skier Explained
+            if even t.key == pygame.K_LEFT: 
+                speed = skier. turn(-1)     
+            elif even t.key == pygame.K_RIGHT: 
+                speed = skier. turn(1)     
+    skier.move(speed)                                               
+    anima te()                                           
+pygame.qui t()
+
+【PG】If you run listing 25.1, you’ll see just the skier (no score, no obstacles), and you’ll be able to 
+turn him left and right.
+
+【PG】The obstacles
+The next thing we’ll do is figure out how to make the obstacles—the trees and flags. For 
+this part, to keep things simple, we’re going to start from scratch again—no skier, just the 
+obstacles. We’ll put the skier code together with the obstacle code at the end.
+
+【PG】The window for the skier game is 640 x 640 pixels. To keep things simple and prevent 
+having obstacles too close together, we divide the window into a 10 x 10 grid. There are 100 Left arrow turns left
+Right arrow 
+turns right Main Pygame 
+event loop
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,18 @@
+【PG】325 CHAPTER  22 File Input and Output
+【PG】Correction! You can open a file for appending if it’s not there. It’ll just create a new one that’s blank! Carter is right, again ! 
+【PG】If you use 'w' for write  mode, there are two possibilities:
+■If the file already exists, whatever is in the file will be lost and replaced with whatever you write there.
+■If the file doesn’t exist, a new file with that name will be created, and whatever you write will go into the new file.
+【PG】Let’s look at some examples.
+
+【PG】Appending to a file
+First we’ll take the notes.txt  file that we created earlier and append  something to it. Let’s add another line that says “Spend allowance. ” If you were looking closely when we did the readlines()  example, you might have noticed that there’s no \n, no newline , at the end of the last line. So we need to add one, and then add our new string. To write strings to a file, we use the write()  method, like this.
+todo_lis t = open('notes.txt', 'a')                 
+todo_lis t.write('\nSpend allowance' )               
+todo_lis t.close() 
+When we were reading files, I said you should close the file when you’re done. But it’s even more important to use close()  when you’re done writing . That’s because the changes don’t actually get saved to the file until you close()  it. After you run the program in listing 22.3, open notes.txt  using Notepad (or any other text 
+editor) and see what’s in it. Remember to close Notepad when you’re done.
+
+【PG】Writing to a file
+Now let’s try an example of writing to a file using the write mode. We’ll open a file that isn’t on the hard drive. Type in the program in this listing and run it.
+Listing 22.3 Using append mode Closes the file Opens the file in append mode Adds our string to the end Download from Wow! eBook <www.wowebook.com>

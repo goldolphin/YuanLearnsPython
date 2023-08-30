@@ -1,0 +1,25 @@
+【PG】218 Hello World!
+
+【PG】What’s a sprite?
+Think of a sprite as a little piece of graphics—a kind of graphical object that will move around the screen and interact with other graphical objects. Most sprites have a couple of basic properties:
+■An image —the graphics that are displayed for the sprite
+■A rect—the rectangular area that contains the sprite
+The image can be one that you draw using Pygame’s draw functions (like you saw in the last chapter) or one that you get from an image file.
+
+【PG】A sprite class
+Pygame’s sprite  module provides a base sprite class called Sprite . (Remember when we talked about objects and classes a couple of chapters ago?) Normally you don’t use the base class directly, but instead create your own subclass, based on pygame.sprite.Sprite . Let’s do that in an example and call the class MyBallClass . The code to create it looks like this:
+class MyBallClass(pygame.spri te.Spri te):
+    def __ini t__(self, image_file, loca tion):
+        pygame.spri te.Spri te.__ini t__(self)
+        self.image = pygame.image.load(image_file)
+        self.rec t = self.image.ge t_rec t()
+        self.rec t.lef t, self.rec t.top = loca tion
+Sprite means a group of pixels that are moved and displayed as a single unit, a kind of graphical object. (excerpted from "Pygame Tutorials - Sprite Module Introduction" by Pete Shinners www.pygame.org/docs/tut/SpriteIntro.html )
+
+【PG】The term ‘sprite’ is a holdover from older computer and game machines. These older boxes were unable to draw and erase normal graphics fast enough for them to work as games. These machines had special hardware to handle game-like objects that needed to animate very quickly. These objects were called ‘sprites’ and had special limitations, but could be drawn and updated very fast . . . These days computers have become generally fast enough to handle sprite-like objects without dedicated hardware. The term ‘sprite’ is still used to represent just about anything in a 2D game that is animated.
+
+【PG】Initializes the sprite
+Loads an image file into it
+Gets the rectangle that defines the boundaries of the image
+Sets the initial location of the ball
+Download from Wow! eBook <www.wowebook.com>

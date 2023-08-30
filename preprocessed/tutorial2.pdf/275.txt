@@ -1,0 +1,37 @@
+【PG】251 CHAPTER  18 A New Kind of Input—Events
+
+【PG】Keeping track of lives
+Now let’s keep track of the lives. Currently, if you miss the ball, it just drops off the bottom 
+of the window, never to be seen again. We want to give the player three lives, or chances, so 
+let’s make a variable called lives  and set it equal to 3:
+After the player misses the ball and it drops to the bottom of the window, we’ll subtract 1 
+from lives , wait a couple of seconds, and then start over with a new ball:
+This code goes inside the while  loop. By the way, the reason we write myBall.rect  for the 
+ball and get_rect()  for screen  is this: 
+■myBall  is a sprite, and sprites have a rect  included. 
+■screen  is a surface, and a surface does not have a rect  included. You can find the rect  
+that encloses a surface with the get_rect()  function.
+
+【PG】If you make these changes and run the program, you’ll see that the player now has three lives.
+
+【PG】Adding a life counter
+Most games that give the player a number of lives have a way of showing how many lives 
+are left. We can do the same thing with our game.
+One easy way is to show a number of balls equal to the number of lives remaining. We can 
+put these in the upper-right corner. Here’s a little formula in a for loop that will draw the 
+life counter:
+This code also needs to go inside the main while  loop, just before the event loop (after the 
+screen.blit(score_text, textpos)  line).
+
+【PG】Game over
+The last thing we need to add is a “Game Over” message when the player uses up the last 
+life. We’ll make a couple of font objects that include our message and the player’s final 
+score, render them (create surfaces with the text on them), and blit the surfaces to screen . lives = 3
+if myBall.rec t.top >= screen.ge t_rec t().bo ttom:
+    lives = lives - 1
+    pygame. time.delay(2000)
+    myBall.rec t.toplef t = [50, 50]
+for i in range (lives):
+    wid th = screen.ge t_rec t().wid th
+    screen.bli t(myBall.image, [wid th - 40 * i, 20])
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,29 @@
+【PG】Python Battle
+
+In this book, we’ve covered how to make your own games. One thing we haven’t talked 
+about yet, however, is game artificial intelligence (AI). Almost every game since Pac-Man has 
+had some form of artificial intelligence that attacks the player, and this chapter will show 
+you how to make one yourself.
+
+【PG】Python Battle
+
+The AIs we’re going to make in this chapter will be part of a game called Python Battle. 
+Python Battle is a simple game with simple rules. On each turn, you may move forward, turn 
+to face a different direction, or attack. When one bot attacks another, the bot that gets 
+attacked loses one “health point. ” The first bot to lose all its health points loses the game. 
+Bots can only attack the square directly in front of them.
+
+【PG】Python Battle
+
+But Python Battle has one twist: it’s a game played by robots. You have to code a strategy, 
+or AI, to control your bot, and then run Python Battle to see how well it does against 
+another AI. Of course, the AI code, and Python Battle itself, are written in Python.
+
+【PG】Python Battle
+
+Note that Python Battle should be included on your computer if you ran our book’s installer. 
+I’ve included three AI programs for you to try out: CircleAI (drives in circles around the 
+playing field), RandomAI (moves and turns randomly), and NullAI (doesn’t do anything). 
+Let’s try running them against each other to see who wins.  
+
+Download from Wow! eBook <www.wowebook.com>

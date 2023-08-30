@@ -1,0 +1,36 @@
+【PG】188 Hello World!
+
+【PG】What did you learn?
+
+【PG】In this chapter, you learned
+■What a module is
+■How to create a module
+■How to use a module in another program
+■What namespaces are
+■What’s meant by local  and global  namespaces and variables
+■How to bring names from other modules into your namespace
+And you also saw a couple of examples of Python’s standard modules.
+
+【PG】Test your knowledge
+1What are some of the advantages of using modules?
+2How do you create a module?
+3What Python keyword do you use when you want to use a module?
+4Importing a module is the same as importing a __________.
+5What are two ways to import the time  module so that you have access to all the names 
+(that is, all the variables, functions, and objects) in that module?
+
+【PG】Try it out
+1Write a module that has the “print your name in big letters” function from the “Try it 
+out” section in chapter 13. Then write a program that imports the module and calls 
+the function.
+2Modify the code in listing 15.2 so that you bring c_to_f()  into the main program’s 
+namespace. That is, change it so you can write
+instead of
+3Write a short program to generate a list of five random integer numbers from 1 to 20, 
+and print them out.
+4Write a short program that prints out a random decimal number every 3 seconds for 
+30 seconds.
+
+【PG】fahrenhei t = c_ to_f(celsius)
+fahrenhei t = my_module.c_ to_f(celsius)
+Download from Wow! eBook <www.wowebook.com>

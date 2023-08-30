@@ -1,0 +1,26 @@
+【PG】67 CHAPTER  7 Decisions, Decisions
+【PG】The colon ( :) at the end of the if line tells Python that a block  of instructions is coming 
+next. The block includes every line that is indented  from the if line, up until the next line 
+that is not indented. 
+【PG】If the condition is true , everything in the following block  will be done. In the previous short 
+example, the second and third lines make up the block  of statements for the if in the first 
+line.
+【PG】
+Now might be a good time to talk about indenting  and blocks  of code.
+Indenting
+In some languages, indenting is just a matter of style—you can indent however you like (or 
+not at all). But in Python, indenting is a necessary part of how you write the code. Indenting 
+tells Python where blocks of code start and where they end.A block of code is one or more lines of code that 
+are grouped together. They’re all related to a 
+particular part of the program (like an if statement). 
+In Python, blocks of code are formed by indenting the 
+lines of code in the block.
+【PG】
+True
+Fal
+se
+Indenting  means that a line of code is pushed over to 
+the right a bit. Instead of starting at the far left, 
+it has some spaces at the beginning, so it starts 
+a few characters away from the left side.
+【PG】Download from Wow! eBook <www.wowebook.com>

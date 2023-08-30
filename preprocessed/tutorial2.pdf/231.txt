@@ -1,0 +1,13 @@
+【PG】207 CHAPTER  16 Graphics
+
+【PG】You might have noticed a funny-looking thing in line 6 of listing 16.10: screen.blit() . What does blit  mean? See the “WORD BOX” to find out.
+
+【PG】In Pygame, you copy or blit pixels from one surface  to another. Here we copied the pixels from the my_ball  surface to the screen  surface. In line 6 of listing 16.10, we blitted  the beach ball image to the location 50, 50. That means 50 pixels from the left edge and 50 pixels from the top of the window. When you’re working with a surface  or rect , this sets the location of the top-left corner of the image. So the left edge of the beach ball is 50 pixels from the left edge of the window, and the top edge of the beach ball is 50 pixels from the top of the window. 
+
+【PG】Let’s get moving! Now that we can get graphics onto our Pygame window, let’s start moving them around. That’s right, we’re going to do some animation! Computer animation is really just about moving images (groups of pixels) from one place to another. Let’s try moving our beach ball.
+
+【PG】To move it, we need to change its location. First, let’s try moving it sideways. To make sure we can see the motion, let’s move it 100 pixels to the right. The left-right direction (horizontal) is the first number in the pair of numbers that specify location. So to move something to the right by 100 pixels, we need to increase the first number by 100. We’ll also put in a delay so we can see the animation happen. Change the program from listing 16.10 to look like the one in listing 16.11. (You’ll need to add lines 8, 9, and 10 before the while  loop.)
+
+【PG】When doing graphics programming, copying pixels from one place to another is something we do quite a lot (like copying from a variable to the screen, or from one surface to another). Pixel-copying has a special name in programming. It’s called blitting. We say that we blit an image (or part of an image, or just a bunch of pixels) from one place to another. It’s just a fancy way of saying “copy,” but when you see “blit,” you know it refers to copying pixels, not copying some other kind of thing. 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

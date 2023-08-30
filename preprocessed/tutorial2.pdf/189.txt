@@ -1,0 +1,41 @@
+【PG】Chapter 14 Objects
+
+【PG】It’s one of the “magic” __xxxx__() class methods in Python! If you say print myBall, you get something weird like this: <__main__.Ball instance at 0x00BB 83A0>. To change that, put in a method called __str__(). Make it return what you want printed. Then, every time you use print myBall, it’ll say what you want.
+
+【PG】When you create the class definition, you can define a special method called __init__() that will run whenever a new instance of the class is created. You can pass arguments to the __init__() method to create the instance with its properties set however you want.
+
+【PG】Here’s how this works.
+
+class Ball:
+    def __init__(self, color, size, direction):
+        self.color = color
+        self.size = size
+        self.direction = direction
+        
+    def bounce(self):
+        if self.direction == "down":
+            self.direction = "up"
+
+myBall = Ball("red", "small", "down")
+print "I just created a ball."
+print "My ball is", myBall.size
+print "My ball is", myBall.color
+print "My ball's direction is", myBall.direction
+print "Now I'm going to bounce the ball"
+print
+
+myBall.bounce()
+print "Now the ball's direction is", myBall.direction
+
+【PG】If you run the program in listing 14.3, you should get the same output you got from listing 14.2. The difference is, listing 14.3 uses the __init__() method to set the attributes.
+
+【PG】Thanks for the tip, Carter. In the next section, we’ll see what these “magic” methods are all about.
+
+【PG】Listing 14.3 Adding an __init__() method
+
+Here’s the __init__() method. 
+2 underscores on either side 
+of init. Total of 4 underscores, 
+2 on either side.
+Attributes are passed in as 
+arguments to __init__()

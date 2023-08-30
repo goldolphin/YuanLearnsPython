@@ -1,0 +1,19 @@
+【PG】Chapter 5 Input
+
+【PG】Is there some shorter way to have a prompt in front of raw_input() ? Did you notice that there are no spaces at the ends of the individual words in the quotes, yet we got spaces between each word when we ran the program? Python adds a space when you use the comma to combine print  statements on one line.
+
+【PG】I’m glad you asked! I was just going to talk about that.
+
+【PG】A shortcut for raw_input() prompts
+
+【PG】There is a shortcut for printing prompt messages. The raw_input() function can print the message for you, so you don’t have to use a print statement:
+
+【PG】someName = raw_input ("Enter your name: " )End comma
+
+【PG】In Python3, the trick of putting a comma at the end to keep printing on the same line doesn’t work. Also, in Python 3, when you use print() , the thing you’re printing has to be in parentheses. So if you’re using Python 3, listing 5.2 would look like this:
+
+【PG】print("My", end=" ")
+print("name", end=" ")
+print("i s", end=" ")
+print("Dave.", end=" ")
+Download from Wow! eBook <www.wowebook.com>

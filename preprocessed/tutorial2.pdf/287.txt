@@ -1,0 +1,23 @@
+【PG】263 CHAPTER  19 Sound
+【PG】Adding sounds to PyP ong
+【PG】Now that you know the basics of playing sounds, let’s add some sound to our PyPong game.
+
+【PG】First we’ll add a sound every time the ball hits the paddle. We already know when that is, because we’re using collision detection to reverse the direction of the ball when it hits the paddle. Remember this code from listing 18.5?
+
+【PG】Now we need to add the code that plays a sound. We need to add pygame.mixer.init() near the start of the program, and we’ll also create the sound object so it’s ready to use:
+
+【PG】We’ll also set the volume so it’s not too loud:
+
+【PG】Then, when the ball hits the paddle, we’ll play the sound:
+
+【PG】Try adding this to the PyPong program from listing 18.5. Make sure you copy the hit_paddle.wav file to the same place you’re saving your program. When you run it, you should hear a sound every time the ball hits the paddle.
+
+【PG】if pygame.spri te.spri tecollide(paddle, ballGroup, False):
+myBall.speed[1] = -myBall.speed[1]
+hit = pygame.mixer.Sound( "hit_paddle.wav" )
+hit.set_volume(0.4)
+if pygame.spri te.spri tecollide(paddle, ballGroup, False):
+myBall.speed[1] = -myBall.speed[1]
+hi t.play() Plays the sound
+
+【PG】Download from Wow! eBook <www.wowebook.com>

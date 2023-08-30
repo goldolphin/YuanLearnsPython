@@ -1,0 +1,49 @@
+【PG】429  APPENDIX  C Answers to Self-Test Questions
+
+【PG】I didn’t worry about rounding off the answer to two decimal places (cents) or about displaying the dollar sign.
+
+【PG】Here is one way to do it: 
+
+【PG】Here is one answer:
+To add a 5-liter buffer, change the line to
+
+【PG】Here is a simple password program:else:
+    discoun t = i tem_price * 0.20
+final_price = i tem_price - discoun t
+prin t 'You go t ', discoun t, 'off, so your final price was' , final_price
+
+【PG】# program to check age and gender of soccer players
+# accep t girls who are 10 to 12 years old
+gender = raw_inpu t("Are you male or female? ('m' or 'f') " )
+if gender  == 'f':
+    age = int(raw_inpu t('Wha t is your age? ' ))
+    if age >= 10 and age <= 12:
+        prin t 'You can play on the team'
+    else:
+        prin t 'You are no t the righ t age.'
+else:
+    prin t 'Only girls are allowed on this team.'
+
+【PG】# program to check if you need gas.
+# Nex t station is 200 km away
+tank_size = int(raw_inpu t('How big is your tank (li ters)? '))
+full = int(raw_inpu t ('How full is your tank (eg. 50 for half full)?' ))
+mileage = int(raw_inpu t ('Wha t is your gas mileage (km per li ter)? '))
+range = tank_size * (full / 100.0) * mileage
+prin t 'You can go ano ther', range, 'km.'
+prin t 'The nex t gas s tation is 200km away.'
+if range <= 200:
+    prin t 'GET GAS NOW!'
+else:
+    prin t 'You can wai t for the nex t station.'
+
+【PG】range = tank_size * (full / 100.0) * mileage
+range = (tank_size - 5) * (full / 100.0) * mileage
+password  = "bigsecre t"
+guess  = raw_inpu t("Enter your password: " )
+if guess == password:
+    prin t "Password correc t. Welcome"
+    # pu t the res t of the code for your program here
+else:
+    prin t "Password incorrec t. Goodbye"
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,33 @@
+【PG】Opening a file
+Before you open a file, you need to know what you’ll be doing with the file: 
+■If you’ll be using the file as input  (looking at what’s in the file without changing it), 
+you’ll open the file for reading . 
+■If you’ll be creating  a brand-new file or replacing  an existing file with something brand 
+new, you’ll open the file for writing .
+■If you’ll be adding  to an existing file, you’ll open the file for appending . (Remember from chapter 12 that append  means to add to something.)
+
+【PG】When you open a file, you make a file object  in Python. (See, I told you that many things in 
+Python are objects.) You make the file object by using the open()  function with the name of 
+the file, like this:
+The filename is a string , so it needs quotes around it. The 'r' part means you’re opening the 
+file for reading. You’ll learn more about that in the next section.
+
+【PG】It’s important to understand the difference between the file objec t and the filename . The file 
+object  is what you’ll use inside the program to access the file. The filename  is what Windows 
+(or Linux or Mac OS X) calls the file on the disk. 
+You do the same thing with people. You have different names that you use in different 
+places. If your teacher’s name is Fred Weasley, you probably call him Mr. Weasley. His friends 
+probably call him Fred, and his computer username might be fweasley. With files, there’s a 
+name that’s used by the operating system to store the file on disk (the filename), and there’s 
+a name your program uses when working with the file (the file object). 
+The two names—the name of the object and the name of the file—don’t have to be the 
+same. You can call the object whatever you want. For example, if we have a text file with 
+some notes in it that’s called notes.txt , we could do this:
+Or we could do this:
+
+【PG】Once you have opened the file and created the file object, you don’t need the filename any 
+more. You do everything in the program using the file object.my_file = open('my_filename. txt','r')
+notes = open('notes.txt', 'r')
+some_crazy_s tuff = open("notes.txt", 'r')File object Filename
+File object Filename
+Download from Wow! eBook <www.wowebook.com>

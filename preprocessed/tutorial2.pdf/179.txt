@@ -1,0 +1,37 @@
+【PG】155 CHAPTER  13 Functions
+
+【PG】The next listing tries to print the variable my_price  from inside the calculateTax()
+function. Try it and see what happens.
+def calcula teTax(price, tax_ra te):
+    total = price + (price * tax_ra te)
+    prin t my_price                 
+    return total 
+my_price = floa t(raw_inpu t ("Enter a price: " ))
+totalPrice = calcula teTax(my_price, 0.06) 
+prin t "price = " , my_price, " To tal price = " , totalPrice      
+
+【PG】Did it work? Yes! But why?
+
+【PG】When we started talking about variable scope, I told you that Python uses memory 
+management to automatically create local variables when a function runs. The memory 
+manager does some other things, too. In a function, if you use a variable name that has 
+been defined in the main program, Python will let you use the global variable as long as 
+you don’t try to change it.
+
+【PG】So you can do this
+or this
+because neither of these changes my_price .
+
+【PG】If any part of the function tries to change the variable, Python creates a new local variable 
+instead. So if you do this
+then my_price  is a new local variable that Python creates when the function runs. 
+
+【PG】In the example in listing 13.6, the value that was printed was the global  variable my_price , 
+because the function didn’t change it. The program in listing 13.7 shows you that, if you do Listing 13.6 Using a global variable inside a function
+prin t my_price 
+your_price = my_price
+my_price = my_price + 10
+
+【PG】Tries to print 
+my_price
+Download from Wow! eBook <www.wowebook.com>

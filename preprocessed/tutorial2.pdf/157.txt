@@ -1,0 +1,38 @@
+【PG】Chapter 12 Collecting Things Together—Lists and Dictionaries
+
+【PG】Mutable and immutable
+If you remember back to chapter 2, we said that you couldn’t actually change a number or 
+string, you could only change what number or string a name  was assigned to (in other 
+words, move the tag). But lists are one of the types in Python that can be  changed. As you 
+just saw, lists can have items appended or deleted, and the items can be sorted or reversed.
+These two different kinds of variables are called mutable  and immutable . Mutable  just means 
+“able to be changed” or “changeable. ” Immutable  means “not able to be changed” or 
+“unchangeable. ” In Python, numbers and strings are immutable (cannot be changed), and 
+lists are mutable (can be changed).
+
+【PG】Tuple—an immutable list
+There are times when you don’t want a list to be changeable. So, is there an immutable kind 
+of list in Python? The answer is yes. There is a type called a tuple , which is exactly that, an 
+immutable (unchangeable) list. You make one like this:
+You use round brackets, instead of the square ones that lists use. 
+Because tuples are immutable (unchangeable), you can’t do things like sort them or append 
+or delete items. Once you create a tuple with a set of items, it stays that way.
+
+【PG】Lists of lists: tables of data
+When thinking about how data is stored in a program, it’s useful to visualize it.
+A variable has a single value. 
+A list is like a row of values strung together.
+Sometimes you need a table  with rows and columns.
+
+my_tuple = ( "red", "green", "blue")
+myFriend s Kim Curti s Shaun Jenn Karla
+classMark s Math Science Reading Spelling
+55
+6563
+61
+97 9577 81
+72
+8867
+92TomJoe
+BethmyTeacher Mr. Wil son
+Download from Wow! eBook <www.wowebook.com>

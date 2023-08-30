@@ -1,0 +1,12 @@
+【PG】CHAPTER 1
+Getting Started
+Installing Python
+The first thing you need to do is install Python on the computer you’re going to use. 
+Installing Python is pretty easy. We highly recommend using the Hello World installer , which 
+installs the correct version of Python you need to use this book. You can find it at 
+www.helloworldbook2.com . Find the version of the installer that matches your computer’s 
+operating system.
+
+【PG】In the early days of personal computers (PCs), people had it easy.  With a lot of the ﬁrst PCs, a programming language called BASIC was built in to the computer. They didn’t have to install anything. All they did was turn on the computer, and the screen would say “READY,” and they could start typing BASIC programs. Sounds great, huh?
+
+【PG】Of course, that “READY” was all you got. No programs, no windows, no menus. If you wanted the computer to do anything , you had to write a program! There were no word processors, media players, web browsers, or any of the things we are used to now. There wasn’t even a Web to browse. There were no fancy graphics and no sound, except the occasional “beep” if you made a mistake!

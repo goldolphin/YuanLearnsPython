@@ -1,0 +1,32 @@
+【PG】73 CHAPTER  7 Decisions, Decisions
+Using and
+
+【PG】That last example will work fine. But there is a shorter way to do the same thing. You can 
+combine conditions like this:
+
+【PG】We combined the two conditions using the and keyword. The and means both of the 
+conditions have to be true for the following block to execute.
+age = floa t(raw_inpu t("Enter your age: " ))
+grade = int(raw_inpu t("Enter your grade: " ))
+if age >= 8 and grade >= 3:         
+    prin t "You can play this game."
+else:
+    prin t "Sorry, you can' t play the game."
+
+【PG】Reminder
+Remember, if you’re using Python 3, you need to replace raw_input()
+with input() , and you need to use parentheses with print , like this: 
+print("You can play thi s game.")
+
+【PG】Combine conditions 
+with “and”
+ age>= 8 grade>=3
+FalseFalseTrue TrueYou can
+play!
+You can’t
+play!
+You can’t
+play!and
+(Only get here if both condition s are true)if
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,34 @@
+【PG】439  APPENDIX  C Answers to Self-Test Questions
+
+【PG】5The two ways to import the time module so that you have access to all the names in 
+the module are
+and
+Try it out
+
+【PG】1To write a module, just put the code for your “big name” function in a file—something 
+like bigname.py . Then, to import the module and call the function, do something like 
+this:
+Or you could do this:
+
+【PG】2To bring c_to_f()  into the main program’s namespace, you can do this
+or this:
+
+【PG】3A short program to print five random integers from 1 to 20 would look like this:
+
+【PG】4A short program that prints out a random decimal number every 3 seconds for 30 sec -
+onds would look like this:impor t time
+from time impor t *
+impor t bigname
+bigname.prin tMyNameBig()
+from bigname impor t *
+prin tMyNameBig()
+from my_module impor t c_to_f
+from my_module impor t *
+impor t random
+for i in range(5):
+    prin t random.randin t(1, 20)
+impor t random, time
+for i in range(10):
+    prin t random.random()
+    time.sleep(3)
+Download from Wow! eBook <www.wowebook.com>

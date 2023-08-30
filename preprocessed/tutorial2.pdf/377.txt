@@ -1,0 +1,33 @@
+【PG】Chapter 23 Take a Chance—Randomness
+This isn’t a complete game, but you get the idea. The player has to type in things like QS or Draw  to tell the program his choice. The program has to check that what the player typed in makes sense. We’ll use some string methods (from chapter 21) to help us with that.
+
+【PG】Displaying the hand
+Before we ask the player what he wants to do, we should show him what cards are in his hand and what the up card is. Here’s some code for that:
+If an 8 has been played, we also need to tell him what the active suit is. So let’s add a couple more lines, as shown next.
+prin t "\nYour hand: " ,
+for card in p_hand:
+    prin t card.shor t_name,
+prin t "   Up card: " , up_card.shor t_name
+if up_card.rank == '8':
+    prin t"   Sui t is", ac tive_sui t 
+Just like listing 23.6, listing 23.7 is not a complete program. 
+
+【PG】We are still building up the parts we need to make a complete program. But when the code in listing 23.7 runs (as part of the complete program), it gives output like this:You drew 8C
+Compu ter plays 2D
+Your hand:  4S, QS, 3C, 8C   Up card:  2D
+What would you like to do?  Type a card name or "Draw" to take a card: 8C
+You played 8C (8 of Clubs)
+Your hand:  4S, QS, 3C   Pick a sui t: S
+You picked spades
+Compu ter draws a card
+Your hand:  4S, QS, 3C   Up card: 8C   Sui t:  Spades
+What would you like to do?  Type a card name or "Draw" to take a card: QS
+You played QS (Queen of Spades)
+
+【PG】prin t "\nYour hand: " ,
+for card in p_hand:
+    prin t card.shor t_name,
+prin t "   Up card: " ,    up_card.shor t_name
+Listing 23.7  Displaying what’s in the player’s hand
+Your hand:  4S, QS, 3C   Up card: 8C   Sui t:  Spades
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,22 @@
+【PG】22 Hello World!
+Numbers and strings
+
+【PG】So far, we have made variables for both letters (text) and numbers. But in the addition example, how did Python know that we meant the numbers 5 and 3, and not the characters “5” and “3”? Well, just like in the last sentence, the quote marks make all the difference. A character, or series of characters (letters, numbers, or punctuation), is called a string. The way you tell Python that you are making a string is to put quotes around the characters. Python is not too fussy about whether you use single or double quotes. Either of these will work:
+
+【PG】But you do have to use the same kind of quotes at the start and the end of the string. If you type in a number without quotes, Python knows you mean the numerical value, not the character. Try this to see the difference:
+>>> teacher = "Mr. Mor ton" 
+>>> teacher = 'Mr. Mor ton' 
+>>> firs t = 5 
+>>> second = 3 
+>>> firs t + second 
+8 
+>>> firs t = '5' 
+>>> second = '3' 
+>>> firs t + second 
+'53'
+
+【PG】In some of the early programming languages, variable names could only be one letter long. And some of the computers only had uppercase letters, which meant that you only had 26 choices for your variable names: A–Z! If you needed more than 26 variables in a program, you were out of luck!
+
+【PG】Double quotes
+Single quotes
+Download from Wow! eBook <www.wowebook.com>

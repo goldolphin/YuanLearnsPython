@@ -1,0 +1,25 @@
+【PG】336 Hello World!
+
+【PG】What should you do with a file when you’re done reading or writing it?
+【PG】What happens if you open a file in append mode and then write something to the file?
+【PG】What happens if you open a file in write mode and then write something to the file?
+【PG】How do you start reading the start of a file after you have already read part of it?
+【PG】What pickle  function is used to save a Python object to a file?
+【PG】What pickle  method is used to “unpickle” an object—to get it from a pickle file and put it back in a Python variable?
+
+【PG】Try it out
+
+【PG】Make a program to create silly sentences. Each sentence should have at least four parts, like this: 
+The __________  ___________  ____________  _____________
+         (adjective)       (noun)        (verb phrase)    (adverb phrase)
+For example:  " The  crazed  monkey  played a ukulele  on the table ."
+The program should create the sentence by randomly picking an adjective, a noun, a verb phrase, and an adverb phrase. The words will be stored in files, and you can use Notepad to create them. The simplest way to make this program work is to have one file for each of the four groups of words, but you can do it however you want. Here are some ideas to get you started, but I’m sure you’ll come up with your own:
+■Adjectives: crazed, silly, shy, goofy, angry, lazy, obstinate, purple
+■Nouns: monkey, elephant, cyclist, teacher, author, hockey player
+■Verb phrases: played a ukulele, danced a jig, combed his hair, flapped her ears
+■Adverb phrases: on the table, at the grocery store, in the shower, after breakfast, with a broom 
+Here’s another sample output: “The lazy author combed his hair with a broom. ”
+
+【PG】Write a program that asks the user to enter her name, age, favorite color, and favorite food. Have the program save all four items to a text file, each one on a separate line.
+
+【PG】Do the same as in question #2, but use pickle  to save the data to a file. (Hint: This will be easy if you put the data in a list.)adjective noun verb phrase adverb phrase

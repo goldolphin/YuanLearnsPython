@@ -1,0 +1,45 @@
+【PG】308 Hello World!
+【PG】Searching for strings
+【PG】Suppose you want to make a program for your mom that takes recipes and displays them in 
+a GUI. You want to put the ingredients in one place and the instructions in another. Let’s 
+imagine that the recipe looks something like this:
+【PG】Assume that the lines of the recipe are in a list, and that each line is a separate item in the 
+list. How would you find the “Instructions” section? Python has a couple of methods that 
+would help you.
+
+【PG】The startswith()  method tells you whether a string starts with a certain character or 
+characters. An example is the easiest way to show this. Try this in interactive mode:
+
+The name Frankenstein starts with the letter 
+F, so the first one was True . The name 
+Frankenstein starts with the letters Frank , 
+so the second one was True . The name 
+Frankenstein does not start with Flop , so that 
+one was False .
+
+Because the startswith()  method returns 
+a True  or False  value, you can use it in 
+comparisons or if statements, like this:
+
+【PG】Chocola te Cake
+Ingredien ts: 
+2 eggs
+1/2 cup flour
+1 tsp baking soda
+1 lb chocola te
+Instructions: 
+Prehea t oven to 350F
+Mix all ingredien ts together
+Bake for 30 minu tes
+>>> name = "Frankens tein"
+>>> name.s tartswith('F')
+True
+>>> name.s tartswith("Frank")
+True
+>>> name.s tartswith("Flop")
+False
+>>> if name.s tartswith("Frank"):
+        prin t "Can I call you Frank?"Can I call 
+you Frank?
+
+【PG】Download from Wow! eBook <www.wowebook.com>

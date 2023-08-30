@@ -1,0 +1,38 @@
+【PG】CHAPTER  24 Computer Simulations
+The force of the engines depends on how much fuel we’re burning. Sometimes it’ll be 
+greater than the force of gravity, sometimes less. When the engines are off, their force is 0, 
+and we’re left with only the force of gravity.
+To get the total or net force on the spacecraft, we just add the two forces. Because they’re in 
+opposite directions, one will be positive and one will be negative. 
+Once we have the net force on the spacecraft, we can figure out its speed and position with 
+a formula. 
+
+【PG】Our simulation will have to keep track of the following things:
+■The spacecraft’s height above the Moon, and its velocity and acceleration.
+■The mass of the spacecraft (which changes as we use up fuel).
+■The thrust, or force, of the engines. The more thrust we use, the faster we’ll 
+burn fuel.
+■The amount of fuel on the spacecraft. As we burn fuel with our thrusters, the 
+spacecraft will get lighter, but if we run out of fuel, there will be no more thrust.
+■The force of gravity on the spacecraft. That depends on the size of the Moon, and
+the mass of the spacecraft and fuel.
+
+【PG】Pygame returns
+We’ll use Pygame again to make this simulation. The Pygame clock tick will be our unit of 
+time. For every tick, we’ll check the net force on the spacecraft and update the height, 
+velocity, acceleration, and fuel remaining. Then we’ll use that information to update the 
+graphics and text.
+Because the animation is very simple, we won’t use a sprite for the spaceship. But we’ll use 
+one for the throttle (the grey rectangle), because that makes it easy to drag it with the 
+
+【PG】The word velocity means almost the same thing as speed, except that 
+velocity includes a direction, and speed doesn’t. For example, “fifty 
+miles an hour” describes a speed, while “fifty miles an hour due north” 
+describes a velocity. Many people use the word speed when they really 
+mean velocity , and vice versa. In our program, we need to know 
+whether the spaceship is going up or down, so we will use velocity.
+Acceleration means how fast the velocity is changing. Positive 
+acceleration means the velocity is increasing, and negative acceleration 
+means the velocity is decreasing.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

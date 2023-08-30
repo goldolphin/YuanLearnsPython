@@ -1,0 +1,40 @@
+【PG】Chapter 2 Remember This: Memory and Variables
+
+【PG】There are other kinds of things in Python that can be changed. You will learn more about 
+this in chapter 12, when we talk about lists.
+
+【PG】The new me
+You can also make a variable equal to itself:
+I bet you’re thinking, “Well, that’s pretty useless!” And you’d be right. It’s kind of like saying 
+“I am me. ” But with a small change, you can become a whole new you ! Try this:
+What happened here? In the first line, the Score  tag was stuck on the value 7. We made a 
+new thing, which was Score + 1 , or 7 + 1. That new thing is 8. Then we took the Score  tag 
+off the old thing (7) and stuck it on the new thing (8). So Score  has been reassigned from 
+7 to 8. 
+
+【PG】Whenever you make a variable equal something, the variable always appears on the left 
+side of the equal sign ( =). The trick is that the variable can also appear on the right. This 
+turns out to be quite useful, and you’ll see it in a lot of programs. The most common use is 
+to increment  a variable (increase it by a certain amount), like we just did, or the opposite, to 
+decrement  a variable (decrease it by a certain amount):
+
+【PG】1Start with Score  = 7. 
+2Make a new thing by adding 1 to it 
+(which makes 8). 
+3Give the name Score  to the new thing. 
+So, Score  changed from 7 to 8.
+
+【PG】Here are a couple of important things to remember about variables:
+■A variable can be reassigned (the tag can be stuck on a new thing) at any time by a
+program. This is very important to remember, because one of the most common
+“bugs” in programming is changing the wrong variable, or changing the right variable
+at the wrong time. >>> Score = 7
+>>> Score = Score
+>>> Score = Score + 1
+>>> prin t Score
+8Changes Score 
+from 7 to 8
+Score
+Score
+Score
+Download from Wow! eBook <www.wowebook.com>

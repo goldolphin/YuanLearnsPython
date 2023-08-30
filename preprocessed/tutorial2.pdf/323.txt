@@ -1,0 +1,35 @@
+【PG】299 CHAPTER  21 Print Formatting and Strings
+【PG】The %s, %f, and %i are called format strings , and they’re a kind of code for how you want the 
+variable to look.
+【PG】There are some other things you can add to the format strings to make numbers print exactly 
+how you want. There are also a few different format strings you can use to get things like 
+E-notation. (Remember that from chapter 3?) We’ll look at these in the next few sections. 
+
+【PG】Number formatting
+When we print numbers, we’d like to have control over how they look:
+■How many decimal places they display
+■Whether to use regular or E-notation
+■Whether to add leading or trailing zeros
+■Whether to display + or - signs in front of the numbers
+With format strings, Python gives us the flexibility we need to do all this and more!
+For example, if you were using a program that told you the weather forecast, which would 
+you rather see:
+or
+Getting numbers to look right is important for many programs. 
+
+【PG】Let’s start with an example. Suppose we want to print a decimal number with exactly two 
+decimal places. Try this in interactive mode:
+In the middle of the print  statement, there’s our format string. But instead of just using %f, 
+this time we used %.2f . That tells Python to show two digits after the decimal place, with 
+floating-point format. (Notice that Python was smart enough to round  the number correctly 
+to two decimal places, instead of just chopping off the extra digits.)
+After the string, the second % sign tells Python that the number to be printed is coming 
+next. The number is printed with the formatting that’s described in the format string. A few 
+more examples will make this clearer.
+
+【PG】Today's High: 72.45672132, Low 45.4985756
+Today's High: 72, Low: 45
+>>> dec_number = 12.3456
+>>> prin t 'It is %.2f degrees today.' % dec_number
+It is 12.35 degrees today
+Download from Wow! eBook <www.wowebook.com>

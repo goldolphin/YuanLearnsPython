@@ -1,0 +1,13 @@
+【PG】408 Hello World!
+
+【PG】What did you learn?
+
+【PG】In this chapter, you learned
+■How games use AI to make enemies smart
+■How to make your own AI as part of PythonBattle
+
+【PG】Try it out
+
+【PG】1Revise my strategy, and try to come up with a robot that beats CircleAI.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

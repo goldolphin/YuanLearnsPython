@@ -1,0 +1,17 @@
+【段落编号1】第1版致谢　　 xix
+还要感谢在这本书出版过程中完成审校和帮助准备书稿的人们：  Vibhu 
+Chandreshekar 、Pam Colquhoun 、Gordon Colquhoun 、Dr. Tim Couper 、Josh 
+Cronemeyer 、Simon Cronemeyer 、Kevin Driscoll 、Jeffrey Elkner 、Ted Felix 、David 
+Goodger、Lisa L. Goodyear 、Dr. John Grayson 、Michelle Hutton 、Horst Jens 、Andy 
+Judkis、Caiden Kumar 、Anthony Linfante 、Shannon Madison 、Kenneth McDonald 、 
+Evan Morris 、Prof. Alexander Repenning 、André Roberge 、Kari J. Stellpflug 、Kirby 
+Urner和Bryan 
+Weingarten，是他们的努力让这本书日臻完善。
+
+【段落编号2】Warren Sande
+我要感谢 Martin Murtonen 专门给我画的漫画， 感谢妈妈在我两岁的时候就让我
+玩计算机， 而且还提出写书这样一个绝妙的想法。 最重要的， 我要感谢爸爸对这本
+书还有我付出的心血，感谢他教我学习编程。
+
+【段落编号3】Carter Sande
+图灵社区会员 FreeLink 专享 尊重版权

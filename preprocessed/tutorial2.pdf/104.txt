@@ -1,0 +1,43 @@
+【PG】80 Hello World!
+
+【PG】Once I made a 
+mistake in a program, 
+and it kept looping 
+forever! 
+How can I stop 
+a runaway loop?
+
+【PG】The second line ( print "hello" ) is the block of code that Python executes each time 
+around the loop. A for loop needs a block of code to tell the program what to do in each 
+loop. That block  (the indented part of the code) is called the body  of the loop . (Remember, 
+we talked about indenting and blocks in the last chapter.) 
+
+【PG】Let’s try something else. Instead of printing the same thing every time, let’s make the 
+program print something different every time through the loop.
+for looper in [1, 2, 3, 4, 5]:
+    prin t looper
+Save this as Loop2.py , and run it. The results should look like this:
+This time, instead of printing “hello” five times, it printed the value of the variable looper . 
+Each time through the loop, looper  takes the next value in the list.
+
+【PG】Runaway loops
+The same thing has happened to me, Carter! Run -
+away loops (also called endless loops or infi -
+nite loops) happen to every programmer once 
+in a while. To stop a Python program at any 
+time (even in a runaway loop), press 
+CTRL-C . That means we press and hold down 
+the CTRL  key and, while holding it down, 
+press the C key. This will come in very handy 
+later! Games and graphics programs are constantly running in 
+a loop. They need to keep getting input from the mouse, keyboard,
+
+【PG】Listing 8.2 Doing something different each time through the for loop
+>>> ================ RESTART ================
+>>> 
+1
+2
+3
+4
+5Each time through the loop is called an iteration .
+Download from Wow! eBook <www.wowebook.com>

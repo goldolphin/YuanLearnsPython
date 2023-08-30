@@ -1,0 +1,37 @@
+【PG】128 Hello World!
+
+【PG】You can try this in interactive mode:
+This is telling us that the list called letters  does have an item a, but it does not have an 
+item s. So a is in the list, and s isn’t in the list. Now you can combine in and remove() , and 
+write something that won’t give you an error, even if the value isn’t in the list:
+This code only removes the value from the list if the value is in the list.
+
+【PG】Finding the index
+To find where in the list an item is located, you use the index()  method, like this:
+So we know that d has index 3, which means it’s the fourth item in the list.
+Just like remove() , index()  will give you an error if the value isn’t found in the list, so it’s a 
+good idea to use it with in, like this:
+
+【PG】Looping through a list
+When we first talked about loops, you saw that loops iterate through a list of values. You 
+also learned about the range()  function and used it as a shortcut for generating lists of 
+numbers for your loops. You saw that range()  gives you a list of numbers.
+
+【PG】>>> 'a' in le tters
+True
+>>> 's' in le tters
+False
+if 'a' in le tters:
+    le tters.remove( 'a')
+>>> le tters = ['a', 'b', 'c', 'd', 'e']
+>>> prin t letters.index( 'd')
+3
+if 'd' in le tters:
+    prin t letters.index( 'd')
+
+【PG】Boolean is a kind of arithmetic that only uses two 
+values: 1 and 0, or true and false. It was invented by 
+mathematician George Boole, and it is used when combining 
+true and false conditions (represented by 1 and 0) 
+together with and, or, and not, like we saw in Chapter 7.
+Download from Wow! eBook <www.wowebook.com>

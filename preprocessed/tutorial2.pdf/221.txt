@@ -1,0 +1,21 @@
+【PG】Chapter 16 Graphics
+
+This defines both the location and the size. Here’s an example:
+This creates a rectangle where the top-left corner is 250 pixels from the left side of the window and 150 pixels down from the top of the window. The rectangle is 300 pixels wide and 200 pixels high. Let’s try it and see.
+
+Substitute this line for line 5 in listing 16.4, and see what it looks like:
+The location and size of the rectangle can be a simple list (or tuple) of numbers or a Pygame Rect object. So we could also substitute the preceding line with two lines like this or
+
+Here’s what the rectangle should look like. I added some dimensions to show you which numbers mean what:
+my_rec t = Rec t(250, 150, 300, 200)
+my_lis t = [250, 150, 300, 200]
+pygame.draw.rec t(screen, [255,0,0], my_lis t, 0)
+my_rec t = pygame.Rec t(250, 150, 300, 200)
+pygame.draw.rec t(screen, [255,0,0], my_rec t, 0)
+
+Color of the rectangle
+Location and size of the rectangle
+Line width (or filled)
+pygame.draw.rec t(screen, [255,0,0], [250, 150, 300, 200], 0)
+
+Download from Wow! eBook <www.wowebook.com>

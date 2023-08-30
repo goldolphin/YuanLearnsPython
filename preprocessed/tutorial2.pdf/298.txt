@@ -1,0 +1,49 @@
+【PG】274 Hello World!
+
+【PG】On the left is the Widget Box, where 
+you see all the different graphical 
+elements you can use in your GUI. 
+They are grouped into a few different 
+categories.
+
+【PG】On the right are the Object Inspector and Property Editor. These are where you can examine 
+and change the properties of the widgets. There is also a third box whose function is 
+selected by the tabs at the bottom. It can be the Signal/Slot Inspector, Action Editor, or 
+Resource Browser.
+
+【PG】In the middle is the new, blank form you just created. It says Main Window – untitled  at the 
+top, because you haven’t given it a name yet. This blank space is where you will put the 
+widgets to make up your UI. (On a Mac, to get this view you’ll need to go into Qt Designer > 
+Preferences  and change the user interface mode from Multiple Top-Level Windows to 
+Docked Window. Otherwise all the panes will float in separate windows.)
+
+【PG】Adding a button
+Let’s add a button to the GUI. On the left side of the Qt Designer 
+window, find the Buttons  section, and look for the Push Button
+widget.
+
+【PG】Drag the  Push Button  over to the blank form, and drop it some -
+where. Now you have a button on your form, and it has the label 
+PushButton .
+
+【PG】Now look over on the right side, 
+at the Property Editor. If the 
+button is still selected (if it has 
+the little blue squares around 
+it), then you will see its 
+properties in the Property 
+Editor. You can see that the 
+name of the button is 
+PushButton . If you scroll 
+through some of the other 
+properties in the Properties list, 
+you can see things like the 
+button’s width and height, its 
+x and y position, and so on.
+
+【PG】In a GUI, the individual buttons, check 
+boxes, and so on, are called widgets. 
+They’re also referred to as components , 
+and sometimes as controls . 
+
+Download from Wow! eBook <www.wowebook.com>

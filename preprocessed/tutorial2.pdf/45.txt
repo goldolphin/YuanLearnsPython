@@ -1,0 +1,39 @@
+【PG】Chapter 2 Remember This: Memory and Variables
+
+【PG】If we changed 
+MyTeacher  
+to “Mrs. Tysick ”, 
+would YourTeacher  also 
+be changed to 
+“Mrs. Tysick ”?You can have more than one name for the same thing. Try this in interactive mode:
+This is like sticking two tags on the same thing. One 
+tag says YourTeacher  and one tag says MyTeacher , but 
+they are both stuck on “Mrs. Goodyear” .
+That’s a very good question, Carter. The answer is, 
+no. What would happen is that a new thing, 
+“Mrs. Tysick” , would be created. The tag 
+MyTeacher  would get pulled off “Mrs. 
+Goodyear” and stuck on “Mrs. Tysick” . You still 
+have two different names (two tags), but now 
+they are stuck on two different things instead of 
+being stuck on the same thing.
+
+【PG】What’s in a name?
+You can call a variable anything you want (well, almost). The name can be as long as you 
+want, and it can have letters and numbers in it, as well as the underscore character ( _). 
+But there are a few rules about variable names. The most important one is that they are 
+case-sensitive, which means that uppercase and lowercase matter. So, teacher  and TEACHER
+are two different names. So are first  and First .
+Another rule is that a variable name has to start with a letter or the underscore character. It 
+can’t start with a number. So 4fun  is not allowed.
+One more rule is that a variable name can’t have any spaces in it.
+If you want to know all the rules for variable names in Python, you can look in appendix A, 
+at the back of the book.
+
+【PG】>>> MyTeacher = "Mrs. Goodyear"
+>>> YourTeacher = MyTeacher
+>>> MyTeacher
+"Mrs. Goodyear"
+>>> YourTeacher
+"Mrs. Goodyear"
+Download from Wow! eBook <www.wowebook.com>

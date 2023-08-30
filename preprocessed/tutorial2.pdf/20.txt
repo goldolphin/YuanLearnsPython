@@ -1,0 +1,10 @@
+【PG】xx ABOUT  THIS BOOK
+This book is designed for beginners who want to learn how to code. It contains examples, exercises, and quizzes to help you get started with programming. This text is split into several different sections, each of which will teach you something new.
+【PG】What you don’t need
+To learn programming with this book, you don’t need any prior knowledge of computer programming. You also don't need to buy any software, as everything you need is free and available on the book’s website.
+【PG】Using this book
+If you want to learn programming using this book, there are a few pointers that will help you get the most out of it. You should follow along with the examples, type in the programs, and do the quiz questions. Above all, don't worry and be happy!
+【PG】Follow along with the examples
+When you see examples in the book, always try to follow along and type the programs in yourself. This will help you learn a lot more than simply reading the text. You will learn by doing, not just by reading.
+【PG】Installing Python
+To use this book, you need to have Python installed on your computer. We recommend using the Hello World installer, which installs the correct version of Python and other necessary tools. You can download it from the book's website.

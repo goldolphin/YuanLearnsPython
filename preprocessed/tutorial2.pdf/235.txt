@@ -1,0 +1,31 @@
+【PG】211 CHAPTER  16 Graphics
+
+【PG】Keeping the ball moving
+
+【PG】In the previous program, the ball moved over to the right side of the window and then stopped. Now we’ll try to keep the ball moving.
+
+【PG】If we just keep increasing x, what will happen? The ball will keep moving to the right as its x-value increases. But our window (the display surface) stops at x = 640 . So the ball will disappear. Try changing the for loop in line 10 of listing 16.13 to this:
+
+【PG】Now that the loop runs twice as long, the ball disappears off the edge! If we want to continue seeing the ball, we have two choices:
+
+■We make the ball bounce  off the side of the window.
+
+■We make the ball wrap around  to the other side of the window.
+
+【PG】Let’s try both ways to see how to do them.
+
+【PG】Bouncing the ball
+
+【PG】If we want to make the ball appear to bounce  off the side of the window, we need to know when it “hits” the edge of the window, and then we need to reverse its direction. If we want to keep the ball moving back and forth, we need to do this at both the left and right edges of the window.
+
+【PG】At the left edge, it’s easy, because we just check for the ball’s position to be 0 (or some small number). 
+
+【PG】At the right side, we need to check to see if the right side of the ball is at the right side of the window. But the ball’s position is set from its left side (the top-left corner), not its right side. So we have to subtract the width of the ball:
+
+【PG】When the ball is moving toward the right edge of the window, we need to bounce it (reverse its direction) when its position is 550.
+
+for looper in range (1, 200):
+640px
+550px 90pxBall’s position is the top-left corner of its rect
+
+Download from Wow! eBook <www.wowebook.com>

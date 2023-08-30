@@ -1,0 +1,13 @@
+【PG】30 Hello World!
+
+【PG】Because we entered both the 3 and the 2 as integers, Python thinks we want an integer for  the answer, too. So it rounded the answer 1.5 down to the nearest integer, which is 1. To put it another way, Python is doing division without the remainder. To fix it, try this:
+
+【PG】That’s better! If you enter either of the two numbers as a decimal number, Python knows you want the answer as a decimal number. >>> prin t 3.0 / 2 1.5
+
+【PG】Floor division The way Python 2 does division is called “floor division”. But Python 3 works differently. In Python 3, if you use the regular division operator  (forward slash), you’ll get regular division, not floor division >>> print 3/2 1.5 T o get floor division in Python 3, you can use the double-forward-slash: >>> print 3//2 1
+
+【PG】This is one of the most noticeable differences between Python 2 and Python 3, and it is one that will break a lot of Python 2 programs if you try to run them in Python 3 and vice versa.
+
+【PG】You’ll want to remember the integer- division behavior in Python 2. It’s important, and lots of Python programmers (including me!) have been tripped up by forgetting it at one time or another. 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

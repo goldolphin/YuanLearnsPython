@@ -1,0 +1,42 @@
+【PG】250 Hello World!
+
+【PG】Now to keep track of the points …. We already detect when the ball hits the top of the 
+window, in the ball’s move() method (in order to bounce it). We just need to add a couple 
+of lines there:
+
+【PG】Oops! We forgot something about namespaces . Remember that big, long explanation in 
+chapter 15? Now you can see a real example of it. Although we do have a variable called 
+score , we’re trying to use it from within the move()  method of the Ball  class. The class is 
+looking for a local  variable called score , which doesn’t exist. Instead, we want to use the 
+global  variable we already created, so we need to tell the move()  method to use the global 
+score , like this:
+
+【PG】We also need to make score_font  (the font object for the score) and score_surf  
+(the surface that contains the rendered text) global as well, because they are updated 
+in the move()  method. So the code should actually look like this:
+
+【PG】Now  it should work! Try it: you should see the score in the upper-left corner of the window, 
+and the score should increase as you bounce the ball off the top of the window.
+
+【PG】if self.rec t.top <= 0 :
+    self.speed[1] = -self.speed[1]
+    score = score + 1                                          
+    score_surf = score_fon t.render( str(score), 1, (0, 0, 0))
+def move(self):
+    global score
+
+【PG】def move(self):
+    global score, score_fon t, score_surfThe two new lines
+Traceback (mo st recent call la st):
+File " C:...", line 59, in <module>
+myBall.move()
+File " C:\...", line 24, in move
+score = score + 1
+UnboundLocal Error: local variable ' score' 
+referenced before a ssignment
+
+【PG】It STILL gives me an error, 
+when the ball hits 
+the top!
+
+【PG】Download from Wow! eBook <www.wowebook.com>

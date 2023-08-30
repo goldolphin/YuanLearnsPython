@@ -1,0 +1,35 @@
+【PG】421  APPENDIX  C Answers to Self-Test Questions
+2You could do either of these:
+or
+3You would do something like this:
+4Using variables, your “minutes per day” program would look something like this:
+5To see what would happen if there were 26 hours in the day, you would do this:
+
+【PG】Chapter 3: Basic Math
+Test your knowledge
+1Python uses the * (asterisk) symbol for multiplication.
+2Python would say that 8 / 3 = 2 . Because 8 and 3 are both integers, Python 2 gives the answer rounded down to the nearest integer. (Note that in Python 3, you would get 2.66666666667, because Python 3 doesn’t do “floor division” on integers by default like Python 2 does.)
+3To get the remainder, use the Modulus operator: 8 % 3 . 
+4To get the decimal answer for 8 / 3 , change one of them into a decimal number: 8.0 / 3 or 8 / 3.0 . (Note that in Python 3, you get the decimal answer automatically.)
+5What’s another way of calculating 6 * 6 * 6 * 6  in Python? 6 ** 4 .
+617,000,000 in E-notation would be written as 1.7e7 .
+74.56e-5  is the same as 0.0000456 .
+
+【PG】>>> tempera ture = 40
+>>> prin t tempera ture
+40
+>>> tempera ture = tempera ture + 15
+>>> prin t tempera ture
+40
+>>> firs tName = "Fred"
+>>> prin t firs tName
+Fred
+>>> DaysPerWeek = 7
+>>> HoursPerDay = 24
+>>> Minu tesPerHour = 60
+>>> prin t DaysPerWeek * HoursPerDay * Minu tesPerHour
+10080
+>>> HoursPerDay = 26
+>>> prin t DaysPerWeek * HoursPerDay * Minu tesPerHour
+10920
+Download from Wow! eBook <www.wowebook.com>

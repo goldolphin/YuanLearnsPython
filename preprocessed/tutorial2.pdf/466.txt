@@ -1,0 +1,37 @@
+【PG】442 Hello World!
+
+【PG】You should be able to see each rectangle appear individually, because we have slowed 
+down the program and are refreshing the display after each rectangle is drawn. If you 
+do this to the sine wave programs, you can see each point in the sine wave being 
+plotted.
+
+【PG】Chapter 17: Sprites and Collision Detection
+Test your knowledge
+1Rect collision detection means detecting when two graphical objects are touching or 
+overlapping by using a rectangle around the objects.
+2Pixel-perfect collision detection uses the true outline of the graphical object to do 
+collision detection. Rect collision detection uses a rectangle around the object to 
+determine collisions. Pixel-perfect collision detection is more accurate and realistic, 
+but it also takes more code, which slows things down a bit.
+3You can keep track of a number of sprite objects together by using either a regular 
+Python list or a Pygame Sprite group.
+4You can control the speed of animation (frame rate) in your code either by adding 
+delays between each frame or by using pygame.time.Clock  to get a specific frame 
+rate. You can also change how far (how many pixels) the object moves in each frame.
+5Using the delay method is less accurate because it doesn’t take into account how long 
+the code itself takes for each frame, so you don’t know exactly what frame rate you’ll 
+get.
+6You can find out what frame rate your program is running at by using pygame.time.Clock.get_fps() .
+
+【PG】Chapter 18: A New Kind of Input—Events
+Test your knowledge
+1Two kinds of events that a program can respond to are keyboard events and mouse 
+events.
+2The piece of code that deals with an event is called an event handler .
+3Pygame uses the KEYDOWN  event to detect keys being pressed.
+4The pos attribute tells you where the mouse is located when the event happens.
+5To get the next available event number for user events, use pygame.USEREVENT .
+6To create a timer, use pygame.time.set_timer() .
+7To display text in a Pygame window, use a font  object.
+
+Download from Wow! eBook <www.wowebook.com>

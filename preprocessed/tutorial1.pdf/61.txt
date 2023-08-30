@@ -1,0 +1,47 @@
+【PG】3.5　非常大和非常小　　 35
+有时 Python会用一种稍微不同的方式显示非常大的数 。可以在交互模式中试试看 ：
+>>> print 9938712345656.34 * 4823459023067.456
+4.79389717413e+025>>>
+（具体键入什么数并不重要 —任何包含小数的大数值都可以。 ）
+S这个 e是计算机中显示非常大或非常小的数时采用的
+一种方法。 这叫做 E记法（E-notation） 。 处理非常大（ 或
+非常小）的数时，要把所有数字以及小数位都显示出来可能
+很费劲。这种数在数学和科学领域经常出现 。例如，如果一
+个天文程序要显示从地球到 Alpha Centaur 星的公里数 ，可
+能会显示为 38000000000000000 或者 38 000 000 000 000 000
+（38后面有 15个0 ） 。不论哪种方式， 数完所有这些 0都会这个数中间的字母 
+e做什么用？
+【PG】让你累得够呛。
+显示这些数还有另一种方式 ，就 是使用科学计数法（scientiﬁc notation） ， 就是一
+个小数再乘以一个 10的 幂。在科学计数法中， 地球到 Alpha Centauri 的距离可以写
+作：3.8 × 1016（看到了吗，16 抬高了， 而且要小一点 ） 。这读作“3.8 乘以 10的16
+次幂”或者“ 3.8乘以 10的16次方”。它的意思就是， 把3.8的小数点向右移 16位，
+并在这个过程中根据需要补 0。
+如
+果可以像这里一样 ，把16写作指数 ，稍稍抬高一点 ，再写得小一点 ，科学计数
+法就很适用 。如果你用纸和笔 ，或者使用一个支持上标的程序 ，就可以用科学计数法 。34 Hello World!
+For example, if an astronomy program was displaying the number of kilometers from Earth 
+to the star Alpha Centauri, it could show 38000000000000000 or 38,000,000,000,000,000 or 
+38 000 000 000 000 000. (That’s 38 quintillion kilometers!) But either way, you would get 
+tired of counting all those zeros. 
+Another way to display this number is to use scientific notation , which uses powers of 10 
+along with decimal numbers. In scientific notation, the distance to Alpha Centauri would be 
+written like this: 3.8 x 1016. (See how the 16 is raised above the line, and is smaller?) This 
+reads as “three point eight times ten to the powe r of sixteen” or “three point eight times ten 
+to the sixteenth. ” What it means is you take 3.8 and move the decimal point sixteen places 
+to the right, adding zeros as needed. 
+【PG】Scientific notation is great if you can write the 16 as an exponent, raised above the line and 
+smaller, like we did here. If you are working with pencil and paper, or a program that sup-ports superscripts, then you can use scientific notation. 
+But you can’t always use superscripts, so another way to show the same thing is E-notation. E-notation is just another way of writing scientific notation.
+E-notation
+In E-notation, our number would be 3.8E16 or 3.8e16. This reads as “three point eight expo-nent sixteen” or “three point eight e sixteen” fo r short. It is assumed that the exponent is a 
+power of 10. That’s the same as writing 3.8x10
+16.3.800000000000000000000
+380000000000000000.0 = 3.8 x 1016Move the decimal right 16 places.
+【PG】Superscript  means a character or characters that are raised 
+above the rest of the text, like this: 1013. The 13 here is the 
+superscript . Usually, superscripts are also smaller than the 
+main text. 
+Subscripts are similar, but they’re characters that are below 
+the rest of the text and smaller, like this: log2. The 2 here 
+is a subscript.

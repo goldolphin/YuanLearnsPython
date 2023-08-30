@@ -1,0 +1,35 @@
+【PG】124 Hello World!
+【PG】Modifying items
+You can use the index to change one of the list items:
+But you can’t use the index to add new items to the list. Right now, there are five items in 
+the list, with indices from 0 to 4. So you could not do something like this:
+It would not work. (Try it if you want.) It’s like trying to change something that isn’t there 
+yet. To add items to a list, you have to do something else, and that’s where we’re going 
+next. But before we do, let’s change our list back to the way it was:
+
+【PG】Other ways of adding to a list
+You already saw how to add things to a list using append() . But there are other ways. In fact, 
+there are three methods for adding things to a list— append() , extend() , and insert() :
+■append()  adds one item to the end of the list.
+■extend()  adds multiple items to the end of the list.
+■insert()  adds one item somewhere in the list, not necessarily at the end. You tell it 
+where to add the item.
+
+【PG】Adding to the end: append()
+You already saw how append()  works. It adds one item to the end of a list:
+Let’s add one more:>>> prin t letters
+['a', 'b', 'c', 'd', 'e']
+>>> le tters[2] = 'z'
+>>> prin t letters
+['a', 'b', 'z', 'd', 'e']
+letters[5] = 'f'
+>>> le tters[2] = 'c'
+>>> prin t letters
+['a', 'b', 'c', 'd', 'e']
+>>> le tters.append( 'n')
+>>> prin t letters
+['a', 'b', 'c', 'd', 'e', 'n']
+>>> le tters.append( 'g')
+>>> prin t letters
+['a', 'b', 'c', 'd', 'e', 'n', 'g']
+Download from Wow! eBook <www.wowebook.com>

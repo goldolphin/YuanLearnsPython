@@ -1,0 +1,42 @@
+【PG】171 CHAPTER  14 Objects
+Let’s try adding some condiments. We need a new method for that. We could also add our 
+__str__()  function so it’ll be easier to print the object. Edit the program so it looks like this.
+
+【PG】class HotDog:  
+    def __ini t__(self):                                         
+        self.cooked_level = 0                                  
+        self.cooked_s tring = "Raw"                              
+        self.condimen ts = []                                   
+    def __str__(self):                                         
+        msg = "hot dog"                                        
+        if len(self.condimen ts) > 0:                         
+            msg = msg + " wi th "                            
+        for i in self.condimen ts:                            
+            msg = msg+i+ ", "                               
+        msg = msg.s trip(", ")                               
+        msg = self.cooked_s tring + " " + msg + "."  
+        return msg                                             
+    def cook(self, time):                                      
+        self.cooked_level=self.cooked_level+ time               
+        if self.cooked_level > 8:                             
+            self.cooked_s tring = "Charcoal"                    
+        elif self.cooked_level > 5:                           
+            self.cooked_s tring = "Well-done"                 
+        elif self.cooked_level > 3:                             
+            self.cooked_s tring = "Medium"                     
+        else:                                                    
+            self.cooked_s tring = "Raw"                        
+    def addCondimen t(self, condimen t):     
+         self.condimen ts.append(condimen t)  
+         
+【PG】myDog = Ho tDog()                
+prin t myDog                                                     
+prin t "Cooking ho t dog for 4 minu tes..."                     
+myDog.cook(4)                                                 
+prin t myDog                                                  
+prin t "Cooking ho t dog for 3 more minu tes..."                
+myDog.cook(3)                                                 
+prin t myDog                                                  
+prin t "Wha t happens if I cook i t for 10 more minu tes?"        
+myDog.cook(10)                                                 
+prin t myDog                                                   

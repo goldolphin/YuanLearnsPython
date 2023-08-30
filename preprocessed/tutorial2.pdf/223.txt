@@ -1,0 +1,29 @@
+【PG】199 CHAPTER  16 Graphics
+
+【PG】import pygame, sys, random
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+for i in range (100):
+    wid th = random.randin t(0, 250)
+    heigh t = random.randin t(0, 100)
+    top = random.randin t(0, 400)
+    lef t = random.randin t(0, 500)
+    pygame.draw.rec t(screen, [0,0,0], [lef t, top, wid th, heigh t], 1)
+pygame.display.flip()
+
+【PG】running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+
+【PG】pygame.qui t()
+
+【PG】Run this and see what you get. It should look something like this:
+
+【PG】Do you understand how the program works? It draws 100 rectangles with random sizes and positions. To make it even more “artsy, ” add some color and make the line width random too, as in the following listing.
+
+【PG】Listing 16.5 Using draw.rect  to make art
+
+【PG】Download from Wow! eBook <www.wowebook.com>

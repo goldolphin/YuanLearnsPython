@@ -1,0 +1,32 @@
+【PG】第 2章　记住内存和变量
+除了字母， 还可以为其他内容创建变量。 可以给数值指定名字。 你应该还记得前面的例子：>>> 5 + 3
+8
+
+下面用变量来完成这个例子：
+>>> First = 5
+>>> Second = 3
+>>> print First + Second
+8
+
+在这里， 我们创建了两个名字 First和Second。数字5赋给First，数字3赋给Second。然后用print把这两个数的和打印出来。 下面是完成这个例子的另一种做法。你可以试试看：
+>>> Third = First + Second
+>>> Third
+8
+
+注意这里的做法。 在交互模式中， 只需键入变量名就可以显示这个变量的值，而不必使用 print。 （不过程序中可不行。 ）
+
+在这个例子中 ，并 没有在print指令中求和， 而是先取 First的值和Second的值，将二者相加 ，创建一个新的值 ，名为Third。Third是First和Second的和。
+
+同一个东西可以有多个名字 ，可以在交互模式中试试这个指令：
+>>> MyTeacher = "Mrs. Goodyear "
+>>> YourTeacher = MyTeacher
+>>> MyTeacher
+"Mrs. Goodyear "
+>>> YourTeacher
+"Mrs. Goodyear "
+
+这就像在同一个东西上贴两个标签。一个标签写着 YourTeacher ，另一个标签写着MyTeacher ，不过它们都贴在 "Mrs. Goodyear "上。                          
+
+5 + 3 = 8
+
+图灵社区会员 FreeLink 专享 尊重版权

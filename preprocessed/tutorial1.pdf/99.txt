@@ -1,0 +1,72 @@
+【PG】7.9　使用 not　　
+7370 Hello World!
+You can put more than two 
+conditions together with and: 
+If there are more than two conditions, all the conditions have to be true for the if state-
+ment to be true. 
+There are other ways of combining conditions too. 
+
+Using “or”
+The or keyword is also used to put conditions together. If you use or, the block is executed 
+if any of the conditions are true. 
+
+Using “not”
+You can also flip around a comparison to mean the opposite, using not.
+age = float(raw_input("Enter your age: "))
+grade = int(raw_input("Enter your grade: "))
+color = raw_input("Enter your favorite color: ")
+if age >= 8 and grade >= 3 and color == "green":
+    print "You are allowed to play this game."
+else:    
+    print "Sorry, you can’t play the game."
+
+color = raw_input("Enter your favorite color: ")
+if color == "red" or color == "blue" or color == 
+"green":
+    print "You are allowed to play this game."
+else:    
+    print "Sorry, you can’t play the game."
+
+color = “red” 
+color = “blue”
+True True TrueFalse
+color = “green”
+False False
+You can play!
+if or or (Get here if anycondition is true)
+
+age = float(raw_input("Enter your age: "))
+if not (age < 8):
+    print "You are allowed to play this game."
+else:
+    print "Sorry, you can’t play the game."
+
+如果有两个以上的条件，所有条件都必须为真，这个 if语句才能为真。
+还有其他方法来结合多个条件。
+
+【PG】7.8　使用 or
+or关键字也是用来把多个条件放在一起。 如果使用 or，只要任意一个条件为
+真，就会执行代码块。
+
+color = raw_input("Enter your favorite color: ")
+if color == "red" or color == "blue" or color == "green":
+    print "You are allowed to play this game. "
+else:    
+    print "Sorry, you can't play the game. "
+
+DPMPSoSFEp 
+DPMPSoCMVFp
+True True TrueFalse
+DPMPSoHSFFOp
+False False
+You can play!
+You can’t play!
+
+【PG】7.9　使用 not
+还可以用not把比较倒过来，表示相反的逻辑。
+
+color = raw_input("Enter your favorite color: ")
+if color == "red" or color == "blue" or color == "green":    
+    print "You are allowed to play this game."
+else:
+    print "Sorry, you can't play the game."

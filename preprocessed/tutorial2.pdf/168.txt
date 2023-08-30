@@ -1,0 +1,33 @@
+【PG】144 Hello World!
+
+【PG】def prin tMyAddress():
+    prin t "Warren Sande"                  
+    prin t "123 Main S treet"                
+    prin t "Ottawa, On tario, Canada"        
+    prin t "K2M 2E9"                        
+    prin t                                  
+prin tMyAddress()     
+
+【PG】In line 1, we define a function, using the def keyword. We give the name of the function followed by parentheses () and then a colon:
+I will explain what the parentheses are for soon. The colon tells Python that a block of code is coming next (just like for loops, while  loops, and if statements). 
+Then, we have the code that makes up the function.
+
+【PG】In the last line of listing 13.1, we have the main program: we call the function by giving its name with the parentheses. This is where the program starts running. This one line makes the program run the code in the function we just defined.
+When the main program calls a function, it’s like the function is helping the main program get its job done.
+The code inside the def block isn’t part of the main program, so when the program runs, it skips over that part and starts with the first line that isn’t inside a def block. The next figure shows what happens when you call a function. I added one extra line at the end of the program that prints a message after the function is done.
+
+【PG】Listing 13.1 Creating and using a function
+def prin tMyAddress():Defines (creates) 
+the function
+Calls (uses) 
+the function
+ defprintMyAddre ss():
+print  “Warren Sande”
+print  “123 Main Street”
+print  “Ottawa, Ontario, Canada”
+print  “K2M 2 E9”
+print
+ printMyAddre ss()
+ print “Done the function”13 2
+4
+Download from Wow! eBook <www.wowebook.com>

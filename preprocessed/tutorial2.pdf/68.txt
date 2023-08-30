@@ -1,0 +1,47 @@
+【PG】44 Hello World!
+
+【PG】Getting more information: type()
+
+In the last section, we relied on seeing the quote marks to know that a value was a number 
+or a string. There is a more direct way to find out.
+
+Python has another function, type() , which explicitly tells us the type of a variable. 
+Let’s try it:
+
+The type()  function tells us that a is of type 'str' , which stands for string , and b is of type 
+'float' . No more guessing!
+
+【PG】Type-conversion errors
+
+Of course, if we give int()  or float()  something that is not a number, it won’t work. 
+Try it and see:
+
+We got an error message. The error message means that Python doesn’t know how to 
+create a number from “fred” . Do you?
+
+【PG】Using type conversions
+
+Going back to your Fahrenheit to Celsius temperature-conversion program from the “Try it 
+out” section in chapter 3, remember that you needed to fix the integer-division behavior to 
+get the right answer, by changing the 5 to 5.0 or the 9 to 9.0:
+
+The float()  function gives you another way of doing this:
+or 
+Try it and see.
+
+>>> a = '44.2'
+>>> b = 44.2
+>>> type(a)
+<type 's tr'>
+>>> type(b)
+<type 'floa t'>
+>>> prin t floa t('fred')
+Traceback (mos t recen t call las t):
+  File "<pyshell#1>", line 1, in <module>
+    prin t floa t('fred')
+ValueError: could no t conver t string to floa t: fred
+cel = 5.0 / 9 * (fahr - 32)
+cel = floa t(5) / 9 * (fahr - 32)
+cel = 5 / floa t(9) * (fahr - 32)
+
+Download from Wow! eBook <www.wowebook.com>

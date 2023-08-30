@@ -1,0 +1,41 @@
+【PG】41 CHAPTER  4 Types of Data
+
+【PG】I tried to get 
+Python to add 0.1 and 0.2, 
+and the answer came out as 
+0.30000000000000004. 
+And then I used print  and 
+it looked fine.
+What’s up with that?
+
+【PG】You’ll learn a lot more about functions later in the book. For now, you just need to know 
+that you put the value you want to convert inside the parentheses. The best way to show 
+this is with some examples. Follow along in interactive mode in the IDLE shell.
+
+【PG】Changing an int to a float
+Let’s start with an integer and create a new floating-point number (decimal number) from 
+it, using float() :
+Notice that b gets a decimal point and a 0 at the end. That tells us it is a float and not an 
+integer. The variable a stays the same, because float()  doesn’t change the original value—
+it creates a new one.
+
+【PG】Remember that, in interactive mode, you can just type a variable name (without using 
+print ), and Python will display the value of the variable. (You saw that in chapter 2.) That 
+only works in interactive mode, not in a program. 
+
+【PG】Changing a float to an int
+Now let’s try the reverse—start with a decimal number and create an integer, using int() :
+We created a new integer, d, which is 
+the whole number  part of c.>>> a = 24
+>>> b = floa t(a)
+>>> a
+24
+>>> b
+24.0
+>>> c = 38.0
+>>> d = int(c)
+>>> c
+38.0
+>>> d
+38
+Download from Wow! eBook <www.wowebook.com>

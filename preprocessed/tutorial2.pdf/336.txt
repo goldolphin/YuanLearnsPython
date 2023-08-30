@@ -1,0 +1,46 @@
+【PG】312 Hello World!
+What did you learn?
+
+In this chapter, you learned
+■How to adjust vertical spacing (adding or deleting newlines)
+■How to set horizontal spacing with tabs
+■How to display different number formats using format strings
+■Two ways of using format strings—the % sign, and the format() method
+■How to split strings with split() and join them with join()
+■How to search strings with startswith(), endswith(), in, and index()
+■How to remove things from the end of strings with strip()
+■How to make strings all uppercase or all lowercase with upper() and lower()
+
+【PG】Test your knowledge
+
+1If you have two separate print statements, like this
+how would you make everything print on the same line?
+2How can you add extra blank lines when printing something?
+3What special printing code do you use to line things up in columns?
+4What format string do you use to force a number to print in E-notation?
+
+【PG】Try it out
+
+1Write a program that asks for a person’s name, age, and favorite color, and then prints 
+them out in one sentence. A run of the program should look like this:
+
+What is your name? Sam
+How old are you? 12
+What is your favorite color? green
+Your name is Sam. You are 12 years old and you like green.
+
+2Remember our times-table program from chapter 8 (listing 8.5)? Write an improved 
+version that uses tabs to make sure everything lines up nicely in columns.
+3Write a program that calculates all the fractions of 8 (for example, 1/8, 2/8, 3/8, … up 
+to 8/8) and displays them with exactly three decimal places.
+
+【PG】print "What is"
+print "your name?"
+
+>>> ======================== RESTART ========================
+>>> 
+What is your name? Sam
+How old are you? 12
+What is your favorite color? green
+Your name is Sam. You are 12 years old and you like green.
+Download from Wow! eBook <www.wowebook.com>

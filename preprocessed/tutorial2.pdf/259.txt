@@ -1,0 +1,43 @@
+【PG】235 CHAPTER  18 A New Kind of Input—Events
+
+【PG】Not every event will be handled. As you move the mouse across the desk, hundreds of 
+events are created, because the event loop runs very fast. Every fraction of a second, if the 
+mouse has moved even a tiny bit, a new event is generated. But your program may not care 
+about every tiny movement of the mouse. It may only care when the user clicks a certain 
+thing. So your program might ignore mouseMove  events and only pay attention to
+mouseClick  events.
+
+【PG】Event-driven programs have event handlers  for the kinds of events they care about. If you 
+have a game that uses the arrow keys on the keyboard to control the movement of a ship, 
+you might write a handler for the keyDown  event. If instead you’re using the mouse to 
+control the ship, you might write a handler for the mouseMove  event.
+
+【PG】We’ll start looking now at some specific events that you can use in your programs. We’re 
+going to use Pygame again, so all the events we’ll talk about in the rest of this chapter will 
+come from Pygame’s event queue. Other Python modules have different sets of events that 
+you can use. For example, we’ll look at another module called PyQt in chapter 20. PyQt has 
+its own set of events, some of which are different from Pygame’s. But the way events are 
+handled is generally the same from one set of events to another (and even from one 
+programming language to another). It’s not exactly the same for each event system, but 
+there are more similarities than differences.
+
+【PG】Keyboard events
+Let’s start with an example of a keyboard event. Let’s say we want something to happen
+ as soon as a key is pressed on the keyboard. In Pygame, the event for that is KEYDOWN . To 
+illustrate how this is used, let’s use our bouncing ball example from listing 16.15, which just 
+moves the ball sideways, bouncing off the sides of the window. 
+
+【PG】But before we start adding events, let’s update that program with the new stuff we have learned:
+■Using sprites
+■Using clock.tick()  instead of time.delay()
+
+【PG】First we need a class for the ball. That class will have an __init__()  method and a move()
+method. We’ll create an instance of the class, and in the main while  loop, we’ll use 
+clock.tick(30) . The following listing shows the code with those changes.
+impor t pygame, sys 
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480]) 
+background = pygame.Surface(screen.ge t_size()) 
+background.fill([255, 255, 255]) 
+clock = pygame. time.Clock() Listing 18.1 Bouncing ball program, with sprites and Clock.tick()
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,41 @@
+【PG】154 Hello World!
+
+【PG】One way to see what this means is to add a line to the program in listing 13.4 that tries to 
+print the value of price  somewhere outside the function. The following listing does this.
+def calcula teTax(price, tax_ra te):                      
+    total = price + (price * tax_ra te)  
+    return total                                         
+my_price = floa t(raw_inpu t ("Enter a price: " ))
+totalPrice = calcula teTax(my_price, 0.06)   
+prin t "price = " , my_price, " To tal price = " , totalPrice
+prin t price                           
+   
+【PG】If you run this, you’ll get an error that looks like this:
+The last line of the error message tells the story: when we’re not inside the calcula-
+teTax() function, the variable price  is not defined . It only exists while the function is run -
+ning. When we tried to print the value of price  from outside the function (when the 
+function was not running), we got an error.
+
+【PG】Global variables
+In contrast to the local  variable price , the variables my_price  and totalPrice  in listing 13.5 
+are defined outside  the function, in the main part of the program. We use the term global  for 
+a variable that has a wider scope. In this case, wider  means the main part of the program, 
+not what’s inside the function. If we expanded the program in listing 13.5, we could use the 
+variables my_price  and totalPrice  in another place in the program, and they would still 
+have the values we gave them earlier. They would still be in scope . Because we can use them 
+anywhere in the program, we say they’re global variables .
+
+【PG】In listing 13.5, when we were outside the function and tried to print a variable that was 
+inside the function, we got an error. The variable didn’t exist; it was out of scope . What do 
+you think will happen if we do the opposite: try to print a global variable from inside the 
+function? Listing 13.5 Trying to print a local variable
+Traceback (mos t recen t call las t):
+  File "C:/.../Lis ting_13-5.py", line 9, in <module>
+    prin t price
+NameError: name 'price' is no t defined
+
+【PG】Defines a function to calculate tax and return the total
+Calls the function and stores and prints the result
+Tries to print price
+This line explains the error
+Download from Wow! eBook <www.wowebook.com>

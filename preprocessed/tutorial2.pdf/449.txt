@@ -1,0 +1,41 @@
+【PG】425  APPENDIX  C Answers to Self-Test Questions
+
+【PG】Try it in a short program and see:
+So raw_input()  gives you a string.
+Remember that in Python 3, raw_input()  is simply called input() .
+
+【PG】2To get raw_input()  to print a prompt message, put some text in quotes inside the parentheses, like this:
+
+【PG】3To get an integer using raw_input() , use int()  to convert the string you get from raw_input() . You can do it in two steps, like this:
+Or you can do it in a single step, like this:
+
+【PG】4This is very similar to the previous question, except you use float()  instead of int() .
+
+【PG】Try It Out
+1Your instructions in interactive mode should look something like this:
+Oops! There’s no space. You can either add a space at the end of your first name or try this:
+
+prin t "en ter a number: ",
+answer = raw_inpu t()
+prin t type(answer)
+
+>>> ============== RESTART ==============
+>>> 
+enter a number: 12
+<type 's tr'>
+>>>
+
+answer = raw_inpu t("Type in a number: " )
+some thing = raw_inpu t()
+answer = int(some thing)
+answer = int(raw_inpu t())
+
+>>> firs t = 'Warren'
+>>> las t = 'Sande'
+>>> prin t firs t + las t
+WarrenSande
+>>> firs t = 'Warren '
+>>> prin t firs t + ' ' + las t
+Warren Sande
+
+Download from Wow! eBook <www.wowebook.com>

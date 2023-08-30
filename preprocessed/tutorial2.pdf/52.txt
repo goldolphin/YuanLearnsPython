@@ -1,0 +1,26 @@
+【PG】28z = (a +3) ** 2 + 30speed = 2.853197e-15(2+5)*37
+
+【PG】CHAPTER 3
+Basic Math
+When we first tried using Python in interactive mode, we saw that it can do simple arithme -
+tic. Now we’re going to see what else Python can do with numbers and math. You might not 
+realize it, but math is everywhere! Especially in programming, math is used all the time. 
+That doesn’t mean you have to be a math whiz to learn program -
+ming, but think about it. Every game has a score of some kind 
+that has to be added up. Graphics are drawn on the screen 
+using numbers to figure out the positions and col-
+ors. Moving objects have a direction and speed, 
+which are described with numbers. Almost 
+any interesting program is going to use 
+numbers and math in 
+some way. So let’s 
+learn some basics 
+about math and 
+numbers in 
+Python.
+
+【PG】By the way, a lot of what we will learn here applies to other programming 
+languages, and to other programs like spreadsheets. It’s not only Python that 
+does math this way.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

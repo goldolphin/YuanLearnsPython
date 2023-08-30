@@ -1,0 +1,29 @@
+【PG】 CHAPTER  1 Getting Started
+Hey, I didn't see 
+the orange color on
+pront  like I did 
+on print.If it doesn’t work
+If you made a mistake, you might see something like this:
+That error message means you typed something that Python
+didn’t understand. In this example, print  is misspelled pront , and
+Python doesn’t know what to do with that. If that happens to you,
+try again and make sure you type it exactly like in the example.
+        Тhat’s right. That’s because 
+        print  is a Python keyword, 
+        and pront  is  not.
+
+【PG】 Interacting with Python
+What you just did was use Python in interactive mode. You typed a command (an instruc -
+tion), and Python executed  it immediately.
+Let’s try something else in interactive mode. Type this at the prompt:
+You should get this:>>> pron t "Hello World!"
+SyntaxError: invalid syn tax
+>>>
+>>> prin t 5 + 3
+8
+>>>A keyword is a special word that 
+is part of the Python language 
+(also known as a reserved word).
+Executing a command, instruction, or program is just a 
+fancy way of saying “running” it, or “making it happen.”
+Download from Wow! eBook <www.wowebook.com>

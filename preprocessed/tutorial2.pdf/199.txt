@@ -1,0 +1,31 @@
+【PG】Chapter 14 Objects
+
+【PG】Imagine we’re making a game where the player can pick up various things along the way, like food, money, or clothing. We could make a class called GameObject. The GameObject class would have attributes like  name  (for example, “coin” , “apple” , or “hat”) and methods like pickUp() (which would add the object to the player’s collection of objects). All game objects would have these common methods and attributes.
+
+【PG】Then, we could make a subclass for coins. The Coin class would be derived from GameObject. It would inherit the attributes and methods of GameObject, so the Coin class would automatically have a name attribute and a pickUp() method. The Coin class would also need a value attribute (how much the coin is worth) and a spend() method (so you could use the coin to buy something).
+
+【PG】Let’s see what the code might look like for these classes:
+
+【PG】Thinking ahead
+
+【PG】In the last example, we didn’t put any real code in the methods, just some comments explaining what the methods would do. It’s a way of planning or thinking ahead for what you’ll add later. The actual code would depend on how the game worked. Programmers often do this as a way to organize their thoughts when they’re writing more complex code. The “empty” functions or methods are called code stubs.
+
+【PG】If you tried to run the previous example, you’d get an error, because a function definition can’t be empty.
+
+【PG】class GameObject:
+        def __init__(self, name):
+                self.name = name
+
+        def pickUp(self, player):
+                # put code here to add the object to the player's collection
+
+【PG】class Coin(GameObject):
+        def __init__(self, value):
+                GameObject.__init__(self, "coin")
+                self.value = value
+
+        def spend(self, buyer, seller):
+                # put code here to remove the coin from the buyer's money and
+                # add it to the seller's money
+
+【PG】Defines GameObject class Coin is a subclass of GameObject In __init__(), inherit GameObject’s init and add stuff to it A new spend() method for the Coin class Download from Wow! eBook <www.wowebook.com>

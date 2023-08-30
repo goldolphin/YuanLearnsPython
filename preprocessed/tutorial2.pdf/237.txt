@@ -1,0 +1,42 @@
+【PG】213 CHAPTER  16 Graphics
+impor t pygame, sys
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+my_ball = pygame.image.load( 'beach_ball.png' )
+x = 50
+y = 50
+x_speed = 10
+y_speed = 10        
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+    pygame. time.delay(20)
+    pygame.draw.rec t(screen, [255,255,255], [x, y, 90, 90], 0)  
+    x = x + x_speed
+    y = y + y_speed 
+    if x > screen.ge t_wid th() - 90  or  x < 0:
+        x_speed = - x_speed
+    if y > screen.ge t_heigh t() - 90 or y < 0:               
+        y_speed = -y_speed                                  
+    screen.bli t(my_ball, [x, y])
+    pygame.display.flip()
+pygame.qui t()
+
+【PG】We added lines 9 ( y_speed = 10 ), 18 (y = y + y_speed ), 21 (if y > screen.get_height() - 90 or y < 0: ), and 22 ( y_speed = -y_speed ) to the previous program. Try it now and see how it works!
+
+【PG】If we want to slow down the ball, there are a couple of ways to do it: 
+■We can reduce the speed variables ( x_speed  and y_speed ). This reduces how far the ball moves on each animation step, so the motion will also be smoother. 
+■We could also increase the delay setting. In listing 16.15, it’s 20. That is measured in milliseconds, which is thousandths of a second. So each time through the loop, the program waits for 0.02 seconds. If we increase this number, the motion will slow down. If we decrease it, the motion will speed up. 
+Try playing around with the speed and delay to see the effects. 
+
+【PG】Wrapping the ball
+Now let’s look at the second option for keeping the ball moving. Instead of bouncing it off the side of the screen, we’re going to wrap  it around. That means when the ball disappears off the right side of the screen, it’ll reappear on the left side. 
+
+【PG】Listing 16.15 Bouncing a beach ball in 2-D
+Add code for y-speed (vertical motion)
+Add code for y-speed (vertical motion)
+Bounces ball off top or bottom of window
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,33 @@
+【PG】Chapter 18 A New Kind of Input—Events
+
+【PG】We already have the Pygame event loop running (the while loop). That loop is looking for a special event called QUIT:
+
+【PG】The pygame.event.get() method gets a list of all the events from the event queue. The for loop iterates through each event in the list, and if it sees the QUIT event, it sets running to False, which causes the while loop to exit, and the program ends. So now you have the whole story on how the “click the X to end the program” code works.
+
+【PG】For this example, though, we also want to detect a different type of event. We want to know when a key is pressed, so we need to look for the KEYDOWN event. We need something like this:
+
+【PG】Because we already have an if statement, we can just add another condition with elif, like you learned in chapter 7:
+
+【PG】What “something” do we want to do when a key is pressed? We said that, if the up arrow was pressed, we’d make the ball move up, and if the down arrow was pressed, we’d move it down. So we could do something like this:
+
+【PG】while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        elif event.type == pygame.KEYDOWN:
+            #do something
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP:
+                my_ball.rect.top = my_ball.rect.top - 10
+            elif event.key == pygame.K_DOWN:
+                my_ball.rect.top = my_ball.rect.top + 10
+
+【PG】This is the new part where we detect the key press:
+  Makes the ball move up by 10 pixels
+  Makes the ball move down by 10 pixels
+
+【PG】Download from Wow! eBook <www.wowebook.com>

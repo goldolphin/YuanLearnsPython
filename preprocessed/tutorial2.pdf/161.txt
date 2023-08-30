@@ -1,0 +1,13 @@
+【PG】Chapter 12 Collecting Things Together—Lists and Dictionaries
+
+【PG】A Python dictionary  is a way of associating two things to each other. These two things are called the key and the value . Each item or entry in a dictionary has a key and a value. You will hear these referred to as key-value pairs . A dictionary is a collection of key-value pairs. 
+
+【PG】A simple example is a list of phone numbers. Let’s say you want to keep a list of your friends’ phone numbers. You’re going to use their first names to look up the numbers. (Hopefully none of your friends have the same first name.) The name would be the key (the thing you’ll use to look up the information), and the phone number would be the value  (the thing you’ll look up).
+
+【PG】Here’s one way to create a Python dictionary to store names and phone numbers. First, let’s create the empty dictionary: This looks very similar to the way you create a list, except you use curly brackets (also called curly braces  or sometimes just braces ) instead of the square brackets you use for lists.
+
+【PG】Then, let’s add an entry: If we then display our dictionary, it looks like this: The key is listed first, followed by a colon, and then the value. The quotes are there because both the key and the value happen to be strings in this case (they don’t have to be).
+
+【PG】Another way to do the same thing is>>> phoneNumbers = {} >>> phoneNumbers[ "John"] = "555-1234" >>> prin t phoneNumbers {'John': '555-1234'} >>> phoneNumbers = { "John": "555-1234" }Bob   444-4321 Jenny   867-5309 John   555-1234 Mary   555-6789
+
+【PG】Download from Wow! eBook <www.wowebook.com>

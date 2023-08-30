@@ -1,0 +1,24 @@
+【PG】Chapter 12 Collecting Things Together—Lists and Dictionaries
+
+【PG】new_li st = original_li st
+Hey, when you made a copy of the list, you used new_li st = original_li st[:] instead of just original_li st. Why did we need the extra slice thing at the end?
+
+【PG】I’m very glad you asked that, Carter. If you remember wayyyyy back when we first talked about names and variables (in chapter 2), we said that when you do something like name1 = name2, you’re just making a new name for the same thing.
+
+【PG】Remember this picture?
+
+【PG】So giving something another name just adds a new tag to the same thing. In Carter’s example, new_list and original_list both refer to the same list. You can change the list (for example, you can sort it) by using either name. But there is still only one list. It looks like this:
+
+【PG】We sorted new, but original also got sorted, because new and original are two different names for the same list. There are not two different lists.
+
+【PG】original = [5,2,3,1,4]
+new = original
+original 
+new 
+original 
+new 
+
+【PG】5,2,3,1,4 
+1,2,3,4,5 
+new. sort()
+Download from Wow! eBook <www.wowebook.com>

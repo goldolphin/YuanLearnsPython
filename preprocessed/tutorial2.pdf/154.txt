@@ -1,0 +1,32 @@
+【PG】 Hello World!
+
+【PG】 Sorting in reverse order
+
+【PG】 There are two ways to get a list sorted in reverse order. One is to sort the list the normal way and then reverse  the sorted list, like this:
+Here you saw a new list method called reverse() , which reverses the order of items in a list.
+
+【PG】 The other way is to add a parameter to sort()  to make it sort in descending order (from largest to smallest):
+The parameter is called reverse , and it does exactly what you’d expect—it makes the list sort in reverse order.
+
+【PG】 Remember that all the sorting and reversing we just talked about modifies the original list. That means your original order is lost. If you want to preserve the original order and sort a copy  of the list, you could use slice notation, which we talked about earlier in this chapter, to make a copy—another list equal to the original:
+>>> le tters = ['d', 'a', 'e', 'c', 'b']
+>>> le tters.sor t()
+>>> prin t letters
+['a', 'b', 'c', 'd', 'e']
+>>> le tters.reverse()
+>>> prin t letters
+['e', 'd', 'c', 'b', 'a']
+>>> le tters = ['d', 'a', 'e', 'c', 'b']
+>>> le tters.sor t (reverse = True)
+>>> prin t letters
+['e', 'd', 'c', 'b', 'a']
+>>> original_lis t = ['Tom', 'James', 'Sarah', 'Fred']
+>>> new_lis t = original_lis t[:]
+>>> new_lis t.sor t()
+>>> prin t original_lis t
+['Tom', 'James', 'Sarah', 'Fred']
+>>> prin t new_lis t
+
+【PG】['Fred', 'James', 'Sarah', 'Tom']
+
+【PG】 Download from Wow! eBook <www.wowebook.com>

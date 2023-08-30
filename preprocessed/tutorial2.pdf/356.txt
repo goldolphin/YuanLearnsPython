@@ -1,0 +1,59 @@
+【PG】332 Hello World!
+
+【PG】We use self.pieces_shown to keep track of how many pieces of the hangman we’re 
+showing. If all the pieces are showing, we use a dialog box to tell the player he’s lost.
+
+【PG】Checking the letter guesses
+One of the trickiest parts of this program is checking the player’s guessed letter to see if it 
+appears in the secret word. What makes it tricky is that the letter could appear more than 
+once in the word. For example, if the secret word is lever , and the player guesses e, you have 
+to reveal both the second and fourth letters because they’re both e.
+
+【PG】We have a couple of functions that help us do this. The find_letters()  function finds all the 
+places a particular letter appears in a word and returns a list of those positions. For example, 
+for the letter e and the word lever , it would return [1, 3] , because the letter e appears at index 
+1 and index 3 in the string. (Remember that the indices start at 0.) Here’s the code:
+
+【PG】The replace_letters()  function takes the list from find_letters()  and replaces the 
+dashes at those positions with the correct letter. In our example (the letter e in “lever”), it 
+would replace -----  with -e-e- . It shows the player where the correctly guessed letters 
+appear in the word, and leaves the rest as dashes. Here’s the code:
+
+【PG】Then, when the player makes a letter guess, we use the two functions we just defined, 
+find_letters()  and replace_letters() :
+
+def find_le tters(le tter, a_s tring):
+    loca tions = []    
+    s tart = 0
+    while a_string.find(le tter, s tart, len(a_s tring)) != -1:
+        loca tion = a_s tring.find(le tter, s tart, len(a_s tring))
+        loca tions.append(loca tion)   
+        s tart = loca tion + 1   
+    return loca tions
+
+def replace_le tters(s tring, loca tions, le tter):
+    new_s tring = ''
+    for i in range (0, len(string)):
+        if i in loca tions:
+            new_s tring = new_s tring + le tter
+        else:
+            new_s tring = new_s tring + s tring[i]
+    return new_s tring
+
+if len(guess) == 1:                    
+            if guess in self.curren tword:                       
+                loca tions = find_le tters(guess, self.curren tword)        
+                self.word.se tText(replace_le tters(str(self.word. text()),
+                                    loca tions,guess))
+                if str(self.word. text()) == self.curren tword:
+                    self.win()               
+            else:
+                self.wrong()
+
+【PG】Checks where letter appears
+【PG】Replaces dashes with letter
+【PG】Checks if letter is in word
+【PG】Are we guessing a single letter?
+【PG】Checks where letter appears
+【PG】Replaces dashes with letter
+【PG】Checks if no dashes left (which means we won!)

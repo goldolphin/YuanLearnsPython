@@ -1,0 +1,27 @@
+【PG】264 Hello World!
+More wacky sounds
+
+【PG】Now that we have the hit sound when the ball hits the paddle, let’s add a few other 
+sounds. We’ll add sounds for these things:
+■When the ball hits the side walls
+■When the ball hits the top wall and the player scores a point
+■When the player misses the ball and the ball hits the bottom 
+■When a new life starts
+■When the game ends
+
+【PG】First we need to create sound objects for all of these. You can put the code anywhere after 
+pygame.mixer.init()  but before the while  loop:
+I picked the volume levels by just trying it out to see what sounded right. You can set them to 
+whatever you like. And remember to copy all the sound files to wherever you’re saving your 
+code. All of these sounds can be found in the \examples\sounds  folder or on the website.
+
+【PG】Now we need to add the play()  methods to the places where these events occur. The 
+hit_wall  sound should happen whenever we hit the sides of the window. We detect this in 
+the ball’s move()  method, and we reverse the ball’s x-speed (to make the ball “bounce” off 
+the sides). In the original listing 18.5, this is in line 14:
+if self.rect.left < 0 or self.rect.right > screen.get_width():
+So when we reverse direction, we can also play our sound. The code looks like this:
+
+【PG】We can do the same thing for the get_point  sound. Just a little farther down in the ball’s 
+move()  method, we detect the ball hitting the top of the window. That’s where we bounce 
+the ball off the window by reversing the ball’s y-speed. The code change looks like this:

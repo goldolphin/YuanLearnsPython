@@ -1,0 +1,35 @@
+【PG】118 Hello World!
+
+【PG】If I asked you to write down your lucky numbers, you might write this:
+In Python, you’d write this:
+
+【PG】Both family  and luckyNumbers  are examples of Python lists, and the individual things 
+inside lists are called items . As you can see, lists in Python aren’t much different from lists 
+you make in everyday life. Lists use square brackets to show where the list starts and ends, 
+and they use commas to separate the items inside. 
+
+【PG】Creating a list
+Both family  and luckyNumbers  are variables. We said before that you can assign different 
+kinds of values to variables. We have already used them for numbers and strings, and they 
+can also be assigned a list. 
+You create a list like you create any other variable—by assigning something to it, just like 
+we did with luckyNumbers . You can also create an empty list, like this:
+There are no items inside the square brackets, so the list is empty. But what good is an 
+empty list? Why would you want to create one?
+
+【PG】Well, quite often, you don’t know ahead of time what’s going to be in a list. You don’t know 
+how many items will be in it, or what those items will be. You just know you’ll be using a list 
+to hold them. Once you have an empty list, the program can add things to it. So how do you 
+do that?
+
+【PG】Adding things to a list
+To add things to a list, you use append() . Try this in interactive mode:
+You’ll get this result:luckyNumbers = [2, 7, 14, 26, 30]
+newLis t = []
+>>> friends = []
+>>> friends.append( 'David')
+>>> prin t friends
+['David']Makes a new, empty list
+Adds an item, 
+"David", to the list
+Download from Wow! eBook <www.wowebook.com>

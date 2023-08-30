@@ -1,0 +1,55 @@
+【PG】247 CHAPTER  18 A New Kind of Input—Events
+【PG】the ball (so when it’s going down and hits the paddle, it will bounce and start going up). 
+The code looks like this:
+We also have to remember to redraw things every time through the loop. If we put this all 
+together, we get a very basic Pong-like program. Here’s the complete code (so far).
+
+impor t pygame, sys 
+from pygame.locals impor t * 
+class MyBallClass(pygame.spri te.Spri te): 
+    def __ini t__(self, image_file, speed, loca tion):                    
+        pygame.spri te.Spri te.__ini t__(self)                             
+        self.image = pygame.image.load(image_file)                     
+        self.rec t = self.image.ge t_rec t()                               
+        self.rec t.lef t, self.rec t.top = loca tion                       
+        self.speed = speed                                              
+                                                                      
+    def move(self):                                                     
+        self.rec t = self.rec t.move(self.speed)                      
+        if self.rec t.lef t < 0 or self.rec t.righ t > screen.ge t_wid th(): 
+            self.speed[0] = -self.speed[0]                          
+                                                                   
+        if self.rec t.top <= 0 :          
+            self.speed[1] = -self.speed[1]    
+class MyPaddleClass(pygame.spri te.Spri te):                    
+    def __ini t__(self, loca tion = [0,0]):                       
+        pygame.spri te.Spri te.__ini t__(self)                       
+        image_surface = pygame.surface.Surface([100, 20])      
+        image_surface.fill([0,0,0])                              
+        self.image = image_surface.conver t()                      
+        self.rec t = self.image.ge t_rec t()                         
+        self.rec t.lef t, self.rec t.top = loca tion                 
+pygame.ini t()                                                   
+screen = pygame.display.se t_mode([640,480])                 
+clock = pygame. time.Clock()                                     
+ball_speed = [10, 5]                                             
+myBall = MyBallClass( 'wackyball.bmp' , ball_speed, [50, 50]) 
+ballGroup = pygame.spri te.Group(myBall)                        
+paddle = MyPaddleClass([270, 400])                              
+running = True 
+
+【PG】while running:      
+    clock. tick(30) 
+    screen.fill([255, 255, 255]) if pygame.spri te.spri tecollide(paddle, ballGroup, False):
+    myBall.speed[1] = -myBall.speed[1]
+
+【PG】Listing 18.4 The first version of PyPong
+【PG】Moves the ball (bounces
+it off top and sides)The ball class definition
+【PG】The paddle 
+class definition
+【PG】Initializes Pygame, 
+clock, ball, paddle
+【PG】The start of the 
+main while loop
+【PG】Download from Wow! eBook <www.wowebook.com>

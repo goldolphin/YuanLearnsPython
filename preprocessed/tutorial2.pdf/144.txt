@@ -1,0 +1,38 @@
+【PG】
+
+Hello World!
+Hey, you're 
+not getting off 
+that easy!
+
+【PG】
+Lists can hold anything
+Lists can hold any kind of data that Python can store. That includes numbers, strings, 
+objects, and even other lists. The items in a list don’t have to be the same type or kind of 
+thing. That means a single list can hold both numbers and strings, for example. A list could 
+look like this:
+Let’s make a new list with something simple, like the letters of the alphabet, so it’s easier to 
+see what’s going on as we learn about lists. Type this in interactive mode:
+
+【PG】
+Getting items from a list
+You can get single items from a list by their index number. The list index starts from 0, so 
+the first item in our list is letters[0] :
+Let’s try another one:
+
+【PG】
+Why does the index start from 0, not 1?
+That’s a question a lot of programmers, engineers, and 
+computer scientists have argued about since computers 
+were invented. I’m not going to get in the middle of 
+that argument, so let’s just say the answer is 
+“because, ” and move on …
+
+【PG】
+my_lis t = [5, 10, 23.76, 'Hello', myTeacher, 7, ano ther_lis t]
+>>> le tters = ['a', 'b', 'c', 'd', 'e']
+>>> prin t letters[0]
+a
+>>> prin t letters[3]
+
+Download from Wow! eBook <www.wowebook.com>

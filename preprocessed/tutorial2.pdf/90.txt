@@ -1,0 +1,24 @@
+【PG】Hello World!
+
+【PG】Here are some questions Python can ask to test something:
+■Are two things equal?
+■Is one thing less than another?
+■Is one thing greater than another?
+
+【PG】But wait a minute, “got the right answer” isn’t one of the tests you can do, at least not 
+directly. That means you need to describe the test in a way Python can understand. 
+When we want to know if Tim got the right answer, we’d probably know the correct answer, as well as Tim’s answer. We could write something like this:
+If Tim had the correct answer, then the two variables would be equal, and the condition would be true. If he had the wrong answer, the two variables would not be equal, and the condition would be false.
+
+【PG】Python uses the keyword if to test conditions, like this:
+if timsAnswer == correc tAnswer:
+    prin t "You go t it righ t!" 
+    score = score + 1
+prin t "Thanks for playing."True
+Fal
+se
+
+【PG】Doing tests and making decisions based on the results is called branching. The program decides which way to go, or which branch to follow, based on the result of the test.
+These lines form a “block” of code because they’re indented from the lines above and below. 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,49 @@
+【PG】204 Hello World!
+【PG】Connect the dots, again
+
+Remember those connect-the-dots puzzles you did when you were young? Here’s a Pygame 
+version.
+
+The program in listing 16.9 creates a shape using the draw.lines()  function and a list of 
+points. To reveal the secret picture, type in the program. There’s no cheating this time! This 
+one isn’t in the \examples  folder—you have to type it in if you want to see the mystery 
+picture. But typing in all the numbers can be a bit tedious, so you can find the dots  list in a 
+text file in the \examples  folder or on the website.
+ 
+impor t pygame, sys
+pygame.ini t()
+dots = [[221, 432], [225, 331], [133, 342], [141, 310],
+        [51, 230],  [74, 217],  [58, 153],  [114, 164],
+        [123, 135], [176, 190], [159, 77],  [193, 93],
+        [230, 28],  [267, 93],  [301, 77],  [284, 190], 
+        [327, 135], [336, 164], [402, 153], [386, 217], 
+        [409, 230], [319, 310], [327, 342], [233, 331],  
+        [237, 432]]
+        
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+pygame.draw.lines(screen, [255,0,0], True, do ts, 2) 
+pygame.display.flip()
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()
+
+【PG】Drawing point-by-point
+
+Let’s go back to drawing point-by-point for a moment. It seems kind of silly to draw a tiny 
+circle or rectangle when all we want to do is change the color of one pixel. Instead of 
+using the draw  functions, you can access each individual pixel on a surface with the 
+Surface.set_at()  method. You tell it what pixel you want to set, and what color 
+to set it:
+
+If we use this line of code in our sine wave example (in place of line 8 in listing 16.7), it looks 
+the same as when we used one-pixel-wide rectangles.
+
+Listing 16.9 Connect-the-dots mystery picture
+screen.se t_at([x, y], [0, 0, 0])This time 
+closed=True
+
+【PG】Download from Wow! eBook <www.wowebook.com>

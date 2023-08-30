@@ -1,0 +1,38 @@
+【PG】234 Hello World!
+【PG】event —happens. When an event does happen, they spring into action, doing whatever is 
+necessary to handle  the event. 
+
+【PG】A good example of this is the Windows operating system (or any other GUI). If you turn on 
+your Windows computer, it will just sit there once it’s done booting up. No programs will 
+start, and you won’t see the mouse cursor zipping around the screen. But if you start 
+moving or clicking the mouse, things begin to happen. The mouse cursor moves on the 
+screen, the Start menu pops up, or whatever.
+
+【PG】The event loop
+In order for an event-driven program to “see” events happening, it has to be “looking” for 
+them. The program must constantly scan the part of the computer’s memory that’s used 
+to signal when an event has happened. It does this over and over again, as long as the 
+program is running. Back in chapter 8, you learned how programs do things over and over 
+again—they use a loop . The special loop that keeps looking for events is called an event loop .
+In the Pygame programs we have been making in the last two chapters, there was always a 
+while  loop at the end. We said that this loop ran the whole time the program was running. 
+That while  loop is Pygame’s event loop. (There’s the first piece of the puzzle about how the 
+exit code works.)
+
+【PG】The event queue
+All these events happen whenever somebody moves or clicks the mouse or presses a key. 
+Where do they go? In the last section, I said that the event loop constantly scans part of the 
+memory. The part of memory where events are stored is called the event queue . 
+The event queue is a list of all the events that have happened, in the order they happened. 
+
+【PG】Event handlers
+If you’re writing a GUI program or a game, the program has to know whenever the user 
+presses a key or moves the mouse. Those presses, clicks, and mouse moves are all events , 
+and the program needs to know what to do with them. It has to handle  them. A part of a 
+program that handles a certain kind of event is called an event handler .The word queue is pronounced “cue.” In everyday use, it means 
+a waiting line.
+In programming, queue usually means a list of things that 
+have arrived in a particular order or that will be used in a 
+particular order.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

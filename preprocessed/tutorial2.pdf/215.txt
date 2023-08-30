@@ -1,0 +1,37 @@
+【PG】191 CHAPTER  16 Graphics
+Run the listing, and you should see a Pygame window that works properly and closes when 
+you try to close it.
+
+【PG】How exactly does the code in that while  loop work? It uses the Pygame event loop . But we’re 
+going to save that topic for chapter 18, where we talk all about events in Pygame.
+
+【PG】Drawing in the window
+Now we have a Pygame window that stays open until we close it—and closes gracefully 
+when we do. The [640, 480] in the third line of listing 16.2 is the size of our window: 
+640 pixels wide by 480 pixels high. Let’s start drawing some graphics in there. Change your 
+program so it looks like this.
+
+impor t pygame, sys
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255,255,255])               
+pygame.draw.circle(screen, [255,0,0],[100,100], 30, 0) 
+pygame.display.flip()   
+
+【PG】running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()
+
+【PG】Listing 16.3 Drawing a circle
+Fills the window 
+with a white 
+background
+Add these 
+three lines
+Draws a 
+circleFlips your monitor 
+over… Just kidding!
+Download from Wow! eBook <www.wowebook.com>

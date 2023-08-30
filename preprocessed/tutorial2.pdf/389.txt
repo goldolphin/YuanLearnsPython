@@ -1,0 +1,54 @@
+【PG】365 CHAPTER  24 Computer Simulations
+
+【PG】class Thro ttleClass(pygame.spri te.Spri te):                          
+    def __ini t__(self, loca tion = [0,0]):                           
+        pygame.spri te.Spri te.__ini t__(self)                         
+        image_surface = pygame.surface.Surface([30, 10])           
+        image_surface.fill([128,128,128])                         
+        self.image = image_surface.conver t()                    
+        self.rec t = self.image.ge t_rec t()                     
+        self.rec t.lef t, self.rec t.cen tery = loca tion 
+        
+【PG】def calcula te_veloci ty():                                               
+    global thrus t, fuel, veloci ty, del ta_v, heigh t, y_pos              
+    del ta_t = 1/fps                      
+    thrus t = (500 - myThro ttle.rec t.cen tery) * 5.0            
+    fuel -= thrus t /(10 * fps)                                
+    if fuel < 0:  fuel = 0.0                                       
+    if fuel < 0.1:  thrus t = 0.0                                         
+    del ta_v = del ta_t * (-gravi ty + 200 * thrus t / (ship_mass + fuel)) 
+    veloci ty = veloci ty + del ta_v    
+    del ta_h = veloci ty * del ta_t                                        
+    heigh t = heigh t + del ta_h                                          
+    y_pos = ground - (heigh t * (ground - s tart) / 2000) - 90        
+    
+【PG】def display_s tats():
+    v_s tr = "veloci ty: %i m/s" % veloci ty                             
+    h_s tr = "heigh t:   %.1f" % heigh t                                 
+    t_str = "thrus t:   %i" % thrus t                                   
+    a_s tr = "accelera tion: %.1f" % (del ta_v * fps)                    
+    f_s tr = "fuel:  %i" % fuel                                        
+    v_fon t = pygame.fon t.Fon t(None, 26)                              
+    v_surf = v_fon t.render(v_s tr, 1, (255, 255, 255)) 
+    screen.bli t(v_surf, [10, 50])                                     
+    a_fon t = pygame.fon t.Fon t(None, 26)                              
+    a_surf = a_fon t.render(a_s tr, 1, (255, 255, 255))                 
+    screen.bli t(a_surf, [10, 100])                                    
+    h_fon t = pygame.fon t.Fon t(None, 26)                               
+    h_surf = h_fon t.render(h_s tr, 1, (255, 255, 255))                
+    screen.bli t(h_surf, [10, 150])                                    
+    t_fon t = pygame.fon t.Fon t(None, 26)                               
+    t_surf = t_fon t.render( t_str, 1, (255, 255, 255))                
+    screen.bli t(t_surf, [10, 200])                                    
+    f_fon t = pygame.fon t.Fon t(None, 26)                               
+    f_surf = f_fon t.render(f_s tr, 1, (255, 255, 255))                
+    screen.bli t(f_surf, [60, 300])                                    
+    
+【PG】def display_flames():  
+    flame_size = thrus t / 15                                          
+    for i in range (2):                                             
+        s tartx = 252 - 10 + i * 19                                   
+        s tarty = y_pos + 83                                           
+        pygame.draw.polygon(screen, [255, 109, 14], [(s tartx, s tarty),
+                                       (s tartx + 4, s tarty + flame_size),
+                                       (s tartx + 8, s tarty)], 0)

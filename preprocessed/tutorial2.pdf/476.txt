@@ -1,0 +1,70 @@
+【PG】452 Hello World!
+
+【PG】13.7 Trying to modify a global variable inside a function 156
+
+【PG】14.1 Creating a simple Ball class 163
+14.2 Using the Ball class 164
+14.3 Adding an _init_() method 165
+14.4 Using __str__() to change how the object prints 166
+14.5 Start of our hot dog program 169
+14.6 HotDog class with cook(), add_condiments(), and _str_() 171
+
+【PG】15.1 Creating a module 179
+15.2 Using a module 180
+15.3 Putting your program to sleep 186
+
+【PG】16.1 Making a Pygame window 190
+16.2 Making the Pygame window work property 190
+16.3 Drawing a circle 191
+16.4 Putting the circle in the middle of the window 196
+16.5 Using draw.rect to make art 199
+16.6 Modern art with color 200
+16.7 Drawing curves using a lot of small rectangles 201
+16.8 A well-connected sine wave 202
+16.9 Connect-the-dots mystery picture 204
+16.10 Displaying a beach ball image in a Pygame window 205
+16.11 Trying to move a beach ball 208
+16.12 Trying to move a beach ball again 209
+16.13 Moving a beach ball image smoothly 210
+16.14 Bouncing a beach ball 212
+16.15 Bouncing a beach ball in 2-D 213
+16.16 Moving a beach ball image with wrapping 214
+
+【PG】17.1 Using sprites to put multiple ball images on the screen 219
+17.2 A program for moving balls around using sprites 222
+17.3 Collision detection using a sprite group instead of a list 224
+17.4 Using Clock and get_fps() in the beach ball program 230
+
+【PG】18.1 Bouncing ball program, with sprites and Clock.tick() 235
+18.2 Bouncing ball with up and down arrow keys 238
+18.3 Using a timer event to move the ball up and down 243
+18.4 The first version of PyPong 247
+18.5 Final PyPong code 252
+
+【PG】19.1 Trying out sounds in Pygame 259
+19.2 Playing music 259
+19.3 Music and sound with volume adjustment 260
+19.4 Waiting for the end of the song 262
+19.5 PyPong with sound and music 268
+
+【PG】20.1 PyQt minimum code required 277
+20.2 Adding an event handler for the button from listing 20.1 278
+20.3 Temperature-conversion program 285
+20.4 Complete temperature-conversion program with menus 289
+
+【PG】21.1 A program to print squares and cubes 297
+
+【PG】22.1 Opening and reading from a file 320
+22.2 Using readline() more than once 321
+22.3 Using append mode 325
+22.4 Using write mode on a new file 326
+22.5 Using write mode on an existing file 326
+22.6 Using pickle to store a list to a file 328
+22.7 Unpickling using load() 329
+22.8 The whole hangman.py program 333
+
+【PG】23.1 Rolling a single 11-sided die 1,000 times 339
+23.2 Rolling two 6-sided dice 1,000 times 340
+23.3 Looking for 10 heads in a row 343
+
+【PG】Download from Wow! eBook <www.wowebook.com>

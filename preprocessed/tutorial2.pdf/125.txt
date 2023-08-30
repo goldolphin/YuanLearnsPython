@@ -1,0 +1,73 @@
+【PG】101 CHAPTER  10 Game Time
+
+【PG】                                        
+    def move(self, speed):                                           
+        self.rec t.cen terx = self.rec t.cen terx + speed[0]             
+        if self.rec t.cen terx < 20:  self.rec t.cen terx = 20           
+        if self.rec t.cen terx > 620: self.rec t.cen terx = 620      
+
+【PG】class ObstacleClass(pygame.spri te.Spri te):                             
+    def __ini t__(self, image_file, loca tion, type):                    
+        pygame.spri te.Spri te.__ini t__(self)                            
+        self.image_file = image_file                                  
+        self.image = pygame.image.load(image_file)                    
+        self.rec t = self.image.ge t_rec t()                             
+        self.rec t.cen ter = loca tion                                    
+        self.type = type                                               
+        self.passed = False                               
+    def upda te(self):                                               
+        global speed                                              
+        self.rec t.cen tery -= speed[1]          
+        if self.rec t.cen tery < -32:         
+            self.kill()    
+
+【PG】def crea te_map():                                                   
+    global obstacles                                               
+    loca tions = []                                                 
+    for i in range(10):                                           
+        row = random.randin t(0, 9)                                 
+        col = random.randin t(0, 9)                                 
+        loca tion  = [col * 64 + 20, row * 64 + 20 + 640]          
+        if not (loca tion in loca tions):                             
+            loca tions.append(loca tion)                            
+            type = random.choice([ "tree", "flag"])                 
+            if type == "tree": img = "skier_ tree.png"              
+            elif type == "flag":  img = "skier_flag.png"            
+            obs tacle = Obs tacleClass(img, loca tion, type)          
+            obs tacles.add(obs tacle)                     
+    
+【PG】def anima te():                                            
+    screen.fill([255, 255, 255])                           
+    obs tacles.draw(screen)                                   
+    screen.bli t(skier.image, skier.rec t)                    
+    screen.bli t(score_ text, [10, 10])                       
+    pygame.display.flip() 
+
+【PG】pygame.ini t()                                               
+screen = pygame.display.se t_mode([640,640])                
+clock = pygame. time.Clock()                                
+skier = SkierClass()                                       
+speed = [0, 6]                                             
+obstacles = pygame.spri te.Group()                           
+map_posi tion = 0                                           
+poin ts = 0                                                  
+crea te_map()                                               
+font = pygame.fon t.Fon t(None, 50)                         
+running = True
+【PG】while running:                               
+   Moves skier 
+left and right
+Creates trees 
+and flags
+Makes scenery 
+scroll up
+Deletes obstacles that have 
+scrolled off the top of the screen
+Creates one screen 
+full of random trees 
+and flags
+Redraws screen
+Gets everything 
+ready
+Starts main loop
+Download from Wow! eBook <www.wowebook.com>

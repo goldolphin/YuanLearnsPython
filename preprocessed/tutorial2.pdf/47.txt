@@ -1,0 +1,45 @@
+【PG】23 CHAPTER 2 Remember This: Memory and Variables
+
+【PG】Without the quotes, the 5 and 3 were treated as numbers, so we got the sum. With quotes, 
+the ‘5’ and ‘3’ were treated as strings, so we got the two characters “added” together, or ‘53’ . 
+You can also add strings of letters together, as you saw in chapter 1:
+
+【PG】Notice that, when you add two strings together like this, there is no space between them. 
+They get jammed right together. 
+
+【PG】Long strings
+If you want to have a string that spans more than one line, you have to use a special kind of 
+string called a triple-quoted string . Here is what it looks like:
+This kind of string starts and ends with three quote marks. The quote marks can be double 
+or single quotes, so you could also do it this way:
+Triple-quoted strings can be very useful when you have several lines of text that you want 
+to display together, and you don’t want to use a separate string for each line.>>> prin t "cat" + "dog"
+catdog
+long_s tring = """Sing a song of sixpence, a pocke t full of rye,
+Four and twenty blackbirds baked in a pie.
+When the pie was opened the birds began to sing.
+Wasn' t that a dain ty dish to se t before the king?"""
+long_s tring = '''Sing a song of sixpence, a pocke t full of rye,
+Four and twenty blackbirds baked in a pie.
+When the pie was opened the birds began to sing.
+Wasn' t that a dain ty dish to se t before the king?'''
+
+【PG】Concatenate
+It’s not really correct to say “added” when talking about 
+strings (like we just did). When you put characters or 
+strings together to make a longer string, there is a 
+special name for it. Instead of “adding” (which is only 
+for numbers), it is called concatenation . This sounds 
+like kon-kat-en-ay-shun. 
+We say that you concatenate  two strings.
+
+【PG】Concatenate
+It’s not really correct to say “added” when talking about
+strings (like we just did). When you put characters or
+strings together to make a longer string, there is a 
+special name for it. Instead of “adding” (which is only 
+for numbers), it is called concatenation . This sounds
+like kon-kat-en-ay-shun.
+We say that you concatenate  two strings.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

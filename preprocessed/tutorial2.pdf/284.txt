@@ -1,0 +1,43 @@
+【PG】260 Hello World!
+Like some video 
+games that have their 
+own volume control.I don’t know about you, but it seemed a bit loud to me. I had to turn the volume way down 
+on my computer. Let’s find out how to control the sound volume in your programs.
+
+【PG】Controlling volume 
+You can control the volume of 
+sound on your computer by using 
+the volume controls. In Windows, 
+this is done with the little speaker 
+icon in the system tray. That setting 
+controls the volume of all the 
+sounds on your computer. You might also have a volume knob on the speakers themselves. 
+
+【PG】But you can also control the volume that Pygame sends to your computer’s sound card. 
+And the good thing is, you can control the 
+volume of each sound individually—like making 
+the music quieter and the “splat” a bit louder, if you want.
+
+【PG】For music, you use pygame.mixer.music.set_volume() . For 
+sounds, there’s a set_volume()  method for each sound 
+object. In our first example, splat  was the name of our sound 
+object, so we’d use splat.set_volume() . The volume is a 
+floating-point number from 0 to 1; for example, 0.5 would be 50 
+percent or half volume. 
+
+【PG】Now let’s try having music and sound in the same program. How about playing a song and 
+then playing the “splat” sound at the end. We’ll also turn down the volume of our sound a 
+bit. We’ll set the music to 30 percent and the “splat” sound to 50 percent. The code should 
+look something like this.
+import pygame, sys
+pygame.init()
+pygame.mixer.init()
+screen = pygame.display.set_mode([640,480])
+pygame.time.delay(1000)
+pygame.mixer.music.load( "bg_music.mp3" )
+pygame.mixer.music.set_volume(0.30) 
+pygame.mixer.music.play()Listing 19.3 Music and sound with volume adjustment
+
+【PG】Adjusts the volume 
+of the music
+Download from Wow! eBook <www.wowebook.com>

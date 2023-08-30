@@ -1,0 +1,11 @@
+【PG】266 Hello World!
+
+【PG】I noticed something else. Even after the game is over, it sounds like the ball is still bouncing off the walls!?At the end of the game, the bye sound and the splat sound started playing over and over!
+
+【PG】Oops! We forgot something. The code that plays the “bye” sound and the “splat” sound is in the main while loop, which doesn’t stop until the Pygame window is closed, so it keeps playing over and over as long as the while loop runs! We need to add something to make sure it only plays once.
+
+【PG】One thing we can use is the variable called done , which tells us when the game is over. We can change our code to look like this: Try that and make sure it works.
+
+【PG】Hmmm … We might need to think about this one a bit. We have our done variable to tell us when the game is over, and we’re using that to know when to play our “bye” sound and also when to display the final message with the score. But what’s the ball doing?if myBall.rect.top >= screen.get_rect().bottom: if not done: splat.play() lives = lives - 1 if lives == 0: if not done: bye.play() Makes sure the sound only plays once
+
+【PG】Download from Wow! eBook <www.wowebook.com>

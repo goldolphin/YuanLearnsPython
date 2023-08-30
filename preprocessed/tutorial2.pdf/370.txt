@@ -1,0 +1,51 @@
+【PG】346 Hello World!
+
+【PG】We should add two more attributes to make our card object easy to use in a program. When the program needs to print the card, it’ll want to print something like “4H” or “4 of Hearts. ” For the face cards, it would be something like “JD” or “Jack of Diamonds. ” We’ll add the attributes short_name and long_name, so the program can easily print either a short or long description of the card.
+
+【PG】Let’s make a class for a playing card. The code is shown in the next listing.
+
+class Card:
+    def __init__(self, suit_id, rank_id):
+        self.rank_id = rank_id
+        self.suit_id = suit_id
+        if self.rank_id == 1:
+            self.rank = "Ace"
+            self.value = 1
+        elif self.rank_id == 11:
+            self.rank = "Jack"
+            self.value = 10
+        elif self.rank_id == 12:
+            self.rank = "Queen"
+            self.value = 10
+        elif self.rank_id == 13:
+            self.rank = "King"
+            self.value = 10
+        elif 2 <= self.rank_id <= 10:
+            self.rank = str(self.rank_id)
+            self.value = self.rank_id
+        else:
+            self.rank = "RankError"
+            self.value = -1
+            
+        if self.suit_id == 1:
+            self.suit = "Diamonds"
+        elif self.suit_id == 2:
+            self.suit = "Hearts"
+        elif self.suit_id == 3:
+            self.suit = "Spades"
+        elif self.suit_id == 4:
+            self.suit = "Clubs"
+        else:
+            self.suit = "SuitError"
+        self.short_name = self.rank[0] + self.suit[0]
+        if self.rank == '10':
+            self.short_name = self.rank + self.suit[0]
+        self.long_name = self.rank + " of " + self.suit
+        
+【PG】The error checking in the code b makes sure rank_id and suit_id are in range and that they are integers. If they aren’t, you would see something like “7 of SuitError” or “RankError of Clubs” when displaying the card in a program.
+
+【PG】Listing 23.4 The Card class
+Creates rank and value attributes
+Creates suit attribute
+Performs some error checking
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,57 @@
+【PG】96 Hello World!
+
+【PG】Multiline comments
+Sometimes you want to use more than one line for comments. You can use several lines 
+with the # character at the start of each, like this:
+Multiline comments are good for making sections of your code stand out visually when you’re 
+reading it. You can use them to describe what’s going on in a section of code. A multiline 
+comment at the start of a program could list the author’s name, the name of the program, the 
+date it was written or updated, and any other information you think might be useful.
+
+【PG】Triple-quoted strings
+There is another way to make something that acts like a multiline comment in Python. 
+You can just make a triple-quoted string with no name. Remember from chapter 2 that 
+a triple-quoted string is a string that can span multiple lines. So you can do this:
+Because the string has no name and the program isn’t “doing” anything with the string, it 
+has no effect on the way the program runs. So it acts like a comment, even though it isn’t a 
+comment in strict Python terms.
+
+【PG】# ***************
+# This is a program to illus trate how commen ts are used in Py thon
+# The row of s tars is used to visually separa te the commen ts
+# from the res t of the code
+# ***************
+""" Here is a commen t that is on mul tiple
+lines, using a triple-quo ted s tring.
+It's no t really a commen t, bu t it
+behaves like one.
+"""
+
+【PG】#!/bin/enpvython
+#Paginateatextfiel,addingaheader
+dna
+oof
+teirmportsys,time,string
+#Ifnoargumentsweregiven,printahelpfulmessage
+iflen(sys.argv)!=2:print'Usage: pyprintfilename'sys.exit(0)
+class
+#Incrementthepagecount,andresetthelinecount
+self.header_written=1;self.count=1;
+#ifnoargumentsweregiven,gggprint
+printself.page=self.page+1
+PnirterFormatter:
+self.header_written=0
+
+【PG】#Thinking like a (Python) programmer
+Some Python programmers say that you 
+shouldn’t use triple-quoted strings 
+(multiline strings) as comments. Personally, 
+I don’t see any good reason not to. The 
+reason for comments is to make your code 
+more readable and understandable. If you find 
+that triple-quoted strings are convenient 
+for you, it’s more likely you’ll put 
+comments in your code, which is a 
+good thing.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

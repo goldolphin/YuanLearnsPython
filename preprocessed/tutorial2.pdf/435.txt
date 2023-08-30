@@ -1,0 +1,15 @@
+【PG】411 CHAPTER 27 What’s Next?
+
+【PG】Other game programming (non-Python)
+If you’re interested in making games, you might want to look at the Unity game engine. Unity encompasses several things, including a 3D game engine, a physics engine, and ways to write scripts. One of the languages you can use for scripting is called Boo, which has a lot of similarities to Python.
+
+【PG】Some games that you might already play let you write code to extend the game. For example, Roblox ( www.roblox.com ) lets you write code in a language called Lua. You can get mods for Minecraft ( www.minecraft.com ) that let you write code in Lua or Java. (By the way, the popular game Angry Birds is written in Lua.)
+
+【PG】Keep it BASIC
+One thing you might notice if you look for books at the library is that quite a few programming books for kids were written in the 1980s, and many of them use a language called BASIC, which was very popular back then. (You can still get versions of BASIC for modern computers.) These books tend to have lots of games in them. Something that might be fun to try is to take a game from one of the old BASIC books and try to rewrite it using Python. You could use Pygame or PyQt to help with graphics if you need to. I guarantee you’d learn a lot by doing that!
+
+【PG】Mobile apps
+If you’re interested in making apps for the iPhone or Android phones, there are a couple of ways to do it. You can write iPhone apps using HTML5 and CSS using a tool called PhoneGap (phonegap.com ). If you do it that way, you can also easily port the app to another phone operating system (like Android or Blackberry OS). The other way is to write native iPhone code using a language called Objective-C and a library called Cocoa Touch. The editor you use for this is called Xcode, and it only runs on Mac OS X. Apps for Android are mostly written in Java, but you can use libraries like PhoneGap to program in other languages.
+
+【PG】Look around
+There are many, many other topics to explore and resources that can help you in different areas of programming in general and Python in particular. You can always check at your library or bookstore for books that have information on a topic you’re interested in. You can also do a web search on the topic to see if there are online tutorials or Python modules to help do what you want to do.

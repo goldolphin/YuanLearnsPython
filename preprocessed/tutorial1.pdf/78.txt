@@ -1,0 +1,40 @@
+【PG】第 5章　输　　入
+【PG】#!/bin/envpython
+【PG】#Paginateatextfile,addingaheaderandfooter
+【PG】importsys,time,string
+【PG】#Ifnoargumentsweregiven,printahelpfulmessage
+【PG】iflen(sys.argv)!=2:print'Usage:pyprintfilename'
+【PG】sys.exit(0)
+【PG】classPrinterFormatter:
+【PG】    #Incrementthepagecount,andresetthelinecount
+【PG】    self.header_written=1;self.count=1;self.page=self.page+1
+【PG】    def #Incrementthepagecount,andresetthelinecount
+【PG】    self.header_written=1;self.count=1;self.page=self.page+1write_header(self):
+【PG】    #print>>>Helloif#print>>>Helloif#
+【PG】    print>>>Helloif#
+【PG】    像程序员一样思考
+【PG】根据你使用的操作系统 （Windows、Linux或
+【PG】Mac OS X ） ，运行代码清单 5-4中的程序时 ，你可
+【PG】能会在每行末尾看到小方块或类似 \r的字符。这
+【PG】是因为，不同的操作系统使用不同的方法来指示文本
+【PG】行的结束 。Windows（和之前的 MS-DOS）使用
+【PG】两个字符 ：CR（回车）和LF（换行）来表
+【PG】示。Linux只使用 LF，Mac OS X 只使用 CR。
+【PG】有些程序可以处理所有这些情况， 不过有
+【PG】些程序（ 比如 IDLE）看到行结束符与它期望的不一
+【PG】致时，就会不知所措。 发生这种情况时， 它们会显示
+【PG】一个小方块， 表示“我不理解这个字符 ”。你可能会
+【PG】看到这样的小方块， 也可能看不到， 这取决于你在
+【PG】使用什么操作系统， 还取决于你如何运行程序（ 使
+【PG】用IDLE还是采用另外某种方法） 。
+【PG】你学到了什么
+【PG】在这一章，你学到了以下内容。
+【PG】用raw_input() 输入文本。
+【PG】向raw_input() 增加一个提示消息。
+【PG】结合int()和ﬂoat()使用raw_input() 输入数字。
+【PG】使用逗号将多行打印到一行上。
+【PG】测试题
+【PG】1. 对于下面这行代码：answer = raw _input()
+【PG】   如果用户键入 12，answer的数据类型是什么？是字符串还是一个数？
+【PG】2. 怎么让raw_input() 打印一个提示消息？
+【PG】图灵社区会员 FreeLink 专享 尊重版权

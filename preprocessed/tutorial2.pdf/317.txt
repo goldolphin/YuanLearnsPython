@@ -1,0 +1,26 @@
+【PG】CHAPTER 2 1
+Print Formatting and Strings
+
+【PG】Waaaayyyy back in chapter 1, you learned about the print  statement. It was the first com -
+mand you ever used in Python. You’ve also seen (in chapter 5) that you can put a comma at 
+the end of a print  statement to make Python keep printing the next thing on the same line. 
+(At least, in Python 2. Not in Python 3.) You used that to make prompts for raw_input() , 
+until you learned the shortcut of putting the prompt right in the raw_input()  function. 
+
+【PG】In this chapter, we’re going to look at print formatting —ways to make your program’s output 
+look the way you want it to. We’ll look at things like
+■Starting new lines (and when you should do that)
+■Spacing things out horizontally (and lining things up in columns)
+■Printing variables in the middle of a string
+■Formatting numbers in integer, decimal, or E-notation format, and setting how many 
+decimal places they should have
+
+【PG】You’ll also learn about some of Python’s built-in methods for working with strings. These 
+methods can do things like
+■Splitting strings into smaller parts
+■Joining strings together
+■Searching for strings
+■Searching within strings
+■Removing parts of strings
+■Changing case (uppercase and lowercase)
+Download from Wow! eBook <www.wowebook.com>

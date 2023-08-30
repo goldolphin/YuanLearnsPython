@@ -1,0 +1,15 @@
+【PG】255 CHAPTER 18 A New Kind of Input—Events
+Test your knowledge
+1What are two kinds of events that a program can respond to?
+2What do you call the piece of code that deals with an event?
+3What is the name of the event type that Pygame uses to detect keys being pressed?
+4What attribute of a MOUSEMOVE event tells you where in the window the mouse is located?
+5How do you find out what the next available event number is in Pygame (for example, if you want to add a user event)?
+6How do you create a timer to generate timer events in Pygame?
+7What kind of object is used to display text in a Pygame window?
+8What are the three steps to make text appear in a Pygame window?
+
+【PG】Try it out
+1Did you notice anything strange that happens when the ball hits the side of the paddle - paddle instead of the top? It kind of bounces along through the middle of the paddle for a while. Can you figure out why? Can you fix it? Give it a try before looking at my solution in the answer section.
+2Try rewriting the program (either listing 18.4 or 18.5) so that there’s some randomness to the ball’s bounces. You might change the way the ball bounces off the paddle or the walls, make the speed random, or something else you can think of. (You saw random.randint() and random.random() in chapter 15, so you know how to generate random numbers, both integers and floats.)
+Download from Wow! eBook <www.wowebook.com>

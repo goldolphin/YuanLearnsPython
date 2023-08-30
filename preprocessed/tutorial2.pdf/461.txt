@@ -1,0 +1,43 @@
+【PG】437  APPENDIX  C Answers to Self-Test Questions
+Chapter 14: Objects
+Test your knowledge
+1To define a new object type, you use the class  keyword.
+2Attributes are the “things you know” about an object. They are variables contained in 
+an object.
+3Methods are the actions you can do to an object. They are functions contained in an 
+object.
+4A class is just a definition or blueprint for an object. An instance is what you get when 
+you make an object from the blueprint.
+5The name self  is usually used as the instance reference in an object method.
+6Polymorphism is the ability to have two or more methods with the same name on dif -
+ferent objects. The methods can behave differently depending on which object they 
+belong to.
+7Inheritance is the ability of objects to acquire attributes and methods from their “par -
+ents. ” The “child” class (which is called a subclass or derived class) gets all the attri -
+butes and methods of the parent and can also have attributes and methods that are 
+not shared with the parent.
+
+【PG】Try it out
+1A class for a bank account might look like this:
+class BankAccoun t:
+    def __ini t__(self, acc t_number, acc t_name):
+        self.acc t_number = acc t_number
+        self.acc t_name = acc t_name
+        self.balance = 0.0
+    def displayBalance(self):
+        prin t "The accoun t balance is:" , self.balance
+    def deposi t(self, amoun t):
+        self.balance = self.balance + amoun t
+        prin t "You deposi ted", amoun t
+        prin t "The new balance is:" , self.balance
+        
+    def withdraw(self, amoun t):
+        if self.balance >= amoun t:
+            self.balance = self.balance - amoun t
+            prin t "You wi thdrew", amoun t
+            prin t "The new balance is:" , self.balance
+        else:
+            prin t "You tried to wi thdraw", amoun t
+            prin t "The accoun t balance is:" , self.balance
+            prin t "Withdrawal denied. No t enough funds."
+Download from Wow! eBook <www.wowebook.com>

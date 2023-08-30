@@ -1,0 +1,114 @@
+【PG】456 Hello World!
+【PG】binary xii, 42, 121
+binary files 322–323
+binary format 314
+bits 42, 314
+blit 207, 219, 236, 364
+block of code 67
+Boo 411
+Boolean expression 127
+braces 137
+branching 66
+break 91
+button 274
+buttonbox() 58
+byte 314
+
+【PG】C
+calling a function 143, 145
+Cancel 59
+card game, Crazy Eights 348
+case, changing 311
+case-sensitive 21, 26
+chaining operators 69
+changing case 311
+chevrons, >> 327
+choice() 339, 344
+choicebox() 59
+class 162, 167
+Clock 228
+date 369
+derived 174
+families 174
+group 224
+inheritance 174
+polymorphism 173
+Sprite 218
+subclass 174
+time 369
+timedelta 370
+class keyword 278
+clear() 140
+closing a file, close() 321, 325
+code 4
+code stubs 175
+coin flipping 342
+collection 117
+collision detection 223, 246
+pixel-perfect 226
+colon 123
+colon symbol, 67, 144
+colors
+primary 194
+RGB 194
+combination 110
+combine() 370
+command line 3
+commenting out 98comments 94
+end of line 95
+multiline 96
+single line 95
+
+【PG】comparison operator 69
+component
+controls 281
+widgets 281
+components 274
+computer animation 207
+computer card games 348
+computer generated
+decks of cards 337
+dice 337
+random events 337
+computer memory 16
+computer model 361
+computer simulation 361
+concatenation 295, 307
+condition 65–66
+conditional loop 78, 89
+connect-the-dots mystery picture 204
+console 3
+constants 106
+continue 91
+controls 274, 281
+convention 6
+converting data 40
+copying a list 132
+counter 343
+counting loop 79, 81
+Crazy Eights 348
+creating a function 143
+creating a module 179
+creating and using a function that returns a 
+value 153
+CTRL-C 80
+curly braces/brackets 137
+current time 368
+current working directory 317
+D
+data hiding 172–173
+data structure 134
+date class 369
+datetime 368
+now() 370
+parameters 369
+timedelta 370
+debugging 286, 370
+decimal number 23
+decision tree 111
+decisions 65
+deck of cards
+drawing a card 343
+memory 344
+picking a card 344
+Download from Wow! eBook <www.wowebook.com>

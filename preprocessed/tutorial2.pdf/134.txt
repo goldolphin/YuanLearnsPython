@@ -1,0 +1,36 @@
+【PG】110 Hello World!
+【PG】medic!Frances? F rances? 
+Talk to me! 
+Frances...
+Ooh, that hu rt!...
+
+【PG】Printing the values of variables can help you in lots of 
+situations—not just with loops. It’s one of the most 
+common debugging methods.
+
+【PG】Using nested loops
+So what can we do with all these nested loops? Well, one of the things they’re good for is 
+figuring out all the possible permutations  and combinations  of a series of decisions. 
+
+【PG】Permutation  is a mathematical term that means a unique way of 
+combining a set of things. Combination  means something very 
+similar. The difference is that, with a combination, the order 
+doesn’t matter, but with a permutation, the order does matter.
+
+【PG】If I asked you to pick three numbers from 1 to 20, you could 
+pick 
+  • 5, 8, 14
+  • 2, 12, 20
+and so on. If we tried to make a list of all the permutations of 
+three numbers from 1 to 20, these two would be separate entries:
+  • 5, 8, 14 
+  • 8, 5, 14
+That’s because, with permutations, the order in which they 
+appear matters. If we made a list of all the combinations, all 
+these would count as a single entry:
+  • 5, 8, 14 
+  • 8, 5, 14
+  • 8, 14, 5
+That’s because order doesn’t matter for combinations.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

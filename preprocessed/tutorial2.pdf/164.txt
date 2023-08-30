@@ -1,0 +1,37 @@
+【PG】140 Hello World!
+
+【PG】What if you want to display the items in order of the values instead of the keys? In our phone numbers example, that would mean sorting by the phone numbers, from lowest number to highest number. Well, a dictionary is really a one-way lookup. It is meant to look up values using the keys, not the other way around. So it’s a little more difficult to sort by the values. It’s possible—it just takes a bit more work:
+
+【PG】Here, once we got the sorted list of values, we took each value and found its key by looping through all the keys until we found the one that was associated to that value.
+
+【PG】Here are a few other things you can do with dictionaries:
+■Delete an item using  del:
+■Delete all items (clear the dictionary) using clear() :
+■Find out if a key exists in the dictionary using in:
+
+【PG】Dictionaries are used in lots of Python code. This certainly isn’t a comprehensive overview of Python dictionaries. But it should give you the general idea so you can start using them in your code and recognize them when you see them in other code.
+
+【PG】>>> for value in sorted(phoneNumbers.values()):
+        for key in phoneNumbers.keys():
+            if phoneNumbers[key] == value:
+                prin t key, phoneNumbers[key]
+            
+Bob 444-4321
+John 555-1234
+Mary 555-6789
+Jenny 867-5309
+
+【PG】>>> del phoneNumbers[ "John"]
+>>> prin t phoneNumbers
+{'Bob': '444-4321', 'Mary': '555-6789', 'Jenny': '867-5309'}
+>>> phoneNumbers.clear()
+>>> prin t phoneNumbers
+{}
+>>> phoneNumbers = { 'Bob': '444-4321' , 'Mary': '555-6789' , 'Jenny': '867-5309' }
+>>> "Bob" in phoneNumbers
+True
+>>> "Barb" in phoneNumbers
+
+False
+
+【PG】Download from Wow! eBook <www.wowebook.com>

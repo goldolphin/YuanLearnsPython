@@ -1,0 +1,21 @@
+【PG】310 Hello World!
+
+【PG】The in keyword just tells you whether the substring is somewhere  in the string you’re checking. It doesn’t tell you where it is. For that, you need the index()  method. Like with lists, index()  tells you where in the bigger string the smaller string starts. Here’s an example:
+
+【PG】If you run this code, you’ll get the following output:
+The word Maple  starts at position 4 of the string “657 Maple Lane” . Just like with lists, the indexes (or positions) of letters within a string start at 0, so the M is at index 4. Notice that, before we tried using index() , we first checked to see if the substring “Maple” was in the bigger string. That’s because, if you use index()  and the thing you’re looking for is not in the string, you’ll get an error. Checking with in first ensures that you won’t get an error. This is the same thing we did with lists in chapter 12.
+
+【PG】Removing part of a string
+Quite often you’ll want to remove or strip off  part of a string. Usually, you’ll want to strip something off the end, like a newline character or some extra spaces. Python has a string method called strip()  to do exactly this. You just tell it what you want stripped off, like this:
+
+>>> addr1 = '657 Maple Lane'
+>>> if 'Maple' in addr1:
+        posi tion = addr1.index( 'Maple')
+        prin t "found 'Maple' a t index", posi tion
+found 'Maple' a t index 4
+>>> name = 'Warren Sande'
+>>> shor t_name = name.s trip('de')
+>>> shor t_name
+'Warren San'
+
+【PG】When you’re looking for a smaller string, like “Maple”, within a bigger string, like “657 Maple Lane”, the smaller string is called a substring .

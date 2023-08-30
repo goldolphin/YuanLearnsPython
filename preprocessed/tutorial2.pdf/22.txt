@@ -1,0 +1,19 @@
+【PG】xxii ABOUT THIS BOOK
+I’m Carter.
+I haven't noticed anything unusual... yet!
+Just wanted to say hi!Carter says
+I wanted to make sure this book was good for kids—fun and easy to understand. Luckily, I had some help. Carter is a kid who loves computers and wants to learn more about them. So he helped me to make sure I got this book right. When Carter noticed something funny or unusual, or something that didn’t make sense, we show it like this, at right:
+
+【PG】What’s new in the Second Edition
+First, let’s talk about what didn’t change. We decided to stay with Python 2 for Hello World!, Second Edition , rather than switching to Python 3. The reasons for this are explained in Chapter 1.
+Now, here’s what’s new in the Second Edition, compared to the First Edition:
+■Everything is in color! This includes colorized code listings, which should make reading and understanding the code even easier.
+■We added notes throughout the book explaining the differences between Python 2 and Python 3. 
+■We added a section on Python dictionaries in Chapter 12.
+■For the GUI programing in Chapter 20, we switched from PythonCard, which is no longer supported, to PyQt, which is much more widely used. PyQt is also used for the Hangman program in Chapter 22 and the Virtual Pet program in Chapter 24.
+■We added a chapter (25) explaining in detail the Skier program, which is presented without much explanation in Chapter 10.
+■We added a chapter (26) about writing an artificial intelligence (AI) robot that competes against other AIs in a simple battle game.
+■We added an appendix listing differences between Python 2 and Python 3.
+■We added a list of code listings in the back of the book, before the index.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

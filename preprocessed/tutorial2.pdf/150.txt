@@ -1,0 +1,41 @@
+【PG】126 Hello World!
+
+【PG】What happened here? Well, we said before that append()  adds one item to a list. How did it 
+add three? It didn’t. It added one item, which happens to be another list containing three items. 
+That’s why we got the extra set of square brackets inside our list. Remember that a list can 
+hold anything, including other lists. That’s what we’ve got.
+
+【PG】insert()  works the same way as append() , except that you tell it where to put the new 
+item. append()  always puts it at the end.
+
+【PG】Deleting from a list
+
+【PG】How do you delete or remove things from a list? There are three ways: remove() , del, 
+and pop() .
+
+【PG】Deleting with remove()
+
+【PG】remove()  deletes the item you choose from the list and throws it away:
+You don’t need to know where in the list the item is. You just need to know it’s there 
+somewhere. If you try to remove something that isn’t in the list, you’ll get an error:
+So how can you find out if a list contains a certain item? That’s coming right up. First, let’s 
+look at the other ways to delete something from a list.
+
+【PG】Deleting with del
+
+【PG】del lets you delete an item from the list using its index, like this:
+Here, we deleted the fourth item (index 3), which was the letter d.>>> le tters = ['a', 'b', 'c', 'd', 'e']
+>>> le tters.remove( 'c')
+>>> prin t letters
+['a', 'b', 'd', 'e']
+>>> le tters.remove( 'f')
+Traceback (mos t recen t call las t):
+  File "<pyshell#32>", line 1, in <module>
+    le tters.remove('f')
+ValueError: lis t.remove(x): x no t in lis t
+>>> le tters = ['a', 'b', 'c', 'd', 'e']
+>>> del letters[3]
+>>> prin t letters
+['a', 'b', 'c', 'e']
+
+【PG】Download from Wow! eBook <www.wowebook.com>

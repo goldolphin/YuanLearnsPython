@@ -1,0 +1,24 @@
+【PG】314 Hello World!
+【PG】In this chapter, you’ll see how to open files and how to read  and write them ( get information from them and store  information to them).
+
+【PG】What’s a file?
+Before we start talking about opening, reading, and writing files, we should talk about what a file is. We said that computers store information in binary  format, which just uses 1s and 0s. Each 1 or 0 is called a bit, and a group of eight bits is called a byte . A file is a collection of bytes that has a name and is stored on a hard drive, a CD, a DVD, a flash drive, or some other kind of storage. 
+
+【PG】Files can store many different kinds of information. A file can contain text, pictures, music, computer programs, a list of phone numbers, and so on. Everything that’s stored on your computer’s hard drive is stored as files. Programs are made of one or more files. Your computer’s operating system (Windows, or Mac OS X, or Linux, for example) has many, many files that it needs to run.
+
+【PG】Files have the following properties:
+■A name 
+■A type, which indicates what kind of data is in the file (picture, music, text)
+■A location (where the file is stored)
+■A size (how many bytes are in the file)
+
+【PG】Filenames
+In most operating systems (including Windows), part of the filename is used to tell you what type of data is in the file. Filenames usually have at least one “dot” (the period symbol) in the name. The part after the dot tells you what kind of file it is. That part is called the extension . Here are a few examples:
+■In my_letter.txt , the extension is .txt, which stands for “text, ” so this file probably has text in it.
+■In my_song.mp3 , the extension is .mp3 , which is a kind of sound file.
+■In my_program.exe , the extension is .exe , which stands for “executable. ” As I mentioned way back in chapter 1, “executing” is another word for running a program. So .exe  files are usually programs that you can run.
+■In my_cool_game.py , the extension is .py, which usually means a Python program.
+
+【PG】In Mac OS X, program files (files that contain a program you can run) have  the extension .app , which stands for “application,” which is another word for “program.” 
+
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,35 @@
+【PG】Changing the button
+There are two ways to change the button’s size or 
+position in the window: drag it with the mouse, or 
+change the Size or Position properties. Try both ways of 
+moving and resizing the button to see how they work. 
+To move the button with the mouse, click anywhere on 
+the button and drag it to a new position. To resize it 
+with the mouse, click one of the blue squares around 
+the edge of the button (they are called handles ), and 
+drag an edge or corner of the button to make it bigger 
+or smaller. To resize it using the properties, click the little triangle next to the geometry
+property, and it will expand to show the X, Y, Width , and Height  properties. Just type in 
+different numbers to move or resize the button. 
+You can also change the text that appears on the but -
+ton. Right now the text is the same as the name of the 
+button, but it doesn’t have to be. Let’s change it so the 
+text on the button says I’m a Button! . In the Property 
+Editor, scroll down until you find the property called 
+text . Change the text to I’m a Button! . You can also 
+change the button text by double-clicking the button 
+and editing the text directly on the button. 
+If you look over at the button on the form, it has now changed to say I’m a Button! . But the 
+name of the widget (the objectName property) is still PushButton . That’s how you would 
+refer to it in the code if you wanted to do something with the button.
+
+【PG】Saving the GUI
+Let’s save what we have so far. In PyQt, the description of the GUI is saved in a .ui file. This 
+file has all the information about the window, menu, and widgets. This is the same 
+information that was displayed in property windows on the right side of Qt Designer, and 
+now you need to save it into a file for the PyQt program to use when it runs. 
+To save the UI, go to the File menu and choose Save As , and give the file a name. Let’s call 
+our GUI MyFirstGui . You’ll notice that the file extension is automatically set to .ui. So the UI 
+will be saved as MyFirstGui.ui . Make sure you save it to the folder you want. By default, 
+Designer will save it in the folder where its own files are, which is probably not what you 
+want. Browse to the folder where you save your Python programs before you click Save .

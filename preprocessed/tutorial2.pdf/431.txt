@@ -1,0 +1,18 @@
+【PG】407 CHAPTER  26 Python Battle
+
+【PG】What?! 
+CircleAI
+won again! 
+
+【PG】I guess we’ll need to revise our strategy a little in order to 
+beat CircleAI. CircleAI is so hard to beat because it’s hard to hit. If you 
+try to attack it from the side or back, it will run away before your 
+robot can hit it more than once. Also, because it hugs the wall, 
+there’s only one side you can attack it from. If you try to attack it 
+from the front, it will most likely get the first hit and thus win the 
+game. Even if it’s not the most advanced strategy, CircleAI is really 
+tough to beat. 
+
+【PG】It’s probably possible to devise an AI that can beat CircleAI consistently, but that’s if you 
+know CircleAI is the AI you’re going up against. If you don’t know what the other player is 
+using as a strategy for their AI, it’s even trickier!

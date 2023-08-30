@@ -1,0 +1,49 @@
+【PG】230 Hello World!
+
+【PG】Scaling the frame rate
+
+If you want to be really sure your animation runs at the same speed on every machine, 
+there’s a trick you can do with clock.tick()  and clock.get_fps() . Because you know the 
+speed you want to run at and the speed you’re actually running at, you can adjust, or scale ,
+the speed of your animation according to the speed of the machine.
+
+【PG】For example, let’s say you have clock.tick(30) , which means you’re trying to run at 30 fps. 
+If you use clock.get_fps()  and find you’re only getting 20 fps, you know that objects on 
+the screen are moving slower than you’d like. Because you’re getting fewer frames per 
+second, you have to move your objects farther in each frame to make them appear  to move 
+at the correct speed. You’ll probably have a variable (or attribute) called speed  for your 
+moving objects, which tells them how far to move in each frame. You just need to increase 
+speed  to make up for a slower machine. 
+
+【PG】How much to increase it? You increase it by the ratio of desired fps / actual fps. If your 
+object’s current speed is 10 for the desired 30 fps, and the program is actually running at 
+20 fps, you’d have
+
+【PG】So instead of moving 10 pixels per frame, you’d move the object 15 pixels per frame to 
+make up for the slower frame rate.
+
+【PG】Here’s a listing of the beach ball program using the things we have discussed in the last 
+couple of sections: Clock  and get_fps() .
+impor t sys, pygame                                                     
+from random impor t *                                      
+class MyBallClass(pygame.spri te.Spri te):                               
+    def __ini t__(self, image_file, loca tion, speed):                  
+        pygame.spri te.Spri te.__ini t__(self)                          
+        self.image = pygame.image.load(image_file)                    
+        self.rec t = self.image.ge t_rec t()                             
+        self.rec t.lef t, self.rec t.top = loca tion                     
+        self.speed = speed                                          
+    def move(self):                                                   
+        self.rec t = self.rec t.move(self.speed)                        
+        if self.rec t.lef t < 0 or self.rec t.righ t > wid th:             
+            self.speed[0] = -self.speed[0]                            
+        if self.rec t.top < 0 or self.rec t.bottom > heigh t:            
+            self.speed[1] = -self.speed[1]                        objec t_speed = curren t_speed * (desired fps / ac tual fps)
+objec t_speed = 10 * (30 / 20)
+objec t_speed = 15
+
+【PG】Listing 17.4 Using Clock  and get_fps()  in the beach ball program
+
+【PG】The ball class definition
+
+【PG】Download from Wow! eBook <www.wowebook.com>

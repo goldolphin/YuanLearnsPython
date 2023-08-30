@@ -1,0 +1,39 @@
+【PG】Hello World!
+
+【PG】Our second program
+
+【PG】The first program didn’t do much. It just printed some stuff on the screen. Let’s try something a bit more interesting.
+
+【PG】The code in listing 1.2 is for a simple number-guessing game. Start a new file in the IDLE editor using File > New Window , just like you did the first time. Type in the code from listing 1.2 and then save it. You can call it whatever you want, as long as it ends with .py. NumGuess.py  might be a good name. It’s only 18 lines of Python instructions plus a few blank lines to make it easier to read. It shouldn’t take too long to type in. Don’t worry that we haven’t talked about what this code all means yet. We’ll get to that very soon.
+
+【PG】impor t random
+secre t = random.randin t(1, 99)      
+guess = 0
+tries = 0
+prin t "AHOY!  I'm the Dread Pira te Rober ts, and I have a secre t!"
+prin t "It is a number from 1 to 99.  I'll give you 6 tries. "
+while guess != secre t and tries < 6:                                
+    guess = inpu t("Wha t's yer guess? " )     
+    if guess < secre t:                                              
+        prin t "Too low, ye scurvy dog!"                             
+    elif guess > secre t:                                            
+        prin t "Too high, landlubber!"                               
+                                                                    
+    tries = tries + 1          
+if guess == secre t:                                    
+    prin t "Avas t! Ye go t it!  Found my secre t, ye did!"              
+else:                                                               
+    prin t "No more guesses!  Be tter luck nex t time, ma tey!"         
+    prin t "The secre t number was" , secre t     
+
+【PG】When you’re typing in the code, notice the indenting of the lines after the while instruc - tion and the extra indenting of the lines after if and elif . Also notice the colons at the ends of some of the lines. If you type the colon in the correct place, the editor will help you by indenting the next line for you.
+
+【PG】Listing 1.2 Number-guessing game
+Picks secret number
+Gets player’s guess
+Allows up to
+6 guesses
+Uses up one try
+Prints a message at the end of the game 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,36 @@
+【PG】242 Hello World!
+
+【PG】Pygame has a number of predefined event types. These events are numbered, starting from 
+0, and they also have names to make them easier to remember. You’ve already seen some of 
+them, like MOUSEBUTTONDOWN  and KEYDOWN . There’s also room in Pygame for user-defined
+events. These are events that Pygame has not set aside for anything specific, and you can 
+use them for whatever you want. One of the things they can be used for is timers. 
+
+【PG】To set a timer in Pygame, you use the set_timer()  function, like this:
+EVENT_NUMBER  is the number of the event, and interval  is how often (in milliseconds) the 
+timer will go off and generate an event. 
+
+【PG】What EVENT_NUMBER  should you use? You should use one that Pygame isn’t already using 
+for something else. You can ask Pygame what numbers are already used. Try this in 
+interactive mode:
+This tells us that Pygame is using event numbers from 0 to 23, and the first one available for 
+user events is 24. So we need to pick a number of 24 or higher. How high can we go? Let’s 
+ask Pygame again:
+NUMEVENTS  tells us that the maximum number of event types we can have in Pygame is 32 
+(from 0 to 31). So we have to pick a number of 24 or greater, but less than 32. We could 
+set up our timer like this:
+
+【PG】But if for some reason the value of USEREVENT  changes, the code might not work. It would 
+be better to do it this way:
+If we had to set up another user event, we could use USEREVENT + 1 , and so on. The 1000  in 
+this example means 1,000 milliseconds, which is one second, so this timer will go off once 
+every second. Let’s put this into our bouncing ball program.
+pygame. time.se t_timer(EVENT_NUMBER, in terval)
+>>> impor t pygame
+>>> pygame.USEREVENT
+24
+>>> pygame.NUMEVENTS
+32
+pygame. time.se t_timer(24, 1000)
+pygame. time.se t_timer(pygame.USEREVENT, 1000)
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,10 @@
+【PG】149 CHAPTER  13 Functions
+【PG】What if I wanted to send letters to everyone on my street? The street numbers would have to be different every time.
+【PG】Notice that whatever value we passed to the function was used inside the function and was printed as the name part of the address.
+【PG】If there’s more than one thing that is different every time the function runs, you need more than one argument. That’s what we’re going to talk about next.
+
+【PG】Functions with more than one argument 
+【PG】In listing 13.2, our function had a single argument. But functions can have more than one argument. In fact, they can have as many as you need. Let’s try an example with two arguments, and I think you’ll get the idea. Then you can keep adding as many arguments as you need for the functions in your programs. 
+
+【PG】CALLERFUNCTION
+【PG】Download from Wow! eBook <www.wowebook.com>

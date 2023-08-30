@@ -1,0 +1,63 @@
+【PG】第 8章　转　圈　圈
+【PG】8.1　计数循环
+【PG】第一种循环称为计数循环。 我们还听过有人把它叫做 for循环，因为很多语言
+（包括 Python）在程序中都使用 for关键字来创建这种类型的循环。
+【PG】下面就来尝试使用计数循环的程序 。在IDLE中 使用 File（文件） New（新
+建）命
+令打开一个新的文本编辑器窗口（ 就 像写第一个程序时一样 ） 。然后键入代码
+清单 8-1中的程序 。
+【PG】代码清单 8-1　一个非常简单的 for循环
+for looper in [1, 2, 3, 4, 5]:
+    print "hello"
+【PG】把它保存为 Loop1.py， 运行这个程序（ 可以使用 Run（运行） Run Module
+（
+运行模块）菜单，也可以用快捷键 F5 ） 。
+【PG】你会看到这样的结果：75  CHAPTER  8 Loop the Loop
+【PG】Counting loops
+【PG】The first kind of loop is called a counting loop. You’ll also hear it called a for loop , because 
+many languages, including Python, use the for keyword to create this kind of loop in a 
+program. 
+【PG】Let’s try a program that uses a counting loop. Start a new text editor window in IDLE, using 
+the File > New command (like we did for our first program). Then type in the program in list-
+ing 8.1.
+for looper in [1, 2, 3, 4, 5]:
+    print "hello"
+Save it as Loop1.py  and run it. (You can use the Run > Run Module  menu, or the shortcut of 
+pressing the F5 key.)
+You should see something like this:
+Hey, is there an echo in here? The program 
+printed “hello” five times, even though 
+there was only one print  statement. How? 
+The first line ( for looper in [1, 2, 3, 
+4, 5]: )translated into plain English 
+means this:
+1looper  will start with the value 1 (so 
+looper = 1 ).
+2The loop will do whatever is in the 
+next block  of instructions one time for 
+each value in the list. (The list is those numbers in square brackets.)
+3Each time through the loop, the vari-able 
+looper  is assigned the next value 
+in the list.
+【PG】Listing 8.1  A very simple for loop
+>>> ================ RESTART ================
+>>>hello
+hello
+hellohello
+hello
+>>>
+【PG】Here we go again...嘿，是不是有重复？ 虽然这里只有一个 print
+语句，但程序显示了 5次“hello” 。这是怎
+么做到的？第一行（ for looper in [1, 
+2, 3, 4, 5]: ）翻译成我们的语言就表
+示。
+(1)  变量looper的值从 1开始（所以
+looper = 1 ） 。
+(2)  对应列表中的每一个值 ，这个循环会
+把下一个指令块中的所有工作完成
+一次。 （列表就是中括号中的那些数
+） 。
+(3)  每次执行循环时， 变 量looper会
+赋为这个列表中的下一个值。我们又  
+来了……
+【PG】图灵社区会员 FreeLink 专享 尊重版权

@@ -1,0 +1,23 @@
+【PG】413APPENDIX A
+Variable Naming Rules
+
+【PG】Here are the rules for variable names (also called identifiers):
+■They must begin with either a letter or an underscore character. Following that, you 
+can use an unlimited sequence of letters, numbers, or underscore characters. 
+■The letters can be uppercase or lowercase, and case matters. In other words, Ax is not 
+the same as aX. 
+■The numbers can be any of the digit characters from 0 to 9 inclusive.
+
+【PG】Aside from letters, numbers, and the underscore character, no other characters can be used. 
+Spaces, punctuation, and other characters are not allowed in variable names:
+The only special character that’s allowed is the underscore character. In case you don’t 
+know what that is, here are a couple of examples:
+■first_number = 15
+■student_name = "John"
+The character between first  and number  is the underscore. There’s also one between 
+student  and name . Programmers sometimes use an underscore to separate two words in 
+the name of a variable. Because spaces aren’t allowed in variable names, they use the 
+underscore instead.
+
+【PG】~ ` ! @ # $ % ^ & * ( ) ; - : " ' < > , . ? / { } [ ] + = /
+Download from Wow! eBook <www.wowebook.com>

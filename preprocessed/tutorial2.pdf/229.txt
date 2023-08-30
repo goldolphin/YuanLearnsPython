@@ -1,0 +1,40 @@
+【PG】205 CHAPTER  16 Graphics
+You can also check what color a pixel is already set to with the Surface.get_at()  method. 
+You just pass it the coordinates of the pixel you want to check, like this: pixel_color = 
+screen.get_at([320, 240]) . In this example, screen  was the name of the surface.
+
+【PG】Images
+Drawing shapes, lines, and individual pixels on the screen is one way to do graphics. But 
+sometimes we want to use pictures that we get from somewhere else—maybe from a 
+digital photo, something we downloaded from the Web, or something created in an 
+image-editing program. In Pygame, the simplest way to use images is with the image
+functions.
+
+【PG】Let’s look at an example. We’re going to display an image that is already on your hard drive 
+if you installed Python from the book’s installer. The installer created an images  subfolder in 
+the \examples  folder, and the file we’re going to use for this example is beach_ball.png . 
+So, for example, in Windows, you’d find it at 
+c:\Program Files\helloworld\examples\images\beach_ball.png . 
+You should copy the beach_ball.png  file to wherever 
+you’re saving your Python programs as you work 
+through these examples. That way, Python can easily 
+find it when the program runs. Once you have the 
+beach_ball.png  file in the correct location, type in the 
+program in listing 16.10 and try it.
+impor t pygame, sys
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+my_ball = pygame.image.load( "beach_ball.png" ) 
+screen.bli t(my_ball, [50, 50])              
+pygame.display.flip()
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()Listing 16.10 Displaying a beach ball image in a Pygame windowIf you didn’t use the book’sinstaller, you can downloadbeach_ball.png from thebook’s web site, atwww.helloworldbook2.com.
+
+【PG】These are the only 
+lines that are new
+Download from Wow! eBook <www.wowebook.com>

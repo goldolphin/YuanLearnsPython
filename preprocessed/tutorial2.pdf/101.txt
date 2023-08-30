@@ -1,0 +1,15 @@
+【PG】77 CHAPTER  7 Decisions, Decisions
+■How big is your gas tank, in liters?
+■How full is your tank (in percent—for example, half full = 50)?
+■How many km per liter does your car get?
+The output should look something like this
+or 
+Bonus: Include a 5 liter buffer in your program, in case the fuel gauge isn’t accurate.
+
+【PG】4Make a program where the user has to enter a secret password to use the program. 
+You’ll know the password, of course (because it’ll be in your code). But your friends 
+will have to either ask you, guess the password, or learn enough Python to look 
+at the code and figure it out!
+The program can be anything you want, including one you have already written, or 
+just a simple one that displays a message like “You’re in!” when he enters the right 
+password.

@@ -1,0 +1,44 @@
+【PG】186 Hello World!
+
+【PG】like putting your program to sleep, which is why the function is called sleep() . You tell it 
+how many seconds you want it to sleep.
+
+【PG】The program in the following listing demonstrates how the sleep()  function works. Try 
+typing, saving, and running it, and see what happens.
+
+impor t time
+prin t "How",
+time.sleep(2)
+prin t "are",
+time.sleep(2)
+prin t "you",
+time.sleep(2)
+prin t "today?"
+
+【PG】Notice that, when we called the sleep()  function, we had to put time.  in front of it. That’s 
+because, even though we import ed time , we didn’t make it part of the main program’s 
+namespace. So every time we want to use the sleep()  function, we have to call
+time.sleep() .
+
+【PG】If we tried something like this,
+it wouldn’t work, because sleep()  isn’t in our namespace. We’d get an error message 
+like this:
+
+NameError: name 'sleep' is no t defined
+
+【PG】But if you import it like this,
+that tells Python, “Look for the variable (or function or object) named sleep  in the time
+module, and include it in my namespace. ” Now we could use the sleep()  function without 
+putting time.  in front of it:
+
+Listing 15.3 Putting your program to sleep
+impor t time
+sleep(5)
+
+【PG】from time impor t sleep
+from time impor t sleep
+prin t 'Hello, talk to you again in 5 seconds...'
+sleep(5)
+prin t 'Hi again'
+
+【PG】Download from Wow! eBook <www.wowebook.com>

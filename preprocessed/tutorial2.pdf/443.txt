@@ -1,0 +1,17 @@
+【PG】419APPENDIX C
+Answers to Self-Test Questions
+
+【PG】Here are the answers to the “Test your knowledge” and “Try it out” questions at the end of each chapter. Of course, there’s sometimes more than one right answer, especially with the “Try it out” questions, but you can use these answers to see if you’re on the right track.
+
+【PG】Chapter 1: Getting Started
+
+【PG】Test your knowledge
+1In Windows, start IDLE by opening the Start menu, and, under the Python 2.7 entry, select the IDLE (Python GUI) entry. In Mac OS X, click IDLE in the Dock if you have added the application to the Dock, or double-click IDLE.app in the Python 2.7 folder in the Applications folder. In Linux, it depends on which window manager you’re using, but usually there is some sort of Applications or Programs menu. Note that in Linux, many people don’t use IDLE—they just run Python from the Terminal and use an editor like vi or emacs to edit their code.
+
+【PG】2print displays some text in the output window (the IDLE shell window, in our first examples).
+
+【PG】3The symbol for multiplication in Python is * (the asterisk symbol).
+
+【PG】4When you run a program, IDLE displays this line:
+5“Executing” a program is another way to say “running” a program.>>> ======================= RESTART =======================
+Download from Wow! eBook <www.wowebook.com>

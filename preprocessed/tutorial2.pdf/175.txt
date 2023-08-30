@@ -1,0 +1,17 @@
+【PG】151 CHAPTER  13 Functions
+How many is too many?
+I said before that you can pass as many arguments as you want to a function. That is true, 
+but if your function has more than five or six arguments, it might be time to think of doing 
+things another way. One thing you can do is collect all the arguments in a list and then pass 
+the list to the function. That way, you’re passing a single variable (the list variable), which 
+just happens to contain a bunch of values. It might make your code easier to read. 
+
+【PG】Functions that return a value
+So far, our functions have just been doing stuff for us. But a very useful thing about func -
+tions is that they can also send you something back.
+You have seen that you can send information (arguments) to functions, but functions can 
+also send information back to the caller. The value that comes back from a function is called 
+the result  or return value .CALLERARGUMENTSFUNCTION
+CALLERFUNCTION
+CALLERFUNCTION
+Download from Wow! eBook <www.wowebook.com>

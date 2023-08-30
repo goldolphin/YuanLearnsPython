@@ -1,0 +1,30 @@
+【PG】416 Hello World!
+
+【PG】Instead, in Python 3 you have to do this:
+There are other things you can do with the end argument, but they’re rarely used. You can 
+look them up in the Python 3 documentation if you want.
+
+【PG】You might have noticed that the code coloring on print  is different in Python 3 than in Python 2. That’s because in Python 2, print  is a keyword, but in Python 3, print()  is a function.
+
+【PG】In Python 3, the function that used to be called raw_input()  in Python 2 is now called simply input() . This is the function that returns a string and doesn’t try to do any evaluation of the input string (for example, converting it to an int or float ).
+
+【PG】The function that was called input()  in Python 2, which does try to evaluate the input(convert it to a number if possible), doesn’t exist in Python 3.
+
+【PG】That means instead of writing this (in Python 2)
+you have to write (in Python 3)
+And instead of writing (in Python 2)
+you have to write (in Python 3)
+
+【PG】Integer division
+The third major change in Python 3 is how it handles integer division. Remember the “integer 
+division gotcha” we talked about in chapter 2? That’s where you get this (in Python 2):
+prin t("Hello", end=" ")
+prin t("World! " )
+your_name = raw_inpu t("Enter your name: " )
+your_name = inpu t("Enter your name: " )
+age = inpu t("Enter your age: " )
+age  = int(inpu t("Enter your age: " ))
+>>> prin t 5/2
+2
+
+【PG】Download from Wow! eBook <www.wowebook.com>

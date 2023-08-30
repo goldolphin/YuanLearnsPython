@@ -1,0 +1,11 @@
+【PG】Chapter 2 7
+What’s Next?
+
+【PG】This is the end of Hello World! Computer Programming for Kids and Other Beginners . If you’ve read the whole book and tried the examples, you should have a good basic understanding of programming and some fun things you can do with it.
+
+【PG】This chapter will give you some places to look for more information on programming. There are some resources for programming in general, for Python in particular, for game programming, and a few other things. How you decide to learn more about programming depends on what you want to do with it. You have a start with Python, and many of the things you’ve learned from this book are general programming ideas and concepts that will transfer to other computer languages. How and what you learn depends on the direction you want to go: games? web programming? robotics? (Robots need software to tell them what to do.)
+
+【PG】For younger programmers
+For younger readers, if you’ve enjoyed learning programming with Python, you might also enjoy trying a different approach. Squeak Etoys is a programming “language” for kids that’s almost entirely graphical. You write almost no code, and you make programs by creating graphical objects and modifying their properties and actions. Behind the scenes, your graphical objects are turned into code in a language called Smalltalk. You can find out more about Etoys at squeakland.org. 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

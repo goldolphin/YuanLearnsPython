@@ -1,0 +1,49 @@
+【PG】327 CHAPTER  22 File Input and Output
+
+【PG】I’m a 
+baby dill!I’m a big 
+pickle!
+And I’m a 
+really big 
+pickle!
+We’re being 
+pickled so we can 
+be used later!
+
+【PG】The stuff that was in notes.txt  before is gone. It has been replaced by the new stuff from the 
+program in listing 22.5. 
+
+【PG】Writing to a file using print
+In the last section, we wrote to a file using write() . You can also use print  to write to a file. 
+You still have to open the file in write or append mode, but then you can write to the file 
+using print , like this:
+The two > symbols (which are sometimes called chevrons ) are telling print  to send its 
+output to a file instead of to the screen. This is called redirecting  output. 
+Sometimes it’s more convenient to use print  than write() , because print  does things like 
+automatically converting numbers to strings, and so on. You can decide whether to use 
+print  or write()  to put text into a file.
+
+【PG】Saving your stuff in files: pickle
+In the first part of this chapter, we talked about reading and 
+writing text files. Text files are one way you can store things 
+to the hard drive. But what if you want to store 
+something like a list or an object? 
+Sometimes the items in the list might be 
+strings, but not always. And what about 
+storing things like objects? You might be 
+able to convert all the object’s properties to 
+strings and write them to a text file, but then 
+you’d have to do the opposite to go from the file 
+back to an object. It could get complicated.
+Luckily, Python has a way to make storing things 
+like lists and objects easier. It’s a Python module 
+called pickle . That’s kind of a funny name, but 
+think about it: pickling is a way of preserving 
+food so you can use it later. In Python, you 
+“pickle” your data so you can save it on disk and 
+use it later. Makes sense!
+
+【PG】my_file = open("new_file. txt", 'w')
+prin t >> my_file, "Hello there, neighbor!"
+my_file.close()
+Download from Wow! eBook <www.wowebook.com>

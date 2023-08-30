@@ -1,0 +1,33 @@
+【PG】Chapter 14 Objects
+
+【PG】Now, if we run the program in listing 14.4, here’s what we get:
+That looks a lot more friendly than <__main__.Ball instance at 0x00BB83A0> , don’t you 
+think? All the “magic” methods use two underscores before and two underscores after the 
+name of the method.
+
+【PG】What’s self ? 
+You might have noticed that the term “self” shows up in a few places in the class attributes 
+and method definitions, like this:
+
+【PG】What does self  mean? Well, remember that we said you could use blueprints to build 
+more than one house? You can also use a class to create more than one instance of an 
+object, like this:
+
+【PG】When we call a method for one of these instances, like this,
+the method has to know which instance called it. Is it cartersBall  that needs to bounce, or 
+warrensBall ? The self  argument is what tells the method which object called it. It’s called 
+the instance reference .
+
+【PG】But wait a minute! When we called the method, there was no argument in the parentheses 
+of warrensBall.bounce() , but there’s a self  argument in the method. Where did the self
+argument come from, if we didn’t pass anything? That’s another little bit of “magic” that 
+Python does with objects. When you call a class method, the information about which 
+instance called—the instance reference —is automatically passed to the method. 
+It’s like writing this:
+
+【PG】In this case, we told the bounce()  method which ball to bounce. In fact, this code will work 
+too, because that is exactly what Python does behind the scenes when you write 
+warrensBall.bounce() .
+
+【PG】Creating two instances of the Ball class
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,12 @@
+【PG】Chapter 2 2
+File Input and Output
+
+【PG】Have you ever wondered how your favorite computer game remembers the high scores, even after the computer is turned off? How about your browser remembering your favorite web sites? In this chapter, you’re going to learn how.
+
+【PG】We have talked several times about how programs have three main aspects: input, processing, and output. Up until now, the input has mostly come directly from the user, from the keyboard and mouse. The output has been sent directly to the screen (or the speakers, in the case of sound). But sometimes you need to use input that comes from other sources. Quite often, programs need to use input that’s stored somewhere, rather than entered when the program is running. Some programs need to get their input from a file on the computer’s hard drive. 
+
+【PG】For example, if you made a game of Hangman, your program would need a word list from which to choose the secret word. That list of words would have to be stored somewhere, probably in a “word list” file that goes with the program. The program would need to open this file, read the word list, and pick a word to use.
+
+【PG】The same thing is true for output. Sometimes the output of a program needs to be stored. All the variables that a program uses are temporary—they’re lost when the program stops running. If you want to save some of the information to use later, you have to store it somewhere more permanent, like on the hard drive. For example, if you want to keep a list of high scores for a game, you need to store them in a file so that, next time the program runs, it can read the file and display the scores.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

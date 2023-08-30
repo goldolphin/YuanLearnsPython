@@ -1,0 +1,113 @@
+【PG】458 Hello World!
+file (continued)
+print 327
+properties 314
+reading 320
+readline() 321
+readlines() 320
+replacing 319
+seek() 322
+text files 322
+type 314
+writing 319, 323–324
+file mode
+a324
+r324
+w324
+filenames 314, 319
+
+【PG】flip() (Pygame) 192, 194
+flipping a coin 338
+float 371
+float (data type) 29
+changing to an int 41
+float (print formatting), %f 298
+float() 40, 371
+floating-point number 29, 300
+
+【PG】folders 315
+subfolders 316
+font object (Pygame) 249
+for 79
+for loop 79, 345
+force
+gravity 362
+net 363
+force of gravity 362
+form 273
+format specifiers 304
+format strings 298
+%d 300
+%E, %e 302
+%F, %f 299, 301
+%G, %g 302
+%i299–300
+%s 299
+more than one 303
+format() 304
+forward slash, / 317
+frame 228
+frame rate 228–229
+adjusting 230
+scaling 230
+frames per second 228
+limit 229
+
+【PG】functions 40, 143, 159
+arguments 147, 150
+calling 143, 145
+code stubs 175
+creating 143, defining 143
+more than one argument 149
+multiple arguments 150
+multiple parameters 150
+passing arguments 147
+result 151
+return value 151
+returning a value 152
+
+【PG】games, random 337
+getting input using a choice box (EasyGui) 59
+getting input using an enter box (EasyGui) 60
+getting input using buttons (EasyGui) 58
+global 156
+global namespace 183
+global variables 154, 156
+Graphical User Interface 55, 272, 352
+graphics (Pygame) 189
+erasing 209, 223, 236
+frame rate 228
+frames per second 228
+gravity simulation 362
+greater than sign, 69
+group class 224
+GUI 3, 55, 272, 352
+components 274
+controls 274
+dialog boxes 57
+widgets 274
+
+【PG】handling errors 378
+Hangman 329
+hash tables 139
+hiding data 172–173
+horizontal spacing (print) 296
+hotkeys 290
+
+【PG】identifiers 413
+IDLE 2, 56, 359
+colors 4, 97
+text editor 7
+if66, 72, 104
+images 205
+immutable 133
+import 180
+importing a module 180
+importing a namespace 184
+importing EasyGui 56
+in127, 140, 309
+in scope variables 153
+incrementing a variable, += 25, 35
+indenting 67
+indenting convention 68
+Download from Wow! eBook <www.wowebook.com>

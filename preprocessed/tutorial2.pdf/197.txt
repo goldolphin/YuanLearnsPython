@@ -1,0 +1,28 @@
+【PG】Chapter 14 Objects 
+That would make the hot dog less cooked than it was before. But you can’t uncook  a hot dog! So that doesn’t make sense. Using a method, we can make sure that the cooked_level  only increases and never decreases.
+
+【PG】So far, you have seen that objects have attributes and methods. You have seen how to create objects and how to initialize them with a special method called __init__(). You have also seen another special method called __str__()  that makes objects print more nicely.
+
+【PG】Polymorphism and Inheritance 
+Next, we’re going to look at the two aspects of objects that are probably the most important:  polymorphism  and inheritance. Those are two big long words, but they make objects very useful. I’ll clearly explain what they mean in the next sections. 
+
+【PG】Polymorphism—Same Method, Different Behavior 
+Very simply, polymorphism  means you can have two (or more) methods with the same name for different classes. These methods can behave differently, depending on which class they’re applied to. For example, let’s say you were making a program to practice geometry, and you needed to calculate the area of different shapes, like triangles and squares. You might create two classes, like this: 
+
+class Triangle:
+    def __init__(self, width, height):                         
+        self.width = width                                   
+        self.height = height                                  
+                                                                
+    def getArea(self):                                         
+        area = self.width * self.height / 2.0               
+        return area
+class Square:
+    def __init__(self, size):                       
+        self.size = size                            
+                                                      
+    def getArea(self):                                 
+        area = self.size * self.size             
+        return area
+
+【PG】In programming terms, restricting the access to an object’s data so you can only get it or change it by using methods is called data hiding. Python doesn’t have any way to enforce data hiding, but you can write code that follows this rule if you want to.

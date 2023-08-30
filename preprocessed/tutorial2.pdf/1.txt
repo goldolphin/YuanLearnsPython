@@ -1,0 +1,34 @@
+【PG】Praise for the First Edition of Hello! World
+A great book for little kids and big kids alike.   
+—Gordon Colquhoun, Computer Consultant, Avalon Consulting Services      
+
+【PG】Python for growing-ups.   
+—Dr. John Grayson, Author of Python and Tkinter Programming      
+
+【PG】A fun book to read and learn from!
+—Dr. André Roberge, President, Université Sainte-Anne      
+
+【PG】The authors have created a friendly educational programming book that makes learning fun 
+and painless.
+—Bryan Weingarten, Software Architect      
+
+【PG】I highly recommend this book! 
+—Horst Jens, Python Instructor and Author of Programming While Playing      
+
+【PG】Python is a wonderful language for teaching beginners to program. It is great to see a 
+kid-focused Python book!
+—Jeffrey Elkner, Educator      
+
+【PG】If you teach your child one thing, teach her the golden rule. If you teach her two things, then 
+teach her the golden rule and computer programming. This book is all you need for the latter.
+—Josh Cronemeyer, Senior Software Consultant, Thoughtworks      
+
+【PG】I enjoyed the interaction with Carter in the book … My students are really going to enjoy the 
+Digital Pet program! Reminds me of the Tamagotchi Virtual Pet  that I had years ago.
+—Kari J Stellpflug, Educator, Rochester Public Schools, Rochester MN      
+
+【PG】Computer programming is a powerful tool for children 'to learn learning. ' … Children who 
+engage in programming transfer that kind of learning to other things.
+—Nicholas Negroponte, One Laptop Per Child Project      
+
+【PG】Download from Wow! eBook <www.wowebook.com>

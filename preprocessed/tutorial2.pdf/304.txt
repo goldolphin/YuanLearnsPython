@@ -1,0 +1,21 @@
+【PG】280 Hello World!
+
+【PG】What is self?
+
+In the button_clicked() event handler, there is one parameter: self. Just like when we first talked about objects in chapter 14, self refers to the instance that’s calling the method. In this case, all events come from the background or main window, so it’s the window object that’s calling the event handler. Here, self refers to the main window. You might think that self refers to the component that was clicked, but it doesn’t; it refers to the window containing the component.
+
+【PG】Moving the button
+
+When you want to do something to the button, how do you refer to it? PyQt keeps track of all the widgets in a window. Because you know that self refers to the window and pushButton is the name of the widget, you can use self.pushButton to access that widget. In our example in listing 20.2, we made the button move every time we clicked it. The button’s position in the window is determined by its geometry property, which contains the x, y, width, and height properties. There are two ways to change these properties.
+
+One way is to use a method called setGeometry() to change the geometry properties. The other way (which we used in listing 20.2) is to use the move() method, which changes only the x and y parts of the geometry and leaves the width and height alone. The x-position is the distance from the left side of the window, and the y-position is the distance from the top of the window. The upper-left corner of the window is [0, 0] (just like in Pygame).
+
+When you run this program, you’ll see that, after a few clicks, the button disappears off the bottom-right corner of the window. If you want, you can resize the window (drag the edge or corner) to make it bigger and find the button again. When you’re done, you can close the window by clicking the X in the title bar (or whatever is used to close a window in your operating system).
+
+Notice that, unlike in Pygame, you don’t need to worry about “erasing” the button from its old position and redrawing it in the new position. You just move it. PyQt takes care of all the erasing and redrawing for you.
+
+【PG】More useful GUIs
+
+Our first PyQt GUI was good for looking at the basics of how to make a GUI in PyQt, but it’s not useful, and not much fun either. So, in the rest of this chapter and in chapter 22, we’re going to work on a couple more projects, one small and one a bit bigger, that will let us learn more about using PyQt.
+
+Download from Wow! eBook <www.wowebook.com>

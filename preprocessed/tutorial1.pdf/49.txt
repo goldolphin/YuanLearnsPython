@@ -1,0 +1,30 @@
+【PG】2.5　它们有多“可变” 　　 23
+【PG】长字符串
+如果希望得到一个跨多行的字符串， 必须使用一种特殊的字符串， 称为三重引号字符串（triple-quoted string） ，就像下面这样 ：
+long_string = """Sing a song of sixpence, a pocket full of rye,
+Four and twenty blackbirds baked in a pie.
+When the pie was opened the birds began to sing.Wasn't that a dainty dish to set before the king?"""
+这种字符串以 3个引号开头和结尾。 所用的引号可以是双引号也可以是单引号，
+所以也可以写成下面的形式：
+long_string = '''Sing a song of sixpence, a pocket full of rye,
+Four and twenty blackbirds baked in a pie.When the pie was opened the birds began to sing.Wasn't that a dainty dish to set before the king?'''
+如果希望多行文本显示在一起， 而且你不希望每一行都使用一个单独的字符串，
+在这种情况下，三重引号字符串就非常有用。
+
+【PG】2.5　它们有多“可变”
+变量之所以叫做“ 变量”是有原因的， 就是因为它们是 ……怎么说呢 ……是可
+变的！这 是指你可以改变赋给它们的值。 在Python中，这就要创建一个与原先不同
+的新东西， 并 把旧标签（ 名字）贴到这个新东西上。 上一节中我们就采用这种方式
+改变了MyTeacher 。我们将标签 MyTeacher 从"Mrs.  Goodyear"上取下来， 把 它贴
+到一个新东西 "Mrs.  Tysick"上。这样就为 MyTeacher 赋了一个新值。
+下面再来试一个例子 。还 记得之前创建
+的变量Teacher 吗？嗯，如果你还没有关闭
+IDLE，这个变量就还在。可以检查看看：
+>>> Teacher
+'Mr. Morton'
+没错，确实还在。不过现在可以把它改成其他内容：
+>>> Teacher = 'Mr. Smith'
+>>> Teacher 'Mr. Smith'
+我们创建了一个新东西 "Mr. Smith"，并把它命名为 Teacher 。我们的标签从原
+来的值上取下来，贴到了这个新东西上。不过原来的 "Mr. Morton"怎么样了呢？
+图灵社区会员 FreeLink 专享 尊重版权

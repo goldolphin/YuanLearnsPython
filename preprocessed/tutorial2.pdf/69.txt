@@ -1,0 +1,28 @@
+【PG】Chapter 4 Types of Data
+What did you learn?
+In this chapter, you learned about
+■Converting between types (or, more correctly, creating types from other types): str() , 
+int() , and float()
+■Displaying values directly without using print
+■Checking the type of a variable using type()
+■Roundoff errors and why they happen
+
+【PG】Test your knowledge
+1When you use int()  to convert a decimal number to an integer, does the result get 
+rounded up or down?
+2In your temperature-conversion program, would this have worked?
+What about this: 
+If not, why not? 
+3(Extra challenging question) Without using any other functions besides int() , how 
+could you get a number to round off instead of round down? (For example, 13.2 would 
+round down to 13, but 13.7 would round up to 14.) 
+
+【PG】Try it out
+1Use float()  to create a number from a string like '12.34' . Make sure the result is 
+really a number!
+2Try using int()  to create an integer from a decimal number like 56.78 . Did the answer 
+get rounded up or down?
+3Try using int()  to create an integer from a string. Make sure the result is really an 
+integer!cel = floa t(5 / 9 * (fahr - 32))
+cel = 5 / 9 * floa t(fahr - 32)
+Download from Wow! eBook <www.wowebook.com>

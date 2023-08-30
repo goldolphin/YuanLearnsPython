@@ -1,0 +1,49 @@
+【PG】169 CHAPTER  14 Objects
+We start with a raw hot dog and no condiments.
+Now, let’s make a method to cook our hot dog:
+
+【PG】Before we go any further, let’s test this part. First, we need to create an instance of a hot 
+dog, and we’ll check the attributes, too:
+
+【PG】Let’s put this together into a program and run it. Here’s the complete program (so far).
+class HotDog:
+    def __ini t__(self):
+        self.cooked_level = 0
+        self.cooked_s tring = "Raw"
+        self.condimen ts = []
+    def cook(self, time):
+        self.cooked_level = self.cooked_level + time
+        if self.cooked_level > 8:                     
+            self.cooked_s tring = "Charcoal"             
+        elif self.cooked_level > 5:                     
+            self.cooked_s tring = "Well-done"            
+        elif self.cooked_level > 3:                     
+            self.cooked_s tring = "Medium"               
+        else:                                           
+            self.cooked_s tring = "Raw"                  
+myDog = Ho tDog()
+prin t myDog.cooked_level
+prin t myDog.cooked_s tring
+prin t myDog.condimen ts
+
+【PG】def cook(self, time):
+        self.cooked_level = self.cooked_level + time
+        if self.cooked_level > 8:                       
+            self.cooked_s tring = "Charcoal"                
+        elif self.cooked_level > 5:                        
+           self.cooked_s tring = "Well-done"
+        elif self.cooked_level > 3:                         
+            self.cooked_s tring = "Medium"             
+        else:                                           
+           self.cooked_s tring = "Raw"
+myDog = Ho tDog()
+prin t myDog.cooked_level
+prin t myDog.cooked_s tring
+prin t myDog.condimen ts
+
+【PG】Listing 14.5 Start of our hot dog programIncreases the 
+cooked level by the 
+amount of time
+Sets the strings for the 
+different cooked levels
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,16 @@
+【PG】
+More GUIs
+We made some simple GUIs back in chapter 6, when we used EasyGui to make some dialog boxes (or just dialogs for short). But GUIs need more than dialogs. In most modern programs, the whole program runs in a GUI. In this chapter, we’re going to explore making GUIs with PyQt, which gives you more flexibility and control over how things look.
+
+【PG】
+PyQt is a module that helps you create GUIs. We’re first going to use it to make a version of our temperature-conversion program. 
+
+【PG】
+Working with PyQt
+Before using PyQt, you have to make sure it’s installed on your computer. If you installed Python using the book’s installer, PyQt is already installed. If not, you’ll have to download and install it separately. You can get PyQt from www.riverbankcomputing.com/software/pyqt/download . Make sure you get the correct version for your operating system and the version of Python you’re using (version 2.7.3, if you ran our installer). We’re using PyQt 4.1.
+
+【PG】
+There are basically two main parts to writing a GUI program. You need to create the user interface itself (the “UI”), and you need to create the code that makes the UI do what you want. Creating the UI involves placing things like buttons, text boxes, choice boxes, and so on in the window. Then you write code that makes stuff happen when you click a button, type in a text box, or select a choice from a choice box. There is also a version 5 of PyQt, which is quite diﬀerent from version 4. If you don’t use our installer, make sure you install PyQt4. 
+
+【PG】
+Download from Wow! eBook <www.wowebook.com>

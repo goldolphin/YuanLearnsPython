@@ -1,0 +1,43 @@
+【PG】436 Hello World!
+
+【PG】The program that calls it could look like this:
+
+【PG】Here’s my example for printing addresses with seven arguments:
+
+【PG】No answer, just try it.
+
+【PG】The function to add up change should look like this:
+
+The program that calls it would look like this:for i in range(5):
+    prin tMyNameBig()
+
+# define a func tion wi th seven argumen ts 
+def prin tAddr(name, num, s treet, ci ty, prov, pcode, coun try): 
+    prin t name 
+    prin t num, 
+    prin t street
+    prin t city, 
+    if prov !="": 
+        prin t ", "+prov 
+    else: 
+        prin t "" 
+    prin t pcode
+    prin t coun try 
+    prin t 
+
+#call the func tion and pass seven argumen ts to it 
+prin tAddr("Sam", "45", "Main S t.", "Ottawa", "ON", "K2M 2E9" , "Canada" )
+prin tAddr("Jian", "64", "2nd Ave." , "Hong Kong" , "", "235643" , "China")
+
+【PG】def addUpChange(quar ters, dimes, nickels, pennies):
+    total  = 0.25 * quar ters + 0.10 * dimes + 0.05 * nickels + 0.01 * pennies
+    return total
+
+quar ters = int(raw_inpu t("quar ters: "))
+dimes = int(raw_inpu t("dimes: " ))
+nickels = int(raw_inpu t("nickels: " ))
+pennies = int(raw_inpu t("pennies: " ))
+total  = addUpChange(quar ters, dimes, nickels, pennies)
+prin t "You have a total of: " , total
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,37 @@
+【PG】26 Hello World!
+
+【PG】One way to help prevent this is to use variable names that are easy to remember. We could have used either of these:   
+
+or
+
+But that would make them harder to remember in a program. We would be more likely to make a mistake if we used those names. Try to use names that tell you what the variable is for. 
+
+【PG】Variable names are case-sensitive. That means uppercase and lowercase matter. So, teacher and Teacher are two different names. Remember, if you want to know all the variable naming rules for Python, you can look in appendix A.
+
+【PG】What did you learn?
+
+In this chapter, you learned
+
+■How to “remember” or keep things in the computer’s memory using variables
+
+■That variables are also called “names” or “variable names”
+
+■That variables can be different kinds of things, such as numbers and strings
+
+t = 'Mr. Morton'
+
+x1796vc47blahblah = 'Mr. Morton'
+
+#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelufp lmessageiflen(sys.argv)!=2:print'Usage:pyrpintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1;self.page=self.page+1PrinterFormatter:self.header_written=0
+
+def#Thinking like a programmer
+
+We said you can call a variable anything you want (within the naming rules), and that is true. You can call a variable teacher or Teacher. Professional Python programmers almost always start their variable names with a lowercase letter, and other computer languages have other styles. It is up to you if you want to follow the Python style or not. For the rest of this book, because we are using Python, we will follow that style. 
+
+print>>>Hellofi#
+
+print>>>Helloif#
+
+print>>>Helloif#
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,69 @@
+【PG】Symbols
+’ (single quotes in strings) 22
+/ (forward slash) 317
+\ (backslash) 114, 296–297, 317
+\n (newline) 320
+# (for comments) 95, 98
+% (percentage sign) 34, 298, 303
+%d (integer in format string) 300
+%E, %e (E-notation in format string) 302
+%F, %f (float in format string) 298, 301
+negative numbers 301
+positive numbers 301
+%G, %g (choice of float or E-notation in format 
+string) 302
+%i (integer in format string) 298, 300
+%s (string in format string) 298
+<>(not equal to) 75
+>> (redirecting output) 327
+>>> (Python prompt) 3, 17
+
+【PG】Math and comparison operators
+- (minus/subtraction) 29
+-= (decrement) 35
+!= (not equal to) 69, 75
+** (exponentiation) 75
+/ (division) 29
+% (modulus) 75
++ (plus/addition) 29, 301, 305, 307
++= (increment) 35
+= (assignment) 17, 31
+== (testing if equal) 68, 75
+> (greater than) 69, 75
+>= (greater than or equal to) 69, 75
+
+【PG】Numerics
+24-bit color 195
+3D game engine 411
+A
+acceleration 362
+access values in a table 135
+addition 6, 29
+AI399
+ALT key 290
+and 73
+animation 208
+.app 314
+append() 119, 124
+appending to a file 319, 324
+arguments 147, 150
+arithmetic 6, 28
+arithmetic expression 18
+artificial intelligence 399
+assignment operator 31
+associative arrays 139
+asterisk, * 6
+attributes 160
+change data 172
+view data 172
+attributes of an object 160
+B
+background music 261
+repeating 262
+backslash (line continuation character), \ 114, 317
+backslash character, \ (for special printing 
+codes) 296
+BASIC (programming language) 411
+
+【PG】Index
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,51 @@
+【PG】371 CHAPTER  24 Computer Simulations
+
+【PG】Notice how the time doesn’t just have seconds, it has fractions of a second:
+On my computer, the last three digits will always be 0 because my operating system’s clock 
+only goes to milliseconds (thousandths of a second). But that’s plenty precise enough for me!
+
+【PG】It’s important to know that, although it looks like a float, the seconds are actually stored as 
+a number of seconds (an integer) and a number of microseconds (an integer): 44 seconds 
+and 343,000 microseconds. To make this into a float, you need a little formula. Assuming 
+you have a time  object called some_time , and you want the number of seconds as a float, 
+here’s what the formula looks like:
+
+【PG】The float()  function is used to make sure you don’t 
+get caught by the integer-division gotcha.
+
+【PG】You can use the now()  method and a timedelta
+object to test your typing speed. The program in 
+listing 24.2 displays a random message, and the 
+user has to type the same message in. The 
+program times how long it takes to type it in and 
+then calculates the typing speed. Give it a try.
+
+impor t time, da tetime, random    
+messages = [
+    "Of all the trees we could've hi t, we had to ge t one that hits back." ,
+    "If he doesn' t stop trying to save your life he's going to kill you." ,
+    "It is our choices that show wha t we truly are, far more than our abili ties.",
+    "I am a wizard, no t a baboon brandishing a s tick.",
+    "Grea tness inspires envy, envy engenders spi te, spi te spawns lies." ,
+    "In dreams, we en ter a world that's en tirely our own." ,
+    "It is my belief that the truth is generally preferable to lies." ,
+    "Dawn seemed to follow midnigh t with indecen t has te."
+    ]
+
+【PG】prin t "Typing speed test. Type the following message. I will time you."  
+time.sleep(2)
+prin t "\nReady..."                                                       
+time.sleep(1)                                                            
+prin t "\nSe t..."                                                         
+time.sleep(1)                                                            
+prin t "\nGo:"                                                            
+
+【PG】44.343000 seconds_floa t = some_ time.second + some_ time.microsecond / floa t(1000000)
+
+【PG】Listing 24.2 Measuring time differences—typing speed test
+Uses time module for 
+the sleep() function
+Uses time module for 
+the sleep() function
+Prints instructions
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,24 @@
+【PG】99CHAPTER 1 0
+【PG】Game Time
+
+One of the great traditions of learning to program is typing in code you don’t understand. 
+Really!
+Sometimes just typing in code gives you a feel for how things work, even if you don’t 
+understand every line or keyword. We did that in chapter 1, with the number-guessing 
+game. Now we’re going to do the same thing, but with a longer, more interesting program.
+
+【PG】Skier
+
+Skier is a very simple skiing game, 
+inspired by a game called SkiFree. (You 
+can find out all about SkiFree here: 
+en.wikipedia.org/wiki/SkiFree .)
+
+You ski down a hill, trying to avoid trees 
+and pick up flags. Picking up a flag 
+earns 10 points. Crashing into a tree 
+makes you lose 100 points. 
+When you run the program, it should 
+look something like this:
+
+【PG】Download from Wow! eBook <www.wowebook.com>

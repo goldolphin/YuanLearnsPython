@@ -1,0 +1,20 @@
+【PG】398 Hello World!
+
+【PG】What did you learn?
+In this chapter, you learned 
+■How all the parts of the Skier program work 
+■How to create a scrolling background
+
+【PG】Try it out
+1Try modifying Skier so that it gets harder as the game goes on. Here are some 
+suggestions for things to try:
+■Make the speed increase as the game goes on.
+■Add more trees farther down the hill.
+■Add “ice, ” which makes turning more difficult. 
+
+2The SkiFree program that was the inspiration for Skier had an Abominable Snowman 
+that randomly appeared and chased the skier. If you’re up for a real challenge, try 
+adding something like that to the Skier program. You’ll have to find or create a new 
+sprite image and figure out how to modify the code to get the behavior you want.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

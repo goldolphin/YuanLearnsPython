@@ -1,0 +1,60 @@
+【PG】156 Hello World!
+
+【PG】try to change the global variable inside the function, you get a new, local variable instead. 
+Try running it and see.
+
+【PG】def calcula teTax(price, tax_ra te):
+    total = price + (price * tax_ra te)  
+   
+    my_price = 10000       
+    prin t "my_price (inside func tion) = " , my_price  
+    return total      
+                                        
+【PG】my_price = floa t(raw_inpu t ("Enter a price: " ))
+totalPrice = calcula teTax(my_price, 0.06)                   
+prin t "price = " , my_price, " To tal price = " , totalPrice              
+prin t "my_price (ou tside func tion) = " , my_price
+
+【PG】As you can see, there are now two different variables called my_price , with different values. 
+One is the local variable  inside the calculateTax()  function that we set to 10,000. The other 
+is the global variable  we defined in the main program to capture the user’s input, which was 
+7.99.
+
+【PG】Forcing a global
+In the last section, you saw that, if you try to change the value of a global variable  from 
+inside a function, Python creates a new local variable  instead. This is meant to prevent 
+functions from accidentally changing global variables.
+However, there are times when you want  to change a global variable from inside a function. 
+So how do you do it?
+
+【PG】Python has a keyword, global , that lets you do that. You use it like this:
+
+【PG】Listing 13.7 Trying to modify a global variable inside a function 
+>>> ========================== RESTART ==========================
+>>> 
+Enter a price: 7.99
+my_price (inside func tion) =  10000
+price =  7.99  To tal price =  8.4694
+my_price (ou tside func tion) =  7.99
+def calcula teTax(price, tax_ra te):
+    global my_price Modifies my_price 
+inside the function Prints the local 
+version of my_price
+The variable 
+my_price 
+here is a 
+different 
+chunk of 
+memory 
+than the 
+my_price 
+herePrints the global 
+version of my_price
+Prints my_price from 
+inside the function
+Prints my_price from 
+outside the function
+Tells Python you want to use 
+the global version of my_price
+
+Download from Wow! eBook <www.wowebook.com>

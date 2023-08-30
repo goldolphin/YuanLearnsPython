@@ -1,0 +1,35 @@
+【PG】288 Hello World! menus. In many programs, the first menu is the File menu, so let’s 
+begin with that. Click in the area where it says Type Here , type File, 
+then press Enter . You should see a File menu appear, and also 
+space to type more menu items beside and below it, like this:
+Adding a menu item
+Under the File menu, we’re going to add a menu item for Exit . Where it says Type Here
+below the File menu, type Exit , and then press Enter .
+Now let’s add a menu item for converting temperatures (if the user 
+doesn’t want to use the buttons). In the place where it says Type 
+Here  to the right of the File menu, type Convert . Then, 
+below that, make two new menu items for C to F  and F to C .
+When you’re done, it should look like this:
+
+【PG】If you look at the Object Inspector in the upper-
+right corner of the Qt Designer window, you 
+should see something like this:
+You can see the File and Convert  menus, and the Exit , C to F , and F to C  menu items. In 
+PyQt’s terminology, the menu items are instances of the QAction  class. That makes sense, 
+because you want some action  to happen when you select the menu item.
+
+【PG】Save your modified Designer file as 
+tempconv_menu.ui .
+
+【PG】Now that you have menu items (or actions), you 
+need to bind (or connect) their events to event 
+handlers. For the C to F  and F to C  menu items, 
+we already have event handlers—the ones we 
+made for the buttons. We want the same thing to 
+happen from the menu as when we click the 
+buttons. So we can just connect the menu items 
+to the same event handlers.
+For a menu item (an action ), it’s not a clicked  event we need to handle, it’s a triggered  event. 
+The thing we’re connecting to the event handler is a called action_CtoF . And the event On a Mac, you also need to deselect the nativeMenuBar property for the menubar object. (It should be the last property in the Property Editor.) Otherwise the menu conﬂicts with the main Python menu on the desktop, and the File menudisappears from your PyQt app.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

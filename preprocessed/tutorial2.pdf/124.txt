@@ -1,0 +1,48 @@
+【PG】100 Hello World!
+
+【PG】Skier uses something called Pygame to help with the graphics. Pygame is a Python module . 
+(You’ll learn more about modules in chapter 15.) If you ran the book’s installer, Pygame is 
+installed. If not, you can download it from www.pygame.org . You’ll learn all about Pygame 
+in chapter 16. 
+
+【PG】You’ll need some graphics files to go along with the program:
+■skier_down.png skier_right1.png
+■skier_crash.png skier_right2.png
+■skier_tree.png skier_left1.png
+■skier_flag.png skier_left2.png  
+You can find these in the \examples\skier  folder (if you ran the installer) or on the book’s 
+website. Just put them in the same folder or directory where you save the program. That’s 
+pretty important. If they’re not in the same directory as the program, Python won’t find 
+them, and the program won’t work. 
+
+【PG】The code for Skier is in listing 10.1. The listing is a bit long, about 100 lines of code (plus 
+some blank lines to make it easier to read), but I encourage you to take the time to type it 
+in. The listing has some notes to give a bit of explanation of what the code does. Note that 
+when you see __init__  in the code, there are two underscores on either side of init . That’s 
+two underscores before and two underscores after, not just one on either side.
+
+【PG】impor t pygame, sys, random
+skier_images = [ "skier_down.png" , "skier_righ t1.png", 
+                "skier_righ t2.png", "skier_lef t2.png", 
+                "skier_lef t1.png"]
+class SkierClass(pygame.spri te.Spri te):                     
+    def __ini t__(self):                                        
+        pygame.spri te.Spri te.__ini t__(self)                 
+        self.image = pygame.image.load( "skier_down.png" )    
+        self.rec t = self.image.ge t_rec t()                     
+        self.rec t.cen ter = [320, 100]                         
+        self.angle = 0                                          
+                                        
+    def turn(self, direc tion):                                        
+        self.angle = self.angle + direc tion                         
+        if self.angle < -2:  self.angle = -2                         
+        if self.angle >  2:  self.angle =  2                          
+        cen ter = self.rec t.cen ter                                     
+        self.image = pygame.image.load(skier_images[ self.angle])      
+        self.rec t = self.image.ge t_rec t()                          
+        self.rec t.cen ter = cen ter                                     
+        speed = [ self.angle, 6 - abs(self.angle) * 2]                
+        return speed                                                Listing 10.1 Skier
+Creates skier
+Turns skier
+Download from Wow! eBook <www.wowebook.com>

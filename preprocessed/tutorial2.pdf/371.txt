@@ -1,0 +1,47 @@
+【PG】347 CHAPTER  23 Take a Chance—Randomness
+【PG】The line that sets the short_name  simply takes the number or first letter of the rank (6 or 
+Jack) and the first letter of the suit (Diamonds) and puts them together. For the King of 
+Hearts, short_name  would be KH. For the 6 of Spades, it would be 6S.
+
+【PG】Listing 23.4 isn’t a complete program. It’s just the class definition for our Card  class. Because 
+this is something we could use over and over in different programs, maybe we should make 
+it a module . Save the code in listing 23.4 as cards.py . 
+
+【PG】Now we need to make some instances of cards—in fact, a whole deck would be nice! To test 
+our Card  class, let’s make a program to create a deck of 52 cards and then pick 5 cards at 
+random and display their attributes. Here’s some code for that. 
+
+【PG】impor t random
+from cards impor t Card 
+deck = [] 
+for suit_id in range(1, 5):                          
+    for rank_id in range(1, 14):                     
+        deck.append(Card(sui t_id, rank_id)) 
+hand = []                                            
+for cards in range(0, 5):                        
+    a = random.choice(deck)                         
+    hand.append(a)                                 
+    deck.remove(a)                   
+prin t    
+for card in hand:
+    prin t card.shor t_name, '=' ,card.long_name, "  Value:" , card.value
+
+【PG】b The inner loop goes through each card in the suit, and the outer loop goes through each 
+suit (13 cards * 4 suits = 52 cards). c Then the code picks five cards from the deck and puts 
+them in a hand. It also removes the cards from the deck.
+
+【PG】If you run the code in listing 23.5, you should get something like this:
+If you run it again, you should get five different cards. And no matter how many times you 
+run it, you should never get the same card twice in one hand. Listing 23.5 Making a deck of cards
+7D = 7 of Diamonds   Value: 7
+9H = 9 of Hear ts   Value: 9
+KH = King of Hear ts   Value: 10
+6S = 6 of Spades   Value: 6
+KC = King of Clubs   Value: 10
+
+【PG】Imports our cards module
+Uses nested for loops 
+to make a deckb
+Picks 5 cards from the 
+deck to make a handc
+Download from Wow! eBook <www.wowebook.com>

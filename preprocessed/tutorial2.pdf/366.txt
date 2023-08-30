@@ -1,0 +1,46 @@
+【PG】342 Hello World!
+Yeesh. How 
+many more times 
+do I have to flip 
+this thing?
+
+【PG】There are 36 possible combinations. Now look at how many times each total appears:
+■The total 2 appears 1 time.
+■The total 3 appears 2 times.
+■The total 4 appears 3 times.
+■The total 5 appears 4 times.
+■The total 6 appears 5 times.
+■The total 7 appears 6 times.
+■The total 8 appears 5 times.
+■The total 9 appears 4 times.
+■The total 10 appears 3 times.
+■The total 11 appears 2 times.
+■The total 12 appears 1 time.
+
+【PG】This means that there are more ways to roll a 7 than a 2. For a 7, you can roll 1+6, 2+5, 3+4, 
+4+3, 5+2, or 6+1. For a 2, the only way to get it is to roll 1+1. So it makes sense that, if we 
+roll the dice a bunch of times, we should expect more 7s than 2s. And that’s what we got 
+from our two-dice program. 
+Using computer programs to generate random events is a really good way to experiment 
+with probability and see what happens over a large number of tries. It would take you a 
+long time to roll a real pair of dice 1,000 times and record the results. But a computer 
+program can do the same thing in a fraction of a second!
+
+【PG】Ten in a row
+Let’s do one more probability experiment before we move on. A few pages ago, we talked 
+about flipping a coin and how likely it would be to get a bunch of heads in 
+a row. Why don’t we try an experiment to see how often we get 10 
+heads in a row? It won’t happen very often, so we’re going to have 
+to do a lot of coin flips before we see it. Why don’t we
+ try 1,000,000! With a real coin, that would take … 
+a long time. 
+If you could do one coin toss every 5 seconds, that 
+would be 12 per minute, or 720 per hour. If you 
+could do coin tosses for 12 hours a day (after all, you 
+still have to eat and sleep), you could do about 8,640 
+tosses a day. So it would take about 115 days (about 
+4 months) to do one million coin tosses. But with a 
+computer, we can do it in seconds. (Okay, maybe a few 
+minutes, because we have to write the program first.)
+
+Download from Wow! eBook <www.wowebook.com>

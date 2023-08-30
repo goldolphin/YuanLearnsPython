@@ -1,0 +1,33 @@
+【PG】Hello World!
+
+【PG】A Pygame window
+
+The first thing we need to do is make a window where we’ll start drawing our graphics. Here’s a very simple program that just makes a Pygame window.
+
+impor t pygame
+pygame.ini t()
+screen = pygame.display.se t_mode([640, 480])
+
+Try running this program. What do you see? Depending on what operating system you have, you might see a window (filled with black) pop up on the screen very briefly. Or you might get a window that doesn’t close when you try to close it. What’s up with that?
+
+Well, Pygame is meant for making games. Games don’t just do things on their own—they have to interact with the player. So Pygame programs have something called an event loop that constantly checks for the user doing something, like pressing keys, moving the mouse, or closing the window. Pygame programs need to have an event loop running all the time. In our first Pygame program, we didn’t start the event loop, so the program didn’t work properly.
+
+【PG】The way we keep the Pygame event loop running is by using a while loop. We want the loop to keep running as long as the user is running our game. Because Pygame programs don’t usually have a menu, the user will close the program by using the X in the top-right corner of the window (in Windows) or the close button in the top-left corner (for MacOS). For Linux systems, the window-closing icon varies depending on the window manager and GUI framework that is used—but if you’re using Linux, I’m assuming you know how to close a window!
+
+The code in the next listing opens a Pygame window and keeps it open until the user closes the window
+
+impor t pygame
+pygame.ini t()
+screen = pygame.display.se t_mode([640, 480])
+running  = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT:
+            running = False
+pygame.qui t()
+
+【PG】Listing 16.1 Making a Pygame window 
+
+【PG】Listing 16.2 Making the Pygame window work properly
+
+Download from Wow! eBook <www.wowebook.com>

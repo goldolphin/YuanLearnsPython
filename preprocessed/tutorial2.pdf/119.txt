@@ -1,0 +1,32 @@
+【PG】CHAPTER  9 Just for You—Comments
+The Python help that we mentioned in “Thinking like a (Python) programmer” in chapter 6 
+is a kind of documentation. It’s meant to help users—like you—understand how Python 
+works.
+
+【PG】Single-line comments
+You can make any line into a comment by starting it with the number sign character 
+(#, sometimes called the pound sign ):
+If we run these two lines, we get the following output:
+The first line is ignored when the program runs. The comment, which starts with the 
+# character, is only for you and other people reading the code.
+
+【PG】End-of-line comments
+You can also put comments at the end of a line of code, like this:
+The comment starts at the # character. Everything before the # is a normal line of code. 
+Everything after that is a comment.# This is a commen t in a Py thon program
+prin t 'This is no t a commen t'
+This is no t a commen t
+area = leng th * wid th    # Calcula te the area of the rec tangle
+
+【PG】Documentation
+Documentation  is information about a program that describes the 
+program and how it works. Comments are one part of a program’s 
+documentation, but there may be other parts, outside the code 
+itself, that describe things like
+· why the program was written (its purpose)
+· who wrote it
+· who it’s meant for (its audience)
+· how it’s organized
+and much more. Larger, more complicated programs usually have 
+more documentation.
+Download from Wow! eBook <www.wowebook.com>

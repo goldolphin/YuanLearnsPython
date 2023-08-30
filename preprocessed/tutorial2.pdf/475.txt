@@ -1,0 +1,69 @@
+【PG】4511.1 Our first real program 8
+
+【PG】1.2 Number-guessing game 12
+
+【PG】5.1 Getting a string using raw_input 47
+
+【PG】5.2 What does the comma do? 48
+
+【PG】5.3 Converting temperatures using raw_input() 50
+
+【PG】5.4 Getting input from a file on the Web 52
+
+【PG】6.1 Getting input using buttons 58
+
+【PG】6.2 Getting input using a choice box 59
+
+【PG】6.3 Getting input using an enter box 60
+
+【PG】6.4 How to make default choices 61
+
+【PG】6.5 Number-guessing game using EasyGui 62
+
+【PG】7.1 Using the comparison operators 70
+
+【PG】8.1 A very simple for loop 79
+
+【PG】8.2 Doing something different each time through the for loop 80
+
+【PG】8.3 Printing the 8 times table 81
+
+【PG】8.4 A loop using range() 82
+
+【PG】8.5 Printing the 8 times table up to 10 using range() 84
+
+【PG】8.6 Ready for lift-off? 88
+
+【PG】8.7 Who’s the coolest of them all? 89
+
+【PG】8.8 A conditional or while loop 90
+
+【PG】8.9 Using continue in a loop 91
+
+【PG】10.1 Skier 100
+
+【PG】11.1 Printing three multiplication tables at once 105
+
+【PG】11.2 A variable nested loop 107
+
+【PG】11.3 Blocks of stars with double-nested loops 108
+
+【PG】11.4 A trickier version of blocks of stars 108
+
+【PG】11.5 Printing the loop variables in nested loops 109
+
+【PG】11.6 Hot dog combinations 111
+
+【PG】11.7 Hot dog program with calorie counter 114
+
+【PG】13.1 Creating and using a function 144
+
+【PG】13.2 Passing an argument to a function 148
+
+【PG】13.3 Functions with two arguments 150
+
+【PG】13.4 Creating and using a function that returns a value 153
+
+【PG】13.5 Trying to print a local variable 154
+
+【PG】13.6 Using a global variable inside a function 155

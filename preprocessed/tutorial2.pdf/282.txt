@@ -1,0 +1,29 @@
+【PG】258 Hello World!
+
+【PG】For our examples, I’ll assume you have copied the 
+sound files to the folder where you save your 
+programs. This means that, wherever a sound file is 
+used in the examples, you’ll just see the filename and 
+not the full location of the file. If you don’t copy the 
+sound files to the program folder, you’ll need to 
+replace the filenames with the full file locations.
+
+【PG】Starting pygame.mixer
+In order to play sounds, you have to initialize pygame.mixer. Remember what initializing means? It means to get something ready at the start. Getting pygame.mixer ready is very easy. We just need to add the line after we initialize Pygame. So the code at the start of a program that uses Pygame for sound looks like this:
+
+【PG】Now we’re ready to play some sounds. There are two main types of sounds you’ll use in your programs. The first is sound effects or sound clips. These are usually short, and they’re most commonly stored in .wav files. For these kinds of sounds, pygame.mixer uses a Sound object, like this:
+
+【PG】The other kind of sound you’ll use a lot is music. Music is most commonly stored in .mp3, .wma, or .ogg files. To play these, Pygame uses a module within mixer called music. You use it like this: This will play the song (or whatever is in the music file) once and then stop. 
+
+【PG】Let’s try playing some sounds. First, let’s try playing a “splat” sound. 
+
+pygame.mixer.init()
+import pygame
+pygame.init()
+pygame.mixer.init()
+splat = pygame.mixer.Sound("splat.wav")
+splat.play()
+pygame.mixer.music.load("bg_music.mp3")
+pygame.mixer.music.play()
+
+【PG】All the sound files for these examples are already on your hard drive if you used the book’s installation program. Otherwise, you can find them on the book’s web site: www.helloworldbook2.com. Download from Wow! eBook <www.wowebook.com>

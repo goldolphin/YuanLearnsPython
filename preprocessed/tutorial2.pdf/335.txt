@@ -1,0 +1,42 @@
+【PG】311 CHAPTER  21 Print Formatting and Strings
+
+【PG】In this case, we stripped the “de” off the end of my name. If there were no “de” at the end, 
+nothing would be stripped off:
+
+【PG】If you don’t tell strip()  what to strip off, it’ll strip off any whitespace. Like we said before, 
+that includes spaces, tabs, and newlines. So if we had extra spaces to get rid of, we could 
+do this:
+Notice that the extra spaces after my name were removed. The good thing is that you don’t 
+need to tell strip()  how many spaces to remove. It’ll remove all whitespace at the end of 
+the string. 
+
+【PG】Changing case
+I want to show you two more string methods. They are for changing the case of a string 
+from uppercase to lowercase or vice versa. Sometimes you want to compare two strings like 
+“Hello” and “hello” , and you want to know if they have the same letters, even if the case is 
+not the same. One way to do this is to make all the letters in both strings lowercase and 
+then do the comparison.
+Python has a string method for that. It’s called lower() . Try this in interactive mode:
+There is a similar method called upper() :
+
+【PG】You can make all-lowercase (or all-uppercase) copies of your original strings and then 
+compare the copies to check if they are the same, ignoring case.>>> name = 'Bar t Simpson'
+>>> shor t_name = name.s trip('de')
+>>> shor t_name
+'Bar t Simpson'
+>>> name = "Warren Sande     " 
+>>>> shor t_name = name.s trip()
+>>> shor t_name
+'Warren Sande'
+>>> s tring1 = "Hello"
+>>> s tring2 = s tring1.lower()
+>>> prin t string2 
+hello
+>>> s tring3 = s tring1.upper()
+>>> prin t string3
+HELLO
+
+【PG】See the extra spaces 
+at the end of my name?
+
+【PG】Download from Wow! eBook <www.wowebook.com>

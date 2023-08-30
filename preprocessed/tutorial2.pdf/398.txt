@@ -1,0 +1,16 @@
+【PG】374 Hello World! Virtual Pet
+
+【PG】We’re going to make a very simplified Virtual Pet program, which, as we indicated, is a kind of simulation. You can buy virtual-pet toys (like a keychain with a small screen). There are also websites like Neopets and Webkinz, which are forms of virtual pets. All of these, of course, are simulations as well. They mimic the behavior of a living thing and get hungry, lonely, tired, and so on. To keep them happy and healthy, you have to feed them, play with them, or take them to the doctor. 
+
+【PG】Our virtual pet will be a lot simpler and less realistic than the ones you can buy or play online, because I just want to give you the basic idea, and I don’t want the code to get too complicated. But you could take our simple version and expand or enhance it as much as you want.
+
+【PG】Here are the features our program will have:
+■The pet will have four different activities that you can do: feed it, walk it, play with it, or take it to the doctor. 
+■The pet will have three stats that you can monitor: hunger, happiness, and health.
+■The pet can be awake or asleep.
+■The pet will get hungrier over time. You can reduce hunger by feeding.
+■The pet will get hungry more slowly when it is asleep.
+■If the pet is asleep and you do any activity, it will wake up. 
+■If the pet gets too hungry, its happiness will decrease.
+■If the pet gets very, very hungry, its health will decrease.
+■Walking the pet will make both its happiness and health increase.

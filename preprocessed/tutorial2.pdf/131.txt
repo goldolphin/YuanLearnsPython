@@ -1,0 +1,32 @@
+【PG】Chapter 11 Nested and Variable Loops
+【PG】Another way to do the same thing is to start the loop counting at 0, instead of 1. (We 
+mentioned that back in chapter 8.) This is very common in programming, and you’ll see 
+why in the next chapter. Here’s how that would look:
+【PG】Variable nested loops
+【PG】Now let’s try a variable nested loop . That’s just a nested loop where one or more of the loops 
+uses a variable in the range()  function. Here’s an example.
+【PG】numLines = int(raw_inpu t ('How many lines of s tars do you wan t? '))
+numS tars = int(raw_inpu t ('How many s tars per line? ' ))
+for line in range(0, numLines):
+    for star in range(0, numS tars): 
+        prin t '*',
+    prin t
+【PG】Try running this program to see if it makes sense. You should see something like this:
+【PG】The first two lines ask the user how many lines she wants and how many stars per line. It 
+remembers the answers using the variables numLines  and numStars . Then we have the two 
+loops:
+■The inner loop ( for star in range (0, numStars): ) prints each star and runs once 
+for each star on a line. 
+■The outer loop ( for line in range (0, numLines): ) runs once for each line of stars. 
+【PG】The second print  command is needed to start a new line of stars. If we didn’t have that, all 
+the stars would print on one line because of the comma in the first print  statement.
+【PG】numS tars = int(raw_inpu t ("How many s tars do you wan t? "))
+for i in range(0, numS tars):                               
+     prin t '*',
+【PG】Listing 11.2 A variable nested loop
+【PG】How many lines of s tars do you wan t?  3
+How many s tars per line?  5
+*****
+*****
+*****
+【PG】Download from Wow! eBook <www.wowebook.com>

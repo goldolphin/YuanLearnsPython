@@ -1,0 +1,48 @@
+【PG】225 CHAPTER  17 Sprites and Collision Detection
+
+【PG】size = wid th, heigh t = 640, 480 
+screen = pygame.display.se t_mode(size)        
+screen.fill([255, 255, 255])                  
+img_file = "beach_ball.png"                   
+group = pygame.spri te.Group()     
+for row in range (0, 2):                     
+    for column in range (0, 2):
+        loca tion = [column * 180 + 10, row * 180 + 10]
+        speed = [choice([-2, 2]), choice([-2, 2])]        
+        ball = MyBallClass(img_file, loca tion, speed)
+        group.add(ball)   
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+    anima te(group)     
+pygame.qui t()
+
+【PG】The most interesting new thing here is how the collision detection works. The Pygame 
+sprite  module has a function called spritecollide() , which looks for collisions between a 
+single sprite and any sprite in a group. If you’re checking for collisions between sprites in 
+the same  group, you have to do it in three steps:
+1Remove the sprite from the group.
+2Check for collisions between the sprite and the rest of the group.
+3Add the sprite back to the group.
+This happens in the for loop in lines 21 to 29 (in the middle part of the animate()  function). 
+If we don’t remove the sprite from the group first, spritecollide()  will detect a collision 
+between the sprite and itself, because it’s in the group. This might seem kind of odd at first, 
+but it makes sense if you think about it for a while.
+
+【PG】Run the program and see how it looks. Did you notice any strange behavior? I noticed two 
+things:
+■When the balls collide, they do a “stutter” or a double bump.
+■Sometimes a ball gets stuck along the edge of the window and stutters along 
+for a while. The main program 
+starts here
+Creates only four 
+balls this timeCreates the 
+sprite group
+Adds each ball 
+to the group
+Calls animate() 
+function, passing 
+the group to it
+Download from Wow! eBook <www.wowebook.com>

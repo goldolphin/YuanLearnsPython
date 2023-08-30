@@ -1,0 +1,15 @@
+【PG】xii PREFACE
+
+【PG】But if you give them the right instructions, they can do many wonderful and amazing things. A computer program is made up of a number of instructions. Computers do all the great things they do today because a lot of smart programmers wrote programs or software to tell them how. Software  just means a program or collection of programs that run on your computer, or sometimes on another computer yours is connected to, like a web server.
+
+【PG】Python—a language for us and the computer
+
+【PG】All computers use binary inside. But most people don’t speak binary very well. We need an easier way to tell the computer what we want it to do. So people invented programming languages. A computer programming language lets us write things in a way we can understand, and then translates that into binary for the computer to use.
+
+【PG】An instruction  is a basic command you give to a computer, usually to do a single, very specific thing.
+
+【PG】Computers “think” using lots and lots and LOTS of electrical circuits. At the most basic level, these circuits are switches that are either ON or OFF. Engineers and computer scientists use 1 and 0 to stand for ON and OFF. All these 1s and 0s are a kind of code called binary.  Binary really just means “two states.” The two states are ON and OFF, or 1 and 0.
+
+【PG】Did you know: binary digit = bit.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

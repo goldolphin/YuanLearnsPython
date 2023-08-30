@@ -1,0 +1,13 @@
+【PG】xxi ABOUT THIS BOOK
+If you install Python using some other method, and you don’t get the right version of Python and the other modules you need, you might get frustrated when some things don’t work like they should.
+
+【PG】Type in the programs
+The installer program that goes with this book will copy all the example programs to your hard drive (if you want). The installer is on the book’s web site: www.helloworldbook2.com . You can also view and download individual examples from the web site, but I encourage you to type as many of them yourself as possible. Just by typing the programs, you’ll get a “feel” for programming and for Python in particular. (And we can all use more typing practice!)
+
+【PG】Do the quiz questions
+At the end of every chapter, there are some questions to practice what you’ve learned. Do as many as you can. If you’re stuck, try to find someone who knows about programming to help you. Work through them together—you’ll learn a lot by doing that. Don’t peek at the answers until you’re done, unless you’re really, really stuck. (Yes, some of the answers are in the back of the book and on the web site, but like I said, don’t peek.)
+
+【PG】Don't worry about making mistakes. 
+In fact, make lots of them! I think making mistakes and figuring out how to find them and fix them is one of the best ways to learn. In programming, your mistakes don't usually cost you anything except a bit of time. So make lots of them, learn lots from them, and have fun. Hey, mon! Chill. You can’t break the computah’, so just give it a try.
+
+Download from Wow! eBook <www.wowebook.com>

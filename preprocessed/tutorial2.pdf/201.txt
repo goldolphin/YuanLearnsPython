@@ -1,0 +1,26 @@
+【PG】177 CHAPTER 14 Objects
+
+【PG】What did you learn?
+In this chapter, you learned about
+■What objects are
+■Attributes and methods
+■What a class is
+■Creating an instance of a class
+■Special methods: __init__() and __str__()
+■Polymorphism
+■Inheritance
+■Code stubs
+
+【PG】Test your knowledge
+1What keywords do you use to define a new object type?
+2What are attributes?
+3What are methods?
+4What’s the difference between a class and an instance?
+5What name is usually used for the instance reference in a method?
+6What’s polymorphism?
+7What’s inheritance?
+
+【PG】Try it out
+1Make a class definition for a BankAccount . It should have attributes for its name (a string), account number (a string or integer), and balance (a float). It should have methods to display the balance, make deposits, and make withdrawals.
+2Make a class called InterestAccount that earns interest. It should be a subclass of BankAccount (so it inherits the attributes and methods). It should also have an attribute for interest rate and a method to add interest. To keep things simple, assume that the addInterest() method will be called once each year to calculate the interest and update the balance.
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,25 @@
+【PG】20 Hello World!
+
+【PG】You can create variables for other things besides letters. You can name numeric values. 
+Remember our example from before?
+Let’s try that one with variables: 
+Here, we created two names, First  and Second . The number 5 was assigned to First , and 
+the number 3 was assigned to Second . Then we print ed the sum of the two. 
+
+【PG】There’s another way to do this. Try this:
+Notice what we did here. In interactive mode, we can display the value of a 
+variable just by typing its name, without using print . (This doesn’t work in a 
+program.)
+
+【PG】In this example, instead of doing the sum in the print  instruction, we took the thing named 
+First  and the thing named Second  and added them together, creating a new thing, called 
+Third . Third  is the sum of First  and Second.>>> 5 + 3
+8
+>>> Firs t = 5
+>>> Second = 3
+>>> prin t Firs t + Second
+8
+>>> Third = Firs t + Second
+>>> Third
+8
+Download from Wow! eBook <www.wowebook.com>

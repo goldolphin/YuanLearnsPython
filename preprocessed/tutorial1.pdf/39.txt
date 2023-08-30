@@ -1,0 +1,46 @@
+【PG】1.8　你的第二个程序　　 13
+
+【PG】12 Hello World!
+if guess == secret:                        
+    print "Avast! Ye got it!  Found my secret, ye did!"
+else:
+    print "No more guesses!  Better luck next time, matey!"    
+print "The secret number was", secret
+
+When you are typing it in, notice the indenting of the lines after the while instruction, and 
+the extra indenting of the lines after if and elif . Also notice the colons at the ends of some 
+of the lines. If you type the colon in the correct place, the editor will help you by indenting 
+the next line for you.
+
+Once you’ve saved it, run it using Run > Run Module , just like you did for the first program. 
+Try playing it and see what happens. Here is a sample of when I ran it:
+It took me five guesses to get the secret number, which turned out to be 12.
+
+We will be learning all about the while , if, else , elif , and 
+input  instructions in the next few chapters. But you can 
+probably already get the basic idea of how this program 
+works:
+�The secret number is randomly picked by the program. 
+�The user inputs his guesses. 
+�The program keeps checking the guess against the 
+secret number: is it higher or lower? 
+�The user keeps trying until he guesses the number or runs out of turns.
+�When the guess matches the secret number, the player 
+wins.
+
+>>> ======================= RESTART =======================
+>>>AHOY!  I'm the Dread Pirate Roberts, and I have a secret!
+It is a number from 1 to 99.  I'll give you 6 tries. 
+What's yer guess? 40Too high, landlubber!
+What's yer guess? 20
+Too high, landlubber!What's yer guess? 10
+Too low, ye scurvy dog!
+What's yer guess? 11Too low, ye scurvy dog!
+What's yer guess? 12
+Avast! Ye got it!  Found my secret, ye did!>>>Prints 
+message at 
+end of game
+
+【PG】我猜了 5次才猜到这个秘密数，也就是 12。
+
+后面几章我们会学习有关 while、if、else、elif和input指令

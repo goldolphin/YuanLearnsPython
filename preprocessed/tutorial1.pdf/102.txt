@@ -1,0 +1,37 @@
+【PG】第 7章　判断再判断
+
+【PG】或
+
+【PG】You’re on a long car trip and arrive at a gas station. It’s 200 km to the next station. 
+Write a program to figure out if you need to  buy gas here, or if you can wait for the 
+next station.
+The program should ask these questions:
+�How big is your tank, in liters?
+�How full is your tank (in percent—for example, half full = 50)?
+�How many km per liter does your car get?
+The output should look something like this:
+Size of tank:  60
+percent full:  40
+km per liter:  10
+You can go another 240 km
+The next gas station is 200 km away
+You can wait for the next station.
+Bonus: Include a 5 liter buffer in your prog ram, in case the fuel gauge isn’t accurate.
+
+【PG】4Make a program where the user has to enter a secret password to use the program. 
+You’ll know the password, of course (because  it’ll be in your code). But your friends 
+will either have to ask you, guess the password, or learn enough Python to look at the 
+code and figure it out!
+The program can be anything you want, including one you have already written, or 
+just a simple one that displays a message like “You’re in!” when he enters the right 
+password.
+
+【PG】额外提示：程序中包含一个 5升的缓冲区，以防油表不准。
+
+【PG】4.  建立一个程序， 用户必须输入密码才能使用这个程序。 你当然知道密码（ 因为
+它会写在你的代码中 ） 。不过，你 的朋友要得到这个密码就必须问你或者直接
+猜，也可以学习足够的 Python知识查看代码来找出密码 ！
+对程序没什么要求， 可 以是你已经编写的程序， 也可以是一个非常简单的程
+序，只在用户输入正确的口令时显示一条“You ’re in! ”之类的消息。 
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

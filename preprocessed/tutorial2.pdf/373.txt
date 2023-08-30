@@ -1,0 +1,49 @@
+【PG】Take a Chance—Randomness 
+
+If the deck runs out and no one can make a play, the game is over. In that case, both 
+players get points for the other player’s remaining cards. 
+You can play up to a certain point total, or just keep playing until you’re tired, and the 
+one with the most points wins.
+
+【PG】Modifying Card Objects 
+
+The first thing we should do is modify some of our card objects a bit. The point values in 
+Crazy Eights are mostly the same as what we had before, except for the 8, which is worth 50 
+points instead of 8 points. We could change the __init__  method in our Card  class to make 
+8s worth 50 points, but that would affect every other game that might use the cards
+module. It would be better to make the change in the main program and leave the class 
+definition alone. Here’s one way we could do it:
+
+Here, before adding the new card to the deck, we check to see if it’s an 8. If it is, we set its 
+value to 50.
+
+【PG】Game Requirements 
+
+Now we’re ready to start making the game itself. Here are some of the things our program 
+will need to do:
+■Keep track of the face-up card.
+■Get the player’s choice of what to do (play a card or draw a card).
+■If the player tries to play a card, make sure the play is valid:
+■The card must be a valid card.
+■The card must be in the player’s hand.
+■The card must either match the rank or suit of the face-up card or be an 8.
+■If the player plays an 8, ask for the new suit (and make sure the choice is a valid suit).
+■Play the computer’s turn (more on that shortly).
+■Determine when the game is over.
+■Count up the points.
+
+【PG】Creating the Deck 
+
+In the rest of the chapter, we’ll go through these requirements one by one. Some of them 
+will need just a line or two of code, and some will be a bit longer. For the longer ones, we’ll 
+create functions that we can call from the main loop.
+
+deck = []
+for suit in range(1, 5):
+    for rank in range(1, 14):
+        new_card = Card(suit, rank)
+        if new_card.rank == 8:
+            new_card.value = 50
+        deck.append(new_card)
+
+Download from Wow! eBook <www.wowebook.com>

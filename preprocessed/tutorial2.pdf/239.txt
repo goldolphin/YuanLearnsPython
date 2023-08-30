@@ -1,0 +1,24 @@
+【PG】215 CHAPTER 16 Graphics
+
+【PG】Test your knowledge
+1What color does the RGB value [255, 255, 255] make?
+2What color does the RGB value [0, 255, 0] make?
+3What Pygame method can you use to draw rectangles?
+4What Pygame method can you use to draw lines joining a number of points together?
+5What does the term pixel mean? 
+6In a Pygame window, where is the location [0, 0]?
+7If a Pygame window is 600 pixels wide by 400 pixels high, what letter in the diagram below is at [50, 200]? 
+8What letter in the diagram is at location [300, 50]?
+9What Pygame method is used to copy images to a surface (like the display surface)?
+10What are the two main steps when you’re “moving” or animating an image?
+
+【PG】Try it out
+1We talked about drawing circles and rectangles. Pygame also has methods to draw lines, arcs, ellipses, and polygons. Try using these to draw some other shapes in a program.
+You can find out more about these methods in the Pygame documentation at www.pygame.org/docs/ref/draw.html . If you don’t have Internet access, you can also find it on your hard drive (it’s installed with Pygame), but it can be hard to find. Search your hard drive for a file called pygame_draw.html . 
+You can also use Python’s help system (which we talked about at the end of chapter 6). One thing SPE doesn’t have is an interactive shell that works, so start IDLE and type the following:
+>>> impor t pygame
+>>> help()
+help> pygame.draw600400A
+BD
+E F C
+Download from Wow! eBook <www.wowebook.com>

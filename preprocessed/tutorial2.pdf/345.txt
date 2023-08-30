@@ -1,0 +1,34 @@
+【PG】321 CHAPTER  22 File Input and Output
+【PG】Why? Why not 
+leave it open so 
+we can access 
+it later?the end of the first two lines. These are the newline  characters that separate the lines in the 
+file. That’s where we pressed Enter  when we were creating the file. If you pressed Enter  after 
+typing in the last line, there will be a third \n after the third item.
+【PG】There’s one more thing we need to add to the program in listing 22.1. When we’re done 
+with the file, we should close it:
+【PG】Well, Carter, if another program needs to use 
+the file and our program hasn’t closed it, the other 
+program might not be able to access the file. It’s generally 
+a good idea to close files when you’re done using them.
+【PG】Once the file is in your program as a list of strings, you can do 
+whatever you want with it. This list is just like any other Python 
+list, so you can loop through it, sort it, append items, delete items, 
+and so on. The strings are like any other strings, so you can print 
+them, convert them to int or float  (if they contain numbers), use them as labels in a GUI, 
+or do anything else that you’d do with a string.
+【PG】Reading one line at a time
+【PG】The readlines()  method reads all the lines of a file, right up until the end of the file. If you 
+want to read just one line at a time, you can use the readline()  method, like this:
+【PG】This will read just the first line of the file. If you use readline()  again in the same program, 
+Python remembers where it was. So the second time you use it, you’ll get the second line of 
+the file. The next listing shows an example of this.
+【PG】my_file = open('notes.txt', 'r')
+firs t_line = my_file.readline()
+second_line = my_file.readline()
+prin t "firs t line = " , firs t_line
+prin t "second line = " , second_line
+my_file.close()my_file.close()
+firs t_line = my_file.readline()
+【PG】Listing 22.2 Using readline()  more than once
+【PG】Download from Wow! eBook <www.wowebook.com>

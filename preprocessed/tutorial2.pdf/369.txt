@@ -1,0 +1,43 @@
+【PG】CHAPTER  23 Take a Chance—Randomness
+
+■Value —For the numbered cards (2 through 
+10), this is usually the same as their rank. 
+For Jack, Queen, and King, it’s usually 10, 
+and for the Ace, it can be 1, 11, or some 
+other value, depending on the game.
+
+【PG】So we need to keep track of these three things, and we need to keep them together in some kind of container. A list would work, but we’d have to remember which item was which. Another way is to make a “card” object that has attributes like these:
+
+【PG】That’s what we’ll do. We’ll also add a couple more attributes called suit_id  and rank_id : 
+■suit_id  is a number from 1 to 4 for the suit, where 
+1 = Diamonds, 2 = Hearts, 3 = Spades, 4 = Clubs
+■rank_id  is a number from 1 to 13, where 
+1 = Ace 
+2 = 2 
+3 = 3
+ … 
+10 = 10
+11 = Jack 
+12 = Queen
+13 = King
+
+【PG】The reason for adding these two attributes is so that we can easily use a nested for loop to make a deck of 52 cards. We can have an inner loop for the rank (1 to 13) and an outer loop for the suit (1 to 4). The __init__()  method for the card object will take the suit_id  and rank_id  and create the other attributes of suit, rank, and value. It also makes it easy to compare the rank of two cards to see which has the higher rank. 
+
+【PG】card.sui t
+card.rank
+card.valueRank Value
+Ace 1 or 11
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+Jack 10
+Queen 10
+King 10
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,54 @@
+【PG】4.4　使用类型转换　　 43
+type()函数告诉我们 a的类型是 'str'，这代表字符串（string） ， b的类型是'ﬂoat'，很明白，不用猜也知道这代表浮点数！
+
+【PG】4.3　类型转换错误
+当然，如果向 int()或ﬂoat()提供的不是一个数，它就会不正常。
+下面来试试看：>>> print ﬂoat('fred')
+Traceback (most recent call last):  File "<pyshell#1>", line 1, in <module>    print ﬂoat ('fred')ValueError: could not convert string to ﬂoat: fred
+我们得到了一个错误消息。 这个非法文字（invalid literal） 错误消息说明 Python不知道怎么从 "fred"创建一个数。如果是你，你知道吗？
+
+【PG】4.4　使用类型转换
+再来看第 3章“动手试一试 ”中从华氏度到摄氏度的温度转换程序， 应该记得当时需要修正整除行为才能得到正确的答案，需要把 5改为 5.0或者把 9改成 9.0 ：
+cel = 5.0 / 9 * (fahr – 32)
+ﬂoat()函数给出了另一种做法：
+cel = ﬂoat(5) / 9 * (fahr – 32)
+或   
+cel = 5 / ﬂoat(9) * (fahr – 32)
+可以试试看。
+
+【PG】42 Hello World!
+The type()  function told us that a is of type 'str' , which stands for string , and b is of type 'float' . No more guessing!
+
+【PG】Type-conversion errors
+Of course, if you give int()  or float()  something that is not a number, it won’t work. Try it and see:
+We got an error message. The invalid literal error message means that Python doesn’t know how to create a number from "fred" . Do you?
+
+【PG】Using type conversions
+Going back to your Fahrenheit to Celsius temperature-conversion program from the “Try it out” section in chapter 3, remember that you needed to fix the integer-division behavior to get the right answer, by changing the 5 to 5.0 or the 9 to 9.0:
+The float()  function gives you another way of doing this:
+                                                               or 
+Try it and see.
+
+【PG】What did you learn?
+In this chapter, you learned about
+�converting between types (or, more correctly, creating types from other types): str() , int() , and float() .
+�displaying values directly without using print .
+�checking the type of a variable using type() .
+
+【PG】Test your knowledge
+1When you use int()  to convert a decimal number to an integer, does the result get rounded up or down?
+>>> print float("fred")
+Traceback (most recent call last):
+  File "<pyshell#1>", line 1, in -toplevel-    print float ("fred")
+ValueError: invalid literal for float(): fred
+
+cel = 5.0 / 9 * (fahr – 32)
+cel = float(5) / 9 * (fahr – 32)
+cel = 5 / float(9) * (fahr – 32)
+
+【PG】你学到了什么
+在这一章，你学到了以下内容。
+完成类型转换 （或 者更准确地说， 从某些类型创建另外一些类型 ） ：  str()、int()和ﬂoat()。
+直接显示值，而不使用 print。
+使用type()查看变量的类型。
+舍入误差及其出现的原因。

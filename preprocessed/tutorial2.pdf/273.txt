@@ -1,0 +1,31 @@
+【PG】Chapter 18 A New Kind of Input—Events
+I tried that and it gave me a Name Error!
+
+【PG】Keeping score and displaying it with pygame.font
+We need to keep track of two things: the number of lives and the number of points. To make things simple, we’ll give one point each time the ball hits the top of the window. We’ll give the player three lives.
+
+We also need a way to display the score. Pygame uses a module called font to display text. Here’s how you use it:
+
+■ Make a font object, telling Pygame the font style and size you want.
+■ Render the text, passing a string to the font object, which returns a new surface with the text drawn on it.
+■ Blit this surface onto the display surface. 
+
+The string, in our case, will be the player’s score (but we’ll have to convert it from an int to a string first).
+
+We need some code like this, just before the event loop (after the paddle = MyPaddleClass([270, 400]) line) in listing 18.4:
+
+The None in the first line is where we could tell Pygame what font (type style) we want to use. By putting None, we tell Pygame to use a default font. 
+
+Then, inside the event loop, we need something like this:
+
+This will redraw the score text each time through the loop.
+
+Of course, Carter, we haven’t made a score variable yet. (I was just getting to that.) Add this line just before the code that creates the font object:
+
+score_font = pygame.font.Font(None, 50)
+score_surf = score_font.render(str(score), 1, (0, 0, 0))
+score_pos = [10, 10]
+screen.blit(score_surf, score_pos)
+score = 0
+
+In computer graphics, render means to draw something or make it visible.

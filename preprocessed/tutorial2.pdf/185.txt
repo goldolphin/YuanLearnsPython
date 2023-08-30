@@ -1,0 +1,34 @@
+【PG】161 CHAPTER  14 Objects
+
+【PG】The ball’s attributes  would look like this:
+Those are all things you can describe  about the ball.
+
+【PG】The ball’s methods  would look like this:
+Those are all things you can do to the ball.
+
+【PG】What are attributes?
+Attributes are all things you know (or can find out) about the ball. The ball’s attributes are 
+chunks of information—numbers, strings, and so on. Sound familiar? Yes, they’re variables. 
+They’re just variables that are included inside the object.
+You can display them:
+You can assign values to them:
+You can assign them to regular, non-object variables:
+You can also assign them to attributes in other objects: 
+
+【PG】What are methods?
+Methods are things you can do with an object. They’re chunks of code that you can call to do 
+something. Sound familiar? Yes, methods  are just functions  that are included inside the object. 
+You can do all the things with methods that you can do with any other function, including 
+passing arguments  and returning values .
+
+【PG】ball.color
+ball.size
+ball.weight
+ball.kick()
+ball.throw()
+ball.inflate()
+print ball.size
+ball.color = 'green'
+myColor = ball.color
+myBall.color = yourBall.color
+Download from Wow! eBook <www.wowebook.com>

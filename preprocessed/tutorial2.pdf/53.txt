@@ -1,0 +1,43 @@
+【PG】29 CHAPTER  3 Basic Math
+
+【PG】The four basic operations
+We already saw Python do a little math in chapter 1: addition, using the plus ( +) sign, and 
+multiplication, using the asterisk ( *) sign.
+
+【PG】Python uses the hyphen ( -) (which is also called the minus sign) for subtraction, as you 
+would expect:
+
+【PG】Because computer keyboards don’t have a division (÷) symbol, all programs use the forward 
+slash (/) for division:
+
+【PG】That worked. But sometimes Python does something you might not expect with division:
+
+【PG】Huh ? I thought computers were good at math! Everyone knows that
+3 / 2 = 1.5 
+What happened?
+
+【PG】Well, although it seems to be acting dopey, Python is really trying to be smart. To explain 
+this one, you need to know about integers and decimal numbers. If you don’t know the dif -
+ference, check out the word box for a quick explanation. 
+
+【PG】>>> prin t 8 - 5
+3
+>>> prin t 6/2
+3
+>>> prin t 3/2
+1
+
+【PG】Integers  are the numbers you can easily count, like 1, 2, 3, as 
+well as 0 and the negative numbers, like –1, –2, –3.
+
+【PG】Decimal numbers  (also called real numbers ) are the numbers with 
+a decimal point and some digits after it, like 1.25, 0.3752, 
+and –101.2.
+
+【PG】In computer programming, decimal numbers are also called 
+floating-point  numbers, or sometimes floats for short (or float
+for just one of them). This is because the decimal point 
+“floats” around. You can have the number 0.00123456 or 12345.6 
+in a float. 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

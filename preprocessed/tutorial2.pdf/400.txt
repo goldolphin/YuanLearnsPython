@@ -1,0 +1,42 @@
+【PG】Hello World!
+
+【PG】To add a toolbar, right-click the main window and 
+select Add Toolbar . This creates the toolbar at the 
+top of the window, but it will be very small. Find 
+the toolbar in the Object Inspector, click it, and 
+then look in the Property Editor for the 
+minimumSize  property. Set the minimum size
+to 100  for width and 50 for height.
+
+【PG】To add actions (icons) to the toolbar, click the 
+Action Editor  tab at lower right in Qt Designer. 
+Right-click anywhere in the Action Editor pane, 
+and pick New. You’ll get a dialog box for adding a 
+new action. The only thing you have to type in is 
+the Text , and Qt Designer will fill in the object 
+name. Then find the little box in the middle with 
+three dots (…), and click the down-arrow to the 
+right of it. Pick Choose File , and pick the image file 
+you want to use for the toolbar button.
+
+【PG】There’s one last step to adding the new toolbar icon. Once you’ve created the new action, 
+you’ll see it in the list in the Action Editor. Now you have to drag it onto the toolbar. When 
+you do that, the graphic you picked for the new action will appear as a new icon on the 
+toolbar. Qt Designer will automatically scale the image so it fits on the toolbar.
+
+【PG】The health meters are a widget type called Progress Bar . The main graphic is a Push Button
+(like we have used before) with its properties set in a certain way so it doesn’t look like a 
+regular button, but instead displays an image. 
+The extra bits of text are Label  widgets.
+
+【PG】You can create a GUI like this using the PyQt Designer. Or you can load the one we made 
+(from the examples folder) into Qt Designer and examine the widgets and their properties.
+
+【PG】The algorithm
+To be able to write the code for the Virtual Pet program, we need to be more specific about 
+the behavior of the pet. Here’s the algorithm we’ll use:
+■
+We’ll divide the pet’s “day” into 60 parts, which we’ll call ticks . Each tick will be 
+5 seconds of real time, so the pet’s “virtual day” will be 5 minutes of our time.
+
+Download from Wow! eBook <www.wowebook.com>

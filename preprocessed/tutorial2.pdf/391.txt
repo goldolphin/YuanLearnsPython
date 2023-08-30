@@ -1,0 +1,39 @@
+【PG】367 CHAPTER  24 Computer Simulations
+screen.bli t(ins t1_surf, [50, 550])                           
+ins t2_fon t = pygame.fon t.Fon t(None, 24)                        
+ins t2_surf = ins t1_fon t.render(ins truct2, 1, (255, 255, 255))
+screen.bli t(ins t2_surf, [20, 575])
+pygame.display.flip()  
+    
+else:             
+    display_final()
+
+【PG】Give the program a try. Maybe you’ll find out you’re a good spaceship pilot! If you think it’s 
+too easy, you can modify the code to make gravity stronger, make the ship heavier (more 
+massive), give yourself less fuel, or set a different starting height or velocity. You’re the 
+programmer, so you can decide how the game should work.
+
+【PG】The Lunar Lander simulation is mostly about gravity. In the rest of the chapter, we’ll talk 
+about another important factor in simulations—time. And we’ll make a simulation that 
+requires keeping track of time.
+
+【PG】Keeping time
+Time is an important factor in many simulations. Sometimes you want to speed up time, or 
+make things happen faster than in the real world, so you don’t have to wait so long to find 
+out what happens. Sometimes you want to slow things down, so you can get a better look 
+at things that normally happen faster than you can see. And sometimes you want the 
+program to keep real time—to act just like it would in the real world. In all cases, you need 
+some kind of clock to measure time in your program.
+
+【PG】Every computer has a clock built in that you can use to measure time. You have already seen 
+a couple of examples of using and measuring time:
+■In chapter 8, we used the time.sleep()  function to make a countdown timer. 
+Draws everything
+Game Over. Print final score.
+Checks for 
+mouse drag 
+of throttle
+Updates 
+throttle 
+position
+Download from Wow! eBook <www.wowebook.com>

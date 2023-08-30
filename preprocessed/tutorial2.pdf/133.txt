@@ -1,0 +1,49 @@
+【PG】109 CHAPTER  11 Nested and Variable Loops
+【PG】In listing 11.4, the loop variables of the outer loops are used to set the ranges for the inner 
+loops. So instead of each block having the same number of lines and each line having the 
+same number of stars, they’re different each time through the loop.
+
+【PG】You can nest loops as deep as you want. It can get a bit hairy keeping track of what’s going 
+on, so it sometimes helps to print out the values of the loop variables, as shown next. 
+
+numBlocks = int(raw_inpu t('How many blocks of s tars do you wan t? '))
+for block in range(1, numBlocks + 1):
+    prin t 'block = ' , block                            
+    for line in range(1, block * 2 ):
+        for star in range(1, (block + line) * 2): 
+            prin t '*',
+        prin t '  line = ' , line, 'star = ', star 
+    prin t
+
+【PG】Here’s the output of the program:>>> ======================= RESTART =======================
+>>> 
+How many blocks of s tars do you wan t? 3
+* * * *
+* * * * *
+* * * * * * *
+* * * * * * * * *
+* * * * * * *
+* * * * * * * * *
+* * * * * * * * * * *
+* * * * * * * * * * * * *
+* * * * * * * * * * * * * * *
+
+【PG】Listing 11.5 Printing the loop variables in nested loops
+>>> ======================= RESTART =======================
+>>> 
+How many blocks of s tars do you wan t? 3
+block =  1
+* * *   line =  1  s tar = 3
+block =  2
+* * * * *   line =  1  s tar = 5
+* * * * * * *   line =  2  s tar = 7
+* * * * * * * * *   line =  3  s tar = 9
+block =  3
+* * * * * * *   line =  1  s tar = 7
+* * * * * * * * *   line =  2  s tar = 9
+* * * * * * * * * * *   line =  3  s tar = 11
+* * * * * * * * * * * * *   line =  4  s tar = 13
+* * * * * * * * * * * * * * *   line =  5  s tar = 15
+
+【PG】Displays variables
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,39 @@
+【PG】Chapter 8 Loop the Loop
+Don’t worry about the stuff in the program that I haven’t told you about yet, like import , 
+time , and sleep . You’re going to find out all about that in the following chapters. Just try 
+the program in listing 8.6 and see how it works. The important thing here is the range 
+(10, 0, -1)  part, which makes a loop that counts backward from 10 to 1.
+
+【PG】Counting without numbers
+In all the previous examples, the loop variable has been a number. In programming terms, 
+we say that the loop iterates over  a list of numbers. But the list doesn’t have to be a list of 
+numbers. As you already saw from Carter’s experiment, it can be a list of characters (a 
+string). It can also be a list of strings, or anything else. 
+
+The best way to see how this works is with an example. Try the next program and see what 
+happens.
+for cool_guy in [ "Spongebob" , "Spiderman" , "Jus tin Timberlake" , "My Dad" ]:
+    prin t cool_guy, "is the cooles t guy ever!"
+
+Now we’re not looping over a list of numbers, we’re looping over a list of strings. And 
+instead of i for the loop variable, I used cool_guy . The loop variable cool_guy  takes a 
+different value in the list each time through. This is still a kind of counting loop , because even 
+though the list isn’t a list of numbers, Python counts  how many items are in the list to know 
+how many times to loop. (I won’t show what the output looks like this time—you’ll see it 
+when you run the program.)
+
+【PG】But what if you don’t know ahead of time how many iterations you’ll need? What if there’s 
+no list of values you can use? Don’t touch that dial, because that’s coming up next!
+
+【PG】While we’re on the subject …
+You just learned about the first kind of loop, a for  loop  or counting loop . The second kind of 
+loop is called a while  loop  or conditional loop .
+
+The for loop is great if you know in advance how many times you want the loop to run. But 
+sometimes you want a loop to run until something happens, and you don’t know how many 
+iterations it’ll be until that thing happens. A while  loop lets you do that.
+
+In the last chapter, you learned about conditions  and testing  and the if statement. Instead of 
+counting how many times to run a loop, while  loops use a test to decide when to stop a 
+loop. While  loops are also called conditional loops . A conditional loop keeps looping while 
+some condition is met.

@@ -1,0 +1,37 @@
+【PG】302 Hello World!
+
+【PG】E-notation: %e and %E
+When we talked about E-notation (in chapter 3), I promised I’d show you how to make 
+numbers print using E-notation. Well, here it is:
+The %e format string is used to print E-notation. It always prints six decimal places unless 
+you tell it otherwise. 
+You can print more or fewer decimal places by using a .n after the %, just like you can 
+with floats:
+The %.3e  rounded off to three decimal places, and the %.8e  added some zeroes to make up 
+the extra digits.
+You can use a lowercase or uppercase e, and the output will use the same case you used in 
+the format string:
+
+【PG】Automatic float or E-notation: %g and %G
+If you want Python to automatically choose float notation or E-notation for you, use 
+the %g format string. Again, if you use uppercase, you’ll get an uppercase E in 
+the output:
+Did you notice how Python automatically chose E-notation for the big number and regular 
+floating-point notation for the smaller number?>>> number = 12.3456
+>>> prin t '%e' % number
+1.234560e+01
+>>> number = 12.3456
+>>> prin t '%.3e' % number
+1.235e+01
+>>> prin t '%.8e' % number
+1.23456000e+01
+>>> prin t '%E' % number
+1.234560E+01
+>>> number1 = 12.3
+>>> number2 = 456712345.6
+>>> prin t '%g' % number1
+12.3
+>>> prin t '%g' % number2
+4.56712e+08
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,57 @@
+【PG】380 Hello World!
+
+【PG】else:
+            save_lis t = [8, 8, 0, da tetime.da tetime.now(), 0]
+        self.happiness = save_lis t[0]    
+        self.heal th    = save_lis t[1]                                  
+        self.hunger    = save_lis t[2]                               
+        times tamp_ then = save_lis t[3]                              
+        self. time_cycle = save_lis t[4]                                 
+        difference = da tetime.da tetime.now() - times tamp_ then 
+        ticks = difference.seconds / 50                    
+        for i in range(0, ticks):
+            self. time_cycle += 1                                     
+            if self. time_cycle == 60:                                 
+                self. time_cycle = 0                                   
+            if self. time_cycle <= 48:   
+                self.sleeping = False                                 
+                if self.hunger < 8:                                   
+                    self.hunger += 1                                   
+            else:                                
+                self.sleeping = True                                   
+                if self.hunger < 8 and self. time_cycle % 3 == 0:
+                    self.hunger += 1                                   
+            if self.hunger == 7 and (self. time_cycle % 2 ==0) \        
+                                and self.heal th > 0:                   
+                self.heal th -= 1                                       
+            if self.hunger == 8 and self.heal th > 0:                   
+                self.heal th -=1                                        
+        if self.sleeping:                                              
+            self.imageLis t = self.sleepImages                          
+        else:                                        
+            self.imageLis t = self.no thingImages           
+
+【PG】def sleep_ test(self):         
+        if self.sleeping:                                                
+            resul t = (Q tGui.QMessageBox.warning(self, 'WARNING' , 
+"Are you sure you wan t to wake your pe t up?  He'll be unhappy abou t it!",
+                    Q tGui.QMessageBox.Yes | Q tGui.QMessageBox.No, 
+                    Q tGui.QMessageBox.No))
+                                                                         
+            if resul t == Q tGui.QMessageBox.Yes:                          
+                self.sleeping = False                                    
+                self.happiness -= 4                                     
+                self.forceAwake = True                                  
+                return True                                              
+            else:                                                        
+                return False                                            
+        else:                                                        
+            return True                                  
+
+【PG】def doctor_Click(self):                                           
+        if self.sleep_ test():                                         
+            self.imageLis t = self.doc torImages    
+            self.doc tor = True                                        
+            self.walking = False                                      
+            self.ea ting = False                                       
+            self.playing = False

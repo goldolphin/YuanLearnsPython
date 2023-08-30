@@ -1,0 +1,48 @@
+【PG】53 CHAPTER  5 Input
+What did you learn?
+In this chapter, you learned about
+■Inputting text with raw_input()
+■Adding a prompt message to raw_input()
+■Inputting numbers using int()  and float()  with raw_input()
+■Printing several things on one line, using a comma
+
+【PG】Test your knowledge
+1With this code
+if the user types in 12, what type of data is answer ? Is it a string or a number?answer = raw_inpu t()
+
+【PG】Thinking like a programmer
+Depending on what operating system you 
+are using (Windows, Linux, or Mac OS X), 
+you might see little squares or something 
+like \r at the end of each line when you 
+try running the program in listing 5.4. The 
+reason is that different operating systems 
+use different ways to indicate the end of 
+a line of text. 
+
+Windows (and MS-DOS before it) use two characters: CR 
+(Carriage Return) and LF (Line Feed). 
+Linux uses just LF. Mac OS X uses just CR.
+
+Some programs can handle any of these, 
+but some, like IDLE, get confused if they 
+don’t see exactly the line-ending characters 
+they are expecting. When that happens, they 
+display a little square, which means, “I 
+don’t understand this character.”
+
+You might or might not see the little squares, 
+depending on what operating system you 
+are using and how you run the program 
+(using IDLE or some other method).
+
+【PG】#!/bin/envpython#Paginat
+ae
+textfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1;self.page=self.page+1PrinterFormatter:self.header_written=0def#Incrementthepagecount,andresetthelinecountself.headre_written=1;eslf.count=1;self.page=self.page+1write_heda
+re
+s(elf):
+I#
+tf
+heheaderforprint>>>Hellofi#print>>>Helloif#
+print>>>Helloif#
+Download from Wow! eBook <www.wowebook.com>

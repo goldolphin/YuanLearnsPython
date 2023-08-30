@@ -1,0 +1,39 @@
+【PG】 116 Hello World!
+Test your knowledge
+1How do you make a variable loop in Python?
+2How do you make a nested loop in Python?
+3What’s the total number of stars that will be printed by the following code?
+4What will the output from the code in question 3 look like?
+5If a decision tree has four levels and two choices per level, how many possible choices 
+(paths through the decision tree) are there?
+
+【PG】 Try it out
+1Remember the countdown-timer program we created in chapter 8? Here it is, to 
+refresh your memory:
+Modify the program to use a variable loop. The program should ask the user where the
+countdown should start, like this:
+
+2Take the program you wrote in question #1, and have it print a row of stars 
+beside each number, like this:
+(Hint: You probably need to use a nested loop.)for i in range(5):
+    for j in range(3):
+        prin t '*',
+    prin t
+impor t time
+for i in range (10, 0, -1):
+    prin t i
+    time.sleep(1)
+prin t "BLAST OFF!"
+Coun tdown timer:  How many seconds?  4
+4
+3
+2
+1
+BLAST OFF!
+Coun tdown timer:  How many seconds?  4
+4 * * * *
+3 * * *
+2 * *
+1 *
+BLAST OFF! 
+Download from Wow! eBook <www.wowebook.com>

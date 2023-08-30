@@ -1,0 +1,30 @@
+【PG】360 Hello World!
+
+【PG】What did you learn?
+
+【PG】In this chapter, you learned:
+■What randomness and random events are
+■A little bit about probability
+■How to use the random module to generate random events in a program
+■How to simulate flipping a coin or rolling dice
+■How to simulate drawing cards from a shuffled deck
+■How to play Crazy Eights (if you didn’t already know)
+
+【PG】Test your knowledge
+
+1Describe what a “random event” is. Give two examples.
+2Why is rolling one 11-sided die with numbers from 2 to 12 different from rolling a pair 
+of 6-sided dice, which produce totals from 2 to 12?
+3What are two ways to simulate rolling a die in Python?
+4What kind of Python variable did we use for a single card?
+5What kind of Python variable did we use for a deck of cards?
+6What method did we use to remove a card from the deck when it’s drawn, or from a 
+hand when it’s played?
+
+【PG】Try it out
+
+1Try the “10 in a row” experiment using the program from listing 23.3, but try different 
+amounts for the “in a row. ” How often do you get five in a row? How about six, seven, 
+eight, and so on? Do you see a pattern?
+
+【PG】Download from Wow! eBook <www.wowebook.com>

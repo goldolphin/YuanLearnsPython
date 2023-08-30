@@ -1,0 +1,18 @@
+【PG】227 CHAPTER  17 Sprites and Collision Detection
+
+【PG】If you wanted the balls to bounce off each other only when the round parts of the balls 
+(not the edges of the rectangles) actually touched, you’d have to use something called 
+pixel-perfect collision detection . The spritecollide()  function doesn’t do this, but instead 
+uses the simpler rect collision detection . 
+
+【PG】Here’s the difference. With rect collision detection, two balls will collide when any part of 
+their rectangles touch each other. With pixel-perfect collision detection, two balls will only 
+collide when the balls themselves touch, like this:
+
+【PG】Pixel-perfect collision detection is more realistic. (You haven’t felt any invisible rectangles 
+around any real beach balls, have you?) But it’s more complicated to do in a program.
+For most things you’ll do in Pygame, rect collision detection is good enough. Pixel-perfect 
+collision detection takes more code, and it’ll make your games run slower, so only use it if 
+you really, really need it. Several pixel-perfect modules are available (at least two on the 
+Rect colli sion Pixel-perfect colli sion
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,46 @@
+【PG】第 3章　基本数学运算
+【PG】自增和自减
+还记得上一章中的例子： score = score + 1 吗？我们说过， 这称为自增
+（incrementing） 。 与它类似的是 score = score – 1 ，这称为自减（decrementing） 。
+这些运算在编程中经常出现，因此有自己专门的操作符：+=（自增）和 -=（自减） 。
+可以像这样使用：
+                   或者：
+
+【PG】CHAPTER  3 Basic Math
+【PG】What's that letter ‘e’ 
+doing in the middle of
+the number?
+SIncrement and decrement
+Remember the example from the last chapter: score = score + 1 ? We said that was called 
+incrementing . A similar thing is score = score - 1 , which is called decrementing . These are 
+done so often in programming that they have their own operators: += (increment) and -= 
+(decrement).
+You use them like this:
+                                    or 
+The first one adds one to the number. (It changes from 7 to 8.) The second one subtracts 
+one from the number. (It changes from 7 to 6.)
+
+【PG】Really big  and really small
+Remember, in chapter 1, when we multiplied those two really big numbers together? We got a very big number for the answer. Sometimes, Python shows you big numbers a bit differently. Try this 
+in interactive mode:
+(It doesn’t matter exactly what numbers you type in—any big numbers with decimals
+will do.)
+The e is one way of displaying really big or really small 
+numbers on a computer. It’s called E-notation. When we’re 
+working with really big (or really small) numbers, showing all the digits and decimal places can be kind of a pain. These kinds of numbers show up a lot in math and science. 
+
+【PG】number增1
+number减1
+其中第一个例子将 number增1（这会从 7变成 8） 。第二个例子将 number减去 1
+（从 7变成 6 ） 。
+
+【PG】3.5　非常大和非常小
+还记得第 1章中将两个非常大的数相乘吗 ？我们得到的答案也是一个非常大的数 。S实 际 上， 既 然 你 提 到 了 这 一
+点，应该说操作符和操作员确实很接
+近……就 像老式电话接线员连接电话
+一样，算 术操作符按同样的方式把数字连接在一起。
+我想告诉你的还有另外两个操作符 。我
+ 知道，我刚
+才已经说过只再讲两个， 不 过别担心， 这两个操作符非
+常容易！
+图灵社区会员 FreeLink 专享 尊重版权

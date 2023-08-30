@@ -1,0 +1,19 @@
+【PG】24 Hello World!
+
+【PG】How “variable” are they?
+
+Variables are called “variables” for a reason. It’s because they are … well … variable! That means you can vary , or change, the value that is assigned to them. In Python, you do this by creating a new thing that is different from the old thing, and sticking the old label (the name) on the new thing. We did that with MyTeacher  in the last section. We took the tag MyTeacher  off “Mrs. Goodyear” and attached it to a new thing, “Mrs. Tysick” . We assigned a new value to MyTeacher .
+
+【PG】Let’s try another one. Remember the variable Teacher  that you created before? Well, if you haven’t closed IDLE, it’s still there. Check and see: Yup, still there. But we can change it to something else instead: We created a new thing, “Mr. Smith, ” and named it Teacher . The tag got moved from the old thing to the new thing. But what happened to the old thing, “Mr. Morton”?
+
+【PG】Remember that things can have more than one name (more than one tag stuck on them). If “Mr. Morton” still has another tag on it, then it stays in the computer’s memory. But if it no longer has any tags, Python figures that no one needs it anymore, so it gets deleted from memory. That way, the memory doesn’t fill up with things that nobody is using. Python does all this cleanup automatically, and you don’t have to worry about it.
+
+【PG】An important thing to know is that we didn’t actually change “Mr. Morton” into “Mr. Smith” . We just moved the tag (reassigned the name) from one thing to the other. Some kinds of things in Python (like numbers and strings) cannot be changed. You can reassign their names to something else (like you just did), but you can’t change the original thing.>>> Teacher
+'Mr. Mor ton'
+>>> Teacher = 'Mr. Smi th'
+>>> Teacher
+'Mr. Smi th'
+
+【PG】Tag Moved
+
+【PG】Download from Wow! eBook <www.wowebook.com>

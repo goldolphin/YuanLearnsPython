@@ -1,0 +1,19 @@
+【PG】In the last chapter, we made our first graphical game, PyPong, using what we have learned about graphics, sprites, collisions, animation, and events. 
+【PG】In this chapter, we’ll add another 
+piece of the puzzle: sound. Every video game 
+and many other programs use sound to 
+make them more interesting and 
+enjoyable. 
+【PG】Sound can be both an input and an 
+output. As an input, you’d 
+connect a microphone or other 
+sound source to the computer, 
+and the program would record the sound or do 
+something else with it (maybe send it over the 
+Internet). But sound is much more common as an output, and that’s what we’ll cover in this 
+book. 
+【PG】You’ll learn how to play sounds like music or sound effects and add them to your 
+programs, like PyPong.
+【PG】Sound is another one of those things, like graphics, that can get complicated, because 
+different computers have different hardware and software for playing sounds. To make 
+things simpler, we’re going to get some help from Pygame again.

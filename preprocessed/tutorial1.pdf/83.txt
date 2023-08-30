@@ -1,0 +1,22 @@
+【PG】6.4　选择你的口味　　 57
+EasyGui msgbox就是包含一条消息和一个 OK按钮的对话框。 不
+过还可以有不同类型的对话框，包含更多的按钮和其他内容。
+
+【PG】6.4　选择你的口味
+我们将举一个挑选冰淇淋口味的例子来学习利用 EasyGui从用户
+得到输入（冰淇淋口味）的不同方法。
+
+【PG】有多个按钮的对话框
+下面来创建一个包含多个按钮的对话框（ 如消息框 ） 。具体做法
+是使用一个按钮框（button box ，buttonbox ） 。下面来建立一个程序，
+而不是在交互模式中完成。
+在IDLE中新建一个文件 。键入代码清单 6-1中的程序。
+
+【PG】Pick your flavor
+We’re going to use the example of choosing your favorite flavor of ice cream 
+to look at some different ways to get input (the ice cream flavor) from the user with EasyGui.
+
+【PG】Dialog box with multiple buttons
+Let’s make a dialog box (like a message box) with more than one button. The 
+way to do this is with a button box  (buttonbox ). Let’s make a program, rather 
+than do it in interactive mode.

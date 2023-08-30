@@ -1,0 +1,21 @@
+【PG】Preface xi
+Acknowledgments xvii
+About this book xix
+
+【PG】1Getting Started 1
+Installing Python 1■Starting Python with IDLE 2■Instructions, 
+please 3■Interacting with Python 5■Time to program 7
+Running your first program 8■If something goes wrong 9
+Our second program 12
+
+【PG】2Remember This: Memory and Variables 15
+Input, processing, output 15■Names 17■What’s in a 
+name? 21■Numbers and strings 22■How “variable” are 
+they? 24■The new me 25
+
+【PG】3Basic Math 28
+The four basic operations 29■Operators 31■Order of 
+operations 31■Two more operators 33■Really big and 
+really small 35
+
+【PG】Download from Wow! eBook <www.wowebook.com>

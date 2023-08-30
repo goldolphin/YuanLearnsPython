@@ -1,0 +1,35 @@
+【PG】CHAPTER  15 Modules
+Here, the star ( *) means all. But she has to be careful. If there are any students with the same 
+names from Stephen Leacock School as there are from John Young School, there will be 
+confusion.
+Whew!
+At this point, the whole namespace thing might still be a little fuzzy. Don’t worry! It’ll 
+become clearer as you do examples in later chapters. Whenever you need to import mod -
+ules, I’ll explain exactly what you’re doing.
+
+【PG】Standard modules
+Now that you know how to create and use modules, do you always have to write your own 
+modules? No! That’s one of the great things about Python.
+Python comes with a bunch of standard modules to let you do things like find files, tell the 
+time (or count time), or generate random numbers, among other things. Sometimes, people 
+say Python has “batteries included, ” and that’s what they’re talking about—all of Python’s 
+standard modules. This is known as the Python Standard Library .
+Why do these things have to be in separate modules? Well, they don’t have to be, but the 
+people who designed Python decided that it would be more efficient. Otherwise, every 
+Python program would have to include every possible function. This way, you just include 
+the ones you need.
+Of course, some things (like print , for, and if-else ) are basic commands in Python, so you 
+don’t need a separate module for them—they’re in the main part of Python.
+If Python doesn’t have a module for something you want to do (like make a graphical 
+game), there are other add-on modules that you can download, usually for free! We have 
+included several of these with this book, and they were installed if you used the install pro -
+gram on the book’s website. If not, you can always install them separately.
+
+【PG】Let’s look at a couple of the standard modules.
+Time
+The time  module lets you get information from your computer’s 
+clock, like the date and the time. It also lets you add delays to your 
+programs. (Sometimes the computer does things too quickly, and 
+you have to slow it down.)
+The sleep()  function in the time  module is used to add a delay—
+that is, to make the program wait and do nothing for a while. It’s

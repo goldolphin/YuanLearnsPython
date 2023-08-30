@@ -1,0 +1,35 @@
+【PG】91 CHAPTER  8 Loop the Loop
+
+【PG】Jumping ahead— continue
+If you want to stop executing the current iteration of the loop and skip ahead to the next 
+iteration, the continue  statement is what you need. The best way to show this is with an 
+example. 
+for i in range(1, 6):
+    prin t
+    prin t 'i =', i,
+    prin t 'Hello, how' ,
+    if i == 3:
+        continue
+    prin t 'are you today?'
+If we run this program, the output looks like this:
+Notice that, the third time through the loop (when i == 3 ), the body of the loop didn’t fin -
+ish—it jumped ahead to the next iteration ( i == 4 ). That was the continue  statement at 
+work. It works the same way in while  loops.
+
+【PG】Bailing out— break
+What if you want to jump out of the loop completely—never finish counting, or give up 
+waiting for the end condition? The break  statement does that.
+Let’s change only line 6 of listing 8.9, replacing continue  with break , and rerun the program 
+to see what happens:Listing 8.9 Using continue  in a loop
+>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?
+i = 2 Hello how are you today?
+i = 3 Hello how
+i = 4 Hello how are you today?
+i = 5 Hello how are you today?
+>>> ================== RESTART ==================
+>>> 
+i = 1 Hello how are you today?
+i = 2 Hello how are you today?
+i = 3 Hello how

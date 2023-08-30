@@ -1,0 +1,44 @@
+【PG】301 CHAPTER  21 Print Formatting and Strings
+
+【PG】Floating point numbers: %f or %F
+
+【PG】For decimal numbers, you can use either the uppercase or lowercase f in the format string 
+(%f or %F):
+
+【PG】If you use %f by itself, the number will display with six decimal places. If you add .n before 
+the f, where n is any integer, it’ll round the number off to that many decimal places:
+
+【PG】You can see how it rounded the number 12.3456 to two decimal places: 12.35.
+
+【PG】If you specify more decimal places than are in the number, Python will pad (fill in) 
+the number with zeros:
+
+【PG】Here the number had only four places after the decimal, but we asked for eight, so the 
+other four were filled in with zeros.
+
+【PG】If the number is negative, %f will always display the - sign. If you want the number to 
+always display a sign, even if it’s positive, use a + sign right after the % (this is good for lining 
+up lists of positive and negative numbers):
+
+【PG】If you want your list of positive and negative numbers to line up, but you don’t want to see 
+the + sign on positive numbers, use a space instead of the +, right after the %:
+
+【PG】Notice that there is a space before 12 in the output, so that the 12 and 98 line up one below 
+the other, even though one has a sign and the other doesn’t.
+
+【PG】>>> number = 12.3456
+>>> prin t '%f' % number
+12.345600
+>>> prin t '%.2F' % number
+12.35
+>>> prin t '%.8f' % number
+12.34560000
+>>> prin t '%+f' % number
++12.345600
+>>> number2 = -98.76
+>>> prin t '% .2f' % number2
+-98.76
+>>> prin t '% .2f' % number
+ 12.35
+
+【PG】Download from Wow! eBook <www.wowebook.com>

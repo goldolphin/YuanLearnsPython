@@ -1,0 +1,39 @@
+【PG】138 Hello World!
+
+【PG】Let’s add some more names. Unlike the append()  method you use for lists, dictionaries don’t 
+have a method for adding new items. You just specify the new key and value:
+
+【PG】Let’s look at the whole dictionary:
+
+【PG】Now, the whole reason we created a dictionary was so we could look things up. In this case, 
+we want to look something up by name. You do that like this:
+Notice that you use square brackets to specify which key you want within the dictionary. 
+But the dictionary as a whole is enclosed in curly brackets.
+
+【PG】A dictionary is somewhat like a list, but there are a couple of main differences. Both types 
+are collections ; that is, they are a way of collecting together other types. 
+Here are some similarities:
+■Both lists and dictionaries can hold any type (even lists and dictionaries), so you can 
+have collections of numbers, strings, objects, and even other collections.
+■Both lists and dictionaries give you ways to find things in the collection.
+And here are some differences:
+■Lists are ordered . If you put things in a list in a certain order, they stay in that order. And 
+you can sort a list. Dictionaries are unordered . If you add things to a dictionary and 
+then display the contents, they may be in a different order than you put them in.
+■Items in a list are accessed by their index. Items in a dictionary are accessed by their 
+key: 
+
+【PG】As we mentioned before, many things in Python are objects, including lists and dictionaries. 
+Just like lists, dictionaries have some methods you can use to work with them, using the dot 
+notation you saw before.>>> phoneNumbers[ "Mary"] = "555-6789"
+>>> phoneNumbers[ "Bob"] = "444-4321"
+>>> phoneNumbers[ "Jenny"] = "867-5309"
+>>> prin t phoneNumbers
+{'Bob': '444-4321', 'John': '555-1234', 'Mary': '555-6789', 'Jenny': '867-5309'}
+>>> prin t phoneNumbers[ "Mary"]
+'555-6789'
+>>> prin t myLis t[3] 
+'eggs'
+>>> prin t myDic tionary["John"]
+'555-1234'
+Download from Wow! eBook <www.wowebook.com>

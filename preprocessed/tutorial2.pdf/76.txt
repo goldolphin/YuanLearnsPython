@@ -1,0 +1,25 @@
+【PG】52 Hello World!
+【PG】Input from the Web
+Usually, you get input for a program from the user. But there are other ways to get input, 
+too. You can get it from a file on your computer’s hard drive (you’ll learn about that in 
+chapter 22), or you can get it from the Internet.
+
+【PG】If you have an Internet connection, you can try the program in listing 5.4. It opens a file 
+from the book’s website and shows you the message that is in that file.
+
+impor t urllib2
+file = urllib2.urlopen( 'http://helloworldbook2.com/da ta/message. txt')
+message = file.read() 
+prin t message
+
+【PG】That’s it. With just four lines of code, your 
+computer reaches across the Web to get a file 
+from the book’s website and display it. If you 
+try this program (assuming you have a work -
+ing Internet connection), you will see the 
+message.
+
+【PG】Listing 5.4 Getting input from a file on the Web
+If you are trying this program  from an oﬃce or school computer, there’s a chance it won’t work. That’s because  some oﬃces and schools use something called a proxy to connect to the Internet.  A proxy is another computer  that acts like a bridge or gateway between the Internet  and the school or oﬃce. Depending on how the proxy is set up, this program  might not know how to connect to the Internet  through  the proxy. If you get a chance to try it from home (or somewhereelse that has a direct Internetconnection with no proxy), itshould work.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

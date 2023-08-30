@@ -1,0 +1,29 @@
+【PG】226 Hello World!
+
+【PG】Why does this happen? Well, it has to do with the way we wrote the animate() function. Notice that we move one ball, then we check its collisions, then we move another ball, then we check its collisions, and so on. We should probably do all the moving first and then do all the collision checking after that.
+So we want to take line 28, ball.move(), and put it in its own loop, like this:
+Try this and see if it works a little better.
+You can play with the code, changing things like the speed (the time.delay() number), number of balls, original location of the balls, randomness, and so on to see what happens to the balls. 
+
+【PG】Rect collision vs. pixel-perfect collision
+One thing you’ll notice is that the balls aren’t always completely touching when they “collide.” That’s because spritecollide() doesn’t use the round shape of the ball to detect collisions. It uses the ball’s rect, the rectangle around the ball.
+If you want to see this, draw a rectangle around the ball image, and use that new image instead of the regular beach ball image. I’ve made one for you, so you can try it:def animate(group):
+screen.fill([255,255,255])
+for ball in group:
+ball.move()
+for ball in group:
+group.remove(ball)
+if pygame.sprite.spritecollide(ball, group, False):
+ball.speed[0] = -ball.speed[0]
+ball.speed[1] = -ball.speed[1]
+group.add(ball)
+screen.blit(ball.image, ball.rect)
+pygame.display.flip()
+pygame.time.delay(20)   
+img_file = "b_ball_rect.png"
+
+【PG】Moves all the balls first
+Then does collision detection and bounces them
+This is easier to see if you make the animation steps bigger. You can do this by increasing the speed from 2 to 5 and also increasing the delay between each step from 20 to 50.
+
+Download from Wow! eBook <www.wowebook.com>

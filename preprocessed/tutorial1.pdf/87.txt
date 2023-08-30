@@ -1,0 +1,39 @@
+【PG】6.6　其他 GUI组件　　 61
+
+【PG】import random, easygui
+secret = random.randint(1, 99)        
+guess = 0
+tries = 0
+easygui.msgbox("""AHOY!  I'm the Dread Pirate Roberts, and I have a secret !
+It is a number from 1 to 99.  I'll give you 6 tries.""" )
+
+【PG】while guess != secret and tries < 6:    
+    guess = easygui.integerbox("What's yer guess, matey?")
+    if not guess: break                                     
+    if guess < secret:                                       
+        easygui.msgbox(str(guess) + " is too low, ye scurvy dog!")
+    elif guess > secret:                                          
+        easygui.msgbox(str(guess) + " is too high, landlubber!")
+    tries = tries + 1 
+
+【PG】if guess == secret:                                                       
+    easygui.msgbox("Avast! Ye got it!  Found my secret, ye did!")    
+else:                                                            
+    easygui.msgbox("No more guesses!  The number was " + str(secret)) 最多允 
+许猜 6次
+
+【PG】游戏
+结束时打印消息用掉一次机会
+
+【PG】我们还没有全面学习这个程序中各个部分是如何工作的， 不过你可以先键入这个程序，试试看。运行程序时你会看到：
+
+【PG】我们将在第 7章学习if、else和elif的内容。 第8章介绍while，random会在第 15章讲到 。另外我们还会在第 23章大量使用 random。
+
+【PG】6.6　其他 GUI组件
+EasyGui还提供了另外一些 GUI组件，包括允许多重选择（ 而不是只选择一项 ）的选择框， 还有一些特殊的对话框用来得到文件名等内容。 不过，对现在来说， 前面介绍的 GUI组件已经足够了 。
+
+【PG】利用 EasyGui， 我们可以非常容易地生成一些简单的 GUI，而且它隐藏了 GUI涉及的很多复杂性，使你不用再操心这些问题。 后面我们将会讨论建立 GUI的另一种方法，它可以提供更多的灵活性和控制。
+
+【PG】如果你想更多地了解 EasyGui，可以访问 EasyGui主页 easygui.sourceforge.n et 。
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

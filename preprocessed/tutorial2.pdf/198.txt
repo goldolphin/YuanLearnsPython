@@ -1,0 +1,35 @@
+【PG】174 Hello World!
+
+【PG】Both the Triangle  class and the Square  class have a method called getArea() . So if we had 
+an instance of each class, like this,
+then we could calculate the area of either one using getArea() :
+We used the method name getArea()  for both shapes, but the method did something 
+different for each shape. This is an example of polymorphism.
+
+【PG】Inheritance—learning from your parents
+In the real (non-programming) world, people can inherit  things from their parents or other 
+relatives. You can inherit traits like red hair, or you can inherit stuff like money or property. 
+In object-oriented programming, classes can inherit attributes and methods from other 
+classes. This allows you to have whole “families” of classes that share common attributes 
+and methods. That way, you don’t have to start from scratch every time you want to add a 
+member to the family.
+
+【PG】A class that inherits attributes or methods from another class is called a derived class
+or subclass . An example will help explain this.
+>>> myTriangle = Triangle(4, 5)
+>>> mySquare = Square(7)
+>>> myTriangle.getArea()
+10.0
+>>> mySquare.getArea()
+49
+
+【PG】Eustace Petunia HortenseEl Poppo Mom
+(“The Boss”)Grampa Gramma Oppa Omma
+Earl
+(”Big Sissy”)Mathilda
+(”Little Sissy”)Pavlov
+(”Dog Man”)Ingrid
+(”Thumper”)Natalia
+(”Krazy Kissing Aunt”)
+Olga Ivan
+Download from Wow! eBook <www.wowebook.com>

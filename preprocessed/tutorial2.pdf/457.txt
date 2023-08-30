@@ -1,0 +1,39 @@
+【PG】433  APPENDIX  C Answers to Self-Test Questions
+
+【PG】You find out whether a certain value is in a list by using the in keyword.
+
+【PG】You find out the location of a value in a list by using the index()  method.
+
+【PG】A tuple is a collection that is like a list, except that you can’t change it. Tuples are immutable (unchangeable), whereas lists are mutable (changeable).
+
+【PG】You can make a list of lists in several ways:
+■By using nested square brackets: 
+■By using append() , and appending a list:
+■By making individual lists and then combining them:
+
+【PG】You get a single value from a list of lists by using two indexes (or indices):
+The answer would be 'green' .
+
+【PG】A dictionary is a collection of key-value pairs.
+
+【PG】You can add an item to a dictionary by specifying the key and value:
+
+【PG】To look up an item in a dictionary by its key, you can use an index:
+>>> my_lis t = [[1, 2, 3], [ 'a', 'b', 'c'], ['red', 'green', 'blue']]
+>>> my_lis t = []
+>>> my_lis t.append([1, 2, 3])
+>>> my_lis t.append([ 'a', 'b', 'c'])
+>>> my_lis t.append([ 'red', 'green', 'blue'])
+>>> prin t my_lis t
+[[1, 2, 3], ['a', 'b', 'c'], ['red', 'green', 'blue']]
+>>> lis t1 = [1, 2, 3]
+>>> lis t2 = ['a', 'b', 'c']
+>>> lis t3 = ['red', 'green', 'blue']
+>>> my_lis t = [lis t1, lis t2, lis t3]
+>>> prin t my_lis t
+[[1, 2, 3], ['a', 'b', 'c'], ['red', 'green', 'blue']]
+my_lis t = [[1, 2, 3], [ 'a', 'b', 'c'], ['red', 'green', 'blue']]
+my_color = my_lis t[2][1] 
+phone_numbers[ 'John'] = '555-1234'
+prin t phone_numbers[ 'John']
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,48 @@
+【PG】Chapter 13 Functions
+If you use the global  keyword, Python won’t  make a new local variable called my_price . It 
+will use the global variable my_price . If there’s no global variable called my_price , it will 
+create one.
+
+【PG】A bit of advice on naming variables 
+You saw in the previous sections that you can use the same names for global variables and 
+local variables. Python will automatically create new local variables when it needs to, or you 
+can prevent that with the global  keyword. However, I strongly recommend that you don’t 
+reuse names. 
+As you might have noticed 
+from some of the examples, it 
+can be difficult to know 
+whether the variable is the 
+local version or the global 
+version. It makes the code 
+more confusing, because you 
+have different variables with 
+the same name. And wher -
+ever there’s confusion, bugs 
+love to creep in.
+So for now, I recommend you use different names for local variables and global variables. 
+That way, there’s no confusion, and you’ll keep the bugs at bay. 
+
+【PG】What did you learn?
+In this chapter, you learned
+■What a function is
+■What arguments (or parameters) are
+■How to pass an argument to a function
+■How to pass multiple arguments to a function
+■How to make a function return a value to the caller
+
+【PG】class Ball:
+def __init__( self, color, size, direction):
+self.color = color  
+self. size = size 
+self.direction = direction
+def bounce( self):
+ if self.direction == "down":
+  self.direction = "up"
+myBall = Ball("red", " small", "down")
+print "I ju st created a ball."
+print "My ball i s", myBall. size
+print "My ball i s", myBall.color
+print "My ball' s direction i s ", myBall.direction
+print "Now I'm going to bounce the ball"
+print
+myBall.bounce()

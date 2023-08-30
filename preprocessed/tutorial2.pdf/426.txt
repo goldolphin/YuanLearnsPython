@@ -1,0 +1,45 @@
+【PG】402 Hello World!
+【PG】
+self.robot.goForth()
+self.robot.attack()
+These methods have to be called self.robot.xx()  because self  refers to the AI, not the 
+robot that the AI controls, and the AI object isn’t actually moving around or attacking. 
+The AI object is just responsible for telling the robot what to do, and the robot object takes 
+care of doing the moving and attacking. 
+
+【PG】
+Let’s start writing the turn()  method. Remove the pass , and add this to your code:
+
+【PG】
+If you test the robot now, you can see it tries to go forward every turn. This quickly causes it 
+to hit the wall of the playing field. If the opponent gets in the way, the robot simply stops 
+moving. You can fix this using self.robot.lookInFront() . This function returns "bot"  if 
+there’s a robot directly in front that you can attack. Change the turn()  function so that it 
+looks like this:
+
+【PG】
+Now, if something gets in the way of your robot, the robot attacks. But if the robot hits a 
+wall, it still stops. self.robot.lookInFront()  returns "wall"  if you’re up against a wall. Add 
+this to your turn()  function, between self.robot.attack()  and else :
+
+【PG】
+Now, if you run the code, the robot starts going in circles! When it hits a wall, it turns right, 
+and when it hits the next wall it turns right again, and so on. You want the bot to turn all 
+the way around when it hits a wall, and it takes two right turns to turn all the way around. 
+So, when the robot hits a wall, it needs to make a right turn. Then, on the next round, it 
+needs to turn right again. Basically, you need the bot to remember that it’s in the middle of 
+a U-turn. You can do this by giving the AI a new property (a variable) to keep track of what 
+it’s doing. Let’s add a new line to the __init__()  function:
+
+【PG】
+self.robot.goForth()
+if self.robot.lookInFront() == "bot":
+    self.robot.attack()
+else:
+    self.robot.goForth()
+elif self.robot.lookInFront() == "wall":
+    self.robot.turnRight()
+self.currentlyDoing = "forward" 
+
+【PG】
+Download from Wow! eBook <www.wowebook.com>

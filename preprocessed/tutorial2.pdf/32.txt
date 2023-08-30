@@ -1,0 +1,35 @@
+【PG】Hello World!
+
+【PG】You’ll see a window like the one in the next figure. The title bar says Untitled  because you 
+haven’t given the file a name yet. 
+
+【PG】Now, type the program in the following listing into the editor.
+
+prin t "I love pizza!"
+prin t "pizza " * 20
+prin t "yum " * 40
+prin t "I'm full."
+
+【PG】When you’re done, save the program using the 
+File > Save  or File > Save As  menu option. Call the file 
+pizza.py . You can save it wherever you like (as long 
+as you remember where it is, so you can find it later). You might want to create a new folder 
+for saving your Python programs. The .py part at the end of the filename is important, 
+because it tells your computer that this is a Python program and not just any old text file.
+
+【PG】You might have noticed that the editor used some different colors in the program. Some 
+words are in orange, and others are in green. This is because the IDLE editor assumed that 
+you would be typing in a Python program. For Python programs, the IDLE editor shows 
+Python keywords in orange and anything in quotation marks in green. This is meant to help 
+you read your Python code more easily.
+
+【PG】Running your first program
+
+【PG】Once you’ve saved your program, go to the Run  menu (still in the IDLE editor), and pick Run 
+Module  (as shown in the next figure). This will run your program.
+
+【PG】Listing 1.1Our first real program
+
+Notice the title that says“Listing 1.1”? When the examplecode makes a complete Pythonprogram, I will number it likethis, so you can easily ﬁnd it in the\examples folderor on the web site.
+
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,38 @@
+【PG】xviii ACKNOWLEDGMENTS
+This book would not be the same without Martin Murtonen’s lively and fun illustrations. His 
+work speaks for itself about Martin’s creativity and talent. But what doesn’t show is how 
+great he is to work with. It was a pleasure.
+
+【PG】One day, I asked my friend and colleague Sean Cavanagh, “How would you do this in Perl?” 
+Sean said, “I wouldn’t. I would use Python. ” So I took the plunge to learn a new program-
+ming language. Sean answered many questions when I was learning Python and reviewed 
+early drafts. He also created and maintains the installer. His help is much appreciated.
+
+【PG】I would also like to thank the many people who reviewed the book during its development 
+and helped prepare the manuscript: Vibhu Chandreshekar, Pam Colquhoun, Gordon 
+Colquhoun, Dr. Tim Couper, Josh Cronemeyer, Simon Cronemeyer, Kevin Driscoll, Jeffrey 
+Elkner, Ted Felix, David Goodger, Lisa L. Goodyear, Dr. John Grayson, Michelle Hutton, Horst 
+Jens, Andy Judkis, Caiden Kumar, Anthony Linfante, Shannon Madison, Kenneth McDonald, 
+Evan Morris, Prof. Alexander Repenning, André Roberge, Kari J. Stellpflug, Kirby Urner, and 
+Bryan Weingarten
+
+【PG】The final result is much better for their efforts.
+WARREN  SANDE
+I would like to thank Martin Murtonen for his exceptional caricature of me, my mom for 
+letting me go on the computer when I was two years old and for coming up with the idea of 
+writing a book, and, most importantly, my dad for all the effort he put into this book with 
+me and showing me how to program.
+
+【PG】Acknowledgments for the Second Edition
+In updating Hello World! , many of the same people contributed who helped with the First 
+Edition. In addition to those people listed previously, we’d like to thank those who helped 
+review the Second Edition during its development: Ben Ooms, Brian T. Young, Cody 
+Roseborough, Dave Briccetti, Elizabet Gordon, Iris Faraway, Mason Jenkins, Rick Gordon, 
+Shawn Stebner, and Zachary Young. Thanks also to Ignacio Beltran-Torres and Daniel Soltis 
+who did a careful technical proofread of the final manuscript shortly before it went into 
+production.
+
+【PG】We’d also like to thank all the folks at Manning who helped make this Second Edition of 
+Hello World!  even better than the original.
+
+Download from Wow! eBook <www.wowebook.com>

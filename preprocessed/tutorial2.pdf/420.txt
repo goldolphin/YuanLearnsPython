@@ -1,0 +1,37 @@
+【PG】
+396 Hello World!
+    speed = skier. turn(-1)                                 
+elif even t.key == pygame.K_RIGHT:                          
+    speed = skier. turn(1)                                  
+skier.move(speed)                                                  
+    
+map_posi tion += speed[1]                                           
+    
+if map_posi tion >= 640:                                            
+    crea te_map()                                                   
+    map_posi tion = 0                                               
+    
+obs tacles.upda te()                                              
+anima te()                                             
+pygame.qui t()
+
+【PG】
+If you run listing 25.3, you’ll be able to steer the skier down the hill, and you’ll see the 
+obstacles scrolling past. You’ll also notice that the skier’s speed, both left-right and down 
+the hill, depends on which way he’s turned. We’re getting close.
+
+【PG】
+The last two pieces we need are these:
+■To detect when the skier hits a tree or picks up a flag 
+■To keep track of the score and display it
+You saw how to do collision detection in chapter 16. The code in listing 25.3 already puts 
+the obstacle sprites into a sprite group, so we can use the spritecollide()  function to 
+detect when the skier sprite hits a tree or flag sprite. Then we need to figure out which it is 
+(a tree or a flag), and do the right thing:
+■If it’s a tree, change the skier’s image to the “crash” image, and deduct 
+100 points from the score.
+■If it’s a flag, add 10 points to the score, and remove the flag from the screen.
+
+【PG】
+Main loop
+Download from Wow! eBook <www.wowebook.com>

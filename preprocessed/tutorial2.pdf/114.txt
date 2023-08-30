@@ -1,0 +1,32 @@
+【PG】Hello World!
+
+Am I done yet?
+
+Basically, a while loop keeps asking, “Am I done yet? … Am I done yet? … Am I done yet? … ” until it’s done. It’s done when the condition is no longer true.
+
+While loops use the Python keyword while. Listing 8.8 shows an example. Type the program in, try it, and see how it works. (Remember, you have to Save it and then Run it.)
+
+print "Type 3 to continue, anything else to quit."
+someInput = raw_input()
+while someInput == '3':
+    print "Thank you for the 3. Very kind of you."
+    print "Type 3 to continue, anything else to quit."
+    someInput = raw_input()
+print "That's not 3, so I'm quitting now."
+
+【PG】This program keeps asking for input from the user. While the input is equal to 3, the condition is true, and the loop keeps running. That’s why this kind of conditional loop is also called a while loop, and it uses the Python while keyword. When the input is not equal to 3, the condition is false, and the loop stops.
+
+【PG】Bailing out of a loop— break and continue
+
+Sometimes you want to get out of a loop in the middle, before a for loop is finished counting, or before a while loop has found its end condition. There are two ways to do this: you can jump ahead to the next iteration of the loop with continue, or you can stop looping altogether with break. Let’s look at these more closely.
+
+Listing 8.8 A conditional or while loop
+
+Keep looping as long as someInput ='3'
+Body of the loop
+
+That’s it!
+
+Time to bail!
+
+Download from Wow! eBook <www.wowebook.com>

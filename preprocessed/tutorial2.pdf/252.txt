@@ -1,0 +1,32 @@
+【PG】228 Hello World!
+Pygame website the last time I checked). Some web searching will find them if you want to 
+try out pixel-perfect collision detection.
+
+【PG】Counting time
+Up until now, we have been using time.delay()  to control how fast our animation runs. But 
+that isn’t the best way because, when you use time.delay() , you don’t really know how 
+long each loop will be. The code in the loop takes some time to run (an unknown time), and 
+then the delay takes some more time (a known time). So part of the timing is known, but 
+part is unknown. 
+
+【PG】If you want to know how often your loop runs, you need to know the total time of each loop, 
+which is code time + delay time. To calculate time for animation, it’s convenient to use milli -
+seconds, or thousandths of a second. The abbreviation is ms, so 25 milliseconds is 25 ms.
+
+【PG】In our example, let’s assume that the code time is 15 ms. That means it takes 15 ms for the 
+code in the while  loop to run, not including the time.delay() . We know the delay time, 
+because we set it to 20 ms using time.delay(20) . The total time for the loop is 20 ms + 15 
+ms = 35 ms, and there are 1,000 ms in one second. If each loop takes 35 ms, we get 1,000 ms 
+/ 35 ms = 28.57. This means we’ll get about 29 loops per second. In computer graphics, each 
+animation step is called a frame , and game programmers talk about frame rate  and frames per 
+second  when they discuss how fast their graphics are updating. In our example, the frame 
+rate would be about 29 frames per second, or 29 fps.
+
+【PG】The problem is, you can’t really control the “code time” part of the equation. If you add or 
+remove code, the time will change. Even with the same code, if there is a different number 
+of sprites (for example, as game objects appear and disappear), the time it takes to draw 
+them all will change. Also, the same code will run faster or slower on different machines. 
+Instead of 15 ms, the code time might be 10 ms or 20 ms. It would be good if there were a 
+more predictable way to control the frame rate. Fortunately, Pygame’s time  module gives 
+us the tools to do this, with a class called Clock . 00:00:00:12
+Download from Wow! eBook <www.wowebook.com>

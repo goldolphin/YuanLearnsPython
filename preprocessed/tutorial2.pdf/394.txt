@@ -1,0 +1,44 @@
+【PG】Hello World!
+
+【PG】And you can combine a date  and a time  to make a datetime  object by using the combine()
+method of the datetime  class in the datetime  module:
+
+【PG】Now that you have seen what a datetime  object is and some of its properties, we’ll look at 
+how you can compare two of them to find the difference between them (how much time 
+has passed between one and the other).
+
+【PG】Difference between two times
+Quite often in simulations, you need to know how much time has passed. For example, in a 
+Virtual Pet program, you might need to know how much time has passed since the pet was 
+fed so you can figure out how hungry it is.
+The datetime  module has an object class that will help you figure out the difference 
+between two dates or times. The class is called timedelta . Remember that delta  means 
+“difference. ” So a timedelta  is a difference between two times.
+To create a timedelta  and figure out the difference between two times, you just subtract 
+them, like this:
+Notice that, when we subtracted the two datetime  objects, what we got wasn’t another 
+datetime , but rather a timedelta  object. Python does that automatically.
+
+【PG】Small pieces of time
+Up to now, we have been looking at time measured in whole seconds. But the time objects 
+(date , time , datetime , and timedelta ) are more precise than that. They can measure down 
+to the microsecond, which is one millionth of a second.
+To see this, try out the now()  method, which gives you the current time of your computer’s 
+clock:
+import datetime
+yesterday = datetime.datetime(2012, 10, 23)
+tomorrow = datetime.datetime(2012, 10, 25)
+difference = tomorrow - yesterday 
+print difference
+print type(difference)
+print datetime.datetime.now()
+
+【PG】when = da tetime.da tetime.combine( today, some_ time)
+Module name Class name Method
+Gets the 
+difference of the 
+two datesTomorrow and 
+yesterday are 2 
+days apartDifference is a 
+timedelta object
+Download from Wow! eBook <www.wowebook.com>

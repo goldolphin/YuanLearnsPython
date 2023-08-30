@@ -1,0 +1,45 @@
+【PG】309 CHAPTER  21 Print Formatting and Strings
+
+【PG】There’s a similar method called endswith()  that does just what you’d expect:
+
+【PG】Now to get back to the problem at hand …. If we wanted to find the start of the 
+“Instructions” section of the recipe, we could do something like this:
+This code will keep looping until it finds a line that starts with “Instructions. ” Remember 
+that lines[i]  means i is the index  for lines . So you’d start with lines[0]  (the first line), 
+then lines[1]  (the second line), and so on. When the while  loop finishes, i will be equal to 
+the index of the line that starts with “Instructions, ” which is the one we’re looking for.
+
+【PG】Searching anywhere in a string: in and index()
+The startswith()  and endswith()  methods work really well for finding things at the start 
+or end of a string. But what if you want to find something in the middle of a string? 
+Let’s say we had a bunch of strings that had street addresses, like this:
+Maybe we want to find all the addresses with “Maple” in them. None of them start or end 
+with “Maple, ” but two of them contain the word Maple . How would you find them?
+Actually, you already saw how to do this. When we were talking about lists (back in chapter 
+12), you saw that you could check whether an item is in a list by doing this:
+We used the keyword in to check whether a certain item was in the list. The in keyword 
+also works for strings. A string is basically a list of characters, so you can do this:
+
+【PG】>>> name = "Frankens tein"
+>>> name.endswi th('n')
+True
+>>> name.endswi th('stein')
+True
+>>> name.endswi th('stone')
+False
+
+【PG】i = 0
+while not lines[i].s tartswith("Ins tructions"):
+    i = i + 1
+
+【PG】657 Maple Lane
+47 Birch S treet
+95 Maple Drive
+
+【PG】if someI tem in my_lis t:
+    prin t "Found i t!"
+
+【PG】>>> addr1 = '657 Maple Lane'
+>>> if 'Maple' in addr1:
+        prin t "Tha t address has 'Maple' in i t."
+Download from Wow! eBook <www.wowebook.com>

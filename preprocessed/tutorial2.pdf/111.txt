@@ -1,0 +1,37 @@
+【PG】87 CHAPTER 8 Loop the Loop
+
+【PG】Counting by steps
+So far, your counting loops have been counting up by 1 each iteration. What if you want the 
+loop to count in steps of 2? Or 5, or 10? What about counting backward? The range()  
+function can have an extra argument  that allows you to change the size of the steps from 
+the default of 1 to a different size. 
+
+【PG】Let’s try some loops in interactive mode. When you type in the first line, with the colon 
+at the end, IDLE will automatically indent the next line for you, because it knows that a 
+for loop needs a block of code following it. When you complete the block of code, press 
+the Enter  (or Return ) key twice. Try it:
+We added a third parameter, 2, to the range()  function. Now the loop is counting in steps 
+of 2. Let’s try another one:
+
+【PG】>>> for i in range(1, 10, 2):
+        prin t i
+1
+3
+5
+7
+9
+>>> for i in range(5, 26, 5):
+        prin t i
+    
+5
+10
+15
+20
+25
+
+【PG】Arguments  are the values that you put inside the parentheses when you use a function 
+like range(). We say that you pass the argument to the function. The term  parameter  is 
+also used, as in, “pass the parameter.” We’ll learn more about functions, arguments, and 
+parameters in chapter 13.
+
+Download from Wow! eBook <www.wowebook.com>

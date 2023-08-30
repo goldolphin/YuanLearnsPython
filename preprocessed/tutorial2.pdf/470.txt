@@ -1,0 +1,42 @@
+【PG】446 Hello World!
+
+【PG】5If you open a file in append mode and write something to it, the information you write gets added (appended) to the end of the file.
+
+【PG】6If you open a file in write mode and then write something to the file, everything that was in the file is lost and is replaced with the new data.
+
+【PG】7To reset the read point of a file back to the beginning, use the seek() method, with an argument of 0, like this:
+
+【PG】8To save a Python object to a file using pickle, you use the pickle.dump() method, with the object you want to save and the filename as arguments, like this:
+
+【PG】9To unpickle or retrieve an object from a pickle file, use the pickle.load() method, with the pickle file as an argument, like this:
+
+【PG】Try it out
+
+【PG】1Here is a simple program to create silly sentences:
+
+myFile.seek(0)
+pickle.dump(myObject, "my_pickle_file.pkl")
+myObject = pickle.load("my_pickle_file.pkl")
+
+import random
+noun_file = open("nouns.txt", 'r')
+nouns = noun_file.readline()
+noun_list = nouns.split(',')
+noun_file.close()
+
+adj_file = open("adjectives.txt", 'r')
+adjectives = adj_file.readline()
+adj_list = adjectives.split(',')
+adj_file.close()
+
+verb_file = open("verbs.txt", 'r')
+verbs = verb_file.readline()
+verb_list = verbs.split(',')
+verb_file.close()
+
+adverb_file = open("adverbs.txt", 'r')
+adverbs = adverb_file.readline()
+adverb_list = adverbs.split(',')
+adverb_file.close()
+
+Download from Wow! eBook <www.wowebook.com>

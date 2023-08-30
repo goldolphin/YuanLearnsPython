@@ -1,0 +1,45 @@
+【PG】Hello World!
+
+【PG】In our Pygame programs, we have used both Pygame’s time.delay  and clock.tick
+functions to control the animation speed or frame rate. We also used get_fps()  to 
+check how fast the animation was running, which is a way of measuring time (the 
+average time for each frame). 
+
+【PG】So far, we have always kept track of time while the program was running, but sometimes 
+you need to keep track of time even when the program is not running. If you made a Virtual 
+Pet program in Python, you wouldn’t want to leave it running all the time. You’d want to 
+play with it for a while, and then stop and come back to it later. While you were away, you’d 
+expect your pet to get tired or hungry, or to go to sleep. So the program needs to know 
+how much time has passed since the last time it ran.
+One way to do this is for the program to save a little piece of information—the current 
+time—to a file just before it shuts down. Then, next time it starts up, it can read the file to 
+get the previous time, check the current time, and compare the two to see how much time 
+has passed since the program last ran.
+
+【PG】Python has a special kind of object for 
+working with times and dates. You’re going 
+to learn a bit about Python’s date and time 
+objects in the next section.
+
+【PG】Time objects
+Python’s date and time object classes are defined in their own datetime  module. The 
+datetime  module has classes for working with dates, times, and the difference or delta
+between two dates or times.
+The first kind of object we’ll use is a datetime  object. (Yes, the class has the same name as 
+the module.) The datetime  object includes the year, month, day, hour, minute, and second. 
+You create one like this (follow along in interactive mode):
+
+【PG】When you save the current time to a 
+file for reading back later, that’s 
+called a timestamp . 
+
+【PG】The word delta means “difference.” It’s a letter of the Greek 
+alphabet, and it looks like this: ∆ (a triangle).
+Letters of the Greek alphabet are often used in science and 
+math as a shorthand for certain quantities. Delta is used for 
+a difference between two values. 
+
+【PG】>>> impor t datetime
+>>> when = da tetime.da tetime(2012, 10, 24, 10, 45, 56)
+ Module name Class name
+Download from Wow! eBook <www.wowebook.com>

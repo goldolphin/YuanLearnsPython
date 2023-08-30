@@ -1,0 +1,34 @@
+【PG】56 Hello World!
+【PG】Our first GUI
+You have already been using a GUI—in fact, several of them. A web browser is a GUI. IDLE is 
+a GUI. Now you’re going to make your own GUI. To do this, you’re going to get some help 
+from something called EasyGui.
+
+EasyGui is a Python module that makes it very easy to make simple GUIs. We haven’t really 
+talked about modules yet (we will in chapter 15), but a module is a way of adding 
+something to Python that isn’t already built in.
+
+If you installed Python using the book’s installer, you already have EasyGui installed. If not, 
+you can download it from easygui.sourceforge.net/ .
+
+【PG】Installing EasyGui
+You can download easygui.py  or a zip file that contains easygui.py . To install it, you just 
+have to put the file easygui.py  in a place where Python can find it. Where is that?
+
+The Python path
+Python has a list of places on the hard drive where it looks for modules it can use. This can 
+be a bit complicated, because it’s different for Windows, Mac OS X, and Linux. But if you put 
+easygui.py  in the same place where Python itself is installed, Python will find it. So, on your 
+hard drive, look for a folder called Python27 , and put easygui.py  in that folder.
+
+【PG】Let’s get GUI-ing
+Start IDLE, and type the following in interactive mode:
+This tells Python that you’re going to use the EasyGui module. If you don’t get an error 
+message, then Python found the EasyGui module. If you do get an error message, or 
+EasyGui doesn’t seem to be working, go to the book’s web site ( www.helloworldbook2.com ) 
+and you’ll find some additional help.
+
+Now, let’s make a simple message box with an OK button:>>> impor t easygui
+>>> easygui.msgbox( "Hello There!" )
+
+【PG】Download from Wow! eBook <www.wowebook.com>

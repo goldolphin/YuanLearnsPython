@@ -1,0 +1,44 @@
+【PG】241 CHAPTER  18 A New Kind of Input—Events
+Now we’re 
+getting into some 
+programming!
+
+【PG】MOUSEBUTTONUP  event. Then you just have to keep track of the status of the button. You can 
+do that by making a variable; call it something like held_down . Here’s how that would look:
+The dragging condition (the mouse moving while a button is held down) is detected in the 
+last elif  block in the preceding code. Try making this change to the while  loop in your 
+previously modified version of listing 18.2. Run it, and see how it works. 
+
+【PG】Hey, we’ve been programming since chapter 1! But now that 
+we’re doing things with graphics, sprites, and the mouse, it’s 
+getting more interesting. I told you we’d get there. You just had to 
+stick with me and learn some of the basics first.
+
+【PG】Timer events
+So far in this chapter, you’ve seen keyboard events and mouse events. Another kind of 
+event that’s very useful, especially in games and simulations, is a timer  event. A timer gener -
+ates an event at regular intervals, like your alarm clock. If you set it and leave the alarm on, 
+it will ring at the same time every day. 
+Pygame timers can be set for any interval. 
+When the timer goes off, it creates an event 
+that the event loop can detect. And what 
+kind of event does it generate? It generates 
+something called a user event . 
+
+【PG】held_down = False
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+        elif even t.type == pygame.MOUSEBUTTONDOWN:
+            held_down = True           
+        elif even t.type == pygame.MOUSEBUTTONUP:
+            held_down = False     
+        elif even t.type == pygame.MOUSEMOTION:
+            if held_down:
+                my_ball.rec t.cen ter = even t.posDetermines whether the 
+mouse button is being 
+held down or not
+Executes when the 
+mouse is being dragged
+Download from Wow! eBook <www.wowebook.com>

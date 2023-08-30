@@ -1,0 +1,37 @@
+【PG】84 Hello World!
+【PG】The following listing shows our program modified to give us the 8 times table up to 10.
+for looper in range(1, 11):
+    prin t looper, "times 8 =" , looper * 8
+
+【PG】And here’s what we get when we run it:
+In the program in listing 8.5, range(1, 11)  gave us a list of numbers from 1 to 10, and the 
+loop did one iteration  for each number in the list. Each time through the loop, the variable 
+looper  took the next value in the list.
+
+【PG】By the way, we called our loop variable looper , but you can call it anything you want.
+A matter of style—loop variable names
+A loop variable is no different from any other variable. There’s nothing special about it—it’s 
+just a name for a value. It doesn’t matter that you’re using the variable as a loop counter. 
+We said before that you should use variable names that describe what the variables do. 
+That’s why I picked the name looper  for the previous example. But loop variables are one 
+place where you can sometimes make an exception. That’s because there’s a convention 
+(remember, that means a common practice) in programming to use the letters i, j, k, and so 
+on, for loop variables. 
+Because lots of people use i, j, and k for loop variables, programmers get used to seeing 
+this in programs. It’s perfectly fine to use other names for loop variables, like we did. But 
+you shouldn’t use i, j, and k for anything other than loop variables.
+
+【PG】Listing 8.5 Printing the 8 times table up to 10 using range()
+>>> ================== RESTART ==================
+>>> 
+1 times 8 = 8
+2 times 8 = 16
+3 times 8 = 24
+4 times 8 = 32
+5 times 8 = 40
+6 times 8 = 48
+7 times 8 = 56
+8 times 8 = 64
+9 times 8 = 72
+10 times 8 = 80
+Download from Wow! eBook <www.wowebook.com>

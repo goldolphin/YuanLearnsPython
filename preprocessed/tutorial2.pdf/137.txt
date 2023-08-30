@@ -1,0 +1,38 @@
+【PG】Chapter 11 Nested and Variable Loops
+Mmmmm....
+That’s one good
+dog!The five nested loops run through all possible combinations of dog, bun, ketchup , mustard , 
+and onion .
+
+【PG】In listing 11.6, we used the tab character to line everything up. That’s the \t parts. We 
+haven’t talked about print formatting  yet, but if you want to know more about it, you can 
+have a peek at chapter 21.
+We used a variable called count  to number each com -
+bination. So, for example, a hot dog with a bun and 
+mustard would be #27. Of course, some of the 32 
+combinations don’t make sense. (A hot dog with no 
+bun but with mustard and ketchup would be a little messy.) But you 
+know what they say: “The customer is always right!”
+
+【PG】Counting calories
+Because everyone is concerned about nutrition these days, let’s add a cal -
+orie count for each combination on the menu. (You might not care about 
+the calories, but I bet your parents do!) That will let us use some of Python’s 
+math abilities, which we learned about back in chapter 3.
+We already know which items are in each combination. All we need now are the calories for 
+each item. Then we can add them all up in the innermost loop. 
+
+【PG】Here’s some code that sets how many calories are in each item:
+Now we just need to add them up. We know there’s either 0 or 1 of each item in each menu 
+combination. So we can just multiply the quantity by the calories forevery item, like this:
+Because the order of operations is multiplication first, then addition, I didn’t 
+really need to put in the parentheses. I just put them in to make it easier to see 
+what’s going on.dog_cal = 140
+bun_cal = 120
+mus_cal = 20
+ket_cal = 80
+onion_cal = 40
+tot_cal = (dog * dog_cal) + (bun * bun_cal) + \
+          (mus tard * mus_cal) + (ke tchup * ke t_cal) + \
+          (onion * onion_cal)
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,54 @@
+【PG】Chapter 22 File Input and Output
+
+【PG】The total program is about 95 lines of code, plus some blank lines to make things look nice. Listing 22.8 shows the whole program, with some notes explaining the different sections.
+
+【PG】The code is in the \Examples\Hangman folder on your computer if you used the installer, and it’s also on the web site. It includes hangman.py, hangman.ui, and words.txt. Remember, as we mentioned in chapter 20, if you are on a Mac, you will need to open hangman.ui in Qt Designer and deselect the nativeMenuBar property for the menubar object.
+
+【PG】imp ort sys
+from PyQt4 imp ort QtCore, QtGui, uic
+imp ort random
+form_class = uic.loadUiType("hangman.ui")[0]
+
+def find_letters(letter, a_string):
+    locations = []
+    start = 0
+    while a_string.find(letter, start, len(a_string)) != -1:
+        location = a_string.find(letter, start, len(a_string))
+        locations.append(location)
+        start = location + 1
+    return locations
+
+def replace_letters(string, locations, letter):
+    new_string = ''
+    for i in range(0, len(string)):
+        if i in locations:
+            new_string = new_string + letter
+        else:
+            new_string = new_string + string[i]
+    return new_string
+
+def dashes(word):
+    letters = "abcdefghijklmnopqrstuvwxyz"
+    new_string = ''
+    for i in word:
+        if i in letters:
+            new_string += "-"
+        else:
+            new_string += i
+    return new_string
+
+class MyWidget(QtGui.QMainWindow, form_class):
+    def __init__(self, parent=None):
+        QtGui.QMainWindow.__init__(self, parent)
+        self.setupUi(self)
+        self.btn_guess.clicked.connect(self.btn_guess_clicked)
+        self.actionExit.triggered.connect(self.menuExit_selected)
+        self.pieces = [self.head, self.body, self.leftarm, self.leftleg, 
+                       self.rightarm, self.rightleg]
+
+【PG】Finds letters
+【PG】Replaces dashes with letters when the player guesses a letter correctly
+【PG】Replaces letters with dashes at the start of the program
+【PG】Connect event handlers
+【PG】Parts of the man
+【PG】Download from Wow! eBook <www.wowebook.com>

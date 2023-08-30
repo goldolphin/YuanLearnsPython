@@ -1,0 +1,38 @@
+【PG】176 Hello World!
+
+【PG】They aren't empty.
+They have comments 
+in them!
+
+【PG】That’s true, Carter, but comments don’t count, because 
+they’re only for you, not for the computer.
+
+【PG】The Python pass  keyword is used as a placeholder when you want to make a code stub. So 
+the code should really look like this:
+
+【PG】I’m not going to give more detailed examples using objects, polymorphism, and inheritance 
+in this chapter. You’ll see many examples of objects and how they’re used as you go 
+through the rest of this book. You’ll get a much better understanding of how to use objects 
+when you use them in real programs, like games.
+
+【PG】class Game_objec t:
+    def __ini t__(self, name):
+        self.name = name
+    def pickUp(self):
+        pass                     
+        # pu t code here to add the objec t 
+        # to the player's collec tion
+
+【PG】class Coin(Game_objec t):
+    def __ini t__(self, value):
+        GameObjec t.__ini t__(self, "coin")
+        self.value = value
+    def spend(self, buyer, seller):
+        pass                                          
+        # pu t code here to remove the coin 
+        # from the buyer's money and  
+        # add i t to the seller's moneyAdd the pass 
+keyword in these 
+two places
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,69 @@
+【PG】8.1　计数循环　　 79
+
+【PG】第二行（print "hello" ）就是 Python每次循环时要执行的代码块。 for循环
+需要一个代码块来告诉程序每次循环时做什么。 这 个代码块（ 缩进的代码部分 ）称
+为循环体（body of the loop） 。 （还记得吧 ？上一章我们讨论过缩进和代码块。 ）
+下面来试试别的。 这一次不再是每次都打印相同的东西， 下面让它每次循环时
+打印不同的东西。代码清单 8-2就会做这个工作。
+
+【PG】代码清单 8-2　每次 for 循环做不同的事情
+for looper in [1, 2, 3, 4, 5]:
+    print looper
+把这个程序保存为 Loop2.py，并运行。
+结果应该类似于：76 Hello World!
+
+【PG】Once I made a 
+mistake in a program, 
+and it kept looping 
+forever! 
+How can I stop 
+a runaway loop?
+
+【PG】The second line ( print "hello" ) is the block of code that Python will execute each time 
+around the loop. A for loop needs a block of code to tell the program what to do in each 
+loop. That block  (the indented part of the code) is called the body  of the loop . (Remember, we 
+talked about indenting and bl ocks in the last chapter.) 
+
+【PG】Let’s try something else. Instead of printing the same thing every time, let’s make it print 
+something different every time throug h the loop. Listing 8.2 does this.
+for looper in [1, 2, 3, 4, 5]:
+    print looper
+Save this as Loop2.py  and run it. 
+The results should look like this:
+This time, instead of printing “hello” five times, it printed the value of the variable looper . 
+Each time through the loop, looper  takes the next value in the list.
+
+【PG】Runaway loops
+The same thing has happened to me, Carter! 
+Runaway loops (also called endless loops or 
+infinite loops) happen to every programmer 
+once in a while. To stop a Python program at 
+any time (even in a runaway loop), press 
+CTRL-C . That means you press and hold 
+down the CTRL  key, and while holding it 
+down, press the C key. This will come in very 
+handy later! Games and graphics programs are constantly 
+running in a loop. They need to keep getting input from the mouse, 
+keyboard, or game controller, process that input, and update the 
+
+【PG】Listing 8.2 Doing something different each time through the for loopEach time through the loop is called an iteration.
+>>> ================ RESTART ================
+>>>
+12
+3
+45
+>>>术语箱
+每次循环称为一次迭代（iteration） 。
+这一次不再打印 5次“hello” 了，它会打印变量 looper的值。每次循环时，
+looper会取列表中的下一个值。
+
+【PG】失控的循环
+卡特，我也遇到过同样的问题！每一个程序员都曾经遭遇过失控的循环（ 也叫做无限循环 ） 。任
+何时刻（ 甚 至在失控循环中 ）要停
+止一个 Python程 序，只需要按下CTRL-C， 
+即按下 CTRL键 的同时再按下C键。以后你会发现这非常方便！游戏和图形程序
+通常都在一个循环中运行。这些程序需要不断从鼠标、键盘或游戏控制器得到输入，然 后处理这个输入，并更新屏幕。
+
+【PG】开始写这种程序时， 我们会大量使用循环。所以你的某个程序我在程序里犯了个错误，它就永远循环下去了！怎么才能让失控的循环停下来呢？
+
+【PG】图灵社区会员 FreeLink 专享 尊重版权

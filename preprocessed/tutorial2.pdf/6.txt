@@ -1,0 +1,31 @@
+【PG】Types of Data 40
+Changing types 40■Getting more information: type() 44
+Type-conversion errors 44■Using type conversions 44
+
+【PG】Input 46
+raw_input() 47■The print command and the comma 48
+Inputting numbers 50■Input from the Web 52
+
+【PG】GUIs—Graphical User Interfaces 55
+What’s a GUI? 55■Our first GUI 56■GUI input 57■Pick your flavor 58■The number-guessing game … again 61
+Other GUI pieces 62
+
+【PG】Decisions, Decisions 65
+Testing, testing 65■Indenting 67■Am I seeing double? 68
+Other kinds of tests 69■What happens if the test is false? 70
+Testing for more than one condition 72■Using and 73
+Using or 74■Using not 74
+
+【PG】Loop the Loop 78
+Counting loops 79■Using a counting loop 81■A shortcut—range() 82■A matter of style—loop variable names 84■Counting by steps 87■Counting without numbers 89■While we’re on the subject … 89■Bailing out of a loop—break and continue 90
+
+【PG】Just for You—Comments 94
+Adding comments 94■Single-line comments 95■End-of-line comments 95■Multiline comments 96■Triple-quoted strings 96■Commenting style 97■Comments in this book 97
+Commenting out 98
+
+【PG】Game Time 99
+Skier 99
+
+【PG】Nested and Variable Loops 104
+Nested loops 104■Variable loops 106■Variable nested loops 107■Even more variable nested loops 108■Using nested loops 110■Counting calories 113
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,29 @@
+【PG】33 CHAPTER  3 Basic Math
+
+【PG】Many languages and programs use other symbols 
+for raising to a power. A common one is ^ (for 
+example 3^5). If you use this with Python, you 
+won’t get an error message; you’ll just get the 
+wrong answer. (That’s because ^ does mean some -
+thing in Python—it’s just not what we want!) 
+This can be very hard to debug. Make sure you 
+use the ** operator for raising to a power (also 
+called exponentiation ).
+
+【PG】Two more operators
+There are two more math operators I want to show you. These two plus the four basic ones 
+you just saw are all you will need for 99 percent of your programs. 
+
+【PG】Exponentiation—raising to a power
+If you wanted to multiply 3 by itself 5 times, you could write
+But this is the same as 35, or “three exponent five, ” or “three to the power of five. ” Python 
+uses a double star (asterisk) for exponents or raising a number to a power:
+One reason for using an exponent instead of multiplying several times is that it’s easier to 
+type. But a more important reason is that with ** you can have exponents that are not 
+integers, like this:
+There is no easy way to do that using just multiplication.
+
+【PG】Modulus—getting the remainder
+When you first tried division in Python, you saw that, if you divide two integers, Python 2 
+gives you the answer as an integer. (And Python 3 does the same thing with the //
+operator.) It’s doing integer division. But in integer division, the answer really has two parts.

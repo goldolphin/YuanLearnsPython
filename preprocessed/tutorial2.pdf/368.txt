@@ -1,0 +1,43 @@
+【PG】344 Hello World!
+Pick a card, any card!
+
+【PG】With dice and coin tosses, we said that every toss has the same probability, because the 
+coin (or die) has no memory. But that’s not true with cards. As you draw cards from the 
+deck, there are fewer and fewer cards left (in most games, anyway). That changes the 
+probability of drawing each one of the remaining cards.
+
+【PG】For example, when you start with a full deck, the chances of drawing the 4 of Hearts is 1/52, 
+or about 2 percent. This is because there are 52 cards in the deck, and only one 4 of Hearts. If 
+you keep drawing (and haven’t drawn the 4 of Hearts yet), when you’re halfway through the 
+deck, the chances of getting the 4 of Hearts are 1/26, or about 4 percent. By the time you reach 
+the last card, if you still haven’t drawn the 4 of Hearts, the chances of drawing it are 1/1, or 100 
+percent. It’s certain that you’ll draw the 4 of Hearts next, because it’s the only card left.
+
+【PG】The reason I’m telling you all this is to show that, if we’re going to make a computer game 
+using a deck of cards, we need to keep track of which cards have been removed from the 
+deck as we go along. One good way to do this is with a list. We can start with a list of all 52 
+cards in the deck and use the random.choice()  function to pick cards randomly from the 
+list. As we pick each card, we can remove it from the list (the deck) using remove() . 
+
+【PG】Shuffling the deck
+In a real card game, we shuffle the deck, which 
+means we mix up the cards so they’re in a 
+random order. That way we can just take the top 
+card, and it’ll be random. But with the 
+random.choice()  function, we’re going to pick ran -
+domly from the list anyway. We don’t have to take the 
+“top” card, so there’s no point in “shuffling” the deck. We’ll 
+just randomly pick a card from anywhere in the deck. This is like 
+fanning out the cards and saying “Pick a card, any card!” That would be 
+rather time-consuming to do for each person’s turn in a card game, but 
+it’s very easy in a computer program.
+
+【PG】A card object
+We’re going to use a list to act as our “deck” of cards. But what about the cards themselves? 
+How should we store each one? As a string? An integer? What things do we need to know 
+about each card?
+
+【PG】For card games, these are the three things we usually need to know about a card:
+■Suit—Diamonds, Hearts, Spades, or Clubs.
+■Rank —Ace, 2, 3, … 10, Jack, Queen, King.
+Download from Wow! eBook <www.wowebook.com>

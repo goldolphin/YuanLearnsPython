@@ -1,0 +1,23 @@
+【PG】About this book
+This book teaches the basics of computer programming. It’s meant for kids, but anyone who 
+wants to learn how to program a computer can use it. 
+
+【PG】You don’t need to know anything about programming to use this book, but you should 
+know the basics of using your computer. Maybe you use it for email, surfing the Web, listen -
+ing to music, playing games, or writing reports for school. If you can do the basic things on 
+your computer, like starting a program and opening and saving files, you should have no 
+trouble using this book.
+
+【PG】What you need
+This book teaches programming using a computer language called Python. Python is free, 
+and you can download it from several places, including this book’s web site. To learn pro -
+gramming using this book, all you need are
+■This book (of course!).
+■A computer with Windows, Mac OS X, or Linux on it. The examples in this book are
+done in Windows. (There is some help for Mac and Linux users on the book’s web site:
+www.helloworldbook2.com .)
+■Basic knowledge of how to use your computer (starting programs, saving files, and so
+on). If you have trouble with this, maybe you can get someone to help you.
+■Permission to install Python on your computer (from your parent, your teacher, or
+whoever is responsible for your computer). We highly recommend using the Hello World
+Download from Wow! eBook <www.wowebook.com>

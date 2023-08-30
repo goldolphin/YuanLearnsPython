@@ -1,0 +1,11 @@
+【PG】103 CHAPTER  10 Game Time
+
+【PG】Try it out
+
+【PG】All you need to do in this chapter is type in the Skier program (listing 10.1) and try it out. If 
+you get an error when you try to run it, look at the error message and try to figure out 
+where the mistake is.
+
+【PG】Good luck!
+
+【PG】Download from Wow! eBook <www.wowebook.com>

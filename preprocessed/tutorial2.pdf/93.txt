@@ -1,0 +1,25 @@
+【PG】69 CHAPTER  7 Decisions, Decisions
+Testing or checking is also called comparing . The double equal sign is called a comparison 
+operator . Remember, we talked about operators  in chapter 3. An operator is a special symbol 
+that operates on the values around it. In this case, the operation is to test whether the 
+values are equal.
+
+【PG】Other kinds of tests
+Lucky for us, the other comparison operators are easier to remember: less than ( <), greater 
+than (>), and not equal to ( !=). (You can also use <> for not equal to, but most people use 
+!=.) You can also combine > or < with = to make greater than or equal to ( >=) and less than 
+or equal to ( <=). You might have seen some of these in math class.
+
+【PG】You can also chain two greater-than or less-than operators together to make an in-between 
+test, like this:
+if 8 < age < 12:
+
+【PG】Mixing up = and == is one of the most common mistakes in programming. Several languages use 
+these symbols (not just Python), and lots of programmers use the wrong one in the wrong place 
+every day.
+
+【PG】Not equal
+In Python 3, the <> syntax for not equal to  is no longer supported. In 
+Python 3, you have to use != for not equal to . 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

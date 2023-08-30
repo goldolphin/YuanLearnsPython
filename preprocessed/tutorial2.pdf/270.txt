@@ -1,0 +1,12 @@
+【PG】246 Hello World!
+
+【PG】For the paddle, we’ll stick with the Pong tradition and use a simple rectangle. We’ll use a white background, so we’ll make the paddle a black rectangle. We’ll make a sprite class and instance for the paddle too:
+
+【PG】Notice that, for the paddle, we didn’t load an image from an image file; we created one by filling a rectangular surface with black. But every sprite needs an image attribute, so we used the Surface.convert() method to convert the surface into an image.
+The paddle can only move left or right, not up or down. We’ll make the paddle’s x-position (its left-right position) follow the mouse, so the user will control the paddle with the mouse. Because we’ll do this right in the event loop, we don’t need a separate move() method for the paddle. 
+
+【PG】As I mentioned in the last section, we’re going to control the paddle with the mouse. We’ll use the MOUSEMOTION event, which means the paddle will move whenever the mouse moves inside the Pygame window. Because Pygame only “sees” the mouse when it’s inside the Pygame window, the paddle will automatically be limited to the edges of the window. We’ll make the center of the paddle follow the mouse. The code should look like this:
+
+【PG】event.pos is a list with the [x, y] values of the mouse’s position. So event.pos[0] gives us the x-location of the mouse whenever it’s moved. Of course, if the mouse is at the left or right edge, the paddle will be halfway out of the window, but that’s okay.
+
+【PG】The last thing we need is collision detection between the ball and the paddle. This is how we “hit” the ball with the paddle. When there is a collision, we’ll simply reverse the y-speed of the ball.

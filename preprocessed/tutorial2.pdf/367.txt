@@ -1,0 +1,35 @@
+【PG】343 CHAPTER 23 Take a Chance—Randomness
+
+For this program, in addition to flipping the coin, we have to keep track of when we get 10 heads in a row. One way to do this is to use a counter . A counter is a variable used to count something.
+
+We’ll need two counters. One will be for the number of heads we have tossed in a row. Let’s call it heads_in_row . The other is for the number of times we get 10 heads in a row. Let’s call it ten_heads_in_row . This is what the program will do:
+
+■Whenever we get heads, the heads_in_row counter will increase by 1.
+■Whenever we get tails, the heads_in_row counter will go back to 0.
+■When the heads_in_row  counter reaches 10, we’ll increase the ten_heads_in_row counter by 1 and set the heads_in_row counter back to 0, to start over.
+■At the end, we’ll print a message saying how many times we got 10 heads in a row.
+
+Here’s some code to do this.
+
+from random import *
+coin = [ "Heads", "Tails"]
+heads_in_row = 0
+ten_heads_in_row = 0
+for i in range (1000000):
+    if choice(coin) == "Heads":  
+        heads_in_row += 1
+    else:
+        heads_in_row = 0
+    if heads_in_row == 10:
+        ten_heads_in_row += 1   
+        heads_in_row = 0
+   
+print "We got 10 heads in a row" , ten_heads_in_row, "times."
+
+【PG】When I ran this program, it said
+
+I ran the program a few times, and the number was always around 500. That means, in a million coin tosses, we should expect to get 10 heads in a row about 500 times, or about once every 2,000 tosses (1,000,000 / 500 = 2,000).
+
+【PG】Creating a deck of cards
+
+Another kind of random event that’s used a lot in games is drawing a card. It’s random because the deck is shuffled, so you don’t know what card is coming next. And every time the deck is shuffled, the order is different.

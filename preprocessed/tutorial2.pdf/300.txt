@@ -1,0 +1,53 @@
+【PG】276 Hello World!
+【PG】You can look at this file in any text editor, including the IDLE editor. If you open it, you’ll see something like this:
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widge t class="QMainWindow" name="MainWindow">        
+  <proper ty name="geome try">                            
+   <rec t>                                               
+    <x>0</x>                                           
+    <y>0</y>                                            
+    <wid th>576</wid th>                                   
+    <heigh t>425</heigh t>                                
+   </rec t>                                              
+  </proper ty>                                          
+  <proper ty name="windowTi tle">                        
+   <s tring>MainWindow</s tring>                         
+  </proper ty>                                          
+  <widge t class="QWidge t" name="cen tralwidge t">          
+   <widge t class="QPushBu tton" name="pushBu tton">      
+    <proper ty name="geome try">                           
+     <rec t>                                              
+      <x>60</x>                                          
+      <y>70</y>                                         
+      <wid th>121</wid th>                              
+      <heigh t>41</heigh t>                               
+     </rec t>                                            
+    </proper ty>                                          
+    <proper ty name=" toolTip">                           
+     <s tring/>                                         
+    </proper ty>                                         
+    <proper ty name=" text">                               
+     <s tring>I'm a Bu tton!</s tring>                      
+    </proper ty>                                          
+   </widge t>                                           
+  </widge t>                                            
+  <widge t class="QMenuBar" name="menubar">
+   <proper ty name="geome try">
+    <rec t>
+     <x>0</x>
+     <y>0</y>
+     <wid th>576</wid th>
+     <heigh t>21</heigh t>
+    </rec t>
+   </proper ty>
+  </widge t>
+  <widge t class="QS tatusBar" name="s tatusbar"/>
+ </widge t>
+ <resources/>
+ <connec tions/>
+</ui>
+【PG】Defines the window (the background)
+【PG】Defines the button
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,13 @@
+【PG】CHAPTER 8
+Loop the Loop
+For most people, doing the same thing over and over again is very boring, so why not let 
+the computer do that for us? Computers never get bored, so they’re great at doing 
+repetitive tasks. In this chapter, we’ll see how to make the computer repeat things.
+
+【PG】Computer programs often repeat the same steps over and over again. This is called looping . 
+There are two main kinds of loops:
+■Those that repeat a certain number of times —These are called counting loops.
+■Those that repeat until a certain thing happens —These are called conditional loops  because 
+they keep going as long as some condition  is true.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

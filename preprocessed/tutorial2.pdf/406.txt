@@ -1,0 +1,56 @@
+【PG】Hello World!
+
+【PG】if self.doc tor:     
+    self.heal th += 1                                            
+    self.hunger += 1            
+
+【PG】elif self.walking and (self. time_cycle % 2 == 0):               
+    self.happiness += 1                                         
+    self.heal th += 1                                            
+    self.hunger += 1                                            
+
+【PG】elif self.playing:                                              
+    self.happiness += 1                                         
+    self.hunger += 1                                            
+
+【PG】elif self.ea ting:                                               
+    self.hunger -= 2                                           
+
+【PG】elif self.sleeping:                                            
+    if self. time_cycle % 3 == 0:                                
+        self.hunger += 1                                        
+else:                                                          
+    self.hunger += 1                                            
+    if self. time_cycle % 2 == 0:                              
+        self.happiness -= 1                     
+
+【PG】if self.hunger > 8:  self.hunger = 8                          
+if self.hunger < 0:  self.hunger = 0                          
+if self.hunger == 7 and (self. time_cycle % 2 ==0) :  
+    self.heal th -= 1                                            
+if self.hunger == 8:                                            
+    self.heal th -=1                                             
+if self.heal th > 8:  self.heal th = 8                           
+if self.heal th < 0:  self.heal th = 0                           
+if self.happiness > 8:  self.happiness = 8                      
+if self.happiness < 0:  self.happiness = 0                      
+self.progressBar_1.se tProper ty("value", (8-self.hunger)*(100/8.0)) 
+self.progressBar_2.se tProper ty("value", self.happiness*(100/8.0))  
+self.progressBar_3.se tProper ty("value", self.heal th*(100/8.0))
+
+【PG】def closeEven t(self, even t):
+    file = open("saveda ta_vp.pkl" , "w")                         
+    save_lis t = [self.happiness, self.heal th, self.hunger, \ 
+                 da tetime.da tetime.now(), self. time_cycle]      
+    pickle.dump(save_lis t, file)
+    even t.accep t()
+                
+【PG】def menuExi t_selec ted(self):
+    self.close()
+
+【PG】Adds or subtracts units depending on activity
+Makes sure values are not out of range
+Updates progress bars
+Saves status and timestamp to pickle file
+Line-continuation character
+Download from Wow! eBook <www.wowebook.com>

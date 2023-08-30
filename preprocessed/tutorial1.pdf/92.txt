@@ -1,0 +1,39 @@
+【PG】66 第 7章 判断再判断
+
+if行末尾的冒号告诉 Python下面将是一个指令块。 这个块包括从前面的 if行以下直到下一个不缩进的代码行之间的所有缩进代码行。
+
+True
+False
+
+【PG】64 Hello World!
+
+Python使用关键字if来测试条件，如下：
+
+The colon at the end of the if line tells Python that a block of instructions is coming next.
+The block includes every line that is indented from the if line, up until the next line that is not indented.
+
+If the condition is true , everything in the following block will be done. In the previous short example, the second and third lines make up the block of statements for the if in the first line.
+
+【PG】Now might be a good time to talk about indenting and blocks of code.
+
+if timsAnswer == correctAnswer:
+    print "You got it right!"
+    score = score + 1
+print "Thanks for playing."
+
+These lines form a “block” of code because they’re indented from the lines above and below.
+
+True
+False
+
+【PG】A block of code is one or more lines of code that are grouped together. They’re all related to a particular part of the program (like an if statement). In Python, blocks of code are formed by indenting the lines of code in the block.
+
+Indenting means that a line of code is pushed over to the right a bit. Instead of starting at the far left, it has some spaces at the beginning, so it starts a few characters away from the left side.
+
+这些代码行构成一个代码“块”，因为相对于上面和下面的代码行已经将它们缩进。
+
+【PG】7.2 缩进
+
+有些语言中，缩进只是一个风格问题，不论你喜欢还是不喜欢，都可以缩进。不过，在Python中，编写代码时缩进是必不可少的一部分。缩进会告诉Python代码块从哪里开始，到哪里结束。
+
+【PG】代码块（block）是一行或放在一起的多行代码。它们都与程序的某个部分相关（比如一个if语句）。在Python中，通过将块中的代码行缩进来构成代码块。

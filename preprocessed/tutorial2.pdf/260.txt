@@ -1,0 +1,53 @@
+【PG】236 Hello World!
+
+【PG】class Ball(pygame.spri te.Spri te):                                      
+    def __ini t__(self, image_file, speed, loca tion):                   
+        pygame.spri te.Spri te.__ini t__(self)                             
+        self.image = pygame.image.load(image_file)                      
+        self.rec t = self.image.ge t_rec t()                               
+        self.rec t.lef t, self.rec t.top = loca tion                        
+        self.speed = speed                                               
+                                                                       
+    def move(self):                                                    
+        if self.rec t.lef t <= screen.ge t_rec t().lef t or \              
+                self.rec t.righ t >= screen.ge t_rec t().righ t:             
+            self.speed[0] = - self.speed[0]                             
+        newpos = self.rec t.move(self.speed)                            
+        self.rec t = newpos 
+        
+【PG】my_ball = Ball( 'beach_ball.png' , [10,0], [20, 20]) 
+running = True
+while running:                                              
+    for even t in pygame.even t.get():                                      
+        if even t.type == pygame.QUIT:                                     
+            running = False                                                    
+    clock. tick(30)         
+    screen.bli t(background, (0, 0))                                  
+    my_ball.move()                                                     
+    screen.bli t(my_ball.image, my_ball.rec t)                        
+    pygame.display.flip()                                             
+pygame.qui t()
+
+【PG】One thing to notice here is that we did something different to “erase” the ball when we 
+moved it. You have seen two ways to erase sprites before repainting them in their new 
+positions: one is to paint the background color over each sprite’s old position, and the other 
+is to repaint the whole background for each frame—basically starting over with a blank 
+screen each time. In this case, we did the second one. But instead of using screen.fill()
+every time through the loop, we made a surface called background  and filled it with white. 
+Then, each time through the loop, we blit that background onto the display surface, screen . 
+It accomplishes the same thing; it’s just a slightly different way of doing it.
+
+【PG】Key events
+Now we’ll add an event handler that makes the ball move up when the up arrow is pressed 
+and move down when the down  arrow is pressed. Pygame is made up of a number of 
+different modules. The module we’ll use in this chapter is pygame.event .
+
+【PG】The Ball class, including the 
+move() method
+Makes an instance 
+of the ball
+Speed, location
+This is the clock
+Redraws 
+everything
+Download from Wow! eBook <www.wowebook.com>

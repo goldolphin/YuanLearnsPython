@@ -1,0 +1,42 @@
+【PG】166 Hello World!
+
+【PG】A “magic” method: __str__()
+
+【PG】Objects in Python have some “magic” methods, as Carter calls them. They’re not really 
+magic, of course! They’re just some methods that Python includes automatically when you 
+create any class. Python programmers usually call them special methods .
+
+【PG】You already saw the __init__()  method that initializes an object when it’s created. Every 
+object has an __init__()  method built in. If you don’t put one in your class definition, the 
+built-in one takes over, and all it does is create the object.
+
+【PG】Another special method is __str__() , which tells Python what to display when you print
+an object. By default, Python tells you
+■Where the instance is defined (in Carter’s case __main__ , which is the main part of the 
+program)
+■The class name ( Ball )
+■The memory location where the instance is being stored (that’s the 0x00BB83A0  part)
+
+【PG】But if you want print  to display something different for your object, you can define your 
+own __str__() , which will override the built-in one. The next listing shows an example.
+
+【PG】class Ball:
+    def __ini t__(self, color, size, direc tion):    
+        self.color = color                         
+        self.size = size                           
+        self.direc tion = direc tion
+   
+    def __str__(self):                                                 
+        msg = "Hi, I'm a " + self.size + " " + self.color + " ball!"  
+        return msg                                                     
+myBall = Ball( "red", "small", "down")              
+prin t myBall
+
+【PG】Listing 14.4 Using __str__()  to change how the object prints
+>>> print myBall
+Hi, I'm a small red ball!
+
+【PG】Here’s the 
+__str__() 
+method
+Download from Wow! eBook <www.wowebook.com>

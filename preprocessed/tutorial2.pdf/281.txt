@@ -1,0 +1,24 @@
+【PG】Chapter 19 Sound
+
+【PG】Pygame has a module for working with sound, called pygame.mixer . In the real, non-programming world, a device that takes in different sounds and merges them together is called a mixer,  and that’s where Pygame got the name.
+
+【PG】Making sounds vs. playing sounds
+
+【PG】There are two basic ways for a program to produce sounds. The program can generate or synthesize  the sounds—that means create them from scratch by making sound waves of different pitch and volume. Or the program can play back a recorded sound. This could be a piece of music on a CD, an MP3 sound file, or some other type of sound file. 
+In this book, you’re only going to learn about playing back sounds. Making your own sounds from scratch is a pretty big topic, and there’s only so much room in this book. If you’re interested in computer-generated sounds, there are many programs for generating music and sound from your computer. 
+
+【PG】Playing sounds
+
+【PG】When you play back a sound, you’re taking a sound file from your hard drive (or from a CD or sometimes the Internet) and turning it into sound that you can hear on the computer’s speakers or headphones. There are many different types of sound files you can use on a computer. These are some of the more common ones:
+■Wave  files—The filenames end in .wav , like hello.wav .
+■MP3  files—The filenames end in .mp3 , like mySong.mp3 .
+■WMA  (Windows Media Audio) files—The filenames end in . wma , like someSong.wma . 
+■Ogg Vorbis  files—The filenames end in .ogg , like yourSong.ogg .
+In our examples, we’re going to use .wav  and .mp3  files. All the sounds we’ll use are in the \sounds  folder, where HelloWorld was installed. For example, on Windows computers, it should be at c:\Program Files\HelloWorld\examples\sounds .
+
+【PG】There are two ways to include a sound file in your program. You can copy the sound file into the same folder where the program is saved. This is where Python expects to find the file, so you can just use the name of the file in your program, like this:
+If you don’t copy the sound file into the same folder as the program, you have to tell Python exactly where the sound file is located, like this:
+sound_file = "my_sound.wav"
+sound_file = "c:\Program Files\HelloWorld\sounds\my_sound.wav"
+
+【PG】Download from Wow! eBook <www.wowebook.com>

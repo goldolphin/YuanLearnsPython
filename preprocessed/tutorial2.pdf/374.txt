@@ -1,0 +1,59 @@
+【PG】350 Hello World!
+
+【PG】The main loop
+
+Before we get into the details, let’s figure out what the main loop of the program will look 
+like. Basically, we have to alternate turns between the player and the computer until 
+somebody wins or both are blocked. The code will look something like this.
+
+init_cards()
+while not game_done:
+    blocked = 0
+    player_ turn()     
+    if len(p_hand) == 0:    
+       game_done = True            
+       prin t                       
+       prin t "You won!"            
+    if not game_done:              
+       compu ter_turn()  
+    if len(c_hand) == 0:   
+       game_done = True            
+       prin t                       
+       prin t "Compu ter won!"       
+    if blocked >= 2:       
+       game_done = True
+       prin t "Both players blocked.  GAME OVER."
+
+【PG】Part of the main loop is figuring out when the game is over. It can be over when either the 
+player or the computer is out of cards. It can also be over if neither of them is out of cards but 
+both of them are blocked (that is, they have no valid plays). The blocked  variable is set in the 
+code for the player’s turn (if the player is blocked) and the computer’s turn (if the computer is 
+blocked). b We wait until blocked = 2 , to make sure both player and computer are blocked.
+
+【PG】Note that listing 23.6 isn’t a complete program, so if you try to run it, you’ll get an error. It’s 
+just the main loop. We still need all the other parts to make the program complete.
+
+【PG】This code is for a single game. If we want to keep playing more games, we can wrap the 
+whole thing in another, outer while  loop:
+
+done = False
+p_total = c_ total = 0
+while not done:  
+   [play a game... see lis ting 23.6]
+play_again = raw_inpu t("Play again (Y/N)? " )
+    if play_again.lower().s tartswith('y'):
+        done = False
+    else:
+        done = True
+
+【PG】Player’s turn
+
+【PG】Player’s hand (p_hand) has no cards left, so player wins
+
+【PG】Computer’s turn
+
+【PG】Computer’s hand (c_hand) has no cards left, so computer wins
+
+【PG】Both players are blocked, so game ends
+
+Download from Wow! eBook <www.wowebook.com>

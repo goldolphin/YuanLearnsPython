@@ -1,0 +1,30 @@
+【PG】292 Hello World!
+【PG】What did you learn?
+In this chapter, you learned about
+■PyQt
+■Qt Designer
+■Widgets—the buttons, text, and so on, that make up the GUI
+■Event handlers—making your components do something
+■Menu items and hotkeys
+
+【PG】Test your knowledge
+1What are three names for the things like buttons, text fields, and so on, that make up a 
+GUI?
+2What’s the term for the letter that you press along with AL T  to get into a menu?
+3What must you put at the end of the filename for Qt Designer files?
+4What are five types of widgets you can include in a GUI using PyQt?
+5To make a widget (like a button) do something, it needs to have an _____________ 
+________________. 
+6What special character is used in menus to define a hotkey?
+7The content of spin box in PyQt is always an __________.
+
+【PG】Try it out
+1You made a text-based number-guessing program in chapter 1, and you made a 
+simple GUI version of the same game in chapter 6. Try making a GUI version of the 
+number-guessing game using PyQt.
+2Did you find the problem with the spin box when it wouldn’t display any values below 
+0? (Carter found this bug in listing 20.2.) Fix the spin box properties to solve this 
+problem. Make sure you fix both ends of the scale so the spinner can display very high 
+temperatures as well as very low ones. (Maybe your user is going to convert the 
+temperatures on Mercury and Venus, as well as on Pluto!)
+Download from Wow! eBook <www.wowebook.com>

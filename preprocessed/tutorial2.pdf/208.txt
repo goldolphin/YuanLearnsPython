@@ -1,0 +1,24 @@
+【PG】184 Hello World!
+
+【PG】Connecting the portable from the other school is like importing a module in Python. When you import a module, you have access to all the names in that module: all the variables, all the functions, and all the objects.
+Importing a module means the same thing as importing a namespace. When you import the module, you import the namespace.
+
+【PG】There are two ways to import a namespace (or module). You can do it like this:
+If you do it that way, StephenLeacock is still a separate namespace. You have access to the namespace, but you have to specify which namespace you want before you use it. So the principal would have to do something like this:
+She would still have to give the namespace ( StephenLeacock ) as well as the name ( Fred ) if she wanted to reach Fred. That’s what we did a few pages ago with our temperature-conversion program. To make it work, we wrote this:
+We specified the namespace ( my_module ) as well as the name of the function ( c_to_f ).
+
+【PG】Importing using from
+The other way to import a namespace is like this:
+If the principal does it that way, the name Fred from StephenLeacock gets included in her namespace, and she can reach Fred like this:
+Because Fred is now in her namespace, she doesn’t have to go to the StephenLeacock namespace to get Fred .
+
+【PG】In this example, the principal only imported one name, Fred, from StephenLeacock into her local namespace. If she wanted to import everyone, she could do this:impor t StephenLeacock
+call_to_office(StephenLeacock.Fred)
+fahrenhei t = my_module.c_to_f(celsius)
+
+【PG】from StephenLeacock import Fred
+call_to_office(Fred)
+
+【PG】from StephenLeacock import * 
+Download from Wow! eBook <www.wowebook.com>

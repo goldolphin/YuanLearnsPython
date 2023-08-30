@@ -1,0 +1,35 @@
+【PG】265 CHAPTER  19 Sound
+
+【PG】the ball and add a point to the player’s score. Now we’re going to play a sound as well. The new code looks like this:
+Give these additions a try to see how they work.
+
+【PG】Next we can add the code to play a sound when the player misses the ball and loses a life. We detect this in the main while  loop, in line 63 of the original listing 18.5 ( if myBall.rect.top >= screen.get_rect().bottom: ). We just need to add a line like this:
+
+【PG】We can also add a sound when a new life starts. This happens in the last three lines of listing 18.5, in the else  block. This time we’ll give our sound effect a little time to play before we start the new life:
+Instead of waiting two seconds (like we did in the original program), we wait one second (1,000 milliseconds), play the sound, and then wait another second before starting the new turn. Give it a try and see how it sounds. 
+
+【PG】There’s one more sound effect to add, and that’s when the game is over. This happens in line 65 of listing 18.5 ( if lives == 0: ). Add the line to play the “bye” sound here:
+Try this and see how it works.
+
+【PG】if self.rec t.top <= 0 :
+    self.speed[1] = -self.speed[1]
+    poin ts = poin ts + 1
+    score_ text = fon t.render( str(poin ts), 1, (0, 0, 0))
+    ge t_poin t.play()
+if myBall.rec t.top >= screen.ge t_rec t().bo ttom:
+        spla t.play()
+        # lose a life if the ball hi ts the bo ttom
+        lives = lives - 1
+else: 
+    pygame. time.delay(1000)            
+    new_life.play()
+    myBall.rec t.toplef t = [50, 50]
+    screen.bli t(myBall.image, myBall.rec t)
+    pygame.display.flip()
+    pygame. time.delay(1000)
+if lives == 0:
+    bye.play() 
+
+【PG】Plays the sound for getting a point
+【PG】Plays the sound for missing a ball and losing a life 
+Download from Wow! eBook <www.wowebook.com>

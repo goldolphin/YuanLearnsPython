@@ -1,0 +1,40 @@
+【PG】352 Hello World!
+
+【PG】This means we need to keep track of the active suit, because it might be different from the 
+suit that’s showing. We can use a variable, active_suit , to do this:
+Whenever a card is played, we’ll update the active suit, and when a player plays an 8, he’ll 
+choose the new active suit.
+
+【PG】The player’s turn
+When it’s the player’s turn, the first thing we need to do is get his choice of what to do. He 
+can play a card from his hand (if possible) or draw from the deck. If we were making a GUI 
+version of this program, we’d have the player click the card he wanted to play, or click the 
+deck to draw. But we’re making a text-based version of the program, so he’ll have to type in 
+a choice, and then we’ll have to check what he typed and figure out what he wants to do 
+and whether that input is valid. 
+
+【PG】To give you an idea of what kind of input the player will need to provide, we’ll look at a 
+sample game. The player’s input is in bold :active_sui t = card.sui t
+Crazy Eigh ts
+Your hand: 4S, 7D, KC, 10D, QS    Up Card:  6C
+What would you like to do?  Type a card name or "Draw" to take a card:  KC
+You played the KC (King of Clubs)
+Compu ter plays 8S  (8 of spades) and changes sui t to Diamonds
+Your hand:  4S, 7D, 10D, QS   Up Card:  8S    Sui t:  Diamonds
+What would you like to do?  Type a card name or "Draw" to take a card: 10D
+You played 10D (10 of Diamonds)
+Compu ter plays QD (Queen of Diamonds)
+Your hand:  4S, 7D QS   Up card:  QD
+What would you like to do?  Type a card name or "Draw" to take a card: 7D
+You played 7D (7 of Diamonds)
+Compu ter plays 9D (9 of Diamonds)
+Your hand:  4S, QS   Up card: 9D
+What would you like to do?  Type a card name or "Draw" to take a card: QM
+That is no t a valid card.  Try again:  QD
+You do no t have that card in your hand.  Try again: QS
+That is no t a legal play.  You mus t match sui t, ma tch rank, play an 8, or draw a card
+Try again: Draw
+You drew 3C
+Compu ter draws a card
+Your hand:  4S, QS, 3C   Up card:  9D
+What would you like to do?  Type a card name or "Draw" to take a card: Draw

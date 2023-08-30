@@ -1,0 +1,40 @@
+【PG】158 Hello World!
+
+【PG】What variable scope is, and what local and global variables are
+
+【PG】How to use global variables in a function
+
+【PG】Test your knowledge
+
+1What keyword do you use to create a function?
+2How do you call a function?
+3How do you pass information (arguments) to a function?
+4What’s the maximum number of arguments a function can have?
+5How do you get information back from a function?
+6What happens to local variables in a function after the function is finished running?
+
+【PG】Try it out
+
+1Write a function to print your name in big letters, like this:
+Write a program that calls the function a number of times.
+2Make a function that will allow you to print any name, address, street, city, state or 
+province, zip or postal code, and country in the world. (Hint: It needs seven 
+arguments. You can pass them as individual arguments or as a list.)
+3Try using the example from listing 13.7, but making my_price  global so you can see 
+the difference in the resulting output.
+4Write a function to calculate the total value of some change—quarters, dimes, nickels, 
+and pennies (just like in the last “Try it out” question from chapter 5). The function 
+should return the total value of the coins. Then write a program that calls the function. 
+The output should look like this when it runs: CCCC       A       RRRRR  TTTTTTT  EEEEEE  RRRRR
+ C    C     A A      R    R    T     E       R    R
+C          A   A     R    R    T     EEEE    R    R
+C         AAAAAAA    RRRRR     T     E       RRRRR
+ C    C  A       A   R    R    T     E       R    R
+  CCCC  A         A  R    R    T     EEEEEE  R    R
+quar ters: 3
+dimes: 6
+nickels: 7
+pennies: 2
+total is $1.72
+
+【PG】Download from Wow! eBook <www.wowebook.com>

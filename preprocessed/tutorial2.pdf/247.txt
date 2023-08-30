@@ -1,0 +1,27 @@
+【PG】223 CHAPTER  17 Sprites and Collision Detection
+
+【PG】This program uses a list to keep track of all the balls. In line 32 ( balls.append(ball) ), each 
+ball is added to the list as it’s created. 
+The code in the last five lines redraws the screen. Here we cheat a bit, and instead of “
+erasing” (painting over) each ball separately, we just fill the window with white and then 
+redraw all the balls.
+You can experiment with this code by having more (or fewer) balls, changing their speed, 
+changing how they move and “bounce, ” and so on. You’ll notice that the balls move around 
+and bounce off the sides of the window, but they don’t bounce off each other—yet!
+
+【PG】Bump! Collision detection 
+
+【PG】In most computer games, you need to know when one sprite hits another one. For example, 
+you might need to know when a bowling ball hits the pins or when your missile hits the 
+spaceship. 
+You might be thinking that, if you know the position and size of every sprite, you can write 
+some code to check those against the position and size of every other sprite, to see where 
+they overlap. But the folks who wrote Pygame have already done that for us. Pygame has 
+what’s called collision detection  built in. Adds each ball to the 
+list as it’s created
+Redraws the screen
+Collision detection  simply means knowing when two sprites are 
+touching or overlapping. When two things that are moving run 
+into each other, it’s called a collision.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

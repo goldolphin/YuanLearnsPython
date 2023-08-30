@@ -1,0 +1,31 @@
+【PG】405 CHAPTER  26 Python Battle
+【PG】enemy’s position and rotation. If you run this code, it won’t work because we haven’t defined self.goTowards() yet. Let’s start to define it now:
+【PG】You start by finding the delta, or difference, between the target location and your robot’s location. Next, you need to figure out which direction you need to be facing to face the enemy bot:
+【PG】Now you have to go in that direction. If you’re already facing in that direction, it’s easy:
+【PG】Otherwise, you need to figure out which way to turn. First, you figure out how many left turns you would need to make in order to be facing the correct direction:
+【PG】Next, you have to turn the right way. If it would take more than two left turns to face where you need to, you can instead just turn right once:def goTowards(self,enemyLoca tion):
+     myLoca tion = self.robo t.posi tion
+     del ta = (enemyLoca tion[0]-myLoca tion[0],
+              enemyLoca tion[1]-myLoca tion[1])
+if abs(del ta[0]) > abs(del ta[1]):
+     if delta[0] < 0:
+         targe tOrien tation = 3       
+     else:                  
+         targe tOrien tation = 1             
+else:
+    if delta[1] < 0:
+        targe tOrien tation = 0     
+    else:
+        targe tOrien tation = 2        
+if self.robo t.rotation == targe tOrien tation:
+    self.robo t.goFor th()
+else:
+     lef tTurnsNeeded = (self.robo t.rotation - targe tOrien tation) % 4
+if leftTurnsNeeded <= 2:
+     self.robo t.turnLef t()
+else:
+     self.robo t.turnRigh t()Face left
+Face right
+Face up
+Face down
+【PG】Download from Wow! eBook <www.wowebook.com>

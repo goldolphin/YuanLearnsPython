@@ -1,0 +1,21 @@
+【PG】Chapter 26: Python Battle 399
+Python Battle 399■Creating a Python Battle Robot 401■A more 
+complicated robot 403■The coordinate system 404
+
+【PG】Chapter 27: What’s Next? 409
+For younger programmers 409■Python 410■Game 
+programming and Pygame 410■Other game programming 
+(non-Python) 411■Keep it BASIC 411■Mobile apps 411
+Look around 411
+
+【PG】Appendix A: Variable Naming Rules 413
+
+【PG】Appendix B: Differences Between Python 2 and 3 415
+
+【PG】Appendix C: Answers to Self-Test Questions 419
+
+【PG】List of Code Listings 451
+
+【PG】Index 455
+
+【PG】Download from Wow! eBook <www.wowebook.com>

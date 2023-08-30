@@ -1,0 +1,113 @@
+【PG】462 Hello World!
+
+【PG】PyQt 272, 329
+Action Editor 376
+component 375
+dialog box 383
+event handlers 279
+form_class 278
+Gauge 376
+GUI 375
+Image 376
+ImageButton 375
+Label 282
+list 280
+menu 287
+Menu Editor 287
+minimum code required 277
+Progress Bar 376
+Property Editor 287
+QAction 288
+QMainWindow 278
+resource file 275
+StaticText 376
+timer 377
+Toolbar 375
+
+【PG】Python xii
+first program 7
+installing xiii, xix–xx, 1
+Python Standard Library 185
+running your program 8
+special methods 166
+standard modules 185
+start using 2
+stopping a program 80
+using IDLE 2
+Python 2to3 conversion tool 417
+Python 3 2, 30, 47, 49, 69, 73, 83, 415–418
+Python 3 differences from Python 2 415
+converting code 417
+input() and raw_input() 416
+integer division 416
+print 415
+range() 417
+Python Battle 399
+Python file, .py 314, 318
+
+【PG】Qt Designer 273
+hotkeys 290
+Object Inspector 274
+Property Editor 274
+Widget Box 274
+queue 234
+QUIT (Pygame event) 237
+quotation marks, ' " 17
+quotes 22, 44
+quotient 34
+
+【PG】randint() 338
+random 187, 337
+random event 338
+random games 337
+random.choice() 331
+range() 82, 87
+argument 87
+shortcut 85
+third parameter 87
+raw_input() 46, 58
+getting a number 50
+read 314
+reading a file 319
+reading in binary mode 323
+readline() 321
+readlines() 320
+real time 367
+rect collision detection 227
+redirecting output 327
+relational operator 70
+remainder 34
+remove() 126, 344
+render 249
+resolution 193
+resource file 275
+RESTART 9
+return 152
+returning a value 152
+reverse parameter 130
+RGB 194
+round brackets 125, 133
+rounding 299
+roundoff error 42, 329
+run 8
+Run Module 8
+runaway loops 80
+runtime error 10
+
+【PG】scientific notation 36
+scope of a variable 153
+Scratch 410
+screen coordinates 195
+horizontal 195
+vertical 195
+x-axis 195
+y-axis 195
+seek() 322
+self 167, 280
+shell 3
+shortcut keys 290
+signal 279
+simulation 361
+gravity 362
+time 367
+Download from Wow! eBook <www.wowebook.com>

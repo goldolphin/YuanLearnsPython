@@ -1,0 +1,61 @@
+【PG】8.4　风格问题—循环变量名　　 83
+【PG】代码清单 8-5　使用 range() 打印 8 的乘法表（从 1 到 10）
+for looper in range(1, 11):
+    print looper, "times 8 =", looper * 8
+
+运行这个程序时会得到下面的结果：79  CHAPTER  8 Loop the Loop
+Save this as Loop4.py , and run it. (You can use the Run > Run Module  menu, or the shortcut 
+of pressing the F5 key.) You should see something like this:
+It’s almost the same as the first one . . . except that it missed the last loop! Why?
+The answer is that range (1, 5)  gives us the list
+[1, 2, 3, 4] . You can try this in interactive mode:
+
+Why not 5?Well, that’s just the way the
+ range()  function works. It gives you a list of numbers starting 
+at the first number and ending just before th e last number. You need to take that into 
+account and adjust the range to get the number of loops you want.
+【PG】Listing 8.5 shows our program modified to give us the 8 times table up to 10.
+for looper in range(1, 11):
+    print looper, "times 8 =", looper * 8
+
+And here’s what 
+we get when we run it:
+In the program in listing 8.5, range(1, 11)  gave us a list of numbers from 1 to 10, and the 
+loop did one iteration for each number in the list. Each time through the loop, the variable 
+looper  took the next value in the list.
+By the way, we called our loop variable looper , but you can call it anything you want.
+【PG】Listing 8.5 Printing the 8 times table up to 10 using range()>>> ================= RESTART =================
+>>>1 times 8 = 8
+2 times 8 = 16
+3 times 8 = 244 times 8 = 32
+>>> print range(1, 5)
+[1, 2, 3, 4]
+>>> ================== RESTART ==================
+>>>
+1 times 8 = 8
+2 times 8 = 163 times 8 = 24
+4 times 8 = 32
+5 times 8 = 406 times 8 = 48
+7 times 8 = 56
+8 times 8 = 649 times 8 = 72
+10 times 8 = 80
+
+在代码清单 8-5的程序中， range(1, 11) 给出从 1到10的一个数字列表， 对
+于列表中的每一个数会完成一次循环迭代。 每 次循环时， 变量looper就取列表中的
+下一个值。
+顺便说一句，我们把循环变量叫做 looper，不过也可以取你喜欢的任何名字。
+【PG】8.4　风格问题 —循环变量名
+循环变量与其他变量一样。 它没有任何特殊之处， 只是对应一个值的名字而已。
+将这个变量用作循环计数器也是可以的。
+之前我们说过 ，要 使用能够描述变量用途的变量名。 正是这个原因， 我们在前
+一个例子中选择了 looper这个名字。 不过，有时可以有些例外， 循环变量就属于这
+种例外。 这 是因为， 编程中有一个惯例（ 应该记得， 惯例就是表示通用的做法 ） ，通
+常使用字母 i、j、k等作为循环变量。
+从前的美好时光
+为什么用 i、j和k循环？
+这是因为早先的程序员一直用程序来计算数学问题， 而数
+学中 a、b、c和x、 y、z已经有其他用途。 另外，在当时一种流
+行的编程语言中， 变量 i、j和k总是整数， 不能把它们创建为
+任何其他类型。 由于循环计数器总是整数， 所以程序员总是选
+择i、j和k来作为循环计数器，这也成为了一种通用的做法。
+【PG】图灵社区会员 FreeLink 专享 尊重版权

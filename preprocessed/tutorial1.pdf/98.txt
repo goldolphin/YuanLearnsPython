@@ -1,0 +1,35 @@
+【PG】第 7章　判断再判断
+【PG】提示
+【PG】记住，如果你使用 Python 3 的话，需要将raw_input() 替换为input() ，调用print时也需要加上括号，像这样：print("You can play this game. ")
+【PG】7.7　使用 and
+【PG】上面最后这个例子可以达到目的。 不过还有一种更简便的方法来做同样的事情。可以像下面这样结合两个条件：69  CHAPTER  7 Decisions, Decisions
+【PG】Remember to save the file (you pick the name this time), and then run it. Try it a few times with different inputs to see what you get.
+【PG】Testing for more than one condition
+【PG】What if we want to test for more than one thing? Let’s say you made a game that was for eight-year-olds and up, and you want to make sure the player is in at least third grade. There are two conditions to meet. Here is one way you could test for both conditions:
+【PG】Notice that the first print  line is indented eight spaces, not just four spaces. That’s because each if needs its own block, so each one has its own indenting.
+【PG】Using “and”
+【PG】That last example will work fine. But there is a shorter way to do the same thing. You can combine conditions like this:
+【PG】We combined the two conditions using the and keyword. The and means that both of the conditions have to be true for the following block to execute.age = float(raw_input("Enter your age: "))
+【PG】grade = int(raw_input("Enter your grade: "))
+【PG】if age >= 8 and grade >= 3: 
+【PG】print "You can play this game."
+【PG】else:
+【PG】print "Sorry, you can’t play the game."
+【PG】age = float(raw_input("Enter your age: "))
+【PG】grade = int(raw_input("Enter your grade: "))
+【PG】if age >= 8:
+【PG】if grade >= 3: print "You can play this game."
+【PG】else:
+【PG】print "Sorry, you can’t play the game."
+【PG】Combine conditions  with “and”
+【PG】age>=8 grade>=3
+【PG】FalseFalseTrue TrueYou can play!
+【PG】if and
+(Only get here if both conditions are true)用“and”结合多个条件
+【PG】我们使用 and关键字来结合这两个条件。 and表示两个条件都必须为真才能执 行下面的代码块。
+【PG】age>=8 grade>=3
+【PG】FalseFalseTrue TrueYou can play!
+【PG】You can’t play!
+【PG】You can’t play!andif (只有两个条件都为真时才能执行到这里）
+【PG】可以用and把两个以上的条件放在一起：
+【PG】图灵社区会员 FreeLink 专享 尊重版权

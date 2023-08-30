@@ -1,0 +1,27 @@
+【PG】There are a few reasons:
+■It makes the files smaller, which makes it easier to find things in your code.
+■Once you create a module, you can use it in lots of programs. That saves you from 
+starting all over again next time you need the same functions.
+■You don’t always need to use all the modules together. Being modular means that you 
+can use different combinations of the parts to do different jobs, just as you can make 
+many different things out of the same set of LEGO blocks.
+
+【PG】Buckets of blocks
+In the chapter about functions (chapter 13), we said that functions are like building blocks. 
+You can think of a module as a bucket of building blocks. You can have as few or as many 
+blocks in a bucket as you want, and you can have many different buckets. Maybe you have 
+one bucket for all the square blocks, one for the flat pieces, and one for all the odd-shaped 
+blocks. That’s usually how programmers use modules—they collect similar kinds of 
+functions together in a module. Or they might collect all the functions they need for a 
+project together in a module, just as you would gather all the blocks you need for a castle 
+together in one bucket.
+
+【PG】How do we create modules? 
+Let’s create a module. A module is just a Python file, like the one in listing 15.1. Type the 
+code from the listing in an IDLE editor window, and save it as my_module.py .
+# this is the file "my_module.py"
+# we're going to use i t in ano ther program
+def c_to_f(celsius):
+    fahrenhei t = celsius * 9.0 / 5 + 32
+    return fahrenhei tListing 15.1 Creating a module
+Download from Wow! eBook <www.wowebook.com>

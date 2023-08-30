@@ -1,0 +1,25 @@
+【PG】307 CHAPTER  21 Print Formatting and Strings
+
+【PG】This time, the string got split into two parts: all the stuff on one side of 'Toby,'  and all the stuff on the other side of 'Toby,' . Notice that 'Toby,'  doesn’t appear in the list, because the split marker gets thrown away.
+
+【PG】There’s one other thing to know. If you don’t give Python any split marker, it’ll split the string at any whitespace :
+Whitespace means any spaces, tab characters, or newlines.
+
+【PG】Joining strings
+You just saw how to split a string into smaller pieces. How about joining two or more strings to make one larger string? You already saw, way back in chapter 2, that you can join strings using the + operator. It’s like adding two strings together, except that it’s called concatenating . There’s another way to join strings. You can use the join()  function. You tell it what strings you want to join and what characters (if any) you want inserted between the parts when they are joined. It’s basically the opposite of split() . Here’s an example in interactive mode:
+
+【PG】I admit that this looks a little odd. The characters that will go between each piece of the joined string go in front of join() . In this case, we wanted a space between each word, so we used ' '.join() . That’s different from what most people expect, but that’s just how Python’s join()  method works. 
+
+【PG】The following example makes me sound like a dog:
+To put it another way, the string in front of join()  is used as the glue  to hold the other strings together. 
+
+【PG】>>> names = name_s tring.spli t()
+>>> word_lis t = ['My', 'name', 'is', 'Warren' ]
+>>> long_s tring = ' '.join(word_lis t)
+>>> long_s tring
+'My name is Warren'
+>>> long_s tring = ' WOOF WOOF ' .join(word_lis t)
+>>> long_s tring
+'My WOOF WOOF name WOOF WOOF is WOOF WOOF Warren'
+
+【PG】Download from Wow! eBook <www.wowebook.com>

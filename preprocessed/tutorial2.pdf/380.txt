@@ -1,0 +1,49 @@
+【PG】356 Hello World!
+
+go t_sui t = False
+whi le not go t_sui t:
+    suit = inpu t("Pick a sui t to change to (h,e i ther s or c): ") 
+
+    if suit.lower() == 'd':
+        prin t "Debug ac tiva ted!"
+        go t_sui t = True
+    elif suit.lower() == 'e':
+        prin t "To be con t inued . . . "
+        go t_sui t = True
+    elif suit.lower() == 's':
+        ac tive_sui t = "Spades"
+        go t_sui t = True
+    elif suit.lower() == 'h':
+        ac tive_sui t = "Hear ts"
+        go t_sui t = True
+    elif suit.lower() == 'c':
+        ac tive_sui t = "Clubs"
+        go t_sui t = True
+    else:
+        prin t"Not a valid sui t.  Try again. " ,  
+prin t "You picked" , ac tive_sui t
+
+【PG】This is everything we need for the player’s turn. In the next section, we’ll make the 
+computer smart enough to play Crazy Eights.
+
+【PG】The computer’s turn
+After the player’s turn, the computer has to play, so we need to tell the program how to play 
+Crazy Eights. It has to follow the same rules as the player, but the program needs to decide 
+what card to play. We have to specifically tell it how to handle all possible situations:
+■Playing an 8 (and picking a new suit)
+■Playing another card
+■Drawing
+
+【PG】To make things a bit simpler, we’ll tell the computer to always play an 8 if it has one. This 
+might not be the best strategy, but it’s a simple one.
+If the computer plays an 8, it must pick the new suit. The easiest way to do that is to count 
+the number of cards of each suit in the computer’s hand and pick the suit that it has the 
+most of. Again, this isn’t a perfect strategy, but it’s one of the simplest to code.
+
+【PG】If there’s no 8 in the computer’s hand, the program will go through all the cards and see 
+which ones are possible plays. Out of these cards, it’ll pick the one with the highest value 
+and play that one.
+If there’s no option to play a card, the computer will draw. If the computer tries to draw and 
+there are no cards left in the deck, the computer is blocked, just like the human player.
+
+【PG】Here’s the code for the computer’s turn, with a few notes of explanation.

@@ -1,0 +1,37 @@
+【PG】200 Hello World!
+impor t pygame, sys, random
+from pygame.color impor t THECOLORS
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+for i in range (100):
+    wid th = random.randin t(0, 250); heigh t = random.randin t(0, 100)
+    top = random.randin t(0, 400); lef t = random.randin t(0, 500)
+    color_name = random.choice(THECOLORS.keys())   
+    color = THECOLORS[color_name]    
+    line_wid th = random.randin t(1, 3)
+    pygame.draw.rec t(screen, color, [lef t, top, wid th, heigh t], line_wid th)
+pygame.display.flip()
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()
+
+【PG】When you run this, you’ll get something that looks different every time. If you get a result that looks really nice, give it a fancy title like “Voice of the Machine” and see if you can sell it to your local art gallery!
+
+【PG】Individual pixels
+Sometimes you don’t want to draw a circle or rectangle, but you want to draw individual dots or pixels. Maybe you’re creating a math program and want to draw a sine wave, for example. Listing 16.6 Modern art with color
+Don’t worry about how this line works for now
+Don't worry if you don't know what a sine wave is. For the purposes of this chapter, it is just a wavy shape.
+Also don't worry about the math formulas in the next few example programs. Just type them in as they appear in the listings. They are just a way to get a wavy shape that is a nice size to fill our Pygame window.
+
+【PG】Hey, mon!
+Them there sine waves usually be used for sound .
+Like in music.  
+Me? I prefer 
+makin’ music on de 
+waves of de 
+ocean. 
+Download from Wow! eBook <www.wowebook.com>

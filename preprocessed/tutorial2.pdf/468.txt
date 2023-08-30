@@ -1,0 +1,33 @@
+【PG】Chapter 20: More GUIs
+Test your knowledge
+1Three names for the graphical elements of a GUI are control , widget , and component .
+2The letter that you press (along with Alt) to get into a menu is called a hot key .
+3Qt Designer files need to end in .ui.
+4Types of components you can include in a GUI using PyQt include button, check box, 
+progress bar, list, radio button, spin box, slider, text field, image, label, and several 
+others. See the Widget Box  in Qt Designer to view the whole list.
+5To make a widget do something, it needs to have an event handler.
+6The & (ampersand) character is used to define a hot key in Qt Designer.
+7The content of a spin box in Qt Designer is always an integer.
+Try it out
+1A version of the number-guessing program using Qt Designer is posted on the web 
+site as TIO_CH20_1.py  and TIO_CH20_1.ui .
+2To fix the spinner problem, select the spin box widget in Qt Designer. In the Property 
+Editor, change the minimum  and maximum  properties. The minimum  property should be 
+something like -1000 , and the maximum  can be something very large like 1000000 .
+
+【PG】Chapter 21: Print Formatting and Strings
+Test your knowledge
+1If you have two separate print  statements, and you want everything to print on the 
+same line, put a comma at the end of the first print statement, like this:
+2To add extra blank lines when you print something, you can add extra print
+statements with nothing in them, like this:
+Or you can print newline characters, \n, like this:prin t "Wha t is",
+prin t "your name?"
+prin t "Hello"
+prin t 
+prin t
+prin t
+prin t "World"
+prin t "Hello\n\n\nWorld"
+Download from Wow! eBook <www.wowebook.com>

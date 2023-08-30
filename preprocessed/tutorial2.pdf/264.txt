@@ -1,0 +1,42 @@
+【PG】240 Hello World!
+【PG】Mouse events
+【PG】You just saw how to get key events from the keyboard and use them to control something 
+in your program. We made the beach ball move up and down using the arrow keys. Now 
+we’re going to use the mouse to control the ball. This will show you how to handle mouse 
+events and how to use the mouse position information.
+
+【PG】The three types of mouse events that are most commonly used are
+■MOUSEBUTTONUP  
+■MOUSEBUTTONDOWN  
+■MOUSEMOTION  
+
+【PG】The simplest thing to do is have the beach ball follow the mouse position any time the 
+mouse is moved within the Pygame window. To move the beach ball, we’ll use the ball’s 
+rect.center  attribute. That way, the center of the ball will follow the mouse.
+
+【PG】We’ll replace the code that detected key events in the while  loop with code to detect the 
+mouse events:
+This is even simpler than the keyboard example. Make this change to listing 18.2, and try it. 
+The event.pos  part is the position ( x and y coordinates) of the mouse. We move the center 
+of the ball to that location. Notice that the ball follows the mouse as long as the mouse 
+is moving—that is, as long as MOUSEMOVE  events are happening. Changing the ball’s 
+rect.center  changed both the x and y positions. We’re no longer just moving the ball up 
+or down, but also sideways. When there are no mouse events—either because the mouse 
+isn’t moving or because the mouse cursor is outside the Pygame window—the ball 
+continues its side-to-side bouncing.
+
+【PG】Now let’s try making our mouse control work only  when the mouse button is held down. 
+Moving the mouse while a mouse button is held down is called dragging . There’s no 
+MOUSEDRAG  event type, so we’ll use the ones we have to get the effect we want.
+
+【PG】How can you tell if the mouse is being dragged? Dragging means the mouse is being 
+moved while a mouse button is being held down. You can tell when the button goes down 
+with the MOUSEBUTTONDOWN  event, and you can tell when it’s released (goes back up) with the while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+        elif even t.type == pygame.MOUSEMOTION:
+            my_ball.rec t.cen ter = even t.posDetects mouse movement 
+and moves the ball
+
+【PG】Download from Wow! eBook <www.wowebook.com>

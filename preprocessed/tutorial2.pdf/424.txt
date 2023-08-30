@@ -1,0 +1,20 @@
+【PG】400 Hello World!
+Running Python Battle
+
+【PG】Follow these steps:
+1Make sure the AI scripts you want to use are in the same folder as PythonBattle.py .
+2Run PythonBattle.py .
+3You’ll see a prompt:
+Enter the name of the AI script you want to use. Leave the .py extension off the end.
+For example, if you wanted to test CircleAI.py , you would type circleai .
+4Do the same for the blue AI.
+5Watch the battle to see who wins!
+6Close the Pygame window at the end.
+
+【PG】The rules of the game
+Now that you’ve watched a few Python Battles, let’s take a closer look at how the game 
+works. Every turn, a robot can do one of six things:
+■Go forward one space
+■Go backward one space
+■Turn left
+■Turn rightEnter red AI:

@@ -1,0 +1,31 @@
+【PG】42 Hello World!
+
+【PG】Yikes! How did that happen? Carter, I think your computer is going crazy! 
+Just kidding. Actually, there is an explanation for that, which you can see in the “WHAT’S 
+GOING ON IN THERE?” box. 
+
+【PG】Remember how we said that computers use binary inside? Well, all the numbers that 
+Python stores are stored as binary. For the sum of 0.1 and 0.2, Python creates a 
+float (decimal number) with enough binary digits (bits) to give you 15 
+decimal places. But that binary number 
+isn’t exactly equal to 0.3, it’s just 
+very, very close. (In this case, it is 
+wrong by 0.000000000000004.) The 
+difference is called roundoff error .
+
+【PG】When you typed the expression 0.1 + 0.2 in interactive mode, Python showed you the raw number it stored, with 
+all the decimal places. When you used print, you got what 
+you were expecting, because print is a little smarter, 
+and it knows enough to round off and display 0.3.
+
+【PG】It’s like asking someone the time. They could say 
+“twelve forty-four and fifty-three seconds.” But most 
+people would just say, “quarter to one,” because they 
+know you don’t need to be so precise. Roundoff errors 
+happen with floating point numbers in any computer 
+language. The number of correct digits you get may vary 
+from one computer to another or one language to another, 
+but they all use the same basic method of storing floats.
+
+【PG】Usually, roundoff errors are small enough that you 
+don’t need to worry about them.

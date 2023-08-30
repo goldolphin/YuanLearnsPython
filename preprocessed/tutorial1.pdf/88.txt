@@ -1,0 +1,66 @@
+【PG】62　　第 6章　GUI——图形用户界面
+#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1;self.page=self.page+1PrinterFormatter:self.header_written=0def#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1;self.page=self.page+1write_header(self):#Iftheheaderforthispagehasjustbeenwritten,don't
+
+【PG】print>>>Helloif#
+print>>>Helloif#
+print>>>Helloif#像（Python）程序员一样思考
+如果你想了解有关 Python使用的更多内容，比
+如EasyGui（ 或 任何其他方面 ） ，有一个好消息告诉你：
+Python提供了一个内置的帮助系统，也许你可以试一试。
+在交互模式中
+，可以在交互提示符后面键入
+>>>help()
+就会进入这个帮助系统。现在提示符会变成：
+help >
+一旦进入帮助系统，你想要得到哪方面的帮助，
+只需要键入相应的名字，例如：
+help> time.sleep
+或者
+help> easygui.msgbox
+你就会得到你想要的一些信息。
+要退出帮助系统 ，重 回正常的交互提示符，只需要键
+入quit：
+help> quit
+>>>
+有些帮助读起来很费劲，也很难理解，你往往找不
+到你想找的东西。不过如果你要找Python中某个方面的
+更多信息，这个帮助系统还是值得试一试。
+你学到了什么
+在这一章，你学到了以下内容。
+如何利用EasyGui建立简单的 GUI 。 
+如何使用消息框 msgbox显示消息。42 Hello World!
+The type() function told us that a is of type 'str', which stands for string, and b is of type 
+'float'. No more guessing!
+
+Type-conversion errors
+Of course, if you give int() or float() something that is not a number, it won’t work. 
+Try it and see:
+We got an error message. The invalid literal error message means that Python doesn’t know 
+how to create a number from "fred". Do you?
+
+Using type conversions
+Going back to your Fahrenheit to Celsius temperature-conversion program from the “Try it 
+out” section in chapter 3, remember that you needed to fix the integer-division behavior to get the right answer, by 
+changing the 5 to 5.0 or the 9 to 9.0:
+The float() function gives you another way of doing this:
+                                                               or 
+Try it and see.
+
+What did you learn?
+In this chapter, you learned about
+�converting between types (or, more correctly, creating types from other types): str(), 
+int(), and float().
+�displaying values directly without using print.
+�checking the type of a variable using type().
+
+Test your knowledge
+1When you use int() to convert a decimal number to an integer, does the result get 
+rounded up or down?>>> print float("fred")
+Traceback (most recent call last):
+  File "<pyshell#1>", line 1, in -toplevel-
+    print float ("fred")ValueError: invalid literal for float(): fred
+cel = 5.0 / 9 * (fahr – 32)
+cel = float(5) / 9 * (fahr – 32)
+cel = 5 / float(9) * (fahr – 32)
+
+图灵社区会员 FreeLink 专享 尊重版权

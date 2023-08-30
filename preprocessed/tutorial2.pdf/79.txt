@@ -1,0 +1,24 @@
+【PG】Chapter 6
+GUIs—Graphical User 
+Interfaces
+
+【PG】Up until now, all our input and output has been simple text in the IDLE window. But mod -
+ern computers and programs use lots of graphics. It would be nice if we could have some 
+graphics in our programs. In this chapter, we’ll start making some simple GUIs. That means 
+our programs will start to look more like the ones you’re used to—with windows, buttons, 
+and so on.
+
+【PG】What’s a GUI?
+
+【PG】GUI is an abbreviation for graphical user interface . In a GUI, instead of just typing text and 
+getting text back, the user sees graphical things like windows, buttons, text boxes, and so 
+on, and she can use the mouse to click things as well as type on the keyboard. The types of 
+programs we have done so far are command-line  or text-mode  programs. A GUI is just a 
+different way of interacting with a program. Programs that have a GUI still have the three 
+basic elements: input, processing, and output. But their input and output are a bit fancier.
+
+【PG】By the way, the acronym GUI is usually pronounced 
+“gooey,” instead of saying the letters, like “Gee You Eye.”
+ It’s okay to have a GUI on your computer, but you should
+ avoid getting anything gooey on your computer. It gets 
+stuck in the keys and makes it hard to type!

@@ -1,0 +1,32 @@
+【PG】142 Hello World!
+
+【PG】3Modify the program from question #1 to display only the third name the user typed in, like this:
+
+【PG】4Modify the program from question #1 to let the user replace one of the names. She should be able to choose which name to replace and then type in the new name. Finally, display the new list like this:
+
+【PG】5Write a dictionary program that lets users enter certain words and definitions and then look them up later. Make sure you let the user know if their word isn’t in the dictionary yet. It should look something like this when it runs:
+
+The third name you entered is:  Nick
+Enter 5 names:
+Tony
+Paul
+Nick
+Michel
+Kevin
+The names are Tony Paul Nick Michel Kevin
+Replace one name.  Which one? (1-5): 4
+New name: Peter
+The names are Tony Paul Nick Peter Kevin
+
+Add or look up a word (a/l)? a
+Type the word: computer
+Type the definition: A machine that does very fast math
+Word added!
+
+Add or look up a word (a/l)? l
+Type the word: computer
+A machine that does very fast math
+
+Add or look up a word (a/l)? l
+Type the word: qwerty
+That word isn't in the dictionary yet.

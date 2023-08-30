@@ -1,0 +1,59 @@
+【PG】366 Hello World!
+
+【PG】Displays final stats when game is over
+def display_final():
+    final1 = "Game over"                                         
+    final2 = "You landed a t %.1f m/s" % veloci ty               
+    if veloci ty > -5:                                            
+        final3 = "Nice landing!"                                  
+        final4 = "I hear NASA is hiring!"                          
+    elif veloci ty > -15:                                           
+        final3 = "Ouch!  A bi t rough, bu t you survived."           
+        final4 = "You'll do better nex t time."                     
+    else:                                                          
+        final3 = "Yikes!  You crashed a 30 Billion dollar ship."   
+        final4 = "How are you ge tting home?"                      
+    pygame.draw.rec t(screen, [0, 0, 0], [5, 5, 350, 280],0)          
+    f1_fon t = pygame.fon t.Fon t(None, 70)                             
+    f1_surf = f1_fon t.render(final1, 1, (255, 255, 255))             
+    screen.bli t(f1_surf, [20, 50])                                   
+    f2_fon t = pygame.fon t.Fon t(None, 40)                            
+    f2_surf = f2_fon t.render(final2, 1, (255, 255, 255))             
+    screen.bli t(f2_surf, [20, 110])                                  
+    f3_fon t = pygame.fon t.Fon t(None, 26)                             
+    f3_surf = f3_fon t.render(final3, 1, (255, 255, 255))             
+    screen.bli t(f3_surf, [20, 150])                                  
+    f4_fon t = pygame.fon t.Fon t(None, 26)                             
+    f4_surf = f4_fon t.render(final4, 1, (255, 255, 255))             
+    screen.bli t(f4_surf, [20, 180])                                  
+    pygame.display.flip() 
+
+【PG】Creates throttle object
+myThro ttle = Thro ttleClass([15, 500])    
+
+【PG】Start of main Pygame event loop
+running = True                                                   
+while running:                                                
+    clock. tick(30)     
+    fps = clock.ge t_fps()
+    if fps < 1:  fps = 30
+    if heigh t > 0.01:    
+        calcula te_veloci ty()
+        screen.fill([0, 0, 0])
+        display_s tats()
+        pygame.draw.rec t(screen, [0, 0, 255], [80, 350, 24, 100], 2) 
+        fuelbar = 96 * fuel / 5000                                     
+        pygame.draw.rec t(screen, [0,255,0],
+                [84,448-fuelbar,18, fuelbar], 0)                 
+        pygame.draw.rec t(screen, [255, 0, 0],                            
+                [25, 300, 10, 200],0)  
+        screen.bli t(moon, [0, 500, 400, 100])   
+        pygame.draw.rec t(screen, [60, 60, 60],                           
+                [220, 535, 70, 5],0)           
+        screen.bli t(myThro ttle.image, myThro ttle.rec t) 
+        display_flames()                                                 
+        screen.bli t(ship, [230, y_pos, 50, 90])     
+        ins truct1 = "Land sof tly wi thout running ou t of fuel"            
+        ins truct2 = "Good landing: < 15m/s   Grea t landing: < 5m/s"      
+        ins t1_fon t = pygame.fon t.Fon t(None, 24)                          
+        ins t1_surf = ins t1_fon t.render(ins truct1, 1, (255, 255, 255))

@@ -1,0 +1,50 @@
+【PG】62 Hello World!
+
+【PG】impor t random, easygui
+secre t = random.randin t(1, 99)        
+guess = 0
+tries = 0
+easygui.msgbox( """AHOY!  I'm the Dread Pira te Rober ts, and I have a secre t!
+It is a number from 1 to 99.  I'll give you 6 tries.""" )
+while guess != secre t and tries < 6:
+    guess = easygui.in tegerbox( "Wha t's yer guess, ma tey?")  
+    if not guess: break                                     
+    if guess < secre t:                                       
+        easygui.msgbox( str(guess) + " is too low, ye scurvy dog!" )
+    elif guess > secre t:                                          
+        easygui.msgbox( str(guess) + " is too high, landlubber!" )
+    tries = tries + 1       
+if guess == secre t:                                                    
+    easygui.msgbox( "Avas t! Ye go t it!  Found my secre t, ye did!" )    
+else:                                                            
+    easygui.msgbox( "No more guesses!  The number was " + str(secre t)) 
+
+【PG】You still haven’t learned how all the parts of this program work, but type it in and give it a 
+try. You should see something like this when you run it:
+
+【PG】We’ll be learning about if, else , and elif  in chapter 7, and while  in chapter 8. We’ll learn 
+about random  in chapter 15, and we’ll use it a lot more in chapter 23.
+
+【PG】Other GUI pieces
+EasyGui has a few other GUI pieces available, including a choice box that lets you pick 
+multiple choices (instead of just one), and some special dialog boxes for getting filenames 
+and so on. But the ones we have looked at are enough for now.
+
+【PG】EasyGui makes generating some simple GUIs very easy, and it hides a lot of the complexity 
+that is involved in GUIs so you don’t have to worry about it. Later on, we’ll look at another 
+way to make GUIs that gives you a lot more flexibility and control.
+
+【PG】If you want to find out more about EasyGui, you can go to the EasyGui home page at 
+easygui.sourceforge.net .
+
+【PG】Listing 6.5 Number-guessing game using EasyGui
+Picks a secret 
+number
+Gets the player’s guess
+Allows up to 
+6 guesses
+Uses up one try
+Prints 
+message at 
+end of game
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,31 @@
+【PG】The sleep_test() function uses a PyQt “warning message” dialog box. A couple of 
+parameters tell it which buttons to show and which one of those buttons is the default. 
+The notes in listing 24.4 explain this. When the dialog pops up (when you try to wake your 
+pet), it looks like this:
+
+【PG】Don’t worry if you don’t understand all this code. You can learn more about PyQt on your 
+own if you want. A good place to start is the PyQt website: www.riverbankcomputing.co.uk/
+software/pyqt/intro .
+
+【PG】In this chapter, we have only scratched the surface of what can be done with computer sim -
+ulations. You have seen the basic ideas of simulating real-world conditions, like gravity and 
+time, but computer simulations are widely used in science, engineering, medicine, finance, 
+and many other fields. Many of them are very complex and take days or weeks to run even 
+on the fastest computers. But even the little virtual pet on your friend’s keychain is a kind of 
+simulation, and sometimes the simplest simulations are the most interesting.
+
+【PG】What did you learn?
+In this chapter, you learned 
+■What computer simulations are and why they’re used
+■How to simulate gravity, acceleration, and force
+■How to keep track of and simulate time
+■How to save timestamps to a file using pickle
+■A bit about error handling ( try-except )
+■How to use timers to generate periodic events
+
+【PG】Test your knowledge
+1List three reasons computer simulations are used.
+2List three kinds of computer simulations that you have seen or that you know of.
+3What kind of object is used to store a difference between two dates or times?
+
+【PG】Download from Wow! eBook <www.wowebook.com>

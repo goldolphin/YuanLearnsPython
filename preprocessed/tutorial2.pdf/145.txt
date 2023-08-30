@@ -1,0 +1,17 @@
+【PG】Chapter 12 Collecting Things Together—Lists and Dictionaries
+
+【PG】Okay, okay! Have a look at “WHAT’S GOING ON IN THERE?” to see an explanation of why the index starts at 0 instead of 1.
+
+【PG】You’ll quickly get used to indices starting at 0. It’s very common in programming. 
+
+【PG】“Slicing” a list
+
+【PG】You can also use indices to get more than one item from a list at a time. This is called slicing a list:
+
+【PG】Similar to the range() in our for loops, slicing gets the items starting with the first index, but it stops before getting to the second index. That’s why we got back three items, not four, in the previous example. One way to remember this is that the number of items you get >>> print letters[1:4] ['b', 'c', 'd']
+
+【PG】Remember that computers use binary digits or bits to store everything. Back in the old days, those bits were expensive. Each one had to be hand-picked and carried by donkey from the bit plantation…just kidding. But they were expensive. Binary counting starts at 0. So, to make the most efficient use of the bits and not waste any, things like memory locations and list indices started at 0 as well. Hey, you crazy burro! Get back here!
+
+【PG】Index means the position of something. The plural of index is indices (but some people also use indexes as the plural for index). If you’re the fourth person in line, your index in line is 4. But if you’re the fourth person in a Python list, your index is 3, because Python list indices start at 0! 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

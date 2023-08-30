@@ -1,0 +1,30 @@
+【PG】CHAPTER 4
+Types of Data
+
+We have seen that there are at least three different types of things we can assign to a 
+variable (to keep in the computer’s memory): integers, floating-point numbers, and strings. 
+There are other types of data in Python, which you’ll learn about later, but for now these 
+three will do.
+
+【PG】In this chapter, you’re going to learn how you can tell what type something is. 
+You’ll also see how to make one type from another.
+
+【PG】Changing types
+
+Quite often, we need to convert data from one type to another. For instance, when we want 
+to print a number, it needs to be converted to text in order for the text to appear on the 
+screen. Python’s print  command can do that for us, but sometimes we need to convert 
+without printing, or to convert from strings to numbers (which print  can’t do). This is called 
+type conversion . So how does it work?
+
+Python doesn’t actually “convert” things from one type to another. It creates a new thing, of 
+the type you want, from the original thing. Here are some functions that convert data from 
+one type to another:
+■float()  will create a new float (decimal number) from a string or integer. 
+■int()  will create a new integer from a string or float.
+■str()  will create a new string from a number (or any other type).
+
+The parentheses at the end of float() , int() , and str()  are there because they are not 
+Python keywords  (like print )—they are some of Python’s built-in functions . 
+
+Download from Wow! eBook <www.wowebook.com>

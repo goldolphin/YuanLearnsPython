@@ -1,0 +1,34 @@
+【PG】304 Hello World!
+
+【PG】Storing formatted numbers
+Sometimes you don’t want to print the formatted number right away, but rather store it in a 
+string to use later. That’s easy. Instead of printing it, just assign it to a variable, like this:
+Instead of directly printing the formatted number, we assigned it to the variable my_string . 
+Then we combined my_string  with some other text and printed our sentence.
+Storing the formatted number as a string is very useful for GUIs and other graphical 
+programs like games. Once you have a variable name for the formatted string, you can 
+display it however you want: in a text box, button, dialog, or game screen.
+
+【PG】Formatting, the new way
+The syntax for formatting strings that you just learned about works in all versions of Python. 
+But there is a different way of doing the same thing in Python 2.6 and later. Because we’re 
+using Python 2.7 in this book, I thought we’d look at the new way, too. You might see it in 
+Python code, so this way you’ll at least know what it means. You can decide which syntax—
+the old or the new—you want to use for string formatting. 
+
+【PG】The format()  method
+Python strings (in versions 2.6 and later) have a method called format() . This works very 
+similarly to the % format strings you saw above. In fact, the format specifiers—the f, g, e, 
+and so on—are the same. You just use them a little differently. The best way to see it is 
+with an example.
+Here’s the old way:
+And here’s the new way:
+In the new way, instead of starting the format specifier with %, you put it in curly brackets. 
+The 0 or 1 tells Python which variable from the tuple of variables you’re going to format. >>> my_s tring = '%.2f' % 12.3456
+>>> prin t my_s tring
+12.35
+>>> prin t 'The answer is' , my_s tring
+The answer is 12.35
+prin t 'I go t %.1f in ma th, %.1f in science' % (ma th, science)
+prin t 'I go t {0:.1f} in ma th, {1:.1f} in science' .forma t(math, science)
+Download from Wow! eBook <www.wowebook.com>

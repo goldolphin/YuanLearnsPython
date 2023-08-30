@@ -1,0 +1,16 @@
+【PG】Chapter 2 4
+Computer Simulations
+
+【PG】Have you ever seen a “virtual pet”: those little toys with a small display screen and a few buttons for feeding your pet when it’s hungry, letting it sleep when it’s tired, playing with it when it’s bored, and so on? The virtual pet has some of the same characteristics as a real, live pet. That’s an example of a computer simulation—the virtual pet device is a tiny computer.
+
+【PG】In the last chapter, you learned about random events and how to generate them in a program. In a way, that was a kind of simulation. A simulation  is where you create a computer model of something from the real world. We created computer models of coins, dice, and decks of cards.
+
+【PG】In this chapter, you’ll learn more about using computer programs to simulate the real world. 
+
+【PG】Modeling the real world
+
+【PG】There are many reasons to use a computer to simulate or model the real world. Sometimes it isn’t practical to do an experiment because of time, distance, danger, or other reasons. For example, in the last chapter we simulated flipping a coin a million times. Most of us don’t have time to do that with a real coin, but a computer simulation did it in seconds.
+
+【PG】Sometimes scientists want to figure out “What if … ?” What if an asteroid smashed into the Moon? You can’t make a real asteroid smash into the Moon, but a computer simulation can tell us what would happen. Would the Moon zoom off into space? Would it crash into Earth? How would its orbit change?
+
+【PG】When pilots and astronauts are learning to fly planes and spacecraft, they can’t always practice on the real thing. That would be very expensive! (And would you want to be the ...)

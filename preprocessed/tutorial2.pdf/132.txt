@@ -1,0 +1,55 @@
+【PG】 108 Hello World!
+
+【PG】 You can even have nested-nested loops (or double-nested loops ). They look like this.
+
+numBlocks = int(raw_inpu t ('How many blocks of s tars do you wan t? '))
+numLines = int(raw_inpu t ('How many lines in each block? ' ))
+numS tars = int(raw_inpu t ('How many s tars per line? ' ))
+
+for block in range(0, numBlocks):
+    for line in range(0, numLines):
+        for star in range(0, numS tars): 
+            prin t '*',
+        prin t
+    prin t
+
+【PG】 Here’s the output:
+
+We say the loop is nested “three deep. ”
+
+【PG】 Even more variable nested loops
+
+The next listing shows a trickier version of the program from listing 11.3.
+
+numBlocks = int(raw_inpu t('How many blocks of s tars do you wan t? '))
+for block in range(1, numBlocks + 1):
+    for line in range(1, block * 2 ):                
+        for star in range(1, (block + line) * 2): 
+            prin t '*',
+        prin t
+    prin t
+
+Listing 11.3 Blocks of stars with double-nested loops
+
+>>> ======================= RESTART =======================
+>>> How many blocks of s tars do you wan t? 3
+>>> How many lines of s tars in each block? 4
+>>> How many s tars per line? 8
+>>> * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * * * * * * *
+
+Listing 11.4 A trickier version of blocks of stars
+
+【PG】 Formulas for number of lines and stars
+
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,22 @@
+【PG】378 Hello World!
+Try, try again
+
+【PG】We’ll be using another new thing in this program. It’s called a try-except  block. If a program is going to do something that could cause an error, it’s nice to have some way to catch the error and deal with it, instead of having the program just stop. A try-except block does that. For example, if you try to open a file and the file doesn’t exist, you’ll get an error. If you don’t handle this error, the program will stop at this point. But maybe you want to ask the user to reenter the filename, in case she made a typo. A try-except  block lets you catch the error and keep going. Here’s what it looks like, using the example of opening a file:
+
+The thing that you want to try (that might cause an error) goes in the try block. In this case, it’s trying to open a file. If that happens without an error, the except  part is skipped. If the code in the try block causes an error, the code in the except  block runs. The code in the except  block tells the program what to do if there was an error. You can think of it this way:
+
+【PG】The try-except  statements are Python’s way of doing what’s generally called error handling . Error handling lets you write code where things can go wrong—even things that would normally stop your program—so that your program will still work. We’re not going to talk about error handling in any more detail in this book, but I wanted to show you the basics, because you’ll see it in the Virtual Pet code.
+
+【PG】Let’s look at the code, which is shown in listing 24.4. The notes will explain most of what’s going on. This one is a bit long, so if you don’t feel like typing it all in, you can find it in the \Examples\VirtualPet  folder (if you ran the book’s installer). It can also be downloaded from the book’s website ( www.helloworldbook2.com ). The PyQt UI file and all the graphics are there, too. Try running it, and then look at the code and make sure you understand how it works.
+
+【PG】try:
+    file = open("somefile. txt", "r")
+except:
+    prin t "Couldn' t open the file.  Do you wan t to reen ter the filename?"
+
+【PG】try:
+    to do this (don' t do any thing else...)
+except:
+    if there was an error, then do this
+
+【PG】Download from Wow! eBook <www.wowebook.com>

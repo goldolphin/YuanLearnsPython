@@ -1,0 +1,34 @@
+【PG】417  APPENDIX  B Differences Between Python 2 and 3
+Python 2 does floor division  by default. Python 3 does floating-point division  by default. So in 
+Python 3 you get
+If you want floor division in Python 3, you can get that by using a double slash, like this:
+The modulus operator ( %) to get the remainder in integer division works the same in Python 
+3 as in Python 2:
+Python 2:
+Python 3:
+
+【PG】range()
+In Python2, the range()  function returns a list. But in Python 3, range()  returns a range 
+object . For purposes of looping, a range object in Python 3 works basically the same way as 
+a list in Python 2. But if you try to print it, you don’t see the individual values in the range:
+Python 2:
+Python 3:
+
+【PG】Python 2 to 3 conversion
+There is a tool called 2to3  that attempts to automatically convert Python 2 code to Python 3 
+code. If you’re running Python 3, you can try it on some of the listings in this book. Many of 
+
+>>> prin t(5/2)
+2.5
+>>> prin t(5//2)
+2
+>>> prin t 5%2
+1
+>>> prin t(5%2)
+1
+>>> prin t range(5)
+[0, 1, 2, 3, 4]
+>>> prin t(range(5))
+
+【PG】range(0, 5)
+Download from Wow! eBook <www.wowebook.com>

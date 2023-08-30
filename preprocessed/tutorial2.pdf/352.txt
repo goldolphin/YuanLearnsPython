@@ -1,0 +1,41 @@
+【PG】328 Hello World!
+
+【PG】Pickling
+
+Let’s say we have a list with different kinds of things in it, like this:
+
+To use pickle , first you have to import the pickle  module:
+
+Then to “pickle” something, like a list, you use the dump()  function. (That’s easy to 
+remember if you think of dumping your pickles into the jar.) The dump()  function needs a 
+file object, and you know how to make one of those:
+
+We open it for writing  with 'w' because we’re going to be storing  something in this file. You 
+can pick whatever name and extension you want. I picked .pkl as the extension, short for 
+“pickle.” 
+
+Then we dump()  our list into the pickle file:
+
+The whole process looks like this.
+impor t pickle
+my_lis t  = ['Fred', 73, 'Hello there', 81.9876e-13]
+pickle_file = open('my_pickled_lis t.pkl', 'w')
+pickle.dump(my_lis t, pickle_file)
+pickle_file.close()
+
+You can use this same method to store any kind of data structure to a file. But what about 
+getting it back? That’s next.
+
+【PG】Unpickling
+
+In real life, once you pickle something, it stays pickled. You can’t undo it. But in Python, 
+when you “preserve” some data by pickling it, you can also reverse the process and get your 
+data back the way it was.
+
+my_lis t  = ['Fred', 73, 'Hello there', 81.9876e-13]
+impor t pickle
+pickle_file = open('my_pickled_lis t.pkl', 'w')
+pickle.dump(my_lis t, pickle_file)
+
+【PG】Listing 22.6 Using pickle  to store a list to a file
+Download from Wow! eBook <www.wowebook.com>

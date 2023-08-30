@@ -1,0 +1,21 @@
+【PG】85 CHAPTER 8 Loop the Loop
+
+【PG】If we used this convention, our program would look like this:
+And it would work exactly the same. (Try it and see!)
+
+【PG】Which names you use for your loop variables is a matter of style. Style is about how your programs look, not about whether they work. But if you use the same style as other programmers, your programs will be easier to read, understand, and debug. You’ll also be more used to this style, and it’ll be easier for you to read other people’s programs.
+
+【PG】A range() shortcut
+You don’t always have to give range() two numbers as we did in listing 8.5. You can give it just one number:
+This is the same as writing
+which gives you this list of numbers: [0, 1, 2, 3, 4] .
+
+【PG】In fact, most programmers start their loops at 0 instead of 1. If you use range(5), you’ll get 5 iterations of the loop, which is easy to remember. You just have to know that the first time through, i will be equal to 0, not 1, and the last time through it’ll equal 4, not 5.for i in range(1, 5):
+    print i, "times 8 =", i * 8
+for i in range(5):
+for i in range(0, 5):
+
+【PG】Why i, j, and k for loops?
+That’s because the early programmers were using programs to ﬁgure out math stuﬀ, and math already uses a, b, c, and x, y, z for other things. Also, in one popular programming language, the variables i, j, and k were always integers—you couldn’t make them any other type. Because loop counters are always integers, the programmers usually picked i, j, and k for their loop counters, and it became common practice.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

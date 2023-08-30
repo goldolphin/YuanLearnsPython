@@ -1,0 +1,24 @@
+【PG】Chapter  20 More GUIs
+The first project will be a PyQt version of our temperature-conversion program. In chapter 
+22, we’ll use PyQt to make a GUI version of the game Hangman. Later in the book, we’ll use 
+PyQt again to make a Virtual Pet program.
+
+【PG】TempGUI
+In chapter 3 (in the “Try it out” section), you made your first temperature-conversion 
+program. In chapter 5, we added user input to it, so the temperature to be converted didn’t 
+have to be hard-coded into the program. In chapter 6, we used EasyGui to get the input and 
+display the output. Now we’re going to use PyQt to make a graphical version of the 
+temperature-conversion program.
+
+【PG】TempGUI components
+Our temperature-conversion GUI will be pretty simple. We only need a few things:
+■Places to enter the temperatures (Celsius or Fahrenheit)
+■Buttons to make the temperature conversion happen
+■Some labels to show the user what’s what 
+Just for fun, let’s use two different kinds of entry widgets for Celsius and Fahrenheit. You’d 
+never do that in a real program (it would only confuse people), but we’re here to learn! 
+When we’re done making the GUI layout, it should look something like this:
+
+【PG】You can probably do this on your own, because Qt Designer is pretty user-friendly. But just 
+in case you need any help, I’m going to explain the steps. This will also make sure we’re 
+Download from Wow! eBook <www.wowebook.com>

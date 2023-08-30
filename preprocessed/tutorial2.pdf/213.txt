@@ -1,0 +1,12 @@
+【PG】CHAPTER 1 6
+Graphics
+
+【PG】You have been learning about a lot of the basic elements of computer programming: input and output, variables, decisions, loops, lists, functions, objects, and modules. I hope you have enjoyed filling up your brain with all this stuff! Now it’s time to start having a bit more fun with programming and Python.
+
+【PG】In this chapter, you’ll learn how to draw things on the screen, like lines, shapes, colors, and even a bit of animation. This will help us make some games and other programs in the next few chapters.
+
+【PG】Getting some help—Pygame
+
+【PG】Getting graphics (and sound) to work on your computer can be a little complicated. It involves the operating system, your graphics card, and a lot of low-level code that we don’t really want to worry about for now. So we’re going to use a Python module called Pygame to help make things a bit simpler.
+
+【PG】Pygame lets you create graphics and the other things you need to make games work on different computers and operating systems, without having to know all the messy details of each system. Pygame is free, and a version of Pygame comes with this book. It should be installed if you used the book’s installer to install Python. If not, you’ll have to install it separately. You can get it from the Pygame website, www.pygame.org.

@@ -1,0 +1,9 @@
+【PG】412 Hello World!
+
+【PG】Python can take you a long way, but to do some specific things you may need a different language, like C, C++, Java, JavaScript (different from Java), or another one. If so, you’ll want to find a book or other resource that teaches you that specific language. There are so many different ones out there that I can’t give you much advice on that subject.
+
+【PG】Whatever you do, have fun with programming! Keep learning, exploring, and experimenting. The more you learn about programming, the more interesting it gets!
+
+【PG】Bye for now!
+
+【PG】Download from Wow! eBook <www.wowebook.com>

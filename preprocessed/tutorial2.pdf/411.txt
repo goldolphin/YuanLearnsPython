@@ -1,0 +1,45 @@
+【PG】Chapter 25 Skier Explained
+
+【PG】We make a class for the skier, which is a Pygame Sprite. The skier is always 100 pixels from 
+the top of the window, and we start him in the center of the window, left-to-right, which is 
+at x=320, because the window is 640 pixels wide. So his initial position is [320, 100]. The 
+first part of the skier class definition looks like this:
+
+【PG】We make a class method to turn the skier, which changes angle, loads the correct image, and 
+also sets the skier’s speed. The speed has both x and y components. We only move the skier 
+sprite left and right (x-speed). But the y-speed determines how fast the scenery scrolls by (how 
+fast he goes “down” the hill). When he is going straight down, his downward speed is faster; 
+and when he is turning, his downward speed is slower. The formula for speed looks like this:
+The abs in that line of code gets the absolute value  of angle. That is, we ignore the sign 
+(+ or -). For downward speed, we don’t care which direction the skier is turning, we just 
+need to know how much he is turning.
+The whole method for turning looks like this:
+
+【PG】We also need a method to move the skier back and forth. This makes sure he doesn’t go 
+past the edge of the window:
+class SkierClass(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load("skier_down.png")
+        self.rect = self.image.get_rect()
+        self.rect.center = [320, 100]
+        self.angle = 0
+speed = [self.angle, 6 - abs(self.angle) * 2]
+
+def turn(self, direction): 
+        self.angle = self.angle + direction
+        if self.angle < -2:  self.angle = -2
+        if self.angle >  2:  self.angle =  2 
+        center = self.rect.center
+        self.image = pygame.image.load(skier_images[self.angle])
+        self.rect = self.image.get_rect()
+        self.rect.center = center
+        speed = [self.angle, 6 - abs(self.angle) * 2]
+        return speed
+
+def move(self, speed):
+        self.rect.centerx = self.rect.centerx + speed[0]
+        if self.rect.centerx < 20:  self.rect.centerx = 20
+        if self.rect.centerx > 620: self.rect.centerx = 620
+
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,35 @@
+【PG】172 Hello World!
+Run the program, and see what you get. It should look like this:
+The first part of the program creates the class. The second part tests the 
+methods to cook our virtual hot dog and add some condiments. But 
+judging by that last couple of lines, I think we cooked it too much. 
+What a waste of ketchup and mustard!
+
+【PG】Hiding the data
+You might have realized that there are two ways you can view or change the data (attri -
+butes) inside an object. You can either access an attribute directly, like this
+or you can use a method that modifies the attribute, like this:
+If the hot dog started out raw ( cooked_level = 0 ), these would both do the same thing. 
+They’d set the cooked_level  to 5. So why did we bother making a method to do this? Why 
+not just do it directly?
+
+【PG】I can think of at least two reasons:
+■If we were accessing the attributes directly, then cooking the hot dog would require at 
+least two parts: changing the cooked_level  and changing the cooked_string . With a 
+method, we just make one method call, and it does everything we need.
+■If we were accessing the attributes directly, we could do something like this:>>> ================================ RESTART ================================
+>>> 
+Raw ho t dog.
+Cooking ho t dog for 4 minu tes...
+Medium ho t dog.
+Cooking ho t dog for 3 more minu tes...
+Well-done ho t dog.
+What happens if I cook i t for 10 more minu tes?
+Charcoal ho t dog.
+
+【PG】Now, I'm going to add some s tuff on my ho t dog
+Charcoal ho t dog wi th ke tchup, mus tard.
+myDog.cooked_level = 5
+myDog.cook(5)
+cooked_level = cooked_level - 2
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,15 @@
+【PG】384 Hello World!
+Try it out
+
+【PG】1Add an “out of orbit” test to the Lunar Lander program. If the ship goes out the top of 
+the window, and the velocity exceeds +100m/s, stop the program and display a 
+message like this: “You have escaped the Moon’s gravity. No landing today!”
+
+【PG】2Add an option for the user to play Lunar Lander again after landing the ship, without 
+having to restart the program.
+
+【PG】3Add a Pause  button to the Virtual Pet GUI. This should stop or “freeze” time for the pet, 
+and it should stay frozen even when the program is not running. (Hint: This means you 
+probably need to save the “paused” state in the pickle file.)
+
+【PG】Download from Wow! eBook <www.wowebook.com>

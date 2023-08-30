@@ -1,0 +1,8 @@
+【PG】Pretty soon, our programs are going to start getting bigger and more complicated. We need some ways to organize them in smaller pieces so they’re easier to write and keep track of. There are three main ways to break programs into smaller parts. Functions are like building blocks of code that you can use over and over again. Objects are a way of describing pieces of your program as self-contained units. Modules are just separate files that contain parts of your program. In this chapter, we’ll learn about functions, and in the next two chapters, we’ll learn about objects and modules. Then we’ll have all the basic tools we need to start using graphics and sounds, and to create games.
+
+【PG】Functions—the building blocks
+In the simplest of terms, a function is a chunk of code that does something. It’s a small piece that you can use to build a bigger program. You can put the piece together with other pieces, just like building something with toy blocks.
+You create or define a function with Python’s def keyword. You then use or call the function by using its name. Let’s start with a simple example.
+
+【PG】Creating a function
+The code in the following listing defines a function and then uses it. This function prints a mailing address to the screen.

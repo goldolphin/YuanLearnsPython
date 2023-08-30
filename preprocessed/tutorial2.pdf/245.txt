@@ -1,0 +1,9 @@
+【PG】Chapter 17 Sprites and Collision Detection
+
+【PG】In this section, we learn about creating ball sprites and moving them using a class method called move. We also discuss different ways of writing code in Python and the importance of understanding Python's syntax.
+
+【PG】A move() method is created for the MyBallClass to move the balls. The move() method uses the built-in method of Sprites called move() and requires a parameter called speed. Speed is a list of two numbers, one for x-speed and one for y-speed. The move() method also checks for the ball hitting the edges of the window so that it can "bounce" the ball around the screen.
+
+【PG】The MyBallClass definition is changed to add the speed property and the move() method. The move() method is added to move the ball and check for hitting the sides or top/bottom of the window, and if so, reverses the x/y-speed of the ball. 
+
+【PG】Overall, this section provides the foundation for creating sprites and moving them, and we learn about different ways of writing code in Python.

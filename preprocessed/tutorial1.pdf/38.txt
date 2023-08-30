@@ -1,0 +1,46 @@
+【PG】第 1章　出发吧
+
+【PG】1.8　你的第二个程序
+
+【PG】第一个程序没有多大实际意义， 它只是在屏幕上打印了一些内容。 下面来试一
+个更有意思的程序。
+
+【PG】代码清单 1-2中 的代码编写的是一个简单的猜数游戏。 与第一个程序一样， 先
+选择 File（文 件）  New Window（ 新 窗口）在IDLE编辑器中新建一个文件。 键入
+代码清单 1-2中 的代码， 然后保存这个文件。 可以把这个文件命名为你喜欢的任何名
+字，只要以“.py”结尾就可以。NumGuess.py 就是一个不错的名字 。
+
+【PG】这里只有 18行Python指 令，另外为了便于阅读还加入了一些空行。 键入这些
+代码不会花费太多时间。 虽然我们还没有说明这个代码到底是什么意思，不过不用
+担心，很快就会讲到。
+
+import random
+secret = random.randint(1, 99)      
+guess = 0
+tries = 0
+print "AHOY!  I'm the Dread Pirate Roberts, and I have a secret! "
+print "It is a number from 1 to 99.  I'll give you 6 tries. "
+while guess != secret and tries < 6:                                
+    guess = input("What's yer guess? ")     
+    if guess < secret:                                              
+        print "Too low, ye scurvy dog!"                             
+    elif guess > secret:                                            
+        print "Too high, landlubber!"                               
+                                                                    
+    tries = tries + 1          
+
+if guess == secret:                                    
+    print "Avast! Ye got it!  Found my secret, ye did!"              
+else:                                                               
+    print "No more guesses!  Better luck next time, matey!"         
+    print "The secret number was", secret 
+
+【PG】键入这些代码时， 注意while指令后面代码行是缩进的， 另外if和elif后面
+的代码缩进得更多一些。 还要注意有些代码行末尾有冒号。 如果在正确的位置键入
+冒号，编辑器会自动将下一行缩进。
+
+【PG】保存代码后，就像运行第一个程序一样，选择 Run（运行） Run Module（运
+行模块）来运行这个程序。 尝试一下，看看会发生什么。 下面是我运行这个程序的
+示例：
+
+图灵社区会员 FreeLink 专享 尊重版权

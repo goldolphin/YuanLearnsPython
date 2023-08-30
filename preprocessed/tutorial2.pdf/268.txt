@@ -1,0 +1,28 @@
+【PG】244 Hello World!
+
+【PG】If you save and run the program in listing 18.3, you should see the ball moving back and 
+forth (side to side), as well as moving 30 pixels up or down (once per second). That up or 
+down movement is coming from the timer event.
+
+【PG】Time for another game—PyP ong
+In this section, we’ll put together some of the things we have learned—including sprites, 
+collision detection, and events—to make a simple paddle-and-ball game, similar to Pong.
+We’ll start with a simple one-player version. Our game will need 
+■A ball to bounce around
+■A paddle to hit the ball with
+■A way to control the paddle
+■A way to keep score and display the score in the window
+■A way to keep track of “lives”—how many turns you get
+We’ll cover each of these requirements one by one as we build our program.
+
+【PG】Pong was one of the ﬁrst video games that people used in 
+their homes. The original Pong game did not have any 
+software—it was just a bunch of circuits! This was before 
+there were any home computers. It plugged into your TV 
+and you controlled the “paddles” with knobs. Here’s a 
+picture of what it looked like on the TV screen:
+
+【PG】Little known fact:
+Granny was not only a master Pong player, but she is a World Champion ping-pong player!
+
+【PG】Download from Wow! eBook <www.wowebook.com>

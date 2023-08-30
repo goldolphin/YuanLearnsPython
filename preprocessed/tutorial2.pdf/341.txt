@@ -1,0 +1,31 @@
+【PG】317 CHAPTER  22 File Input and Output
+
+【PG】Sometimes you don’t need the whole file path. The next section talks about finding a file if 
+you’re already partway down the path.
+
+【PG】Finding where you are
+Most operating systems (including Windows) have the idea of a working directory , sometimes 
+called the current working directory , or cwd  for short. This is the directory in the folder tree 
+you’re currently working in.
+Imagine that you started at the root ( C:), and you moved down the Program Files  branch to 
+the Hello World  branch. Your current location or current directory  would be C:/Program Files/
+Hello World .
+
+【PG】Now, to get to the file called beachball.png , you have to go down the Examples  branch. So 
+your path to get there would be / Examples/beachball.png . Because you were already partway 
+down the right path, you only needed the rest of the path to get where you wanted to go.
+
+【PG】Slash or backslash?
+It’s important that the slashes ( \ and /) go the right way. Windows will accept either a forward
+slash (/) or a backslash ( \) in pathnames, but if you use something like c:\test_results.txt  in
+a Python program, the \t part will cause a problem. Remember, in chapter 21, we talked about
+special characters for print formatting, like \t for tab? That’s why you should avoid the \ character
+in file paths. Python (and Windows) will treat \t as a tab character instead of part of your filename
+as you intended. Use / instead. 
+
+【PG】The other option is to use double backslashes, like this:
+image_file  "c:\\program files\\HelloWorld\\images\\beachball.png"  
+Remember that, if you want to print a \ character, you have to put another one in front of it. It
+works the same way in filenames. But I recommend you use / instead.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

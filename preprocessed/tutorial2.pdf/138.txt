@@ -1,0 +1,49 @@
+【PG】114 Hello World!
+
+【PG】Putting this all together, the new calorie-counter version of the hot dog program is shown 
+next.
+dog_cal = 140                      
+bun_cal = 120                        
+ket_cal = 80                         
+mus_cal  = 20                  
+onion_cal = 40                
+prin t "\tDog \ tBun \ tKetchup\ tMustard\ tOnions\ tCalories"  
+coun t = 1
+for dog in [0, 1]:    
+    for bun in [0, 1]:                                               
+        for ketchup in [0, 1]:                                        
+            for mustard in [0, 1]:                                     
+                for onion in [0, 1]:                                  
+                    total_cal = (bun * bun_cal)+(dog * dog_cal) + \  
+                        (ke tchup * ke t_cal)+(mus tard * mus_cal) + \   
+                             (onion * onion_cal)  
+                    prin t "#", coun t, "\t",                            
+                    prin t dog, "\t", bun, "\t", ke tchup, "\t",        
+                    prin t mustard, "\t", onion,          
+                    prin t "\t", total_cal              
+                    coun t = coun t + 1              
+
+【PG】Did you notice the backslash ( \) characters at the end of the lines in the previous code? If you have
+a long expression that won’t fit on a single line, you can use the backslash character to tell Python,
+“This line isn’t done. Treat whatever is on the next line as if it’s part of this line.” Here we used two
+backslashes to split our long line into three short lines. The backslash is called a line-continuation
+character , and several programming languages have them.
+You can also put an extra set of parentheses around the whole expression, and then you can split
+your expression over multiple lines without using the backslash, like this:
+tot_cal = ((dog * dog_cal) + (bun * bun_cal) + 
+           (mus tard * mus_cal) + (ke tchup * ke t_cal) + 
+           (onion * onion_cal))
+
+【PG】Listing 11.7 Hot dog program with calorie counter
+Lists calories 
+for each part 
+of the hot dog
+Prints 
+headings
+dog is the 
+outer loop
+Calculates
+calories in the
+inner loopNested loops
+
+【PG】Download from Wow! eBook <www.wowebook.com>

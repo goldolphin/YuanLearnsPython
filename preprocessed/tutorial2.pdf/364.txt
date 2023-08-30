@@ -1,0 +1,46 @@
+【PG】340 Hello World!
+
+【PG】If you run this code, you should get something like this:
+If you look at the totals, you can see that all the numbers came up roughly the same 
+number of times, between 80 and 100. They didn’t come up exactly the same number of 
+times because the numbers are random, but they’re close, and there’s no obvious pattern 
+of some numbers coming up much more often than others. Try running the program a few 
+times to make sure. Or try increasing the number of loops to 10,000 or 100,000.
+
+【PG】Now let’s try the same thing with two 6-sided dice. The following code does that.
+impor t random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+for i in range(1000):
+    die_1 = random.randin t(1, 6)
+    die_2 = random.randin t(1, 6)
+    dice_ total = die_1 + die_2
+    totals[dice_ total] += 1
+    
+for i in range (2, 13):
+    prin t "total", i, "came up" , totals[i], "times"
+
+【PG】If you run the code in listing 23.2, you should get output that looks something like this:total 2 came up 95 times
+total 3 came up 81 times
+total 4 came up 85 times
+total 5 came up 86 times
+total 6 came up 100 times
+total 7 came up 85 times
+total 8 came up 94 times
+total 9 came up 98 times
+total 10 came up 93 times
+total 11 came up 84 times
+total 12 came up 99 times
+
+【PG】Listing 23.2 Rolling two 6-sided dice 1,000 times
+total 2 came up 22 times
+total 3 came up 61 times
+total 4 came up 93 times
+total 5 came up 111 times
+total 6 came up 141 times
+total 7 came up 163 times
+total 8 came up 134 times
+total 9 came up 117 times
+total 10 came up 74 times
+total 11 came up 62 times
+total 12 came up 22 times
+Download from Wow! eBook <www.wowebook.com>

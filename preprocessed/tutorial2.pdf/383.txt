@@ -1,0 +1,54 @@
+【PG】359 CHAPTER  23 Take a Chance—Randomness
+    for card in c_hand:
+        p_poin ts += card.value 
+    p_ total += p_poin ts   
+    prin t "You go t %i poin ts for compu ter's hand" % p_poin ts
+
+if not game_done: 
+    compu ter_turn()
+
+if len(c_hand) == 0:   
+    game_done = True
+    prin t
+    prin t "Compu ter won!"
+    # display game score here
+    c_poin ts = 0
+    for card in p_hand:             
+        c_poin ts += card.value   
+    c_ total += c_poin ts    
+    prin t "Compu ter go t %i poin ts for your hand" % c_poin ts
+
+if blocked >= 2:
+    game_done = True                                
+    prin t "Both players blocked.  GAME OVER."  
+    player_poin ts = 0                                 
+    for card in c_hand:                             
+        p_poin ts += card.value                      
+    p_ total += p_poin ts                             
+    c_poin ts = 0                                  
+    for card in p_hand:                              
+        c_poin ts += card.value                      
+    c_ total += c_poin ts    
+    prin t "You go t %i poin ts for compu ter's hand" % p_poin ts 
+    prin t "Compu ter go t %i poin ts for your hand" % c_poin ts 
+
+play_again = raw_inpu t("Play again (Y/N)? " )
+if play_again.lower().s tartswith('y'):
+    done = False
+    prin t "\nSo far, you have %i poin ts" % p_ total         
+    prin t  "and the compu ter has %i poin ts.\n" % c_ total  
+else:
+    done = True
+
+【PG】prin t "\n Final Score:"                                     
+prin t "You: %i     Compu ter: %i" % (p_ total, c_ total)   
+
+【PG】b The init_cards()  function (not shown here) sets up the deck and creates the player’s 
+hand (5 cards), the computer’s hand (5 cards), and the first up card.
+
+【PG】Listing 23.11 is still not a complete program, so it will give you an error if you try to run it. 
+But if you have been following along, you have almost the whole program in your editor by 
+now. The complete listing for Crazy Eights is too long to print here (it’s about 200 lines of 
+code, plus blank lines and comments), but you can find it in the \Examples  folder, if you 
+used the book’s installer. It’s also on the web site ( www.helloworldbook2.com ). You can use 
+IDLE to edit and run this program.

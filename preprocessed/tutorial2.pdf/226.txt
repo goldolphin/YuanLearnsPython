@@ -1,0 +1,50 @@
+【PG】202 Hello World!
+Connect the dots
+
+【PG】If you look really closely, you might notice that the sine wave isn’t continuous—there are 
+spaces between the points in the middle. That’s because, at the steep part of the sine wave, 
+we have to move up (or down) by 3 pixels when we move one pixel to the right. And because 
+we’re drawing individual points, not lines, there’s nothing to fill the space in between. 
+
+【PG】Let’s try the same thing using a short line to join each plot point. Pygame has a method to 
+draw a single line, but it also has a method that will draw lines between a series of points (like 
+“connect the dots”). That method is pygame.draw.lines() , and it needs five parameters:
+■The surface  to draw on.
+■A color .
+■Whether the shape will be closed  by drawing a line joining the last point back to the 
+first one. We don’t want to enclose our sine wave, so this will be False  for us.
+■A list  of points to connect.
+■The width  of the line.
+
+【PG】So in our sine wave example, the pygame.draw.lines()  method would look like this:
+In the for loop, instead of drawing each point, we’ll just create the list of points that 
+draw.lines()  will connect. Then we have a single call to draw.lines() , which is outside the 
+for loop. The whole program is shown next.
+
+【PG】impor t pygame, sys
+impor t math
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+plotPoin ts = []
+for x in range(0, 640):
+    y = int(math.sin(x/640.0 * 4 * ma th.pi) * 200 + 240)       
+    plo tPoin ts.append([x, y])
+pygame.draw.lines(screen, [0,0,0], False, plo tPoin ts, 1)      
+pygame.display.flip()
+running = True
+
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()pygame.draw.lines(screen, [0,0,0], False, plo tPoin ts, 1)
+
+【PG】Listing 16.8 A well-connected sine wave 
+Calculates y-position 
+for each point
+Adds each point 
+to the list
+Draws the whole curve with 
+the draw.lines() function
+Download from Wow! eBook <www.wowebook.com>

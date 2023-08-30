@@ -1,0 +1,15 @@
+【PG】297 CHAPTER  21 Print Formatting and Strings
+
+【PG】You can think of the screen (or each line) as being laid out in blocks of eight spaces. Notice that, as the ABC sequence gets longer, the XYZ stays in the same place. The \t tells Python to start the XYZ at the next tab stop, or at the next available block. But once the ABC sequence gets big enough to fill the first block, Python moves the XYZ over to the next tab stop.
+
+【PG】Tabs are good for arranging things in columns so that everything lines up. Let’s use this, as well as what you know about loops, to print a table of squares and cubes. Open a new window in IDLE, and type in the short program from the following listing. Save it, and run it. (I called mine squbes.py , short for “squares and cubes. ”) When you run it, you should see output that’s nicely lined up, like this:
+
+【PG】How do we print a backslash? Because the backslash character ( \) is used for special printing codes, how do you tell Python when you want to actually print a \ character instead of using it as part of a code? The trick is just to put two of them together: The first \ tells Python that something special is coming, and the second one tells Python what the special thing is: a \ character.
+
+【PG】Listing 21.1 A program to print squares and cubes prin t "Number \ tSquare \ tCube" for i in range (1, 11): prin t i, '\t', i**2, '\t', i**3
+
+【PG】>>> ====================== RESTART ====================== >>> Number  Square  Cube 1       1       1 2       4       8 3       9       27 4       16      64 5       25      125 6       36      216 7       49      343 8       64      512 9       81      729 10      100     1000 >>> prin t 'hi\\ there' hi\there
+
+【PG】When you use two backslashes to print a backslash character, the first backslash is called an escape character . We say the first backslash is escaping the second one, so that the second backslash is treated like a normal character instead of a special character. 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

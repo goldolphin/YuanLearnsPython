@@ -1,0 +1,40 @@
+【PG】106 Hello World!
+
+【PG】Although you might think it’s pretty boring, a good way to see what’s going on with nested 
+loops is to just print some stars to the screen and count them. We’ll do that in the next section.
+
+【PG】Variable loops
+Fixed numbers, like the ones you’ve used in the range()  function, are also called constants . If 
+you use constants in the range()  function of a for loop, the loop will run the same number 
+of times whenever the program is run. In that case, we say the number of loops is 
+hard-coded , because it’s defined in your code and never changes. That’s not always what 
+you want.
+
+【PG】Sometimes you want the number of loops to be deter -
+mined by the user or by another part of the program. 
+For that, you need a variable. 
+For example, let’s say you were making a space-shooter 
+game. You’d have to keep redrawing the screen as 
+aliens got wiped out. You’d have some sort of counter 
+to keep track of how many aliens were left, and whenever 
+the screen was updated, you’d need to loop through the remain -
+ing aliens and draw their images on the screen. The number of aliens 
+would change every time the player wiped out another one.
+
+【PG】Because you haven’t learned how to draw aliens on the screen yet, here’s a simple example 
+program that uses a variable loop: 
+The program asked the user how many stars he wanted, and then it used a variable loop to 
+print that many. Well, almost! We asked for five stars and only got four! Oops, we forgot that 
+the for loop stops one short of the second number in the range . So we need to add 1 to the 
+user’s input:for i in range(1, numS tars):                         
+     prin t '*',
+
+【PG】>>> ====================== RESTART ======================
+>>> 
+How many s tars do you wan t? 5
+* * * *
+numS tars = int(raw_inpu t ("How many s tars do you wan t? "))
+for i in range(1, numS tars + 1):  
+     prin t '*',                        Adds 1, so if he asks for
+5 stars, he gets 5 stars
+Download from Wow! eBook <www.wowebook.com>

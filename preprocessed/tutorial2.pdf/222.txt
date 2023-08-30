@@ -1,0 +1,31 @@
+【PG】198 Hello World!
+
+【PG】Notice that we only pass four arguments to pygame.draw.rect . That’s because the rect  has both location and size in a single argument. In pygame.draw.circle , the location and size are two different arguments, so we pass it five arguments.
+
+【PG】Line width
+
+【PG】The last thing you need to specify when drawing shapes is how thick to make the line. In the examples so far, we used a line width of 0, which fills in the whole shape. If we used a different line width, we’d see an outline of the shape. Try changing the line width to 2: Try it and see how it looks. Try other line widths too.
+
+【PG】Modern art? 
+
+【PG】Want to try making some computer-generated modern art? Just for fun, try the code in listing 16.5. You can start with what you had from listing 16.4 and modify it, or start from scratch.pygame.draw.rec t(screen, [255,0,0], [250, 150, 300, 200], 2)#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=
+s;1
+elf.page=self.page+1PrinteFrormatter:self.header_written=0def#Incrementthepagecount,andresetthelinecount
+
+【PG】Thinking like a (Pygame) programmer
+
+【PG】Once you create a rectangle with Rect(left, top, width, height), there are several other attributes that you can use to move and align the Rect: These are just for convenience. So, if you want to move a rectangle so that its center is at a certain point, you don’t have to figure out what the top and left coordinates should be; you can access the center location directly. 
+
+ the four edges:  top, left, bottom, right
+
+ the four corners:  topleft, bottomleft, topright, bottomright
+
+ the middle of each side:  midtop, midleft, midbottom, midright
+
+ the center:  center, centerx, centery  
+
+ dimensions:  size, width, height
+
+【PG】Make this 2
+
+【PG】Download from Wow! eBook <www.wowebook.com>

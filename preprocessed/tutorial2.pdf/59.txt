@@ -1,0 +1,37 @@
+【PG】35 CHAPTER  3 Basic Math
+【PG】What's that letter ‘e’ 
+doing in the middle of
+the number?
+
+【PG】Increment and decrement
+Remember the example from the last chapter: score = score + 1 ? We said that was 
+called incrementing . A similar thing is score = score - 1 , which is called decrementing . 
+These operations are done so often in programming that they have their own 
+operators: += (increment) and -= (decrement).
+You use them like this
+                                    or 
+The first example adds one to the number. (It changes from 7 to 8.) The second one 
+subtracts one from the number. (It changes from 7 to 6.)
+
+【PG】Really big and really small
+Remember, in chapter 1, when we multiplied those two really big numbers together? We 
+got a very big number for the answer. Sometimes, Python shows you big numbers a bit
+differently. Try this in interactive mode:
+(It doesn’t matter exactly what numbers you type in—any big numbers with decimals 
+will do.)
+The e is one way of displaying really big or really small numbers on a 
+computer. It’s called E-notation . When you’re working with really big 
+(or really small) numbers, showing all the digits and decimal places 
+can be kind of a pain. These sorts of numbers show up a lot in math 
+and science. 
+
+【PG】>>> prin t 9938712345656.34 * 4823459023067.456
+4.79389717413e+025>>> number = 7
+>>> number += 1 
+>>> prin t number
+8Number increased by 1
+>>> number = 7
+>>> number -= 1   
+>>> prin t number
+6Number decreased by 1
+Download from Wow! eBook <www.wowebook.com>

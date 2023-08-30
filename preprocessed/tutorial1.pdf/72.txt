@@ -1,0 +1,20 @@
+【PG】第 5章　输　　入
+【PG】raw_input() 也 是 一 个 Python 内 置 函 数， 就 像 str()、int()、ﬂoat()和 type() 一样（在第 4 章中已经见过这些函数） 。后面还会学习更多有关函数的内容。
+【PG】不过对现在来说，只需要记住使用 raw_input() 时要加上小括号（圆括号）。
+【PG】Raw input
+【PG】在 Python3 中，raw_input() 改名为 input() 了。它与 Python2 中的 raw_input() 完全一样。
+【PG】可以这样来使用：
+【PG】someName = raw _input()
+【PG】这会让用户键入一个字符串，并把它赋给名字 someName。
+【PG】现在把它放在程序里。在 IDLE 中创建一个新文件，键入代码清单 5-1 中的代码。
+【PG】代码清单 5-1 使用 raw_input() 得到一个字符串
+【PG】print "Enter your name: "
+【PG】somebody = raw_input()
+【PG】print "Hi", somebody, "how are you today?"
+【PG】保存这个程序，并在 IDLE 中运行，看看它如何工作。应该可以看到类似下面的结果：Enter your name:
+【PG】Warren Hi Warren how are you today?
+【PG】我键入了我的名字，程序把它赋给了 somebody。
+【PG】5.2 print 命令和逗号
+【PG】通常情况下，希望从用户得到输入时，必须告诉他你想要什么，应当提供类似这样的一个消息：print "Enter your name: "
+【PG】然后用 raw_input() 函数得到用户的响应：someName = raw _input()
+【PG】图灵社区会员 FreeLink 专享 尊重版权

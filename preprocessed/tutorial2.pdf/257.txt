@@ -1,0 +1,26 @@
+【PG】233CHAPTER 1 8
+【PG】A New Kind of Input—Events
+Up until now, we have had very simple kinds of inputs for our programs. Either the user 
+typed in strings using raw_input() , or we got numbers and strings from EasyGui (in chapter 
+6). I also showed you how you could use the mouse to close a Pygame window, but I didn’t 
+really explain how that worked.
+
+【PG】In this chapter, you’ll learn about a different kind of input called events . Along the way, we’ll 
+look at exactly what the exit code for the Pygame window is doing and how it works. We’ll 
+also get input from the mouse and make our programs react immediately to a key being 
+pressed, without having to wait for the user to press Enter .
+
+【PG】Events
+If I asked you, “What’s an event?” in real life, you might say that it’s “something that hap -
+pens. ” That’s a pretty good definition, and that same definition is true in programming. 
+Many programs need to react to “things that happen, ” like
+
+■The mouse being moved or clicked
+■Keys being pressed
+■A certain amount of time passing
+
+【PG】Most of the programs we have written so far have followed a fairly predictable path from 
+beginning to end, maybe with some loops or conditions in the middle. But there’s 
+another whole class of programs, called event-driven  programs, that don’t work that way. 
+Event-driven programs basically sit there and do nothing, waiting until something—an 
+Download from Wow! eBook <www.wowebook.com>

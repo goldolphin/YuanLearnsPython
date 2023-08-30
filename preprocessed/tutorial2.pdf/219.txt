@@ -1,0 +1,45 @@
+【PG】CHAPTER  16 Graphics
+【PG】Locations—screen coordinates
+If you want to draw or place something on the screen, you need to specify where on the 
+screen it should go. There are two numbers: one for the x-axis (horizontal direction) and one 
+for the y-axis (vertical direction). In Pygame, the numbers start at [0, 0] in the upper-left 
+corner of the window. 
+
+【PG】When you see a pair of numbers like [320, 240], the first number is horizontal, 
+or the distance from the left side. The second number is vertical, or the 
+distance down from the top. In math and programming, the letter x is often 
+used for horizontal distance, and y is often used for vertical distance.
+
+【PG】We made our window 640 pixels wide by 480 pixels high. If we wanted to put the circle in 
+the middle of the window, we’d need to draw it at [320, 240]. That’s 320 pixels over from the 
+left-hand edge and 240 pixels down from the top edge. Why 255? The range from 0 to 255 gives us 256 different 
+values for each primary color (red, green, and blue). 
+
+【PG】So, what’s special about that number? Why not 200 or 
+300 or 500?
+Two hundred and fifty-six is the number of differ -
+ent values you can make with 8 bits. That’s all the 
+possible combinations of eight 1s and 0s. Eight 
+bits is also called a byte, and a byte is the 
+smallest chunk of memory that has its own address. An address 
+is the computer’s way of finding particular pieces of memory.
+
+【PG】It’s like on your street. Your house or apartment has an 
+address, but your room doesn’t have its own address. A house 
+is the smallest “addressable unit” on the street. A byte is the 
+smallest “addressable unit” in your computer’s memory.
+
+【PG】They could have used more than 8 bits for each color, but the 
+next amount that makes sense would be 16 bits (2 bytes), 
+because it’s not very convenient to use only part of a byte. 
+And it turns out that, because of the way the human eye sees 
+color, 8 bits is enough to make realistic-looking colors. 
+Because there are three values (red, green, blue), each with 8 
+bits, that’s 24 bits in total, so this way of representing 
+color is also known as “24-bit color.” It uses 24 bits for each 
+pixel, 8 for each primary color.  
+
+【PG】small
+es
+is the 
+Download from Wow! eBook <www.wowebook.com>

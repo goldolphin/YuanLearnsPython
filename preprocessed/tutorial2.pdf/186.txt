@@ -1,0 +1,40 @@
+【PG】162 Hello World!
+
+【PG】Hm... How would I describe 
+this house? Upper class, 
+middle class, or lower class?
+
+【PG】Object = attributes + methods
+So objects are a way of collecting together attributes  and methods  (things you know, and 
+things you can do) for a thing. Attributes are information, and methods are actions.
+
+【PG】What’s the dot?
+In our previous ball examples, you probably noticed the dot between the name of the 
+object and the name of the attribute or method. That’s just the Python notation for using 
+the attributes and methods of an object: object.attribute or object.method() . Simple as 
+that. It’s called dot notation , and it’s used in many programming languages.
+
+【PG】Now you have the big picture about objects. Let’s start making some!
+Creating objects
+There are two steps to creating an object in Python. 
+The first step is to define what the object will look like and act like—its attributes and 
+methods. But creating this description doesn’t actually create an object. It’s kind of like the 
+blueprints for a house. The blue -
+prints tell you exactly what the house 
+will look like, but a blueprint isn’t a 
+house. You can’t live in a blueprint. 
+You can just use it to build an actual 
+house. In fact, you can use the blue -
+print to make many houses. 
+
+【PG】In Python the description or blueprint of 
+an object is called a class .
+The second step is to use the class to make 
+an actual object. The object is called an 
+instance  of that class. 
+Let’s look at an example of making a class
+and an instance . The following listing 
+shows a class definition for a simple 
+Ball  class.
+
+Download from Wow! eBook <www.wowebook.com>

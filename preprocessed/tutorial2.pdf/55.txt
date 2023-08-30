@@ -1,0 +1,32 @@
+【PG】Chapter 3 Basic Math
+
+【PG】Operators
+The +, -, *, and / symbols are called operators . That’s because they “operate on, ” or work 
+with, the numbers you put around them. The = sign is also an operator, and it’s called the 
+assignment operator , because you use it to assign a value to a variable.  
+
+【PG】Order of operations
+Which one of these is correct?
+2 + 3 * 4 = 20
+or
+2 + 3 * 4 = 14
+That depends on what order we do things in. If we do the addition first, we get
+2 + 3 = 5, so then 5 * 4 = 20
+
+【PG】An operator  is something that has an effect on, or 
+“operates on,” the things around it. The effect can be 
+to assign a value to, test, or change one or more of 
+those things.
+myNumber + yourNumber
+operand operandOperator
+
+【PG】The +, -, *, and / symbols we use for doing 
+arithmetic are operators . 
+The things being operated on are called operands .
+
+【PG】I learned in school 
+that the so-called operands 
+in addition are also called 
+addends . 
+
+Download from Wow! eBook <www.wowebook.com>

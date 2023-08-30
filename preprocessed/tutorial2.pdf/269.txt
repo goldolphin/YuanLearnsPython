@@ -1,0 +1,30 @@
+【PG】Chapter 18 A New Kind of Input—Events
+
+【PG】He looks a little scared.The ball. The beach ball we have been using so far is a bit big for a Pong game. We need something smaller. Carter and I came up with this wacky tennis-ball guy for our game:
+Hey, you’d be scared too if you were about to get whacked around by a paddle!
+
+【PG】We’re going to use sprites for this game, so we need to make a sprite for our ball and then create an instance of it. We’ll use the Ball class with __init__() and move() methods:
+When we create the instance of the ball, we’ll tell it which image to use, the speed of the ball, and its starting location:
+We’ll also need to add the ball to a group, so we can do collision detection between the ball and the paddle. We can create the group and add the ball to it at the same time:
+
+class MyBallClass(pygame.sprite.Sprite):
+    def __init__(self, image_file, speed, location):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        self.speed = speed
+
+    def move(self):
+        self.rect = self.rect.move(self.speed)
+        if self.rect.left < 0 or self.rect.right > width:
+            self.speed[0] = -self.speed[0]
+
+        if self.rect.top <= 0:
+            self.speed[1] = -self.speed[1]
+
+myBall = MyBallClass('wackyball.bmp', ball_speed, [50, 50])
+ballGroup = pygame.sprite.Group(myBall)
+
+【PG】Bounces off the sides of the window
+【PG】Bounces off the top of the window

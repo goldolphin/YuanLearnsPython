@@ -1,0 +1,38 @@
+【PG】326 Hello World!
+
+【PG】new_file = open("my_new_no tes.txt", 'w')
+new_file.wri te("Eat supper\n" )
+new_file.wri te("Play soccer\n" )
+new_file.wri te("Go to bed")
+new_file.close()
+
+【PG】How do you know it worked? Check in the folder where you saved the program from 
+listing 22.4. You should see a file there called my_new_notes.txt . You can open this file in 
+Notepad to see what’s in it. You should see this:
+You created a text file with this program and stored some text in it. This text is on the hard 
+drive, and it’ll stay there forever—or at least as long as the hard drive keeps working—
+unless you delete it. So you have a way to permanently store data from your programs. Now 
+your programs can leave a permanent mark on the world (or at least on your hard drive). 
+Anything you need to keep when the program stops and the computer is shut off, you can 
+put in a file. 
+
+【PG】Let’s see what happens if we use write mode on a file that’s already on the hard drive. 
+Remember our file called notes.txt ? If you ran the program in listing 22.3, it looks like this:
+Let’s open this file in write mode and write to it, to see what happens. Here’s the code.
+the_file = open('notes.txt', 'w')
+the_file.wri te("Wake up\n" )
+the_file.wri te("Watch car toons")
+the_file.close()
+Run this code, and then open notes.txt  in Notepad to see what it contains. You should 
+see this:Listing 22.4 Using write mode on a new file
+Eat supper
+Play soccer
+Go to bed
+Wash the car
+Make my bed
+Collec t allowance
+Spend allowance
+Listing 22.5 Using write mode on an existing file
+Wake up
+Watch car toons
+Download from Wow! eBook <www.wowebook.com>

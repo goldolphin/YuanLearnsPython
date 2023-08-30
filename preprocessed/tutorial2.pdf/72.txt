@@ -1,0 +1,36 @@
+【PG】48 Hello World!
+
+【PG】The print command and the comma
+
+【PG】Usually, when you want input from the user, you have to tell him what you are looking for, with a short message like this: 
+
+【PG】Then you can get his response with the raw_input() function: 
+
+【PG】When you run those code lines and type in your name, it looks like this: 
+
+【PG】If you want the user to type his answer on the same line as the message, just put a comma at the end of the print statement, like this: 
+
+【PG】Notice that the comma goes outside the end quotes. 
+
+【PG】If you run this code, it will look like this: 
+
+【PG】The comma can be used to combine a number of print statements on one line. The comma really means “don’t jump down to the next line after you print this. ” We did that in the last line of listing 5.1. Try typing the following code into an IDLE editor window and running it. 
+
+【PG】print "My", 
+print "name", 
+print "is", 
+print "Dave." 
+
+【PG】You should get this when you run it: prin t "Enter your name: " 
+someName = raw_inpu t() 
+Enter your name: 
+Warren 
+prin t "Enter your name: ", 
+someName = raw_inpu t() 
+Enter your name: Warren 
+
+【PG】Listing 5.2 What does the comma do? 
+
+【PG】My name is Dave. 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

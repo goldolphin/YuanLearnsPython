@@ -1,0 +1,21 @@
+【PG】271 CHAPTER 19 Sound
+
+【PG】Try it out
+
+【PG】1Try adding sounds to the number-guessing game in chapter 1. Even though the game 
+is text-mode, you’ll need to add a Pygame window, like we did in the examples in this 
+chapter. 
+
+【PG】There are some sounds you can use in the \examples\sounds  folder (and on the website):
+■Ahoy.wav
+■TooLow.wav
+■TooHigh.wav
+■WhatsY erGuess.wav
+■AvastGotIt.wav
+■NoMore.wav  
+
+【PG】Or it might be fun to record your own sounds. You would use something like Sound
+Recorder in Windows, or you could download the free program Audacity (which is
+available for multiple operating systems) at audacity.sourceforge.net/ .
+
+【PG】Download from Wow! eBook <www.wowebook.com>

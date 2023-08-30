@@ -1,0 +1,21 @@
+【PG】This is the last chapter that talks about ways of collecting things together. We have already 
+learned about lists, functions , and objects . In this chapter, we’ll learn about modules . In the 
+next chapter, we’ll use a module called Pygame to start drawing some graphics.
+
+【PG】What’s a module?
+A module  is a piece or part of something. We say 
+something is modular  if it comes in pieces or you 
+can easily separate it into pieces. LEGO blocks 
+might be the perfect example of something modu -
+lar. You can take a bunch of different pieces and 
+build many different things with them.
+
+【PG】In Python, modules are smaller pieces of a bigger program. Each module, or piece, is a 
+separate file on your hard drive. You can take a big program and split it up into more than 
+one module, or file. Or you can go the other way—start with one small module and keep 
+adding pieces to make a big program.
+
+【PG】Why use modules?
+So why go to all the trouble of splitting a program up into smaller pieces, when you’re 
+going to need them all to make the program work? Why not just leave everything in one 
+big file?

@@ -1,0 +1,25 @@
+【PG】39 CHAPTER  3 Basic Math
+Test your knowledge
+1What symbol does Python use for multiplication?
+2What answer would Python 2 give for 8 / 3?
+3How would you get the remainder for 8 / 3?
+4How would you get the decimal answer for 8 / 3 in Python 2?
+5What’s another way of calculating 6 * 6 * 6 * 6 in Python?
+6How would you write 17,000,000 in E-notation?
+7What would 4.56e-5 look like in regular notation (not E-notation)?
+
+【PG】Try it out
+1Solve the following problems either using interactive mode or by writing a small 
+program:
+a) Three people ate dinner at a restaurant and want to split the bill. The total is $35.27, 
+and they want to leave a 15% tip. How much should each person pay? 
+b) Calculate the area and perimeter of a rectangular room, 12.5 meters by 16.7 meters.
+
+【PG】2Write a program to convert temperatures from Fahrenheit to Celsius. The formula for 
+that is: C = 5 / 9 * (F - 32). (Hint: Watch out for the integer-division gotcha!)
+
+【PG】3Do you know how to figure out how long it will take to get somewhere in a car? The 
+formula (in words) is “travel time equals distance divided by speed. ” Make a program 
+to calculate the time it will take to drive 200 km at 80 km per hour and display the 
+answer.
+Download from Wow! eBook <www.wowebook.com>

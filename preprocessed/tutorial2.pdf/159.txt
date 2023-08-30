@@ -1,0 +1,39 @@
+【PG】135 CHAPTER  12 Collecting Things Together—Lists and Dictionaries
+
+【PG】Here we looped through the list called classMarks . The loop variable is studentMarks . Each 
+time through the loop, we print one item in the list. That one item is the marks for a single 
+student, which is itself a list. (We created the student lists above.)
+
+【PG】Notice that this looks very similar to the table on the previous page. So we have come up 
+with a data structure to hold all our data in one place.
+
+【PG】Getting a single value from the table
+How do we get access to values in this table (our list of lists)? We already know that the first 
+student’s marks ( joeMarks ) are in a list that is the first item in classMarks . Let’s check that:
+classMarks[0]  is a list of Joe’s marks in the four subjects. Now we want a single value from 
+classMarks[0] . How do we do that? We use a second index. 
+
+【PG】If we want the third of his marks (his Reading mark), which has index 2, we’d do this:
+This gave us the first item in classMarks  (index 0), which was the list of Joe’s marks, and the 
+third item in that list (index 2), which was his Reading mark. When you see a name with two 
+sets of square brackets, like classMarks[0][2] , that is usually referring to a list of lists.
+
+【PG】The classMarks  list doesn’t really know about the names Joe, Tom, and Beth, or the subjects 
+Math, Science, Reading, and Spelling. We labeled them that way because we knew what 
+we intended to store in the list. But to Python, they’re just numbered places in a list. 
+This is like the numbered mailboxes at a post office. They don’t have names on them, 
+just numbers. The postmaster keeps track of what belongs where, and you know which 
+box is yours. >>> prin t classMarks[0]
+[55, 63, 77, 81]
+>>> prin t classMarks[0][2]
+77
+Math Science Reading Spelling
+55
+6563
+61
+97 9577 81
+72
+8867
+92TomJoe
+BethclassMark s
+Download from Wow! eBook <www.wowebook.com>

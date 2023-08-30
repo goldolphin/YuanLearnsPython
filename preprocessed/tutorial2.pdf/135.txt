@@ -1,0 +1,51 @@
+【PG】CHAPTER 11 Nested and Variable Loops
+The best way to explain this is with an example. Let’s imagine we’re running a hot dog stand 
+at our school’s spring fair, and we want to make a poster showing how to order all possible 
+combinations of hot dog, bun, ketchup, mustard, and onions by number. So we need to fig -
+ure out what all the possible combinations are.
+
+【PG】One way to think about this problem is to use something called a decision tree . The next fig -
+ure shows a decision tree for the hot dog problem.
+Each decision point has only two choices, Yes or No. Each different path down the tree 
+describes a different combination of hot dog parts. The path I highlighted says “Yes” 
+for hot dog, “No” for bun, “Yes” for mustard, and “Yes” for ketchup.
+
+【PG】Now we’re going to use nested loops to list all the combinations—all the paths through the 
+decision tree. Because there are five decision points, there are five levels in our decision 
+tree, so there will be five nested loops in our program. (The figure only shows the first four 
+levels of the decision tree.)
+
+【PG】Type the code in the following listing into an IDLE editor window, and save it as hotdog1.py .
+prin t "\tDog \ tBun \ tKetchup\ tMustard\ tOnions"
+coun t = 1
+for dog in [0, 1]:                                             
+    for bun in [0, 1]:                                         
+        for ketchup in [0, 1]:                                  
+            for mustard in [0, 1]:                             
+                for onion in [0, 1]:                           
+                    prin t "#", coun t, "\t",                    
+                    prin t dog, "\t", bun, "\t", ke tchup, "\t",
+                    prin t mustard, "\t", onion                 
+                    coun t = coun t + 1                        Listing 11.6 Hot dog combinationsStart
+
+【PG】Yes No
+Y N
+YN YN YN YN YNY
+NY YNY
+YN N
+N NY
+Y
+YN N
+
+【PG】Hot dog choice
+Bun choice
+Mustard choice
+Ketchup choice
+onion 
+loopmustard 
+loopketchup 
+loopdog 
+loop
+bun 
+loop
+Download from Wow! eBook <www.wowebook.com>

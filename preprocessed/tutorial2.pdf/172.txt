@@ -1,0 +1,58 @@
+【PG】148 Hello World!
+
+【PG】So, in listing 13.2, the argument myName  is assigned the value “Carter Sande” .
+
+【PG】def prin tMyAddress(myName): 
+    prin t myName  
+    prin t "123 Main S treet"           
+    prin t "Ottawa, On tario, Canada"
+    prin t "K2M 2E9"                   
+    prin t                             
+
+【PG】prin tMyAddress( "Car ter Sande" )  
+
+【PG】If we run the code in listing 13.2, we get exactly what you’d expect: 
+This looks the same as the output we got from the first program, when we didn’t use 
+arguments. But now we can make the address print differently every time, like this:
+
+【PG】And now, the output is different each time the function is called. The name changes, 
+because we pass  the function a different name each time:Listing 13.2 Passing an argument to a function
+>>> ===================== RESTART =====================
+>>> 
+Carter Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+prin tMyAddress( "Car ter Sande" )
+prin tMyAddress( "Warren Sande" )
+prin tMyAddress( "Kyra Sande" )
+prin tMyAddress( "Patricia Sande" )
+>>> ========================== RESTART ==========================
+>>> 
+Carter Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+Warren Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+Kyra Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+Patricia Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+
+【PG】P asses myName argument 
+to the functionPrints the name
+
+【PG】P asses “Carter Sande” as the 
+argument to the function; the 
+variable myName inside the 
+function will have the value 
+“Carter Sande”
+
+【PG】Download from Wow! eBook <www.wowebook.com>

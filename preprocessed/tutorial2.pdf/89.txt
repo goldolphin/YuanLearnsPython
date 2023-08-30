@@ -1,0 +1,21 @@
+【PG】Chapter 7
+Decisions, Decisions
+
+In the first few chapters, we saw some of the basic building blocks of a program. We can 
+now make a program with input , processing,  and output . We can even make our input and 
+output a little fancier by using a GUI. We can assign the input to a variable, so we can use it 
+later, and we can use some math to process it. Now we’re going to start looking at ways to 
+control what the program does. 
+
+【PG】Testing, testing
+
+Programs need to be able to do different things based on their input. Here are a few 
+examples: 
+■If Tim got the right answer, add 1 point to his score.
+■If Jane hit the alien, make an explosion sound.
+■If the file isn’t there, display an error message.
+
+To make decisions, programs check (do a test)  to see if a certain condition  is true or not. In 
+the first example above, the condition is “got the right answer. ”
+Python has only a few ways to test something, and there are only two possible answers for 
+each test: true  or false .

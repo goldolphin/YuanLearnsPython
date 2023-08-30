@@ -1,0 +1,33 @@
+【PG】Hello World!
+Why are there 
+all those fancy colors 
+in IDLE?You are 
+now under my 
+command! >>> YES MASTERRRRR...
+
+【PG】The figure below shows how that looks in the IDLE window.
+Python did what you told it: it printed 
+your message. (In programming, print
+often means to display text on the screen, 
+instead of printing it on a piece of 
+paper using your printer.) That
+ one line is a Python instruction . 
+You’re on your way to 
+programming! The computer 
+is under your command!
+
+【PG】By the way, in learning to 
+program, there is a tradition that 
+the first thing you make the computer do is dis -
+play “Hello World!” That’s where the title of this 
+book comes from. You’re following that tradi -
+tion. Welcome to the world of programming!
+
+【PG】Good question! IDLE is trying to help you understand 
+things a bit better. It’s showing things in different colors to help 
+you tell different parts of the code apart. ( Code  is just another term for 
+the instructions you give to the computer in a language like Python.) 
+I’ll explain what the different parts are as we go through the rest of 
+this book.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

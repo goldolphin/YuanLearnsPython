@@ -1,0 +1,38 @@
+【PG】CHAPTER  1 Getting Started
+In the Start  menu, under Python 2.7 , you’ll see IDLE (Python GUI) . Click this option, and the 
+IDLE window will open. It should look something like the window below.
+
+IDLE is a Python shell . A shell is basically a way of 
+interacting with a program by typing text, and 
+this shell lets you interact with Python. (That’s 
+why you see Python Shell  in the title bar of the 
+window.) IDLE also happens to be a GUI, which 
+is why it says Python GUI  in the Start  menu. 
+IDLE has some other things besides the shell, 
+but we’ll get to all that in a minute.  
+
+【PG】The  >>> in the previous figure is the Python prompt . A prompt is what a program displays 
+when it’s waiting for you to type something. The >>> prompt tells you that Python is ready 
+for you to start typing Python instructions.
+
+Instructions, please
+Let’s give Python our first instruction. With the cursor at the end of the >>> prompt, type
+and press the Enter key. (On some keyboards, this is called the Return key.) You need to 
+press the Enter key after every line you type. 
+After you press the Enter key, you should get this response:
+
+prin t "Hello World!"
+
+Hello World!
+>>>
+
+【PG】GUI stands for graphical user 
+interface . This means something 
+with windows, menus, buttons, 
+scrollbars, etc. Programs 
+that don’t have a GUI are 
+called text-mode  programs, 
+console programs, or 
+command-line  programs.
+
+Download from Wow! eBook <www.wowebook.com>

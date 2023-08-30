@@ -1,0 +1,45 @@
+【PG】430 Hello World!
+
+【PG】Chapter 8: Loop the Loop
+
+【PG】Test your knowledge
+1The loop would run five times.
+2The loop would run three times, and the values would be as follows: i = 1, i = 3, i = 5.
+3range(1, 8)  would give you [1, 2, 3, 4, 5, 6, 7] .
+4range(8)  would give you [0, 1, 2, 3, 4, 5, 6, 7] .
+5range(2, 9, 2)  would give you [2, 4, 6, 8] .
+6range (10, 0, -2)  would give you  [10, 8, 6, 4, 2] .
+7You use continue  to stop the current iteration of a loop and jump ahead to the next 
+iteration.
+8A while  loop ends when the condition being tested is false .
+
+【PG】Try it out
+1Here is a program to print a multiplication table of the user’s choice using a for loop:
+2Here is the same multiplication table using a while  loop:
+3Here is the multiplication table with a user-defined range: 
+Notice in the for line that the second thing in range()  includes a variable, not just a 
+number. You will learn more about that in chapter 11.
+
+# program to prin t mul tiplica tion table up to 10
+number = int(raw_inpu t('Which table would you like? ' ))
+prin t 'Here is your table:'
+for i in range(1, 11):
+    prin t number, 'x', i, '=', number * i
+
+# program to prin t mul t table (while loop)
+number = int(raw_inpu t('Which table would you like? ' ))
+prin t 'Here is your table:'
+i = 1
+while i <= 10:
+    prin t number, 'times', i, '=', number * i
+    i = i + 1
+
+# program to prin t mul tiplica tion table
+# user inpu ts how high they wan t it to go
+number = int(raw_inpu t('Which table would you like? ' ))
+limi t = int(raw_inpu t('How high would you like i t to go? '))
+prin t 'Here is your table:'
+for i in range(1, limi t + 1):   
+    prin t number, 'times', i, '=', number * i
+
+【PG】Download from Wow! eBook <www.wowebook.com>

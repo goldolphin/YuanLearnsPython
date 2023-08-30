@@ -1,0 +1,31 @@
+【PG】431 APPENDIX  C Answers to Self-Test Questions
+Chapter 9: Just for You—Comments
+Try it out
+1Here’s a sample of some comments I would add to the temperature-conversion 
+program:
+
+【PG】Chapter 10: Game Time
+Try it out
+1Did you try typing in the program and running it? Don’t forget to put the graphics in 
+the same folder as the program.
+
+【PG】Chapter 11: Nested and Variable Loops
+Test your knowledge
+1You can make a variable loop in Python by putting a variable in the range()  function, 
+like this
+or
+2To make a nested loop, put a loop in the body of another loop, like this:
+This code will print “hi” eight times on a line (the inner loop), and do five lines of that 
+(the outer loop).
+3There will be 15 stars printed.# tempconv1.py
+# program to conver t a Fahrenhei t tempera ture to Celsius
+Fahr = 75
+Cel = (Fahr - 32) * 5.0 / 9   #decimal division, no t integer
+prin t "Fahrenhei t = ", Fahr, "Celsius = " , Cel
+for i in range(numberOfLoops)
+for i in range(1, someNumber)
+for i in range(5):
+    for j in range(8):
+        prin t "hi",
+    prin t
+Download from Wow! eBook <www.wowebook.com>

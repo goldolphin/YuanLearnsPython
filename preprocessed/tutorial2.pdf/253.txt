@@ -1,0 +1,23 @@
+【PG】229 CHAPTER  17 Sprites and Collision Detection
+
+【PG】Controlling the frame rate with pygame.time.Clock()
+
+Rather than adding a delay to each loop, pygame.time.Clock() controls how often each loop runs. It’s like a timer that keeps going off, saying “Start the next loop now! Start the next loop now! …. ” 
+
+【PG】Before you start using a Pygame clock, you have to create an instance of a Clock  object. That works just the same as creating an instance of any other class:
+
+【PG】Then, in the body of the main loop, you tell the clock how often it should “tick”—that is, how often the loop should run:
+
+The number you pass clock.tick()  isn’t a number of milliseconds. Instead, it’s the number of times per second the loop should run. So this loop should run 60 times per second. I say “should run, ” because the loop can only run as fast as your computer can make it run. At 60 loops (or frames) per second, that’s 1,000 / 60 = 16.66 ms (about 17 ms) per loop. If the code in the loop takes longer than 17 ms to run, it won’t be done by the time clock  tells it to start the next loop. 
+
+【PG】Basically, this means there’s a limit to how many frames per second your graphics can run. That limit depends on how complex the graphics are, the size of the window, and the speed of the computer the program is running on. For a certain program, one computer might be able to run at 90 fps, while an older, slower computer chugs along at 10 fps. 
+
+【PG】For reasonably complex graphics, most modern computers won’t have any problem running Pygame programs at 20 to 30 fps. So if you want your games to run at the same speed on most computers, pick a frame rate of 20 to 30 fps or less. This is fast enough to produce smooth-looking motion. We’ll use clock.tick(30)  for the examples in this book from now on.
+
+【PG】Checking the frame rate
+
+If you want to know how fast your program can run, you can check the frame rate with a function called clock.get_fps(). Of course, if you set the frame rate to 30, it’ll always go at 30 fps (assuming your computer can run that fast). To see the fastest a particular program can run on a particular machine, set the clock.tick very fast (like 200 fps) and then run the program and check the actual frame rate with clock.get_fps(). (An example is coming up soon.)
+
+【PG】clock = pygame.time.Clock() clock.tick(60)
+
+Download from Wow! eBook <www.wowebook.com>

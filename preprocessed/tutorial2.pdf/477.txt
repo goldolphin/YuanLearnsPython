@@ -1,0 +1,25 @@
+【PG】453 INDEX
+
+【PG】23.4 The Card class 346
+23.5 Making a deck of cards 347
+23.6 The main loop of Crazy Eights 350
+23.7 Displaying what’s in the player’s hand 353
+23.8 Getting the player’s choice 354
+23.9 Getting the new suit when the player plays an 8 355
+23.10 The computer’s turn 357
+23.11 The main loop with scoring added 358
+
+【PG】24.1 Lunar Lander 364
+24.2 Measuring time differences—typing speed test 371
+24.3 Saving time to a file using pickle 373
+24.4 VirtualPet.py 379
+
+【PG】25.1 Building the Skier game—skier only 388
+25.2 Building the skier game—obstacles only 392
+25.3 Skier and obstacles together 394
+
+【PG】26.1 The completed robot AI 403
+26.2 A more complicated robot 406
+
+【PG】LIST OF CODE LISTINGS
+Download from Wow! eBook <www.wowebook.com>

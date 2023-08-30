@@ -1,0 +1,35 @@
+【PG】CHAPTER  16 Graphics
+Because there is no pygame.draw.sinewave()  method, we have to draw it ourselves from 
+individual points. One way to do this is to draw tiny circles or rectangles, with a size of just 
+one or two pixels. The following listing shows how that would look using rectangles.
+
+impor t pygame, sys
+impor t math      
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])                                
+for x in range(0, 640):  
+    y = int(math.sin(x/640.0 * 4 * ma th.pi) * 200 + 240)    
+    pygame.draw.rec t(screen, [0,0,0],[x, y, 1, 1], 1)       
+pygame.display.flip()
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()
+
+【PG】To draw each point, we used a rectangle 1 pixel wide by 1 pixel high. Note that we also used 
+a line width of 1, not 0. If we used a line width of 0, nothing would show up, because there’s 
+no “middle” to fill in. 
+
+【PG】Listing 16.7 Drawing curves using a lot of small rectangles
+Imports the math functions, 
+including sin()
+Draws the point using a 
+small rectangleCalculates the y-
+position (vertical) 
+of each pointLoops from 
+left to right,
+x = 0 to 639
+Download from Wow! eBook <www.wowebook.com>

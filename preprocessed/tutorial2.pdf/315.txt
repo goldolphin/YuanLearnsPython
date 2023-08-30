@@ -1,0 +1,36 @@
+【PG】291 CHAPTER  20 More GUIs
+I tried this on my
+Mac, and when I press the
+Option  key, which also says Alt on
+it, I don’t see any underlined or
+highlighted characters in
+the menu items. 
+Are there
+menu hotkeys in
+Mac OS X?
+
+【PG】We need to decide what hotkeys to use for the Convert  menu items. Let’s use C for Convert , 
+C for Celsius to Fahrenheit, and F for Fahrenheit to Celsius. So we have &Convert , &C to F
+and &F to C . The hotkey combinations are Alt-C-C  (for Celsius to Fahrenheit) and Alt-C-F
+(for Fahrenheit to Celsius).
+
+【PG】Once you define the hotkeys in Qt Designer, there’s nothing else to do—no new code to 
+write. PyQt and the operating system take care of underlining the hotkey and handling the 
+keyboard input. Just save your UI file. You could save it under a different name, like 
+tempconv_menu_hotkeys.ui . If you do, be sure you change the third line in listing 20.4 to 
+load that UI file:
+
+【PG】The short answer is “no. ” Because 
+all Macs have come with a mouse (or 
+touchpad) since day one, the Mac OS assumes you’ll use the 
+mouse to operate the menus. There is no keyboard shortcut or 
+hotkey system for menu items on the Mac OS. There are keyboard 
+shortcuts for many functions, and some of them correspond to 
+menu items. But you can’t directly operate the menu system with hotkeys the way you 
+can in Windows.
+
+【PG】That’s it for the temperature-conversion GUI. In chapter 22, we’ll use PyQt to make a version 
+of the Hangman game.
+
+【PG】form_class = uic.loadUiType( "tempconv_menu_ho tkeys.ui" )[0]
+Download from Wow! eBook <www.wowebook.com>

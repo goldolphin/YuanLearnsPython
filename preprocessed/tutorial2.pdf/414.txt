@@ -1,0 +1,28 @@
+【PG】390 Hello World!
+【PG】spaces on the grid. Each space on the grid is 64 x 64 pixels. Because our obstacle sprites 
+aren’t that big, there will be some space between them even if they’re in adjacent spaces 
+on the grid.
+
+【PG】Creating individual obstacles
+First we need to create individual obstacles. We make a class for that, which we call 
+ObstacleClass . Just like the skier, this is a Pygame Sprite :
+
+【PG】Creating a map of obstacles
+Let’s now create a single screen’s worth of obstacles—enough to fill one 10 x 10 grid, which 
+fills the 640 x 640 pixel screen. We randomly sprinkle 10 obstacles (flags and trees) in the 
+100 squares of the grid. Each obstacle can be either a flag or a tree. We could end up with 
+2 flags and 8 trees, 7 flags and 3 trees, or any combination that adds up to 10. They’re 
+randomly chosen. The locations on the grid are also random. 
+
+The only thing we have to watch out for is that we don’t try to put two obstacles in the 
+same location. So we keep track of what locations we have used. The variable locations
+is a list of the locations we have already used. When placing a new obstacle in a particular 
+location, we first check if there is already one in that location:
+
+【PG】10 obstacles 
+per screen (x, y) location 
+of the obstacle
+Make sure we don’t 
+get 2 obstacles in 
+the same location
+Download from Wow! eBook <www.wowebook.com>

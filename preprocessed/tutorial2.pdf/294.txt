@@ -1,0 +1,34 @@
+【PG】270 Hello World!
+pygame.display.flip() 
+done = True 
+pygame.mixer.music.fadeou t(2000)      
+
+【PG】That’s getting long-ish! (It’s around 100 lines, plus blank lines.) This could be made quite a 
+bit shorter, but it might also be harder to read and understand. We’ve been building the 
+program a little at a time in these chapters, so you didn’t have to type it all at once. 
+If you followed along with the book, you should understand what each part of the program 
+does and how the parts go together. And just in case you need it, the full listing is in the 
+\examples  folder on your computer (if you installed it) and on the website.
+
+【PG】In the next chapter, we’ll make a different kind of graphical program: one with buttons, 
+menus, and so on—a GUI. 
+
+【PG】What did you learn?
+In this chapter, you learned 
+■How to add sound to your programs
+■How to play sound clips (usually .wav  files)
+■How to play music files (usually .mp3  files)
+■How to know when a sound is done playing
+■How to control the volume of sound effects and music
+■How to make music repeat so it plays over and over
+■How to fade out music gradually
+
+【PG】Test your knowledge
+1What are three types of files that are used for storing sound?
+2What Pygame module is used for playing music?
+3How do you set the volume for a Pygame sound object?
+4How do you set the volume for background music?
+5How do you make music fade out?Fades out the music
+Plays sound when 
+a new life starts
+Download from Wow! eBook <www.wowebook.com>

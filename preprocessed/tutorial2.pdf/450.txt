@@ -1,0 +1,49 @@
+【PG】426 Hello World!
+Or you could just use a comma, like this:
+
+【PG】The program should look something like this:
+
+【PG】The program should look something like this:
+
+【PG】You can add a few lines to the program from #C:
+
+【PG】The program should look like this:
+
+【PG】Chapter 6: GUIs—Graphical User Interfaces
+
+【PG】Test your knowledge
+
+【PG】1To bring up a message box with EasyGui, use msgbox() , like this:
+
+【PG】>>> firs t = 'Warren'
+>>> las t = 'Sande'
+>>> prin t firs t, las t
+Warren Sande
+firs t = raw_inpu t('enter your firs t name: ' )
+last = raw_inpu t('enter your las t name: ' )
+prin t 'Hello,' , firs t, las t, 'how are you today?'
+
+【PG】leng th = floa t(raw_inpu t ('leng th of the room in fee t: '))
+width = floa t(raw_inpu t ('wid th of the room in fee t: '))
+area = leng th * wid th
+prin t 'The area is' , area, 'square fee t.'
+
+【PG】leng th = floa t(raw_inpu t ('leng th of the room in fee t: '))
+width = floa t(raw_inpu t ('wid th of the room in fee t: '))
+cost_per_yard = floa t(raw_inpu t ('cos t per square yard: ' ))
+area_fee t = leng th * wid th
+area_yards = area_fee t / 9.0
+total_cos t = area_yards * cos t_per_yard
+prin t 'The area is' , area_fee t, 'square fee t.'
+prin t 'Tha t is', area_yards, 'square yards.'
+prin t 'Which will cos t', total_cos t
+
+【PG】quar ters = int(raw_inpu t("How many quar ters? "))
+dimes = int(raw_inpu t("How many dimes? " ))
+nickels = int(raw_inpu t("How many nickels? " ))
+pennies = int(raw_inpu t("How many pennies? " ))
+total  = 0.25 * quar ters + 0.10 * dimes + 0.05 * nickels + 0.01 * pennies
+prin t "You have a total of: " , total
+
+【PG】easygui.msgbox( "This is the answer!" )
+Download from Wow! eBook <www.wowebook.com>

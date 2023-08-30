@@ -1,0 +1,11 @@
+【PG】441  APPENDIX  C Answers to Self-Test Questions
+
+【PG】2To replace the beach ball image with a different one, just replace the filename in this line with a different filename for a different graphic.
+
+【PG】3In listing 16.16, change \n to something else, like
+
+【PG】4To make the ball bounce off an “invisible” wall, change the line in listing 16.16 from to this: This makes the ball reverse direction before it gets to the edge of the window. You can do the same thing for the “floor” with the y-coordinates.
+
+【PG】5Here’s what listing 16.6 looks like with the display.flip  moved inside the while  loop, and with a delay added:    for even t in pygame.even t.get(): if even t.type == pygame.QUIT:running = False elif even t.type == pygame.KEYDOWN and even t.key == pygame.K_ESCAPE:running = False pygame.qui t() my_ball = pygame.image.load( 'beach_ball.png' ) x_speed = 10 y_speed = 10 x_speed = 20 y_speed = 8 if x > screen.ge t_wid th() - 90  or  x < 0:if x > screen.ge t_wid th() - 250  or  x < 0:impor t pygame, sys, random pygame.ini t() screen = pygame.display.se t_mode([640,480]) screen.fill([255, 255, 255]) for i in range (100):    wid th = random.randin t(0, 250)    heigh t = random.randin t(0, 100)    top = random.randin t(0, 400)    lef t = random.randin t(0, 500)    pygame.draw.rec t(screen, [0,0,0], [lef t, top, wid th, heigh t], 1)    pygame.display.flip()    pygame. time.delay(30)
+
+【PG】Download from Wow! eBook <www.wowebook.com>

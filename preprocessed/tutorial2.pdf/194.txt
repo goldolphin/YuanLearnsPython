@@ -1,0 +1,44 @@
+【PG】170 Hello World!
+
+【PG】Now, run the code in listing 14.5 and see what you get. It should look like this:
+We see that the attributes are cooked_level = 0 , cooked_string = "Raw" , and condiments
+is empty.
+
+【PG】Now, let’s test the cook()  method. Add the lines below to the code in listing 14.5:
+Run the program again. Now, the output should look like this:
+So our cook()  method seems to work. The cooked_level  went from 0 to 4, and the string 
+updated too (from Raw to Medium ).>>> 
+0 
+Raw
+[] 
+prin t "Now I'm going to cook the ho t dog"    
+myDog.cook(4)
+prin t myDog.cooked_level   
+prin t myDog.cooked_s tring
+>>> 
+0                   
+Raw
+[]                
+Now I'm going to cook the ho t dog
+4   
+Medium
+
+【PG】#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'sUage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,nadresetthelinecountandresetaself.header_written=1;self.count=
+
+【PG】Thinking like a (Python) programmer
+Another convention in Python is that the 
+name of a class always starts with an 
+uppercase (capital) letter. So far we have 
+seen Ball and HotDog, so we have been 
+following the convention.   print>>>Helloif#print>>>Helloif#print>>>Helloif#
+
+【PG】The cooked_level
+The cooked_string
+The condiments
+Cooks the hot dog 
+for 4 minutes
+Checks the new 
+cooked attributes
+Before cooking
+After cooking
+Download from Wow! eBook <www.wowebook.com>

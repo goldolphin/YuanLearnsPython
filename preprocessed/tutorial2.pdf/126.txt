@@ -1,0 +1,60 @@
+【PG】102 Hello World!
+clock. tick(30)             
+    for even t in pygame.even t.get():                           
+        if even t.type == pygame.QUIT:                          
+            running = False                                     
+        if even t.type == pygame.KEYDOWN:                       
+            if even t.key == pygame.K_LEFT:                     
+                speed = skier. turn(-1)                         
+            elif even t.key == pygame.K_RIGHT:                  
+                speed = skier. turn(1)                         
+    skier.move(speed)                  
+    
+    map_posi tion += speed[1]      
+                                   
+    if map_posi tion >=640:                                
+        crea te_map()                                         
+        map_posi tion = 0          
+
+【PG】hi t =  pygame.spri te.spri tecollide(skier, obs tacles, False)
+    if hit:                                                            
+        if hit[0]. type == "tree" and no t hit[0].passed:                
+            poin ts = poin ts - 100                                       
+            skier.image = pygame.image.load( "skier_crash.png" )       
+            anima te()                                                
+            pygame. time.delay(1000)                                   
+            skier.image = pygame.image.load( "skier_down.png" )        
+            skier.angle = 0                                         
+            speed = [0, 6]                                          
+            hi t[0].passed = True                                     
+        elif hit[0]. type == "flag" and no t hit[0].passed:           
+            poin ts += 10                                             
+            hi t[0].kill()                                        
+                                                                      
+    obs tacles.upda te()
+    score_ text = fon t.render( "Score: " +str(poin ts), 1, (0, 0, 0))  
+    anima te()
+
+【PG】The code for listing 10.1 is in the \examples\skier  folder, so if you get stuck or don’t want to 
+type it all in, you can use that file. But believe it or not, you’ll learn more by typing it in than 
+by just opening and looking at the listing. 
+
+【PG】In later chapters, you’ll learn about all the keywords and techniques that are used in Skier. 
+And at the end of the book, there’s a whole chapter explaining in detail how the Skier 
+program works. But for now, just type it in and give it a try.
+
+【PG】Updates graphics 
+30 times per second
+Checks for 
+keypresses or 
+window close
+Moves skier
+Scrolls scenery
+Creates a new screen 
+full of scenery
+Checks for hitting 
+trees and
+getting flag
+Displays
+score
+Download from Wow! eBook <www.wowebook.com>

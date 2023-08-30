@@ -1,0 +1,14 @@
+【PG】xiv PREFACE
+Computers are everywhere these days, so there’s a good chance you’ll use computers at work, at school, or at home—probably all three. Learning about programming will help you understand computers better in general. 
+
+【PG】Why Python?
+With all the programming languages to choose from (and there are a lot!), why did I pick Python for a programming book for kids? Here are a few reasons:
+■Python was created from the start to be easy to learn. Python programs are about the easiest to read, write, and understand of any computer language I have seen.
+■Python is free. You can download Python—and many, many fun and useful programs written in Python—for free.
+■Python is open source software. Part of what open source means is that any user can extend Python (create things that let you do more with Python, or do the same things more easily). Many people have done this, and there is a large collection of free Python stuff that you can download. 
+■Python isn’t a toy. Although it’s very good for learning programming, it’s also used by thousands of professionals around the world every day, including programmers at institutions like NASA and Google. So once you learn Python, you don’t have to switch to a “real” language to make “real” programs. You can do a lot with Python.
+■Python runs on different kinds of computers. Python is available for Windows PCs, Macs, and computers running Linux. Most of the time, the same Python program that works on your Windows PC at home will work on the Mac at your school. You can use this book with virtually any computer that has Python. (And remember, if the computer you want to use doesn’t have Python, you can get it for free.) 
+■I like Python. I enjoy learning it and using it, and I think you will, too.
+
+【PG】Thinking like a programmer
+We’re using Python in this book, but most of what you’ll learn about programming here can be used with any computer language. Learning to program with Python will give you a great start on almost any other language you want to use in the future.

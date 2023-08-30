@@ -1,0 +1,35 @@
+【PG】68 Hello World!
+
+【PG】Some statements in Python, like the if statement, need a block of code to tell them what to 
+do. In the case of the if statement, the block tells Python what to do if the condition is true.
+It doesn’t matter how far you indent the block, as long as the whole block is indented the 
+same amount. A convention  in Python is to use four spaces to indent blocks of code. It would 
+be a good idea to follow this style in your programs.
+
+【PG】Am I seeing double?
+Are there actually two equal signs in that if statement 
+(if timsAnswer == correctAnswer )? Yes, there are, 
+and here’s why.
+People say, “Five plus four is equal to nine, ” and they 
+ask, “Is five plus four equal to nine?” One is a statement; 
+the other is a question. 
+In Python we have the same kinds of things— statements  and questions . A statement  might 
+assign a value to a variable. A question  might check whether a variable is equal to a certain 
+value. One means you’re setting  something (assigning it or making it equal). The other 
+means you’re checking  or testing  something (is it equal, yes or no?). So Python uses two dif -
+ferent symbols.
+
+【PG】You already saw the equal sign ( =) used for setting or assigning values to variables. Here are 
+a few more examples:
+For testing whether two things are equal, Python uses a double equal sign ( ==), like this:correc tAnswer = 5 + 3
+tempera ture = 35
+name = "Bill"
+if myAnswer == correc tAnswer:
+if tempera ture == 40:
+if name == "Fred":
+
+【PG】A convention  just means lots of people do it that way. 
+Am I seeing 
+double?Am I seeing 
+double?
+Download from Wow! eBook <www.wowebook.com>

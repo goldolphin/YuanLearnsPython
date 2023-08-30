@@ -1,0 +1,23 @@
+【PG】34 Hello World!
+I know of one more operator - a telephone operator!
+
+【PG】Do you remember when you first learned about division? If the numbers didn’t divide evenly, you ended up with a remainder: 
+7 / 2 = 3, with a remainder of 1
+
+【PG】The answer for 7 / 2 has a quotient (3, in this case) and a remainder (1, in this case). If you divide two integers in Python, it gives you the quotient. But what about the remainder? Python has a special operator for calculating the remainder for integer division. It’s called the modulus operator, and the symbol is the percent symbol (%). You use it like this: 
+
+【PG】So if you use / and % together, you can get the full answer for integer division problems: The answer to 7 divided by 2 is 3, remainder 1. If you do floating-point division, you will get the decimal answer:
+
+【PG】Actually, now that you mention it, they are similar…. An arithmetic operator connects numbers together the way an old-fashioned telephone operator used to connect phones together.
+
+【PG】There are another two operators I’d like to tell you about. I know, I said just two more, but these are really easy! 
+>>> print 7 % 2 
+1 
+>>> print 7 / 2 
+3 
+>>> print 7 % 2 
+1 
+>>> print 7.0 / 2 
+3.5
+
+【PG】Download from Wow! eBook <www.wowebook.com>

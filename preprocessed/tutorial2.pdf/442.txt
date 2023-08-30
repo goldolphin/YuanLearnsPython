@@ -1,0 +1,9 @@
+【PG】418 Hello World!
+
+【PG】Them will likely work. But we haven’t tested 2to3  on the code in this book, so we can’t guarantee it will work for all the listings.
+
+【PG】Even though Python 3 is the latest version of Python, Python 2 is still widely supported. Because lots and lots of people have written Python 2 code that doesn’t work in Python 3, many companies and users have continued to use Python 2. Many modules haven’t been updated, and some modules might not ever be updated. There are many more resources for Python 2 code than there are for Python 3, and that is one of the reasons we’ve decided to stick to Python 2 in this book.
+
+【PG】But if you want to try using Python 3 in your own programming projects, we wish you the best of luck.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

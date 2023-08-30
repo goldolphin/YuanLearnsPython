@@ -1,0 +1,31 @@
+【PG】136 Hello World!
+
+【PG】A more accurate way to label the classMarks  table would be like this:
+Now it’s easier to see that the mark 77 is stored in classMarks[0][2] .
+If we were writing a program using classMarks  to store our data, we’d have to keep track of 
+which data was stored in which row and column. Just like the postmaster, we’d have the job 
+of keeping track of which slot belongs to which piece of data.
+
+【PG】Dictionaries
+You just saw that a Python list is a way of collecting items together. Quite often in program -
+ming you want to collect things together in a way that lets you associate a value with some 
+other value. This is like the way a phone book associates names and phone numbers, or the 
+way a dictionary associates words and their definitions.
+
+【PG】You mind?
+I’m trying 
+to work 
+here.
+GRRRRRR!
+
+【PG】[0] [1] [2] [3]
+55
+6563
+61
+97 9577 81
+72
+8867
+92classMark s[0]
+classMark s[1]
+classMark s[2]classMark s
+Download from Wow! eBook <www.wowebook.com>

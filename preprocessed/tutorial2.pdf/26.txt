@@ -1,0 +1,13 @@
+【PG】Hello World!
+There are versions for Windows, Mac OS X, and Linux. All the examples in this book use Windows, but using Python in Mac OS X or Linux is very similar. Just follow the instructions on the web site to run the right installer for your system.
+
+【PG】The version of Python that we use in this book is version 2.7.3. If you use the installer on the book’s web site, that’s the version you’ll get. By the time you read this, there might be newer versions of Python out there. All the examples in this book have been tested using Python 2.7.3. They’re likely to work with later 2.x versions as well, but we can’t see into the future, so there are no guarantees.
+
+【PG】Starting Python with IDLE
+There are a couple of ways to start using Python. One is called IDLE, and that’s the one we’ll use for now.If Python is already installed on your computer, and you are not going to use the installer, you will need to make sure that some “extras” that you’ll need for this book are also installed. Have a look at the installation section of the web site (www.helloworldbook2.com) to ﬁnd out how to do this. But again, the best way to make sure all the code in the book will work correctly is to use our installer, which you can ﬁnd atwww.helloworldbook2.com.
+
+【PG】Python 2 vs. Python 3
+A few years before this book was written, a new version of Python was released, Python 3. However, it turned out that it wasn’t really an “upgrade” so much as a fork in the road. That is, many people did not want to switch to Python 3, so they stayed with Python 2. The folks who develop Python kept making new versions of Python 2 as well as new versions of Python 3. At the time this Second Edition of “Hello World!” was written, the two current versions of Python were Python 2.7.3 and Python 3.3.0. This book uses Python 2.7.3, and the code is likely to be compatible with any future versions of Python 2.x.
+
+【PG】For more details on Python 2 vs. Python 3, see appendix B.
+Download from Wow! eBook <www.wowebook.com>

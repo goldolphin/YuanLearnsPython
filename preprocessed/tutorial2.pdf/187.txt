@@ -1,0 +1,23 @@
+【PG】In listing 14.1, we have a class definition for a ball with one method: bounce() . But what 
+about attributes? Well, attributes don’t really belong to the class, they belong to each 
+instance. That’s because each instance can have different attributes. 
+
+【PG】There are a couple of ways you can set the instance attributes. You’ll see both ways in the 
+following sections.
+Creating an instance of an object
+As we mentioned before, a class definition isn’t an object. It’s just the blueprints. Now let’s 
+build a house. 
+If we want to create an instance  of a Ball , we do it like this:
+Our ball does not have any attributes yet, so let’s give it some:
+This is one of the ways to define attributes for the object. You’ll see the other way in the 
+next section.
+
+【PG】Now, let’s try out one of the methods. Here’s how we’d use the bounce()  method:
+Let’s put this all together into a program, with some print  statements to see what’s 
+going on.Listing 14.1 Creating a simple Ball  class
+myBall = Ball()
+myBall.direc tion = "down"
+myBall.color = "green"
+myBall.size = "small"
+myBall.bounce()This tells Python we’re 
+making a class

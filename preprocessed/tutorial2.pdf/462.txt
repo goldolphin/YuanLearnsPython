@@ -1,0 +1,45 @@
+【PG】438 Hello World!
+
+【PG】And here’s some code to test it and make sure it’s working:
+
+【PG】2To make an interest account, make a subclass of BankAccount , and create a method to 
+add interest:
+Here’s some code to test it:
+
+【PG】Chapter 15: Modules
+Test your knowledge
+
+【PG】1Some of the advantages of using modules are
+■You can write some code once and use it in many programs.
+■You can use modules that other people have written.
+■Your code files are smaller, so it’s easier to find things in your code.
+■You can use only the parts (modules) you need to do the job.
+
+【PG】2You create a module by writing some Python code and saving it in a file. 
+3When you want to use a module, you use the import  keyword.
+4Importing a module is the same as importing a namespace.
+
+【PG】myAccoun t = BankAccoun t(234567, "Warren Sande" )
+prin t "Accoun t name:", myAccoun t.acc t_name
+prin t "Accoun t number:" , myAccoun t.acc t_number
+myAccoun t.displayBalance()
+myAccoun t.deposi t(34.52)
+myAccoun t.withdraw(12.25)
+myAccoun t.withdraw(30.18)
+class Interes tAccoun t(BankAccoun t):
+    def __ini t__(self, acc t_number, acc t_name, ra te):
+        BankAccoun t.__ini t__(self, acc t_number, acc t_name)
+        self.ra te = ra te
+    def addIn teres t (self):
+        in teres t = self.balance * self.ra te
+        prin t "adding in teres t to the accoun t,", self.ra te * 100, "percen t"
+        self.deposi t (in teres t)
+
+【PG】myAccoun t = In teres tAccoun t(234567, "Warren Sande" , 0.11)
+prin t "Accoun t name:", myAccoun t.acc t_name
+prin t "Accoun t number:" , myAccoun t.acc t_number
+myAccoun t.displayBalance()
+myAccoun t.deposi t(34.52)
+myAccoun t.addIn teres t()
+
+【PG】Download from Wow! eBook <www.wowebook.com>

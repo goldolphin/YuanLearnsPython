@@ -1,0 +1,47 @@
+【PG】115 CHAPTER  11 Nested and Variable Loops
+【PG】Try running the program in listing 11.7 in IDLE. The output should look like this:
+【PG】Just imagine how tedious it would be to work out the calories for all these combinations by hand, even if you had a calculator to do the math. It’s way more fun to write a program to figure it out for you. Looping and a bit of math in Python make it a snap!
+
+【PG】What did you learn?
+【PG】In this chapter, you learned about
+■Nested loops
+■Variable loops
+■Permutations and combinations
+■Decision trees
+
+【PG】>>> =========================== RESTART ===========================
+>>> 
+          Dog      Bun      Ke tchup  Mus tard  Onions   Calories
+# 1       0        0        0        0        0        0
+# 2       0        0        0        0        1        40
+# 3       0        0        0        1        0        20
+# 4       0        0        0        1        1        60
+# 5       0        0        1        0        0        80
+# 6       0        0        1        0        1        120
+# 7       0        0        1        1        0        100
+# 8       0        0        1        1        1        140
+# 9       0        1        0        0        0        120
+# 10      0        1        0        0        1        160
+# 11      0        1        0        1        0        140
+# 12      0        1        0        1        1        180
+# 13      0        1        1        0        0        200
+# 14      0        1        1        0        1        240
+# 15      0        1        1        1        0        220
+# 16      0        1        1        1        1        260
+# 17      1        0        0        0        0        140
+# 18      1        0        0        0        1        180
+# 19      1        0        0        1        0        160
+# 20      1        0        0        1        1        200
+# 21      1        0        1        0        0        220
+# 22      1        0        1        0        1        260
+# 23      1        0        1        1        0        240
+# 24      1        0        1        1        1        280
+# 25      1        1        0        0        0        260
+# 26      1        1        0        0        1        300
+# 27      1        1        0        1        0        280
+# 28      1        1        0        1        1        320
+# 29      1        1        1        0        0        340
+# 30      1        1        1        0        1        380
+# 31      1        1        1        1        0        360
+# 32      1        1        1        1        1        400
+【PG】Download from Wow! eBook <www.wowebook.com>

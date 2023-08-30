@@ -1,0 +1,18 @@
+【PG】324 Hello World!
+
+【PG】As I mentioned earlier, there are two ways you can put things in a file:
+■Writing —This means starting a new file or overwriting an existing one.
+■Appending —This means adding to an existing file and keeping what’s already there.
+
+【PG】To write or append to a file, you first have to open the file. You use the open()  function, just like we did before, except that the second parameter will be different:
+■For reading, you use 'r' as the  file mode:
+■For writing, you use 'w' as the  file mode:
+■For appending, you use 'a' as the  file mode:
+
+【PG】If you use ' a' for append  mode, the filename has to be one that already exists on the hard drive, or you’ll get an error. That’s because append  is for adding to an existing file.my_file = open('new_no tes.txt', 'r')
+my_file = open('new_no tes.txt', 'w')
+my_file = open('notes.txt', 'a')
+
+【PG】Back in my day, all we had was paper! There were no monitors, printers, or even keyboards. You “wrote” your code by punching holes into cards. Then you fed this stack of cards into a big machine that would convert the punched holes into electrical signals the computer could understand. Sometimes it took days to get an answer. Boy, was that painful!
+Old computer punch card
+Download from Wow! eBook <www.wowebook.com>

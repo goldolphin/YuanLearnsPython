@@ -1,0 +1,31 @@
+【PG】305 CHAPTER  21 Print Formatting and Strings
+【PG】Remember that Python counting starts at 0, so the first item in the tuple (the variable math ) 
+has index 0, and the second (the variable science ) has index 1. Then you use the .1f just 
+like you do with the old method.
+【PG】That’s all there is to it. You can store the formatted string to a variable, just like you can with 
+the old, % formatting:
+【PG】And because you don’t use the % sign to indicate format strings any more, you don’t need 
+to do anything special if you want to print a % sign:
+【PG】Python programmers will say that using the  format()  syntax is preferred, especially in Python 
+3. But you can use whichever syntax you want. The examples in this book all use the % syntax.
+
+【PG】Strings ’n’ things
+【PG】When you first learned about strings (back in chapter 2), you saw that you could combine 
+two of them with the + sign, like this:
+【PG】Now you’re going to find out more things you can do with strings.
+【PG】Strings in Python are really objects  (see, everything is an object …), and they have their own 
+methods  for doing things like searching, splitting, and combining. These are known as string 
+methods . The format()  method you just saw is one of the string methods.
+
+【PG】Splitting strings
+【PG】Sometimes you need to split up a long string into a number of smaller ones. Usually you 
+want to do this at particular points in the string, like whenever a certain character appears. 
+For example, a common way of storing data in a text file is to have items separated from 
+each other by a comma. So you might have a list of names that looks like this:distance = 149597870700
+【PG】myString = 'The sun is {0:.4e} me ters from the ear th'.forma t(dis tance)
+>>> prin t 'I go t {0:.1f}% in ma th'.forma t(math)
+I go t 87% in ma th
+>>> prin t 'cat' + 'dog'
+catdog
+>>> name_s tring = 'Sam,Brad,Alex,Cameron,Toby,Gwen,Jenn,Connor'
+Download from Wow! eBook <www.wowebook.com>

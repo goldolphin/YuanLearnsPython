@@ -1,0 +1,73 @@
+【PG】262 Hello World!
+
+impor t pygame, sys
+
+pygame.ini t()
+
+pygame.mixer.ini t()
+
+screen = pygame.display.se t_mode([640,480])
+
+pygame. time.delay(1000)
+
+pygame.mixer.music.load( "bg_music.mp3" )
+
+pygame.mixer.music.se t_volume(0.3) 
+
+pygame.mixer.music.play()
+
+spla t = pygame.mixer.Sound( "spla t.wav")
+
+spla t.set_volume(0.5) 
+
+running = True
+
+while running:
+
+    for even t in pygame.even t.get():
+
+        if even t.type == pygame.QUIT: 
+
+            running = False
+
+    if not pygame.mixer.music.ge t_busy(): 
+
+        spla t.play()
+
+        pygame. time.delay(1000)    
+
+        running = False
+
+pygame.qui t()
+
+【PG】This code will play the song once and then play the sound effect, and then the program 
+will end. 
+
+【PG】Repeating music
+
+If you’re going to use a song as background music for 
+a game, you probably want to have the music 
+continue as long as the program is running. The 
+music  module can do this for you. You can repeat
+the playback a certain number of times, like this
+
+This will play the song three times.
+
+You can also make the song repeat forever by passing a special value, -1, like this:
+
+This will keep repeating the song forever, or as long as the Pygame program is running. 
+(Actually, it doesn’t have to be -1. Any negative number will do the trick.)
+
+Listing 19.4 Waiting for the end of the song
+pygame.mixer.music.play(3)
+pygame.mixer.music.play(-1)
+
+【PG】Checks if the music 
+is done playing
+
+Waits a second for the 
+“splat” sound to finish
+
+【PG】The documentation for Pygamesays that the codepygame.mixer.music.play(3)will play the song four times:the ﬁrst time plus three repeats.They goofed on that one.It will really play the songthree times.
+
+Download from Wow! eBook <www.wowebook.com>

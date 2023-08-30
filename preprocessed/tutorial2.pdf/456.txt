@@ -1,0 +1,45 @@
+【PG】432 Hello World!
+
+【PG】The output from the code will look like this:
+
+【PG】For a four-level decision tree, there are 2**4 or 2 * 2 * 2 * 2 possible choices. That’s 16 
+possible choices, or 16 paths through the tree.
+Try it out
+
+【PG】Here is a countdown timer program that asks the user where to start:
+
+【PG】Here is a version that prints a row of stars beside each number:
+
+【PG】Chapter 12: Collecting Things Together—Lists
+
+【PG】Test your knowledge
+
+【PG】1You can add something to a list using append() , insert() , or extend() .
+
+【PG】2You can remove something from a list using remove() , pop() , or del.
+
+【PG】3To get a sorted copy of the list, you can do either of these:
+■Make a copy of the list, using slices: new_list = my_list[:] . Then sort the new list: 
+new_list.sort() .
+■Use the sorted()  function: new_list = sorted(my_list) .
+
+【PG】# Countdown timer asks the user where to start
+impor t time
+start = int(raw_inpu t("Coun tdown timer:  How many seconds? " , ))
+for i in range (start, 0, -1):
+    prin t i
+    time.sleep(1)
+prin t "BLAST OFF!"
+
+【PG】# Countdown timer asks the user where to start
+# and prints stars beside each number
+impor t time
+start = int(raw_inpu t("Coun tdown timer:  How many seconds? " , ))
+for i in range (start, 0, -1):
+    prin t i,
+    for star in range(i):
+        prin t '*',
+    prin t
+    time.sleep(1)
+prin t "BLAST OFF!"
+Download from Wow! eBook <www.wowebook.com>

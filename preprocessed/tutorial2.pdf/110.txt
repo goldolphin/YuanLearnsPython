@@ -1,0 +1,17 @@
+【PG】86 Hello World!
+
+【PG】Well, Carter, you have discovered something about strings. A string is like a list of characters. You learned that counting loops use lists for their iterations. That means you can loop through a string. Each character in the string is one iteration through the loop. So if we print the loop variable, which Carter called letter in his example, we’re printing the letters in the string, one at a time. Because each print statement starts a new line, each of the letters prints on its own line.
+
+【PG】Experimenting and trying different things, like Carter did here, is a great way to learn!
+
+【PG】So why do most programmers start loops from 0 instead of 1? Well, back in the good old days, some people started from 1 and some people started from 0. They had these really geeky arguments about which one was better. In the end, the 0 people won. So there you have it. Most people start at 0 today, but you can use whichever you like. Just remember to adjust the upper limit so you get the right number of iterations.
+
+【PG】And when I ran it, it looked like this!
+
+【PG】How did that happen?
+>>> for letter in "Hi there":
+print letter
+
+【PG】Just for fun, I tried doing a loop with a string like this:
+
+Download from Wow! eBook <www.wowebook.com>

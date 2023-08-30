@@ -1,0 +1,25 @@
+【PG】Sprites and Collision Detection
+
+【PG】In this chapter, we’ll continue using Pygame to do animation. We’ll look at things called 
+sprites,  which help us keep track of lots of images moving on the screen. We’ll also see how 
+to detect when two images overlap or hit each other, like when a ball hits a paddle or a 
+spaceship hits an asteroid.
+
+【PG】Sprites
+
+【PG】In the last chapter, you saw that simple animation isn’t quite so simple after all. If you have 
+a lot of images and are moving them around, it can be a lot of work keeping track of what’s 
+“under” each image so you can repaint when you move the image. In our first example with 
+the beach ball, the background was just white, so it was easier. But you can imagine that, 
+with graphics in the background, it would get more complicated. 
+
+【PG】Fortunately, Pygame provides some extra help. The individual images or parts of an image 
+that move around are called sprites , and Pygame has a special module for handling sprites. 
+This lets you move graphical objects around more easily. 
+
+【PG】In the last chapter, we had a beach ball bouncing around the screen. What if we want a 
+whole bunch of beach balls bouncing around? We could write the code to manage each 
+ball individually, but instead we’re going to use Pygame’s sprite  module to make things 
+easier.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

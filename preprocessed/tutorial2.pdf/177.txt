@@ -1,0 +1,46 @@
+【PG】153 CHAPTER 13 Functions
+【PG】def calcula teTax(price, tax_rate):           
+    total = price + (price * tax_rate)    
+    return total              
+
+【PG】my_price = floa t(raw_inpu t ("Enter a price: " ))
+totalPrice = calcula teTax(my_price, 0.06)  
+prin t "price = " , my_price, " To tal price = " , totalPrice 
+
+【PG】Try typing in, saving, and running the program in listing 13.4. Notice that the tax rate is 
+fixed as 0.06 (which equals 6 percent tax) in the code. If the program had to handle 
+different tax rates, you could have the user enter the tax rate as well as the price.
+
+【PG】Variable scope 
+You might have noticed that we have variables 
+outside the function, like totalPrice , as well as 
+variables inside the function, like total . These are 
+just two names for the same thing. It’s like back in 
+chapter 2, when we had YourTeacher = MyTeacher .
+In our calculateTax  example, totalPrice  and total  are two tags attached to the same 
+thing. With functions, the names inside the function are only created when the function 
+runs. They don’t even exist before the function runs or after it has finished running. Python 
+has something called memory management  that does this automatically. Python creates new 
+names to use inside the function when it runs, and then deletes them when the function is 
+finished . That last part is important: when the function is done running, any names inside it 
+cease to exist.
+
+【PG】While the function is running, the names outside  the function are sort of on hold—they’re 
+not being used. Only the names inside the function are being used. The part of a program 
+where a variable is used (or available to be used) is called its scope .
+
+【PG】Local variables
+In listing 13.4, the variables price  and total  were only used within the function. We say 
+that price , total , and tax_rate  are in the scope  of the calculateTax()  function. Another 
+term that is used is local . The price , total , and tax_rate  variables are local variables  in the 
+calculateTax()  function. Listing 13.4 Creating and using a function that returns a value
+and returns totalFunction 
+calculates tax Sends result back 
+to the main 
+program
+Calls function and stores 
+the result in totalPrice
+
+【PG】MyTeacher
+YourTeacher
+Download from Wow! eBook <www.wowebook.com>

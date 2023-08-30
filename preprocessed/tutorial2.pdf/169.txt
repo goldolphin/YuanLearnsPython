@@ -1,0 +1,41 @@
+【PG】CHAPTER 13 Functions
+These are the steps in the previous figure:
+1Start here. This is the beginning of the main program.
+2When we call the function, we jump to the first line of code in the function.
+3Execute each line of the function.
+4When the function is finished, we continue where we left off in the main program.
+
+【PG】Calling a function
+Calling  a function means running the code that is inside the function. If you define a 
+function but never call it, that code will never run.
+You call a function by using its name and a set of parentheses. Sometimes there’s some -
+thing in the parentheses and sometimes not.
+Try running the program in listing 13.1 and see what happens. You should see something 
+like this:
+
+【PG】Now, that’s exactly the same output we’d have gotten from a simpler program that looks 
+like this:
+So why did we go to the trouble of making things more complex and using a function in 
+listing 13.1? 
+
+【PG】The main reason to use functions is that, once you have defined them, you can use them 
+over and over again just by calling  them. So if we wanted to print the address five times, we 
+could do this: 
+>>> =================== RESTART ===================
+>>> 
+Warren Sande
+123 Main S treet
+Ottawa, On tario, Canada
+K2M 2E9
+>>>
+prin t "Warren Sande"
+prin t "123 Main S treet"
+prin t "Ottawa, On tario, Canada"
+prin t "K2M 2E9"
+prin t 
+prin tMyAddress()
+prin tMyAddress()
+prin tMyAddress()
+prin tMyAddress()
+prin tMyAddress()
+Download from Wow! eBook <www.wowebook.com>

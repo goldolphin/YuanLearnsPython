@@ -1,0 +1,18 @@
+【PG】132 Hello World!
+
+【PG】You can, of course, move the new tag to a whole new list, like this: That’s the same thing we did with strings and numbers in chapter 2. This means that, if you really want to make a copy  of a list, you need to do something differ - ent from new = original . The easiest way to do this is to use slice notation, like I did above: new = original[:] . This means “copy everything in the list, from the first item to the last  item. ” Then you get this: There are now two separate lists. We made a copy of the original and called it new. Now if we sort one list, the other one won’t be sorted.
+
+【PG】Another way to sort— sorted() There is another way to get a sorted copy of a list without changing the order of the origi - nal list. Python has a function called sorted()  for that purpose. It works like this: The sorted()  function gives you a sorted copy  of the original list.>>> original = [5, 2, 3, 1, 4] >>> newer = sorted(original) >>> prin t original [5, 2, 3, 1, 4] >>> prin t newer [1, 2, 3, 4, 5]
+
+【PG】original = [5,2,3,1,4] 
+new = original original
+original
+new
+original
+new5,2,3,1,45,2,3,1,4
+5,2,3,1,4
+6,7, 8,9,10new = [6,7, 8,9,10]
+original = [5,2,3,1,4] 
+new = original[:]
+
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,20 @@
+【PG】Advance Praise for the Second Edition of Hello! World
+It made programming seem as easy as frying bacon.
+—Elisabet Gordon, 10th-grade student, Eagle Harbor High School 
+
+【PG】A great intro to the world of Python for everyone. This book is so much fun!
+—Mason Jenkins, 7th-grade student, Myron B. Thompson Academy 
+
+【PG】For kids from 8 to 88. The book not only covers programming in Python in a fun way, but also sets the groundwork for good practices that can be used for other programming languages as well.
+—Ben Ooms, Software Engineer, Sogeti 
+
+【PG】If you want to learn programming or teach it to a kid, this is your book.
+—Cuberick.com 
+
+【PG】A very good introduction to programming for anyone, young or old, who wants to start learning this vital and highly enjoyable skill.
+—Sue Gee, I-Programmer 
+
+【PG】Warren and Carter start simply, at the beginning, and take kids or adults all the way to making fun 2D graphical games and simulations. Python is my first choice for a real programming language for new programmers, and using this book is a great way to learn it. I’ve been recommending this book to my students since the First Edition came out.
+—Dave Briccetti, Software Developer and Teacher, Dave Briccetti Software LLC
+
+【PG】Download from Wow! eBook <www.wowebook.com>

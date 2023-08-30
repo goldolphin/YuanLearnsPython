@@ -1,0 +1,46 @@
+【PG】222 Hello World!
+
+【PG】Notice the change in line 2 ( def __init__(self, image_file, location, speed): ) and the addition of line 7 ( self.speed = speed ), as well as the new move()  method in lines 9 to 15.
+
+【PG】Now when we create each instance of a ball, we need to tell it the speed as well as the image file and location:
+
+【PG】The preceding code will create all the balls with the same speed (same direction), but it would be fun to see the balls move around a bit randomly. Let’s use the random.choice() function to set the speed, like this:
+
+【PG】This will choose either -2 or 2 for both the x and y speed.
+
+【PG】Here’s the complete program.
+
+impor t sys, pygame
+from random impor t *
+class MyBallClass(pygame.spri te.Spri te):
+    def __ini t__(self, image_file, loca tion, speed):
+        pygame.spri te.Spri te.__ini t__(self)
+        self.image = pygame.image.load(image_file)
+        self.rec t = self.image.ge t_rec t()
+        self.rec t.lef t, self.rec t.top = loca tion
+        self.speed = speed
+     
+    def move(self):
+        self.rec t = self.rec t.move(self.speed)
+        if self.rec t.lef t < 0 or self.rec t.righ t > wid th:                 
+            self.speed[0] = -self.speed[0]                                
+        
+        if self.rec t.top < 0 or self.rec t.bottom > heigh t:                
+            self.speed[1] = -self.speed[1]   
+    
+size = wid th, heigh t = 640, 480
+screen = pygame.display.se t_mode(size)
+screen.fill([255, 255, 255])
+img_file = "beach_ball.png"
+balls = []                 speed = [2, 2]
+ball = MyBallClass(img_file, loca tion, speed)
+from random impor t *
+speed = [choice([-2, 2]), choice([-2, 2])]
+
+【PG】Listing 17.2 A program for moving balls around using sprites
+
+【PG】Ball class definition
+
+【PG】Creates a list to keep track of balls
+
+【PG】Download from Wow! eBook <www.wowebook.com>

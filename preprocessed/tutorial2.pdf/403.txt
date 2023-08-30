@@ -1,0 +1,69 @@
+【PG】379 CHAPTER  24 Computer Simulations
+
+【PG】impor t sys, pickle,da tetime
+from PyQt4 impor t QtCore, Q tGui, uic
+formclass, baseclass = uic.loadUiType( "mainwindow.ui" )
+class MyForm(baseclass, formclass):
+    def __ini t__(self, paren t=None):
+        Q tGui.QMainWindow.__ini t__(self, paren t)
+        self.se tupUi(self)
+        self.doc tor = False
+        self.walking = False                                           
+        self.sleeping = False                                          
+        self.playing = False                                           
+        self.ea ting = False                                            
+        self. time_cycle = 0                                            
+        self.hunger = 0                                                
+        self.happiness  = 8                                            
+        self.heal th = 8                                                
+        self.forceAwake = False
+        self.sleepImages = [ "sleep1.gif" ,"sleep2.gif" ,"sleep3.gif" ,    
+                            "sleep4.gif" ]
+        self.ea tImages = [ "eat1.gif", "eat2.gif"]                      
+        self.walkImages = [ "walk1.gif" , "walk2.gif" , "walk3.gif" ,      
+                           "walk4.gif" ]                                
+        self.playImages = [ "play1.gif" , "play2.gif" ]                  
+        self.doc torImages = [ "doc1.gif" , "doc2.gif" ]                   
+        self.no thingImages  = [ "pet1.gif", "pet2.gif", "pet3.gif"]  
+        
+        self.imageLis t = self.no thingImages
+        self.imageIndex = 0
+        
+        self.ac tionS top.triggered.connec t(self.s top_Click)
+        self.ac tionFeed. triggered.connec t(self.feed_Click)             
+        self.ac tionWalk. triggered.connec t(self.walk_Click)             
+        self.ac tionPlay. triggered.connec t(self.play_Click)            
+        self.ac tionDoc tor.triggered.connec t(self.doc tor_Click)        
+        
+        self.myTimer1 = Q tCore.QTimer(self)   
+        self.myTimer1.s tart(500)                                       
+        self.myTimer1. timeou t.connec t(self.anima tion_ timer)            
+                                                                       
+        self.myTimer2 = Q tCore.QTimer(self)                           
+        self.myTimer2.s tart(5000)                                      
+        self.myTimer2. timeou t.connec t(self. tick_ timer)                
+                                                  
+        filehandle = True
+        try:                                                      
+            file = open("saveda ta_vp.pkl" , "r")  
+        excep t:                                   
+            filehandle = False                                         
+        if filehandle:
+            save_lis t = pickle.load( file)    
+            file.close()
+
+【PG】Listing 24.4  VirtualPet.py
+Initializes 
+values
+Lists images for
+animations
+Connects event 
+handlers for 
+toolbar buttons
+Sets up 
+timers
+Tries to open 
+pickle file
+Reads from pickle file, if open
+
+【PG】Download from Wow! eBook <www.wowebook.com>

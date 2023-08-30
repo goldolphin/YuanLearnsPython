@@ -1,0 +1,30 @@
+【PG】47 CHAPTER  5 Input
+
+【PG】raw_input()
+The raw_input()  function gets a string from the user. The normal way it gets this is from 
+the keyboard—the user types in the input.
+raw_input()  is another one of Python’s built-in functions, like str() , int() , float() , and 
+type() . (You saw those in chapter 4.) You’ll learn a lot more about functions later. But for 
+now, you just need to remember to include the parentheses (round brackets) when you use 
+raw_input() . 
+
+【PG】Here is how you use it:
+This will let the user type in a string and assign it the name someName . 
+
+【PG】Now let’s put this into a program. Create a new file in IDLE, and type in the code in the fol -
+lowing listing.
+prin t "Enter your name: "
+somebody = raw_inpu t()
+prin t "Hi", somebody, "how are you today?"
+Save and run this program in IDLE to see how it works. You should see something like this: 
+I typed in my name, and the program assigned it the name somebody . someName = raw_inpu t()
+Listing 5.1 Getting a string using raw_input
+
+【PG】Enter your name:
+Warren
+Hi Warren how are you today?Raw input
+
+【PG】In Python 3, the raw_input()  function is called input() . It works 
+exactly the same way as raw_input()  in Python 2.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

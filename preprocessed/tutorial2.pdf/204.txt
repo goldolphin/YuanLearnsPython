@@ -1,0 +1,30 @@
+【PG】180 Hello World!
+
+【PG】That’s it! You have just created a module! Your module has one function in it, the c_to_f()
+function, which converts a temperature from Celsius to Fahrenheit.
+
+【PG】Next, we’ll use my_module.py  in another program. How do we use modules? In order to use something that is in a module, you first have to tell Python which modules you want to use. The Python keyword that lets you include other modules in your program 
+is import . You use it like this:
+
+【PG】Let’s write a program that uses the module we just wrote. We’re going to use the c_to_f()
+function to do a temperature conversion. You already saw how to use a function and pass parameters (or arguments) to it. The only difference here is that the function will be in a separate file from our main program, so we’ll have to use import . The program in the next listing uses the module we just wrote, my_module.py .
+
+【PG】impor t my_module            
+celsius = floa t(raw_inpu t ("Enter a tempera ture in Celsius: " ))
+fahrenhei t = c_ to_f(celsius)
+prin t "Tha t's ", fahrenhei t, " degrees Fahrenhei t"
+
+【PG】Create a new IDLE editor window, and type in this program. Save it as modular.py , and then run it to see what happens. You will need to save it in the same folder (or directory) as my_module.py . Did it work? You should have seen something like this:
+
+【PG】impor t my_module
+Listing 15.2 Using a module
+>>> ========================= RESTART =========================
+>>> 
+Enter a tempera ture in Celsius: 34
+Traceback (mos t recen t call las t):
+  File "C:/MyPy thonPrograms/modular.py", line 4, in <module>
+    fahrenhei t = c_ to_f(celsius)
+NameError: name 'c_ to_f' is no t defined
+
+【PG】my_module contains the c_to_f() function
+Download from Wow! eBook <www.wowebook.com>

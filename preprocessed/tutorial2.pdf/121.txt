@@ -1,0 +1,17 @@
+【PG】97 CHAPTER  9 Just for You—Comments
+
+【PG】What was I thinking?If you type some comments into the IDLE editor, you’ll see that the comments have their own color. This is meant to help you read your code more easily.
+
+【PG】Most code editors let you change the color for comments (and for other parts of the code). The default color for comments in IDLE is red. Because triple-quoted strings are not true Python comments, they’ll be a different color. In IDLE they’ll be green, because green is IDLE’s default color for strings. 
+
+【PG】Commenting style
+
+【PG】So now you know how to add comments. But what kind of stuff should you put in them? Because they don’t affect how the program runs, we say that they’re a matter of style . That means you can put anything you want in your comments (or not use any at all). But it doesn’t mean comments are not important. Most programmers learn this the hard way, when they go back to a program they wrote several weeks, months, or years ago (or even one they wrote yesterday) and can’t understand it! That’s usually because they didn’t put in enough comments to explain how the program worked. It might seem obvious when you’re writing it, but it can be a complete mystery when you look at it later.
+
+【PG】There are no hard-and-fast rules for what you should put in comments, but I encourage you to add as many comments as you like. For now, the more the better. It’s better to err on the side of too many comments than too few. As you gain more experience with programming, you’ll get a feel for how much and what kind of commenting works best for you.
+
+【PG】Comments in this book
+
+【PG】You won’t see many comments in the printed code listings in this book. That’s because this book uses annotations —those little notes alongside the code—instead. But if you look at the code listings in the \examples folder or on the website, you’ll see comments in all the listings.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,23 @@
+【PG】82 Hello World!
+
+【PG】Now we’re starting to see the power of loops. Without loops, we’d have had to write a program like this one to get the same result:
+To make a longer multiplication table (say, up to 10 or 20), this program would be a lot longer, but our loop program would be almost the same (just with more numbers in the list). Loops make this much easier!
+
+【PG】A shortcut— range()
+In the previous example, we only looped 5 times:
+But what if we wanted the loop to run 100 times, or 1,000 times? That would be a lot of typing!
+Luckily, there’s a shortcut. The range() function lets you enter just the starting and ending values, and it creates all the values in between for you. range() creates a list containing a range of numbers.
+
+【PG】The next listing uses the range() function in the multiplication table example.
+for looper in range (1, 5):
+    print looper, "times 8 =" , looper * 8
+print "1 times 8 =" , 1 * 8
+print "2 times 8 =" , 2 * 8
+print "3 times 8 =" , 3 * 8
+print "4 times 8 =" , 4 * 8
+print "5 times 8 =" , 5 * 8
+for looper in [1, 2, 3, 4, 5]:
+
+【PG】Listing 8.4 A loop using range()
+for looper in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,...
+Download from Wow! eBook <www.wowebook.com>

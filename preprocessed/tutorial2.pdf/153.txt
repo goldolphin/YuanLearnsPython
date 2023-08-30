@@ -1,0 +1,39 @@
+【PG】129 CHAPTER  12 Collecting Things Together—Lists and Dictionaries
+
+【PG】But a loop can iterate through any list—it doesn’t have to be a list of numbers. Let’s say 
+we wanted to print our list of letters with one item on each line. We could do something 
+like this:
+This time, our loop variable is letter . (Before, we used loop variables like looper  or i, j, and 
+k.) The loop iterates over (loops through) all the values in the list, and each time through, 
+the current item is stored in the loop variable, letter , and then is displayed.
+
+【PG】Sorting lists
+Lists are an ordered  type of collection. This means the items in a list have a certain order, and 
+each one has a place (its index). Once you have put items in a list in a certain order, they stay 
+in that order unless you change the list with insert() , append() , remove() , or pop() . But that 
+order might not be the order you want. You might want a list sorted  before you use it. 
+To sort a list, you use the sort()  method:
+sort()  automatically sorts strings alphabetically and numbers numerically, from smallest 
+to largest.
+
+【PG】It’s important to know that sort()  modifies the list in place. That means it changes the 
+original list you give it. It does not  create a new, sorted list. That means you can’t do this:
+If you do, you’ll get “None. ” You have to do it in two steps, like this:>>> le tters = ['a', 'b', 'c', 'd', 'e']
+>>> for letter in le tters:
+        prin t letter
+    
+a
+b
+c
+d
+e
+>>> le tters = ['d', 'a', 'e', 'c', 'b']
+>>> prin t letters
+['d', 'a', 'e', 'c', 'b']
+>>> le tters.sor t()
+>>> prin t letters
+['a', 'b', 'c', 'd', 'e']
+>>> prin t letters.sor t()
+>>> le tters.sor t()
+>>> prin t letters 
+Download from Wow! eBook <www.wowebook.com>

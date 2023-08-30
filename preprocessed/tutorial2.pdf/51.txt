@@ -1,0 +1,31 @@
+【PG】Chapter 2 Remember This: Memory and Variables
+
+Test your knowledge
+1How do you tell Python that a variable is a string (characters) instead of a number?
+2Once you have created a variable, can you change the value that is assigned to it?
+3With variable names, is TEACHER  the same as TEACHEr ?
+4Is 'Blah'  the same as "Blah"  to Python?
+5Is '4' the same as 4 to Python?
+6Which of the following is not a correct variable name? Why?
+a) Teacher2
+b) 2Teacher
+c) teacher_25
+d) TeaCher
+7Is "10"  a number or a string?
+
+Try it out
+1Make a variable, and assign a number to it (any number you like). Then display your 
+variable using print .
+2Modify your variable, either by replacing the old value with a new value, or by adding 
+something to the old value. Display the new value using print .
+3Make another variable, and assign a string (some text) to it. Then display it using 
+print .
+4Just like in the last chapter, in interactive mode, get Python to calculate the number of 
+minutes in a week. But this time, use variables. Make variables for DaysPerWeek , 
+HoursPerDay , and MinutesPerHour  (or make up your own names), and then multiply 
+them together.
+5People are always saying there’s not enough time to get everything done. How many 
+minutes would there be in a week if there were 26 hours in a day? (Hint: Change the 
+HoursPerDay  variable.)
+
+Download from Wow! eBook <www.wowebook.com>

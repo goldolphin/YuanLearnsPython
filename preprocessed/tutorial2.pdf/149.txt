@@ -1,0 +1,36 @@
+【PG】125 CHAPTER  12 Collecting Things Together—Lists and Dictionaries
+
+【PG】Notice that the letters are not in order. That’s because append()  adds the item to the end of 
+the list. If you want the items in order, you’ll have to sort them. We’ll get to sorting very soon.
+
+【PG】Extending the list: extend()
+extend()  adds several items to the end of a list:
+Notice that what’s inside the round brackets of the extend()  method is a list. A list has 
+square brackets, so for extend() , you could have both round and square brackets.
+Everything in the list you give to extend()  gets added to the end of the original list.
+
+【PG】Inserting an item: insert()
+insert()  adds a single item somewhere in the list. You tell it at what position in the list you want 
+the item added:
+Here, we added the letter z at index 2. Index 2 is the third position in the list (because indi-
+ces start at 0). The letter that used to be in the third position, c, got bumped over by one 
+place, to the fourth position. Every other item in the list also got bumped one position.
+
+【PG】The difference between append()  and extend()
+Sometimes append()  and extend()  look very similar, but they do different things. Let’s go 
+back to our original list. First, try using extend()  to add three items:
+Now, we’ll try to use append()  to do the same thing:>>> le tters.ex tend(['p', 'q', 'r'])
+>>> prin t letters
+['a', 'b', 'c', 'd', 'e', 'n', 'g', 'p', 'q', 'r']
+>>> le tters.inser t(2, 'z')
+>>> prin t letters
+['a', 'b', 'z', 'c', 'd', 'e', 'n', 'g', 'p', 'q', 'r']
+>>> le tters = ['a','b','c','d','e']
+>>> le tters.ex tend(['f', 'g', 'h'])
+>>> prin t letters
+['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+>>> le tters = ['a', 'b', 'c', 'd', 'e']
+>>> le tters.append([ 'f', 'g', 'h'])
+>>> prin t letters
+['a', 'b', 'c', 'd', 'e', ['f', 'g', 'h']]
+Download from Wow! eBook <www.wowebook.com>

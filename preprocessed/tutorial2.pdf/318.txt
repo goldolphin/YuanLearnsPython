@@ -1,0 +1,42 @@
+【PG】294 Hello World!
+
+All of these things will be useful for text-mode (non-GUI) programs, and most of them will 
+find their way into GUIs and game programs as well. There’s a lot more Python can do with 
+print formatting, but this should be all you will need for 99 percent of your programs.
+
+
+【PG】New lines
+
+You have already seen the print  statement many times. What happens if you use it more 
+than once? Try this short program:
+
+When you run it, the output should look like this:
+
+Why did these two things print on different lines? Why didn’t the output look like this:
+
+Unless you tell it otherwise, Python will start each print  on a new line. After the Hi, Python 
+moves down one line and back to the first column to print There . Python inserts a newline
+character between the two words. A newline is like pressing Enter  in your text editor. prin t "Hi"
+prin t "There"
+
+
+【PG】bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=1;f.count=1header_written=1;
+
+【PG】bin/envpython#Paginateatext
+
+
+【PG】file,Thinking like a programmer
+
+Remember back in chapter 5 you learned about 
+CR and LF (carriage return and line feed) for 
+marking the end of a line of text? And remember 
+how I said that some systems use one or the 
+other, or both? Newline is the generic name for 
+the end-of-line marker on any system. In 
+Windows, newline = CR + LF. In Linux, 
+newline = LF, and in Mac OS X, newline = CR. 
+That way, you don’t have to worry about what 
+system you’re on. Just put a newline wherever 
+you want to start a new line.print>>>Helloif#print>>>Helloif#
+print>>>Helloif#
+Download from Wow! eBook <www.wowebook.com>

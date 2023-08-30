@@ -1,0 +1,11 @@
+【PG】Chapter 20 More GUIs
+It looks like the fahr value is being computed correctly. So why won’t the Fahrenheit box display anything less than 0 (or more than 99, for that matter!)?
+Go back to Qt Designer, and click the spinFahr spin box widget that we used for showing and entering the Fahrenheit temperature. Now look at the Property Editor and scroll through the different properties. Do you see two properties called minimum and maximum (near the bottom of the list of properties for the spin box)? What are their values? Can you guess what the problem is now? 
+
+【PG】What’s on the menu?
+Our temperature-conversion GUI has buttons to make the conversions happen. Many programs also have a menu to perform some functions. Sometimes these are the same things you can do by clicking a button, so why would you want to have two different ways to do the same thing? 
+Well, some users are more comfortable using menus than clicking buttons. Complex programs have many functions that would require a lot of buttons, making a very cluttered GUI if they didn’t use menus. Also, you can operate menus from the keyboard, and some people find it faster to use menus than to take their hands off the keyboard and use the mouse.
+
+【PG】Let’s add some menu items to give our users a different way to make the temperature conversions happen. We can also add a File > Exit menu option, which almost every program has. PyQt includes a way to create and edit menus. If you look in the upper-left corner of the form in Designer, you’ll see something that says Type Here. This is where we start creating. I don’t recognize anything on these new-fangled modern menus. Well, I think the “Format” looks good... 
+
+Download from Wow! eBook <www.wowebook.com>

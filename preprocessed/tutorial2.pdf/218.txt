@@ -1,0 +1,21 @@
+【PG】194 Hello World!
+
+【PG】Many surfaces, and you can copy images from one surface to another. You can also do things to surfaces, like rotate them and resize them (make them bigger or smaller).
+
+【PG】As I mentioned before, there are two copies of the display surface. In software lingo, we say the display surface is double-buffered . This is so you don’t get half-completed shapes and images drawn on the screen. You draw your circles, aliens, or whatever in the buffer and then “flip” the display surface to show you the completely drawn images. 
+
+【PG】Colors in Pygame
+The color system used in Pygame is a common one used in many computer languages and programs. It’s called RGB . The R, G, and B stand for red, green, and blue. 
+
+【PG】You might have learned in science class that you can make any color by combining or mixing the three primary colors  of light: red, green, and blue. That’s the same way it works on computers. Each color—red, green, and blue—gets a number from 0 to 255. 
+
+【PG】Colors are given as a list of three integers, each one ranging from 0 to 255. If all the numbers are 0, there is none of any color, which is completely dark, so you get the color black. If they’re all 255, you get the brightest of all three colors mixed together, which is white. If you have something like [255, 0, 0], that would be pure red with no green or blue. Pure green would be [0, 255, 0]. Pure blue would be [0, 0, 255]. If all three numbers are the same, like [150, 150, 150], you get some shade of grey. The lower the numbers, the darker the shade; the higher the numbers, the brighter the shade.
+
+【PG】If you want to play around and experiment with how the red, green, and blue combine to make different colors, you can try out the colormixer.py  program that was put in the \examples  folder when you ran this book’s installer. This will let you try any combination of red, green, and blue to see what color you get.
+
+【PG】Color names
+Pygame has a list of named colors you can use if you don’t want to use the [R, G, B] notation. Over 600 color names are defined. I won’t list them all here, but if you want to see what they are, search your hard drive for a file called colordict.py , and open it in a text editor.
+
+【PG】If you want to use the color names, you have to add this line at the start of your program: from pygame.color impor t THECOLORS Then, when you want to use one of the named colors, you’ll do it like this (in our circle example):  pygame.draw.circle(screen, THECOLORS[ "red"],[100,100], 30, 0) 
+
+Download from Wow! eBook <www.wowebook.com>

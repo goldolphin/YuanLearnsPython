@@ -1,0 +1,17 @@
+【PG】Chapter 1 Getting Started
+How come this works:
+print "Bye for now!" * 5
+But this doesn’t:
+print "Bye for now!" + 5
+
+【PG】The line starting with Traceback is the beginning of the error message. The next line tells you where the error happened—the filename and line number. Then it displays the bad line of code. This helps you find where the problem is in your code. The last part of the error message tells you what Python thinks is wrong. Once you know more about programming and Python, it will be easier to understand what the message means.
+
+【PG】Well, Carter, it’s kind of like that old saying about comparing apples to alligators. In Python, you can’t add different kinds of things together, like a number and some text. That’s why print "Bye for now! " + 5 gave us an error. It’s like saying, “If I take 5 apples and add 3 alligators, how many do I have?” You have 8, but 8 of what? Adding these together doesn’t really make sense. But you can multiply almost anything by a number to get more of that kind of thing. (If you have 2 alligators and you multiply by 5, you have 10 alligators!) That’s why print "Bye for now! " * 5 works.
+
+【PG】Thinking like a programmer
+Don’t worry if you get error messages. They are meant to help you figure out what went wrong so you can fix it. If there is something wrong with your program, you want to see an error message. The kinds of bugs that don’t give you an error message are much harder to find!
+
+【PG】pnirt>>>
+Helloif#
+print>>>Helloif#
+print>>>Helloif#

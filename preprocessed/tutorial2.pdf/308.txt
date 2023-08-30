@@ -1,0 +1,48 @@
+【PG】284 Hello World!
+
+【PG】Then we need to define the event handler. To get the value from the Celsius  box (the Line 
+Edit widget called editCel ), we use self.editCel.text() . This value is a string, so we have 
+to convert it to a float:
+
+【PG】Then we need to do the conversion:
+
+【PG】Next, we need to put that value in the Fahrenheit  box, which is the Spin Box widget 
+called spinFahr . There’s one catch here: spin boxes can only have integer values in them, 
+not floats. We have to make sure we convert the value to an int before putting it in 
+the spin box. The number in the spin box is its value  property, so the code looks 
+like this:
+
+【PG】And we add 0.5 to the result so that when we use int()  to convert the float to an integer, it 
+gets rounded off  to the nearest integer, instead of rounded down  to the next lowest integer. 
+Putting that all together gives us this:
+
+【PG】Converting Fahrenheit to Celsius
+The code for converting the other way (from Fahrenheit to Celsius) is very similar. The 
+formula for that conversion is
+
+【PG】It goes in the event handler for the Fahrenheit to Celsius  button. We connect the event 
+handler to the button (in the __init__()  method of the window):
+
+【PG】cel = floa t(self.edi tCel. text())
+fahr = cel * 9.0 / 5 + 32 
+self.spinFahr.se tValue(int(fahr))
+
+【PG】def btn_CtoF_clicked(self):
+        cel = floa t(self.edi tCel. text()) 
+        fahr = cel * 9.0 / 5 + 32    
+        self.spinFahr.se tValue(int(fahr + 0.5))
+
+【PG】app = Q tGui.QApplica tion(sys.argv)
+myWindow = MyWindowClass()
+myWindow.show()
+app.exec_() 
+
+【PG】cel = (fahr - 32) * 5.0 / 9
+self.b tn_FtoC.clicked.connec t(self.b tn_FtoC_clicked)
+
+【PG】Gets Celsius value
+Converts to Fahrenheit
+Rounds off and puts in 
+Fahrenheit spin box
+
+【PG】Download from Wow! eBook <www.wowebook.com>

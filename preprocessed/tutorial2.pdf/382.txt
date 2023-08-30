@@ -1,0 +1,54 @@
+【PG】358 Hello World!
+
+【PG】We’re almost done—just a couple more things to add. You might have noticed that the 
+computer’s turn was defined as a function, and we used some global variables in that func -
+tion. We could also have passed the variables to the function, but using globals works just 
+as well and is more like the real world, where the deck is “global”—anybody can reach over 
+and take a card from it.
+
+【PG】The player’s turn is also a function, but we didn’t show the first part of that function defini -
+tion. It would look like this:
+
+【PG】There’s just one more thing we need. We have to keep track of who wins!
+
+【PG】Keeping score
+
+【PG】The last thing we need for our game to be complete is scoring. When a game ends, we need 
+to keep track of how many points the winner gets for the cards remaining in the loser’s 
+hand. We should display the points for that game, as well as the total for all games. Once we 
+add those things in, the main loop will look something like this.
+
+【PG】done = False
+p_total = c_ total = 0
+while not done:    
+    game_done = False
+    blocked = 0
+    ini t_cards()         
+    while not game_done:
+        player_ turn() 
+        if len(p_hand) == 0:       
+            game_done = True
+            prin t
+            prin t "You won!"
+            # display game score here
+            p_poin ts = 0def player_ turn():
+    global deck, p_hand, blocked, up_card, ac tive_sui t
+    valid_play = False
+    is_eigh t = False
+    prin t "\nYour hand: " ,
+    for card in p_hand:
+        prin t card.shor t_name,
+    prin t "   Up card: " , up_card.shor t_name
+    if up_card.rank == '8':
+        prin t"   Sui t is", ac tive_sui t 
+    prin t "Wha t would you like to do? ",
+    response = raw_inpu t("Type a card to play or 'Draw' to take a card: " )
+
+【PG】Listing 23.11 The main loop with scoring added
+
+【PG】bSets up deck and player 
+and computer hands
+
+【PG】Player wins
+
+【PG】Download from Wow! eBook <www.wowebook.com>

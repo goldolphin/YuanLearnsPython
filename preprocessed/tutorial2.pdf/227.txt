@@ -1,0 +1,7 @@
+【PG】203 CHAPTER 16 Graphics
+
+【PG】Now when we run it, it looks like this:
+
+【PG】That’s better—no gaps between the points. If we increase the line width to 2, it looks even better:
+
+【PG】Download from Wow! eBook <www.wowebook.com>

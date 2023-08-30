@@ -1,0 +1,33 @@
+【PG】423  APPENDIX  C Answers to Self-Test Questions
+
+【PG】2In the temperature-conversion program, would these have worked?
+Try them and see what happens: 
+Why didn’t it work? 
+Remember that everything inside the parentheses is done first. So it goes like this:
+Then 
+Because it goes from left to right, 5 / 9  gets done first. Because 5 and 9 are both 
+integers, Python does integer division and rounds the answer down. Because the 
+answer is less than 1, it gets rounded down to 0. Then 
+Then 
+By the time it got to float() , it was too late—the answer was already 0! The same 
+goes for the second equation.
+
+【PG】3You can “trick” int()  into rounding off instead of rounding down by adding 0.5 to the 
+number you pass to int() .
+Here’s an example (in interactive mode):cel = floa t(5 / 9 * (fahr - 32))
+cel = 5 / 9 * floa t(fahr - 32)
+>>> fahr = 75
+>>> cel = floa t(5 / 9 * (fahr - 32))
+>>> prin t cel
+0.0
+75 - 32 = 43
+5 / 9 = 0
+0 * 43 = 0
+floa t(0) = 0.0
+>>> a = 13.2
+>>> roundoff = int(a + 0.5)
+>>> roundoff
+13
+>>> b = 13.7
+>>> roundoff = int(b + 0.5)
+>>> b

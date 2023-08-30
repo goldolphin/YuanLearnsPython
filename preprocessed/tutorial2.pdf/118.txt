@@ -1,0 +1,13 @@
+【PG】CHAPTER 9
+
+【PG】Just for You—Comments
+
+【PG】Up until now, everything we have typed into our programs (and in interactive mode) has been instructions to the computer. But it’s a very good idea to include some notes to yourself in your programs, describing what the program does and how it works. This will help you (or someone else) look at your program later and figure out what you did.
+
+【PG】In a computer program, these notes are called comments. Adding comments Comments are only for you to read, not for the computer to execute. Comments are part of the program’s documentation, and the computer ignores them when it runs your program.
+
+【PG】Python has a couple of ways to add comments to your program.
+
+【PG】La, la, la, I can’t hear you! La, la, la...
+
+【PG】Download from Wow! eBook <www.wowebook.com>

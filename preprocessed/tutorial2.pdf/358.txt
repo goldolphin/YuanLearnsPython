@@ -1,0 +1,18 @@
+【PG】334 Hello World!
+
+【PG】Parts of the gallows
+Gets word list
+Randomly pick a word from the list
+Hides the man
+Calls the function to replace letters with dashes
+
+【PG】Guess a letter
+Lets the player guess a letter
+Display a dialog if player wins
+Reveal another piece of the man
+
+【PG】Guess a word
+Guess a word
+
+【PG】Player lost
+Wrong guess

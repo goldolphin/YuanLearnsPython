@@ -1,0 +1,35 @@
+【PG】37 CHAPTER  3 Basic Math
+
+【PG】Most programs and computer languages, including Python, let you use either 
+an uppercase or a lowercase E.
+
+【PG】For very small numbers, like 0.0000000000001752, a negative exponent is used. The scien -
+tific notation would be 1.752 x 10-13, and the E-notation would be 1.752e-13. A negative 
+exponent means to move the decimal place to the left instead of the right.
+
+【PG】You can use E-notation to enter very big and very small numbers (or any number, for that 
+matter) into Python. Later you’ll see how to make Python print numbers using E-notation.
+Try entering some numbers in E-notation:
+
+【PG】Although we entered the numbers in E-notation, the answer came out as a regular decimal 
+number. That’s because Python won’t display numbers in E-notation unless you specifically 
+tell it to, or the numbers are really big or really small (lots of zeros). 
+Try this:
+
+【PG】This time, Python displayed the answer in E-notation automatically because it wouldn’t 
+make sense to display a number with 73 zeros!
+
+【PG】If you want numbers like 14,500,000 to display in E-notation, you need to give Python 
+special instructions. You’ll learn more about that later in the book (in chapter 21).
+>>> a = 2.5e6
+>>> b = 1.2e7
+>>> prin t a + b
+14500000.0
+>>> c = 2.6e75
+>>> d = 1.2e74
+>>> prin t c + d
+2.72e+7500000000000000001.752
+
+【PG】0.00000000000011752 = 1.752e-13Move the decimal left 13 places. 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

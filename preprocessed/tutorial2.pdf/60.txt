@@ -1,0 +1,21 @@
+【PG】36 Hello World!
+
+【PG】For example, if an astronomy program was displaying the number of kilometers from Earth to the star Alpha Centauri, it could show 38000000000000000 or 38,000,000,000,000,000 or 38 000 000 000 000 000. (That’s 38 quadrillion kilometers!) But either way, you would get tired of counting all those zeros.
+
+【PG】Another way to display this number is to use scientific notation , which uses powers of 10 along with decimal numbers. In scientific notation, the distance to Alpha Centauri would be written like this: 3.8 x 1016. (See how the 16 is raised above the line, and is smaller?) This reads as “three point eight times ten to the power of sixteen” or “three point eight times ten to the sixteenth. ” What it means is, you take 3.8 and move the decimal point 16 places to the right, adding zeros as needed.
+
+【PG】Scientific notation is great if you can write the 16 as an exponent, raised above the line and smaller, like we did here. If you’re working with pencil and paper, or a program that supports superscripts, then you can use scientific notation.
+
+【PG】But you can’t always use superscripts, so another way to show the same thing is E-notation. E-notation is just another way of writing scientific notation.
+
+【PG】In E-notation, our number would be 3.8E16 or 3.8e16. This reads as “three point eight exponent sixteen” or “three point eight e sixteen” for short. It is assumed that the exponent is a power of 10. That’s the same as writing 3.8 x 1016.
+
+【PG】3.80000000000000000000
+380000000000000000.0 = 3. 8 x 1016
+Move the decimal right 16 places.
+
+【PG】Superscript means a character or characters that are raised above the rest of the text, like this: 1013. The 13 here is the superscript. Usually, superscripts are also smaller than the main text.
+
+【PG】Subscripts are similar, but they’re characters that are below the rest of the text and smaller, like this: log2. The 2 here is a subscript.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

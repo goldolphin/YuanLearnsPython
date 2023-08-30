@@ -1,0 +1,17 @@
+【PG】Collecting Things Together—
+Lists and Dictionaries
+We’ve seen that Python can store things in its memory and retrieve them, using names. So 
+far, we have stored strings  and numbers  (both integers  and floats ). Sometimes it’s useful to 
+store a bunch of things together in a kind of group or collection . Then you can do things to 
+the whole collection at once and keep track of groups of things more easily. One of the kinds 
+of collections is a list, and another is a dictionary . In this chapter, we’re going to learn 
+about lists and dictionaries—what they are and how to create, modify, and use them. 
+
+【PG】Lists are very useful, and they’re used in many, many programs. We’ll use a lot of them in
+the examples in upcoming chapters when we start doing graphics and game programming,
+because the many graphical objects in a game are often stored in a list.
+
+【PG】What’s a list?
+If I asked you to make a list of the members of your family, you might write something like this:
+In Python, you’d write this:
+family = [ 'Mom', 'Dad', 'Junior' , 'Baby']

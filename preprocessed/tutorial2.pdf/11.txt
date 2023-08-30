@@ -1,0 +1,13 @@
+【PG】Preface
+The preface is that part at the beginning of a book that you skip over to get to the good 
+stuff, right? Sure, you can skip over it if you want (hey, you’re the one turning the pages), 
+but who knows what you might miss…. It’s not very long, so maybe you should give it a 
+look, just in case.
+
+【PG】What is programming?
+Very simply, programming means telling a computer to do something. Computers are dumb 
+machines. They don’t know how to do anything. You have to tell them everything, and you 
+have to get all the details right.
+
+【PG】Duhhhhhhhhh…
+Download from Wow! eBook <www.wowebook.com>

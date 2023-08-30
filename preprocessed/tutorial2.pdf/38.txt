@@ -1,0 +1,22 @@
+【PG】Hello World!
+
+【PG】Ran your first Python program
+【PG】Learned about error messages
+【PG】Ran your second Python program: the number-guessing game
+
+【PG】Test your knowledge
+1How do you start IDLE?
+2What does print  do?
+3What is the symbol for multiplication in Python?
+4What does IDLE display when you start to run a program?
+5What is another word for running a program?
+
+【PG】Try it out
+1In interactive mode, use Python to calculate the number of minutes in a week.
+2Write a short program to print three lines: your name, your birth date, and your favorite color. The output should look something like this:
+Save the program and run it. If the program doesn’t do what you expect, or you get any error messages, try to fix it and make it work.
+My name is Warren Sande.
+I was born January 1, 1970.
+My favorite color is blue.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

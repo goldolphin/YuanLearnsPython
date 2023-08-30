@@ -1,0 +1,88 @@
+【PG】5.3　输入数字　　 49
+【PG】temp_string = raw_input()
+【PG】fahrenheit = float(temp_string)
+先使用raw_input() 得到用户的输入（ 一个字符串 ） 。然后使用 ﬂoat()由这
+个字符串创建一个数。得到温度（作为浮点数）后，为它指定名字 fahrenheit 。
+不过还有一种简便方法。只需一步就可以完成所有这些工作，如下：
+【PG】fahrenheit = float(raw_input())
+所做的工作是一样的。 它由用户得到字符串， 然后从这个字符串创建一个数。
+这里只是稍稍少写一点代码。
+下面在我们的温度转换程序中使用这种方法 。试 着运行代码清单 5-3中的程序，
+看看会得到什么。
+
+【PG】48 Hello World!
+【PG】print "That is",
+【PG】print celsius,
+【PG】print "degrees Celsius"
+You can also combine the last three 
+lines of listing 5.3 into one, like this:
+This is really just shorthand for the three print  statements we had before.
+Using int()  with raw_input()
+If the number you want the user to enter will always be an integer (no decimals), you can 
+convert it with 
+int() , like this:
+ Notice the commas at 
+the ends of these lines
+print "That is", celsius, "degrees Celsius"
+response = raw_input("How many students are in your class: ")
+numberOfStudents = int(response)
+
+【PG】#!/bin/env python # Paginate a text file, adding a header and footer import sys, time, string # If no arguments were given, print a helpful message if len(sys.argv)!=2: print 'Usage: pyprint filename'sys.exit(0)class # Increment the page count, and reset the line count self.header_written=1 ; self.count=1 ; self.page=self.page+1PrinterFormatter:self.header_written=0def # Increment the page count, and reset the line count self.header_written=1 ; self.count=1 ; self.page=self.page+1 write_header(self):# If the header for this page has just been written, don'telf.header_written=1 ; self.count=1 ; self.page=self.page+1 write_header(self):# If the 
+
+【PG】Thinking like a (Python) programmer
+There is another way to get numbers as 
+input. Python has a function called 
+input() that gives you a number directly, so you don’t have to use int() or float() 
+to convert it. We used it in the number-guessing program in chapter 1, because it is the simplest way to get a number from the user. 
+However, there are some reasons not to 
+use input(). One of them is that the 
+input() function is being removed from future versions of Python (versions 3.0 and later). There will only be raw_input(). 
+They are going to rename raw_input() as 
+input(), but it will still be the function that we saw in this chapter, and it will only get strings.
+Because we know how to create a number 
+from a string, I recommend you use raw_input() instead of input().
+By the way, there is another change coming 
+in Python 3.0. Instead of writing  print "Hello there" 
+you will have to write 
+ print ("Hello there") You will have to use parentheses with print
+ in Python 3.0 and later.print >>>Hello if #
+print >>>Hello if #
+print >>>Hello if #注意这些代码行末尾的逗号47  CHAPTER  5 Input
+
+【PG】Inputting numbers
+We have seen how to use raw_input()  to get strings. But what if we want to get a number 
+instead? After all, the reason we started talking about input was to let the user enter tem-
+peratures for our temperature-conversion program. 
+You already know the answer if you read chapter 4. We can use the int()  or float()  
+functions to create a number from the string that raw_input()  gives us. It would look
+like this:
+We got the user’s input as a string, using raw_input() . Then we made a number from that, 
+using float() . Once we had the temperature as a float, we gave it the name fahrenheit . 
+But there is a little shortcut. We 
+can do it all in one step, like this:
+This does exactly the same thing. It gets the string from the user and then creates a number 
+from it. It just does it with a bit less code. 
+Now let’s use this in our temperature-conversion program. Try the program in listing 5.3, 
+and see what you get.
+
+【PG】temp_string = raw_input() 
+【PG】fahrenheit = float(temp_string)
+【PG】fahrenheit = float(raw_input())
+Use float(raw_input() ) 
+to get the Fahrenheit 
+temperature from the userNo need to use print with this baby!
+Why pay more for print whenraw_input()  
+has it built right in?! 
+And it can be yours for only 
+3 easy payments of $99.95!That's right!
+raw_input(),
+There’s NOTHING ELSE TO BUY!
+使用ﬂoat(raw_input()) 从用户 
+得到温度（华氏度）代码清单 5-3　使用 raw_input() 转换温度
+还可以把代码清单 5-3最后 3行合并为一行，像这样：
+print "That is", celsius, "degrees Celsius"
+这实际上是之前 3个print语句的简写形式。
+结合int() 使用raw_input()
+如果你希望用户输入的数总是整数 （而不是小数 ） ，可以用int()来转换，例如：
+response = raw_input("How many students are in your class: ")
+numberOfStudents = int(response)

@@ -1,0 +1,19 @@
+【PG】61 CHAPTER 6 GUIs—Graphical User Interfaces
+
+【PG】Default input
+Sometimes when a user is entering information, a certain answer is expected, common, or most likely to be entered. That is called a default . You might be able to save the user some typing by automatically entering the most common answer for him. Then he’d only have to type an answer if he had a different input. 
+To put a default in an enter box, change your program to look like this one.
+impor t easygui
+flavor = easygui.en terbox("Wha t is your favori te ice cream flavor?" ,
+                           defaul t = 'Vanilla' )                
+easygui.msgbox ( "You en tered " + flavor)
+Now, when you run it, “Vanilla” is already entered in the enter box. You can delete it and enter anything you want, but if your favorite flavor is vanilla, you don’t have to type anything: just click OK. 
+
+【PG】What about numbers?
+If you want to enter a number in EasyGui, you can always use an enter box to get a string, and then create a number from it using int()  or float()  (as we did in chapter 4). 
+EasyGui also has something called an integer box  (integerbox ), which you can use for entering integers. You can set a lower and upper limit to the number that can be entered. 
+It doesn’t let you enter floats (decimal numbers), though. To enter decimal numbers, you’d have to use an enter box, get the string, and then use float()  to convert the string.
+
+【PG】The number-guessing game … again
+In chapter 1, we made a simple number-guessing program. Now let’s try the same thing, but using EasyGui for the input and output. Here’s the code.Listing 6.4 How to make default choices
+Here’s the default

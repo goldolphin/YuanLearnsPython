@@ -1,0 +1,22 @@
+【PG】Chapter 2
+
+【PG】Remember This:
+Memory and Variables
+
+【PG】What is a program? Hey, wait a minute, I thought we answered that in chapter 1! We said a program was a series of instructions to the computer.
+
+【PG】Well, that’s true. But almost all programs that do anything useful or fun have some other qualities:
+■They get input .
+■They process  the input.
+■They produce output .
+
+【PG】Input, processing, output
+
+【PG】Your first program (listing 1.1) didn’t have any input or processing. That’s one reason why it wasn’t very interesting. The output was the messages the program printed on the screen. 
+
+【PG】Your second program, the number-guessing game (listing 1.2), had all three of the basic elements: 
+■The input  was the guesses the player typed in. 
+■The processing  was the program checking the guesses and counting the turns.
+■The output  was the messages the program printed. 
+
+【PG】Here’s another example of a program that has all three elements: in a video game, the input  is the signals from the joystick or game controller; the processing  is the program figuring out.

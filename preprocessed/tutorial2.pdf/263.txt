@@ -1,0 +1,38 @@
+【PG】239 CHAPTER  18 A New Kind of Input—Events
+in Pygame to make it generate multiple KEYDOWN  events if a key is held down. This is known as 
+key repeat . You tell it how long to wait before it starts repeating, and how often to repeat. The 
+values are in milliseconds (thousandths of a second). It looks like this:
+The delay  value tells Pygame how long to wait before starting to repeat, and the interval
+value tells Pygame how fast the key should repeat—in other words, how long between each 
+KEYDOWN  event.
+
+【PG】Try adding this to listing 18.2 (somewhere after pygame.init , but before the while  loop) to 
+see how it changes the behavior of the program.
+
+【PG】Event names and key names
+When we were looking for the up and down arrow keys being pressed, we looked for the
+KEYDOWN  event type and the K_UP  and K_DOWN  key names. What other events are available? 
+What are the names of the other keys? 
+There are quite a lot of them, so I won't list them all here. But they're on the Pygame web site.
+You can find the list of events in the event section of the Pygame documentation:
+www.pygame.org/docs/ref/event.html
+The list of key names is in the key section:
+www.pygame.org/docs/ref/key.html
+
+【PG】Here are a few of the common events you’ll use:
+■QUIT  
+■KEYDOWN  
+■KEYUP  
+■MOUSEMOTION  
+■MOUSEBUTTONUP  
+■MOUSEBUTTONDOWN  
+Pygame also has names for each key that can be pressed. You saw the up arrow and down 
+arrow, K_UP  and K_DOWN . You’ll see some of the other key names as we go along, but they all 
+start with K_ followed by the name of the key, like this:
+■K_a, K_b, and so on (for letter keys)
+■K_SPACE 
+■K_ESCAPE 
+and so on. delay = 100
+interval = 50
+pygame.key.se t_repea t(delay, in terval)
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,39 @@
+【PG】76 Hello World!
+You might want to bookmark this page so you can refer back to this table easily.
+
+【PG】What did you learn?
+In this chapter, you learned about 
+■Comparison tests and the relational operators
+■Indenting and blocks of code
+■Combining tests using and and or
+■Reversing a test using not
+
+【PG】Test your knowledge
+1What will the output be when this program is run?
+2From the program in the first question, what will the output be if you change 
+my_number  to 25?
+3What kind of if statement would you use to check if a number was greater than 30 
+but less than or equal to 40?
+4What kind of if statement would you use to check if the user entered the letter “Q” in 
+either uppercase or lowercase? 
+
+【PG】Try it out 
+1A store is having a sale. It’s giving 10% off purchases of $10 or lower, and 20% off 
+purchases of greater than $10. Write a program that asks the purchase price and 
+displays the discount (10% or 20%) and the final price.
+2A soccer team is looking for girls from ages 10 to 12 to play on their team. Write a 
+program to ask the user’s age and whether the user is male or female (using “m” or 
+“f”). Display a message indicating whether the person is eligible to play on the team.
+Bonus: Make the program so that it doesn’t ask for the age unless the user is a girl.
+3You’re on a long car trip and arrive at a gas station. It’s 200 km to the next station. 
+Write a program to figure out if you need to buy gas here, or if you can wait for the 
+next station.
+The program should ask these questions:
+
+【PG】my_number = 7
+if my_number < 20:
+    prin t 'Under 20'
+else:
+    prin t '20 or over'
+
+Download from Wow! eBook <www.wowebook.com>

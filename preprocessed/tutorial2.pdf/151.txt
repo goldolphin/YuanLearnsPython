@@ -1,0 +1,23 @@
+【PG】127 CHAPTER  12 Collecting Things Together—Lists and Dictionaries
+
+【PG】Deleting with pop()
+pop()  takes the last item off the list and gives it back to you. That means you can assign 
+it a name, like this:
+You can also use pop()  with an index, like this:
+Here, we popped the second letter (index 1), which was b. The item we popped was 
+assigned to second , and it was also removed from letters .
+
+【PG】With nothing inside the parentheses, pop()  gives you the last item and removes it from the 
+list. If you put a number in the parentheses, pop(n)  gives you the item at that index and 
+removes it from the list.
+
+【PG】Searching a list
+Once you have several items in a list, how do you find them? Two things you’ll often need to 
+do with a list are
+■Find out whether an item is in a list or not
+■Find out where an item is in the list (its index)
+
+【PG】The in keyword
+To find out whether something is in a list, you use the in keyword, like this:
+The 'a' in letters  part is a Boolean  or logical  expression. It’ll return the value True  if a is in 
+the list, and False  otherwise.

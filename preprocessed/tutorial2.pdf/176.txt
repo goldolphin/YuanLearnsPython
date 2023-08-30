@@ -1,0 +1,26 @@
+【PG】152 Hello World!
+
+【PG】Returning a value
+The way you make a function return a value is to use the Python return  keyword inside the function. Here’s an example:
+This will send the value taxTotal  back out to the part of the program that called the function.
+
+【PG】But when it’s sent back, where does it go? 
+Returned values go back to whatever code called the function. Here’s an example: 
+The calculateTax  function will return the value 8.4694, and that value will be assigned to totalPrice.
+
+【PG】You can use a function to return values anywhere you’d use an expression. 
+You can assign the return value to a variable (as we just did), use it in another expression, or print it, like this:
+You can also do nothing with the returned value, like this: 
+In the last example, the function ran and calculated the total with tax, but we didn’t use the result.
+
+【PG】Let’s make a program with a function that returns a value. 
+In listing 13.4, the calculateTax() function returns a value. We give it the price before tax and the tax rate, and it returns the price after tax. We’ll assign this value to a variable. So instead of just using the function’s name like we did before, we need a variable, an equal sign ( =), and then the function’s name. The variable will be assigned the result that the calculateTax() function gives back.
+def calculateTax(price, tax_rate):
+    taxTotal = price + (price * tax_rate)
+    return taxTotal
+totalPrice = calculateTax(7.99, 0.06)
+
+【PG】>>> print calculateTax(7.99, 0.06)
+8.4694
+>>> total = calculateTax(7.99, 0.06) + calculateTax(6.59, 0.08)
+>>> calculateTax(7.49, 0.07)

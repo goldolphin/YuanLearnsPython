@@ -1,0 +1,35 @@
+【PG】424 Hello World!  
+If the original number is less than 13.5, int()  gets a number less than 14, which 
+rounds down to 13. 
+If the original number is 13.5 or greater, int()  gets a number equal to or greater than 
+14, which rounds down to 14. 
+Try it out
+
+【PG】1You can use float()  to convert a string to a decimal number:
+But how do you know that this is a number and not a string? Let’s check 
+the type:
+
+【PG】2You can use int()  to convert a decimal number to an integer:
+The answer got rounded down. 
+
+【PG】3You can use int()  to convert a string to an integer: 
+Chapter 5: Input
+
+Test your knowledge
+
+【PG】1With this code,
+if the user types in 12, answer  contains a string. That’s because raw_input()  always 
+gives you a string. >>> a = floa t('12.34')
+>>> prin t a
+12.34
+>>> type(a)
+<type 'float'>
+>>> print int(56.78)
+56
+>>> a = int('75')
+>>> print a 
+75
+>>> type(a)
+<type 'int'>
+answer = raw_input()
+Download from Wow! eBook <www.wowebook.com>

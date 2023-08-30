@@ -1,0 +1,55 @@
+【PG】第 8章 转 圈 圈
+
+【PG】把这个程序保存为 Loop4.py 并运行（可以使用 Run（运行） Run Module（运行模块）菜单，或者按下快捷键 F5）。你会看到这样的结果：
+
+【PG】It’s almost the same as the first one . . . except that it missed the last loop! Why?
+
+【PG】The answer is that range (1, 5) gives us the list [1, 2, 3, 4]. You can try this in interactive mode:
+
+【PG】Why not 5? Well, that’s just the way the range() function works. It gives you a list of numbers starting at the first number and ending just before the last number. You need to take that into account and adjust the range to get the number of loops you want.
+
+【PG】Listing 8.5 shows our program modified to give us the 8 times table up to 10.
+
+【PG】for looper in range(1, 11):
+    print looper, "times 8 =", looper * 8
+
+【PG】And here’s what we get when we run it:
+
+【PG】In the program in listing 8.5, range(1, 11) gave us a list of numbers from 1 to 10, and the loop did one iteration for each number in the list. Each time through the loop, the variable looper took the next value in the list.
+
+【PG】By the way, we called our loop variable looper, but you can call it anything you want.
+
+【PG】Listing 8.5 Printing the 8 times table up to 10 using range()
+>>> ================= RESTART =================
+>>>1 times 8 = 8
+2 times 8 = 16
+3 times 8 = 24
+4 times 8 = 32
+5 times 8 = 40
+6 times 8 = 48
+7 times 8 = 56
+8 times 8 = 64
+9 times 8 = 72
+10 times 8 = 80
+
+【PG】基本上与第一个结果完全相同……不过少了最后一次循环！为什么呢？
+
+【PG】答案在于，range(1, 5)给出的列表是[1, 2, 3, 4]。你可以在交互模式中试试看：>>> print range(1, 5)
+[1, 2, 3, 4]
+
+【PG】为什么没有5呢？
+
+【PG】嗯，这正是range()函数的做法。它会提供一个数字列表，从给定的第一个数开始，在给定的最后一个数之前结束。必须考虑到这一点，调整范围来得到想要的循环次数。
+
+【PG】Range
+
+【PG】如果你在Python 3中这样做，结果会有点不一样：
+
+【PG】>>> print(range(1, 5))
+range(1,5)
+
+【PG】这是因为在Python 3中range()函数不会提供一个数字列表，而是会提供一个“可迭代”（iterable）的东西，你可以使用循环来遍历它。（前文的“术语箱”中提到过的。）
+
+【PG】如果在for循环中使用range()，则其工作方式是完全一样的，只是内部机制略有不同而已。
+
+【PG】代码清单 8-5给出了修改后的程序，它会给出8的乘法表（从1到10）。

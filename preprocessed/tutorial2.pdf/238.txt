@@ -1,0 +1,73 @@
+【PG】214 Hello World!
+
+【PG】To make things simpler, we’ll go back to just moving the ball horizontally. The program is in the next listing.
+
+
+impor t pygame, sys
+
+pygame.ini t()
+
+screen = pygame.display.se t_mode([640,480])
+
+screen.fill([255, 255, 255])
+
+my_ball = pygame.image.load( 'beach_ball.png' )
+
+x = 50
+
+y = 50
+
+x_speed = 5
+
+running = True
+
+while running:
+
+    for even t in pygame.even t.get():
+
+        if even t.type == pygame.QUIT: 
+
+            running = False
+
+    pygame. time.delay(20)
+
+    pygame.draw.rec t(screen, [255,255,255], [x, y, 90, 90], 0)
+
+    x = x + x_speed
+
+    if x > screen.ge t_wid th():           
+
+        x = 0
+
+    screen.bli t(my_ball, [x, y])
+
+    pygame.display.flip()
+
+pygame.qui t()
+
+
+【PG】In lines 17 ( if x > screen.get_width(): ) and 18 (x = 0 ), we detected when the ball reached the right edge of the window, and we moved it back, or wrapped it back, to the left side.
+
+
+【PG】You might have noticed that, when the ball appears on the right, it “pops in” at [0, 50]. It would look more natural if it “slid in” from off screen. Change line 18 ( x = 0 ) to x = -90 and see if you notice the difference.
+
+
+【PG】What did you learn?
+
+Whew! That was a busy chapter! In it, you learned
+■How to use Pygame
+■How to create a graphics window and draw some shapes in it
+■How to set colors in computer graphics
+■How to copy images to a graphics window
+■How to animate images, including “erasing” them when you move them to a new place
+■How to make a beach ball “bounce” around the window
+■How to make a beach ball “wrap” around the window
+
+【PG】Listing 16.16 Moving a beach ball image with wrapping
+
+If the ball is at the far right …
+
+… start over at the left side
+
+
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,34 @@
+【PG】279 CHAPTER  20 More GUIs
+Make sure you indent the whole def block four spaces in from the class  statement, as 
+shown in the listing. You need to do that because all components are inside , or are part of , 
+the window. So the code for the button’s event handler goes inside the class definition.
+Try running it to see what happens. We’re going to look at this code in detail in the next 
+section.
+
+【PG】The return of event handlers
+In our Pygame programs in the last few chapters, you learned about event handlers  and how to 
+use them to look for keyboard and mouse activity, or events . The same thing applies for PyQt. 
+In MyWindowClass , we define the event handlers for the window. Because the button is in 
+our main window, the event handler for the button goes there. 
+
+【PG】First we have to tell the main window that we are making an event handler for a particular 
+widget. In listing 20.2, that happens in line 10:
+Here we connect  or bind  the event  (self.pushButton.clicked ) to the event handler
+(self.button_clicked ). The definition of the button_clicked  event handler starts on 
+line 12. clicked  is just one of the events we can get for the button. Others include pressed
+and released . self.pushBu tton.clicked.connec t(self.bu tton_clicked)#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessagfie
+len(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)
+
+【PG】Connecting the button’s event to the event handler 
+is called binding the event handler. That’s just 
+programmer-speak for connecting things together. 
+In PyQt and many other event-driven programming 
+systems, you will hear references to binding 
+things. Usually you bind an event or other signal 
+to some code that handles that event or 
+signal. Signal is a programming term for 
+a way of passing information around 
+from one part of the code to another. print>>>Helloif#
+print>>>Hellofi#
+print>>>Helloif#
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,37 @@
+【PG】323 CHAPTER 22 File Input and Output
+There’s something that looks like text at the start of the .wav  file, but then it gets crazy. 
+That’s because a .wav  file doesn’t have text in it, it has sound. The readline()  and 
+readlines()  methods are only for reading text files.
+Most of the time, if you need to use a binary file, you’ll be using something like Pygame or 
+some other module to load the file, like we did in chapter 19:
+In that case, Pygame takes care of opening the file and reading the binary data (which is 
+music in this example). 
+This book isn’t going to cover how to process binary files. But just so you know what it looks 
+like, you can open a binary file by adding a b to the file mode, like this:
+The 'rb'  part means you’re opening the file for reading  in binary  mode. 
+
+【PG】In the past few sections, you have been learning how to get information from a file into 
+your program, which is called reading  the file. Next you’re going to learn about getting 
+information out of your program into a file. This is called writing  the file.
+
+【PG】Writing to a file
+If you want to store some information from your program more permanently, you could 
+look at it on the screen and write it down on a piece of paper. But that kind of defeats the 
+purpose of using a computer!
+A better idea is to save the information on the hard drive, so that, even when the program 
+isn’t running—in fact, even when the computer is turned off—your data is still there and 
+you can get it later. You have done this many, many times already. Every time you save a 
+report for school, a picture, a song, or a Python program, you’re storing it to the hard drive. 
+
+【PG】>>> f = open('spla t.wav', 'r')
+>>> prin t f.readline()
+RIFFö▲  WAVEfm t ►   ☺ ☺ "V  "V   da tap▲  
+ÇÇÇÇÇÇÇÇüÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ ⌂ÇÇ⌂⌂⌂⌂⌂Ç⌂⌂⌂⌂Ç
+ÇÇÇ⌂⌂ÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ ⌂Ç⌂ÇÇÇÇüÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ ⌂ÇÇÇÇÇüüÇÇÇ ⌂ÇÇ⌂ÇÇÇÇ⌂⌂ÇÇüéééÇzvvy{|Çâ
+çïê} trv|äëïîèå~u t|⌂yrqr txÇîÖ₧æäàü tvçÆÄ|mlfWR]jnmpxüêÅ ºƒâràó«¼Ö}`ORj ⌂{hZZg-
+wàëy{äæá ⌐¿ÿézåÿèmWLISjÇàzrvÇüy tv~üÇ}yrifj t}äêèêëÄöÉémSCFZlr tyéïö¥ñ¬½ ⌐ñ¢ÆÄìÅôòÆ
+ÄÅæ|åÜ⌐¬ÿüpd\UME@;99:>EJMW]YTZfuçòƒ ⌐▒║┴──├───┴╕⌐ ¢ôë~{|{yxzzuiZNG-
+HLSbs⌂~wrnf\TPQU]`jvàæÉ ⌂osÇïôæä}üàë ₧┼
+pygame.mixer.music.load( 'bg_music.mp3' )
+my_music_file = open('bg_music.mp3' , 'rb')
+Download from Wow! eBook <www.wowebook.com>

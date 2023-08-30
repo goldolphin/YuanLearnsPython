@@ -1,0 +1,24 @@
+【PG】64 Hello World!
+Test your knowledge
+
+【PG】1How do you bring up a message box with EasyGui?
+【PG】2How do you get a string (some text) as input using EasyGui?
+【PG】3How can you get an integer as input using EasyGui?
+【PG】4How can you get a float (decimal number) as input using EasyGui?
+【PG】5What’s a default value? Give an example of something you might use it for.
+
+Try it out
+
+【PG】1Try changing the temperature-conversion program from chapter 5 to use GUI input 
+and output instead of raw_input()  and print .
+
+【PG】2Write a program that asks for your name, then house number, then street, then city, 
+then province/territory/state, and then postal/zip code (all in EasyGui dialog boxes). 
+The program should then display a mailing-style full address that looks something 
+like this:
+John Snead
+28 Main S treet
+Akron, Ohio
+12345
+
+Download from Wow! eBook <www.wowebook.com>

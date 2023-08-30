@@ -1,0 +1,17 @@
+【PG】393 CHAPTER 25 Skier Explained
+
+【PG】What happens to the obstacles after they scroll off the top of the screen?
+【PG】
+if map_position >= 640:
+    create_map()
+    map_position = 0
+obstacles.update()
+animate()
+pygame.quit()
+
+【PG】If you run listing 25.2, you should see trees and flags scrolling up the screen.
+
+【PG】That’s a good question, Carter. With our current code, they just keep going up, above the top of the window, with their y positions getting more and more negative. If the game runs for a long time, we end up creating a large number of obstacle sprites. This could actually cause our program to slow down or run out of memory at some point. So we need to clean up a bit.
+【PG】Keep track of how far the obstacles have scrolled up
+【PG】Create a new block of obstacles at the bottom
+【PG】Main loop

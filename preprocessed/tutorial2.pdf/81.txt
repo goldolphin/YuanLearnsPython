@@ -1,0 +1,31 @@
+【PG】57 CHAPTER  6 GUIs—Graphical User Interfaces
+【PG】The EasyGui msgbox()  function is used to create a message box. In most cases, the names of 
+EasyGui functions are just shortened versions of the English words. 
+When you use msgbox() , you should see something that looks like this:
+And if you click the OK button, the message box will close.
+
+【PG】GUI input
+You just saw a kind of GUI output—a message box. But what about input? You can get input 
+with EasyGui too.
+When you ran the previous example in interactive mode, did you click the OK button? If you 
+did, you should have seen something like this in the shell or terminal or command window:
+The 'OK'  part was Python and EasyGui telling you that the user clicked the OK button. 
+EasyGui gives you back information to tell you what the user did in the GUI—what button 
+she clicked, what she typed, and so on. You can give this response a name (assign it to a 
+variable). Try this:
+Click OK in the message box to close it. Then type this:
+Now the user’s response, OK, has the variable name user_response . Let’s look at a few other 
+ways to get input with EasyGui.
+
+【PG】The message box that you just saw is really just one example of something called a dialog 
+box. Dialog boxes are GUI elements that are used to tell the user something or get some 
+input from the user. The input might be a button click (like OK), or a filename, or some text 
+(a string).
+The EasyGui msgbox  is a dialog box with a message and a single button, OK. But you can 
+have different kinds of dialog boxes with more buttons and other things.>>> impor t easygui
+>>> easygui.msgbox( "Hello there!")
+'OK'
+>>> user_response = easygui.msgbox( "Hello there!")
+>>> prin t user_response
+OK
+【PG】Download from Wow! eBook <www.wowebook.com>

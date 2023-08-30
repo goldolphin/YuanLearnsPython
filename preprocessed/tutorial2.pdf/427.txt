@@ -1,0 +1,45 @@
+【PG】403 CHAPTER  26 Python Battle
+This will tell the robot that when it starts, it needs to go forward. When the robot is in the 
+middle of a U-turn, you can change this to say "turnRight"  to remind the robot that it 
+needs to turn right. After modifying the turn()  function, the final code looks like this.
+
+class AI:
+    def __ini t__(self):
+        self.curren tlyDoing = "forward"
+    def turn(self):
+        if self.robo t.lookInFron t() == "bot":
+            self.robo t.attack()
+        elif self.robo t.lookInFron t() == "wall":
+            self.robo t.turnRigh t()
+            self.curren tlyDoing = "turnRigh t"
+        elif self.curren tlyDoing == "turnRigh t":
+            self.robo t.turnRigh t()
+            self.curren tlyDoing = "forward"
+        else:
+            self.robo t.goFor th()
+
+【PG】If you run this, you might notice that the AI has some flaws. Let’s try to make changes so our 
+robot beats CircleAI.
+
+【PG】A more complicated robot
+Our first robot was pretty simple, and it didn’t win against CircleAI. In order to beat all the 
+other robots, we’ll need a really good strategy. A really good strategy is more than “drive in 
+circles until the enemy goes in front of me. ” A really good strategy requires using every 
+command available. Most of all, a really good strategy requires a lot of thought as to how 
+it’s going to work.
+
+【PG】There are a few methods I didn’t mention in the last section, which could help us on our 
+quest to create a winning strategy:
+■self.robot.goBack() —Pretty self-explanatory: the robots can move backward.
+■self.robot.checkSpace(space) —Lets you look at any space on the board. 
+self.robot.checkSpace((3,3)) , for example, tells you what is on space (3,3). If there’s 
+nothing there, it returns "blank" . Otherwise, it returns "bot"  (if the enemy is there), 
+"me"  (if your robot is there), or "wall"  (if the space is out of bounds).
+■self.robot.locateEnemy() —Gives you the position and direction of the enemy.
+■self.robot.position —Gives you your own position.
+■self.robot.rotation —Gives you your own direction.
+■self.robot.calculateCoordinates(direction, distance, position) —Explained  
+later. First, we need to understand how the coordinate system in Python Battle works.
+
+【PG】Listing 26.1 The completed robot AI
+Download from Wow! eBook <www.wowebook.com>

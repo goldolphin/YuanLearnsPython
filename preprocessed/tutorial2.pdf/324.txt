@@ -1,0 +1,19 @@
+【PG】300 Hello World!
+
+【PG】I thought the % sign was used for the modulus operator! You have a good memory, Carter! The % sign is used for modulus  (the remainder in integer division), as you learned in chapter 3, but it’s also used to indicate format strings. Python can tell from the way it’s used whether you mean modulus or a format string.
+
+【PG】Integers: %d or %i To print something as an integer, use the %d or %i format string (I don’t know why there are two, but you can use either one):
+Notice that, this time, the number wasn’t rounded. It was truncated (which means “chopped off”). If it were rounded, we would have seen 13 instead of 12. When you use integer formatting, the number is truncated, and when you use floating-point formatting, the number is rounded. 
+
+【PG】There are three things to notice here:
+■You don’t have to have any other text in the string—you can have the format string by itself. 
+■Even though our number was a float, we printed it as an integer. You can do that with format strings.
+■Python truncated the value to the next lowest integer. But this is different from the int()  function (which you saw in chapter 4), because format strings don’t create a new value like int()  does—they just change how the value is displayed.
+
+【PG】Just now, we printed 12.67 in integer format, and Python printed 12. But the value of the variable number  has not been changed. Check it and see:
+The value of number  hasn’t changed. We just made it print differently using the format string.>>> number = 12.67
+>>> print '%i' % number
+12
+>>> print number
+12.67
+Download from Wow! eBook <www.wowebook.com>

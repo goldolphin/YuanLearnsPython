@@ -1,0 +1,12 @@
+【PG】253 CHAPTER  18 A New Kind of Input—Events
+【PG】Defines paddle class
+【PG】Initializes everything
+【PG】Creates the font object
+【PG】The start of the main program (while loop)
+【PG】Detects mouse motion to move the paddle
+【PG】Detects collisions between the ball and paddle
+【PG】Moves the ball
+【PG】Redraws everything
+【PG】Decreases life counter if ball hits bottom
+【PG】Creates and draws the final score text
+【PG】Starts a new life, after 2-second delay

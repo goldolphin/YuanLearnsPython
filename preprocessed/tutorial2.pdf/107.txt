@@ -1,0 +1,36 @@
+【PG】83 CHAPTER  8 Loop the Loop
+
+【PG】Save this as Loop4.py , and run it. (You can use the Run > Run Module  menu option or the 
+shortcut of pressing the F5 key.) You should see something like this:
+
+【PG】It’s almost the same as the first result … except that it missed the last loop! Why?
+The answer is that range (1, 5)  gives us the list [1, 2, 3, 4] . You can try this in 
+interactive mode:
+Why not 5?
+Well, that’s just the way the  range()  function works. It gives you a list of numbers starting 
+at the first number and ending just before  the last number. You need to take that into 
+account and adjust the range to get the number of loops you want.
+
+【PG】>>> ================= RESTART =================
+>>> 
+1 times 8 = 8
+2 times 8 = 16
+3 times 8 = 24
+4 times 8 = 32
+>>> prin t range(1, 5)
+[1, 2, 3, 4]
+
+【PG】Range
+If you do this in Python 3, you’ll get something a little different:
+>>> print(range(1, 5))
+range(1,5)
+
+【PG】This is because, in Python 3, the range()  function doesn’t give you 
+a list of numbers, it gives you something called an iterable . This is 
+something over which your loops can iterate. (Remember the 
+Word Box above.)
+
+【PG】As far as using range()  in a for loop, it works exactly the same. 
+It’s just a little different under the hood.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

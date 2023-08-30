@@ -1,0 +1,12 @@
+【PG】CHAPTER  1 Getting Started
+The Python shell window (the one that first came up when you started IDLE) becomes 
+active again, and you’ll see something like the following:
+The RESTART  part tells you that you started running a program. (This will be helpful when 
+you’re running your programs over and over again to test them.)
+Then the program runs. Okay, so it doesn’t do very much. But you got the computer to do
+what you told it to do. Our programs will get more interesting as we go along.
+
+【PG】If something goes wrong
+What happens if you have an error in your program, and it doesn’t run? There are two 
+different kinds of errors that can happen. Let’s look at both kinds, so you’ll know what to 
+do if either one happens to you.

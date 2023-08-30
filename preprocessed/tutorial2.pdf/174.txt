@@ -1,0 +1,48 @@
+【PG】150 Hello World!
+
+【PG】To send Carter’s letters to everyone on the street, our address-printing function will need 
+two arguments: one for the name, and one for the house number. The next listing shows 
+what this would look like.
+def prin tMyAddress(someName, houseNum):
+    prin t someName                               
+    prin t houseNum,  
+    prin t "Main S treet"           
+    prin t "Ottawa, On tario, Canada"   
+    prin t "K2M 2E9"                   
+    prin t                             
+    
+prin tMyAddress( "Car ter Sande" , "45")                  
+prin tMyAddress( "Jack Black" , "64")                     
+prin tMyAddress( "Tom Green" , "22")                      
+prin tMyAddress( "Todd Whi te", "36")                 
+
+【PG】When you use multiple arguments (or parameters), you separate them with a comma, just 
+like items in a list, which brings us to our next topic….Listing 13.3 Function with two arguments
+
+【PG】There’s another term you’ll hear when talking about passing things 
+to a function: parameters . Some people say that the terms argument 
+and parameter are interchangeable. So you could say, 
+“I passed two parameters to that function,” or 
+“I passed two arguments to that function.”
+Some people say that you should use argument when talking about the 
+passing part (when you call the function), and parameter when 
+talking about the receiving part (what is inside the function).
+
+【PG】CALLERHere’s an 
+argument 
+for you!
+FUNCTIONThanks for the
+parameter!
+
+【PG】As long as you use argument or parameter to talk about passing 
+values to functions, programmers will know what you mean. 
+Uses two variables, 
+for two argumentsBoth variables
+get printed
+Comma makes house 
+number and street 
+print on the same line
+Calls the function, 
+passing it two 
+parameters
+Download from Wow! eBook <www.wowebook.com>

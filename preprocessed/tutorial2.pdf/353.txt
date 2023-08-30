@@ -1,0 +1,34 @@
+【PG】329 CHAPTER  22 File Input and Output
+The function to “unpickle” something is load() . You give it a file object for the file that 
+contains the pickled data, and it gives you back the data in its original form. Let’s try it. If 
+you ran the program in listing 22.6, you should have a file called my_pickled_list.pkl  in the 
+same place where you store your programs. Now try the program in the next listing and see 
+if you get the same list back.
+
+【PG】impor t pickle
+pickle_file = open('my_pickled_lis t.pkl', 'r')
+recovered_lis t = pickle.load(pickle_file)
+pickle_file.close()
+prin t recovered_lis t
+
+You should get output that looks like this:
+It looks like the unpickling worked! We got back the same items we pickled. The E-notation 
+looks a little different, but it’s the same number, at least to 16 decimal places. The difference 
+is from roundoff error , which we talked about in chapter 4.
+
+【PG】In the next section, we’re going to use what we have learned about file input and output to 
+help us make a new game. 
+Game time again—Hangman
+
+【PG】Why do we have a game in the chapter on files? Well, one thing that makes a game of 
+Hangman interesting is having a nice big list of words from which to choose the puzzles. 
+The easiest way to do that is to read it from a file. We’ll also use PyQt for this game to 
+show that using Pygame isn’t the only way to make graphical games.
+
+【PG】I’m not going to explain this program in quite as much detail as some other programs. By 
+now, you should be able to look at the code and figure out how most of it works on your 
+own. I’ll just give you a little guidance to help you along. 
+
+【PG】Listing 22.7 Unpickling using load()
+['Fred', 73, 'Hello there', 8.1987599999999997e-012]
+Download from Wow! eBook <www.wowebook.com>

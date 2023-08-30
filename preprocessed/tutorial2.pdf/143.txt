@@ -1,0 +1,31 @@
+【PG】119 CHAPTER 12 Collecting Things Together—Lists and Dictionaries
+
+【PG】Try adding another item:
+Remember that you have to create the list (empty or not) before you start adding things to 
+it. It’s like if you’re making a cake: you can’t just start pouring ingredients together—you 
+have to get a bowl out first to pour them into. Otherwise you’ll end up with stuff all over 
+the counter! 
+
+【PG】What’s the dot?
+Why did we use a dot between friends  and 
+append() ? Well, that starts getting into a pretty 
+big topic: objects. You’ll learn more about 
+objects in chapter 14, but for now, here’s a 
+simple explanation.
+Many things in Python are objects . To do something with an object, you need the object’s 
+name (the variable name), then a dot, and then whatever you want to do to the object. So 
+to append  something to the friends  list, you’d write this: >>> friends.append( 'Mary')
+>>> prin t friends
+['David', 'Mary']
+
+【PG】friends.append(some thing)Zen, ve add
+ze yolk. 
+Magnificent, 
+no?
+Append means to add something 
+to the end. 
+When you append something to 
+a list, you add it to the end 
+of the list.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

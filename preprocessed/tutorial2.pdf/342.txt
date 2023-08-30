@@ -1,0 +1,32 @@
+【PG】Hello World!
+
+【PG】Remember, in chapter 19 on sound, we opened our sound files as splat.wav , and so on? We 
+didn’t use a path. That’s because I told you to copy the sound files to the same folder where 
+you saved the program. If you looked at it in Windows Explorer, it would look something 
+like this: 
+
+【PG】Notice that I have Python files (with the .py extension) in the same folder as sound files 
+(with the .wav  extension). When a Python program is running, its working directory  is 
+whatever folder the .py file is stored in.
+
+【PG】If you stored your program in e:/programs  and ran the program, that program would start 
+with e:/programs  as its working directory . If you have a sound file stored in the same folder, 
+your program only needs the filename to use that file. It doesn’t need a path to get 
+there, because it’s already there. So you can just do this:
+
+【PG】Notice that you don’t need to use the full pathname of the sound file (which would be 
+e:/programs/splat.wav ). You just use the filename without the path, because the file is in 
+the same folder as the program that’s using it.
+
+【PG】Enough about paths!
+
+【PG】That’s all I’m going to say about paths and file locations. The whole topic of folders and 
+directories, paths, working directories, and so on, is one that some people find confusing, 
+and it would take a lot of pages to fully explain it. But this book is about programming, not 
+about operating systems, file locations, or paths, so if you’re having trouble with this, maybe 
+you can ask a parent, a teacher, or someone else who knows about computers to help you.
+
+【PG】All the other examples in this book that use files have them in the same place as the 
+program, so you don’t have to worry about the path or about using full pathnames.my_sound = pygame.mixer.Sound( "spla t.wav")
+
+【PG】Download from Wow! eBook <www.wowebook.com>

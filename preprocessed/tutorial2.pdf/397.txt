@@ -1,0 +1,53 @@
+【PG】373 CHAPTER  24 Computer Simulations
+【PG】Then, when you want to read the timestamp, you ’ll use some string methods like split()
+to break the string up into the various parts, like day, month, year and hour, minute, second. 
+That should work just fine.
+
+【PG】The other way is to use the pickle  module, which you saw in chapter 22. The pickle
+module lets you save any kind of variable to a file, including objects. Because we’ll be using 
+datetime  objects to keep track of time, it should be quite easy to use pickle  to save them 
+to a file and read them back again.
+
+【PG】Let’s try a very simple example that prints a message saying when the program was last run. 
+It will need to do these things:
+■It will look for a pickle file and open it. Python has a module called os (short for 
+“operating system”) that can tell us if the file exists. The method we’ll use is called 
+isfile() .
+■If the file exists, we’ll assume that the program has run before, and we’ll find out when 
+it last ran (from the time in the pickle file). 
+■Then we’ll write a new pickle file with the current time. 
+■If this is the first time the program has run, there will be no pickle file to open, so we’ll 
+display a message saying we created a new pickle file.
+
+【PG】The following listing has the code. Try it and see how it works.
+impor t datetime, pickle 
+impor t os                                              
+firs t_time = True
+if os.pa th.isfile( "las t_run.pkl" ):
+    pickle_file = open("las t_run.pkl" , 'r')
+    las t_time = pickle.load(pickle_file) 
+    pickle_file.close()
+    prin t "The las t time this program was run was " , las t_time
+    firs t_time = False
+    
+pickle_file = open("las t_run.pkl" , 'w') 
+pickle.dump(da tetime.da tetime.now(), pickle_file)
+pickle_file.close()
+if firs t_time:
+    prin t "Crea ted new pickle file."
+
+【PG】Now we have all the pieces we need to make a simple Virtual Pet program, which we’ll do in 
+the next section.
+
+【PG】Listing 24.3 Saving time to a file using pickle
+Imports datetime, pickle, 
+and os modules
+Checks if the pickle file exists
+Opens pickle file for 
+reading (if it exists)
+Unpickles the datetime object
+Opens (or creates) the 
+pickle file for writing
+Pickles the datetime 
+object of the current time
+Download from Wow! eBook <www.wowebook.com>

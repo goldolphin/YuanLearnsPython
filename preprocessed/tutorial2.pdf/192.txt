@@ -1,0 +1,44 @@
+【PG】168 Hello World!
+【PG】In chapter 11, we made a program about 
+hot dogs. Now, as an example of how to 
+use objects, we’re going to make a class 
+for a hot dog. 
+
+【PG】An example class— HotDog
+For this example, we’ll assume that hot dogs always have a bun. (It’s too messy otherwise.) 
+We’ll give our hot dog some attributes and some methods. 
+These are the attributes:
+■cooked_level —A number that lets us know how long the hot dog has been cooked. 
+We’ll use 0–3 for raw, over 3 for medium, and over 5 for well-done, and anything over 8 
+will be charcoal! Our hot dogs will start out raw.
+■cooked_string —A string describing how well-done the hot dog is. 
+■condiments —A list of what’s on the hot dog, like ketchup, mustard, and so on.
+
+These are the methods:
+■cook() —Cooks the hot dog for some period of time. This will make the hot dog more 
+well-done.
+■add_condiment() —Adds condiments to the hot dog.
+■__init__() —Creates our instance and sets the default properties.
+■__str__() —Makes the print  look nicer.
+
+【PG】First, we need to define the class. Let’s start with the __init__()
+method, which will set the default attributes 
+for a hot dog:
+
+【PG】class HotDog:
+    def __ini t__(self):
+        self.cooked_level = 0
+        self.cooked_s tring = "Raw"
+        self.condimen ts = []
+
+By the way, the nameselfhas no
+special meaning in Python. That’s just
+the name everybody uses for the
+instance reference. It’s another one of
+those conventions that make your
+code easier to read. You could name
+the instance variable whatever you
+want, but I strongly suggest you
+follow the convention and useself—
+it’ll make things much less confusing.
+Download from Wow! eBook <www.wowebook.com>

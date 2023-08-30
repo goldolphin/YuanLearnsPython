@@ -1,0 +1,43 @@
+【PG】 Hello World!
+
+【PG】 You can put more than two conditions together with and: 
+If there are more than two conditions, all the conditions have to be true for the if
+statement to be true. 
+
+【PG】 There are other ways of combining conditions too. 
+Using or
+The or keyword is also used to put conditions together. If you use or, the block is executed
+if any of the conditions are true:
+
+【PG】 Using not
+You can also flip around a comparison to mean the opposite, using not:
+
+【PG】 age = floa t(raw_inpu t("Enter your age: " ))
+grade = int(raw_inpu t("Enter your grade: " ))
+color = raw_inpu t("Enter your favori te color: " )
+if age >= 8 and grade >= 3 and color == "green":
+    prin t "You are allowed to play this game."
+else:
+    prin t "Sorry, you can' t play the game."
+
+【PG】 color = raw_inpu t("Enter your favori te color: " )
+if color == "red" or color == "blue" or color == "green":
+    prin t "You are allowed to play this game."
+else:
+    prin t "Sorry, you can' t play the game."
+
+【PG】 color = raw_inpu t("Enter your favori te color: " )
+if color == "red" or color == "blue" or color == "green":
+    prin t "You are allowed to play this game."
+else:
+    prin t "Sorry, you can' t play the game."
+
+【PG】 color = “red” color = “blue”
+True True TrueFalsecolor = “green”
+False False
+
+【PG】 You can
+play!You can’t
+play!or or
+(Get here if any 
+condition is true)elseif

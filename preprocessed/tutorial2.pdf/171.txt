@@ -1,0 +1,15 @@
+【PG】147 CHAPTER 13 Functions
+
+【PG】Like that argument I had with you the other day? Passing arguments to a function
+
+【PG】Now it’s time to see what the parentheses are for: arguments!
+
+【PG】No, Carter, computers are very agreeable—they never argue. In programming, the term argument means a piece of information you give to a function. We say that you pass the argument to the function.
+
+【PG】Imagine that you wanted to be able to use the address-printing function for any member of your family. The address would be the same for everybody, but the name would be different each time. Instead of having the name hard-coded as “Warren Sande” in the function, you can make it a variable. The variable is passed to the function when you call it.
+
+【PG】An example is the easiest way to see how this works. In listing 13.2, I modified the address-printing function to use one argument for the name. Arguments are named, just like other variables. I called this variable myName.
+
+【PG】When the function runs, the variable myName gets filled in with whatever argument we pass to the function when we call it. We pass the argument to the function by putting it inside the parentheses when we call the function. FUNCTIONCALLER
+
+【PG】Download from Wow! eBook <www.wowebook.com>

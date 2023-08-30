@@ -1,0 +1,41 @@
+【PG】Chapter 19 Sound
+
+Even though the ball has reached the bottom of the window, it’s still moving! There’s noth -
+ing to stop the ball from going farther down, so its y-value just keeps getting bigger. It’s 
+“below” the bottom of the screen where we can’t see it, but we can still hear  it! The ball is 
+still moving, so it’s still bouncing off the “sides” whenever its x-value gets big enough or 
+small enough. That happens in the move()  method, and that method keeps running as long 
+as the while loop is running.
+
+How can we fix it? There are a few ways:
+■Stop the ball from moving by setting its speed to [0,0] when the game is over.
+■Check if the ball is below the bottom of the window, and don’t play the hit_wall
+sound if it is.
+■Check the done  variable, and don’t play the hit_wall  sound if the game is done.
+I picked the second option, but any of them would work. I’ll leave it up to you to choose 
+one and modify your code to fix this problem.
+
+【PG】Adding music to PyP ong
+
+There’s just one thing left to do—add the music. We need to load the music file, set the 
+volume, and start it playing. We want it to keep repeating while the game is playing, so we’ll 
+use the special value of -1, like this:
+This code can go anywhere before the main while loop. That will start the music playing. 
+
+Now we need to stop the music at the end, and there’s a nice way to do this. pygame.mixer.music  has a method called fadeout()  that will fade the music out 
+gradually instead of stopping it abruptly. You just tell it how long the fadeout should 
+be, like this:
+That’s 2,000 milliseconds, which is 2 seconds. This line can go in the same place where we 
+set done = True. (It doesn’t matter if it comes before or after.)
+
+The program is now complete with sound effects and music. Give it a try, and see how it 
+sounds! In case you want to see how the whole thing goes together, I have included my 
+final version as listing 19.5. You will need to make sure that wackyball.bmp  and all the 
+sound files are in the same folder as the program.
+
+pygame.mixer.music.load( "bg_music.mp3" )
+pygame.mixer.music.set_volume(0.3)
+pygame.mixer.music.play(-1)
+pygame.mixer.music.fadeout(2000)
+
+Download from Wow! eBook <www.wowebook.com>

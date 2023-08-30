@@ -1,0 +1,31 @@
+【PG】88 Hello World!
+
+【PG】Now we’re stepping by 5. How about counting backward? When the third parameter in the range()  function is negative, the loop counts down  instead of up. Remember that the loop starts at the first number and goes up to (or down to) but not including the second number, so in our last example we only got down to 2, not 1.
+
+【PG】We can use this to make a countdown timer program. We only need to add a couple more lines. Open a new editor window in IDLE, and type in the following program. Then try running it. 
+impor t time
+for i in range(10, 0, -1):   
+    prin t i
+    time.sleep(1)          
+prin t "BLAST OFF!"
+
+【PG】>>> for i in range(10, 1, -1):
+        prin t i
+
+10
+9
+8
+7
+6
+5
+4
+3
+2
+
+【PG】Listing 8.6 Ready for lift-off?Hey, who put
+us in reverse?
+Counts 
+backward
+ Waits one 
+second
+Download from Wow! eBook <www.wowebook.com>

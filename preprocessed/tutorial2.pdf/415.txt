@@ -1,0 +1,24 @@
+【PG】391 CHAPTER  25 Skier Explained
+
+【PG】Hey, why did the y position have an extra 640 pixels added to it? Good eye, Carter! When the game starts, we don’t want the screen to be full of obstacles. We want it to start out blank, and have the obstacles begin to appear from the bottom. So, we create each screenful of scenery “below” the bottom of the window. To do that, we add 640 (the height of our window) to each obstacle’s y-value.
+
+【PG】When the game starts, we want the obstacles to start scrolling up. To do that, we change each obstacle’s y-position. How much we change it depends on the skier’s apparent speed down the hill. We put that in a method called update() , which is part of ObstacleClass : The variable speed  is the skier’s speed, which is a global variable. speed  has both the skier’s x and y speed, so we use index [1] to get just the y (vertical) speed.
+
+【PG】As our first screenful of obstacles makes it all the way onto the screen, we need to create more of them, another screenful, at the bottom. How do we know when that is? We have a variable called map_position  that keeps track of how far the scenery has scrolled up. We do that in the main loop:
+
+【PG】We have the animate()  function, just like in our skier-only code, to redraw everything.   def upda te(self):
+        global speed
+        self.rec t.cen tery -= speed[1]
+running = True
+while running:
+    clock. tick(30)
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: running = False
+        
+    map_posi tion += speed[1]          
+    
+    if map_posi tion >= 640:                           
+        crea te_map()                                        
+        map_posi tion = 0 
+
+【PG】Keep track of how far the map has scrolled up If it has scrolled all the way onto the screen, create a new screenful of obstacles

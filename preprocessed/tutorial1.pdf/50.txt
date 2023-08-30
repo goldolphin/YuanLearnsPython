@@ -1,0 +1,66 @@
+【PG】第 2章　记住内存和变量
+应该记得， 一个东西可以有多个名字（ 上
+面可以贴多个标签 ） 。如果"Mr. Morton "上
+还有另一个标签， 那 么它还在计算机的内存
+里。不过，如 果它上面再没有任何标签了，
+Python就会发现再没有人需要它了， 所以会把
+它从内存中删除
+。
+这样一来 ，内 存中就不会塞满那些没人用
+的东西。 Python会自动完成所有这些清理工
+作，根本不用你操心。
+还有一点很重要 ，这 里并没有真的把 "Mr. Morton "改成"Mr. Smith "。我们
+只是把标签从一个东西移到另一个东西上（ 重 新指派名字 ） 。Python 中有些东西（ 如
+数字和字符串 ）是不能改变的。 你 可以把它们的名字重新指派到其他东西上（ 就像
+我们刚才所做的一样） ，但是并不能对原先的东西做任何改变 。
+Python中还有一些东西是可以改变的。第 12章介绍列表 （list）时我们会更多地
+讨论这方面的内容。
+
+【PG】2.6　全新的我
+还可以创建一个等于自己的变量：>>> Score = 7
+>>> Score = Score
+我敢打赌， 你肯定在想： “什么嘛， 这一点儿用都没有！” 你的想法没错。 这实
+际上就是在说 “我是我”。不过，稍稍做点改变 ，你就能成为一个全新的你 ！试试看：
+
+【PG】23  CHAPTER  2 Remember This— Memory and Variables
+Remember that things can have more than one name 
+(more than one tag stuck on them). If “Mr. Morton” 
+still has another tag on it , then it stays in the 
+computer’s memory. But if it no longer has any tags, 
+Python figures that no one needs it anymore, so it 
+gets deleted from memory. 
+That way, the memory doesn’t fill up with things that 
+nobody is using. Python do es all this cleanup auto-
+matically, and you don’t have to worry about it.
+An important thing to know is that we didn’t actually change “Mr. Morton” into “Mr. Smith” . 
+We just moved the tag (reassigned the name) from one thing to the other. Some kinds of 
+things in Python (like numbers and strings) cannot be changed. You can reassign their names to something else (like we just did), but you can’t change the original thing.
+There are other kinds of things in Python that can be changed. We will learn more about 
+this in chapter 12, when we talk about lists.
+
+【PG】The new me
+You can also make a variable equal to itself:
+I bet you’re thinking, “Well, that’s pretty useless!” And you’d be right. It’s kind of like saying 
+“I am me. ” But with a small change, you can 
+become a whole new you ! Try this:
+
+【PG】>>> Score = 7
+>>> Score = Score
+>>> Score = Score + 1
+>>> print Score
+8
+
+【PG】Changes Score  
+from 7 to 8
+把Score从7改为 8
+What happened here? In the first line, the Score  tag was stuck on the value 7. We made a 
+new thing, which was Score + 1 , or 7 + 1. That new thing is 8. Then we took the Score  tag 
+off the old thing (7) and stuck it on the new thing (8). So Score  has been reassigned from 7 
+to 8. 
+Whenever we make a variable equal something, the variable always appears on the left side 
+of the equal sign ( =). The trick is that the variable can also appear on the right. This turns 
+out to be quite useful, and you’ll see it in a lot of programs. The most common use is to 
+increment  a variable (increase it by a certain amount), like we just did, or the opposite, to 
+decrement a variable (decrease it by a certain amount). 
+
+【PG】Tag Moved

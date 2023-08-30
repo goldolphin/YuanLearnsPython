@@ -1,0 +1,31 @@
+【PG】449  APPENDIX  C Answers to Self-Test Questions
+
+【PG】You can list any kind of computer simulations you can think of. These could be games, math or science programs, or even weather forecasts (which are created by using computer simulations).
+
+【PG】A timedelta  object is used to store the difference between two dates or times.
+
+【PG】Try it out
+The programs for this section are quite long—too long to print in the book. You can find them all on the web site: 
+TIO_CH24_1.py —Lunar Lander with out-of-orbit check
+TIO_CH24_2.py —Lunar Lander with play-again option
+TIO_CH24_3.py —Virtual Pet GUI with Pause  button
+
+【PG】Chapter 26: Python Battle
+
+【PG】Try it out
+This is a basic robot that beats CircleAI:
+This robot’s strategy is to wait for CircleAI to come around the board and attack when CircleAI reaches it. I created it using my knowledge of how CircleAI works, and it wouldn’t win against other robots. As I said in the chapter, it would be much, much harder to make a robot that wins every time, even when it doesn’t know what robot it’s battling against.
+
+class AI:
+    def __init__(self):
+        self.isFirstTurn = True
+    def turn(self):
+        if self.isFirstTurn:
+            self.robot.turnLeft()
+            self.isFirstTurn = False
+        elif self.robot.lookInFront() == "bot":
+            self.robot.attack()
+        else:
+            self.robot.doNothing()
+
+Download from Wow! eBook <www.wowebook.com>

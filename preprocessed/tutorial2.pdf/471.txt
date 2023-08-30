@@ -1,0 +1,45 @@
+【PG】447  APPENDIX  C Answers to Self-Test Questions
+
+【PG】The word files should just be lists of words separated by commas.
+
+【PG】2Here is a program that saves some data in a text file:
+
+【PG】3Here is a program that saves some data using the pickle  module:
+
+【PG】Chapter 23: Take a Chance—Randomness
+
+【PG】Test your knowledge
+
+【PG】1A random event  is something that happens (an “event”) where you don’t know ahead of 
+time what the outcome will be. Two examples are flipping a coin (you don’t know if it 
+will come up heads or tails) and rolling a pair of dice (you don’t know what numbers 
+will come up on the dice).
+
+noun = random.choice(noun_lis t)
+adj = random.choice(adj_lis t)
+verb = random.choice(verb_lis t)
+adverb = random.choice(adverb_lis t)
+prin t"The", adj, noun, verb, adverb + '.'
+
+name = raw_inpu t("Enter your name: " )
+age = raw_inpu t("Enter your age: " )
+color = raw_inpu t("Enter your favori te color: " )
+food = raw_inpu t("Enter your favori te food: " )
+my_da ta = open("my_da ta_file. txt", 'w')
+my_da ta.wri te(name + "\n")
+my_da ta.wri te(age + "\n")
+my_da ta.wri te(color + "\n")
+my_da ta.wri te(food)
+my_da ta.close()
+
+impor t pickle
+name = raw_inpu t("Enter your name: " )
+age = raw_inpu t("Enter your age: " )
+color = raw_inpu t("Enter your favori te color: " )
+food = raw_inpu t("Enter your favori te food: " )
+my_lis t = [name, age, color, food]
+pickle_file = open("my_pickle_file.pkl" , 'w')
+pickle.dump(my_lis t, pickle_file)
+pickle_file.close()
+
+【PG】Download from Wow! eBook <www.wowebook.com>

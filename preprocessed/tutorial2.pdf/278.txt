@@ -1,0 +1,22 @@
+【PG】254 Hello World!
+
+【PG】If you run the code in listing 18.5, you should see something like this:
+
+【PG】If you were paying attention in the editor, this is about 75 lines of code (plus some blank lines). That’s the biggest program we have created so far, but it also has a lot of stuff going on, even though it looks pretty simple when you run it.
+
+【PG】In the next chapter, you’ll learn about sounds in Pygame, and we’ll add some sound to our PyPong game.
+
+【PG】What did you learn?
+
+【PG】In this chapter, you learned about
+
+■Events
+■The Pygame event loop
+■Event handling
+■Keyboard events
+■Mouse events
+■Timer events (and user event types)
+■pygame.font  (for adding text to Pygame programs)
+■Putting all these things together to make a game!
+
+【PG】Download from Wow! eBook <www.wowebook.com>

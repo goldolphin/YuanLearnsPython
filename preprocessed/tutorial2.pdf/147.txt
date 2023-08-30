@@ -1,0 +1,34 @@
+【PG】123 CHAPTER  12 Collecting Things Together—Lists and Dictionaries
+【PG】Displaying the type  of each one tells you for certain that in one case you get a single item 
+(a string , in this case), and in the other case you get a list.
+
+【PG】The smaller list you get back when you slice a list is a copy of items from the original list. 
+That means you can change it and the original list won’t be affected.
+
+【PG】Slice shorthand
+There are some shortcuts you can take when using slices. They don’t really save you much 
+typing, but programmers are a lazy bunch, so they use shortcuts a lot. I want you to know 
+what the shortcuts are, so you can recognize them when you see them in other people’s 
+code and understand what’s going on. That’s important, because looking at other people’s 
+code and trying to understand it is a good way to learn a new programming language, or 
+programming in general.
+
+【PG】If the slice you want includes the start of the list, the shortcut is to use a colon followed by 
+the number of items you want, like this: 
+Notice that there is no number before the colon. This will give you everything from the start 
+of the list up to (but not including) the index you specify. 
+
+【PG】You can do something similar to get the end of a list:
+Using a number followed by a colon gives you everything from the index you specify to the 
+end of the list.
+
+【PG】If you don’t put any numbers in, and just use a colon, you get the whole list:
+Remember I said that slices make a copy of the original? So letters[:]  makes a copy of the 
+whole list. This is handy if you want to make some changes to a list but keep the original 
+unchanged.>>> prin t letters[:2]
+['a', 'b']
+>>> prin t letters[2:]
+['c', 'd', 'e']
+>>> prin t letters[:]
+['a', 'b', 'c', 'd', 'e']
+Download from Wow! eBook <www.wowebook.com>

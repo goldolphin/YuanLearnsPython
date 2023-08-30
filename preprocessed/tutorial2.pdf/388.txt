@@ -1,0 +1,46 @@
+【PG】364 Hello World!
+【PG】The fuel gauge is just a couple of rectangles drawn with Pygame’s draw.rect()
+method. The text is made with pygame.font objects, just like we did for PyPong.
+【PG】The code will have sections that do the following:
+■Initialize the game—set up the Pygame window, load the images, and set some initial 
+values for the variables
+■Define the sprite class for the throttle
+■Calculate the height, velocity, acceleration, and fuel consumption
+■Display the information
+■Update the fuel gauge
+■Display the rocket flames (which change size depending on the thrust)
+■Blit everything to the screen, check for mouse events, update the throttle position, 
+and check if the ship has landed—this will be the main Pygame event loop
+■Display “Game Over” and final stats
+
+【PG】Listing 24.1 shows the code for Lunar Lander, and you can find it as Listing_24-1.py  in the 
+\Examples\LunarLander  folder or on the website ( www.helloworldbook2.com ). The 
+graphics (the spaceship and moonscape) are there too. Have a look at the code and the 
+notes, and make sure you understand how everything works. Don’t worry about the height, 
+velocity, and acceleration formulas. You’ll learn about all that in high school physics, pass 
+the exam, and then soon forget it (unless you go to work for NASA). Or maybe this program 
+will help you remember! 
+
+【PG】impor t pygame, sys 
+pygame.ini t()
+screen = pygame.display.se t_mode([400,600])     
+screen.fill([0, 0, 0])                            
+ship = pygame.image.load( 'lunarlander.png' )      
+moon = pygame.image.load( 'moonsurface.png' )      
+ground  = 540    
+start = 90                                       
+clock = pygame. time.Clock()                  
+ship_mass = 5000.0                             
+fuel = 5000.0                                   
+veloci ty = -100.0                              
+gravi ty = 10                                
+heigh t = 2000                              
+thrus t = 0                                       
+delta_v = 0                                       
+y_pos = 90                                       
+held_down = False                               
+                                        Listing 24.1 Lunar Lander
+Initializes 
+programLanding pad 
+is y = 540
+Download from Wow! eBook <www.wowebook.com>

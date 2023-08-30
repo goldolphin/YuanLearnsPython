@@ -1,0 +1,32 @@
+【PG】98 Hello World!
+Commenting out
+You can also use comments to temporarily exclude parts of the program from running. 
+Anything that is a comment will be ignored:
+Because print "Hello"  was commented out, that line was not executed, so the word 
+“Hello” didn’t print. 
+This is useful when you’re debugging a program and only want certain parts to run and 
+other parts to be ignored. Just put a # in front of any line you want the computer to ignore, 
+or put triple quotes around a section of code you want the computer to ignore.
+
+【PG】Most code editors, including IDLE, have a feature that lets you comment (and uncomment) 
+whole blocks of code quickly. In IDLE’s editor, look in the Format  menu.
+
+【PG】What did you learn?
+In this chapter, you learned that
+■Comments are just for you (and other humans), not for the computer.
+■Comments can also be used to block out parts of the code, to prevent them from 
+running.
+■You can use triple-quoted strings as a kind of comment that spans multiple lines.
+
+【PG】Test your knowledge
+Because comments are pretty simple, we’ll take a break and not have any test questions for 
+this chapter.
+
+【PG】Try it out
+Go back to the temperature-conversion program (from the “Try it out” section in chapter 3), 
+and add some comments. Rerun the program to see that it still runs the same. #prin t "Hello"
+prin t "World"
+>>> =============== RESTART ================
+>>> 
+World
+Download from Wow! eBook <www.wowebook.com>

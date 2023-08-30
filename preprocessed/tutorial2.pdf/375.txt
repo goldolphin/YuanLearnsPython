@@ -1,0 +1,38 @@
+【PG】Chapter 23 Take a Chance—Randomness
+The face-up card
+When the hand is first dealt, one card from the deck is turned up to start the discard pile. 
+When any player plays a card, it goes on the discard pile, face up. The card that’s showing 
+on the discard pile at any time is called the up card . We could keep track of this by making a 
+list for the discard pile, the same way we made a list for the “hand” in our test code in 
+listing 23.5. But we don’t really care about all the cards in the discard pile. We only care 
+about the last card added to it. So we can just use a single instance of a Card  object to 
+keep track of it.
+When the player or computer plays a card, we’ll do something like this:
+
+The active suit
+Usually, the active suit (the one the player or computer is trying to match) is the same as 
+the suit of the up card. But there’s an exception. When an 8 has been played, the player calls 
+the suit. So if he plays the 8 of Diamonds, he might call Clubs as the suit. That means that 
+the next play must match Clubs, even though a Diamond (the 8 of Diamonds) is showing.hand.remove(chosen_card)
+up_card = chosen_card
+
+【PG】Thinking like a programmer
+The approach described above is called 
+top-down programming. 
+That's where you start with the outline 
+of what is needed and then fill in the 
+details.
+Another way to do it is bottom-up. In 
+that method, you would first create all 
+the individual parts, like the player's 
+turn, the computer's turn, and so on, and 
+then put them together like building 
+blocks.
+Both approaches have advantages and 
+disadvantages. Deciding how to choose one 
+over the other is not a topic for this 
+book. But I thought you should know that 
+there are different ways to tackle 
+building a program.
+
+【PG】Download from Wow! eBook <www.wowebook.com>

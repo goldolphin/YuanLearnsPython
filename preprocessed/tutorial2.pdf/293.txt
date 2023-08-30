@@ -1,0 +1,61 @@
+【PG】269 CHAPTER  19 Sound
+
+【PG】myBall = MyBallClass( 'wackyball.bmp' , [12,6], [50, 50]) 
+ballGroup = pygame.spri te.Group(myBall) 
+paddle = MyPaddleClass([270, 400]) 
+lives = 3 
+poin ts = 0 
+font = pygame.fon t.Fon t(None, 50) 
+score_ text = fon t.render( str(poin ts), 1, (0, 0, 0)) 
+textpos = [10, 10] 
+done = False 
+running = True 
+
+【PG】while running: 
+    clock. tick(30) 
+    screen.fill([255, 255, 255]) 
+    for even t in pygame.even t.get(): 
+        if even t.type == pygame.QUIT: 
+            running = False 
+        elif even t.type == pygame.MOUSEMOTION: 
+            paddle.rec t.cen terx = even t.pos[0] 
+    if pygame.spri te.spri tecollide(paddle, ballGroup, False): 
+        hi t.play()                   
+        myBall.speed[1] = -myBall.speed[1] 
+    myBall.move() 
+
+    if not done: 
+        screen.bli t(myBall.image, myBall.rec t) 
+        screen.bli t(paddle.image, paddle.rec t) 
+        screen.bli t(score_ text, textpos) 
+        for i in range (lives): 
+            wid th = screen.ge t_wid th() 
+            screen.bli t(myBall.image, [wid th - 40 * i, 20]) 
+        pygame.display.flip() 
+
+    if myBall.rec t.top >= screen.ge t_rec t().bo ttom: 
+        if not done: 
+            spla t.play()   
+        lives = lives - 1 
+        if lives <= 0: 
+            if not done: 
+                pygame. time.delay(1000) 
+                bye.play()                       
+            final_ text1 = "Game Over" 
+            final_ text2 = "Your final score is:  " + str(poin ts) 
+            f t1_fon t = pygame.fon t.Fon t(None, 70) 
+            f t1_surf = fon t.render(final_ text1, 1, (0, 0, 0)) 
+            f t2_fon t = pygame.fon t.Fon t(None, 50) 
+            f t2_surf = fon t.render(final_ text2, 1, (0, 0, 0)) 
+            screen.bli t(ft1_surf, [screen.ge t_wid th()/2 - \
+                        f t1_surf.ge t_wid th()/2, 100]) 
+            screen.bli t(ft2_surf, [screen.ge t_wid th()/2 - \
+                        f t2_surf.ge t_wid th()/2, 200])
+
+【PG】Plays sound when the ball hits the paddle
+
+【PG】Plays sound when the player loses a life
+
+【PG】Waits one second and then plays the ending sound
+
+【PG】Download from Wow! eBook <www.wowebook.com>

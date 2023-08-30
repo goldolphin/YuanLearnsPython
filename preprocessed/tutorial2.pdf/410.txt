@@ -1,0 +1,30 @@
+【PG】386 Hello World!
+
+【PG】You’ll see why this order matters soon.
+
+【PG】To keep track of which way the skier is facing, we use a variable called angle . This has values from -2 to +2, as follows:
+■-2 = Turning sharp left 
+■-1 = Turning a little left
+■ 0 = Going straight down
+■+1 = Turning a little right
+■+2 = Turning sharp right
+(Note that right  and left refer to screen right and left, as we see them, not the skier’s right and left.)
+
+【PG】We use the value of angle  to know which image to use. In fact, we can directly use the value of angle  as the index to the list of images:
+■skier_images[0]  is the one where he’s going straight down. 
+■skier_images[1]  is the one where he’s turning a little right.
+■skier_images[2]  is the one where he’s turning sharp right.
+
+【PG】Now comes the tricky part. Remember in Chapter 12, when we talked about lists, that we said that a negative list index will wrap around and start counting backward from the end of the list? So, in this case
+
+■skier_images[-1]  is the one where he is turning a little left (this would usually be called skier_images[4] ).
+■skier_images[-2]  is the one where he is turning sharp left (this would usually be called skier_images[3] ).
+
+【PG】Now you can see why we arranged the images in the list in that specific order:
+■angle  = +2 (turning sharp right) = skier_images[2]
+■angle  = +1 (turning a little right) = skier_images[1]
+■angle  = 0 (going straight down) = skier_images[0]
+■angle  = -1 (turning a little left) = skier_images[-1]  (also known as skier_images[4] )
+■angle  = -2 (turning sharp left)  = skier_images[-2]  (also known as skier_images[3] )
+
+【PG】Download from Wow! eBook <www.wowebook.com>

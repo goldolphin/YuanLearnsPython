@@ -1,0 +1,12 @@
+【PG】192 Hello World!
+
+【PG】What’s the “flip”?
+The display object in Pygame (ours is called screen , which we created in line 3 of listing 16.3) has two copies of whatever is displayed in the Pygame window. The reason is that, when we start doing animation, we want to make it as smooth and fast as possible. So instead of updating the display every time we make a small change to our graphics, we can make a number of changes and then “flip” to the new version of the graphics. This makes the changes appear all at once, instead of one by one. This way we don’t get half-drawn circles (or aliens, or whatever) on our display. 
+Think of the two copies as being a current screen and a “next” screen. The current screen is what you see right now. The “next” screen is what you’ll see when you do a flip. You make all your changes on the “next” screen and then flip to it so you can see them.
+
+【PG】How to make a circle
+When you run the program in listing 16.3, you should see a red circle near the upper-left corner of the window, like this:
+Not surprisingly, the pygame.draw.circle() function draws a circle. You have to tell it five things:
+■ On what surface to draw the circle. (In this case, it’s on the surface we defined in line 3, called screen , which is the display surface.) 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

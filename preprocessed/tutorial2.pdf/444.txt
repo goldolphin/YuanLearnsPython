@@ -1,0 +1,37 @@
+【PG】420 Hello World!
+Try it out
+1>>> print 7 * 24 * 60 (7 days in a week, 24 hours in a day, 60 minutes in an hour). 
+You should get 10,080 as the answer.
+
+【PG】2Your program should look something like this: 
+Chapter 2: Remember This—Memory and Variables
+Test your knowledge
+1You tell Python that a variable is a string by putting quotes around it.
+2The question was, “Can you change the value that is assigned to a variable?” That 
+depends what you mean by “change. ” If you do this,
+then you can do
+You have changed what is assigned to myAge . You have moved the myAge  tag to a dif -
+ferent thing: you moved it from 10 to 11. But you didn’t actually change the 10 into an 
+11. So it’s more correct to say that you can “reassign the name to a different value, ” or 
+“assign a new value to the variable, ” rather than “change the value of the variable. ”
+3No, TEACHER  is not the same as TEACHEr . Because variable names are case-sensitive, the 
+last letter of the two variable names makes them different.
+4Yes, 'Blah' and "Blah"  are the same. They are both strings, and in this case, Python 
+doesn’t care which kind of quotes you use, as long as the opening and closing quotes 
+around the string match.
+5No, '4' is not the same as 4. The first one is a string (even though it has only one 
+character) because it has quotes around it. The second one is a number.
+6Answer b. 2Teacher  is not a correct variable name. Variable names in Python can’t 
+start with a number.
+7"10"  is a string because it has quotes around it.
+
+【PG】Try it out
+1In interactive mode, you would do something like this:prin t "My name is Warren Sande."
+prin t "My bir th da te is January 1, 1970."
+prin t "My favori te color is blue."
+myAge = 10
+myAge = 11
+>>> tempera ture = 25
+>>> prin t tempera ture
+25
+Download from Wow! eBook <www.wowebook.com>

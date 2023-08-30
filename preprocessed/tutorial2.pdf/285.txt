@@ -1,0 +1,46 @@
+【PG】261 CHAPTER  19 Sound
+Hey, it “splatted” 
+me right at the start! 
+It didn't wait for the 
+song to finish. 
+Why not?
+
+【PG】splat = pygame.mixer.Sound( "splat.wav")
+splat.set_volume(0.50)     
+splat.play()                                                     
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: 
+            running = False
+pygame.quit()
+
+【PG】Give this a try and see how it works.
+
+【PG】What Carter noticed is that, as soon as the 
+program starts the music, it goes on to do the next thing, 
+which happens to be playing the “splat” sound. The reason for 
+this is that music is quite often used in the background, and you 
+won’t always want the program to sit there and play the entire 
+song before doing something else. In the next section, we’ll make 
+this work the way we want.
+
+【PG】Playing background music
+Background music is meant to play in the background while the game is being played. So 
+once you start the background song, Pygame has to get ready to do other things, like 
+moving sprites around or checking the mouse and keyboard for input. It doesn’t wait for 
+the song to finish. 
+
+【PG】But what if you want to know when the song ends? Maybe you want to start a different 
+song or play another sound (like we want to do). How do you know when the music is 
+done? Pygame has a way to tell you: you can ask the mixer.music  module if it’s still busy 
+playing a song. If it is, you know the song isn’t done yet. If it is not busy, you know the song 
+is done. Let’s try that. 
+
+【PG】To find out if the music module is still busy playing a song, you use the mixer.music
+module’s get_busy()  function. This will return the value True  if it’s still busy or False  if it 
+isn’t. This time, we’ll make our program play the song, then play the sound effect, and then 
+end the program automatically. The next listing shows you how.Adjusts the volume 
+of the sound effect
+
+【PG】Download from Wow! eBook <www.wowebook.com>

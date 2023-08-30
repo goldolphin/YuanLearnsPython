@@ -1,0 +1,116 @@
+【PG】459 INDEX
+index() 128, 309–310
+infinite loops 80
+inheritance 173–174
+__init__() 165
+initialize 364
+input 15–16, 46, 55, 313, 319
+events 233
+insert() 124–125
+installing EasyGui 56
+installing Python xiii, xix–xx, 1
+instance 162
+instance reference 167
+instruction xii, 3–4
+int() 40, 43
+integer 30, 371
+changing to a float 41
+integer formatting, %i 298, 300
+integerbox() 61
+interactive mode 5, 20, 41
+invalid literal error 44
+isfile() 373
+iterable 83
+iteration 80, 84, 105
+
+【PG】J
+join() 307
+
+【PG】K
+key (dictionary) 137
+key repeat 239
+keyboard event 235
+KEYDOWN 237
+delay value 239
+interval value 239
+key repeat 239
+multiple events 239
+keys() 139
+key-value pairs 137
+keyword 5, 8
+and 73
+break 91
+class 278
+continue 91
+def 143
+elif 70, 104
+else 71
+for 79
+from 181, 184
+global 156
+if66, 72, 104
+in309
+not 74
+or74
+pass 176
+print 4–5, 293
+return 152
+while 90L
+
+【PG】Label widget 282
+less-than sign 69
+line continuation character 114
+Line Edit widget (PyQt) 282
+list 58, 79, 81, 117, 133, 151, 159, 344
+adding to 118
+append() 118, 124
+contents 120
+creating 118
+del 126
+empty 118
+extend() 125
+in127
+INDEX 455
+index() 128
+insert() 125
+items 118
+modifying 124
+mutable 133
+ordered 129
+pop() 127
+remove() 126
+reverse() 130
+searching 127
+slice 122
+slicing 121
+sorted copy 132
+sorted() 132
+sorting 129
+sorting in reverse order 130
+list of operators 75
+lists of lists 133
+lists, compared to dictionaries 138
+
+【PG】load() 329
+local namespace 183
+local variables 153
+logical operators 75
+logical test 70
+long lines of code 114
+long strings 23
+loop 104
+conditional 89
+double-nested 108
+event 234
+for 79
+nested 112
+variable 106
+variable name 84
+variable nested 107
+while 89
+looping 78
+body 80
+break, breaking out 91
+conditional loops 78, 89
+continue 91
+Download from Wow! eBook <www.wowebook.com>

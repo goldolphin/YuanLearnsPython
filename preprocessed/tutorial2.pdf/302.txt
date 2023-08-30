@@ -1,0 +1,50 @@
+【PG】As you might expect with Python, everything in PyQt is an object. Each window is an 
+object, defined with the class  keyword. This program, and all the PyQt programs we will 
+make, have a class that inherits from the PyQt class QMainWindow . In listing 20.1, we called 
+the class MyWindowClass  (in line 6), but we could have used any name. Remember that a 
+class definition is just a blueprint. We still have to build a house—make an instance  of the 
+class—and we do that with the line myWindow = MyWindowClass()  near the bottom. 
+myWindow  is an instance of the class MyWindowClass .
+
+【PG】Type this into an IDLE or SPE editor window, and save it as MyFirstGui.py :
+■Main code —MyFirstGui.py
+■UI file —MyFirstGui.ui
+
+【PG】The two files need to be saved in the same location, so the main program can find the UI file 
+and load it at the start of the program.
+You can now run this from IDLE. You’ll see the window open, and you can click the button. 
+But nothing happens yet. We have our program running, but we still haven’t written any 
+code for the button. Close the program by clicking the X in the title bar.
+
+【PG】Let’s do something simple. When we click the button, let’s make it move to a new place in 
+the window. Add the code in lines 10 to 17 of listing 20.2 to the code you typed in listing 
+20.1.
+impor t sys
+from PyQt4 impor t QtCore, Q tGui, uic
+form_class = uic.loadUiType( "MyFirs tGui.ui")[0]
+class MyWindowClass(Q tGui.QMainWindow, form_class):
+    def __ini t__(self, paren t=None):
+        Q tGui.QMainWindow.__ini t__(self, paren t)
+        self.se tupUi(self)
+        self.pushBu tton.clicked.connec t(self.bu tton_clicked)
+                                                               
+    def button_clicked(self):           
+        x = self.pushBu tton.x()   
+        y = self.pushBu tton.y()   
+        x += 50                    
+        y += 50                    
+        self.pushBu tton.move(x, y)   
+app = Q tGui.QApplica tion(sys.argv)
+myWindow = MyWindowClass()
+myWindow.show()
+app.exec_()Listing 20.2 Adding an event handler for the button from listing 20.1
+Connects the event 
+handler to the event
+The event
+handler
+Moves the button 
+when we click itAdd these lines 
+to make the
+button move on 
+each mouse click
+Download from Wow! eBook <www.wowebook.com>

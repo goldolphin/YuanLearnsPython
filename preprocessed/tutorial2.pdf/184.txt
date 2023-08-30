@@ -1,0 +1,52 @@
+【PG】Hello World!
+
+【PG】Objects in the real world
+
+What’s an object? If we were not talking about programming, and I asked you that question, 
+we might have a conversation like this:
+
+That’s a good start at defining what an object is in Python, too. Take a ball, for example. You 
+can do things to a ball, like pick it up, throw it, kick it, or inflate it (for some balls). We call 
+these actions. You can also describe a ball by telling me its color, size, and weight. These are 
+attributes  of a ball. 
+
+Real objects in the real world have
+■Things that you can do to  them (actions)
+■Things that describe  them (attributes or properties)
+
+【PG】In programming, we have the same kind of thing. 
+
+【PG】Objects in Python 
+
+In Python, the characteristics, or “things you know” about an object, are also called 
+attributes , so that should be easy to remember. In Python, the actions, or “things you 
+can do” to an object, are called methods . 
+
+If you were to make a Python version or model  of a ball, the ball would be an object and it 
+would have attributes  and methods . You can do things 
+to objects, like 
+pick them up.
+
+【PG】What is an object?
+An object 
+is a thing. What else can 
+you tell me about 
+objects or things? How do you 
+describe 
+an object?
+I tell you what 
+it looks like... 
+you know, 
+what color it is...
+how big it is... 
+what it can do... 
+that kind of stuff.
+
+【PG】The Adventures of Mi and U
+
+You can describe an object by describing its characteristics or 
+attributes . One of the attributes of a ball is its shape. Most 
+balls have a round shape. Other examples of attributes are color, 
+size, weight, and cost. Another word for attributes is properties .
+
+Download from Wow! eBook <www.wowebook.com>

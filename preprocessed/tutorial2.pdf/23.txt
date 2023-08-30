@@ -1,0 +1,30 @@
+【PG】xxiii ABOUT  THIS BOOK
+
+【PG】Talk to the authors
+You can post comments and ask questions in the book’s Author Online forum at 
+www.helloworldbook2.com .
+
+【PG】Note to parents and teachers
+Python is free, open source software, and there is no danger in installing and using it on 
+your computers. You can get the Python software—and everything else you need to use 
+this book—for free at www.helloworldbook2.com . The download files are simple to install 
+and use and are free of viruses and spyware.
+
+【PG】Books like this used to come with CDs with all the software on them, but now most readers 
+(and publishers) prefer to use the Internet. If you can’t download the software from the 
+book’s web site, Manning can send you a CD containing the same files available on the web 
+site. There’s no cost for the CD, but you’ll have to pay the shipping and handling fee based 
+on your address. 
+
+【PG】To get the CD, send an email to support@manning.com with the subject line “Hello World! 
+2nd Edition CD. ” Or you can send a good, old-fashioned letter to:
+Hello World 2nd Edition CD Request
+Manning Publications Co.
+20 Baldwin Road
+P .O. Box 761
+Shelter Island, NY  11964
+
+【PG】Resources for this book and access to the Author Online forum are also available from the 
+publisher’s website at www.manning.com/HelloWorldSecondEdition .
+
+【PG】Download from Wow! eBook <www.wowebook.com>

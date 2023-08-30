@@ -1,0 +1,17 @@
+【PG】Chapter 24 Computer Simulations
+
+【PG】The feed button event handler
+
+【PG】The play button event handler
+
+【PG】The walk button event handler
+
+【PG】The stop button event handler
+
+【PG】The animation timer (every 0.5 sec) event handler
+
+【PG】Updates pet’s image (animation)
+
+【PG】Start of main 5 sec timer event handler
+
+【PG】Checks if sleeping or awake

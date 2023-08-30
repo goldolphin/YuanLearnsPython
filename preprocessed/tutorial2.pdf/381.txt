@@ -1,0 +1,75 @@
+【PG】357 CHAPTER  23 Take a Chance—Randomness
+【PG】def compu ter_turn():
+    global c_hand, deck, up_card, ac tive_sui t, blocked
+    op tions = []
+    for card in c_hand:
+        if card.rank == '8':      
+            c_hand.remove(card)
+            up_card  = card
+            prin t "  Compu ter played " , card.shor t_name
+            #sui t totals:  [diamonds, hear ts, spades, clubs]     
+            sui t_totals = [0, 0, 0, 0]            
+            for suit in range(1, 5): 
+                for card in c_hand:
+                    if card.sui t_id == sui t:
+                        sui t_totals[sui t-1] += 1
+            long_sui t = 0
+            for i in range (4):
+                if suit_totals[i] > long_sui t:
+                    long_sui t = i
+            if long_sui t == 0:  ac tive_sui t = "Diamonds"   
+            if long_sui t == 1:  ac tive_sui t = "Hear ts"                               
+            if long_sui t == 2:  ac tive_sui t = "Spades"                                
+            if long_sui t == 3:  ac tive_sui t = "Clubs"                             
+            prin t "  Compu ter changed sui t to ", ac tive_sui t
+            return 
+
+【PG】else: 
+            if card.sui t == ac tive_sui t:                   
+                op tions.append(card)                             
+            elif card.rank == up_card.rank:   
+                op tions.append(card)                         
+                    
+    if len(options) > 0:
+        bes t_play = op tions[0]
+        for card in op tions:                 
+            if card.value > bes t_play.value:   
+                bes t_play = card                
+        c_hand.remove(bes t_play)                                    
+        up_card = bes t_play                                         
+        ac tive_sui t = up_card.sui t                                 
+        prin t "  Compu ter played " , bes t_play.shor t_name 
+
+【PG】else:
+        if len(deck) >0:
+            nex t_card = random.choice(deck)                        
+            c_hand.append(nex t_card)                               
+            deck.remove(nex t_card)                                 
+            prin t "  Compu ter drew a card"      
+        else:
+            prin t"  Compu ter is blocked"      
+            blocked += 1                           
+    prin t "Compu ter has %i cards lef t" % (len(c_hand))
+
+【PG】Listing 23.10 The computer’s turn
+【PG】Plays an 8
+【PG】Counts cards in each 
+suit; suit with the most 
+is the “long suit”
+【PG】Makes long 
+suit the 
+active suit
+【PG】Ends computer’s 
+turn; back to 
+main loop
+【PG】Checks what 
+cards are 
+possible plays
+【PG】Checks which option is 
+best (highest value)
+【PG】Plays card
+【PG】Draws, because no 
+possible plays
+【PG】No cards left in deck—
+computer is blocked
+【PG】Download from Wow! eBook <www.wowebook.com>

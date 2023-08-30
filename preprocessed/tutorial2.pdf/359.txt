@@ -1,0 +1,39 @@
+【PG】335 CHAPTER  22 File Input and Output
+【PG】    def menuExi t_selec ted(self):
+        self.close()
+
+【PG】app = Q tGui.QApplica tion(sys.argv)
+myapp = MyWidge t(None)
+myapp.show()
+app.exec_()
+
+【PG】For simplicity, our Hangman program uses only lowercase letters. The word list we provide 
+only has lowercase, and the user must enter her guesses in lowercase.
+
+【PG】The dashes()  function b replaces the letters with dashes at the start of a new game. But it 
+doesn’t replace punctuation, like apostrophes. So if the word was doesn’t , the player would 
+see - - - - - ' - .
+
+【PG】I encourage you to try creating this program on your own. You can build the GUI in Qt 
+Designer. It doesn’t matter if it doesn’t look exactly the same as the version I have here. Just 
+make sure you look at the code to see what names to use for the components. The names in 
+the code have to match the names in the .ui file.
+Type in the code if you can. Run the program and see how it works. And if you think of 
+something different to try, go for it! Have fun, play around with it, and experiment. That’s one 
+of the most fun and rewarding parts of programming, and it’s how you’ll learn the most.
+
+【PG】What did you learn?
+In this chapter, you learned
+■What a file is
+■How to open and close files
+■Different ways to open a file: reading, writing, and appending
+■Different ways to write things to a file: write()  or print >>
+■How to use pickle  to save lists and objects (and other Python data structures) to a file
+■A lot about folders (also called directories), file locations, and paths
+We also made a Hangman game that used data from a file to get a word list. 
+
+【PG】Test your knowledge
+1The kind of object in Python that’s used to work with files is called a _______.
+2How do you create a file object?
+3What’s the difference between a file object and a filename?
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,38 @@
+【PG】CHAPTER 15 Modules
+If you want the convenience of importing names into the local namespace (so you don’t 
+have to specify the module name every time), but you don’t know which names in the 
+module you’ll need, you can use the star ( *) to import all names into your namespace:
+The * means all, so this imports all the available names from the module. You have to be 
+careful with this one. If you create a name in your program that is the same as one in the 
+time  module, there will be a conflict. Importing with * isn’t the best way to do it. It’s better 
+to only import the parts that you need.
+
+【PG】Remember the countdown program we made in chapter 8 (listing 8.6)? Now you know what 
+the line time.sleep(1)  in that program was doing.
+
+【PG】Random numbers
+The random  module is used for generating random numbers. This is very useful in games 
+and simulations.
+Let’s try using the random  module in interactive mode:
+Each time you use random.randint() , you get a new, random integer. Because we passed the 
+arguments 0 and 100 to it, the integer will be between 0 and 100. We used random.randint()
+in the number-guessing program in chapter 1 to create the secret number.
+If you want a random decimal number, use random.random() . You don’t have to put 
+anything between the brackets, because random.random()  always gives you a number 
+between 0 and 1:
+If you want a random number between, say, 0 and 10, you can just multiply the result by 10:
+from time import *
+>>> import random
+>>> print random.randint(0, 100)
+4
+>>> print random.randint(0, 100)
+72
+>>> print random.random()
+0.270985467261
+>>> print random.random()
+0.569236541309
+>>> print random.random() * 10
+3.61204895736
+>>> print random.random() * 10
+8.10985427783
+Download from Wow! eBook <www.wowebook.com>

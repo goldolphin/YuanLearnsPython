@@ -1,0 +1,45 @@
+【PG】139 CHAPTER  12 Collecting Things Together—Lists and Dictionaries
+
+【PG】The keys()  method gives you a list of all the dictionary keys:
+
+【PG】The values()  method gives you a list of all the values:
+
+【PG】Other languages have things similar to Python dictionaries. They’re generally called 
+associative arrays  (because they associate  keys and values to each other). Another term you’ll 
+hear for them is hash tables .
+
+【PG】Just like lists, the items in a dictionary can be any type, including simple types (int, float, 
+string) or collections (lists or dictionaries) or compound types (objects). 
+Yes, you can have dictionaries that contain other dictionaries, just like you can have lists of 
+lists. Actually, that’s not entirely true. It is true for the values  in a dictionary, but the keys  are 
+more restricted. 
+
+【PG】Earlier we talked about mutable  versus immutable  types. Well, dictionary 
+keys can only be immutable types (booleans, integers, floats, strings, and tuples). You can’t 
+use a list or a dictionary as a key, because these are mutable types. 
+
+【PG】I mentioned above that one of the things about dictionaries that’s different from lists is that 
+dictionaries are unordered . Notice that even though Bob’s number was the third one we 
+added to the dictionary, it was the first item when we displayed the contents of the 
+dictionary. Dictionaries have no concept of order, so sorting a dictionary makes no sense. 
+But sometimes you want to display the contents of a dictionary in some kind of order. 
+Remember that lists can be sorted, so once you get a list of the keys, you can sort that and 
+then display the dictionary in order of its keys. You can sort the list of keys using the 
+sorted()  function, like this:
+
+【PG】That’s the same sorted()  function you saw before for lists. If you think about it, this makes 
+sense, because the collection of a dictionary’s keys is a list.
+
+【PG】>>> phoneNumbers.keys()
+['Bob', 'John', 'Mary', 'Jenny']
+>>> phoneNumbers.values()
+['444-4321', '555-1234', '555-6789', '867-5309']
+>>> for key in sorted(phoneNumbers.keys()):
+        prin t key, phoneNumbers[key]
+    
+Bob 444-4321
+Jenny 867-5309
+John 555-1234
+Mary 555-6789
+
+【PG】Download from Wow! eBook <www.wowebook.com>

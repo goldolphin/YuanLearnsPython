@@ -1,0 +1,25 @@
+【PG】206 Hello World!
+
+【PG】I can’t play 
+volleyball with the 
+ball just standing 
+there!
+
+【PG】When you run this program, you should see the image of a beach ball displayed near the 
+top-left corner of the Pygame window, like this: 
+
+【PG】In listing 16.10, the only lines that are new are lines 5 and 6. Everything else you have seen 
+before in listings 16.3 to 16.9. We replaced the draw  code from our previous examples with 
+code that loads an image from disk and displays it.
+
+【PG】In line 5, the pygame.image.load()  function loads the image from disk and creates an 
+object called my_ball . The my_ball  object is a surface. (We talked about surfaces a few 
+pages ago.) But we can’t see this surface. It’s only in memory. The only surface we can see 
+is the display  surface, which is called screen.  (We created it in line 3.) Line 6 copies the 
+my_ball  surface onto the screen  surface. Then display.flip()  makes it visible, just like 
+we did before.
+
+【PG】That’s okay, Carter. Pretty soon we’ll start 
+    moving the ball around! 
+
+【PG】Download from Wow! eBook <www.wowebook.com>

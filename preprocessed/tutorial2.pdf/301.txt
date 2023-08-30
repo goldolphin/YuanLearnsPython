@@ -1,0 +1,31 @@
+【PG】Chapter 20 More GUIs
+She’s a real beauty, ain’t she?
+She can do zero to zero 
+in 1 second flat. It looks a little confusing, but if you take a closer look, you’ll see the part that describes the 
+window and the part that describes the button, as well as some other parts we haven’t 
+talked about yet, like the menu and status bar.
+
+【PG】Making our GUI do something
+We now have a very basic GUI—a window with a button. But it 
+doesn’t do anything. We haven’t written any code to tell the 
+program what to do when someone clicks 
+the button. It’s like having a car with 
+four wheels and a body, but no engine. 
+It looks nice, but it won’t go anywhere.
+We need a little bit of code to make our 
+program run. For a PyQt program, the mini -
+mum you need is something like this.
+impor t sys
+from PyQt4 impor t QtCore, Q tGui, uic  
+form_class = uic.loadUiType( "MyFirs tGui.ui")[0] 
+class MyWindowClass(Q tGui.QMainWindow, form_class):                
+    def __ini t__(self, paren t=None):            
+        Q tGui.QMainWindow.__ini t__(self, paren t)                
+        self.se tupUi(self)                      
+app = Q tGui.QApplica tion(sys.argv)  
+myWindow = MyWindowClass() 
+myWindow.show()                
+app.exec_()
+
+【PG】The reason for the [0] at the end of the line that loads the UI is that the uic.loadUiType()
+ method returns a list with two things in it: something called aform_class and something called abase_cla ss. For our purposes, we only need the ﬁrst item, theform_class, whichisitem[0] in the list.

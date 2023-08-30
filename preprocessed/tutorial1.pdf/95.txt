@@ -1,0 +1,41 @@
+【PG】7.5 如果测试为假会怎么样　　 69
+术语箱
+比较操作符（comparison operator）也称为关系操作符（relational operator），因为它们要测试两边值的关系（relation）：相等还是不相等，大于还是小于。
+比较也称为条件测试（conditional test）或逻辑测试（logical test）。在编程中，逻辑（logical）就是指某个结论的答案是真还是假。
+
+【PG】代码清单 7-1显示了一个使用比较的示例程序。先在IDLE编辑器中创建一个新文件，键入这个程序并保存，把它命名为compare.py。然后运行这个程序。试着用不同的数运行多次。可以试试不同的情况，比如第一个数较大、第一个数较小，以及两个数相等，看看会得到什么结果。
+
+【PG】代码清单 7-1 使用比较操作符 67 CHAPTER 7 Decisions, Decisions
+Listing 7.1 shows an example program using comparisons. Start a new file in the IDLE editor, type this program in, and save it—call it compare.py. Then Run it. Try running it several times, using different numbers. Try numbers where the first one is bigger, where the first one is smaller, and where the two numbers are equal, and see what you get.
+num1 = float(raw_input("Enter the first number: "))
+num2 = float(raw_input("Enter the second number: "))
+if num1 < num2:
+    print num1, "is less than", num2
+if num1 > num2:
+    print num1, "is greater than", num2
+if num1 == num2:
+    print num1, "is equal to", num2
+if num1 != num2:
+    print num1, "is not equal to", num2
+
+【PG】What happens if the test is false?
+We've seen how to make Python do something if the result of a test is true. But what does it do if the test is false? In Python, there are three possibilities:
+- Do another test. If the first test comes out false, you can get Python to test something else with the keyword elif (which is short for "else if") like this:
+Listing 7.1 Using the comparison operators
+Remember that this is a double equal sign.
+if answer >= 10:
+    print "You got at least 10!"
+elif answer >= 5:
+    print "You got at least 5!"
+elif answer >= 3:
+    print "You got at least 3!"
+
+【PG】如果测试为假会怎么样
+我们已经看到了，如果测试的结果为真，Python会做些什么。不过，如果测试为假，Python又会做一些什么呢？在Python中，有以下3种可能。
+- 做另一个测试。如果第一个测试结果为假，可以利用关键字elif（这是else if的简写）让Python再做另一个测试，例如：
+if answer >= 10:
+    print "You got at least 10!"
+elif answer >= 5:
+    print "You got at least 5!"
+elif answer >= 3:
+    print "You got at least 3!"

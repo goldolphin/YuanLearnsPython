@@ -1,0 +1,48 @@
+【PG】286 Hello World!
+
+【PG】SaturnUranusNeptunePlutoyou are 
+insanely 
+cold!
+
+【PG】If I enter -50 
+in the Celsius box, and 
+click the button, I should get 
+about -58 Fahrenheit.
+But it 
+says 0. What's 
+happening?
+
+【PG】Hey, 
+I found a 
+bug!
+
+【PG】covered it yet, so you can either skip ahead to chapter 21 to get the full explanation of how 
+it works, or you can just type in the code I’ll give you here. Replace the last line of the 
+btn_FtoC_clicked  event handler with these two lines:
+This will display the number with two decimal places. 
+
+【PG】Hmmm … Maybe it’s time to do some
+   debugging . What if our users want to 
+    convert temperatures in Antarctica?
+    Or on Pluto?
+
+【PG】Squashing a bug
+We said before that one good way to see what’s going on in the program is to print out the 
+value of some of the variables while the program is running. So let’s try that.
+Because it’s the Fahrenheit value in the Celsius to Fahrenheit conversion that seems not to 
+be working, we’ll start there. Add this line after the last line in the  btn_CtoF_clicked  event 
+handler in listing 20.3:
+
+【PG】Now, whenever you click the Celsius to Fahrenheit  button, you can see the cel and fahr
+variables printed out in the IDLE shell window. Try it with a few different values for cel and 
+see what happens. I got something like this:cel_ text = '%.2f' % cel
+self.edi tCel.se tText(cel_ text) 
+prin t 'cel = ' , cel, '  fahr = ' , fahr
+>>> ============================ RESTART ============================
+>>> 
+cel =  50.0   fahr =  122.0
+cel =  0.0   fahr =  32.0
+cel =  -10.0   fahr =  14.0
+cel =  -50.0   fahr =  -58.0
+
+【PG】Download from Wow! eBook <www.wowebook.com>

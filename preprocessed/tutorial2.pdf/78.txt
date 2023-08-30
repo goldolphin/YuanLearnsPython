@@ -1,0 +1,28 @@
+【PG】54 Hello World!
+
+【PG】How do you get raw_input()  to print a prompt message?
+【PG】How do you get an integer using raw_input() ?
+【PG】How do you get a float (decimal number) using raw_input() ?
+Try it out
+
+【PG】In interactive mode, make two variables, one for your first name and one for your last 
+name. Then, using a single print  statement, print your first and last names together.
+
+【PG】Write a program that asks for your first name, then asks for your last name, and then 
+prints a message with your first and last names in it.
+
+【PG】Write a program that asks for the dimensions (in feet) of a rectangular room, and then 
+calculates and displays the total amount of carpet needed to cover the room.
+
+【PG】Write a program that does the same as in #3, but that also asks for the cost per square 
+yard of carpet. Then have the program display these three things:
+■The total amount of carpet, in square feet
+■The total amount of carpet, in square yards (1 square yard = 9 square feet)
+■The total cost of the carpet
+
+【PG】Write a program that helps the user add up her change. The program should ask
+■“How many quarters?”
+■“How many dimes?”
+■“How many nickels?”
+■“How many pennies?”
+Then it should give the total value of the change.

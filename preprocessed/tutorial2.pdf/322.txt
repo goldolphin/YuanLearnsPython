@@ -1,0 +1,44 @@
+【PG】298 Hello World!
+
+【PG】Inserting variables in strings
+
+Up until now, when you wanted to put a variable in the middle of a string, you did 
+something like this:
+ 
+If we ran that code, we’d get this:
+
+But there’s another way to insert variables into strings that gives you more control over how 
+they’ll look, especially numbers. You can use format strings , which use the percent sign ( %). 
+
+【PG】Let’s say you want to insert a string variable in the middle of a print  statement, like we just did. The way to do it with format strings is like this:
+
+The % sign is used in two places. It’s used in the middle of the string to say where the 
+variable will go. Then it’s used again after the string to tell Python that the variable you 
+want to insert in the string is coming next.
+
+The %s means it’s a string variable you want to insert. For an integer, you’d use %i; for a float, 
+you’d use %f. 
+
+【PG】Here are a couple more examples:
+
+When you run this, you’ll get the following:
+
+Here’s another one:
+
+When you run this, you’ll get the following:
+
+name = 'Warren Sande'
+
+prin t 'My name is %s and I wro te this book' % name
+
+age = 13
+
+prin t 'I am %i years old.' % age
+
+average = 75.6
+
+prin t 'The average on our ma th test was %f percen t.' % average
+
+The average on our ma th test was 75.600000 percen t.
+
+Download from Wow! eBook <www.wowebook.com>

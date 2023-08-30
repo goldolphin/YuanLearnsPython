@@ -1,0 +1,27 @@
+【PG】43 CHAPTER  4 Types of Data
+
+【PG】Let’s try another one:
+Even though 54.99 is very close to 55, we still get 54 for the integer. The int()  function 
+always rounds down. It doesn’t give the nearest  integer, it gives the next lowest  integer. The 
+int()  function basically chops off the decimal part. 
+If you want to get the nearest integer, there is a way. You’ll learn about that in chapter 21.
+
+【PG】Changing a string to a float
+You can also create a number from a string, like this:
+Notice that, when we display a, the result has quotes around it. That’s Python’s way of 
+telling us that a is a string. When we display b, we get the floating-point value.
+>>> e = 54.99
+>>> f = int(e)
+>>> prin t e
+54.99
+>>> prin t f
+54
+>>> a = '76.3'
+>>> b = floa t(a)
+>>> a
+'76.3'
+>>> b
+76.3
+
+【PG】TAKE ZAT! 
+Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,40 @@
+【PG】 58 Hello World!
+
+【PG】 Pick your flavor
+
+【PG】 We’re going to use the example of choosing your favorite flavor of ice cream to 
+look at some different ways to get input (the ice cream flavor) from the user 
+with EasyGui.
+
+【PG】 Dialog box with multiple buttons
+
+【PG】 Let’s make a dialog box (like a message box) with more than one button. The 
+way to do this is with a button box  (buttonbox ). Let’s make a program, rather 
+than do it in interactive mode.
+
+【PG】 Start a new file in IDLE. Type in the program in the following listing.
+import easygui
+flavor = easygui.buttonbox("What is your favorite ice cream flavor?" ,
+                  choices = [ 'Vanilla' , 'Chocolate', 'Strawberry' ] ) 
+easygui.msgbox ( "You picked " + flavor)
+
+【PG】 The part of the code in square brackets is called a list. We haven’t talked about lists yet, but 
+you’ll learn all about them in chapter 12. For now, just type in the code so you can make the 
+EasyGui program work. (Or, if you’re really curious, you could skip ahead….)
+
+【PG】 Save the file (I called mine ice_cream1.py ), and 
+run it. You should see this:
+
+【PG】 And then, depending on which flavor you click, 
+you’ll see something like this:
+
+【PG】 How did this work? The label from whatever button the user clicked was the input . We 
+assigned that input a variable name—in this case flavor . This is just like using
+raw_input() , except that the user doesn’t type in the input, she just clicks a button. 
+That’s what GUIs are all about.
+
+【PG】 Listing 6.1 Getting input using buttons
+
+【PG】 List of choices
+
+【PG】 Download from Wow! eBook <www.wowebook.com>

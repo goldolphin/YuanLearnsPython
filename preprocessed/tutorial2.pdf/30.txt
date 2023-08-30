@@ -1,0 +1,29 @@
+【PG】6 Hello World!
+
+【PG】Well, I can 
+do that with my 
+calculator...I can do 5 * 3 
+in my head. I don't need 
+Python or a computer 
+for that!
+
+【PG】So Python can do addition! That shouldn’t be surprising, because computers are good at 
+arithmetic. 
+Let’s try one more:
+
+【PG】In pretty much all computer programs and languages, the * symbol is used for multiplica -
+tion. That character is called an asterisk  or star.
+If you’re used to writing “5 times 3” as “5 x 3” in math class, you’ll have to get used to using *
+for multiplication in Python instead. (It’s the symbol above the number 8 on most keyboards.)
+
+【PG】Okay, how about this one:
+>>> prin t 5 * 3
+15
+>>>
+>>> prin t 2345 * 6789
+15920205
+>>>
+>>> prin t 1234567898765432123456789 * 9876543212345678987654321
+12193263200731596000609652202408166072245112635269
+>>>
+Download from Wow! eBook <www.wowebook.com>

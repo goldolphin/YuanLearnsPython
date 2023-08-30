@@ -1,0 +1,11 @@
+【PG】16 Hello World!
+
+【PG】Whether you have shot the alien, dodged the ball of fire, completed the level, or whatever; and the output  is the graphics on the screen and the sound from the speakers or headphones. Input, processing, output. Remember that.
+
+【PG】Okay, so the computer needs input. But what does it do with that input? In order to do something with the input, the computer has to remember it or keep it somewhere. The computer keeps things, including input (and the program itself), in its memory. But how do we tell Python where in the memory to put something? And once it’s there, how do we find it again?
+
+【PG】In Python, if you want your program to remember something so you can use it later, all you have to do is give that “thing” a name. Python will make a place for the thing in the computer’s memory, whether the thing is a number, some text, a picture, or a piece of music. When you want to refer to that thing again, you just use the same name. Let’s use Python in interactive mode and find out more about names.
+
+【PG】You can write to the memory (set the switches), or read from the memory (look at how the switches are set, without changing them). You’ve probably heard of computer memory, but what does it really mean? We said that computers were just a bunch of switches turning on and off. Well, memory is like a group of switches that stay in the same position for a while. Once you set the switches a certain way, they stay that way until you change them. They remember where you set them… Voila: memory!
+
+【PG】Youcan wri memory (loo

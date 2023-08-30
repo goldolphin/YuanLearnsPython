@@ -1,0 +1,24 @@
+【PG】248 Hello World!
+
+【PG】I tried this out, and it’s a little boring. 
+
+【PG】for even t in pygame.event.get(): 
+        if event.type == QUIT: 
+            running = False 
+        elif event.type == pygame.MOUSEMOTION:        
+            paddle.rect.centerx = event.pos[0]   
+    if pygame.sprite.spritecollide(paddle, ballGroup, False):
+        myBall.speed[1] = -myBall.speed[1]                     
+    myBall.move()                 
+    screen.blit(myBall.image, myBall.rect)       
+    screen.blit(paddle.image, paddle.rect)        
+    pygame.display.flip()
+
+【PG】Here’s what the program should look like when it runs:
+Okay, so it’s not the most exciting game, but we’re just getting started with making games in Pygame. Let’s add a few more things to our PyPong game.
+
+【PG】Moves paddle if mouse moves
+Checks for ball hitting paddle
+Moves the ball
+Redraws everything
+Download from Wow! eBook <www.wowebook.com>

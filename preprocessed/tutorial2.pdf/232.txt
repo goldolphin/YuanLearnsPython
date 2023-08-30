@@ -1,0 +1,35 @@
+【PG】208 Hello World!
+impor t pygame, sys
+pygame.ini t()
+screen = pygame.display.se t_mode([640,480])
+screen.fill([255, 255, 255])
+my_ball = pygame.image.load( 'beach_ball.png' )
+screen.bli t(my_ball,[50, 50])
+pygame.display.flip()
+pygame. time.delay(2000)                     
+screen.bli t(my_ball,[150, 50])      
+pygame.display.flip()                     
+running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()
+
+【PG】Run the program, and see 
+what happens. Did the ball 
+move? Well, sort of. You 
+should have seen two 
+beach balls: 
+The first one showed up in the original position, and then the second one appeared to the 
+right of it a couple of seconds later. So we did move the beach ball to the right, but we 
+forgot one thing. We need to erase the first ball!
+
+【PG】Animation
+When you’re doing animation with computer graphics, there are two steps to moving 
+something:
+1You draw the thing in its new position.
+2You erase the thing from its old position.Listing 16.11 Trying to move a beach ball
+These are the 
+three new lines
+Download from Wow! eBook <www.wowebook.com>

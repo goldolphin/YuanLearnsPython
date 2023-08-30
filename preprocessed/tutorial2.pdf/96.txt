@@ -1,0 +1,33 @@
+【PG】72 Hello World! 
+
+【PG】Move on.  If you don’t put anything else after the if block, the program will continue on 
+to the next line of code (if there is one) or will end (if there is no more code).
+Try making a program with the code above by adding a line at the beginning to input a 
+number:
+Remember to save the file (you pick the name this time), and then run it. Try it a few times 
+with different inputs to see what you get.
+
+【PG】Testing for more than one condition
+What if you want to test for more than one thing? Let’s say we made a game that was for 
+eight-year-olds and up, and we want to make sure the player is in at least third grade. There 
+are two conditions to meet. Here is one way we could test for both conditions:
+Notice that the first print  line is indented eight spaces, not just four spaces. That’s because 
+each if needs its own block, so each one has its own indenting.answer = floa t(raw_inpu t ("Enter a number from 1 to 15"))
+age = floa t(raw_inpu t("Enter your age: " ))
+grade = int(raw_inpu t("Enter your grade: " ))
+if age >= 8:
+    if grade >= 3:
+        prin t "You can play this game."
+else:
+    prin t "Sorry, you can' t play the game."
+
+【PG】if 
+answer>=10elif
+answer>=5elif
+answer>=3
+TrueTrue True
+Got at
+least 10!Got at
+least 5!Got at
+least 3!False False False
+Download from Wow! eBook <www.wowebook.com>

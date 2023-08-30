@@ -1,0 +1,38 @@
+【PG】12 Collecting Things Together—Lists and Dictionaries 117
+What’s a list? 117■Creating a list 118■Adding things to a 
+list 118■What’s the dot? 119■Lists can hold anything 120
+Getting items from a list 120■ “Slicing” a list 121■Modifying 
+items 124■Other ways of adding to a list 124■Deleting from a 
+list 126■Searching a list 127■Looping through a list 128
+Sorting lists 129■Mutable and immutable 133■Lists of lists: 
+tables of data 133■Dictionaries 136
+
+【PG】13 Functions 143
+Functions—the building blocks 143■Calling a function 145
+Passing arguments to a function 147■Functions with more than 
+one argument 149■Functions that return a value 151
+Variable scope 153■Forcing a global 156■A bit of advice on 
+naming variables 157
+
+【PG】14 Objects 159
+Objects in the real world 160■Objects in Python 160
+Object = attributes + methods 162■What’s the dot? 162
+Creating objects 162■An example class—HotDog 168
+Hiding the data 172■Polymorphism and inheritance 173
+Thinking ahead 175
+
+【PG】15 Modules 178
+What’s a module? 178■Why use modules? 178■Buckets of 
+blocks 179■How do we create modules? 179■How do we use 
+modules? 180■Namespaces 181■Standard modules 185
+
+【PG】16 Graphics 189
+Getting some help—Pygame 189■A Pygame window 190
+Drawing in the window 191■Individual pixels 200■Images 205
+Let’s get moving! 207■Animation 208■Smoother 
+animation 210■Bouncing the ball 211■Wrapping the ball 213
+
+【PG】17 Sprites and Collision Detection 217
+Sprites 217■Bump! Collision detection 223■Counting 
+time 228
+Download from Wow! eBook <www.wowebook.com>

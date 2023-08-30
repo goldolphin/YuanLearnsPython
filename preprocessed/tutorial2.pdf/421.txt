@@ -1,0 +1,35 @@
+【PG】397 CHAPTER  25 Skier Explained
+The code to do that goes in the main loop, and it looks like this:
+hit =  pygame.spri te.spri tecollide(skier, obs tacles, False) 
+    if hit:
+        if hit[0]. type == "tree" and no t hit[0].passed:  
+            poin ts = poin ts - 100                   
+            skier.image = pygame.image.load( "skier_crash.png" )     
+            anima te()                                             
+            pygame. time.delay(1000)                         
+            skier.image = pygame.image.load( "skier_down.png" )       
+            skier.angle = 0                                         
+            speed = [0, 6]                            
+            hi t[0].passed = True  
+        
+        elif hit[0]. type == "flag" and no t hit[0].passed:  
+            poin ts += 10                                   
+            hi t[0].kill()     
+【PG】The variable hit tells us which obstacle sprites the skier sprite collided with. It’s a list, but in our case it has only one item, because the skier can only collide with one obstacle at a time. So the obstacle the skier collided with is hit[0] . 
+The passed  variable is used to indicate that a tree has been hit. This ensures that, when the skier continues skiing down the hill, he doesn’t immediately hit the same tree again.
+【PG】Now we need to display the score. This takes only three more lines of code. In the initialization section, we create a font  object, which is an instance of Pygame’s Font  class:
+In the main loop, we render the font  object with the new score text:
+And in the animate()  function, we display the score in the upper-left corner:
+【PG】That’s all we need. If you put this all together, you’ll end up with the code from chapter 10, 
+in listing 10.1. Only now you understand it a lot better. Understanding how Skier works 
+should help you when you’re thinking about and developing your own games.font = pygame.fon t.Fon t(None, 50)
+score_ text = fon t.render( "Score: " +str(poin ts), 1, (0, 0, 0))
+screen.bli t(score_ text, [10, 10])Check for collisions Hit a tree
+Show the “crashed” 
+image for a second
+Continue 
+skiing downRemember that we 
+already hit this tree
+Got a flag
+Remove the flag 
+Download from Wow! eBook <www.wowebook.com>

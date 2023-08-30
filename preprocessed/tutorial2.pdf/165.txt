@@ -1,0 +1,40 @@
+【PG】Chapter 12 Collecting Things Together—Lists and Dictionaries
+
+【PG】What did you learn?
+In this chapter, you learned 
+■What lists are
+■How to add things to a list
+■How to delete things from a list
+■How to find out if a list contains a certain value
+■How to sort a list
+■How to make a copy of a list
+■About tuples
+■About lists of lists
+■About Python dictionaries
+
+【PG】Test your knowledge
+1What are two ways to add something to a list?
+2What are two ways to remove something from a list?
+3What are two ways to get a sorted copy of a list, without changing the original list?
+4How do you find out whether a certain value is in a list?
+5How do you find out the location of a certain value in a list?
+6What’s a tuple?
+7How do you make a list of lists?
+8How do you get a single value from a list of lists?
+9What is a dictionary?
+10How do you add an item to a dictionary?
+11How do you look up an item from its key?
+
+【PG】Try it out
+1Write a program to ask the user for five names. The program should store the names in 
+a list and print them all out at the end. It should look something like this:
+2Modify the program from question #1 to print both the original list of names and a 
+sorted list.
+Enter 5 names:
+Tony
+Paul
+Nick
+Michel
+Kevin
+The names are Tony Paul Nick Michel Kevin
+Download from Wow! eBook <www.wowebook.com>

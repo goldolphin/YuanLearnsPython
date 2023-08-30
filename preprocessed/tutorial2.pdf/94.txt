@@ -1,0 +1,47 @@
+【PG】70 Hello World!
+
+【PG】This will check if the variable age has a value between, but not including, 8 and 12. This 
+would be true  if age was equal to 9, 10, or 11 (or 8.1 or 11.6, and so on). If we wanted to 
+include the ages 8 and 12, we’d do this instead:
+
+【PG】Listing 7.1 shows an example program using comparisons. Start a new file in the IDLE 
+editor, type this program in, and save it—call it compare.py . Then Run  it. Try running it 
+several times, using different numbers. Try numbers where the first one is bigger, where 
+the first one is smaller, and where the two numbers are equal, and see what you get.
+
+num1 = floa t(raw_inpu t("Enter the firs t number: " ))
+num2 = floa t(raw_inpu t("Enter the second number: " ))
+if num1 < num2:
+    prin t num1, "is less than", num2
+if num1 > num2:
+    prin t num1, "is grea ter than", num2
+if num1 == num2:                    
+    prin t num1, "is equal to", num2
+if num1 != num2:
+    prin t num1, "is no t equal to", num2
+
+【PG】What happens if the test is false?
+You’ve seen how to make Python do something if the result of a test is true . But what does it 
+do if the test is false ? In Python, there are three possibilities:
+
+■Do another test. If the first test comes out false , you can get Python to test something 
+else with the keyword elif  (which is short for “else if”), like this:if 8 <= age <= 12:
+
+【PG】Listing 7.1 Using the comparison operators    
+if answer >= 10:
+    prin t "You go t at leas t 10!"
+elif answer >= 5:
+    prin t "You go t at leas t 5!"
+elif answer >= 3:
+    prin t "You go t at leas t 3!"
+
+【PG】Comparison operators  are also called relational 
+operators  (because they test the relation  between 
+the two sides: equal or not equal, greater than or 
+less than). A comparison is also called a conditional 
+test or logical test . In programming, logical refers 
+to something where the answer is either true or false.
+Remember that 
+this is a double 
+equal sign
+Download from Wow! eBook <www.wowebook.com>

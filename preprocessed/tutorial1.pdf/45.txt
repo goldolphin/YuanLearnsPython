@@ -1,0 +1,33 @@
+【PG】2.2　名字　　 19
+#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfilename'sys.exit(0)class#Incrementthepagecount,andresetthelinecountself.header_written=1;self.count=1;#!/bin/envpython#Paginateatextfile,addingaheaderandfooterimportsys,time,string#Ifnoargumentsweregiven,printahelpfulmessageiflen(sys.argv)!=2:print'Usage:pyprintfself.page=self.page+1PrinterFormatter:self.header_written=0def#Incrementthepagecount,andresetthelinecountprint>>>Helloif#
+
+【PG】把一个值赋给一个名字时 （如把值“Mr. 
+Morton”赋给 Teacher） ，它会存储在内存中 ，称为
+变量（variable） 。在大多数编程语言中 ，都把这称为
+“把值存储 （store）在变量中 ”。
+
+不过 Python与 大多数其他计算机语
+言的做法稍有不同 。它 并不是把值存储在变量
+中，而更像是把名字放在值上。
+有些 Python程 序员说，Python 没
+有“变量”，而是只有 “名 字”。不过其
+实它们的行为基本上是一样的 。这 是一本关于编
+程的书（只 不过刚好使用了 Python） ， 而不是专门
+讨论 Python的 。所以谈到 Python名时，我们可能
+会交替使用变量 （ variable） 、 名字（name） 或变量
+名（variable n ame ）等不同的术语。实际上，只要
+你理解变量有什么表现以及在程序中如何使用
+变量，怎么称呼并不重要。
+顺便说一句，Guido v an Rossum（也就
+是创建 Python的 那个人）在他的 Python教程
+中曾经这样讲 ：“ ‘=’符号用来将一个值赋给一个
+变量。”所以我猜他认为 Python是有变量的 ！
+TOM
+WarrenCART
+ERMartinANDY
+
+【PG】一种简洁的存储方法
+在Python中 使用名字就像是干洗店给衣服加标
+签。你的衣服挂在晾衣架上 ，上 面附着写有你的名
+字的标签 ，这 些衣服都挂在一个巨大的旋转吊架上。
+你回来取衣服时 ，并 不需要知道它们存放在这个

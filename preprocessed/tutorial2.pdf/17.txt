@@ -1,0 +1,27 @@
+【PG】xviiAcknowledgments
+This book would never have been started, much less finished, without the inspiration, initia -
+tive, and support of my wonderful wife, Patricia. When we couldn’t find a suitable book to 
+feed Carter’s keen interest in learning about programming, she said, “You should write one. 
+It would be a great project for you two to work on together. ” As is often the case, she was 
+right. Patricia has a way of bringing out the best in people. So Carter and I started thinking 
+about what would be in such a book, writing chapter outlines and sample programs, and 
+finding ways to make it fun and interesting. 
+
+【PG】Once we got started, Carter and Patricia made 
+sure we finished. Carter would give up bedtime stories to work on the book. And if we 
+didn’t work on it for a while, I would be reminded, “Daddy, we haven’t worked on the book 
+for days!” Carter and Patricia reminded me that, if you put your mind to it, you can do any -
+thing. And all members of the family, including our daughter Kyra, gave up many hours of 
+family time while the book was in progress. I thank all of them for their patience and loving 
+support, which made this book possible.
+
+【PG】Writing a manuscript is one thing; getting a book into people’s hands is another. This book 
+would never have been published without the enthusiastic and persistent support of 
+Michael Stephens at Manning Publications. Right from the start, he “got it” and agreed that 
+there was a need for this kind of book. Michael’s steadfast belief in the project and his con -
+tinued patience in guiding a rookie author through the process were immensely valuable 
+and appreciated. 
+
+【PG】I would also like to say a sincere thank you to all the other folks at Man -
+ning who helped make this book happen, in particular Mary Piergies for patiently coordi -
+nating all aspects of the production process.

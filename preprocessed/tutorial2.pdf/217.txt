@@ -1,0 +1,30 @@
+【PG】CHAPTER  16 Graphics
+When I look 
+closely at a computer 
+screen, I see these little 
+lines. Do they separate 
+the pixels?
+
+【PG】What color  to draw it. (In this case, it’s red, which is represented by the [255,  0, 0]).
+■At what location  to draw it. (In this case, it’s at  [100,  100] , which is 100 pixels down 
+and 100 pixels over from the top-left corner.)
+■What size to draw it. (In this case, it’s 30, which is the radius in pixels—the distance 
+from the center of the circle to its outer edge.)
+■The width of the line . (If width  = 0, the circle is filled in completely, as it is here.)
+
+【PG】Now we’re going to look at these five things in more detail. 
+Wow, you have good eyes! The little lines are actually the rows of 
+pixels. A typical computer screen might have 768 rows of pixels, with 
+each row having 1,024 pixels in it. We’d say that screen has “1024 x 768 
+resolution. ” Some screens have more pixels, and some have fewer.
+
+【PG】If I asked you to draw a picture in real life, one of your first questions would be, “What should 
+I draw it on?” In Pygame, a surface  is what you draw on. The display surface  is the one you see 
+on the screen. That’s the one we called screen  in listing 16.3. But a Pygame program can have 
+
+【PG】PixelsThe word pixel is short for “picture element.” This means one 
+dot on your screen or in an image. If you look at any picture 
+with an image viewer and zoom in (make the image really big), 
+you can see the individual pixels. Here’s a regular view of a 
+photo and a zoomed-in version where you can see the pixels.
+Download from Wow! eBook <www.wowebook.com>

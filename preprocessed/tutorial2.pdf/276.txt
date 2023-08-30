@@ -1,0 +1,58 @@
+【PG】252 Hello World!
+
+【PG】We also need to stop the ball from reappearing after the last turn. To help with that, we’ll make a done variable to tell us when we’re at the end of the game. The following code will do that—it goes inside the main while loop:
+
+【PG】If we put this all together, the final PyPong program looks like the following listing.
+
+impor t pygame, sys 
+
+class MyBallClass(pygame.spri te.Spri te):                              
+    def __ini t__(self, image_file, speed, loca tion):                    
+        pygame.spri te.Spri te.__ini t__(self)                              
+        self.image = pygame.image.load(image_file)                     
+        self.rec t = self.image.ge t_rec t()                               
+        self.rec t.lef t, self.rec t.top = loca tion                        
+        self.speed = speed                                               
+                                                                        
+    def move(self):                                                     
+        global score, score_surf, score_fon t                             
+        self.rec t = self.rec t.move(self.speed)                           
+        if self.rec t.lef t < 0 or self.rec t.righ t > screen.ge t_wid th():  
+            self.speed[0] = -self.speed[0]                              
+                                                                         
+        if self.rec t.top <= 0 :                                          
+            self.speed[1] = -self.speed[1]                               
+            score = score + 1                                           
+            score_surf = score_fon t.render( str(score), 1, (0, 0, 0))
+
+class MyPaddleClass(pygame.spri te.Spri te):                              
+    def __ini t__(self, loca tion = [0,0]):                                
+        pygame.spri te.Spri te.__ini t__(self)                             
+        image_surface = pygame.surface.Surface([100, 20])              
+        image_surface.fill([0,0,0])                 
+        
+【PG】if myBall.rec t.top >= screen.ge t_rec t().bo ttom:
+    lives = lives - 1 
+    if lives == 0:  
+        final_ text1 = "Game Over"
+        final_ text2 = "Your final score is:  " + str(score)
+        f t1_fon t = pygame.fon t.Fon t(None, 70)
+        f t1_surf = f t1_fon t.render(final_ text1, 1, (0, 0, 0))
+        f t2_fon t = pygame.fon t.Fon t(None, 50)
+        f t2_surf = f t2_fon t.render(final_ text2, 1, (0, 0, 0))
+        screen.bli t(ft1_surf, [screen.ge t_wid th()/2 - \           
+                    f t1_surf.ge t_wid th()/2, 100])                   
+        screen.bli t(ft2_surf, [screen.ge t_wid th()/2 - \             
+                    f t2_surf.ge t_wid th()/2, 200])                  
+        pygame.display.flip()
+        done = True
+    else:  #wai t 2 seconds, then s tart the nex t ball
+        pygame. time.delay(2000)
+        myBall.rec t.toplef t = [(screen.ge t_rec t().wid th) - 40*lives, 20]
+        
+【PG】Listing 18.5  Final PyPong codeSubtracts a life if the ball hits the bottom
+Centers the text in the window
+Line-continuation characters
+Defines ball class
+Defines paddle class
+Download from Wow! eBook <www.wowebook.com>

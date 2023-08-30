@@ -1,0 +1,62 @@
+【PG】第 3章　基本数学运算
+
+【PG】术语箱
+【PG】上标（superscript）是指一个字符或一组字符比其余文本高一些，例如 1013。
+【PG】这里的 13 就是上标。通常上标还要比正文小一点。
+【PG】下标（subscript）也类似，不过这些字符会比其余文本低，同样也会小一点，
+【PG】比如 log2。这里的 2 就是一个下标。
+【PG】不过并不是哪里都能使用上标， 所以还有另一种方法， 就是 E记法。E 记法只
+【PG】是科学计数法的另一种写法。
+
+【PG】E 记法
+【PG】在E记法中， 这个数要写作 3.8E16或者 3.8e16。读作“3.8 指数 16”或者简读
+【PG】作“3.8 e 16” 。这里假设指数是 10的幂 。这就等同于写成 3.8×1016。
+【PG】在大多数程序和计算机语言（ 包括 Python） 中，大写和小写 E都是
+【PG】允许的。
+【PG】对于非常小的数 ，如0.0000000000001752 ，可以使用一个负指数。 科学计数法
+【PG】会写作 1.752×10-13，E记法会写作 1.752e–13。 负指数表示要把小数点向左移而不是
+【PG】向右移。
+
+【PG】Most programs and computer languages,  including Python, let you use either
+an uppercase or lowercase E.
+【PG】For very small numbers, like 0.0000000000001752, a negative exponent is used. The scien-
+tific notation would be 1.752x10-13, and the E-notation would be 1.752e-13. A negative 
+【PG】exponent means to move the decimal place to the left instead of the right.
+【PG】You can use E-notation to enter very big and very small numbers (or any number, for that 
+matter) into Python. Later we will see how to make Python print numbers using E-notation.
+【PG】Try entering some numbers in E-notation:
+
+【PG】Although we entered the numbers in E-notation, the answer came out as a regular decimal 
+【PG】number. That’s because Python won’t display numbers in E-notation unless you specifically tell it to, or the numbers are really big or really small (lots of zeros). 
+【PG】Try this:
+
+【PG】This time, Python displayed the answer in E-notation automatically, because it wouldn’t 
+【PG】make sense to display a number with 73 zeros!
+【PG】If you want numbers like 14,500,000 to display in E-notation, you need to give Python spe-
+【PG】cial instructions. We’ll learn more about that later in the book (in chapter 21).
+【PG】00000000000000001.752
+【PG】0.0000000000001752 = 1.752e-13
+【PG】Move the decimal left 13 places. 
+
+【PG】>>> a = 2.5e6
+【PG】>>> b = 1.2e7
+【PG】>>> print a + b
+【PG】14500000.0
+【PG】>>>
+
+【PG】>>> c = 2.6e75
+【PG】>>> d = 1.2e74
+【PG】>>> print c + d
+【PG】2.72e+075
+【PG】>>>
+
+【PG】采用 E记法，可以在 Python中输入非常大和非常小的数（ 或者可以是任何数 ） 。
+【PG】后面我们还会学习如何让 Python使用 E记法打印数 。
+【PG】试试采用 E记法输入一些数 ：>>> a = 2.5e6
+【PG】>>> b = 1.2e7
+【PG】>>> print a + b
+【PG】14500000.0
+
+【PG】尽管我们用 E记法输入了数， 但得出的答案却是一个常规的小数。 这是因为，
+【PG】除非你特别要求， 或 者数字确实非常大或非常小（ 有很多个 0） ，否则 Python不会用
+【PG】E记法显示数字。

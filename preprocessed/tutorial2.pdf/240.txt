@@ -1,0 +1,11 @@
+【PG】216 Hello World!
+
+【PG】You’ll get a list of the different draw methods and some explanation for each one.
+
+【PG】Try changing one of the sample programs that uses the beach ball image to use a different image. You can find some sample images in the \examples\images folder, or you can download or draw one of your own. You could also use a piece of a digital photo.
+
+【PG】Try changing the x_speed and y_speed values in listing 16.15 or 16.16 to make the ball move faster or slower and in different directions.
+
+【PG】Try to change listing 16.15 to make the ball “bounce” off an invisible wall or floor that isn’t the edge of the window.
+
+【PG】In listings 16.5 to 16.9 (the modern art, sine wave, and mystery picture programs), try moving the line pygame.display.flip inside the while loop. To do that, just indent it four spaces. After that line, and also inside the while loop, add a delay with this line and see what happens: pygame. time.delay(30)

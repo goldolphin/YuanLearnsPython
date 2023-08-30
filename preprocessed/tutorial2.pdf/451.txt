@@ -1,0 +1,44 @@
+【PG】427  APPENDIX  C Answers to Self-Test Questions
+
+【PG】To get a string as input using EasyGui, use an enterbox .
+
+【PG】To get an integer as input, you can use an enterbox  (which gets a string from the user) 
+and then convert it to an int. Or you can use an integerbox .
+
+【PG】To get a float from the user, you can use an enterbox  (which gives you a string)  and 
+then use the float()  function to convert the string to a float.
+
+【PG】A default value is like an “automatic answer. ” Here’s one way you might use a default: if 
+you were writing a program where all the students in your class had to enter their 
+name and address, you might have the name of the city where you live as the default 
+city in the address. That way, the students wouldn’t have to type it in unless they lived 
+in a different city. 
+
+【PG】Try it out
+
+【PG】Here is a temperature-conversion program using EasyGui:
+# tempgui1.py
+# EasyGui version of tempera ture-conversion program
+# conver ts Fahrenhei t to Celsius
+impor t easygui
+easygui.msgbox( 'This program conver ts Fahrenhei t to Celsius' )
+tempera ture  = easygui.en terbox('Type in a tempera ture in Fahrenhei t:')
+Fahr = floa t(tempera ture)
+Cel = (Fahr - 32) * 5.0 / 9
+easygui.msgbox( 'Tha t is ' + str(Cel) + ' degrees Celsius.' )
+
+【PG】Here is a program that asks for your name and the parts of your address and then 
+displays the whole address. For this one, it helps to know how to force a newline . A 
+newline makes the following text start on a new line. To do this, you use \n. This is 
+explained in chapter 21, but here is a preview:
+# address.py
+# En ter par ts of your address and display the whole thing
+impor t easygui
+name = easygui.en terbox("Wha t is your name?" )
+addr = easygui.en terbox("Wha t is your s treet address?" )
+city = easygui.en terbox("Wha t is your ci ty?")
+state = easygui.en terbox("Wha t is your s tate or province?" )
+code = easygui.en terbox("Wha t is your pos tal code or zip code?" )
+whole_addr  = name + "\n" + addr + "\n" + ci ty + ", " + state + "\n" + code
+easygui.msgbox(whole_addr, "Here is your address:" )
+Download from Wow! eBook <www.wowebook.com>

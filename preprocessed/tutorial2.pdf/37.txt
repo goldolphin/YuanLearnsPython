@@ -1,0 +1,41 @@
+【PG】13 CHAPTER  1 Getting Started
+Once you’ve saved the code, run it using Run > Run Module , just like you did for the first 
+program. Try playing the game and see what happens. Here is a sample of when I ran it:
+It took me five guesses to get the secret number, which turned out to be 12.
+You’ll learn all about the while , if, else , elif , and input
+instructions in the next few chapters. But you can probably 
+already get the basic idea of how this program works:
+1The secret number is randomly picked by the program. 
+2The user inputs guesses. 
+3The program checks each guess against the secret 
+number: is it higher or lower? 
+4The user keeps trying until he guesses the number or
+runs out of turns.
+When the guess matches the secret number, the player wins.
+
+【PG】What did you learn?
+Whew! We covered quite a lot. In this chapter, you
+■Installed Python
+■Learned how to start IDLE
+■Learned about interactive mode
+■Gave Python some instructions, and it executed them
+■Saw that Python knows how to do arithmetic (including really big numbers!)
+■Started the IDLE text editor to type in your first program
+
+【PG】>>> ======================= RESTART =======================
+>>> 
+AHOY!  I'm the Dread Pira te Rober ts, and I have a secre t!
+It is a number from 1 to 99.  I'll give you 6 tries. 
+What's yer guess? 40
+Too high, landlubber!
+What's yer guess? 20
+Too high, landlubber!
+What's yer guess? 10
+Too low, ye scurvy dog!
+What's yer guess? 11
+Too low, ye scurvy dog!
+What's yer guess? 12
+Avas t! Ye go t it!  Found my secre t, ye did!
+>>> 
+
+【PG】

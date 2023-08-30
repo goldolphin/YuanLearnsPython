@@ -1,0 +1,17 @@
+【段落编号1】从 IDLE启动 Python
+【原文内容】启动 Python有两种方法。 一种方法是从 IDLE启动，也就是我们现在要使用的方法。
+
+【段落编号2】IDLE窗口的打开
+【原文内容】在Start（开 始）菜单中，可以看到“Python 2.7”下面的“IDLE (Python GUI)” 。点击这个选项，会看到 IDLE窗口打开（类似下面显示的窗口）。
+
+【段落编号3】IDLE的特性
+【原文内容】IDLE是一个Python shell。shell的意思就是“外壳”，基本说来，这是一个通过键入文本与程序交互的途径，可以利用这个 shell与Python交互。（正是因为这个原因，可以看到窗口的标题栏上显示着 Python Shell） 。IDLE本身还是一个GUI（图形用户界面），所以在开始菜单中显示为Python GUI。除了shell，IDLE还有其他一些特性，不过这个内容我们稍后再讲。
+
+【段落编号4】Python的提示符
+【原文内容】上图中的>>>是Python提示符（prompt）。提示符是程序等待你键入信息时显示的符号。这个>>>提示符就是在告诉你，Python已经准备好了，在等着你键入Python指令。 
+
+【段落编号5】术语解释
+【原文内容】术语箱：GUI就是图形用户界面（graphical user interface）。这表示界面中有窗口、菜单、按钮、滚动条等等。没有GUI的程序称为文本模式（text-mode）程序、控制台（console）程序或命令行（command-line）程序。
+
+【段落编号6】版权信息
+【原文内容】图灵社区会员 FreeLink 专享 尊重版权。

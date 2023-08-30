@@ -1,0 +1,50 @@
+【PG】
+handler we’re connecting to is the button’s event handler, btn_CtoF_clicked . The code to 
+connect the event handler for the menu item looks like this:
+And there is another one for the FtoC  menu item.
+For the Exit  menu item, we need to create a new event handler and bind it to the event. 
+We’ll call that event hander menuExit_selected , and the code to connect that event 
+handler looks like this:
+The actual event handler for the Exit  menu has just a single line in the body, which closes 
+the window:
+
+【PG】
+Finally, change the UI file that gets loaded (in the third line) to the one with menus that you 
+saved above, tempconv_menu.ui.
+Making all those changes, the code should look like the following listing.
+impor t sys
+from PyQt4 impor t QtCore, Q tGui, uic
+form_class = uic.loadUiType( "tempconv_menu.ui" )[0] 
+class MyWindowClass(Q tGui.QMainWindow, form_class):
+    def __ini t__(self, paren t=None):
+        Q tGui.QMainWindow.__ini t__(self, paren t)
+        self.se tupUi(self)
+        self.b tn_CtoF.clicked.connec t(self.b tn_CtoF_clicked)       
+        self.b tn_FtoC.clicked.connec t(self.b tn_FtoC_clicked)       
+        self.ac tion_C toF.triggered.connec t(self.b tn_CtoF_clicked) 
+        self.ac tion_F toC.triggered.connec t(self.b tn_FtoC_clicked) 
+        self.ac tionExi t.triggered.connec t(self.menuExi t_selec ted)
+        
+    def btn_CtoF_clicked(self):
+        cel = floa t(self.edi tCel. text())
+        fahr = cel * 9 / 5.0 + 32
+        self.spinFahr.se tValue(int(fahr + 0.5))
+          
+    def btn_FtoC_clicked(self):
+        fahr = self.spinFahr.value()
+        cel = (fahr - 32) * 5 / 9.0
+        self.edi tCel.se tText(str(cel))self.ac tion_C toF.triggered.connec t(self.b tn_CtoF_clicked)
+
+【PG】
+self.ac tionExi t.triggered.connec t(self.menuExi t_selec ted)
+def menuExi t_selec ted(self):
+    self.close(
+Listing 20.4 Complete temperature-conversion program with menus
+Loads the UI file that 
+includes the menus
+Connects Convert
+menu item event
+handlers
+Connects Exit menu
+item event handler
+Download from Wow! eBook <www.wowebook.com>

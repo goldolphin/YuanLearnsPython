@@ -1,0 +1,49 @@
+【PG】339 CHAPTER  23 Take a Chance—Randomness
+【PG】That gives us a number from 1 to 6, with each number having an equal chance of 
+appearing. This is just like a real die.
+
+【PG】Another way to do the same thing is to make a list of the possible results and then use the 
+choice()  function to pick one of them. Here’s how that would look:
+This would do exactly the same thing as the previous example. The choice()  function 
+randomly chooses an item from a list. In this case, the list is the numbers from 1 to 6.
+
+【PG】More than one die
+What if you want to simulate rolling two dice? If you’re going to add up the two dice to 
+get the total, you might think of doing it this way:
+After all, the total of two dice can be from 2 to 12, right? Well, yes and no. You will get a 
+random number between 2 and 12, but not in the same way as adding up two random 
+numbers from 1 to 6. What that code line does is like rolling one big 11-sided die, not two 
+6-sided dice. But what’s the difference? That gets into a topic called probability . The easiest 
+way to see the difference is to try it out and see.
+
+【PG】Let’s roll the dice many times and keep track of how many times each total comes up. We’ll do 
+that with a loop and a list. The loop will roll the dice, and the list will keep track of how many 
+times each total comes up. Let’s start with the single 11-sided die, as shown in this listing.
+
+impor t random
+totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+for i in range(1000):
+    dice_ total = random.randin t(2, 12)
+    totals[dice_ total] += 1          
+    
+for i in range (2, 13):
+    prin t "total", i, "came up" , totals[i], "times"
+
+【PG】The list has indexes from 0 to 12, but we won’t use the first two, because we don’t care 
+about totals 0 or 1—they’ll never happen. 
+
+【PG】When we get a result, we add 1 to that list 
+item. If the total is 7, we add one to totals[7] . So totals[2]  is the number of 2s we got, 
+totals[3]  is the number of 3s we got, and so on.
+
+【PG】impor t random
+sides = [1, 2, 3, 4, 5, 6]
+die_1 = random.choice(sides)
+two_dice = random.randin t(2, 12)
+
+【PG】Listing 23.1 Rolling a single 11-sided die 1,000 times
+【PG】List has 13 items, 
+with index 0 to 12b
+【PG】Adds 1 to the count 
+of this totalc
+【PG】Download from Wow! eBook <www.wowebook.com>

@@ -1,0 +1,31 @@
+【PG】220 Hello World!
+
+【PG】for ball in balls:
+    screen.bli t(ball.image, ball.rec t)
+pygame.display.flip()
+
+【PG】running = True
+while running:
+    for even t in pygame.even t.get():
+        if even t.type == pygame.QUIT: 
+            running = False
+pygame.qui t()
+
+【PG】If you run this, you should 
+see nine beach balls 
+appear in the Pygame 
+window, like this:
+
+【PG】In a minute, we’ll start moving them around.
+
+【PG】Did you notice the small change in lines 10 and 11, which set the size of the Pygame 
+window? We replaced 
+with 
+
+【PG】This code not only sets the size of the window—like before—but also defines two variables, 
+width  and height , which we can use later. The neat thing here is that we have defined a list, 
+called size , with two items in it, and we have also defined two integer variables, width  and screen = pygame.display.se t_mode([640,480])
+size = wid th, heigh t = 640, 480
+screen = pygame.display.se t_mode(size)
+
+【PG】Download from Wow! eBook <www.wowebook.com>
