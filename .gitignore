@@ -3,3 +3,5 @@ tmp
 data
 .env
 .vscode
+db
+.idea
