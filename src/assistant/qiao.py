@@ -15,8 +15,7 @@ from pypdf import PdfReader
 import chromadb
 import g4f
 from chromadb.utils import embedding_functions
-import websockets
-import SparkApi
+import websocket
 import numpy as np
 import sentence_transformers
 
@@ -98,18 +97,20 @@ class Buffer:
         return "\n".join(self.__data)
 
 class SparkModel:
-    SPARK_URL = "ws://spark-api.xf-yun.com/v2.1/chat"  # v2.0环境的地址
+    URL = "ws://spark-api.xf-yun.com/v2.1/chat"  # v2.0环境的地址
     DOMAIN = "generalv2"    # v2.0版本
-    def __init__(self, app_id, app_key, api_secret):
+    # URL = "ws://spark-api.xf-yun.com/v1.1/chat"  # v1.5环境的地址
+    # DOMAIN = "general"   # v1.5版本
+    def __init__(self, app_id, api_key, api_secret):
         self.__app_id = app_id
-        self.__app_key = app_key
+        self.__api_key = api_key
         self.__api_secret = api_secret
-        self.__host = urlparse(SparkModel.SPARK_URL).netloc
-        self.__path = urlparse(SparkModel.SPARK_URL).path
+        self.__host = urlparse(SparkModel.URL).netloc
+        self.__path = urlparse(SparkModel.URL).path
 
     def __gen_url(self):
         # 生成RFC1123格式的时间戳
-        now = datetime.now()
+        now = datetime.datetime.now()
         date = format_date_time(mktime(now.timetuple()))
 
         # 拼接字符串
@@ -118,12 +119,11 @@ class SparkModel:
         signature_origin += "GET " + self.__path + " HTTP/1.1"
 
         # 进行hmac-sha256进行加密
-        signature_sha = hmac.new(self.APISecret.encode('utf-8'), signature_origin.encode('utf-8'),
-                                 digestmod=hashlib.sha256).digest()
+        signature_sha = hmac.new(self.__api_secret.encode('utf-8'), signature_origin.encode('utf-8'), digestmod=hashlib.sha256).digest()
 
         signature_sha_base64 = base64.b64encode(signature_sha).decode(encoding='utf-8')
 
-        authorization_origin = f'api_key="{self.APIKey}", algorithm="hmac-sha256", headers="host date request-line", signature="{signature_sha_base64}"'
+        authorization_origin = f'api_key="{self.__api_key}", algorithm="hmac-sha256", headers="host date request-line", signature="{signature_sha_base64}"'
 
         authorization = base64.b64encode(authorization_origin.encode('utf-8')).decode(encoding='utf-8')
 
@@ -134,7 +134,7 @@ class SparkModel:
             "host": self.__host
         }
         # 拼接鉴权参数，生成url
-        url = self.Spark_url + '?' + urlencode(v)
+        url = self.URL + '?' + urlencode(v)
         # 此处打印出建立连接时候的url,参考本demo的时候可取消上方打印的注释，比对相同参数时生成的url与自己代码生成的url是否一致
         return url
 
@@ -147,14 +147,14 @@ class SparkModel:
             "parameter": {
                 "chat": {
                     "domain": self.DOMAIN,
-                    "random_threshold": 0.5,
+                    "temperature": 0.01,
                     "max_tokens": 2048,
-                    "auditing": "default"
+                    "top_k": 1
                 }
             },
             "payload": {
                 "message": {
-                    "text": question
+                    "text": [{"role": "user", "content": question}]
                 }
             }
         }
@@ -164,10 +164,10 @@ class SparkModel:
         response = []
 
         def success():
-            if not future.done: future.set_result("".join(response))
+            if not future.done(): future.set_result("".join(response))
         
         def fail(e):
-            if not future.done: future.set_exception(e)
+            if not future.done(): future.set_exception(e)
 
         def on_message(ws, msg):
             data = json.loads(msg)
@@ -181,14 +181,15 @@ class SparkModel:
                 content = choices["text"][0]["content"]
                 response.append(content)
                 if status == 2:
-                    future.set_result("".join(response))
+                    success()
                     ws.close()
 
-        ws = websockets.WebSocketApp(
+        ws = websocket.WebSocketApp(
             self.__gen_url(),
             on_message=on_message,
-            on_error = lambda ws, e: fail(e),
-            on_close = lambda ws: fail(IOError("Expect the last msg")))
+            on_open=lambda ws: ws.send(json.dumps(self.__gen_params(question))),
+            on_error = lambda _, e: fail(e),
+            on_close = lambda _: fail(Exception("Expect the last msg")))
         ws.run_forever(sslopt={"cert_reqs": ssl.CERT_NONE})
         return future.result(10)
 
@@ -202,35 +203,52 @@ class ReAct:
         self.__action_list.append((name, description, func))
         self.__action_map[name] = func
 
-    TEMPLATE = """通过交错使用【思考】、【行动】、【观察】这三种步骤来解决回答问题的任务。
-【思考】用来推理当前的状况，说明行动的动机；
-【行动】可以有如下类型：
+    TEMPLATE = """通过交错使用【思考】、【行动】、【观察】这三个步骤来解决回答问题的任务。
+【思考】 根据当前的状况进行推理，给出推理过程；
+【行动】 选择如下类型中的一种：
 {action_list}
-2. finish(回答)：返回回答并结束这个任务
-【观察】则用于给出上一次【行动】的结果。
 
 问题：{question}
-
 """
-    ACTION_PATTERN = re.compile("【行动】：\\(.*?\\)\\(.*?\\)")
+    ACTION_PATTERN = re.compile("【行动】: (.*?)\\((.*?)\\)")
     def invoke(self, question, max_steps=8):
         al = ""
         for i in range(len(self.__action_list)):
             a = self.__action_list[i]
             al += f"{i+1}. {a[0]}{a[1]}\n"
-        al += f"{len(self.__action_list)+1}. finish(回答)：返回回答并结束这个任务\n"
-        prompt = self.TEMPLATE.format(al, question)
+        al += f"{len(self.__action_list)+1}. finish(答案)，用于返回答案并结束这个任务"
+        prompt = self.TEMPLATE.format(action_list=al, question=question)
 
         for i in range(max_steps):
-            prompt += f"\nRound {i}\n"
+            prompt += f"\n【思考】{i+1}："
+            prompt = """Answer the following questions as best you can. You have access to the following tools:
+
+Search: Useful when you need to retrieve any information about the question from 教材.
+
+Use the following format:
+
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, can only be one of "Search"
+Action Input: the input to the action
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can repeat N times)
+Thought: I now know the final answer
+Final Answer: the final answer to the original input question
+
+Question: 基于教材的内容，介绍一下闵桥
+Complete Content of 1 round of Thought, and stop.
+"""
+            print(f"\nInput:\n------\n{prompt}")
             r = self.__model.invoke(prompt)
+            print(f"\nOuput:\n------\n{r}")
             m = self.ACTION_PATTERN.search(r)
             if not m:
-                raise Exception("No action in answer: {r}")
+                raise Exception(f"No action in answer: {r}")
             if m[1] == "finish":
                 return f"最终答案是：{m[2]}"
             if m[1] not in self.__action_map:
-                raise Exception("Unknown action in answer: {r}")
+                raise Exception(f"Unknown action in answer: {r}")
 
             o = self.__action_map[m[1]](m[2])
             prompt += r
