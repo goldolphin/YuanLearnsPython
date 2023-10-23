@@ -221,23 +221,184 @@ class ReAct:
 
         for i in range(max_steps):
             prompt += f"\n【思考】{i+1}："
-            prompt = """Answer the following questions as best you can. You have access to the following tools:
+            prompt = """你是一个任务分解器, 你需要将用户的问题拆分成多个彼此之间互不依赖的子任务。
+请拆分出多个子任务项，从而能够得到充分的信息以解决问题, 返回格式如下：
+```
+Plan: 当前子任务要解决的问题描述
+#E[i] = 工具名称[工具参数]
+Plan: 当前子任务要解决的问题描述
+#E[i] = 工具名称[工具参数]
+```
+其中
+1. #E[i] 用于存储Plan id的执行结果, 可被用作占位符。
+2. 每个 #E[i] 所执行的内容应与当前Plan解决的问题严格对应。
+3. 工具名称必须从以下工具中选择：
+  search: 用于从《学习Python》这本书中搜索相关内容
+  llm: 基于一段文字描述进行推理
+注意: 每个Plan后有且仅能跟随一个#E[i]。
+开始！
 
-Search: Useful when you need to retrieve any information about the question from 教材.
+根据《学习Python》这本书的内容，编写一个猜数游戏？
+"""
+            prompt = """将下述任务分解为多个互不依赖的子任务。对每个子任务，指定要使用的外部工具及工具输入以获得所需要的证据。返回格式如下：
+```
+Task1
+TaskDescription: 子任务的描述，应对其要解决的问题提供足够丰富的细节
+ToolName: 工具名称
+ToolInput: 工具输入
+Task2
+TaskDescription: 子任务的描述，应对其要解决的问题提供足够丰富的细节
+ToolName: 工具名称
+ToolInput: 工具输入
+···
+```
+其中
+1. 每个子任务只能使用一个工具，工具名称必须从以下工具中选择：
+  Searcher: 可用于从《学习Python》这本书中搜索相关内容
+  Calculator: 可用于解决算术计算问题
+  Planner: 可用于解决需要进一步推理的问题
+2. 工具名称只能是以下几个之一：Searcher, Calculator, Planner。
+3. 在能够解决问题的前提下，分解的子任务应尽量少。
+4. 子任务之间不能互相依赖。
+开始！
 
-Use the following format:
+任务：如果你出生于闵桥镇成立的那一年，那么你现在退休了吗？
+"""
+            prompt = """根据下述给定的问题和已知条件，推理并判断要解决该问题还需要解决哪些未知条件。对于每个未知条件，需要指定用于解决该条件的工具。以如下的JSON格式返回：
+```
+{
+input: {
+question: <<要解决的问题>>,
+known: [
+{
+id: <<用于唯一地标识该条件的简短字符串>>,
+result: <<该已知条件的值>>,
+},
+{
+id: <<用于唯一地标识该条件的简短字符串>>,
+result: <<该已知条件的值>>,
+},
+...
+],
+},
+output: {
+reason: <<根据当前的状况进行推理的思考内容，尽量简洁>>,
+unknown: [ 
+{
+id: <<用于唯一地标识该条件的简短字符串>>,
+desc: <<对该条件的描述和相关的推理，尽量简洁>>,
+tool_name: <<工具名称>>,
+tool_input: <<工具输入>>,
+},
+{
+id: <<用于唯一地标识该条件的简短字符串>>,
+desc: <<对该条件的描述和相关的推理，尽量简洁>>,
+tool_name: <<工具名称>>,
+tool_input: <<工具输入>>,
+},
+...
+],
+},
+}
+```
+其中，
+1. 字段名后由 '<<' 和 '>>' 括起来的部分是对字段值的说明，输出时需要替换为实际值
+2. known 字段的取值是所有已知条件的列表
+3. unknown 字段的取值是所有未知条件的列表。这些未知条件是解决问题所必需的
+4. 对于每个未知条件，只能使用一个工具，tool_name 必须从以下工具中选择：
+  "Searcher": 可用于从知识库中搜索信息，tool_input 必须是一个实体名
+  "Calculator": 可用于解决算术计算问题，tool_input 必须是一个合法的算术表达式，只能由数值和运算符组成
+5. tool_name 只能是以下几个之一："Searcher", "Calculator"。
 
-Question: the input question you must answer
-Thought: you should always think about what to do
-Action: the action to take, can only be one of "Search"
-Action Input: the input to the action
-Observation: the result of the action
-... (this Thought/Action/Action Input/Observation can repeat N times)
-Thought: I now know the final answer
-Final Answer: the final answer to the original input question
+其中，
+1. 字段名后由 '<<' 和 '>>' 括起来的部分是对字段值的说明，会替换为实际值
 
-Question: 基于教材的内容，介绍一下闵桥
-Complete Content of 1 round of Thought, and stop.
+开始！
+
+```
+{
+input: {
+question: "如果你出生于金湖县成立的那一年，那么你现在退休了吗？",
+known: [
+{
+id: "金湖县成立的年份"
+result: "1960",
+},
+{
+id: "当前年份"
+result: "2023",
+},
+{
+id: "退休年龄"
+result: "60",
+},
+],
+},
+}
+```
+"""
+            prompt = """通过将给定问题分解为子任务，并逐步将子问题解决，从而最终解决原问题。根据给定的问题和已解决的子问题，推理要解决该问题还有哪些未解决的子问题。对于每个未解决的子问题，需要指定用于解决该问题的工具。以如下的JSON格式返回：
+```
+{
+input: {
+question: <<要解决的问题>>,
+solved: [
+{
+id: <<用于唯一地标识该子问题的简短字符串>>,
+desc: <<对该子问题的简洁描述>>,
+result: <<该问题的答案>>,
+},
+...
+],
+},
+output: {
+reason: <<根据当前的状况进行推理的思考内容，尽量简洁>>,
+final_result: <<该子段为可选项，仅当原问题n已解决时，在该字段中给出原问题的答案>>,
+unsolved: [ 
+{
+id: <<用于唯一地标识该子问题的简短字符串>>,
+desc: <<对该子问题的简洁描述>>,
+tool_name: <<工具名称>>,
+tool_input: <<工具输入>>,
+},
+...
+],
+},
+}
+```
+其中，
+1. 字段名后由 '<<' 和 '>>' 括起来的部分是对字段值的说明，输出时需要替换为实际值
+2. 子问题的 id 可以是 "q1", "q2", ...，以此类推，且任何两个子问题的 id 不可重复
+3. solved 字段是所有已解决子问题的列表
+4. unsolved 字段是所有未解决子问题的列表
+5. 对于每个未解决子问题，只能使用一个工具来解决它，工具名称必须从以下工具中选择：
+  "Searcher": 可用于从知识库中搜索信息。工具输入必须是一个实体名
+  "Calculator": 可用于解决算术计算问题。工具输入必须是一个合法的算术表达式，只能由数值、运算符组成，如果依赖于其他子问题的答案，可以使用对应的id占位
+
+开始！
+
+```
+{
+input: {
+question: "如果你出生于金湖县成立的那一年，那么你现在退休了吗？",
+solved: [
+{
+id: "q1",
+desc: "查询金湖县的成立年份",
+result: "1960",
+},
+{
+id: "q2",
+desc: "查询当前年份",
+result: "2023",
+},
+],
+},
+output: {
+
+}
+}
+```
 """
             print(f"\nInput:\n------\n{prompt}")
             r = self.__model.invoke(prompt)
@@ -254,7 +415,13 @@ Complete Content of 1 round of Thought, and stop.
             prompt += r
             prompt += f"\n【观察】：{o}\n"
         return "我尽力了..."
-
+'''
+ 如果你出生于闵桥镇成立的那一年，那么你现在退休了吗？
+ 1. 多少岁退休
+ 2. 如果你出生于闵桥镇成立的那一年，你现在多少岁？
+    1. 你跟闵桥镇同岁
+    2。 闵桥镇多少岁
+'''
 class Assistant:
     def __init__(self, db_path: str, db_name: str, embedding_model_name: str) -> None:
         self.__db_client = chromadb.PersistentClient(db_path)
